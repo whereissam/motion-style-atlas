@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion Style Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: a screening-room catalogue — sticky filter rail on top, family-grouped contact-sheet grid,
+   a detail drawer for one film and a compare sheet for up to four. Deliberately dark-only. */
+:root {
+  --bg: #0d0c0b; --panel: #161412; --line: #2a2723; --ink: #ece6dc; --mute: #8f877d; --dim: #5d5751;
+  --hot: #e8b04a;
+  --display: Archivo, "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--display); }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--hot); outline-offset: 2px; }
+.wrap { max-width: 1480px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+header.top { padding-block: 40px 22px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; }
+.eyebrow { font: 700 12px/1 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--mute); }
+h1 { margin: 10px 0 0; font: 900 clamp(40px, 7vw, 92px)/.92 var(--display); letter-spacing: -.035em; text-wrap: balance; }
+.lede { margin: 14px 0 0; max-width: 62ch; color: #c9c2b8; }
+.stats { display: flex; gap: 28px; font-variant-numeric: tabular-nums; }
+.stats b { display: block; font: 900 40px/1 var(--display); }
+.stats span { font: 700 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+.reel { display: inline-flex; gap: 8px; align-items: center; margin-top: 16px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; font-weight: 600; }
+.reel:hover { border-color: var(--hot); }
+
+.rail { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(13,12,11,.94); backdrop-filter: blur(8px); border-block: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.rail .wrap { padding-block: 12px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.group > label { font: 700 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--dim); margin-right: 4px; }
+.chip { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 6px 12px; font-size: 13px; cursor: pointer; white-space: nowrap; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip .n { font: 400 11px var(--mono); color: var(--mute); margin-left: 4px; }
+.chip[aria-pressed="true"] .n { color: #6b655d; }
+select, input[type="search"] { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; color: var(--ink); font: 14px var(--display); }
+input[type="search"] { width: min(240px, 100%); }
+.spacer { flex: 1; }
+
+main { padding-block: 28px 120px; }
+.fam { margin-bottom: 44px; }
+.fam h2 { display: flex; gap: 14px; align-items: baseline; margin: 0 0 16px; font: 800 26px/1.1 var(--display); letter-spacing: -.01em; }
+.fam h2 .k { font: 700 13px var(--mono); color: var(--hot); }
+.fam h2 .c { font: 400 13px var(--mono); color: var(--mute); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+.card { position: relative; min-width: 0; text-align: left; background: none; border: 0; padding: 0; cursor: pointer; }
+.thumb { position: relative; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 6px; overflow: hidden; background: #000; outline: 1px solid var(--line); }
+.thumb img, .thumb video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb video { opacity: 0; transition: opacity .2s; }
+.card:hover .thumb video.ready, .card:focus-visible .thumb video.ready { opacity: 1; }
+.card:hover .thumb { outline-color: var(--acc, var(--hot)); }
+.num { position: absolute; left: 10px; top: 8px; font: 700 12px var(--mono); color: #fff; text-shadow: 0 1px 3px #000; }
+.pick { position: absolute; right: 8px; top: 8px; width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(255,255,255,.5); background: rgba(0,0,0,.5); display: grid; place-items: center; font: 700 14px var(--mono); }
+.pick[aria-pressed="true"] { background: var(--hot); border-color: var(--hot); color: #111; }
+.meta { padding: 10px 2px 0; display: grid; gap: 2px; }
+.meta .nm { font: 800 17px/1.2 var(--display); }
+.meta .sb { color: var(--mute); font-size: 13px; }
+.tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.tag { font: 400 11px var(--mono); color: var(--mute); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; }
+.tag.loop { color: #9fd3a0; border-color: #2d4a2e; }
+.empty { padding: 60px 0; color: var(--mute); text-align: center; }
+
+/* detail drawer */
+dialog { border: 0; padding: 0; background: var(--panel); color: var(--ink); max-width: min(1180px, 100vw - 24px); width: 100%; border-radius: 10px; }
+dialog::backdrop { background: rgba(0,0,0,.72); }
+.dt { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.dt > div:first-child { display: flex; align-items: center; background: #000; min-width: 0; }
+.dt video { width: 100%; aspect-ratio: 16/9; max-width: 100%; background: #000; display: block; }
+.dt .side { padding: 24px 26px 28px; display: grid; gap: 16px; align-content: start; max-height: min(86vh, 900px); overflow: auto; }
+.dt h3 { margin: 4px 0 0; font: 900 34px/1 var(--display); letter-spacing: -.02em; text-wrap: balance; }
+.dt .sub { color: var(--mute); }
+.kv { display: grid; gap: 12px; }
+.kv div { display: grid; gap: 3px; }
+.kv dt { font: 700 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+.kv dd { margin: 0; color: #d8d2c9; }
+.close { position: absolute; right: 12px; top: 10px; background: rgba(0,0,0,.6); border: 1px solid var(--line); border-radius: 50%; width: 36px; height: 36px; cursor: pointer; z-index: 2; }
+.navs { display: flex; gap: 8px; }
+.navs button { flex: 1; border: 1px solid var(--line); background: none; border-radius: 6px; padding: 8px; cursor: pointer; }
+
+/* compare tray + sheet */
+.tray { position: fixed; left: 0; right: 0; bottom: 0; z-index: 8; background: rgba(22,20,18,.97); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); transform: translateY(110%); transition: transform .25s; }
+.tray.on { transform: none; }
+.tray .wrap { padding-block: 12px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.tray .slots { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; min-width: 0; }
+.slot { font-size: 13px; border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; }
+.btn { border: 0; background: var(--hot); color: #111; font-weight: 800; border-radius: 999px; padding: 9px 18px; cursor: pointer; }
+.btn.ghost { background: none; color: var(--ink); border: 1px solid var(--line); }
+.cmp { padding: 18px; }
+.cmp .row { display: grid; gap: 12px; }
+.cmp .vids { display: grid; gap: 10px; }
+.cmp video { width: 100%; aspect-ratio: 16/9; max-width: 100%; background: #000; border-radius: 4px; display: block; }
+.cmp table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.cmp th, .cmp td { text-align: left; vertical-align: top; padding: 8px 10px; border-top: 1px solid var(--line); }
+.cmp th { font: 700 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--dim); width: 130px; }
+.cmp .tbl { overflow-x: auto; }
+.cmp .bar { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+
+@media (max-width: 860px) {
+  header.top { grid-template-columns: 1fr; }
+  .dt { grid-template-columns: 1fr; }
+  .dt .side { max-height: none; }
+}
+@media (prefers-reduced-motion: reduce) { .thumb video { display: none; } .tray { transition: none; } }
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <div>
+    <div class="eyebrow">A field guide to motion design</div>
+    <h1>Motion Style Atlas</h1>
+    <p class="lede">Every style as a 10-second film, drawn and scored entirely in code. Filter by family, by tool or by how reproducible it is; hover to preview, open one to read its DNA, or pick up to four and compare them in sync.</p>
+    <a class="reel" href="videos/Motion-Style-Atlas-COMPLETE-share.mp4">▶ Watch the full reel</a>
+  </div>
+  <div class="stats" id="stats"></div>
+</header>
+
+<div class="rail">
+  <div class="wrap">
+    <div class="group" id="fams"><label>Family</label></div>
+    <div class="spacer"></div>
+    <div class="group">
+      <label for="impl">Tool</label>
+      <select id="impl"><option value="">Any</option></select>
+    </div>
+    <div class="group">
+      <label for="repro">Made by</label>
+      <select id="repro"><option value="">Any</option></select>
+    </div>
+    <div class="group"><button class="chip" id="loop" aria-pressed="false">Loopable only</button></div>
+    <div class="group"><input type="search" id="q" placeholder="Search styles, works, techniques" aria-label="Search"></div>
+  </div>
+</div>
+
+<main class="wrap" id="main"></main>
+
+<div class="tray" id="tray">
+  <div class="wrap">
+    <strong>Compare</strong>
+    <div class="slots" id="slots"></div>
+    <button class="btn ghost" id="clearCmp">Clear</button>
+    <button class="btn" id="openCmp">Compare side by side</button>
+  </div>
+</div>
+
+<dialog id="detail"></dialog>
+<dialog id="compare"></dialog>
+
+<script src="atlas/atlas-data.js"></script>
+<script src="atlas/prompt-template.js"></script>
+<script>
+(() => {
+  const A = window.ATLAS || { families: {}, items: [] };
+  const items = A.items.map((it, i) => ({ ...it, n: i + 1 }));
+  const byId = Object.fromEntries(items.map(i => [i.id, i]));
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const state = { fams: new Set(), impl: '', repro: '', loop: false, q: '', pick: [] };
+  try { const s = JSON.parse(localStorage.getItem('atlas-pick') || '[]'); state.pick = s.filter(id => byId[id]).slice(0, 4); } catch (e) {}
+
+  // stats
+  const famsUsed = [...new Set(items.map(i => i.family))];
+  $('#stats').innerHTML = [[items.length, 'Styles'], [famsUsed.length, 'Families'], [items.reduce((a, i) => a + (i.dur || 10), 0), 'Seconds']]
+    .map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join('');
+
+  // filters
+  const famBox = $('#fams');
+  Object.entries(A.families).forEach(([k, f]) => {
+    const n = items.filter(i => i.family === k).length;
+    if (!n) return;
+    const b = document.createElement('button');
+    b.className = 'chip'; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `${esc(f.short)}<span class="n">${n}</span>`;
+    b.onclick = () => { state.fams.has(k) ? state.fams.delete(k) : state.fams.add(k); b.setAttribute('aria-pressed', String(state.fams.has(k))); render(); };
+    famBox.appendChild(b);
+  });
+  const opts = (sel, vals) => [...new Set(vals)].sort().forEach(v => { const o = document.createElement('option'); o.value = o.textContent = v; sel.appendChild(o); });
+  opts($('#impl'), items.flatMap(i => i.implementation || []));
+  opts($('#repro'), items.map(i => i.reproducibility).filter(Boolean));
+  $('#impl').onchange = e => { state.impl = e.target.value; render(); };
+  $('#repro').onchange = e => { state.repro = e.target.value; render(); };
+  $('#loop').onclick = e => { state.loop = !state.loop; e.currentTarget.setAttribute('aria-pressed', String(state.loop)); render(); };
+  $('#q').oninput = e => { state.q = e.target.value.trim().toLowerCase(); render(); };
+
+  const match = i => (!state.fams.size || state.fams.has(i.family))
+    && (!state.impl || (i.implementation || []).includes(state.impl))
+    && (!state.repro || i.reproducibility === state.repro)
+    && (!state.loop || i.loopable)
+    && (!state.q || [i.name, i.sub, i.origin, i.works, (i.tech || []).join(' '), i.motionDNA, i.visualDNA].join(' ').toLowerCase().includes(state.q));
+
+  function card(i) {
+    const el = document.createElement('div');
+    el.className = 'card'; el.tabIndex = 0; el.setAttribute('role', 'button');
+    el.setAttribute('aria-label', `${i.name}: open`);
+    el.style.setProperty('--acc', i.accent || '');
+    const picked = state.pick.includes(i.id);
+    el.innerHTML = `<div class="thumb"><img loading="lazy" src="${esc(i.posterImg)}" alt="">${i.video ? `<video muted loop playsinline preload="none" src="${esc(i.video)}"></video>` : ''}
+      <span class="num">${String(i.n).padStart(2, '0')}</span>
+      <button class="pick" aria-pressed="${picked}" aria-label="Add ${esc(i.name)} to compare" title="Compare">${picked ? '✓' : '+'}</button></div>
+      <div class="meta"><span class="nm">${esc(i.name)}</span><span class="sb">${esc(i.sub)} · ${esc(i.era)}</span>
+      <div class="tags">${(i.tech || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}${i.loopable ? '<span class="tag loop">loop</span>' : ''}</div></div>`;
+    const v = el.querySelector('video');
+    if (v) {
+      el.addEventListener('mouseenter', () => { v.preload = 'auto'; v.currentTime = 0; v.play().then(() => v.classList.add('ready')).catch(() => {}); });
+      el.addEventListener('mouseleave', () => { v.pause(); v.classList.remove('ready'); });
+    }
+    el.querySelector('.pick').addEventListener('click', e => { e.stopPropagation(); togglePick(i.id); });
+    el.addEventListener('click', () => openDetail(i.id));
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(i.id); } });
+    return el;
+  }
+
+  function render() {
+    const main = $('#main');
+    main.innerHTML = '';
+    const shown = items.filter(match);
+    if (!shown.length) { main.innerHTML = '<p class="empty">No style matches these filters. Clear a filter or the search to see more.</p>'; return; }
+    Object.entries(A.families).forEach(([k, f]) => {
+      const list = shown.filter(i => i.family === k);
+      if (!list.length) return;
+      const sec = document.createElement('section');
+      sec.className = 'fam';
+      sec.innerHTML = `<h2><span class="k">${k}</span>${esc(f.name)}<span class="c">${list.length}</span></h2><div class="grid"></div>`;
+      list.forEach(i => sec.querySelector('.grid').appendChild(card(i)));
+      main.appendChild(sec);
+    });
+  }
+
+  // detail
+  const dlg = $('#detail');
+  function openDetail(id) {
+    const i = byId[id], vis = items.filter(match), k = vis.findIndex(x => x.id === id);
+    const prev = vis[(k - 1 + vis.length) % vis.length], next = vis[(k + 1) % vis.length];
+    const row = (l, v) => v ? `<div><dt>${l}</dt><dd>${v}</dd></div>` : '';
+    dlg.innerHTML = `<button class="close" aria-label="Close">✕</button><div class="dt">
+      <div>${i.video ? `<video controls autoplay playsinline src="${esc(i.video)}" poster="${esc(i.posterImg)}"></video>` : `<img src="${esc(i.posterImg)}" alt="" style="width:100%;display:block">`}</div>
+      <div class="side">
+        <div><div class="eyebrow">${String(i.n).padStart(2, '0')} · ${esc((A.families[i.family] || {}).name)}</div><h3>${esc(i.name)}</h3><div class="sub">${esc(i.sub)} · ${esc(i.era)}</div></div>
+        <dl class="kv">
+          ${row('Origin', esc(i.origin))}${row('Key works', esc(i.works))}
+          ${row('Motion DNA', esc(i.motionDNA))}${row('Visual DNA', esc(i.visualDNA))}
+          ${row('Signature transitions', esc(i.transitions))}
+          ${row('Techniques', (i.tech || []).map(esc).join(' · '))}
+          ${row('Implementation', (i.implementation || []).map(esc).join(' · '))}
+          ${row('Reproducibility', esc(i.reproducibility))}
+          ${row('Loopable', i.loopable ? 'Yes, loops cleanly' : 'No, built as a one-shot')}
+        </dl>
+        <div class="navs"><button data-go="${esc(prev.id)}">← ${esc(prev.name)}</button><button data-go="${esc(next.id)}">${esc(next.name)} →</button></div>
+        <div class="navs"><button data-copy="build">Copy build prompt</button><button data-copy="video">Copy video-model prompt</button></div>
+        <button class="btn ghost" data-pick="${esc(i.id)}">${state.pick.includes(i.id) ? 'Remove from compare' : 'Add to compare'}</button>
+      </div></div>`;
+    dlg.querySelector('.close').onclick = () => dlg.close();
+    dlg.querySelectorAll('[data-go]').forEach(b => b.onclick = () => openDetail(b.dataset.go));
+    dlg.querySelectorAll('[data-copy]').forEach(b => b.onclick = () => {
+      const P = window.AtlasPrompts, txt = b.dataset.copy === 'build' ? P.buildPrompt(i, A.families) : P.videoPrompt(i);
+      const label = b.textContent;
+      const done = ok => { b.textContent = ok ? 'Copied' : 'Select the text below and copy it'; setTimeout(() => b.textContent = label, 1600); };
+      navigator.clipboard ? navigator.clipboard.writeText(txt).then(() => done(true), () => fallback()) : fallback();
+      function fallback() {
+        const ta = document.createElement('textarea'); ta.value = txt; ta.rows = 8; ta.style.width = '100%';
+        b.parentElement.after(ta); ta.select(); done(document.execCommand && document.execCommand('copy'));
+      }
+    });
+    dlg.querySelector('[data-pick]').onclick = e => { togglePick(i.id); e.currentTarget.textContent = state.pick.includes(i.id) ? 'Remove from compare' : 'Add to compare'; };
+    if (!dlg.open) dlg.showModal();
+  }
+  dlg.addEventListener('close', () => dlg.querySelectorAll('video').forEach(v => v.pause()));
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+
+  // compare
+  function togglePick(id) {
+    const k = state.pick.indexOf(id);
+    if (k >= 0) state.pick.splice(k, 1); else { if (state.pick.length >= 4) state.pick.shift(); state.pick.push(id); }
+    try { localStorage.setItem('atlas-pick', JSON.stringify(state.pick)); } catch (e) {}
+    tray(); render();
+  }
+  function tray() {
+    $('#tray').classList.toggle('on', state.pick.length > 0);
+    $('#slots').innerHTML = state.pick.map(id => `<span class="slot">${esc(byId[id].name)}</span>`).join('') + (state.pick.length < 2 ? '<span class="slot" style="color:var(--mute)">Pick at least 2</span>' : '');
+    $('#openCmp').disabled = state.pick.length < 2;
+  }
+  $('#clearCmp').onclick = () => { state.pick = []; try { localStorage.removeItem('atlas-pick'); } catch (e) {} tray(); render(); };
+  const cdlg = $('#compare');
+  $('#openCmp').onclick = () => {
+    const list = state.pick.map(id => byId[id]);
+    const cols = `repeat(${list.length}, minmax(0, 1fr))`;
+    const fields = [['Family', i => esc((A.families[i.family] || {}).short)], ['Era', i => esc(i.era)], ['Motion DNA', i => esc(i.motionDNA)], ['Visual DNA', i => esc(i.visualDNA)], ['Transitions', i => esc(i.transitions)], ['Techniques', i => (i.tech || []).map(esc).join(' · ')], ['Implementation', i => (i.implementation || []).map(esc).join(' · ')], ['Reproducibility', i => esc(i.reproducibility)], ['Loopable', i => i.loopable ? 'Yes' : 'No']];
+    cdlg.innerHTML = `<button class="close" aria-label="Close">✕</button><div class="cmp">
+      <div class="bar"><button class="btn" id="syncPlay">▶ Play all in sync</button><button class="btn ghost" id="syncMute">Sound: off</button></div>
+      <div class="vids" style="grid-template-columns:${cols}">${list.map(i => `<div><video muted playsinline preload="auto" src="${esc(i.video || '')}" poster="${esc(i.posterImg)}"></video><div class="meta"><span class="nm">${esc(i.name)}</span><span class="sb">${esc(i.sub)}</span></div></div>`).join('')}</div>
+      <div class="tbl"><table><tbody>${fields.map(([l, f]) => `<tr><th>${l}</th>${list.map(i => `<td>${f(i)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`;
+    const vids = [...cdlg.querySelectorAll('video')];
+    let muted = true;
+    cdlg.querySelector('#syncPlay').onclick = () => { vids.forEach(v => { v.currentTime = 0; v.play().catch(() => {}); }); };
+    cdlg.querySelector('#syncMute').onclick = e => { muted = !muted; vids.forEach((v, k) => v.muted = muted || k > 0); e.currentTarget.textContent = muted ? 'Sound: off' : `Sound: ${list[0].name}`; };
+    cdlg.querySelector('.close').onclick = () => cdlg.close();
+    cdlg.showModal();
+  };
+  cdlg.addEventListener('close', () => cdlg.querySelectorAll('video').forEach(v => v.pause()));
+  cdlg.addEventListener('click', e => { if (e.target === cdlg) cdlg.close(); });
+
+  tray(); render();
+  const h = location.hash.slice(1);
+  if (byId[h]) openDetail(h);
+})();
+</script>
+</body>
+</html>

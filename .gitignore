@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+
+# Rendered output (~18 GB). Everything here is reproducible with tools/render.mjs.
+videos/

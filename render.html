@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>MG Render</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;800;900&family=Fredoka:wght@600;700&family=JetBrains+Mono:wght@400;800&family=Jost:wght@300&family=Ma+Shan+Zheng&family=Mr+Dafoe&family=Noto+Sans+SC:wght@700;900&family=Noto+Serif+SC:wght@600&family=Playfair+Display:wght@900&family=VT323&family=ZCOOL+QingKe+HuangYou&display=block">
+<style>body{margin:0;background:#111}canvas{width:960px;height:540px;display:block}</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script src="js/engine.js"></script>
+<script src="js/films-intl.js"></script>
+<script src="js/films-cn.js"></script>
+<script src="js/films-b1.js"></script>
+<script src="js/films-b2.js"></script>
+<script src="js/films-b3.js"></script>
+<script src="js/films-b4.js"></script>
+<script src="js/films-c1.js"></script>
+<script src="js/films-c2.js"></script>
+<script src="js/films-c3.js"></script>
+<script src="js/films-c4.js"></script>
+<script src="js/films-c5.js"></script>
+<script src="js/films-c6.js"></script>
+<script src="js/films-c7.js"></script>
+<script src="js/films-c8.js"></script>
+<script src="js/films-c9.js"></script>
+<script src="js/films-c10.js"></script>
+<script src="js/films-d1.js"></script>
+<script src="js/films-d2.js"></script>
+<script src="js/films-d3.js"></script>
+<script src="js/films-d4.js"></script>
+<script src="js/films-d5.js"></script>
+<script src="js/films-e1.js"></script>
+<script src="js/films-e2.js"></script>
+<script src="js/films-e3.js"></script>
+<script src="js/films-e4.js"></script>
+<script src="js/films-e5.js"></script>
+<script src="js/films-f1.js"></script>
+<script src="js/films-f2.js"></script>
+<script src="js/films-f3.js"></script>
+<script src="js/films-f4.js"></script>
+<script src="js/films-f5.js"></script>
+<script src="js/atlas-data.js"></script>
+<script src="js/cards.js"></script>
+<script>
+  const cv = document.getElementById('c');
+  window.fontsLoaded = (async () => {
+    await Promise.all(MG._fontLinks);
+    const specs = [];
+    Object.values(MG.films).forEach(f => (f.fonts || []).forEach(x => specs.push(Array.isArray(x) ? x : [x, 'Aa1'])));
+    await Promise.all(specs.map(([s, g]) => document.fonts.load(s, g).catch(() => {})));
+    await document.fonts.ready;
+    return [...document.fonts].filter(f => f.status === 'loaded').length;
+  })();
+  window.drawFrame = (id, t, q = 0.94) => { MG.frame(id, t, cv); return cv.toDataURL('image/jpeg', q); };
+  window.renderWav = async id => {
+    const bytes = await MG.audio(id);
+    let s = '';
+    for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    return btoa(s);
+  };
+</script>
+</body>
+</html>
