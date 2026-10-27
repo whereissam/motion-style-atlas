@@ -69,7 +69,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/whitney.mp4",
+   "video": "media/whitney.mp4",
    "posterImg": "atlas/posters/whitney.jpg"
   },
   {
@@ -98,7 +98,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.6,
-   "video": "videos/bass.mp4",
+   "video": "media/bass.mp4",
    "posterImg": "atlas/posters/bass.jpg"
   },
   {
@@ -128,7 +128,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/bauhaus.mp4",
+   "video": "media/bauhaus.mp4",
    "posterImg": "atlas/posters/bauhaus.jpg"
   },
   {
@@ -158,7 +158,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/artdeco.mp4",
+   "video": "media/artdeco.mp4",
    "posterImg": "atlas/posters/artdeco.jpg"
   },
   {
@@ -188,7 +188,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/constructivism.mp4",
+   "video": "media/constructivism.mp4",
    "posterImg": "atlas/posters/constructivism.jpg"
   },
   {
@@ -218,7 +218,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/psychedelic.mp4",
+   "video": "media/psychedelic.mp4",
    "posterImg": "atlas/posters/psychedelic.jpg"
   },
   {
@@ -247,7 +247,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/opart.mp4",
+   "video": "media/opart.mp4",
    "posterImg": "atlas/posters/opart.jpg"
   },
   {
@@ -276,7 +276,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/memphis.mp4",
+   "video": "media/memphis.mp4",
    "posterImg": "atlas/posters/memphis.jpg"
   },
   {
@@ -305,7 +305,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/y2k.mp4",
+   "video": "media/y2k.mp4",
    "posterImg": "atlas/posters/y2k.jpg"
   },
   {
@@ -335,7 +335,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/destijl.mp4",
+   "video": "media/destijl.mp4",
    "posterImg": "atlas/posters/destijl.jpg"
   },
   {
@@ -365,7 +365,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/risograph.mp4",
+   "video": "media/risograph.mp4",
    "posterImg": "atlas/posters/risograph.jpg"
   },
   {
@@ -395,7 +395,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/brutalism.mp4",
+   "video": "media/brutalism.mp4",
    "posterImg": "atlas/posters/brutalism.jpg"
   },
   {
@@ -424,7 +424,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.6,
-   "video": "videos/swiss.mp4",
+   "video": "media/swiss.mp4",
    "posterImg": "atlas/posters/swiss.jpg"
   },
   {
@@ -453,7 +453,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 8.6,
-   "video": "videos/flash.mp4",
+   "video": "media/flash.mp4",
    "posterImg": "atlas/posters/flash.jpg"
   },
   {
@@ -482,7 +482,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/variablefont.mp4",
+   "video": "media/variablefont.mp4",
    "posterImg": "atlas/posters/variablefont.jpg"
   },
   {
@@ -511,7 +511,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/ascii.mp4",
+   "video": "media/ascii.mp4",
    "posterImg": "atlas/posters/ascii.jpg"
   },
   {
@@ -540,7 +540,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/type3d.mp4",
+   "video": "media/type3d.mp4",
    "posterImg": "atlas/posters/type3d.jpg"
   },
   {
@@ -569,7 +569,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/kinetic.mp4",
+   "video": "media/kinetic.mp4",
    "posterImg": "atlas/posters/kinetic.jpg"
   },
   {
@@ -599,7 +599,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/textmorph.mp4",
+   "video": "media/textmorph.mp4",
    "posterImg": "atlas/posters/textmorph.jpg"
   },
   {
@@ -629,7 +629,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.6,
-   "video": "videos/editorial.mp4",
+   "video": "media/editorial.mp4",
    "posterImg": "atlas/posters/editorial.jpg"
   },
   {
@@ -659,7 +659,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.6,
-   "video": "videos/typewriter.mp4",
+   "video": "media/typewriter.mp4",
    "posterImg": "atlas/posters/typewriter.jpg"
   },
   {
@@ -689,7 +689,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/textpath.mp4",
+   "video": "media/textpath.mp4",
    "posterImg": "atlas/posters/textpath.jpg"
   },
   {
@@ -718,7 +718,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/rubberhose.mp4",
+   "video": "media/rubberhose.mp4",
    "posterImg": "atlas/posters/rubberhose.jpg"
   },
   {
@@ -747,7 +747,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 8.3,
-   "video": "videos/silhouette.mp4",
+   "video": "media/silhouette.mp4",
    "posterImg": "atlas/posters/silhouette.jpg"
   },
   {
@@ -776,7 +776,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/lineart.mp4",
+   "video": "media/lineart.mp4",
    "posterImg": "atlas/posters/lineart.jpg"
   },
   {
@@ -805,7 +805,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/collage.mp4",
+   "video": "media/collage.mp4",
    "posterImg": "atlas/posters/collage.jpg"
   },
   {
@@ -834,7 +834,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/isometric.mp4",
+   "video": "media/isometric.mp4",
    "posterImg": "atlas/posters/isometric.jpg"
   },
   {
@@ -863,7 +863,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/sakuga.mp4",
+   "video": "media/sakuga.mp4",
    "posterImg": "atlas/posters/sakuga.jpg"
   },
   {
@@ -893,7 +893,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/comic.mp4",
+   "video": "media/comic.mp4",
    "posterImg": "atlas/posters/comic.jpg"
   },
   {
@@ -923,7 +923,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/flat.mp4",
+   "video": "media/flat.mp4",
    "posterImg": "atlas/posters/flat.jpg"
   },
   {
@@ -952,7 +952,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/whiteboard.mp4",
+   "video": "media/whiteboard.mp4",
    "posterImg": "atlas/posters/whiteboard.jpg"
   },
   {
@@ -982,7 +982,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/chalkboard.mp4",
+   "video": "media/chalkboard.mp4",
    "posterImg": "atlas/posters/chalkboard.jpg"
   },
   {
@@ -1012,7 +1012,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/watercolor.mp4",
+   "video": "media/watercolor.mp4",
    "posterImg": "atlas/posters/watercolor.jpg"
   },
   {
@@ -1042,7 +1042,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 8.9,
-   "video": "videos/liquid.mp4",
+   "video": "media/liquid.mp4",
    "posterImg": "atlas/posters/liquid.jpg"
   },
   {
@@ -1071,7 +1071,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/mograph.mp4",
+   "video": "media/mograph.mp4",
    "posterImg": "atlas/posters/mograph.jpg"
   },
   {
@@ -1101,7 +1101,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/lowpoly.mp4",
+   "video": "media/lowpoly.mp4",
    "posterImg": "atlas/posters/lowpoly.jpg"
   },
   {
@@ -1131,7 +1131,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/voxel.mp4",
+   "video": "media/voxel.mp4",
    "posterImg": "atlas/posters/voxel.jpg"
   },
   {
@@ -1161,7 +1161,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/glass3d.mp4",
+   "video": "media/glass3d.mp4",
    "posterImg": "atlas/posters/glass3d.jpg"
   },
   {
@@ -1191,7 +1191,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/softbody.mp4",
+   "video": "media/softbody.mp4",
    "posterImg": "atlas/posters/softbody.jpg"
   },
   {
@@ -1221,7 +1221,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/wireframe.mp4",
+   "video": "media/wireframe.mp4",
    "posterImg": "atlas/posters/wireframe.jpg"
   },
   {
@@ -1251,7 +1251,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/exploded.mp4",
+   "video": "media/exploded.mp4",
    "posterImg": "atlas/posters/exploded.jpg"
   },
   {
@@ -1282,7 +1282,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/claymorphism.mp4",
+   "video": "media/claymorphism.mp4",
    "posterImg": "atlas/posters/claymorphism.jpg"
   },
   {
@@ -1312,7 +1312,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/particles.mp4",
+   "video": "media/particles.mp4",
    "posterImg": "atlas/posters/particles.jpg"
   },
   {
@@ -1342,7 +1342,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/reactiondiffusion.mp4",
+   "video": "media/reactiondiffusion.mp4",
    "posterImg": "atlas/posters/reactiondiffusion.jpg"
   },
   {
@@ -1372,7 +1372,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/attractor.mp4",
+   "video": "media/attractor.mp4",
    "posterImg": "atlas/posters/attractor.jpg"
   },
   {
@@ -1402,7 +1402,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/lifegame.mp4",
+   "video": "media/lifegame.mp4",
    "posterImg": "atlas/posters/lifegame.jpg"
   },
   {
@@ -1432,7 +1432,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/fractal.mp4",
+   "video": "media/fractal.mp4",
    "posterImg": "atlas/posters/fractal.jpg"
   },
   {
@@ -1462,7 +1462,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/lsystem.mp4",
+   "video": "media/lsystem.mp4",
    "posterImg": "atlas/posters/lsystem.jpg"
   },
   {
@@ -1492,7 +1492,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/boids.mp4",
+   "video": "media/boids.mp4",
    "posterImg": "atlas/posters/boids.jpg"
   },
   {
@@ -1521,7 +1521,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 6.05,
-   "video": "videos/audioreactive.mp4",
+   "video": "media/audioreactive.mp4",
    "posterImg": "atlas/posters/audioreactive.jpg"
   },
   {
@@ -1552,7 +1552,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.7,
-   "video": "videos/slitscan.mp4",
+   "video": "media/slitscan.mp4",
    "posterImg": "atlas/posters/slitscan.jpg"
   },
   {
@@ -1583,7 +1583,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/raymarch.mp4",
+   "video": "media/raymarch.mp4",
    "posterImg": "atlas/posters/raymarch.jpg"
   },
   {
@@ -1612,7 +1612,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/claymation.mp4",
+   "video": "media/claymation.mp4",
    "posterImg": "atlas/posters/claymation.jpg"
   },
   {
@@ -1641,7 +1641,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/sand.mp4",
+   "video": "media/sand.mp4",
    "posterImg": "atlas/posters/sand.jpg"
   },
   {
@@ -1670,7 +1670,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/xerox.mp4",
+   "video": "media/xerox.mp4",
    "posterImg": "atlas/posters/xerox.jpg"
   },
   {
@@ -1699,7 +1699,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/paintglass.mp4",
+   "video": "media/paintglass.mp4",
    "posterImg": "atlas/posters/paintglass.jpg"
   },
   {
@@ -1728,7 +1728,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/directfilm.mp4",
+   "video": "media/directfilm.mp4",
    "posterImg": "atlas/posters/directfilm.jpg"
   },
   {
@@ -1757,7 +1757,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/cyanotype.mp4",
+   "video": "media/cyanotype.mp4",
    "posterImg": "atlas/posters/cyanotype.jpg"
   },
   {
@@ -1787,7 +1787,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/vhs.mp4",
+   "video": "media/vhs.mp4",
    "posterImg": "atlas/posters/vhs.jpg"
   },
   {
@@ -1817,7 +1817,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.3,
-   "video": "videos/filmburn.mp4",
+   "video": "media/filmburn.mp4",
    "posterImg": "atlas/posters/filmburn.jpg"
   },
   {
@@ -1846,7 +1846,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.3,
-   "video": "videos/retro.mp4",
+   "video": "media/retro.mp4",
    "posterImg": "atlas/posters/retro.jpg"
   },
   {
@@ -1875,7 +1875,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/pixel.mp4",
+   "video": "media/pixel.mp4",
    "posterImg": "atlas/posters/pixel.jpg"
   },
   {
@@ -1905,7 +1905,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.2,
-   "video": "videos/glitch.mp4",
+   "video": "media/glitch.mp4",
    "posterImg": "atlas/posters/glitch.jpg"
   },
   {
@@ -1934,7 +1934,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/vaporwave.mp4",
+   "video": "media/vaporwave.mp4",
    "posterImg": "atlas/posters/vaporwave.jpg"
   },
   {
@@ -1963,7 +1963,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/frutiger.mp4",
+   "video": "media/frutiger.mp4",
    "posterImg": "atlas/posters/frutiger.jpg"
   },
   {
@@ -1992,7 +1992,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/terminal.mp4",
+   "video": "media/terminal.mp4",
    "posterImg": "atlas/posters/terminal.jpg"
   },
   {
@@ -2021,7 +2021,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 6.3,
-   "video": "videos/desktop.mp4",
+   "video": "media/desktop.mp4",
    "posterImg": "atlas/posters/desktop.jpg"
   },
   {
@@ -2050,7 +2050,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.3,
-   "video": "videos/webcore.mp4",
+   "video": "media/webcore.mp4",
    "posterImg": "atlas/posters/webcore.jpg"
   },
   {
@@ -2080,7 +2080,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.6,
-   "video": "videos/screensaver.mp4",
+   "video": "media/screensaver.mp4",
    "posterImg": "atlas/posters/screensaver.jpg"
   },
   {
@@ -2110,7 +2110,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/filmnoir.mp4",
+   "video": "media/filmnoir.mp4",
    "posterImg": "atlas/posters/filmnoir.jpg"
   },
   {
@@ -2140,7 +2140,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/longexposure.mp4",
+   "video": "media/longexposure.mp4",
    "posterImg": "atlas/posters/longexposure.jpg"
   },
   {
@@ -2171,7 +2171,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/doubleexposure.mp4",
+   "video": "media/doubleexposure.mp4",
    "posterImg": "atlas/posters/doubleexposure.jpg"
   },
   {
@@ -2201,7 +2201,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/tiltshift.mp4",
+   "video": "media/tiltshift.mp4",
    "posterImg": "atlas/posters/tiltshift.jpg"
   },
   {
@@ -2233,7 +2233,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/timelapse.mp4",
+   "video": "media/timelapse.mp4",
    "posterImg": "atlas/posters/timelapse.jpg"
   },
   {
@@ -2264,7 +2264,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.6,
-   "video": "videos/matchcut.mp4",
+   "video": "media/matchcut.mp4",
    "posterImg": "atlas/posters/matchcut.jpg"
   },
   {
@@ -2295,7 +2295,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 7.2,
-   "video": "videos/splitscreen.mp4",
+   "video": "media/splitscreen.mp4",
    "posterImg": "atlas/posters/splitscreen.jpg"
   },
   {
@@ -2325,7 +2325,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/oneshot.mp4",
+   "video": "media/oneshot.mp4",
    "posterImg": "atlas/posters/oneshot.jpg"
   },
   {
@@ -2354,7 +2354,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/hud.mp4",
+   "video": "media/hud.mp4",
    "posterImg": "atlas/posters/hud.jpg"
   },
   {
@@ -2383,7 +2383,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 9.3,
-   "video": "videos/cyberpunk.mp4",
+   "video": "media/cyberpunk.mp4",
    "posterImg": "atlas/posters/cyberpunk.jpg"
   },
   {
@@ -2412,7 +2412,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/ukiyoe.mp4",
+   "video": "media/ukiyoe.mp4",
    "posterImg": "atlas/posters/ukiyoe.jpg"
   },
   {
@@ -2441,7 +2441,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/inkwash.mp4",
+   "video": "media/inkwash.mp4",
    "posterImg": "atlas/posters/inkwash.jpg"
   },
   {
@@ -2470,7 +2470,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/shadowpuppet.mp4",
+   "video": "media/shadowpuppet.mp4",
    "posterImg": "atlas/posters/shadowpuppet.jpg"
   },
   {
@@ -2499,7 +2499,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/dunhuang.mp4",
+   "video": "media/dunhuang.mp4",
    "posterImg": "atlas/posters/dunhuang.jpg"
   },
   {
@@ -2528,7 +2528,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/islamic.mp4",
+   "video": "media/islamic.mp4",
    "posterImg": "atlas/posters/islamic.jpg"
   },
   {
@@ -2557,7 +2557,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/papelpicado.mp4",
+   "video": "media/papelpicado.mp4",
    "posterImg": "atlas/posters/papelpicado.jpg"
   },
   {
@@ -2585,7 +2585,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/guochao.mp4",
+   "video": "media/guochao.mp4",
    "posterImg": "atlas/posters/guochao.jpg"
   },
   {
@@ -2615,7 +2615,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 4.5,
-   "video": "videos/minhwa.mp4",
+   "video": "media/minhwa.mp4",
    "posterImg": "atlas/posters/minhwa.jpg"
   },
   {
@@ -2645,7 +2645,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/wycinanki.mp4",
+   "video": "media/wycinanki.mp4",
    "posterImg": "atlas/posters/wycinanki.jpg"
   },
   {
@@ -2674,7 +2674,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.3,
-   "video": "videos/huazi.mp4",
+   "video": "media/huazi.mp4",
    "posterImg": "atlas/posters/huazi.jpg"
   },
   {
@@ -2703,7 +2703,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/shouzhang.mp4",
+   "video": "media/shouzhang.mp4",
    "posterImg": "atlas/posters/shouzhang.jpg"
   },
   {
@@ -2732,7 +2732,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/kepu.mp4",
+   "video": "media/kepu.mp4",
    "posterImg": "atlas/posters/kepu.jpg"
   },
   {
@@ -2764,7 +2764,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/sports.mp4",
+   "video": "media/sports.mp4",
    "posterImg": "atlas/posters/sports.jpg"
   },
   {
@@ -2795,7 +2795,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/luxury.mp4",
+   "video": "media/luxury.mp4",
    "posterImg": "atlas/posters/luxury.jpg"
   },
   {
@@ -2825,7 +2825,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/logoreveal.mp4",
+   "video": "media/logoreveal.mp4",
    "posterImg": "atlas/posters/logoreveal.jpg"
   },
   {
@@ -2856,7 +2856,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/appui.mp4",
+   "video": "media/appui.mp4",
    "posterImg": "atlas/posters/appui.jpg"
   },
   {
@@ -2887,7 +2887,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/datastory.mp4",
+   "video": "media/datastory.mp4",
    "posterImg": "atlas/posters/datastory.jpg"
   },
   {
@@ -2917,7 +2917,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 5.5,
-   "video": "videos/podcast.mp4",
+   "video": "media/podcast.mp4",
    "posterImg": "atlas/posters/podcast.jpg"
   }
  ],

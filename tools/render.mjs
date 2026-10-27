@@ -7,6 +7,7 @@
 //   node tools/render.mjs still <id> <t,t,...> [dir]   preview JPEGs, default dir: /tmp/mg-stills
 //   node tools/render.mjs data                    atlas/atlas-data.js        (then: node tools/build-prompts.mjs)
 //   node tools/render.mjs reel complete|best      videos/Motion-Style-Atlas-{COMPLETE,BEST-OF}[-share].mp4
+//   node tools/render.mjs web [id...]             media/<id>.mp4             (≤ ~8 MB web copy of each film, tracked in git)
 //
 // Options: -j N renders N films in parallel (default 3).
 import fs from 'node:fs';
@@ -104,7 +105,8 @@ async function writeData(page) {
     return { families: MG.FAMILIES, items };
   });
   atlas.items.forEach(it => {
-    if (fs.existsSync(path.join(ROOT, 'videos', it.id + '.mp4'))) it.video = `videos/${it.id}.mp4`;
+    // the site serves the web copies; the full-quality masters in videos/ are not published
+    if (fs.existsSync(path.join(ROOT, 'media', it.id + '.mp4'))) it.video = `media/${it.id}.mp4`;
     it.posterImg = `atlas/posters/${it.id}.jpg`;
   });
   atlas.built = new Date().toISOString().slice(0, 10);
@@ -163,12 +165,24 @@ try {
       fs.writeFileSync(f, jpeg(await page.evaluate(([id, t]) => window.drawFrame(id, t, 0.85), [id, t])));
       console.log(f);
     }
+  } else if (mode === 'web') {
+    fs.mkdirSync(path.join(ROOT, 'media'), { recursive: true });
+    const queue = [...pick(info.order)];
+    await Promise.all(Array.from({ length: jobs }, async () => {
+      while (queue.length) {
+        const id = queue.shift(), src = path.join(ROOT, 'videos', id + '.mp4'), out = path.join(ROOT, 'media', id + '.mp4');
+        if (!fs.existsSync(src)) { console.error(`✗ ${id}: no videos/${id}.mp4 (run film first)`); process.exitCode = 1; continue; }
+        await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', src, '-c:v', 'libx264', '-preset', 'slow', '-crf', '24', '-maxrate', '6M', '-bufsize', '12M',
+          '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', out]);
+        console.log(`✓ media/${id}.mp4  ${(fs.statSync(out).size / 1e6).toFixed(1)} MB`);
+      }
+    }));
   } else if (mode === 'data') {
     await writeData(page);
   } else if (mode === 'reel') {
     await reel(info, args[0] || 'complete');
   } else {
-    console.log(fs.readFileSync(new URL(import.meta.url), 'utf8').split('\n').slice(0, 11).join('\n'));
+    console.log(fs.readFileSync(new URL(import.meta.url), 'utf8').split('\n').slice(0, 12).join('\n'));
   }
   if (page.errors.length) console.error('page errors:\n  ' + [...new Set(page.errors)].join('\n  '));
 } finally {
