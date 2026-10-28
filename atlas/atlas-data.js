@@ -426,7 +426,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/dadaism.mp4",
+   "video": "media/dadaism.mp4",
    "posterImg": "atlas/posters/dadaism.jpg"
   },
   {
@@ -456,7 +456,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/midcentury.mp4",
+   "video": "media/midcentury.mp4",
    "posterImg": "atlas/posters/midcentury.jpg"
   },
   {
@@ -487,7 +487,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/grunge.mp4",
+   "video": "media/grunge.mp4",
    "posterImg": "atlas/posters/grunge.jpg"
   },
   {
@@ -811,7 +811,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/calligraphic.mp4",
+   "video": "media/calligraphic.mp4",
    "posterImg": "atlas/posters/calligraphic.jpg"
   },
   {
@@ -842,7 +842,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/typocollage.mp4",
+   "video": "media/typocollage.mp4",
    "posterImg": "atlas/posters/typocollage.jpg"
   },
   {
@@ -1226,7 +1226,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/limited.mp4",
+   "video": "media/limited.mp4",
    "posterImg": "atlas/posters/limited.jpg"
   },
   {
@@ -1257,7 +1257,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.6,
-   "video": "videos/picturebook.mp4",
+   "video": "media/picturebook.mp4",
    "posterImg": "atlas/posters/picturebook.jpg"
   },
   {
@@ -1528,7 +1528,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.6,
-   "video": "videos/celshaded.mp4",
+   "video": "media/celshaded.mp4",
    "posterImg": "atlas/posters/celshaded.jpg"
   },
   {
@@ -1860,7 +1860,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/feedback.mp4",
+   "video": "media/feedback.mp4",
    "posterImg": "atlas/posters/feedback.jpg"
   },
   {
@@ -2124,7 +2124,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/objectstop.mp4",
+   "video": "media/objectstop.mp4",
    "posterImg": "atlas/posters/objectstop.jpg"
   },
   {
@@ -2662,7 +2662,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/hyperlapse.mp4",
+   "video": "media/hyperlapse.mp4",
    "posterImg": "atlas/posters/hyperlapse.jpg"
   },
   {
@@ -2692,7 +2692,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/highcontrast.mp4",
+   "video": "media/highcontrast.mp4",
    "posterImg": "atlas/posters/highcontrast.jpg"
   },
   {
@@ -3042,7 +3042,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.4,
-   "video": "videos/miniature.mp4",
+   "video": "media/miniature.mp4",
    "posterImg": "atlas/posters/miniature.jpg"
   },
   {
@@ -3072,7 +3072,7 @@ window.ATLAS = {
    "loopable": false,
    "dur": 10,
    "poster": 9.5,
-   "video": "videos/africanpattern.mp4",
+   "video": "media/africanpattern.mp4",
    "posterImg": "atlas/posters/africanpattern.jpg"
   },
   {
@@ -3374,7 +3374,7 @@ window.ATLAS = {
    "loopable": true,
    "dur": 10,
    "poster": 7.2,
-   "video": "videos/vj.mp4",
+   "video": "media/vj.mp4",
    "posterImg": "atlas/posters/vj.jpg"
   }
  ],
