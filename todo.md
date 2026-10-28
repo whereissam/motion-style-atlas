@@ -1,6 +1,6 @@
 # Motion Style Atlas — TODO
 
-Current build: 97 styles (original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15). Checked items below are done; Web 1.0 is covered by the Webcore film.
+Current build: 112 styles (original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15). Checked items below are done; Web 1.0 is covered by the Webcore film.
 Everything below is queued for later waves. Each item = one 10-second procedural film + card + atlas entry.
 
 ## Visual styles still to build
@@ -12,18 +12,18 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Art Deco Motion
 - [x] Op Art Kinetic
 - [x] Constructivism
-- [ ] Dadaism
+- [x] Dadaism
 - [x] De Stijl
-- [ ] Mid-century Modern
+- [x] Mid-century Modern
 - [x] Y2K Graphic Design
-- [ ] Grunge Typography
+- [x] Grunge Typography
 - [x] Risograph Animation
 
 ### B. Typography & Text Motion
-- [ ] Calligraphic Motion
+- [x] Calligraphic Motion
 - [x] Typewriter Animation
 - [x] Text-on-Path Motion
-- [ ] Typographic Collage
+- [x] Typographic Collage
 
 ### C. 2D Animation & Illustration
 - [x] Rubber Hose
@@ -32,17 +32,17 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Silhouette Animation (Lotte Reiniger)
 - [ ] Frame-by-frame
 - [x] Comic Book Motion
-- [ ] Limited Animation
+- [x] Limited Animation
 - [ ] Anime Motion Graphics
 - [ ] Ink Wash Animation
 - [x] Watercolour Animation 水彩动画
 - [x] Chalkboard Animation
-- [ ] Children's Book Animation
+- [x] Children's Book Animation
 
 ### D. 3D & CGI Motion
 - [x] Claymorphism
 - [ ] Photoreal CGI
-- [ ] Cel-shaded 3D
+- [x] Cel-shaded 3D
 - [ ] Product Visualization
 - [ ] Architectural Motion
 - [ ] 3D Character Animation
@@ -51,13 +51,13 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [ ] Noise-driven Motion
 - [ ] Shader Art
 - [x] Raymarching
-- [ ] Feedback Loops
+- [x] Feedback Loops
 - [x] Slit-scan
 - [ ] Data-driven Generative Art
 
 ### F. Analog, Physical & Stop Motion
 - [ ] Puppet Animation
-- [ ] Object Stop Motion
+- [x] Object Stop Motion
 - [ ] Pixilation
 - [x] Film Burn
 - [x] VHS Analog Video
@@ -74,11 +74,11 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Tilt-shift Miniature
 - [x] Double Exposure
 - [ ] Surreal Cinema
-- [ ] High Contrast Cinema
+- [x] High Contrast Cinema
 - [ ] Found Footage
 - [ ] Documentary Montage
 - [x] Time-lapse
-- [ ] Hyperlapse
+- [x] Hyperlapse
 - [x] Match-cut Montage
 - [x] Split-screen Cinema
 - [x] One-shot Camera Motion
@@ -87,19 +87,19 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Ukiyo-e Motion 浮世绘
 - [x] Ink Wash 水墨
 - [ ] Sumi-e
-- [ ] Indian Miniature
+- [x] Indian Miniature
 - [x] Islamic Geometry
 - [x] Papel Picado
 - [x] Dunhuang Murals 敦煌壁画
 - [x] Shadow Puppetry 皮影戏
 - [x] Korean Minhwa 민화
 - [x] Eastern European Folk Paper-cut
-- [ ] African Pattern Animation
+- [x] African Pattern Animation
 
 ### J. Contemporary Social & Commercial Motion
 - [ ] SaaS Product Motion
 - [x] Sports Broadcast
-- [ ] Concert VJ Loops
+- [x] Concert VJ Loops
 - [x] Luxury Brand Motion
 - [ ] Broadcast Graphics
 - [x] Data Storytelling

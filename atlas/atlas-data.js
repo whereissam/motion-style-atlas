@@ -399,6 +399,98 @@ window.ATLAS = {
    "posterImg": "atlas/posters/brutalism.jpg"
   },
   {
+   "id": "dadaism",
+   "family": "A",
+   "name": "Dadaism",
+   "sub": "Anti-Art, Chance and Sound Poetry",
+   "era": "1916 — 1924",
+   "origin": "Born at the Cabaret Voltaire in Zürich in February 1916, where Hugo Ball, Emmy Hennings, Tristan Tzara, Marcel Janco, Richard Huelsenbeck and Hans Arp staged sound poems, noise music and masks as a revolt against the logic that had produced the First World War. Berlin Dada (Raoul Hausmann, Hannah Höch, John Heartfield) invented political photomontage, Kurt Schwitters built Merz collages from rubbish in Hanover, and Hans Richter, Viking Eggeling and Marcel Duchamp carried it into abstract film.",
+   "works": "Karawane (Hugo Ball, sound poem, 1916) · Cut with the Kitchen Knife Dada … (Hannah Höch, 1919–20) · Mechanical Head (Raoul Hausmann, c. 1920) · Squares Arranged According to the Laws of Chance (Hans Arp, 1916–17) · Rhythmus 21 (Hans Richter, 1921) · Anémic Cinéma (Marcel Duchamp, 1926) · Merz magazine (Kurt Schwitters, 1923–32)",
+   "tech": [
+    "Keyframed Rhythmus planes with one inversion",
+    "Rotating eccentric-circle rotorelief",
+    "Seeded chance drops and re-rolls",
+    "Mixed wood-type setting per word"
+   ],
+   "accent": "#c3271b",
+   "motionDNA": "Deliberately unreasonable: abstract rectangles breathe and collapse, discs spin hypnotically, cut-outs fall where chance puts them, words slam down crooked and then re-roll their faces and angles on every eighth note before being blown off the page.",
+   "visualDNA": "Yellowed newsprint, black and one red, halftone photo cut-outs with scissor edges, gears and printers’ hands, and every word in a different wood or metal type, set at angles, in mismatched sizes, never on a grid.",
+   "transitions": "Rhythmus collapse to iris, rotorelief cut, torn-sheet rise, chance drop, word slam, page blow-out, letter-by-letter title set",
+   "implementation": [
+    "Physical photomontage and letterpress",
+    "16 mm animation stand (Richter, Duchamp)",
+    "After Effects cut-outs",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "videos/dadaism.mp4",
+   "posterImg": "atlas/posters/dadaism.jpg"
+  },
+  {
+   "id": "midcentury",
+   "family": "A",
+   "name": "Mid-century Modern",
+   "sub": "Atomic-Age Flat Colour",
+   "era": "1945 — 1969",
+   "origin": "The post-war look of the American 1950s and early ’60s: UPA’s limited animation (Gerald McBoing-Boing, 1950) and the TV backgrounds of Hanna-Barbera artists such as Ed Benedict and Art Lozzi, Mary Blair’s colour styling for Disney, Charley Harper’s geometric birds, Alexander Girard’s textiles for Herman Miller, and the furniture of Charles and Ray Eames. Atomic-age optimism turned into boomerangs, starbursts, kidney shapes and flat, textured colour printed slightly off its ink line.",
+   "works": "Gerald McBoing-Boing (UPA, 1950) · The Flintstones / The Jetsons backgrounds (Hanna-Barbera, 1960–63) · It’s a Small World (Mary Blair, 1964) · Charley Harper’s Ford Times bird prints (1950s) · Girard textiles for Herman Miller (1952—) · Eames Lounge Chair (1956) · Sleeping Beauty backgrounds (Eyvind Earle, 1959)",
+   "tech": [
+    "Parallax backdrop pan",
+    "Off-register ink lines over flat fills",
+    "Geometric character on twos",
+    "Wave-flipped pattern tiles"
+   ],
+   "accent": "#e0a227",
+   "motionDNA": "Bouncy and optimistic: shapes pop on with a little overshoot, boomerangs whirl, the backdrop slides past in a smooth TV-cartoon pan while the characters move on twos, and sparkles twinkle on the off-beats of a cool-jazz combo.",
+   "visualDNA": "Mustard, teal, burnt orange, olive and pink on cream; flat fills with a dry-brush texture, brown ink lines printed a few pixels off the colour, lollipop and triangle trees, butterfly roofs, kidney shapes, boomerangs and four-point starbursts.",
+   "transitions": "Starburst pop and boomerang wipe, stage-set assembly, parallax pan, tilt-up to sky, tile wave flip, tile drop to title card",
+   "implementation": [
+    "Gouache backgrounds and cel overlay",
+    "Illustrator + After Effects",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "videos/midcentury.mp4",
+   "posterImg": "atlas/posters/midcentury.jpg"
+  },
+  {
+   "id": "grunge",
+   "family": "A",
+   "name": "Grunge Typography",
+   "sub": "Distressed, Layered, Illegible",
+   "era": "1990 — 1999",
+   "origin": "The early-’90s reaction against Swiss order, made possible by the Macintosh: Emigre magazine (Rudy VanderLans and Zuzana Licko, from 1984) and its bitmap and distressed faces, Neville Brody’s experimental type magazine Fuse (from 1991), and above all David Carson’s art direction of Ray Gun (1992–95), which overlapped columns, cropped headlines off the page and once set an entire Bryan Ferry interview in Zapf Dingbats. Kyle Cooper’s hand-scratched, jittering title sequence for Se7en (1995) carried the look into motion and defined a decade of film and music-video titles.",
+   "works": "Ray Gun (David Carson, 1992–95) · The End of Print (Carson and Lewis Blackwell, 1995) · Se7en title sequence (Kyle Cooper / R/GA, 1995) · Fuse (Neville Brody and Jon Wozencroft, 1991—) · Emigre magazine (VanderLans and Licko, 1984–2005) · Template Gothic (Barry Deck, 1990) · Beach Culture (Carson, 1989–91)",
+   "tech": [
+    "Pre-eroded type through a distress texture",
+    "Gate weave and doubled exposures on twos",
+    "Overlapping justified columns",
+    "Self-sampled slice displacement"
+   ],
+   "accent": "#a8301f",
+   "motionDNA": "Nervous and handmade: the frame weaves and stutters on twos, scratched words flicker in double exposure, layers slide over each other at different speeds, letters jitter into place and the page tears into horizontal slices before the film slips its frame line.",
+   "visualDNA": "Dirty bone paper and black, one rust accent; heavy condensed sans against Bodoni italic and typewriter, letters overprinted and eroded, columns colliding with blurred photographs, giant cropped words, hairline rules, folios and dingbats.",
+   "transitions": "Hard cut from scratched film to print, staggered layer slides, slab shove, slice tear, frame-line slip",
+   "implementation": [
+    "QuarkXPress + photocopier",
+    "Scratched 35 mm film (Se7en)",
+    "After Effects with Twitch / Wiggle",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "videos/grunge.mp4",
+   "posterImg": "atlas/posters/grunge.jpg"
+  },
+  {
    "id": "swiss",
    "family": "B",
    "name": "Swiss Kinetic Type",
@@ -691,6 +783,67 @@ window.ATLAS = {
    "poster": 9.5,
    "video": "media/textpath.mp4",
    "posterImg": "atlas/posters/textpath.jpg"
+  },
+  {
+   "id": "calligraphic",
+   "family": "B",
+   "name": "Calligraphic Motion",
+   "sub": "Thick & Thin, Stroke by Stroke",
+   "era": "1906 —",
+   "origin": "Edward Johnston’s Writing & Illuminating, & Lettering (1906) revived the broad-edged pen and taught that every letter is a sequence of strokes made at a constant pen angle; Hermann Zapf carried that hand into type and lettering (Palatino 1948, Zapfino 1998). Title designers and lettering artists made the write-on its film form, revealing a word in the order a scribe would draw it, with the nib’s thick-and-thin contrast intact.",
+   "works": "Edward Johnston, Writing & Illuminating, & Lettering (1906) · Hermann Zapf, Pen and Graver (1952) · Saul Bass, The Age of Innocence title sequence (1993) · Seb Lester’s filmed calligraphy (2010s —) · Apple’s script “hello” (Macintosh, 1984 —)",
+   "tech": [
+    "Broad-edge nib swept at a fixed angle",
+    "Stroke-order write-on",
+    "Pointed-pen pressure swells",
+    "Wet iron-gall ink pooling and drying"
+   ],
+   "accent": "#b02e1c",
+   "motionDNA": "Every letter is revealed in true stroke order and direction, a pen leading the mark; strokes accelerate through the straights and slow into the turns, the pen lifts and arcs between strokes, and a final flourish swings out faster than the letters.",
+   "visualDNA": "Black-brown ink on cream laid paper with thick downstrokes and hairline upstrokes fixed by a 40° pen angle, a vermilion versal capital, pencil guide lines and a nib-width ladder in the margin, and glossy pooled ink at every stroke ending.",
+   "transitions": "Macro on the nib, pull-back write-on, flourish under-swing, erase of the guide lines, title settle",
+   "implementation": [
+    "After Effects (stroke write-on over hand-traced paths)",
+    "Canvas 2D",
+    "Web Audio"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "videos/calligraphic.mp4",
+   "posterImg": "atlas/posters/calligraphic.jpg"
+  },
+  {
+   "id": "typocollage",
+   "family": "B",
+   "name": "Typographic Collage",
+   "sub": "Parole in Libertà",
+   "era": "1912 —",
+   "origin": "F. T. Marinetti’s Futurist “words-in-freedom” (from 1912; Zang Tumb Tuuum, 1914) broke the line of type into onomatopoeia, mathematical signs and mixed faces flung along diagonals; Dada and Russian Constructivist typographers cut and pasted found print, and 1970s punk flyers (Jamie Reid, Linder) turned ransom-note letters, ticket stubs and tape into a xerox vernacular. Motion designers animate it as stop-motion paste-up, a piece per frame.",
+   "works": "F. T. Marinetti, Zang Tumb Tuuum (1914) · Marinetti, Les mots en liberté futuristes (1919) · Kurt Schwitters, Merz collages (1919 —) · Jamie Reid, sleeve and poster art for the Sex Pistols (1977) · Barbara Kruger, Untitled works (1980s)",
+   "tech": [
+    "Found letters, one face per glyph",
+    "Torn and scissor-cut edges",
+    "Stop-motion on twos (12 fps)",
+    "Diagonal Futurist composition"
+   ],
+   "accent": "#d3261d",
+   "motionDNA": "Paste-up on twos: each scrap slaps down in two or three held frames, dropping out of focus and shadow, the camera stepping with it; words are spelled one found letter at a time along diagonals, a vowel stretches by repetition, and a sheet slides in whole to clear space for the title.",
+   "visualDNA": "Wood type with grain in the ink, Bodoni and Anton headline cut-outs, newspaper columns, halftone, ticket stubs with perforations and masking tape on a newsprint table, in black, cream and Futurist red with the paper’s white core showing on torn edges.",
+   "transitions": "Slap-down, word build, rule burst, sheet slide-over, strip paste and tape",
+   "implementation": [
+    "After Effects (stop-motion paste-up)",
+    "Scanned print ephemera",
+    "Canvas 2D",
+    "Web Audio"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "videos/typocollage.mp4",
+   "posterImg": "atlas/posters/typocollage.jpg"
   },
   {
    "id": "rubberhose",
@@ -1046,6 +1199,68 @@ window.ATLAS = {
    "posterImg": "atlas/posters/liquid.jpg"
   },
   {
+   "id": "limited",
+   "family": "C",
+   "name": "Limited Animation",
+   "sub": "Held Cels, Moving Mouths",
+   "era": "1950 —",
+   "origin": "UPA (United Productions of America) broke with Disney’s full animation in Gerald McBoing-Boing (1950, Oscar 1951): flat modernist backgrounds, colour laid off-register from the line, stylised characters and only the drawings a gag needed. Hanna-Barbera turned that economy into a television system from The Ruff and Reddy Show (1957) onward — held bodies with separate mouth cels, swapped heads, walk cycles over repeating pans, timing on twos and threes.",
+   "works": "Gerald McBoing-Boing (UPA, Robert Cannon, 1950) · Rooty Toot Toot (UPA, John Hubley, 1951) · The Ruff and Reddy Show (Hanna-Barbera, 1957) · The Huckleberry Hound Show (Hanna-Barbera, 1958) · The Flintstones (Hanna-Barbera, 1960)",
+   "tech": [
+    "Held cels with separate mouth drawings",
+    "Swap heads, no in-betweens",
+    "Walk cycle over a repeating pan",
+    "Timing on threes (8 drawings/s)"
+   ],
+   "accent": "#df5f3c",
+   "motionDNA": "Eight drawings a second, many of them held: a body freezes while only a mouth cel changes, a head is swapped for another view in one frame, a walk cycle repeats over a background that steps past and visibly repeats, and a zip-out replaces motion with a puff and speed lines.",
+   "visualDNA": "Flat mid-century colour fields in mustard, teal and coral printed slightly off-register from thin black line, geometric characters with triangle noses and pork-pie hats, asterisk stars and lollipop trees, and gouache dry-brush on the backgrounds.",
+   "transitions": "Hard cut, held pose, head swap, zip-out with dust puff, pop-on title card",
+   "implementation": [
+    "Cel animation (exposure sheet on threes)",
+    "Toon Boom Harmony (cut-out rigs)",
+    "Canvas 2D",
+    "Web Audio"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "videos/limited.mp4",
+   "posterImg": "atlas/posters/limited.jpg"
+  },
+  {
+   "id": "picturebook",
+   "family": "C",
+   "name": "Children's Book Animation",
+   "sub": "Picture-book Illustration in Motion",
+   "era": "1950s —",
+   "origin": "Picture-book art carried to the screen with its paper, crayon and paint intact. Morton Schindel's Weston Woods \"iconographic\" films (from 1955) slowly panned across the original book illustrations; Dianne Jackson's The Snowman (1982) animated the soft coloured-pencil texture of Raymond Briggs's 1978 book; Studio AKA's Lost and Found (2008) and Magic Light Pictures' Julia Donaldson & Axel Scheffler films kept the page's look in motion. Eric Carle's painted tissue-paper collage and the deadpan restraint of Jon Klassen and Oliver Jeffers shaped the contemporary vocabulary.",
+   "works": "Make Way for Ducklings (Weston Woods, 1955) · The Snowman (Dianne Jackson, 1982) · Lost and Found (Philip Hunt / Studio AKA, 2008, from Oliver Jeffers) · The Gruffalo (Jakob Schuh & Max Lang, 2009) · Room on the Broom (Jan Lachauer & Max Lang, 2012) · Eric Carle, The Very Hungry Caterpillar (book, 1969) · Jon Klassen, I Want My Hat Back (book, 2011)",
+   "tech": [
+    "Paper-tooth crayon & coloured-pencil fills",
+    "Painted tissue-paper collage (multiply)",
+    "Page-turn structure",
+    "Gentle multiplane parallax"
+   ],
+   "accent": "#d9452f",
+   "motionDNA": "Unhurried and quiet: the camera drifts, layers slide past each other in shallow parallax, the character does one small thing per page, and the story moves forward by turning the page. Eyes slide sideways instead of faces emoting.",
+   "visualDNA": "Cream paper with visible tooth, translucent painted tissue shapes overlapping into darker layers, waxy broken crayon lines, coloured-pencil hatching over flat gouache skies, a small character with dot eyes, and serif story text set in the open sky of the spread.",
+   "transitions": "Cover open, page turn, parallax drift, vertical pan, word-by-word text",
+   "implementation": [
+    "Scanned textures + After Effects / Moho",
+    "TVPaint",
+    "Stop-frame cut paper",
+    "Canvas 2D (texture patterns, strip-drawn page turn)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.6,
+   "video": "videos/picturebook.mp4",
+   "posterImg": "atlas/posters/picturebook.jpg"
+  },
+  {
    "id": "mograph",
    "family": "D",
    "name": "MoGraph",
@@ -1284,6 +1499,37 @@ window.ATLAS = {
    "poster": 9.5,
    "video": "media/claymorphism.mp4",
    "posterImg": "atlas/posters/claymorphism.jpg"
+  },
+  {
+   "id": "celshaded",
+   "family": "D",
+   "name": "Cel-shaded 3D",
+   "sub": "Toon Shading",
+   "era": "2000 —",
+   "origin": "Non-photorealistic rendering that makes 3D models look like inked animation cels: diffuse light is quantised into two or three hard bands through a ramp lookup, and black outlines come from the inverted-hull trick (the back faces of a slightly inflated copy) or from edge detection. Sega's Jet Set Radio (Smilebit, 2000) brought it to games, Nintendo's The Legend of Zelda: The Wind Waker (2002) made it a classic, and it runs through Borderlands (2009), Guilty Gear Xrd (2014) and the NPR films Spider-Man: Into the Spider-Verse (2018) and Arcane (2021).",
+   "works": "Jet Set Radio (Smilebit / Sega, 2000) · The Legend of Zelda: The Wind Waker (Nintendo, 2002) · Ōkami (Clover Studio, 2006) · Borderlands (Gearbox, 2009) · Guilty Gear Xrd (Arc System Works, 2014) · Spider-Man: Into the Spider-Verse (Sony Pictures Animation, 2018) · Arcane (Fortiche, 2021)",
+   "tech": [
+    "Banded Lambert ramp (3 tones)",
+    "Inverted-hull outlines",
+    "Flat anime palette with tinted shadows",
+    "Painter-sorted mesh projection"
+   ],
+   "accent": "#ff5a3c",
+   "motionDNA": "Real 3D camera moves — orbits, a wide reveal, a hard anime cut to a low skimming run — but everything reads as drawn: shading jumps between bands instead of gliding, and speed lines, spray dots and swirl clouds are graphic shapes.",
+   "visualDNA": "Saturated flat colour in two or three hard tones per surface, cool violet shadows and warm highlights, constant-width ink silhouettes, a banded sea with white foam strokes, and puffy outlined clouds with a curl.",
+   "transitions": "Lambert-to-toon wipe, orbit, hard cut, speed-line burst, spring-pop title",
+   "implementation": [
+    "Toon ramp shaders (Unity / Unreal / Blender)",
+    "Blender Line Art / Freestyle",
+    "Pencil+ (3ds Max / Maya)",
+    "Canvas 2D (CPU projection, band-split faces, painter's sort)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.6,
+   "video": "videos/celshaded.mp4",
+   "posterImg": "atlas/posters/celshaded.jpg"
   },
   {
    "id": "particles",
@@ -1587,6 +1833,37 @@ window.ATLAS = {
    "posterImg": "atlas/posters/raymarch.jpg"
   },
   {
+   "id": "feedback",
+   "family": "E",
+   "name": "Feedback Loops",
+   "sub": "Video Feedback / Howlaround",
+   "era": "1963 —",
+   "origin": "Point a camera at the monitor showing its own picture and the image re-enters itself every frame: nested screens, spiralling trails and luminous blooms emerge from nothing but zoom, tilt and delay. Bernard Lodge built Doctor Who's 1963 title sequence from this BBC \"howlaround\"; 1970s video artists — Nam June Paik (with Shuya Abe's Paik–Abe Synthesizer, 1969–70) and Steina & Woody Vasulka at The Kitchen — made it a medium; digital frame feedback (MilkDrop, TouchDesigner, VJ software) adds zoom, rotation and hue shift on every pass.",
+   "works": "Doctor Who title sequence (Bernard Lodge, BBC, 1963) · Nam June Paik & Shuya Abe, Paik–Abe Video Synthesizer (1969–70) · Steina & Woody Vasulka, video feedback works (1970s) · Queen, \"Bohemian Rhapsody\" video (Bruce Gowers, 1975) · MilkDrop (Ryan Geiss, 2001) · TouchDesigner feedback TOPs (Derivative, 2000s —)",
+   "tech": [
+    "Recursive zoom / rotate per pass",
+    "One-pass time delay per copy",
+    "Additive decay + hue shift per pass",
+    "Monitor-in-monitor tunnel"
+   ],
+   "accent": "#5ee7ff",
+   "motionDNA": "Nothing is animated directly: one small moving thing is re-photographed again and again, so its past spirals inward or blooms outward. Changing the zoom, tilt or delay changes the whole organism at once; the motion is slow, breathing, self-similar.",
+   "visualDNA": "A dark field with glowing structures: nested screens receding into a spiral tunnel, blooming petals of trailed light, colour cycling through the passes, CRT scanlines and soft bloom.",
+   "transitions": "Infinite zoom through nested screens, crossfade between regimes, rotation reversal (fold), echo tunnel title",
+   "implementation": [
+    "Camera + monitor (analog howlaround)",
+    "Video synthesizers & colorizers",
+    "TouchDesigner / MilkDrop frame feedback",
+    "Canvas 2D (N recursive copies as a function of t)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "videos/feedback.mp4",
+   "posterImg": "atlas/posters/feedback.jpg"
+  },
+  {
    "id": "claymation",
    "family": "F",
    "name": "Clay Stop Motion",
@@ -1819,6 +2096,36 @@ window.ATLAS = {
    "poster": 9.3,
    "video": "media/filmburn.mp4",
    "posterImg": "atlas/posters/filmburn.jpg"
+  },
+  {
+   "id": "objectstop",
+   "family": "F",
+   "name": "Object Stop Motion",
+   "sub": "Everyday Things, Frame by Frame",
+   "era": "1907 —",
+   "origin": "Instead of puppets or clay, real household objects are moved a fraction between exposures so they seem to act on their own. J. Stuart Blackton's The Haunted Hotel (1907) had a breakfast table lay itself; Norman McLaren extended the trick to people as pixilation in Neighbours (1952); Jan Švankmajer turned food and utensils into uncanny actors; and PES made food out of non-food — Rubik's cubes, bubble wrap and Post-it notes — in Western Spaghetti (2008).",
+   "works": "The Haunted Hotel (J. Stuart Blackton, 1907) · Neighbours (Norman McLaren, 1952) · Dimensions of Dialogue (Jan Švankmajer, 1982) · Food (Jan Švankmajer, 1992) · Western Spaghetti (PES, 2008) · Fresh Guacamole (PES, 2012)",
+   "tech": [
+    "Shot on twos at 12 fps",
+    "Object substitution (things stand in for food)",
+    "Locked overhead camera on a tabletop",
+    "Per-frame placement jitter & light flicker"
+   ],
+   "accent": "#f2a810",
+   "motionDNA": "Everything moves in 12 fps steps, as if nudged by an unseen hand: props shuffle in and hop to their marks, a paper egg spreads in a few exposures, beads re-scatter every frame like sizzling fat, and every resting object shivers by a pixel or two.",
+   "visualDNA": "A warm overhead view of a pine tabletop with real drop shadows: a cast-iron pan on a ring of sticky-note flames, a golf-ball egg with a yellow button yolk, cork toast, ribbon bacon, a blue-rimmed plate and wooden letter tiles, under a faintly flickering key light.",
+   "transitions": "None — props enter and exit the locked frame by hand; the title is spelled with tiles on the table",
+   "implementation": [
+    "DSLR on an overhead rig + Dragonframe",
+    "Hand-placed props, onion-skin checks",
+    "Canvas 2D (12 fps quantised time, cached exposures)"
+   ],
+   "reproducibility": "Procedural homage (the real thing is shot frame by frame)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "videos/objectstop.mp4",
+   "posterImg": "atlas/posters/objectstop.jpg"
   },
   {
    "id": "retro",
@@ -2329,6 +2636,66 @@ window.ATLAS = {
    "posterImg": "atlas/posters/oneshot.jpg"
   },
   {
+   "id": "hyperlapse",
+   "family": "H",
+   "name": "Hyperlapse",
+   "sub": "Moving Time-lapse",
+   "era": "2011 —",
+   "origin": "A time-lapse in which the camera itself travels: one still is shot every few steps or metres, each aligned to a fixed point, then stabilised and played at video speed so the camera glides over distances while hours pass. Ron Fricke's motion-controlled driving shots for Koyaanisqatsi (1982) were early ancestors; Geoff Tompkinson, Shahab Gabriel and Rob Whitworth popularised hand-moved city hyperlapses with whip-pan \"flow\" transitions in the early 2010s, and Instagram's Hyperlapse app and Microsoft Research's Hyperlapse (both 2014) turned it into a phone feature.",
+   "works": "Koyaanisqatsi (Godfrey Reggio, cinematography Ron Fricke, 1982) · Geoff Tompkinson's city hyperlapses (2012 —) · Barcelona GO! (Rob Whitworth, 2013) · Instagram Hyperlapse app (2014) · Microsoft Research Hyperlapse (Kopf, Cohen & Szeliski, SIGGRAPH 2014)",
+   "tech": [
+    "One still every few metres, aligned to a fixed point",
+    "Warp stabilisation & deflicker",
+    "Whip-pan transitions between locations",
+    "Light trails from long-interval traffic"
+   ],
+   "accent": "#ff8a3a",
+   "motionDNA": "A steady, gliding forward push that never bobs, while everything else is fast-forwarded: clouds race out of the vanishing point, shadows sweep the street, traffic becomes streaks; whip pans snap between locations and the final push eases to a stop as the city keeps rushing.",
+   "visualDNA": "Strict one-point perspective down an avenue and across a suspension bridge, the sky sliding from afternoon blue through a sunset into blue hour and night, windows switching on, ghosted pedestrians, red and white light ribbons, neon on wet asphalt and a faint frame-to-frame exposure shimmer.",
+   "transitions": "Whip pans (motion-blurred swish) between locations, time jumping with each one",
+   "implementation": [
+    "DSLR on a tripod moved by hand, every few metres",
+    "After Effects Warp Stabilizer / LRTimelapse deflicker",
+    "Canvas 2D (one-point projection, procedural city)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "videos/hyperlapse.mp4",
+   "posterImg": "atlas/posters/hyperlapse.jpg"
+  },
+  {
+   "id": "highcontrast",
+   "family": "H",
+   "name": "High Contrast Cinema",
+   "sub": "Black, White & One Spot Colour",
+   "era": "1980 —",
+   "origin": "Black-and-white pushed until the greys disappear: blacks crushed solid, highlights blown out, the image reduced to ink and paper, often with a single colour left alive in the frame. Martin Scorsese shot Raging Bull (1980) in stark monochrome, Steven Spielberg let one girl's red coat burn through Schindler's List (1993), Robert Rodriguez and Frank Miller turned Miller's comics into Sin City (2005) with digital keying and selective colour, and George Miller re-graded Mad Max: Fury Road as the Black & Chrome Edition (2016).",
+   "works": "Raging Bull (Martin Scorsese, 1980) · Rumble Fish (Francis Ford Coppola, 1983) · Schindler's List (Steven Spielberg, 1993) · Sin City (Robert Rodriguez & Frank Miller, 2005) · The Spirit (Frank Miller, 2008) · Mad Max: Fury Road — Black & Chrome (George Miller, 2016)",
+   "tech": [
+    "Crushed blacks & clipped whites (no midtones)",
+    "Selective colour — one hue spared",
+    "Inked rim outlines & silhouettes",
+    "Rain as white streaks (difference blend)"
+   ],
+   "accent": "#e0141e",
+   "motionDNA": "Slow, deliberate push-ins and hard cuts like turning a page: a walk into a cone of light, a profile that barely turns, an overhead crowd flowing against one figure, and a single lightning beat that flips the sky before the title holds.",
+   "visualDNA": "Pure black and pure white graphic shapes — lamp cones, window grids, a face carved by its shadow side, white-outlined silhouettes, slanting white rain and wet-street reflections — with one saturated red that stays in colour through every shot, plus comic-style narration boxes.",
+   "transitions": "Hard cuts, a lightning flash, caption boxes",
+   "implementation": [
+    "Green-screen + digital backlot (Sin City)",
+    "Power-window selective colour in DaVinci Resolve",
+    "Canvas 2D (two-tone vector, difference-blend rain)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "videos/highcontrast.mp4",
+   "posterImg": "atlas/posters/highcontrast.jpg"
+  },
+  {
    "id": "hud",
    "family": "H",
    "name": "FUI",
@@ -2649,6 +3016,66 @@ window.ATLAS = {
    "posterImg": "atlas/posters/wycinanki.jpg"
   },
   {
+   "id": "miniature",
+   "family": "I",
+   "name": "Indian Miniature",
+   "sub": "Mughal · Rajput · Pahari painting",
+   "era": "16th–19th c.",
+   "origin": "Album and manuscript painting of the Mughal court (from Akbar’s atelier in the 1560s) and of the Rajput kingdoms of Rajasthan and the Pahari hill states of the Punjab Himalaya. Painters burnished wasli paper, sketched a red-ochre khaka, laid mineral and lake pigments in flat layers and finished with gold; Persian conventions — a high horizon, tilted ground planes, cypress and garden — met Indian devotional subjects, above all the love of Radha and Krishna in the Gita Govinda and Bhagavata Purana.",
+   "works": "Hamzanama for Akbar (c. 1562–77) · Jahangir album pages with gold-flowered hashiya margins (c. 1610–20) · Nainsukh of Guler, paintings for Balwant Singh of Jasrota (c. 1740s–50s) · Kangra Gita Govinda series (c. 1775–80) · Kishangarh “Bani Thani” type, Nihal Chand (c. 1750)",
+   "tech": [
+    "Burnished wasli paper, red khaka underdrawing",
+    "Flat mineral pigments (lapis, malachite, vermilion, Indian yellow)",
+    "Gold leaf and shell gold, burnished",
+    "Tilted perspective, profile figures, ornate hashiya margins"
+   ],
+   "accent": "#c9361f",
+   "motionDNA": "The painting is built the way a workshop built it — rules drawn, margin burnished, khaka sketched, colour laid layer by layer, gold applied last — then only gentle, devotional motion: a flute raised, a veil lifting, a peacock’s call, ripples in the tank, cranes crossing the sky.",
+   "visualDNA": "A high-horizon garden terrace shown from above with upright profile figures, white marble pavilions with cusped arches and chhatris, rounded trees of countless leaves, jewel-tone lapis, vermilion and malachite on cream, fine dark outlines and glinting gold, inside rules, a lapis vine border and a gold-flowered hashiya.",
+   "transitions": "Ruling-pen line draw, khaka-to-colour layering, gold-leaf sweep with sheen, slow camera glide across the folio, pull-back to the album page and its inscription",
+   "implementation": [
+    "Mineral pigment and gold on wasli",
+    "Illustrator / Procreate + AE layered reveal",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "videos/miniature.mp4",
+   "posterImg": "atlas/posters/miniature.jpg"
+  },
+  {
+   "id": "africanpattern",
+   "family": "I",
+   "name": "African Pattern Animation",
+   "sub": "Kente · Adinkra · Ndebele",
+   "era": "17th c. — today",
+   "origin": "Not one “African style” but distinct living traditions. Kente is woven by Asante and Ewe weavers in Ghana on horizontal treadle looms as narrow strips (about 10 cm) that are sewn edge to edge, alternating warp-faced stripes and weft-faced blocks; Adinkra cloth, also Asante, is ruled with a comb and stamped with carved-calabash symbols, each a named proverb; amaNdebele women in South Africa paint homestead walls with black-outlined geometry and flat colour, a practice Esther Mahlangu carried onto canvas, a BMW Art Car and global design.",
+   "works": "Asante royal Kente (Bonwire, Ashanti Region) and Ewe Kente (Agotime, Volta Region) · Adinkra cloths from Ntonso, Ghana; symbol sets catalogued by W. Bruce Willis, The Adinkra Dictionary (1998) · Esther Mahlangu, BMW 525i Art Car (1991) and Magiciens de la Terre, Paris (1989) · Kente stoles in graduation and diaspora fashion",
+   "tech": [
+    "Narrow-strip treadle-loom weaving, strips sewn edge to edge",
+    "Comb-ruled grid and calabash stamps in badie-bark ink",
+    "Freehand black outlines filled with flat colour",
+    "Each motif named; meaning carried by symbol and colour"
+   ],
+   "accent": "#f2b51e",
+   "motionDNA": "Motion follows the making: shuttle and beater on the 12/8 bell, strips sliding together into a checkerboard, stamps pressing down on the dotted-quarter beat with each symbol’s name, a brush tip tracing black outlines and colour flooding each field.",
+   "visualDNA": "Gold, green, red and black Kente with blocky weft-faced motifs; black Adinkra symbols in comb-ruled squares on cream cotton; whitewashed Ndebele walls of stepped gables, razor-blade hexagons and ladder stripes in primary colour with thick black and fine white outlines.",
+   "transitions": "Loom pull-back to sewn cloth, cloth slide-over, comb rake, stamp press, lime-wash brush wipe, collapse into a labelled triptych",
+   "implementation": [
+    "Loom, stamp and brush as process animation",
+    "Illustrator / AE shape layers with trim paths",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "videos/africanpattern.mp4",
+   "posterImg": "atlas/posters/africanpattern.jpg"
+  },
+  {
    "id": "huazi",
    "family": "J",
    "name": "Variety Captions",
@@ -2919,7 +3346,37 @@ window.ATLAS = {
    "poster": 5.5,
    "video": "media/podcast.mp4",
    "posterImg": "atlas/posters/podcast.jpg"
+  },
+  {
+   "id": "vj",
+   "family": "J",
+   "name": "Concert VJ Loops",
+   "sub": "Live visuals for stage & club",
+   "era": "1990s —",
+   "origin": "VJs perform visuals live, triggering and mixing beat-locked loops on clip-launcher software (Resolume Arena, TouchDesigner, earlier VDMX and Modul8) onto LED walls and projection-mapped stage sets. The form grew out of club projection in the 1980s–90s; by the 2000s studios such as United Visual Artists built LED walls and custom software for Massive Attack, Daft Punk toured a light-up pyramid, and Amon Tobin’s ISAM stage turned a stack of cubes into a projection-mapped instrument.",
+   "works": "UVA (United Visual Artists) — Massive Attack 100th Window tour LED wall (2003) and Heligoland tour (2010) · Daft Punk, Alive 2006/2007 pyramid stage · Amon Tobin, ISAM Live (2011), with Heavy Projects and V Squared Labs · Resolume Arena / TouchDesigner VJ sets in clubs and festivals",
+   "tech": [
+    "Clip launcher with BPM sync / tap tempo",
+    "LED wall mapping at low pixel pitch",
+    "Projection-mapped set pieces",
+    "Lasers and moving heads through haze"
+   ],
+   "accent": "#ff3cbe",
+   "motionDNA": "Everything is locked to the beat grid: loops cycle in bar lengths, kicks launch local rings rather than full-frame flashes, a build accelerates scroll speed and roll density, the drop changes clip on the downbeat and lasers fan on the bar.",
+   "visualDNA": "A black stage with a wide LED wall of visible pixels, neon cyan, magenta and amber geometry — tunnels, data columns, nested triangles — bloom and floor reflections, a pyramid outline, a mapped cube booth, laser fans over a silhouetted crowd with raised hands and phone screens.",
+   "transitions": "Dive through the software output preview onto the wall, clip cuts on the downbeat, scan sweeps, accelerating build, pulse decays, title resolved in LED pixels",
+   "implementation": [
+    "Resolume Arena / TouchDesigner + LED processor",
+    "Notch / After Effects loop authoring",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 7.2,
+   "video": "videos/vj.mp4",
+   "posterImg": "atlas/posters/vj.jpg"
   }
  ],
- "built": "2026-10-27"
+ "built": "2026-10-28"
 };
