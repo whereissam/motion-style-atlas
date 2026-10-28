@@ -18,16 +18,16 @@
 
   // Running order: grouped by family. Ids without a film yet are skipped everywhere.
   MG.ORDER = [
-    'whitney', 'bass', 'bauhaus', 'artdeco', 'constructivism', 'psychedelic', 'opart', 'memphis', 'y2k', 'destijl', 'risograph', 'brutalism',
-    'swiss', 'flash', 'variablefont', 'ascii', 'type3d', 'kinetic', 'textmorph', 'editorial', 'typewriter', 'textpath',
-    'rubberhose', 'silhouette', 'lineart', 'collage', 'isometric', 'sakuga', 'comic', 'flat', 'whiteboard', 'chalkboard', 'watercolor', 'liquid',
-    'mograph', 'lowpoly', 'voxel', 'glass3d', 'softbody', 'wireframe', 'exploded', 'claymorphism',
-    'particles', 'reactiondiffusion', 'attractor', 'lifegame', 'fractal', 'lsystem', 'boids', 'audioreactive', 'slitscan', 'raymarch',
-    'claymation', 'sand', 'xerox', 'paintglass', 'directfilm', 'cyanotype', 'vhs', 'filmburn',
+    'whitney', 'bass', 'bauhaus', 'artdeco', 'constructivism', 'psychedelic', 'opart', 'memphis', 'y2k', 'destijl', 'risograph', 'brutalism', 'dadaism', 'midcentury', 'grunge',
+    'swiss', 'flash', 'variablefont', 'ascii', 'type3d', 'kinetic', 'textmorph', 'editorial', 'typewriter', 'textpath', 'calligraphic', 'typocollage',
+    'rubberhose', 'silhouette', 'lineart', 'collage', 'isometric', 'sakuga', 'comic', 'flat', 'whiteboard', 'chalkboard', 'watercolor', 'liquid', 'limited', 'picturebook',
+    'mograph', 'lowpoly', 'voxel', 'glass3d', 'softbody', 'wireframe', 'exploded', 'claymorphism', 'celshaded',
+    'particles', 'reactiondiffusion', 'attractor', 'lifegame', 'fractal', 'lsystem', 'boids', 'audioreactive', 'slitscan', 'raymarch', 'feedback',
+    'claymation', 'sand', 'xerox', 'paintglass', 'directfilm', 'cyanotype', 'vhs', 'filmburn', 'objectstop',
     'retro', 'pixel', 'glitch', 'vaporwave', 'frutiger', 'terminal', 'desktop', 'webcore', 'screensaver',
-    'filmnoir', 'longexposure', 'doubleexposure', 'tiltshift', 'timelapse', 'matchcut', 'splitscreen', 'oneshot', 'hud', 'cyberpunk',
-    'ukiyoe', 'inkwash', 'shadowpuppet', 'dunhuang', 'islamic', 'papelpicado', 'guochao', 'minhwa', 'wycinanki',
-    'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast',
+    'filmnoir', 'longexposure', 'doubleexposure', 'tiltshift', 'timelapse', 'matchcut', 'splitscreen', 'oneshot', 'hyperlapse', 'highcontrast', 'hud', 'cyberpunk',
+    'ukiyoe', 'inkwash', 'shadowpuppet', 'dunhuang', 'islamic', 'papelpicado', 'guochao', 'minhwa', 'wycinanki', 'miniature', 'africanpattern',
+    'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast', 'vj',
   ];
 
   // Curated best-of reel: a representative spread across every family.

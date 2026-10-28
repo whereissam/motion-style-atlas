@@ -122,15 +122,32 @@ async function reel(info, which) {
   parts.push(path.join(ROOT, 'videos/cards/atlas-end.mp4'));
   const missing = parts.filter(p => !fs.existsSync(p));
   if (missing.length) throw new Error('missing segments:\n  ' + missing.map(p => path.relative(ROOT, p)).join('\n  '));
-  const list = path.join(fs.mkdtempSync(path.join(os.tmpdir(), 'mg-')), 'list.txt');
-  fs.writeFileSync(list, parts.map(p => `file '${p}'`).join('\n'));
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'mg-'));
+  const concat = async (files, out) => {
+    const list = path.join(tmp, 'list.txt');
+    fs.writeFileSync(list, files.map(p => `file '${p}'`).join('\n'));
+    await run('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', '-movflags', '+faststart', out]);
+  };
   const out = path.join(ROOT, 'videos', name + '.mp4');
-  await run('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', '-movflags', '+faststart', out]);
+  await concat(parts, out);
   console.log(`✓ ${path.relative(ROOT, out)}  ${ids.length} styles`);
+  // The share copy is stitched from per-segment encodes cached in videos/share/, so a new wave
+  // only encodes its new or re-rendered segments instead of the whole reel.
+  const shareParts = [];
+  let encoded = 0;
+  for (const p of parts) {
+    const s = path.join(ROOT, 'videos/share', path.relative(path.join(ROOT, 'videos'), p));
+    if (!fs.existsSync(s) || fs.statSync(s).mtimeMs < fs.statSync(p).mtimeMs) {
+      fs.mkdirSync(path.dirname(s), { recursive: true });
+      await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', p, '-c:v', 'libx264', '-preset', 'slow', '-crf', '26', '-maxrate', '2.5M', '-bufsize', '5M',
+        '-pix_fmt', 'yuvj420p', '-c:a', 'aac', '-b:a', '128k', '-ar', '48000', '-movflags', '+faststart', s]);
+      encoded++;
+    }
+    shareParts.push(s);
+  }
   const share = path.join(ROOT, 'videos', name + '-share.mp4');
-  await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', out, '-c:v', 'libx264', '-preset', 'slow', '-crf', '26', '-maxrate', '2.5M', '-bufsize', '5M',
-    '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', share]);
-  console.log(`✓ ${path.relative(ROOT, share)}`);
+  await concat(shareParts, share);
+  console.log(`✓ ${path.relative(ROOT, share)}  (${encoded} segments encoded, ${parts.length - encoded} cached)`);
 }
 
 const browser = await chromium.launch({ executablePath: CHROME, args: ['--disable-web-security', '--allow-file-access-from-files'] });

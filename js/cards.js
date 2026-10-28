@@ -65,18 +65,22 @@
       dur,
       setup() { return { pv: poster(id, 960, 540) }; },
       draw(c, t, W, H, st) {
-        const m = metaOf(id), list = present(), idx = list.indexOf(id) + 1, acc = m.accent || '#e8e2d6';
+        // Number within the family, not across the atlas: new styles are appended to their family,
+        // so existing cards never change and a new wave only renders its own cards.
+        const m = metaOf(id), idx = present().filter(x => metaOf(x).family === m.family).indexOf(id) + 1, acc = m.accent || '#e8e2d6';
         c.fillStyle = BG; c.fillRect(0, 0, W, H);
         const bar = E.outX(seg(t, 0, 0.4));
         c.fillStyle = acc; c.fillRect(118, 150, 6, 820 * bar);
         text(c, `MOTION STYLE ATLAS  ·  ${m.family}  ${(MG.FAMILIES[m.family] || {}).name || ''}`.toUpperCase(), 150, 110, { font: MONO, size: 22, ls: 4, color: MUTE });
-        text(c, `${String(idx).padStart(2, '0')} / ${String(list.length).padStart(2, '0')}`, W - 120, 110, { font: MONO, size: 22, ls: 4, align: 'right', color: MUTE });
+        text(c, `${m.family} · ${String(idx).padStart(2, '0')}`, W - 120, 110, { font: MONO, size: 22, ls: 4, align: 'right', color: MUTE });
         maskUp(c, 150, 430, 280, E.outX(seg(t, 0.04, 0.5)), () => text(c, String(idx).padStart(2, '0'), 140, 430, { font: 'Anton, sans-serif', size: 300, color: acc }));
         text(c, m.era, 520, 430, { font: MONO, weight: 800, size: 30, ls: 2, color: `rgba(236,230,220,${seg(t, 0.35, 0.6)})` });
         font(c, 120, ARCH, 900);
         const nsz = Math.min(120, 120 * 820 / c.measureText(m.cn).width);
         maskUp(c, 150, 610, 170, E.outX(seg(t, 0.14, 0.6)), () => text(c, m.cn, 146, 600, { font: ARCH, weight: 900, size: nsz, ls: -2, color: INK }));
-        text(c, m.en.toUpperCase(), 154, 676, { font: ARCH, weight: 800, size: 40, ls: 9, color: `rgba(236,230,220,${0.75 * seg(t, 0.3, 0.6)})` });
+        font(c, 40, ARCH, 800);
+        const en = m.en.toUpperCase(), esz = Math.min(40, 40 * 820 / (c.measureText(en).width + 9 * en.length));
+        text(c, en, 154, 676, { font: ARCH, weight: 800, size: esz, ls: 9 * esz / 40, color: `rgba(236,230,220,${0.75 * seg(t, 0.3, 0.6)})` });
         font(c, 30, ARCH, 400);
         const oa = seg(t, 0.45, 0.8);
         wrapW(c, m.origin, 800).slice(0, 3).forEach((ln, i) => text(c, ln, 154, 764 + i * 44, { font: ARCH, weight: 400, size: 30, color: `rgba(216,210,201,${oa})` }));
