@@ -87,5 +87,5 @@ node tools/render.mjs reel best                        # best-of reel + -share c
 1. Write the film in a `js/films-*.js` file and add a `<script>` tag for that file to `render.html`.
 2. Add its id to `MG.ORDER` in `js/atlas-data.js`, in its family's group.
 3. Check it with `still`, then run `film`, `web`, `poster`, `data` and `build-prompts`.
-4. Re-render all cards (`card` with no ids), because the opening and closing cards count every style. Then rebuild the reels.
+4. Render only the new cards plus the opening and closing ones: `card <new ids...> atlas-open atlas-end`. Cards are numbered within their family, so adding styles at the end of a family leaves the existing cards valid. Then rebuild the reels; the `-share` copies only encode segments that are new or changed (cached in `videos/share/`).
 5. Tick the style off in `todo.md`.

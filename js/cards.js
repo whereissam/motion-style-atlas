@@ -65,12 +65,14 @@
       dur,
       setup() { return { pv: poster(id, 960, 540) }; },
       draw(c, t, W, H, st) {
-        const m = metaOf(id), list = present(), idx = list.indexOf(id) + 1, acc = m.accent || '#e8e2d6';
+        // Number within the family, not across the atlas: new styles are appended to their family,
+        // so existing cards never change and a new wave only renders its own cards.
+        const m = metaOf(id), idx = present().filter(x => metaOf(x).family === m.family).indexOf(id) + 1, acc = m.accent || '#e8e2d6';
         c.fillStyle = BG; c.fillRect(0, 0, W, H);
         const bar = E.outX(seg(t, 0, 0.4));
         c.fillStyle = acc; c.fillRect(118, 150, 6, 820 * bar);
         text(c, `MOTION STYLE ATLAS  ·  ${m.family}  ${(MG.FAMILIES[m.family] || {}).name || ''}`.toUpperCase(), 150, 110, { font: MONO, size: 22, ls: 4, color: MUTE });
-        text(c, `${String(idx).padStart(2, '0')} / ${String(list.length).padStart(2, '0')}`, W - 120, 110, { font: MONO, size: 22, ls: 4, align: 'right', color: MUTE });
+        text(c, `${m.family} · ${String(idx).padStart(2, '0')}`, W - 120, 110, { font: MONO, size: 22, ls: 4, align: 'right', color: MUTE });
         maskUp(c, 150, 430, 280, E.outX(seg(t, 0.04, 0.5)), () => text(c, String(idx).padStart(2, '0'), 140, 430, { font: 'Anton, sans-serif', size: 300, color: acc }));
         text(c, m.era, 520, 430, { font: MONO, weight: 800, size: 30, ls: 2, color: `rgba(236,230,220,${seg(t, 0.35, 0.6)})` });
         font(c, 120, ARCH, 900);
