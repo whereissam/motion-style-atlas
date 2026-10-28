@@ -78,7 +78,9 @@
         font(c, 120, ARCH, 900);
         const nsz = Math.min(120, 120 * 820 / c.measureText(m.cn).width);
         maskUp(c, 150, 610, 170, E.outX(seg(t, 0.14, 0.6)), () => text(c, m.cn, 146, 600, { font: ARCH, weight: 900, size: nsz, ls: -2, color: INK }));
-        text(c, m.en.toUpperCase(), 154, 676, { font: ARCH, weight: 800, size: 40, ls: 9, color: `rgba(236,230,220,${0.75 * seg(t, 0.3, 0.6)})` });
+        font(c, 40, ARCH, 800);
+        const en = m.en.toUpperCase(), esz = Math.min(40, 40 * 820 / (c.measureText(en).width + 9 * en.length));
+        text(c, en, 154, 676, { font: ARCH, weight: 800, size: esz, ls: 9 * esz / 40, color: `rgba(236,230,220,${0.75 * seg(t, 0.3, 0.6)})` });
         font(c, 30, ARCH, 400);
         const oa = seg(t, 0.45, 0.8);
         wrapW(c, m.origin, 800).slice(0, 3).forEach((ln, i) => text(c, ln, 154, 764 + i * 44, { font: ARCH, weight: 400, size: 30, color: `rgba(216,210,201,${oa})` }));
