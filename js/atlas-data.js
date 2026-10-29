@@ -14,6 +14,7 @@
     H: { name: 'Cinematic & Film Language', short: 'Cinematic' },
     I: { name: 'Cultural & Regional', short: 'Cultural' },
     J: { name: 'Social & Commercial', short: 'Social & Commercial' },
+    K: { name: 'Technique Atlas', short: 'Techniques' },
   };
 
   // Running order: grouped by family. Ids without a film yet are skipped everywhere.
@@ -28,6 +29,7 @@
     'filmnoir', 'longexposure', 'doubleexposure', 'tiltshift', 'timelapse', 'matchcut', 'splitscreen', 'oneshot', 'hyperlapse', 'highcontrast', 'hud', 'cyberpunk', 'surreal', 'foundfootage', 'documentary', 'musicvideo', 'bullettime', 'dollyzoom',
     'ukiyoe', 'inkwash', 'shadowpuppet', 'dunhuang', 'islamic', 'papelpicado', 'guochao', 'minhwa', 'wycinanki', 'miniature', 'africanpattern', 'mosaic',
     'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast', 'vj', 'saas', 'broadcast', 'launch', 'reels', 'explainer', 'corpmemphis',
+    'techmorph', 'techwipe', 'techsmear', 'techelastic', 'techbounce', 'techanticipation', 'techorbit', 'techparallax', 'techcrashzoom', 'techcloth', 'techrigidbody', 'techdestruction', 'techinstancing', 'techrecursion', 'techfields',
   ];
 
   // Curated best-of reel: a representative spread across every family.

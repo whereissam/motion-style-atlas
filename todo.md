@@ -1,6 +1,6 @@
 # Motion Style Atlas — TODO
 
-Current build: 157 styles (original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15). Checked items below are done; Web 1.0 is covered by the Webcore film.
+Current build: 172 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 15 Technique Atlas films in wave 10). Checked items below are done; Web 1.0 is covered by the Webcore film.
 Everything below is queued for later waves. Each item = one 10-second procedural film + card + atlas entry.
 
 ## Visual styles still to build
@@ -134,12 +134,12 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Explainer Infographics
 
 ## Other atlas layers
-- [ ] **Technique Atlas (50+)**: one film per technique, same subject, so only the motion changes.
-  - Transitions: Morph, Wipe, Match Cut, Smear, Displacement
-  - Timing: Elastic, Overshoot, Bounce, Stagger, Anticipation
-  - Camera: Dolly, Orbit, Parallax, Crash Zoom, Infinite Zoom
-  - Simulation: Cloth, Fluid, Rigid Body, Soft Body, Destruction
-  - Procedural: Noise, Fields, Instancing, Recursion, Feedback
+- [ ] **Technique Atlas (50+)**: one film per technique, same subject, so only the motion changes. Family K; every film uses the shared Token, stage, caption and beat bed in `js/technique-kit.js`. Wave 10 built the first 15.
+  - Transitions: [x] Morph, [x] Wipe, [ ] Match Cut, [x] Smear, [ ] Displacement
+  - Timing: [x] Elastic, [ ] Overshoot, [x] Bounce, [ ] Stagger, [x] Anticipation
+  - Camera: [ ] Dolly, [x] Orbit, [x] Parallax, [x] Crash Zoom, [ ] Infinite Zoom
+  - Simulation: [x] Cloth, [ ] Fluid, [x] Rigid Body, [ ] Soft Body, [x] Destruction
+  - Procedural: [ ] Noise, [x] Fields, [x] Instancing, [x] Recursion, [ ] Feedback
   - Compositing: Masking, Keying, Rotoscope, Double Exposure
   - Temporal: Time Remapping, Freeze Frame, Echo, Frame Stepping
   - Typography: Character Stagger, Type Morph, Tracking, Text Reveal

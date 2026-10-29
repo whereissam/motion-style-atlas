@@ -2,7 +2,7 @@
 
 **[Browse the atlas →](https://whereissam.github.io/motion-style-atlas/)** · [Download the full reels](https://github.com/whereissam/motion-style-atlas/releases/tag/v1)
 
-A catalogue of 157 motion-design styles, from Bauhaus Geometry and Saul Bass cut-paper to Slit-scan, VHS and Korean Minhwa. Each style is a 10-second film in which every frame and every sound is generated in code: Canvas 2D for the picture, Web Audio for the score. There is no footage and there are no samples.
+A catalogue of 157 motion-design styles plus a growing Technique Atlas, from Bauhaus Geometry and Saul Bass cut-paper to Slit-scan, VHS and Korean Minhwa. Each style is a 10-second film in which every frame and every sound is generated in code: Canvas 2D for the picture, Web Audio for the score. There is no footage and there are no samples.
 
 Every style has:
 
@@ -20,6 +20,9 @@ Every style has:
 | C | 2D Animation & Illustration | H | Cinematic & Film Language |
 | D | 3D & CGI Motion | I | Cultural & Regional |
 | E | Experimental & Generative | J | Social & Commercial |
+| | | K | Technique Atlas |
+
+Family K is different: each film applies one motion technique (Elastic, Orbit, Cloth…) to the same subject, the Token from `js/technique-kit.js`, on the same stage and beat bed, so only the motion changes.
 
 `todo.md` lists what's built and what's queued.
 
@@ -32,6 +35,7 @@ media/                web copy of every film (≤ ~8 MB each); what the site pla
 render.html           headless render page that loads every film
 js/engine.js          shared timing, easing, drawing helpers, Web Audio instruments, player
 js/films-*.js         the films, three or so per file, grouped by batch
+js/technique-kit.js   shared Token, stage, caption and beat bed for the Technique Atlas (family K)
 js/cards.js           chapter cards plus the reel's opening (atlas-open) and closing (atlas-end)
 js/atlas-data.js      families, running order (MG.ORDER), best-of list (MG.REEL), metadata for the original 22
 atlas/atlas-data.js   generated: everything atlas.html reads
