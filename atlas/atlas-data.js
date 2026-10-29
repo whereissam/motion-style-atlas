@@ -491,6 +491,93 @@ window.ATLAS = {
    "posterImg": "atlas/posters/grunge.jpg"
   },
   {
+   "id": "artnouveau",
+   "family": "A",
+   "name": "Art Nouveau",
+   "sub": "The Whiplash Line",
+   "era": "1890 — 1910",
+   "origin": "Art Nouveau took its name from Siegfried Bing’s Paris shop, the Maison de l’Art Nouveau (1895), and spread across Europe as Jugendstil, Secession and Modernisme: a total style that let one living line run through posters, ironwork, glass, furniture and buildings. Alphonse Mucha’s posters framed women in halos and flowing hair, Victor Horta and Hector Guimard bent iron into plant stems, and Tiffany Studios set opalescent glass in lead.",
+   "works": "Gismonda poster (Alphonse Mucha, 1894) · Job cigarette-paper poster (Mucha, 1896) · Hôtel Tassel, Brussels (Victor Horta, 1893) · Paris Métro entrances (Hector Guimard, 1900)",
+   "tech": [
+    "Grown whiplash ribbons",
+    "Pane-by-pane leaded glass",
+    "Ink-line draw-on"
+   ],
+   "accent": "#c79738",
+   "motionDNA": "Nothing is placed, everything grows: stalks rise and bow over, shoots uncurl, leaves unfold along vines, hair pours out in waves that travel down each strand and wind into spirals, while the whole poster breathes with a slow sway and the light moves through the glass.",
+   "visualDNA": "Muted olive, sage, ochre, dusty rose and gold on cream, with brown ink outlines of varying weight; a woman in profile against a circular halo, macaroni curls, lilies and poppies, verdigris cast iron with orange glass lamps, a gilt mosaic band and a rounded title cartouche.",
+   "transitions": "Border rule draw-on, organic growth from the frame edges, top-down glass lighting, ink-outline reveal, letter-by-letter rise",
+   "implementation": [
+    "Lithographic poster artwork, hand-inked",
+    "Illustrator + After Effects shape growth",
+    "Canvas 2D (procedural whiplash ribbons)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/artnouveau.mp4",
+   "posterImg": "atlas/posters/artnouveau.jpg"
+  },
+  {
+   "id": "futurism",
+   "family": "A",
+   "name": "Futurism",
+   "sub": "Speed, Noise and the Machine",
+   "era": "1909 — 1944",
+   "origin": "Italian Futurism began with F. T. Marinetti’s founding manifesto on the front page of Le Figaro on 20 February 1909, which declared a roaring motor car more beautiful than the Victory of Samothrace. Painters and sculptors such as Giacomo Balla, Umberto Boccioni, Gino Severini and Carlo Carrà borrowed the multiple exposures of Marey’s and Muybridge’s chronophotography to paint motion itself, Luigi Russolo built noise machines, and Marinetti blew the printed page apart into words-in-freedom.",
+   "works": "Manifesto of Futurism (F. T. Marinetti, Le Figaro, 1909) · Dynamism of a Dog on a Leash (Giacomo Balla, 1912) · Unique Forms of Continuity in Space (Umberto Boccioni, 1913) · The Art of Noises (Luigi Russolo, 1913) · Zang Tumb Tuuum (Marinetti, 1914)",
+   "tech": [
+    "Chronophotographic echoes",
+    "Force-line rays and planes",
+    "Words-in-freedom slams"
+   ],
+   "accent": "#d22a1c",
+   "motionDNA": "Motion is shown as many instants at once: limbs fan into a dozen positions, a train drags a wake of its own earlier bodies, a striding figure leaves ghost copies, rays and arcs speed up with the subject, and words fly in on diagonals and land with a jolt.",
+   "visualDNA": "Cream paper splintered by translucent orange, ochre and steel-blue planes and black-and-red force lines; dark machine silhouettes, burnished bronze, and a typographic free-for-all of condensed grotesques, Bodoni italics and typewriter capitals at every size and angle.",
+   "transitions": "Needle-bundle wipe, train rush-through, figure stride-in, word slams from every side, black diagonal title band",
+   "implementation": [
+    "Oil on canvas, bronze and letterpress",
+    "After Effects echo and directional blur",
+    "Canvas 2D (time-offset re-draws)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "media/futurism.mp4",
+   "posterImg": "atlas/posters/futurism.jpg"
+  },
+  {
+   "id": "popart",
+   "family": "A",
+   "name": "Pop Art",
+   "sub": "Ben-Day Dots and Silkscreen",
+   "era": "1956 — 1970",
+   "origin": "Pop Art took mass culture as its subject and mechanical printing as its look: the term came from London’s Independent Group, where Richard Hamilton made his 1956 collage of the consumer home, and in New York Roy Lichtenstein painted enlarged comic panels dot by Ben-Day dot while Andy Warhol silkscreened photographs in repeating grids with flat, off-register colour.",
+   "works": "Just what is it that makes today’s homes so different, so appealing? (Richard Hamilton, 1956) · Look Mickey (Roy Lichtenstein, 1961) · Campbell’s Soup Cans (Andy Warhol, 1962) · Marilyn Diptych (Warhol, 1962) · Drowning Girl (Lichtenstein, 1963) · Whaam! (Lichtenstein, 1963)",
+   "tech": [
+    "Enlarged Ben-Day dots",
+    "Off-register silkscreen key",
+    "Serial grid repetition"
+   ],
+   "accent": "#ff4fa3",
+   "motionDNA": "Mechanical and serial: a single dot pulls back into a whole painting, a squeegee drags the next image over the last, prints are pulled one after another outward from the first, each with its own slip of registration and ink, and the camera keeps backing away until the image is an object on a gallery wall.",
+   "visualDNA": "Primary red, yellow and blue with heavy black outlines and enlarged dot screens for Lichtenstein; fluorescent pink, orange, turquoise, lime and silver flats under a slipped black photo screen for Warhol; repetition in a tight grid, all on raw linen in a white-cube gallery.",
+   "transitions": "Pull-back from a single dot, squeegee wipe, print-by-print grid growth, dolly-out to the gallery wall",
+   "implementation": [
+    "Silkscreen and oil on canvas, stencilled dot screens",
+    "Illustrator + After Effects halftone and offsets",
+    "Canvas 2D (pre-printed flats and key, time-staggered pulls)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/popart.mp4",
+   "posterImg": "atlas/posters/popart.jpg"
+  },
+  {
    "id": "swiss",
    "family": "B",
    "name": "Swiss Kinetic Type",
@@ -844,6 +931,35 @@ window.ATLAS = {
    "poster": 9.4,
    "video": "media/typocollage.mp4",
    "posterImg": "atlas/posters/typocollage.jpg"
+  },
+  {
+   "id": "lyric",
+   "family": "B",
+   "name": "Lyric Video",
+   "sub": "Every Word on the Beat",
+   "era": "1987 —",
+   "origin": "A music video whose picture is the song’s own words, each one landing on the syllable it is sung on. Prince’s \"Sign o’ the Times\" (1987) — animated words and pulsing shapes in place of the singer — set the template; YouTube turned it into a release ritual in the 2010s, with lyric videos posted before the official clip, and Katy Perry’s \"Roar\" (2013) swapped the words for emoji on a phone screen. It descends from the bouncing-ball sing-along cartoon and karaoke’s colour wipe.",
+   "works": "Song Car-Tunes, the bouncing-ball sing-alongs (Fleischer Studios, 1924 —) · \"Subterranean Homesick Blues\" cue cards (Bob Dylan, in D. A. Pennebaker’s Dont Look Back, 1967) · \"Sign o’ the Times\" (Prince, dir. Bill Konersman, 1987) · \"Roar\" lyric video (Katy Perry, 2013)",
+   "tech": [
+    "Syllable-timed karaoke wipe",
+    "Pitch-tracking baselines",
+    "Formant-synth vocal"
+   ],
+   "accent": "#ffc53d",
+   "motionDNA": "Time is the lyric sheet: nothing moves until it is sung, then each syllable wipes across its letters over the length of its note; words sit higher or lower with their pitch, held notes stretch and tremble with the vibrato, short notes pop with a spring, and every line changes treatment so the next verse reads as new.",
+   "visualDNA": "Big display type in neon outline, wet marker and heavy grotesk over soft streetlight bokeh, a new ground colour per verse, rebus glyphs (an eye for \"I\", \"2\", \"U\") and drawn emoji-style icons on the chorus, with a pitch trace of the voice running underneath.",
+   "transitions": "Line changes on the downbeat: letters float off, fall away or scatter; one hard cut to yellow for the chorus; the chorus squashes flat into the sung title",
+   "implementation": [
+    "After Effects text animators keyed to a lyric timing sheet",
+    "Timestamped lyric files (LRC) or forced alignment against the vocal stem",
+    "Canvas 2D: one syllable table drives the per-letter wipes, the pitch trace and a formant-synth voice"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.62,
+   "video": "media/lyric.mp4",
+   "posterImg": "atlas/posters/lyric.jpg"
   },
   {
    "id": "rubberhose",
@@ -1349,6 +1465,36 @@ window.ATLAS = {
    "posterImg": "atlas/posters/animemg.jpg"
   },
   {
+   "id": "linocut",
+   "family": "C",
+   "name": "Linocut",
+   "sub": "Carved, Inked and Pulled",
+   "era": "1918 —",
+   "origin": "Relief printmaking set in motion: every white line is a groove gouged out of a wood or linoleum block, ink is rolled over what is left, and each frame is a fresh pull of paper. Frans Masereel’s wordless woodcut novels (from 1918) and Lynd Ward’s Gods’ Man (1929) told whole stories in successive prints, and Berthold Bartosch animated Masereel’s The Idea as L’Idée (1932) in cut-outs on layered glass; today linocut is cut frame by frame, or faked with carved textures, for music videos and title sequences.",
+   "works": "25 Images of a Man’s Passion (Frans Masereel, 1918) · The Sun (Frans Masereel, 1919) · The Idea (Frans Masereel, 1920) · Gods’ Man (Lynd Ward, 1929) · L’Idée (Berthold Bartosch, 1932; score by Arthur Honegger)",
+   "tech": [
+    "Tapered gouge-mark carving",
+    "Two-block colour registration",
+    "One print per frame, on 8 fps"
+   ],
+   "accent": "#c2361f",
+   "motionDNA": "Motion as a stack of prints: the picture steps at 8 drawings a second, and every pull boils slightly — the ink takes differently, the paper sits a hair off; light is not painted but cut, so dawn arrives as gouges widening into rays, and a second colour registers in from slightly off its pins before it locks.",
+   "visualDNA": "Dense black ink on cream laid paper with carved white tapered gouges — hatched skies, ray bursts, cobbled perspective, a figure isolated by a cut halo — a single red second block for the sun, rolled-ink mottling, registration crosses and pencil numbering in the margin.",
+   "transitions": "A press roller passes to reveal the first pull; prints step on 8 fps; the sheet is pulled away and the title block is carved pull by pull",
+   "implementation": [
+    "Hand-cut lino or woodblocks, one pulled print per frame (rostrum-shot)",
+    "Cut-paper or glass-plane multiplane imitating woodcut (Bartosch)",
+    "After Effects / Procreate with carved-texture brushes and stepped time",
+    "Canvas 2D: ink block filled then carved with destination-out tapered gouges, mottle punched per pull, red block multiplied under black with animated misregistration"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.4,
+   "video": "media/linocut.mp4",
+   "posterImg": "atlas/posters/linocut.jpg"
+  },
+  {
    "id": "mograph",
    "family": "D",
    "name": "MoGraph",
@@ -1708,6 +1854,35 @@ window.ATLAS = {
    "poster": 9.4,
    "video": "media/character3d.mp4",
    "posterImg": "atlas/posters/character3d.jpg"
+  },
+  {
+   "id": "photoreal",
+   "family": "D",
+   "name": "Photoreal CGI",
+   "sub": "Light, Simulated",
+   "era": "1993 —",
+   "origin": "Computer imagery made to be mistaken for photography: physically based materials lit by simulated light, with global illumination, soft shadows, depth of field and motion blur from a virtual camera. ILM’s T. rex in Jurassic Park (1993) made it a blockbuster tool, Pixar’s RenderMan rendered a generation of effects films, and path tracers (Arnold, RenderMan RIS, Cycles) made physically correct light the default in the 2010s; Alex Roman’s The Third & The Seventh (2009) showed one artist could make architecture indistinguishable from film.",
+   "works": "The Road to Point Reyes (Lucasfilm Computer Division, 1983) · Jurassic Park (Steven Spielberg; ILM, 1993) · RenderMan (Pixar, 1988 —) · The Third & The Seventh (Alex Roman, 2009) · Gravity (Alfonso Cuarón; Framestore, 2013)",
+   "tech": [
+    "Ray-traced soft shadows + one-bounce GI",
+    "Bucket and progressive render passes",
+    "Depth of field + motion blur"
+   ],
+   "accent": "#f2b56b",
+   "motionDNA": "The camera behaves like a real one: a slow dolly and a measured focus pull, a 180°-ish shutter that smears only what moves, nothing faster than physics allows; the reveal is the render itself — buckets spiralling out, then noise resolving into light as samples double.",
+   "visualDNA": "A quiet still life under a window: a hard window-shaped sun patch with muntin shadows on oak, soft skylight, warm bounce light bleeding up the wall, a chrome sphere mirroring the room, glazed and terracotta ceramics with Fresnel sheen, filmic tonemapping, shallow depth of field, bloom, vignette and grain, scope letterbox.",
+   "transitions": "Render-view to film: the HUD and bucket brackets fade as the image converges, scope bars slide in and the shot starts to move",
+   "implementation": [
+    "Pixar RenderMan / Arnold / V-Ray / Cycles path tracing with PBR shaders",
+    "Compositing in Nuke: lens distortion, DOF, motion blur, grain matching",
+    "Canvas 2D: a 640×360 ray tracer (analytic sphere and cylinder hits, window-masked sun, soft occlusion, chrome and clear-coat reflection rays, ACES tonemap) upscaled, with depth-blended blur for DOF and stochastic shutter samples for motion blur"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/photoreal.mp4",
+   "posterImg": "atlas/posters/photoreal.jpg"
   },
   {
    "id": "particles",
@@ -2101,6 +2276,66 @@ window.ATLAS = {
    "posterImg": "atlas/posters/shaderart.jpg"
   },
   {
+   "id": "datagen",
+   "family": "E",
+   "name": "Data Art",
+   "sub": "A dataset as raw material for form",
+   "era": "2005 —",
+   "origin": "Data art treats a dataset as material rather than evidence: the same numbers are re-mapped until their structure becomes something to look at, not a point to be argued. Aaron Koblin's Flight Patterns (2005) drew a day of FAA flight tracks as glowing arcs; Ryoji Ikeda's datamatics (from 2006) pushed raw data into stark black-and-white matrices and barcodes at the edge of perception; Nicholas Felton's annual reports set a year of one life as typographic charts; and Refik Anadol's Machine Hallucinations (from 2019) turn huge image archives into fluid, pigment-like data sculptures.",
+   "works": "Aaron Koblin — Flight Patterns (2005) · Ryoji Ikeda — datamatics (2006–) and test pattern (2008–) · Nicholas Felton — The Feltron Annual Reports (2005–2014) · Refik Anadol — Machine Hallucinations (2019–)",
+   "tech": [
+    "Synthetic hourly dataset",
+    "Per-point form morphing",
+    "Point-cloud data sculpture"
+   ],
+   "accent": "#ff3d7f",
+   "motionDNA": "Nothing is keyframed by hand: every one of 8,760 readings is a point that travels its own arc between layouts the data defines — a scrolling matrix, a calendar, a ring, a rotating sculpture — so the structure of the year (seasons, weekends, rush hours) appears, dissolves and reappears in each form.",
+   "visualDNA": "Absolute black, white hairlines and tiny monospaced readouts in Ikeda's manner; a diverging blue-to-red temperature calendar; a mint demand ring; and an additive magenta, violet and gold point cloud that glows where the data is dense.",
+   "transitions": "Matrix stops scrolling, readings fly to the calendar, fold into the ring, then rise into the sculpture as the title lands",
+   "implementation": [
+    "Processing / openFrameworks",
+    "TouchDesigner / Houdini point clouds",
+    "D3 + WebGL",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/datagen.mp4",
+   "posterImg": "atlas/posters/datagen.jpg"
+  },
+  {
+   "id": "infinitezoom",
+   "family": "E",
+   "name": "Infinite Zoom",
+   "sub": "Every picture holds the next",
+   "era": "1968 —",
+   "origin": "The infinite zoom is a single unbroken push into an image in which every scene turns out to contain the next, so the camera can travel forever at a constant exponential rate. Charles and Ray Eames fixed its grammar in Powers of Ten (1977, after a 1968 sketch), pulling away from a Chicago picnic by a factor of ten every ten seconds; the Droste effect and Escher's Print Gallery (1956) supplied the recursion, fractal explorers the endless dive, and the online Zoom Quilt (2004) made it a collaborative loop of hand-painted scenes.",
+   "works": "Charles and Ray Eames — Powers of Ten (1977) · M. C. Escher — Print Gallery (1956) · Istvan Banyai — Zoom (picture book, 1995) · Nikolaus Hafermaas et al. — The Zoom Quilt (2004)",
+   "tech": [
+    "Nested scene recursion",
+    "Exponential camera scale",
+    "Fixed-point portal maps"
+   ],
+   "accent": "#ffcf3a",
+   "motionDNA": "One continuous push at constant log speed: the field shrinks by a factor of five every two seconds about each portal's fixed point, with a slight roll as each tilted portal straightens, and after five scenes the picture is back where it began — the film loops without a cut.",
+   "visualDNA": "Warm, legible illustration in five idioms — aerial park map, glossy magazine photo, lamplit cabin interior, painterly night city, retro desktop UI — linked by the Powers-of-Ten target square and a white HUD of level and magnification.",
+   "transitions": "None: each portal grows to fill the frame and becomes the next scene; the last scene's photo is the first scene",
+   "implementation": [
+    "After Effects nested comps / Photoshop zoom layers",
+    "Stable Diffusion outpainting zooms",
+    "Shaders (log-polar Droste)",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/infinitezoom.mp4",
+   "posterImg": "atlas/posters/infinitezoom.jpg"
+  },
+  {
    "id": "claymation",
    "family": "F",
    "name": "Clay Stop Motion",
@@ -2422,6 +2657,36 @@ window.ATLAS = {
    "poster": 9.6,
    "video": "media/pixilation.mp4",
    "posterImg": "atlas/posters/pixilation.jpg"
+  },
+  {
+   "id": "papercraft",
+   "family": "F",
+   "name": "Paper Craft",
+   "sub": "Pop-up books and layered cut paper",
+   "era": "1760s —",
+   "origin": "Paper craft turns flat card into depth: layers cut with a blade are stacked a few millimetres apart so each casts a soft shadow on the next, and scored creases let a spread fold flat and spring up again. Movable books go back to Lothar Meggendorfer's pull-tab books of the 1880s and earlier flap books; paper engineers such as Robert Sabuda and Matthew Reinhart made the pop-up a showpiece, and the layered-diorama look became a staple of 2010s advertising and motion design, often shot frame by frame.",
+   "works": "Lothar Meggendorfer — movable books (1880s–1900s) · Robert Sabuda — The Wonderful Wizard of Oz: A Commemorative Pop-up (2000) · Robert Sabuda & Matthew Reinhart — Encyclopedia Prehistorica: Dinosaurs (2005) · Masahiro Chatani — origamic architecture (1980s)",
+   "tech": [
+    "Parallel-fold pop-up",
+    "Layered drop shadows",
+    "Stop-motion 12 fps step"
+   ],
+   "accent": "#e8665a",
+   "motionDNA": "Mechanical, not animated: every movement is something paper can do — a cover lifts, layers rise together on parallel folds, a pull tab drives the sun along a slot, a strip slides a balloon up, an accordion unfolds — all stepped at twelve exposures a second with a little hand-placed jitter and a springy settle.",
+   "visualDNA": "Matte pastel card on a warm tabletop: mint hills, sugared-almond houses, deep green trees, a coral banner; crisp cut edges, dashed score lines, soft shadows between layers and visible paper fibre.",
+   "transitions": "Closed cover → book opens and the scene pops up → mechanisms play in turn → banner unfolds with the title",
+   "implementation": [
+    "Hand-cut card, glue and a stop-motion camera",
+    "Cinema 4D / Blender paper rigs",
+    "After Effects 3D layers",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/papercraft.mp4",
+   "posterImg": "atlas/posters/papercraft.jpg"
   },
   {
    "id": "retro",
@@ -3168,6 +3433,64 @@ window.ATLAS = {
    "posterImg": "atlas/posters/foundfootage.jpg"
   },
   {
+   "id": "documentary",
+   "family": "H",
+   "name": "Documentary Montage",
+   "sub": "Photographs, maps and letters in motion",
+   "era": "1957 —",
+   "origin": "Documentary montage tells history with still images: a rostrum camera pans and zooms across archival photographs, maps and letters while narration and readings carry the story. The National Film Board of Canada’s City of Gold (Colin Low and Wolf Koenig, 1957) pioneered the moving camera over stills; Ken Burns made it a national idiom with The Civil War (1990), and Apple later named the slow pan-and-zoom the “Ken Burns effect”. Errol Morris supplied the opposite pole: witnesses who look straight down the lens through his Interrotron, a teleprompter rig that puts the interviewer’s face over the camera.",
+   "works": "City of Gold (Colin Low & Wolf Koenig, NFB, 1957) · Brooklyn Bridge (Ken Burns, 1981) · The Thin Blue Line (Errol Morris, 1988) · The Civil War (Ken Burns, PBS, 1990) · Baseball (Ken Burns, PBS, 1994) · The Fog of War (Errol Morris, 2003)",
+   "tech": [
+    "Slow pan-and-zoom over stills",
+    "Name supers and a dated route map",
+    "Letter revealed in handwriting"
+   ],
+   "accent": "#b08850",
+   "motionDNA": "The camera, not the subject, moves: unhurried push-ins on a face until the eyes hold the frame, pans across group photographs that discover people one by one, a route that draws itself across a map, a tilt down a handwritten page; long cross-dissolves between stills and the one hard, modern cut into an interview with a single jump cut.",
+   "visualDNA": "Sepia tintypes in brass mats, albumen prints on card with pencil captions, parchment maps with hachured hills and a red dashed march, ruled letter paper in iron-gall ink; supers in plain white serif lower left; the interview lit low and warm, subject dead centre, eyes on the lens.",
+   "transitions": "Fade up from black, slow cross-dissolves between stills, hard cut to and from the interview, jump cut, pull back to reveal the print under the title",
+   "implementation": [
+    "Rostrum / animation-stand camera",
+    "Avid or Final Cut pan-and-zoom on scans",
+    "Canvas 2D (every photograph procedurally drawn)"
+   ],
+   "reproducibility": "Fully procedural (no archival material used; people and places are fictional)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "media/documentary.mp4",
+   "posterImg": "atlas/posters/documentary.jpg"
+  },
+  {
+   "id": "musicvideo",
+   "family": "H",
+   "name": "Music Video",
+   "sub": "Concept videos cut on the beat",
+   "era": "1981 —",
+   "origin": "The music video turned a single into a three-minute short film: after MTV launched in 1981, directors treated each song as a concept, building performance, choreography and in-camera tricks around its tempo. Michel Gondry made the arrangement the choreography in Daft Punk’s “Around the World” (each costumed group dances one instrument), Spike Jonze had Christopher Walken dance and fly through an empty hotel lobby in Fatboy Slim’s “Weapon of Choice”, and OK Go danced across eight treadmills in a single take for “Here It Goes Again”.",
+   "works": "Thriller (Michael Jackson, dir. John Landis, 1983) · Take On Me (a-ha, dir. Steve Barron, 1985) · Sledgehammer (Peter Gabriel, dir. Stephen R. Johnson, 1986) · Around the World (Daft Punk, dir. Michel Gondry, 1997) · Praise You (Fatboy Slim, dir. Spike Jonze, 1999) · Weapon of Choice (Fatboy Slim, dir. Spike Jonze, 2001) · Star Guitar (The Chemical Brothers, dir. Michel Gondry, 2002) · Here It Goes Again (OK Go, 2006)",
+   "tech": [
+    "Cuts locked to 120 BPM",
+    "One-take choreography sets",
+    "Mirror and kaleidoscope"
+   ],
+   "accent": "#c46bff",
+   "motionDNA": "The track is the edit: every cut lands on a beat and every shot changes on the bar, bodies hit their poses a frame after the downbeat, crowds move in lockstep loops, one-take routines run without a cut, a man rises off the floor on a held chord, and mirrored dancers fold into a kaleidoscope that turns at the tempo.",
+   "visualDNA": "A concept per shot, each with its own colour-graded set: a violet disco stage with gold-helmeted robots and skeletons on a staircase, a warm empty hotel lobby, a yellow warehouse of treadmills and bright shirts, magenta-to-cyan mirror worlds, then a teal-and-amber stage of rim-lit silhouettes under moving-head beams; the MTV credit block in plain white type.",
+   "transitions": "Hard cuts on the beat (never faster than one per half second), a cut to a closer angle on the downbeat, mirror split to four-way to kaleidoscope, title words set on the last two beats",
+   "implementation": [
+    "35 mm / 16 mm music-video shoots",
+    "Motion-control and in-camera tricks",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (artist, song and label are fictional)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.6,
+   "video": "media/musicvideo.mp4",
+   "posterImg": "atlas/posters/musicvideo.jpg"
+  },
+  {
    "id": "ukiyoe",
    "family": "I",
    "name": "Ukiyo-e Motion",
@@ -3819,7 +4142,123 @@ window.ATLAS = {
    "poster": 9.3,
    "video": "media/saas.mp4",
    "posterImg": "atlas/posters/saas.jpg"
+  },
+  {
+   "id": "broadcast",
+   "family": "J",
+   "name": "Broadcast Graphics",
+   "sub": "News opens, straps and crawls",
+   "era": "1970s —",
+   "origin": "Broadcast graphics are the house style of television news: a branded open, then lower thirds, bugs, crawls and full-screen maps laid over live pictures, each built to be read in a second. Electronic character generators such as the Chyron and Quantel’s Paintbox (1981) put them on air, 24-hour news made them permanent, the continuous crawl became standard on US cable news after 11 September 2001, and election nights turned virtual studios and touchscreen maps into spectacle.",
+   "works": "Chyron character generator (Chyron Corp., 1970s) · Quantel Paintbox (1981) · CNN Headline News (launched as CNN2, 1982) · Cable-news crawls after 11 September 2001 · CNN “Magic Wall” election map (2008)",
+   "tech": [
+    "Dot-matrix spinning globe open",
+    "Name strap, BREAKING banner, crawl",
+    "Live election map and tally"
+   ],
+   "accent": "#e8112d",
+   "motionDNA": "Urgent but orderly: a globe rushes in and decelerates under orbiting rings, a wordmark slams with overshoot and a glint, branded diagonal wipes carry us between open and studio, straps wipe out of a coloured tab in quick ease-outs and stack in a fixed order, the crawl never stops, and the camera pushes into the video wall until the graphic is the picture; numbers count, bars race, a verdict box pops and locks.",
+   "visualDNA": "Deep navy and royal blue with cyan highlights, a single alarm red for LIVE and BREAKING, white bars with heavy condensed caps, glossy desk and floor reflections, LED columns, a dot-matrix globe with graticule, and an election map in two party colours with seat counts, a majority line and a decision-desk box.",
+   "transitions": "Diagonal branded wipes, logo slam with glint, strap wipe-ons from a tab, banner expanding from centre, push into the video wall, wipe to the end board",
+   "implementation": [
+    "Chyron / Vizrt / ChyronHego real-time engines",
+    "After Effects + Cinema 4D packages",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (channel, people, places and results are fictional)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.6,
+   "video": "media/broadcast.mp4",
+   "posterImg": "atlas/posters/broadcast.jpg"
+  },
+  {
+   "id": "launch",
+   "family": "J",
+   "name": "Product Launch",
+   "sub": "The keynote reveal film",
+   "era": "2007 —",
+   "origin": "The launch film is the short that plays when a company unveils new hardware on stage: darkness, a teaser line, slow macro shots over materials, then the product and its one-word name, a few specs and \"available now\". Apple’s Macworld and WWDC keynotes set the grammar in the late 2000s and every phone, laptop and headphone maker followed.",
+   "works": "Apple Macworld keynotes: iPhone introduction (2007) and MacBook Air out of an envelope (2008) · Apple product films narrated by Jony Ive (2000s–2010s) · Apple “Think different” (TBWA\\Chiat\\Day, 1997) as the tone of the sign-off",
+   "tech": [
+    "Teaser → macro → reveal",
+    "Edge-on to 3/4 hero swing",
+    "Spec slams on hard cuts"
+   ],
+   "accent": "#5b8cff",
+   "motionDNA": "Editorial pacing is the motion: slow fades on the teaser, macro glides that never stop moving and cut through black, a single long swing from edge-on to three-quarter view as the lid opens, then a sudden switch to hard cuts where each spec slams in from scale with a small camera shake, before a calm sign-off.",
+   "visualDNA": "A black stage and one cool blue–violet light; brushed aluminium, diamond-cut chamfers, speaker perforations and backlit keys shot macro with shallow focus; a waking screen as the only colour; huge tight-tracked grotesque numbers with small mono kickers.",
+   "transitions": "Line of light into the teaser, dip-to-black between macro shots, sliver to hero swing, name rising from blur, hard cuts between spec beats, cut to the sign-off",
+   "implementation": [
+    "Cinema 4D / Redshift product renders",
+    "After Effects editorial and type",
+    "Canvas 2D (projected box model)"
+   ],
+   "reproducibility": "Fully procedural (fictional product, no real logos)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/launch.mp4",
+   "posterImg": "atlas/posters/launch.jpg"
+  },
+  {
+   "id": "reels",
+   "family": "J",
+   "name": "Social Reels",
+   "sub": "Vertical short-form video",
+   "era": "2013 —",
+   "origin": "Short-form vertical video — Vine’s six-second loops, then Musical.ly, TikTok, Instagram Reels and YouTube Shorts — built a new editing grammar for the phone held upright: jump cuts every second, captions that pop word by word, stickers and text boxes, and a swipe to the next clip. Reposted onto 16:9 screens, the tall frame sits in the middle over a blurred, enlarged copy of itself.",
+   "works": "Vine (2013–2017) · Musical.ly (2014) · Douyin (2016) and TikTok (2017 —) · Instagram Reels (2020) · YouTube Shorts (2020 —) · CapCut auto-captions (2020s)",
+   "tech": [
+    "Jump cuts and punch-ins",
+    "Word-by-word auto-captions",
+    "Pillarbox blur fill"
+   ],
+   "accent": "#ff3b5c",
+   "motionDNA": "Nothing holds longer than a second: jump cuts snap between framings of the same talking head, each caption word pops with overshoot as it is spoken, stickers bounce on, a double-tap throws a heart that springs, wobbles and floats away, and the whole clip is thrown upward by a thumb swipe so the next one can drop on the beat.",
+   "visualDNA": "A 9:16 phone screen centred in the 16:9 frame over its own blurred enlargement; handheld, warmly lit selfie footage; heavy white caption type with black outlines and one yellow word; white text plates, a yellow starburst, red hearts, a translucent action rail, a thin progress bar and a generic app chrome.",
+   "transitions": "Jump cuts and punch-ins on the talking head, hard cuts to B-roll, double-tap heart burst, swipe-up to the next clip, beat-drop zoom punch",
+   "implementation": [
+    "CapCut / TikTok in-app editor",
+    "Premiere Pro or Final Cut (vertical timeline)",
+    "Canvas 2D (low-res blur fill)"
+   ],
+   "reproducibility": "Fully procedural (generic app UI, fictional creators, no real logos)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.5,
+   "video": "media/reels.mp4",
+   "posterImg": "atlas/posters/reels.jpg"
+  },
+  {
+   "id": "explainer",
+   "family": "J",
+   "name": "Explainer",
+   "sub": "Flat animated infographics",
+   "era": "2008 —",
+   "origin": "The animated explainer sells or teaches one idea in about ninety seconds: a simple character with a problem, a few flat icons and charts that draw on, a three-step solution and a call to action. Start-ups adopted it as the homepage video of the late 2000s and 2010s, while Kurzgesagt (2013 —) and TED-Ed (2012 —) pushed the same flat, colour-blocked vector style into science education.",
+   "works": "Common Craft “In Plain English” videos (Lee and Sachi LeFever, 2007 —) · TED-Ed animated lessons (2012 —) · Kurzgesagt – In a Nutshell (Philipp Dettmer, 2013 —)",
+   "tech": [
+    "Circle-wipe scene changes",
+    "Pop-on with overshoot",
+    "Charts and arrows that draw on"
+   ],
+   "accent": "#ff6b57",
+   "motionDNA": "Everything pops: shapes scale in on a back-ease overshoot with a little squash, lines and dashed arrows draw on along their path, the donut sweeps clockwise and labels pop as it passes, one slice pulls out for emphasis, steps arrive one per beat and tick off, and each new idea opens with a circle wipe from the element that leads to it.",
+   "visualDNA": "Flat vector shapes without outlines, a few saturated colour fields (cream, midnight blue, teal, coral) with sunny yellow accents, 2013-style long shadows inside round badges, a simple round-headed character, rounded geometric sans type, big percentages and plenty of empty space.",
+   "transitions": "Pop-in character, fly-in bill with drawing line, circle wipes between scenes, donut sweep and slice pull-out, step-by-step pops joined by draw-on arrows, bar drop, final circle wipe to the CTA",
+   "implementation": [
+    "Illustrator → After Effects (shape layers, Trim Paths)",
+    "Vyond / Animaker template tools",
+    "Canvas 2D (paths, clip wipes)"
+   ],
+   "reproducibility": "Fully procedural (fictional brand and illustrative numbers)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.9,
+   "video": "media/explainer.mp4",
+   "posterImg": "atlas/posters/explainer.jpg"
   }
  ],
- "built": "2026-10-28"
+ "built": "2026-10-29"
 };
