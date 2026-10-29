@@ -315,7 +315,7 @@
   }
 
   MG.film({
-    id: 'bullettime', dur: 10, poster: 3.4,
+    id: 'bullettime', dur: 10, poster: 9.4,
     fonts: [['800 150px "Barlow Condensed"', 'BULLET TIME'], ['500 34px "Barlow Condensed"', 'Time frozen, camera free'], ['400 26px "Share Tech Mono"', 'CAM 0123456789 / SPEED × ACTION s ARRAY']],
     meta: {
       family: 'H', name: 'Bullet Time', sub: 'Frozen time, moving camera', era: '1995 —',

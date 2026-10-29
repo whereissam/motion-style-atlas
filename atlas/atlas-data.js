@@ -578,6 +578,35 @@ window.ATLAS = {
    "posterImg": "atlas/posters/popart.jpg"
   },
   {
+   "id": "neon",
+   "family": "A",
+   "name": "Neon Signage",
+   "sub": "Bent Glass, Noble Gas, Night",
+   "era": "1923 — 1965",
+   "origin": "Neon signs are hand-bent glass tubes filled with low-pressure gas and lit by a high-voltage transformer: neon glows red-orange, argon with a drop of mercury glows blue, and phosphor coatings give every other colour. Georges Claude showed the first neon tubes in Paris in 1910 and the signs reached America in 1923; by the 1950s the Young Electric Sign Company had turned Las Vegas into a street of animated cabinets, chaser bulbs and sequenced arrows, and Hong Kong’s Nathan Road hung its signs in canyons over the traffic. The Neon Museum in Las Vegas now keeps the retired ones.",
+   "works": "Neon tube lighting (Georges Claude, Paris Motor Show, 1910) · Vegas Vic (Young Electric Sign Company, 1951) · Welcome to Fabulous Las Vegas sign (Betty Willis, 1959) · The Neon Museum, Las Vegas (opened 2012)",
+   "tech": [
+    "Pre-blurred tube halos",
+    "Seeded ignition flicker",
+    "Sliced puddle reflection"
+   ],
+   "accent": "#ff3f9e",
+   "motionDNA": "Nothing slides: light is the only thing that moves. Tubes strike with a stutter and argon warms up slowly, chaser bulbs step round the cabinet, the arrow builds segment by segment and blanks, a three-state figure jumps between fixed poses, a faulty tube sputters and dies, while rain falls and the reflections ripple in the puddles.",
+   "visualDNA": "Saturated pink, argon blue, red, yellow and turquoise light with white-hot tube cores and wide soft halos, against wet red brick and dark pavement; script and block lettering in a single continuous tube, electrodes and glass standoffs, a painted Googie sheet-metal cabinet ringed with incandescent bulbs.",
+   "transitions": "Element-by-element ignition, sequenced arrow chase, three-state flasher animation, failing-tube sputter",
+   "implementation": [
+    "Hand-bent glass tube, GTO wire and flasher drums",
+    "After Effects glow + Saber on traced lettering",
+    "Canvas 2D (offscreen halo sprites, light spill multiplied into an albedo map)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.2,
+   "video": "media/neon.mp4",
+   "posterImg": "atlas/posters/neon.jpg"
+  },
+  {
    "id": "swiss",
    "family": "B",
    "name": "Swiss Kinetic Type",
@@ -960,6 +989,64 @@ window.ATLAS = {
    "poster": 7.62,
    "video": "media/lyric.mp4",
    "posterImg": "atlas/posters/lyric.jpg"
+  },
+  {
+   "id": "splitflap",
+   "family": "B",
+   "name": "Split-flap",
+   "sub": "The Departure Board Clatter",
+   "era": "1956 — 1990",
+   "origin": "A split-flap display shows each character on a drum of hinged half-cards: a motor turns the drum, and each upper flap falls over the hinge to reveal the next letter, so a whole board cascades through the alphabet with a clatter. Solari di Udine made the form famous, from the Cifra 3 flap clock designed by Gino Valle (1956) to the Dators departure boards that hung in railway stations and airports around the world until LCD screens replaced most of them.",
+   "works": "Cifra 3 clock (Gino Valle for Solari di Udine, 1956) · Solari Dators railway and airport boards",
+   "tech": [
+    "Hinged half-tile flaps",
+    "Sliced perspective foreshortening",
+    "Per-unit drum scheduling"
+   ],
+   "accent": "#f0b429",
+   "motionDNA": "Everything changes by falling: each unit steps forward through a fixed drum, the top half dropping over the hinge with gravity and a small slap, so new text never appears directly but arrives through every letter in between, rows cascading in staggered waves at different speeds.",
+   "visualDNA": "White condensed capitals on matte black flaps split by a dark hinge line, grouped in columns for time, destination, platform and remarks inside a dark grey housing, with an amber header and a small flap clock; dim station light and a soft sheen across the board.",
+   "transitions": "Macro pull-back, per-row flap cascades, a row roll-up, a full-board resolve into words",
+   "implementation": [
+    "Electromechanical flap units on a stepper-driven drum",
+    "After Effects card-flip rigs per character",
+    "Canvas 2D (glyph atlas, strip-sliced flaps, deterministic drum state)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "media/splitflap.mp4",
+   "posterImg": "atlas/posters/splitflap.jpg"
+  },
+  {
+   "id": "concrete",
+   "family": "B",
+   "name": "Concrete Poetry",
+   "sub": "Words Arranged as Image",
+   "era": "1953 — 1970",
+   "origin": "Concrete poetry treats the word as a material object, arranging letters and words on the page so that their placement, repetition and white space make the meaning instead of syntax. Eugen Gomringer’s constellations in Switzerland and the Brazilian Noigandres group of Augusto and Haroldo de Campos and Décio Pignatari named it in the 1950s, drawing on Apollinaire’s picture-poems; Ian Hamilton Finlay later carried it into prints, stone and a whole garden.",
+   "works": "Calligrammes (Guillaume Apollinaire, 1918) · Noigandres magazine (Augusto de Campos, Haroldo de Campos, Décio Pignatari, from 1952) · silencio (Eugen Gomringer, 1954) · Little Sparta garden (Ian Hamilton Finlay, from 1966)",
+   "tech": [
+    "Letter-level choreography",
+    "Words as picture elements",
+    "Gravity-timed rain of type"
+   ],
+   "accent": "#d33b25",
+   "motionDNA": "Sparse, exact and quiet: words are placed one at a time and then left alone, a held beat of nothing separates each poem, letters fall with gravity and stretch into streaks, words ride waves and rise as a sun, and every picture ebbs back into the white page before the next begins.",
+   "visualDNA": "Black lowercase geometric sans and typewriter type on warm white paper with a single red accent; grids, slants, rings and rows of one repeated word, generous margins, and an empty centre that carries as much meaning as the letters around it.",
+   "transitions": "Word-by-word setting, letters dripping off the page, typed horizon wipe, ebb to white",
+   "implementation": [
+    "Typewriter and letterpress on paper",
+    "After Effects per-character text animators",
+    "Canvas 2D (per-glyph layout, gravity-timed falls)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.7,
+   "video": "media/concrete.mp4",
+   "posterImg": "atlas/posters/concrete.jpg"
   },
   {
    "id": "rubberhose",
@@ -1495,6 +1582,65 @@ window.ATLAS = {
    "posterImg": "atlas/posters/linocut.jpg"
   },
   {
+   "id": "cutout",
+   "family": "C",
+   "name": "Cut-out",
+   "sub": "Jointed Paper Under the Camera",
+   "era": "1917 —",
+   "origin": "Cut-out animation moves flat pieces of paper or card, pinned or hinged at the joints, a frame at a time beneath a downward-looking rostrum camera. Quirino Cristiani made the first animated feature, El Apóstol (1917), this way; Terry Gilliam glued Victorian engravings into hinged absurdities for Monty Python; Yuri Norstein spread his cut-outs over tiers of glass with tracing-paper fog between them; and South Park’s first episode (1997) was shot in real construction paper before the look moved into software.",
+   "works": "Monty Python’s Flying Circus animations (Terry Gilliam, BBC, 1969–74) · Fantastic Planet (René Laloux & Roland Topor, 1973) · Hedgehog in the Fog (Yuri Norstein, Soyuzmultfilm, 1975) · Tale of Tales (Yuri Norstein, 1979) · South Park, first episode (Trey Parker & Matt Stone, Comedy Central, 1997)",
+   "tech": [
+    "Brass-pinned paper joints",
+    "Multiplane glass, tracing-paper fog",
+    "Stepped on twos (12 fps)"
+   ],
+   "accent": "#c2452d",
+   "motionDNA": "Every move is a piece pushed a few millimetres and shot again: limbs swing on their pins instead of bending, the walk is a crude pendulum cycle on twos, the head tilts as a rigid disc and expressions change by swapping in a replacement face; the planes slide past at their own speeds, and each piece settles a hair off where it lay the frame before.",
+   "visualDNA": "Matte construction paper with fibre and slightly ragged scissor-cut edges, soft shadows between pieces and between glass plates, brass split pins at the joints, a dusk palette of slate blue, pine green and earth with a red coat, mustard cap and teal scarf, and tracing-paper fog drifting between the layers.",
+   "transitions": "Empty sky → plates slid in one by one → puppet assembled and pinned → walk on twos with a multiplane truck → owl flaps in → replacement face → title tiles set down letter by letter",
+   "implementation": [
+    "Rostrum camera & multiplane glass",
+    "Toon Boom Harmony / Moho cut-out rigs",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (paper texture, puppets and plates are all generated in code)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/cutout.mp4",
+   "posterImg": "atlas/posters/cutout.jpg"
+  },
+  {
+   "id": "lofi",
+   "family": "C",
+   "name": "Lo-fi Loop",
+   "sub": "Beats to Study To",
+   "era": "2017 —",
+   "origin": "The “lofi hip hop radio – beats to relax/study to” livestreams turned a few seconds of anime-style animation into a round-the-clock seamless loop: a student writing by a window at night while dusty, swung hip-hop plays. ChilledCow (later Lofi Girl) first looped Shizuku from Studio Ghibli’s Whisper of the Heart (1995), then commissioned an original studying girl drawn by Juan Pablo Machado; the sound descends from J Dilla’s Donuts and Nujabes’s work on Samurai Champloo.",
+   "works": "lofi hip hop radio – beats to relax/study to (ChilledCow / Lofi Girl, YouTube, 2017–) · Samurai Champloo soundtrack (Nujabes, Fat Jon, Force of Nature, Tsutchie, 2004) · Donuts (J Dilla, 2006) · Whisper of the Heart (Yoshifumi Kondō, Studio Ghibli, 1995)",
+   "tech": [
+    "Seamless loop, whole-number cycles",
+    "Lamp & window rim lights on cels",
+    "VHS-soft blur, lifted blacks, grain"
+   ],
+   "accent": "#ee6a7d",
+   "motionDNA": "Almost nothing moves and everything breathes: a nod on every beat, a pencil hand scribbling, steam curling off the mug, rain sliding down the glass, a sleeping cat flicking its tail, city windows blinking — each a whole number of cycles in the loop, so the last frame runs straight into the first.",
+   "visualDNA": "An indigo night room split between a warm desk lamp and a cold rainy window, flat anime cel colour with soft gradients, warm and blue rim lights on hair, hoodie and fur, fairy lights and blurred city bokeh, all under a soft VHS grade with purple-lifted blacks, scanlines and grain.",
+   "transitions": "None: one endless shot; the last frame cuts back to the first",
+   "implementation": [
+    "Hand-drawn loop (Photoshop, Clip Studio, TVPaint)",
+    "After Effects loopOut() expressions",
+    "24/7 YouTube livestream",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (an original character; scene, loop and grade generated in code)",
+   "loopable": true,
+   "dur": 10,
+   "poster": 4.7,
+   "video": "media/lofi.mp4",
+   "posterImg": "atlas/posters/lofi.jpg"
+  },
+  {
    "id": "mograph",
    "family": "D",
    "name": "MoGraph",
@@ -1883,6 +2029,66 @@ window.ATLAS = {
    "poster": 9.4,
    "video": "media/photoreal.mp4",
    "posterImg": "atlas/posters/photoreal.jpg"
+  },
+  {
+   "id": "holographic",
+   "family": "D",
+   "name": "Holographic",
+   "sub": "Thin-film Foil and Liquid Chrome",
+   "era": "2016 — 2020",
+   "origin": "A late-2010s look in which every surface seems coated in oil-slick foil: thin-film interference colour that shifts with the viewing angle, liquid chrome blobs, prismatic light and inflated blobby 3D type, rendered in Cinema 4D with Octane or Redshift and spread across album art, fashion, packaging and brand identities. It borrowed holographic stickers, trading-card foil and mirror-polished sculpture and fed straight into the Y2K-revival and \"acid graphics\" moods of the early 2020s.",
+   "works": "Newton’s rings (Isaac Newton, Opticks, 1704) · Balloon Dog (Jeff Koons, 1994–2000) · Cloud Gate (Anish Kapoor, Chicago, 2004–06) · Pokémon Trading Card Game holo cards (Wizards of the Coast, 1999)",
+   "tech": [
+    "Thin-film colour from normal · view",
+    "Metaball liquid morphing to type",
+    "Inflated text height field"
+   ],
+   "accent": "#c58cff",
+   "motionDNA": "Slow, sensual and liquid: the foil tilts and the colours slide across it before anything moves, chrome swells, stretches, pinches into beads and re-merges with springy overshoot, the blobs pour into type, and light sweeps travel across every surface on long eases while stickers slap down with a snap.",
+   "visualDNA": "Pastel thin-film rainbows (pink, mint, lilac, butter yellow) on crumpled foil and soft gradients; mirror chrome with hard studio horizons and white softbox highlights tinted by iridescence; fat rounded type inflated like a balloon; die-cut holographic stickers with white borders; spectral prism fans.",
+   "transitions": "Foil hero tilt → creases relax into gradient → drop rises and splits → beads morph into type → prism sweep + sticker slaps → title",
+   "implementation": [
+    "Cinema 4D + Octane / Redshift thin-film shaders",
+    "Blender Cycles thin-film / iridescence nodes",
+    "Photoshop gradient maps and foil textures",
+    "Canvas 2D: per-pixel metaball + inflated-text height field (768×432, upscaled), thin-film interference per channel from the normal and view vector"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/holographic.mp4",
+   "posterImg": "atlas/posters/holographic.jpg"
+  },
+  {
+   "id": "pointcloud",
+   "family": "D",
+   "name": "Point Cloud",
+   "sub": "LiDAR Scans, Millions of Points",
+   "era": "2008 —",
+   "origin": "The world shown as it is measured: millions of laser returns from LiDAR scanners or photogrammetry drawn as bare points, with no surfaces between them, coloured by intensity, height or range. Radiohead’s “House of Cards” video (James Frost, 2008), shot with a Velodyne scanner and structured light instead of cameras, made the look famous; survey-grade scans of cities and ruins by studios such as ScanLAB Projects, the self-driving-car sensor view and, since 2023, Gaussian-splat captures have kept it the visual shorthand for machine vision.",
+   "works": "House of Cards (Radiohead, dir. James Frost, 2008) · Rome’s Invisible City (ScanLAB Projects for BBC One, 2015) · 3D Gaussian Splatting for Real-Time Radiance Field Rendering (Kerbl, Kopanas, Leimkühler & Drettakis, SIGGRAPH 2023)",
+   "tech": [
+    "Ray-cast spinning 22-beam LiDAR",
+    "Arrival-time reveal of 200k points",
+    "z-buffered point splats, range colour"
+   ],
+   "accent": "#3fe0ff",
+   "motionDNA": "The image accumulates rather than moves: rings of returns sweep out ten times a second from a travelling sensor, each point flashing white as it lands and cooling into its colour, while a slow camera crane and orbit lets the parallax prove the space is real; a scan plane re-colours the city as it rises, and the whole cloud can drift apart like sand and snap back.",
+   "visualDNA": "Black void, no surfaces, only points: concentric laser rings on the road, striped facades with holes where glass ate the beam, fuzzy trees and shadowed voids behind every object; cold intensity greys and cyans switch to a rainbow range ramp; thin monospaced HUD readouts, point counts and a laser fan from the sensor.",
+   "transitions": "Black → sensor sweep reveal → crane up into orbit → rising scan plane recolours by range → House-of-Cards dissolve → cloud reassembles under the title",
+   "implementation": [
+    "Velodyne / Ouster LiDAR + CloudCompare / Potree",
+    "Houdini or TouchDesigner point instancing",
+    "Gaussian-splat viewers (3DGS, Luma, Polycam)",
+    "Canvas 2D: ray-cast scan in setup, per-frame z-buffered point splats into ImageData"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/pointcloud.mp4",
+   "posterImg": "atlas/posters/pointcloud.jpg"
   },
   {
    "id": "particles",
@@ -2336,6 +2542,66 @@ window.ATLAS = {
    "posterImg": "atlas/posters/infinitezoom.jpg"
   },
   {
+   "id": "physarum",
+   "family": "E",
+   "name": "Physarum",
+   "sub": "Slime-mould transport networks",
+   "era": "2010 —",
+   "origin": "In 2010 Atsushi Tero and colleagues placed oat flakes on agar at the positions of the cities around Tokyo, inoculated Physarum polycephalum at Tokyo, and watched the mould grow a network of tubes as efficient and fault-tolerant as the real rail system. The same year Jeff Jones published a minimal agent model of it: thousands of particles that sense a chemical trail ahead of them, turn toward it, step and deposit, while the trail map diffuses and decays. Generative artists such as Sage Jenson took that model up as a drawing machine, and its veined, self-pruning networks became a recognisable generative look.",
+   "works": "Toshiyuki Nakagaki, Hiroyasu Yamada & Ágota Tóth — \"Maze-solving by an amoeboid organism\", Nature 2000 · Jeff Jones — \"Characteristics of Pattern Formation and Evolution in Approximations of Physarum Transport Networks\", Artificial Life 2010 · Atsushi Tero et al. — \"Rules for Biologically Inspired Adaptive Network Design\", Science 2010 · Sage Jenson — 36 Points (2019)",
+   "tech": [
+    "Sense–turn–deposit agents",
+    "Diffuse & decay trail map",
+    "Precomputed keyframes"
+   ],
+   "accent": "#f4c431",
+   "motionDNA": "Growth, not animation: a dense fan-shaped front spreads from the inoculum, finds the food, then the foam of paths coarsens and starves until only a few thick tubes remain, pulsing with slow waves of shuttle streaming.",
+   "visualDNA": "Chrome-yellow plasmodium glowing on dark agar, soft diffused veins with brighter cores, pale oat flakes as nodes, a schematic coastline, lab-notebook mono labels and a thin cyan comparison graph.",
+   "transitions": "Flakes laid, inoculation, foraging front, network pruning, streaming pulse, comparison overlay and title",
+   "implementation": [
+    "Compute shaders (GLSL / WebGPU)",
+    "Processing / openFrameworks",
+    "TouchDesigner",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.9,
+   "video": "media/physarum.mp4",
+   "posterImg": "atlas/posters/physarum.jpg"
+  },
+  {
+   "id": "harmonograph",
+   "family": "E",
+   "name": "Harmonograph",
+   "sub": "Damped pendulum drawings",
+   "era": "1844 —",
+   "origin": "The harmonograph is a Victorian drawing machine: two or three pendulums, coupled to a pen and a drawing table, trace damped Lissajous figures that spiral slowly to the centre as the swings die away. Hugh Blackburn's pendulum of 1844 and Jules Lissajous's optical figures of 1857 led to parlour and lecture-hall instruments, and in 1909 Joseph Goold and his co-authors published Harmonic Vibrations and Vibration Figures, an album of rosettes drawn by twin-elliptic pendulums tuned to musical intervals. It is an ancestor of plotter and generative art: a simple physical rule, run for long enough, makes intricate drawings.",
+   "works": "Hugh Blackburn — Blackburn pendulum (1844) · Jules Antoine Lissajous — vibration figures (1857) · Joseph Goold, Charles E. Benham, Richard Kerr & L. R. Wilberforce — Harmonic Vibrations and Vibration Figures (1909)",
+   "tech": [
+    "Damped sinusoids",
+    "Analytic time-lapse",
+    "Ink on card"
+   ],
+   "accent": "#8e2a20",
+   "motionDNA": "Two pendulums released from rest swing in slow ellipses; the pen loops in real time, then time-lapses into a blur while a rosette builds layer on layer, rotates by its slight mistuning and shrinks inward as damping takes the energy out.",
+   "visualDNA": "Walnut and brass machinery in warm lamplight, a cream card with fine indigo ink lines that darken where they overlap, and a Victorian plate caption in Fell type.",
+   "transitions": "Draw back and release, pen drop, real time to time-lapse, pen lift, machine slides out, card becomes the plate",
+   "implementation": [
+    "Physical harmonograph",
+    "Processing / p5.js",
+    "Pen plotter (AxiDraw)",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/harmonograph.mp4",
+   "posterImg": "atlas/posters/harmonograph.jpg"
+  },
+  {
    "id": "claymation",
    "family": "F",
    "name": "Clay Stop Motion",
@@ -2689,6 +2955,36 @@ window.ATLAS = {
    "posterImg": "atlas/posters/papercraft.jpg"
   },
   {
+   "id": "lightpainting",
+   "family": "F",
+   "name": "Light Painting",
+   "sub": "Drawing with light on a long exposure",
+   "era": "1914 —",
+   "origin": "Light painting is drawing in the air with a moving light while the camera's shutter stays open, so every path the light takes is written into a single photograph and the dimly lit performer barely registers. Frank and Lillian Gilbreth traced workers' motions with small lights in the 1910s, Man Ray signed his name in light in Space Writings (1935), and Gjon Mili's 1949 photographs for LIFE of Pablo Picasso drawing centaurs and bulls with a penlight made it famous. Today it is a performance genre of LED wands, pixel sticks and spinning steel wool.",
+   "works": "Frank & Lillian Gilbreth — light motion studies (1910s) · Man Ray — Space Writings (1935) · Gjon Mili & Pablo Picasso — light drawings for LIFE (1949)",
+   "tech": [
+    "Additive exposure buffer",
+    "Parabolic spark streaks",
+    "Dwell-weighted ribbons"
+   ],
+   "accent": "#ff9a3c",
+   "motionDNA": "Nothing on screen moves except the light and the person carrying it; every path persists, so the image only ever accumulates: a coil grows across the frame, a ring spins up and sprays sparks, and a word is written stroke by stroke until the shutter closes.",
+   "visualDNA": "Near-black blue-hour scene with a wet ground that mirrors the light, saturated RGB ribbon bands, orange spark parabolas with white-hot cores, a warm-white handwritten word, translucent ghosts of the performer, and minimal camera HUD type.",
+   "transitions": "Shutter opens, wand coil, walk, steel-wool spin, walk, written word, shutter closes on the finished frame",
+   "implementation": [
+    "Camera on tripod, bulb mode",
+    "LED wand / pixel stick",
+    "Steel wool on a cable",
+    "Canvas 2D (additive buffer)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/lightpainting.mp4",
+   "posterImg": "atlas/posters/lightpainting.jpg"
+  },
+  {
    "id": "retro",
    "family": "G",
    "name": "Retrowave Chrome",
@@ -3010,6 +3306,35 @@ window.ATLAS = {
    "poster": 9.7,
    "video": "media/oswindow.mp4",
    "posterImg": "atlas/posters/oswindow.jpg"
+  },
+  {
+   "id": "liminal",
+   "family": "G",
+   "name": "Liminal Spaces",
+   "sub": "The Backrooms on VHS",
+   "era": "2019 —",
+   "origin": "Liminal-space imagery finds unease in transitional places emptied of people — corridors, waiting rooms, closed malls, drained pools — lit as if everyone has just left. In 2019 an anonymous 4chan post paired a photo of a yellow, carpeted, fluorescent-lit room with a story about “noclipping” out of reality into the Backrooms; dreamcore image boards and Kane Pixels’ found-footage series made the slow VHS walk through it a genre, and Marc Augé’s “non-places” (1992) supplies the theory.",
+   "works": "The Backrooms (anonymous 4chan /x/ post, 2019) · The Backrooms (Found Footage) (Kane Pixels, YouTube, 2022) · Non-Places (Marc Augé, 1992)",
+   "tech": [
+    "Pseudo-3D grid map, painter-sorted",
+    "Fluorescent falloff into yellow haze",
+    "Camcorder drift, VHS OSD & grade"
+   ],
+   "accent": "#d8c46a",
+   "motionDNA": "A slow, aimless handheld walk: low-frequency drift in yaw, pitch and roll over a faint step bob, then a lazy turn toward an opening; nothing approaches and nothing moves except one tube that dims twice, and the camera simply keeps going.",
+   "visualDNA": "Mono-yellow wallpaper with thin stripes and water stains, damp beige carpet, a drop ceiling of buzzing fluorescent panels, flat over-bright light falling off into murky yellow haze, endless pillars — under VHS softness, ghosting, scanlines and a date-stamped OSD.",
+   "transitions": "One continuous take: corridor drift → a dark side passage → a slow turn → the pillar hall opens up → camcorder titler",
+   "implementation": [
+    "Blender / Unity found-footage scenes",
+    "Camcorder VHS capture & emulation",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (grid map, lighting, camera and VHS grade generated in code)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/liminal.mp4",
+   "posterImg": "atlas/posters/liminal.jpg"
   },
   {
    "id": "filmnoir",
@@ -3491,6 +3816,64 @@ window.ATLAS = {
    "posterImg": "atlas/posters/musicvideo.jpg"
   },
   {
+   "id": "bullettime",
+   "family": "H",
+   "name": "Bullet Time",
+   "sub": "Frozen time, moving camera",
+   "era": "1995 —",
+   "origin": "Bullet time stops or nearly stops a moment of action while the camera keeps moving through it, so the audience can circle a bullet in flight. Michel Gondry staged camera-array shots in the Rolling Stones’ “Like a Rolling Stone” video (1995) and a Smirnoff commercial (1996), after Tim Macmillan’s time-slice experiments; The Matrix (1999), with John Gaeta as visual effects supervisor, fired an arc of still cameras in sequence, filled the gaps with interpolated frames and virtual backgrounds, and made the term famous.",
+   "works": "Like a Rolling Stone, The Rolling Stones (music video, Michel Gondry, 1995) · Smirnoff commercial (Michel Gondry, 1996) · The Matrix (Lana & Lilly Wachowski, 1999; visual effects supervisor John Gaeta) · Max Payne (Remedy Entertainment, 2001, game) · The Matrix Reloaded (Wachowskis, 2003)",
+   "tech": [
+    "Camera orbit, clock stopped",
+    "Ripple-ring bullet wakes",
+    "Speed ramp and snap-back"
+   ],
+   "accent": "#6fe39a",
+   "motionDNA": "Real-time action ramps down to a crawl in a second; then nothing moves but the camera, which sweeps more than half a circle around the frozen subject on one smooth eased arc. Bullets creep forward a few centimetres, rain hangs as beads. Time snaps back to full speed with a jolt and everything that was suspended completes its motion at once.",
+   "visualDNA": "A green-tinted overcast rooftop, a figure in a long black coat and dark glasses bent backward almost flat, brass slugs dragging rings of rippled air, suspended raindrops, a splash crown and concrete chips, a skyline that wheels past behind; a 2.39:1 letterbox carrying a camera-array counter and a speed readout.",
+   "transitions": "Speed ramp into a freeze, a continuous virtual-camera orbit, snap back to real time with a single light flash",
+   "implementation": [
+    "An arc of still cameras triggered in sequence, plus interpolated frames and virtual backgrounds",
+    "Pseudo-3D projection in Canvas 2D with a depth-sorted scene",
+    "Action clock integrated from a speed curve"
+   ],
+   "reproducibility": "Fully procedural homage",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/bullettime.mp4",
+   "posterImg": "atlas/posters/bullettime.jpg"
+  },
+  {
+   "id": "dollyzoom",
+   "family": "H",
+   "name": "Dolly Zoom",
+   "sub": "The Vertigo effect",
+   "era": "1958 —",
+   "origin": "A dolly zoom moves the camera toward or away from the subject while the zoom lens changes focal length the opposite way, so the subject holds its size while everything behind it stretches away or flattens and looms. Camera operator Irmin Roberts devised it for Alfred Hitchcock’s Vertigo (1958) to put the hero’s fear of heights on screen; Steven Spielberg turned it on Chief Brody at the beach in Jaws (1975), and Martin Scorsese used it slowly through the diner scene of Goodfellas (1990).",
+   "works": "Vertigo (Alfred Hitchcock, 1958; effect devised by Irmin Roberts) · Jaws (Steven Spielberg, 1975) · Goodfellas (Martin Scorsese, 1990) · La Haine (Mathieu Kassovitz, 1995) · The Lord of the Rings: The Fellowship of the Ring (Peter Jackson, 2001)",
+   "tech": [
+    "Focal length ∝ distance, locked",
+    "True-perspective corridor",
+    "Lens HUD with plan view"
+   ],
+   "accent": "#5fe08f",
+   "motionDNA": "Two motions that cancel on the subject and nowhere else: the camera tracks while the zoom runs the other way at a rate tied to distance, so he never changes size while the background breathes. First a slow track-out and zoom-in that compresses the corridor, a held beat, then a fast reverse that stretches it into a tunnel.",
+   "visualDNA": "A symmetrical hotel corridor in deep green with cream mouldings, a red runner with gold diamonds, rows of doors and sconces, pools of lamplight and a window of green neon at the far end; a man in a grey suit dead centre; viewfinder corner marks, mono lens readouts and a plan view of track and lens wedge.",
+   "transitions": "Hold, compress, hold, stretch; the title settles on the stretched frame",
+   "implementation": [
+    "Camera dolly on track plus a zoom lens pulled in sync",
+    "Pinhole projection in Canvas 2D: focal length and distance driven together (f / d constant)",
+    "Screen-space lighting gradients sampled from depth"
+   ],
+   "reproducibility": "Fully procedural homage",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.4,
+   "video": "media/dollyzoom.mp4",
+   "posterImg": "atlas/posters/dollyzoom.jpg"
+  },
+  {
    "id": "ukiyoe",
    "family": "I",
    "name": "Ukiyo-e Motion",
@@ -3811,6 +4194,35 @@ window.ATLAS = {
    "poster": 9.5,
    "video": "media/africanpattern.mp4",
    "posterImg": "atlas/posters/africanpattern.jpg"
+  },
+  {
+   "id": "mosaic",
+   "family": "I",
+   "name": "Byzantine Mosaic",
+   "sub": "Gold glass and tesserae",
+   "era": "5th–15th c.",
+   "origin": "Byzantine mosaic builds images from tesserae, small cubes of stone and coloured glass, set in rows that follow the forms they describe (andamento) over grounds of gold-leaf glass that glint as the light or the viewer moves. In Ravenna the Mausoleum of Galla Placidia (c. 425–450) has a deep blue vault strewn with gold stars and San Vitale (c. 547) shows the court of Justinian and Theodora; the Deësis panel in Hagia Sophia (c. 1261) reached a painterly softness with very small tesserae.",
+   "works": "Mausoleum of Galla Placidia, Ravenna (c. 425–450) · San Vitale, Justinian and Theodora panels, Ravenna (c. 547) · Hagia Sophia, Deësis panel, Constantinople (c. 1261) · Chora Church (Kariye), Constantinople (c. 1315–1321)",
+   "tech": [
+    "Rows follow the forms (andamento)",
+    "Tilted gold smalti glint",
+    "Tesserae set one by one"
+   ],
+   "accent": "#d9aa3c",
+   "motionDNA": "Accumulation, then light. Tiles are pressed in singly at first and then faster and faster in waves that run along their rows, outward from the figure; when the surface is whole nothing moves but a lamp, and the gold answers it tile by tile with glints that flicker on and off as the angle passes.",
+   "visualDNA": "Small irregular squares with dark grout between; gold-glass ground laid in rows that halo the figure; a blue and green peacock with a dark outline row and eyed tail, vine scrolls with leaves and grapes, a deep lapis vault with eight-pointed gold stars under a red and white arch, a border of red with white diamonds and pearl beading; red-ochre sinopia on plaster where nothing is set yet.",
+   "transitions": "Close-up pulls back as the surface fills; a lamp sweep; the title set in gold on the vault",
+   "implementation": [
+    "Stone and gold- or colour-backed glass tesserae pressed into lime mortar over a painted sinopia",
+    "Canvas 2D: label masks, a distance field per region, greedy tile packing along its iso-lines",
+    "Per-tile tilt vectors for specular glints"
+   ],
+   "reproducibility": "Fully procedural homage",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/mosaic.mp4",
+   "posterImg": "atlas/posters/mosaic.jpg"
   },
   {
    "id": "huazi",
@@ -4258,6 +4670,36 @@ window.ATLAS = {
    "poster": 6.9,
    "video": "media/explainer.mp4",
    "posterImg": "atlas/posters/explainer.jpg"
+  },
+  {
+   "id": "corpmemphis",
+   "family": "J",
+   "name": "Corporate Memphis",
+   "sub": "Big Limbs, Tiny Heads, Flat Optimism",
+   "era": "2017 —",
+   "origin": "The flat vector illustration style that took over tech websites, onboarding screens and explainer ads from about 2017: faceless figures with long, bendy limbs, tiny heads and purple or blue skin, collaborating among blobs, squiggles and oversized UI. Buck’s Alegria system for Facebook (2017) set the template; the mocking nickname “Corporate Memphis” came later, nodding to the squiggles of the 1980s Memphis Group, as free kits spread it everywhere and it became shorthand for friendly, interchangeable brand optimism.",
+   "works": "Alegria illustration system (Buck for Facebook, 2017) · Memphis Group (founded by Ettore Sottsass, Milan, 1981) — the namesake",
+   "tech": [
+    "Two-bone IK noodle limbs",
+    "Walk cycles from hip tracks",
+    "Spring-eased UI pops"
+   ],
+   "accent": "#5b45ff",
+   "motionDNA": "Bouncy and buoyant: every element pops on an overshoot spring, characters walk with a big hip bob and rubber-hose arms that never show an elbow, legs dangle and swing, props grow in eased steps, toggles snap and buttons squish, and the piece ends on a hop of joy and a pull-back to the logo.",
+   "visualDNA": "Flat fills, no outlines, no gradients: cream page, lavender, peach and mint blobs, yellow and pink squiggles, dot grids, a potted monstera; faceless characters with oversized legs and hands, minuscule heads and non-naturalistic skin (violet, blue, terracotta); giant white app cards with rounded corners, toggles, progress bars and a primary-violet call to action.",
+   "transitions": "Pop-on blobs → window springs up → characters walk / drop in → card slot snap → toggle flip → button press burst → pull-back to brand lockup",
+   "implementation": [
+    "Illustrator + After Effects (Duik / RubberHose rigs)",
+    "Lottie / Rive exports for product UI",
+    "Figma illustration kits",
+    "Canvas 2D: bezier noodle limbs with two-bone IK, keyframed hip / hand tracks, spring easing"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/corpmemphis.mp4",
+   "posterImg": "atlas/posters/corpmemphis.jpg"
   }
  ],
  "built": "2026-10-29"
