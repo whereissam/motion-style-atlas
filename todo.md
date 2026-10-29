@@ -1,11 +1,14 @@
 # Motion Style Atlas — TODO
 
-Current build: 127 styles (original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15). Checked items below are done; Web 1.0 is covered by the Webcore film.
+Current build: 142 styles (original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15). Checked items below are done; Web 1.0 is covered by the Webcore film.
 Everything below is queued for later waves. Each item = one 10-second procedural film + card + atlas entry.
 
 ## Visual styles still to build
 
 ### A. Graphic Design & Historical Motion
+- [x] Art Nouveau
+- [x] Futurism
+- [x] Pop Art
 - [x] Psychedelic 60s
 - [x] Neo-Brutalism
 - [x] Memphis Design
@@ -20,12 +23,14 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Risograph Animation
 
 ### B. Typography & Text Motion
+- [x] Lyric Video
 - [x] Calligraphic Motion
 - [x] Typewriter Animation
 - [x] Text-on-Path Motion
 - [x] Typographic Collage
 
 ### C. 2D Animation & Illustration
+- [x] Linocut Animation
 - [x] Rubber Hose
 - [x] Anime Sakuga
 - [x] Rotoscoping
@@ -41,21 +46,23 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 
 ### D. 3D & CGI Motion
 - [x] Claymorphism
-- [ ] Photoreal CGI
+- [x] Photoreal CGI
 - [x] Cel-shaded 3D
 - [x] Product Visualization
 - [x] Architectural Motion
 - [x] 3D Character Animation
 
 ### E. Experimental & Generative Art
+- [x] Infinite Zoom
 - [x] Noise-driven Motion
 - [x] Shader Art
 - [x] Raymarching
 - [x] Feedback Loops
 - [x] Slit-scan
-- [ ] Data-driven Generative Art
+- [x] Data-driven Generative Art
 
 ### F. Analog, Physical & Stop Motion
+- [x] Paper Craft
 - [x] Puppet Animation
 - [x] Object Stop Motion
 - [x] Pixilation
@@ -76,7 +83,7 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Surreal Cinema
 - [x] High Contrast Cinema
 - [x] Found Footage
-- [ ] Documentary Montage
+- [x] Documentary Montage
 - [x] Time-lapse
 - [x] Hyperlapse
 - [x] Match-cut Montage
@@ -101,15 +108,15 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Sports Broadcast
 - [x] Concert VJ Loops
 - [x] Luxury Brand Motion
-- [ ] Broadcast Graphics
+- [x] Broadcast Graphics
 - [x] Data Storytelling
 - [x] App UI Motion
 - [x] Logo Reveal
-- [ ] Product Launch Film
-- [ ] Social Media Reels
+- [x] Product Launch Film
+- [x] Social Media Reels
 - [x] Podcast Visualizer
-- [ ] Music Video Motion
-- [ ] Explainer Infographics
+- [x] Music Video Motion
+- [x] Explainer Infographics
 
 ## Other atlas layers
 - [ ] **Technique Atlas (50+)**: one film per technique, same subject, so only the motion changes.

@@ -18,16 +18,16 @@
 
   // Running order: grouped by family. Ids without a film yet are skipped everywhere.
   MG.ORDER = [
-    'whitney', 'bass', 'bauhaus', 'artdeco', 'constructivism', 'psychedelic', 'opart', 'memphis', 'y2k', 'destijl', 'risograph', 'brutalism', 'dadaism', 'midcentury', 'grunge',
-    'swiss', 'flash', 'variablefont', 'ascii', 'type3d', 'kinetic', 'textmorph', 'editorial', 'typewriter', 'textpath', 'calligraphic', 'typocollage',
-    'rubberhose', 'silhouette', 'lineart', 'collage', 'isometric', 'sakuga', 'comic', 'flat', 'whiteboard', 'chalkboard', 'watercolor', 'liquid', 'limited', 'picturebook', 'rotoscope', 'framebyframe', 'animemg',
-    'mograph', 'lowpoly', 'voxel', 'glass3d', 'softbody', 'wireframe', 'exploded', 'claymorphism', 'celshaded', 'productviz', 'architectural', 'character3d',
-    'particles', 'reactiondiffusion', 'attractor', 'lifegame', 'fractal', 'lsystem', 'boids', 'audioreactive', 'slitscan', 'raymarch', 'feedback', 'noisemotion', 'shaderart',
-    'claymation', 'sand', 'xerox', 'paintglass', 'directfilm', 'cyanotype', 'vhs', 'filmburn', 'objectstop', 'puppet', 'pixilation',
+    'whitney', 'bass', 'bauhaus', 'artdeco', 'constructivism', 'psychedelic', 'opart', 'memphis', 'y2k', 'destijl', 'risograph', 'brutalism', 'dadaism', 'midcentury', 'grunge', 'artnouveau', 'futurism', 'popart',
+    'swiss', 'flash', 'variablefont', 'ascii', 'type3d', 'kinetic', 'textmorph', 'editorial', 'typewriter', 'textpath', 'calligraphic', 'typocollage', 'lyric',
+    'rubberhose', 'silhouette', 'lineart', 'collage', 'isometric', 'sakuga', 'comic', 'flat', 'whiteboard', 'chalkboard', 'watercolor', 'liquid', 'limited', 'picturebook', 'rotoscope', 'framebyframe', 'animemg', 'linocut',
+    'mograph', 'lowpoly', 'voxel', 'glass3d', 'softbody', 'wireframe', 'exploded', 'claymorphism', 'celshaded', 'productviz', 'architectural', 'character3d', 'photoreal',
+    'particles', 'reactiondiffusion', 'attractor', 'lifegame', 'fractal', 'lsystem', 'boids', 'audioreactive', 'slitscan', 'raymarch', 'feedback', 'noisemotion', 'shaderart', 'datagen', 'infinitezoom',
+    'claymation', 'sand', 'xerox', 'paintglass', 'directfilm', 'cyanotype', 'vhs', 'filmburn', 'objectstop', 'puppet', 'pixilation', 'papercraft',
     'retro', 'pixel', 'glitch', 'vaporwave', 'frutiger', 'terminal', 'desktop', 'webcore', 'screensaver', 'databend', 'oswindow',
-    'filmnoir', 'longexposure', 'doubleexposure', 'tiltshift', 'timelapse', 'matchcut', 'splitscreen', 'oneshot', 'hyperlapse', 'highcontrast', 'hud', 'cyberpunk', 'surreal', 'foundfootage',
+    'filmnoir', 'longexposure', 'doubleexposure', 'tiltshift', 'timelapse', 'matchcut', 'splitscreen', 'oneshot', 'hyperlapse', 'highcontrast', 'hud', 'cyberpunk', 'surreal', 'foundfootage', 'documentary', 'musicvideo',
     'ukiyoe', 'inkwash', 'shadowpuppet', 'dunhuang', 'islamic', 'papelpicado', 'guochao', 'minhwa', 'wycinanki', 'miniature', 'africanpattern',
-    'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast', 'vj', 'saas',
+    'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast', 'vj', 'saas', 'broadcast', 'launch', 'reels', 'explainer',
   ];
 
   // Curated best-of reel: a representative spread across every family.
