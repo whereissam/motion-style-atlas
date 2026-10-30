@@ -40,6 +40,10 @@ window.ATLAS = {
   "J": {
    "name": "Social & Commercial",
    "short": "Social & Commercial"
+  },
+  "K": {
+   "name": "Technique Atlas",
+   "short": "Techniques"
   }
  },
  "items": [
@@ -4700,7 +4704,442 @@ window.ATLAS = {
    "poster": 9.4,
    "video": "media/corpmemphis.mp4",
    "posterImg": "atlas/posters/corpmemphis.jpg"
+  },
+  {
+   "id": "techmorph",
+   "family": "K",
+   "name": "Morph",
+   "sub": "Point-wise shape interpolation",
+   "era": "1974 —",
+   "origin": "Computer shape interpolation grew out of the key-frame animation system Nestor Burtnyk and Marceli Wein built at Canada’s National Research Council, which Peter Foldès used to let drawings melt into one another in Hunger (La Faim, 1974). Vector shape tweening became an everyday motion-graphics tool with Flash shape tweens and After Effects path animation; image morphing, which also warps pixels, followed in film effects from the late 1980s.",
+   "works": "Hunger / La Faim (Peter Foldès, National Film Board of Canada, 1974) · Willow (Ron Howard, 1988; ILM morph sequence) · Black or White, Michael Jackson (music video, 1991; PDI face morphs)",
+   "tech": [
+    "Arc-length resampling",
+    "Matched point order",
+    "Interpolated hole"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Every point of one outline travels in a straight line to its partner on the next, all on the same eased clock, so the silhouette flows rather than cuts. Four morphs on the bar: Token to circle, circle to bar, bar to the letter M, then back to the Token on an overshooting ease that lets the points spring past their targets and settle.",
+   "visualDNA": "The Technique Atlas stage: warm paper, a faint grid, the orange Token. Ink dots mark every eighth sample point, point 0 ringed; dashed ghosts of source and target outlines with thin travel lines between partner points; a strip of the five shapes along the top.",
+   "transitions": "Point-wise morph between closed outlines; the hole drifts, shrinks to a point and grows back",
+   "implementation": [
+    "After Effects path keyframes / shape layers",
+    "Flash shape tweens",
+    "Canvas 2D: arc-length resampling and per-point lerp"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 4.55,
+   "video": "media/techmorph.mp4",
+   "posterImg": "atlas/posters/techmorph.jpg"
+  },
+  {
+   "id": "techwipe",
+   "family": "K",
+   "name": "Wipe",
+   "sub": "A hard edge travels, a new picture follows",
+   "era": "1910s —",
+   "origin": "A wipe replaces one image with another behind a moving edge. Early cinema already used iris and shaped mask transitions, and optical printers with travelling mattes made line, clock and pattern wipes routine by the 1930s. Akira Kurosawa cut Seven Samurai (1954) with crisp wipes, and George Lucas borrowed them, clock wipes included, for Star Wars (1977); video switchers later put a menu of wipe patterns on a single lever.",
+   "works": "Seven Samurai (Akira Kurosawa, 1954) · Star Wars (George Lucas, 1977) · Looney Tunes iris-out endings (Warner Bros.)",
+   "tech": [
+    "Moving matte as clip path",
+    "Hard edge, no blend",
+    "Shape wipe from the subject"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing in either picture moves; only the boundary does. Each wipe runs exactly one bar of half-beats on its own ease — a tilted line crosses left to right, a hand sweeps a full clock turn from twelve, an iris opens from the Token’s centre, and the Token’s own silhouette grows exponentially until it fills the frame — with a held beat of the new state between.",
+   "visualDNA": "The Technique Atlas stage repeated in five states: the Token turned a quarter further each time and recoloured orange, ink, blue, outline, orange again; the grid shifts and zooms between states; an orange accent line rides each matte edge; a mono state label in the top-right corner gets wiped with its picture.",
+   "transitions": "Linear wipe, clock wipe, iris wipe, shaped (Token-silhouette) wipe",
+   "implementation": [
+    "Optical printer with travelling mattes",
+    "Video switcher wipe patterns / After Effects track mattes",
+    "Canvas 2D: clip path per matte over the previous state"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.62,
+   "video": "media/techwipe.mp4",
+   "posterImg": "atlas/posters/techwipe.jpg"
+  },
+  {
+   "id": "techsmear",
+   "family": "K",
+   "name": "Smear",
+   "sub": "Two drawings that fill the gap",
+   "era": "1930s —",
+   "origin": "Hand-drawn animation samples motion at 12 or 24 drawings a second, so a fast move can jump too far between frames and strobe. Animators bridge the gap with one or two smear drawings — the character stretched, multiplied or streaked along its path — that the eye reads as speed; Chuck Jones’s The Dover Boys (1942) made them famous, and Spider-Man: Into the Spider-Verse (2018) brought drawn smears and multiples into CG.",
+   "works": "The Dover Boys at Pimento University (Chuck Jones, Warner Bros., 1942) · Looney Tunes and Merrie Melodies shorts (Warner Bros., 1940s–50s) · Spider-Man: Into the Spider-Verse (Sony Pictures Animation, 2018)",
+   "tech": [
+    "Smears on twos",
+    "Stretch · multiples · dry brush",
+    "Frame-by-frame replay"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Long clean holds broken by moves that take four drawings on twos: two smears that span the gap, a squashed landing, the clean pose. Three moves on the downbeats, each with a different smear; then a replay at one drawing per beat (1/7.5 speed) steps through all nine smear and landing drawings over onion-skin ghosts, and time snaps back for the word to smear in.",
+   "visualDNA": "The Technique Atlas stage with its floor line; the orange Token sliding along it, a stretched contact shadow under each smear; a tapering orange wedge with ink speed lines, overlapping copies fading from light to full orange, and dry-brush streaks; dashed ghost outlines, a dotted path and a drawing strip with frame numbers during the replay.",
+   "transitions": "Smear drawings across fast moves; a rewind cut into a stepped replay and back",
+   "implementation": [
+    "Hand-drawn smear frames (2D animation)",
+    "Blender / Maya smear rigs and Grease Pencil",
+    "Canvas 2D: motion quantised to 15 drawings per second"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.25,
+   "video": "media/techsmear.mp4",
+   "posterImg": "atlas/posters/techsmear.jpg"
+  },
+  {
+   "id": "techelastic",
+   "family": "K",
+   "name": "Elastic",
+   "sub": "Damped springs: overshoot and settle",
+   "era": "1930s —",
+   "origin": "Elastic timing comes from cel animation’s squash, stretch and follow-through — the principles Disney animators refined in the 1930s and Frank Thomas and Ollie Johnston set down in The Illusion of Life (1981). In code it became Robert Penner’s elastic and back easing equations (2001), and later physically based damped-spring animation, defined by stiffness and damping rather than duration, in libraries such as React Motion and Facebook’s Rebound and in Apple’s UIKit spring animations.",
+   "works": "Robert Penner’s easing equations (Flash ActionScript, 2001) · iOS spring animations (UIKit, 2014) · React Motion and react-spring (JavaScript spring-physics libraries)",
+   "tech": [
+    "Damped spring: frequency × damping ratio",
+    "Move, scale and rotate on springs",
+    "Linear ghost for contrast"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Every change of position, size and angle is driven by a damped harmonic oscillator released on the beat: the Token shoots past its target, swings back, and rings down to rest. Low damping rings long and wide, high damping lands almost dead; a linear-timed ghost arrives on time and stops cold beside it.",
+   "visualDNA": "The Technique Atlas stage: warm paper ground with a faint 80 px grid, the orange rounded-square Token with an off-centre hole so its rotation reads, mono labels giving each spring’s frequency and damping ratio, dashed target lines, and the caption graph plotting the live spring curve.",
+   "transitions": "Lane comparison fades to three springs on three beats; the three gather into one large Token with a sprung title",
+   "implementation": [
+    "Closed-form damped spring 1 − e^(−ζωt)(cos ω_d t + …) evaluated per frame",
+    "Canvas 2D",
+    "Shared Technique Atlas kit and 120 BPM bed"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.2,
+   "video": "media/techelastic.mp4",
+   "posterImg": "atlas/posters/techelastic.jpg"
+  },
+  {
+   "id": "techbounce",
+   "family": "K",
+   "name": "Bounce",
+   "sub": "Gravity, restitution, squash on contact",
+   "era": "1930s —",
+   "origin": "The bouncing ball is the first exercise in classical animation training: it teaches timing (hops shorten as they lose height), spacing (frames bunch at the top of the arc and spread near the floor) and squash and stretch, which Disney’s animators formalised in the 1930s and Thomas and Johnston listed among the twelve principles in The Illusion of Life (1981). Motion designers later reproduced it with bounce easing curves such as Robert Penner’s easeOutBounce (2001) or with physics: gravity plus a coefficient of restitution.",
+   "works": "The bouncing-ball exercise in Richard Williams’s The Animator’s Survival Kit (2001) · Fleischer Studios’ Screen Songs “follow the bouncing ball” sing-alongs (1920s–30s) · Pixar’s Luxo Jr. (1986)",
+   "tech": [
+    "Analytic gravity and restitution",
+    "Squash on contact, stretch in flight",
+    "Contact shadow and arc trail"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Constant gravity: the Token accelerates into the floor and decelerates to each apex, so spacing is tight at the top and wide at the bottom. Every contact keeps a fixed fraction of the speed, giving a geometric decay of hop height and duration that ends in a quick patter and rest. Squash grows with impact speed; the body stretches along the fall.",
+   "visualDNA": "The Technique Atlas stage with its floor band, the orange Token and a darker heavy twin, soft contact shadows that tighten as they land, a dotted trail tracing the last second of arcs, dust puffs on hard contacts, mono restitution labels and a height/time plot in the caption.",
+   "transitions": "The rubber Token settles, is lifted back to its drop height beside a heavy twin, and both fall on the same beat",
+   "implementation": [
+    "Closed-form projectile segments with a restitution coefficient per contact",
+    "Canvas 2D squash and stretch anchored to the floor",
+    "Shared Technique Atlas kit and 120 BPM bed"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.82,
+   "video": "media/techbounce.mp4",
+   "posterImg": "atlas/posters/techbounce.jpg"
+  },
+  {
+   "id": "techanticipation",
+   "family": "K",
+   "name": "Anticipation",
+   "sub": "The wind-up before the action",
+   "era": "1930s —",
+   "origin": "Anticipation is one of the twelve basic principles of animation that Disney’s animators developed in the 1930s and Frank Thomas and Ollie Johnston described in The Illusion of Life (1981): a preparatory move in the opposite direction — a crouch before a jump, a pull-back before a dash — that tells the audience an action is coming. John Lasseter’s SIGGRAPH paper “Principles of Traditional Animation Applied to 3D Computer Animation” (1987) carried it into CG, and UI motion uses it as the overshooting “back” ease-in.",
+   "works": "The Illusion of Life: Disney Animation (Frank Thomas & Ollie Johnston, 1981) · Luxo Jr. (Pixar, John Lasseter, 1986) · The Road Runner cartoons’ wind-up-and-zip exits (Chuck Jones, Warner Bros.)",
+   "tech": [
+    "Crouch, lean-back and pull-back before take-off",
+    "Same jump with and without",
+    "Position curve dips before it rises"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A beat of preparation in the opposite direction: the Token squashes down, leans back and slides away from where it is going, holds the coil for an instant, then releases into a stretched leap and lands with a small squash. Without it, the same leap starts from nothing and feels abrupt; with it, the take-off reads before it happens.",
+   "visualDNA": "The Technique Atlas stage with its floor band, the orange Token, a dashed arc showing the path, outlined WITH / WITHOUT tags, dust puffs at take-off and landing, a tape-rewind marker, and a position/time curve whose dip below zero is the anticipation.",
+   "transitions": "A rewind replays the first jump backwards; a pop-swap splits one Token into a side-by-side pair",
+   "implementation": [
+    "Keyframed crouch with eased hold, parabolic flight, landing squash",
+    "Canvas 2D",
+    "Shared Technique Atlas kit and 120 BPM bed"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.9,
+   "video": "media/techanticipation.mp4",
+   "posterImg": "atlas/posters/techanticipation.jpg"
+  },
+  {
+   "id": "techorbit",
+   "family": "K",
+   "name": "Orbit",
+   "sub": "The camera circles the subject",
+   "era": "1950s —",
+   "origin": "An orbit moves the camera around a subject on a circular dolly track, a crane or, later, a virtual path, keeping it centred while the background wheels past behind it. Hitchcock’s 360° kiss in Vertigo (1958) and Brian De Palma’s circling shots made it a signature move, Michael Bay turned the low-angle spin into a blockbuster cliché, and in 3D software the turntable orbit is the default way to show an object.",
+   "works": "Vertigo (Alfred Hitchcock, 1958) · Obsession (Brian De Palma, 1976) · Bad Boys II (Michael Bay, 2003) · The Avengers (Joss Whedon, 2012)",
+   "tech": [
+    "Look-at camera on a circular path",
+    "Radius and height varied per orbit",
+    "Top-view map of the camera path"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The subject never leaves frame centre; everything else turns. A held front view, one smooth eased 360° at eye height, a crane down to the floor, a quicker low orbit looking up so the Token looms, then a rise into a still three-quarter view. The floor grid and lettering wheel past and the parallax of near and far floor gives the rotation its weight.",
+   "visualDNA": "The kit stage as a perspective floor: warm paper with the faint grid fading into the horizon, an extruded orange Token with darker side walls and a punched hole, MOTION lettered on the floor in ink, a dashed orange orbit path, soft contact shadows, and a top-view map with the camera, its view cone and trail.",
+   "transitions": "One continuous camera move: hold, orbit, crane down, low orbit, rise to a held three-quarter view",
+   "implementation": [
+    "Circular dolly track, crane or motion-control rig; a turntable path in 3D software",
+    "Look-at pinhole projection in Canvas 2D with back-face culling and flat shading",
+    "Camera angle, radius and height keyframed on the beat grid"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6,
+   "video": "media/techorbit.mp4",
+   "posterImg": "atlas/posters/techorbit.jpg"
+  },
+  {
+   "id": "techparallax",
+   "family": "K",
+   "name": "Parallax",
+   "sub": "Depth from differential speed",
+   "era": "1930s —",
+   "origin": "When the camera moves sideways, near things cross the frame faster than far ones, and that difference in speed alone reads as depth. Disney’s multiplane camera, first used on The Old Mill (1937) and then Snow White, shot painted layers on glass at different distances; side-scrolling games such as Moon Patrol (1982) scrolled background layers at fractions of the foreground speed, and the same idea drives 2.5D photo animation and parallax web pages.",
+   "works": "The Old Mill (Disney, 1937) · Snow White and the Seven Dwarfs (Disney, 1937) · Moon Patrol (Irem, 1982) · The Kid Stays in the Picture (Brett Morgen & Nanette Burstein, 2002)",
+   "tech": [
+    "Layer offset = camera offset / depth",
+    "Sideways truck, eased on the beat",
+    "Flattened vs parallax split"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A held frame, then a long eased truck to one side: the near Token copies race across the top, the Token keeps pace with the camera, the back row lags and the giant far MOTION barely drifts. The frame splits so a single-speed flattened version runs next to the parallax one through two more trucks, then the camera returns home and holds.",
+   "visualDNA": "The kit stage seen as four flat cut-out planes: the faint grid and an enormous pale MOTION far back, a row of pale Token copies, the orange Token with its shadow, and big light-orange copies cropping the top edge; mono layer tags, a plan-view inset of track, view cone, layers and speed arrows, and two labelled panels for the comparison.",
+   "transitions": "Truck, split into flattened vs parallax panels, truck back to the full frame and hold",
+   "implementation": [
+    "Multiplane camera stand; layered compositing in After Effects with a 2-node camera",
+    "Canvas 2D layers offset by camera position / depth",
+    "Split-screen comparison drawing the same scene twice"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.6,
+   "video": "media/techparallax.mp4",
+   "posterImg": "atlas/posters/techparallax.jpg"
+  },
+  {
+   "id": "techcrashzoom",
+   "family": "K",
+   "name": "Crash Zoom",
+   "sub": "A sudden snap of the zoom lens",
+   "era": "1960s —",
+   "origin": "A crash zoom (or snap zoom) racks a zoom lens from wide to tight, or back, in a fraction of a second, so the frame lunges at a detail for shock or comedy. Once zoom lenses became practical it became a staple of 1960s–70s Italian westerns and Hong Kong kung-fu cinema, was revived in homage by Quentin Tarantino, and Edgar Wright made the whip-fast, sound-effected crash zoom a comic signature.",
+   "works": "Shaw Brothers kung-fu films (1970s) · Kill Bill: Volume 1 (Quentin Tarantino, 2003) · Shaun of the Dead (Edgar Wright, 2004) · Hot Fuzz (Edgar Wright, 2007)",
+   "tech": [
+    "Log-space zoom snapped in ~0.14 s",
+    "Zoom blur along the zoom path",
+    "Hit, hold and shake on the beat"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Stillness, then violence, then stillness: a calm wide, a snap in that lands exactly on the beat with a jolt of shake, a held close-up, a snap back out. A target bracket blinks a beat before the next crash, telegraphing the joke; the hole fills the frame; a double-take crashes onto a letter twice; the last crash out settles on a held wide.",
+   "visualDNA": "The kit stage — warm paper, faint grid, orange Token, ink MOTION — seen through viewfinder corners with a mono zoom readout; zoom-blurred smears and radial manga speed lines during each snap, an orange anticipation bracket on the next target.",
+   "transitions": "Hard snap zooms in and out on the beat, each landing with a short shake and settling into a hold",
+   "implementation": [
+    "Zoom lens racked by hand or motor; a scale keyframe with motion blur in After Effects",
+    "Canvas transform about the focus point; zoom interpolated in log space",
+    "Offscreen frame re-composited along the zoom path for blur"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.55,
+   "video": "media/techcrashzoom.mp4",
+   "posterImg": "atlas/posters/techcrashzoom.jpg"
+  },
+  {
+   "id": "techcloth",
+   "family": "K",
+   "name": "Cloth",
+   "sub": "Mass-spring sheet in the wind",
+   "era": "1986 —",
+   "origin": "Cloth simulation treats fabric as a grid of point masses joined by springs or distance constraints for stretch, shear and bending. Jerry Weil hung cloth from fixed points in 1986, Terzopoulos, Platt, Barr and Fleischer’s Elastically Deformable Models (1987) put physically based deformation into graphics, Baraff and Witkin’s Large Steps in Cloth Simulation (1998) made stiff cloth stable with implicit integration, and Thomas Jakobsen’s Verlet-and-constraints scheme (GDC 2001, from IO Interactive’s Hitman) made it cheap enough for real time.",
+   "works": "Geri’s Game (Pixar, 1997) · Monsters, Inc. (Pixar, 2001) · Hitman: Codename 47 (IO Interactive, 2000)",
+   "tech": [
+    "Verlet particles + distance constraints",
+    "Wind force along each quad normal",
+    "Pin release, floor and body collision"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A sheet hangs slack from two pins and breathes; wind gusts land on the beat and roll through it as travelling billows, the print stretching and folding with the fabric. The right pin lets go and the cloth swings down hanging from one corner, flapping; the left pin lets go and it slumps to the floor in folds, settling with friction.",
+   "visualDNA": "Warm paper studio with a grid and floor line; an off-white sheet with a stitched hem printed with the orange Token and MOTION, shaded per quad from a single soft key light, its darker reverse side showing where it folds; two thin cords to the ceiling; the solid orange Token standing behind it.",
+   "transitions": "Hidden behind the sheet, glimpsed through gusts, revealed when the pins release; the word rises over the uncovered Token",
+   "implementation": [
+    "Position-based Verlet cloth precomputed in setup (6 substeps, 3 constraint passes)",
+    "Affine texture-mapped triangles in Canvas 2D, depth-sorted",
+    "Wind as normal-projected drag with value-noise turbulence"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.3,
+   "video": "media/techcloth.mp4",
+   "posterImg": "atlas/posters/techcloth.jpg"
+  },
+  {
+   "id": "techrigidbody",
+   "family": "K",
+   "name": "Rigid Body",
+   "sub": "Impulses, friction, stacking",
+   "era": "1988 —",
+   "origin": "Rigid-body dynamics moves solid objects by integrating linear and angular momentum and resolving every contact so nothing interpenetrates. James Hahn’s Realistic Animation of Rigid Bodies and Moore and Wilhelms’ collision response (both SIGGRAPH 1988) brought it to animation, David Baraff’s analytical contact methods (1989 onward) made resting contact solvable, Mirtich and Canny popularised impulse-based simulation (1995), and Erin Catto’s sequential impulses in Box2D (2006–07) became the standard game solver.",
+   "works": "Half-Life 2 (Valve, 2004; Havok physics) · Garry’s Mod (Facepunch, 2006) · Angry Birds (Rovio, 2009; Box2D)",
+   "tech": [
+    "SAT + clipping contacts on rounded boxes",
+    "Warm-started sequential impulses",
+    "Coulomb friction and restitution"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Tokens fall in on the eighth-note grid, hit the floor and each other with a short restitution bounce, then tumble, slide and lock against friction; the pile grows and shuffles under each new arrival until kinetic energy bleeds away. A last Token lands flat on top of the word with a thud, and everything comes to rest for a still hold.",
+   "visualDNA": "Warm paper studio with a grid and floor line; orange, light-orange, dark-orange and ink Tokens in many sizes, the hole in each showing its rotation, soft contact shadows on the floor; MOTION set heavy and black on the floor at right, acting as a solid; a kinetic-energy graph traced in the corner.",
+   "transitions": "Empty stage, cascade, settle, still hold — the energy curve falls to zero",
+   "implementation": [
+    "2D sequential-impulse solver (Box2D-lite style) precomputed in setup",
+    "Rounded-box contacts from SAT, edge clipping and radius",
+    "Audio thuds from the recorded contact events"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9,
+   "video": "media/techrigidbody.mp4",
+   "posterImg": "atlas/posters/techrigidbody.jpg"
+  },
+  {
+   "id": "techdestruction",
+   "family": "K",
+   "name": "Destruction",
+   "sub": "Voronoi fracture and rewind",
+   "era": "1999 —",
+   "origin": "Destruction effects break a solid into pieces and hand them to a rigid-body solver. James O’Brien and Jessica Hodgins simulated brittle fracture from stress in 1999 (ductile fracture followed in 2002); production and games mostly pre-fracture instead, cutting the model into Voronoi cells around scattered points, as in Houdini’s Voronoi Fracture, 3ds Max RayFire and Blender’s Cell Fracture, while Pixelux’s Digital Molecular Matter and Volition’s GeoMod brought dynamic breakage to consoles.",
+   "works": "Star Wars: The Force Unleashed (LucasArts, 2008; Pixelux DMM) · Red Faction: Guerrilla (Volition, 2009; GeoMod 2.0) · Teardown (Tuxedo Labs, 2020)",
+   "tech": [
+    "Seeded Voronoi pre-fracture",
+    "Shard impulses, spin, floor bounce",
+    "Time remap: slow-mo and rewind"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A beat of stillness, a heavy ball arcs in and connects on the downbeat; time drops to a quarter speed as the cracks open, then catches up while shards spray, spin and rain down, bouncing and skidding to rest. After a held beat the clock runs backwards, slow, then fast, then easing, until every shard drops back into its cell and the Token clicks whole.",
+   "visualDNA": "Warm paper studio with a grid and floor line; the orange Token cut into angular Voronoi shards with darker fracture faces, small dust specks, a matte black ball, soft contact shadows; a mono simulation clock top right that reads SLOW and REWIND; a sim-time graph in the corner showing the remap.",
+   "transitions": "Strike, scatter, settle; a rewind reassembles the subject and the word appears over it",
+   "implementation": [
+    "Voronoi cells by half-plane clipping, drawn as clipped windows onto the Token path",
+    "Per-shard rigid integration with vertex–floor impulses, precomputed in setup",
+    "Eased playback remap of the cached simulation"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.75,
+   "video": "media/techdestruction.mp4",
+   "posterImg": "atlas/posters/techdestruction.jpg"
+  },
+  {
+   "id": "techinstancing",
+   "family": "K",
+   "name": "Instancing",
+   "sub": "One definition, drawn hundreds of times",
+   "era": "2006 —",
+   "origin": "Instancing draws a single stored object many times, each copy differing only by a few per-instance attributes such as position, scale, rotation and colour. GPUs gained hardware instancing in the mid-2000s, and motion designers met the idea through MoGraph’s Cloner in Cinema 4D (2006), which places clones on grids, radial and linear layouts and lets effectors drive their attributes by index.",
+   "works": "MoGraph Cloner (Cinema 4D, Maxon, 2006) · Houdini copy-to-points and packed primitives (SideFX) · Geometry Nodes Instance on Points (Blender, 2021)",
+   "tech": [
+    "One sprite, 400 transforms",
+    "Layout parameter morph",
+    "Index-staggered attributes"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A count that explodes: one Token, then instances streaming out of it in index order until the grid is full. After that only one parameter moves, on the beat, and every copy follows it — each starting a little later than the one before, so every change rolls across the set as a wave.",
+   "visualDNA": "Hundreds of identical orange rounded squares with an off-centre hole on a warm paper grid; grids, concentric rings and a golden-angle sunflower spiral; a SOURCE panel holding the single master Token; a mono HUD counting instances and marking the active layout.",
+   "transitions": "Clone burst from the master, then index-staggered layout morphs on the bar lines; resolves to a static offset grid",
+   "implementation": [
+    "Cinema 4D MoGraph Cloner + effectors",
+    "Houdini copy-to-points / GPU instancing",
+    "Canvas 2D: one pre-rendered sprite per colour, stamped with drawImage under per-instance transforms"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.25,
+   "video": "media/techinstancing.mp4",
+   "posterImg": "atlas/posters/techinstancing.jpg"
+  },
+  {
+   "id": "techrecursion",
+   "family": "K",
+   "name": "Recursion",
+   "sub": "A shape that contains itself",
+   "era": "1904 —",
+   "origin": "A recursive picture is defined in terms of itself: draw the shape, then draw the whole picture again, smaller and turned, inside it, until the copies vanish. Koch’s snowflake (1904) and Escher’s and Droste’s self-containing images made the idea visual; Mandelbrot named fractals in 1975, and Barnsley’s iterated function systems (1988) made recursive copying a standard way to generate imagery in computer graphics.",
+   "works": "Koch snowflake (Helge von Koch, 1904) · Print Gallery (M. C. Escher, 1956) · Fractals Everywhere — iterated function systems (Michael Barnsley, 1988)",
+   "tech": [
+    "draw(n) calls draw(n − 1)",
+    "One similarity transform per level",
+    "Infinite zoom to the fixed point"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Growth by levels: copies appear one per eighth note, each inside or on top of the last. The rule’s numbers then slide and the whole stack re-folds at once. Finally a steady exponential dive — four times closer per level — that never reaches the bottom and lands exactly where it started.",
+   "visualDNA": "An orange Token and an ink Token alternating level by level, coiling into a spiral shell, then nested hole-in-hole like Russian dolls on the paper grid; a depth gauge of stacked ticks, the live rule in mono type and a zoom multiplier climbing to ×256.",
+   "transitions": "Level-by-level build, a rule morph that re-folds every level together, then a seamless self-similar zoom that ends on the opening frame",
+   "implementation": [
+    "Recursive draw function with a depth limit",
+    "Iterated similarity transform (scale · rotate · translate) and its fixed point",
+    "Canvas 2D: levels composed as M^k, camera as M^−z for fractional z"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 2.9,
+   "video": "media/techrecursion.mp4",
+   "posterImg": "atlas/posters/techrecursion.jpg"
+  },
+  {
+   "id": "techfields",
+   "family": "K",
+   "name": "Fields",
+   "sub": "Falloffs that drive attributes by distance",
+   "era": "2006 —",
+   "origin": "A field assigns a value to every point in space, and each object samples it to set its own scale, rotation or colour, so one gizmo can art-direct thousands of copies at once. Cinema 4D’s MoGraph effectors (2006) popularised spherical and linear falloffs for motion design; Release 20 (2018) generalised them into layered Fields, and Houdini and Blender offer the same idea as attribute falloffs and field nodes.",
+   "works": "MoGraph effectors with falloff (Cinema 4D, Maxon, 2006) · Fields (Cinema 4D Release 20, 2018) · Geometry Nodes fields (Blender, 2021)",
+   "tech": [
+    "Spherical / linear / noise falloff",
+    "Field → scale, rotation, colour",
+    "Heat-map visualisation"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing moves on its own: the Tokens are fixed in a grid and only react. A gizmo glides over them and they swell, turn and warm up as it passes, then settle behind it; a plane sweeps across and tips every row in turn; noise makes them breathe in drifting patches. Every change in the field crossfades on the bar.",
+   "visualDNA": "A dense grid of Tokens running from small upright grey to large, half-turned orange; underneath, a faint orange heat map of the field, dashed radius rings and crosshair for the sphere, a ramp band and arrow for the plane; a small falloff-profile graph and mono labels in the HUD.",
+   "transitions": "Crossfades between field types on the bar line, resolving to a static centred spherical falloff",
+   "implementation": [
+    "Cinema 4D MoGraph effectors and Fields",
+    "Houdini attribute falloff / Blender Geometry Nodes fields",
+    "Canvas 2D: field sampled per Token plus a low-res heat map upscaled underneath"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.6,
+   "video": "media/techfields.mp4",
+   "posterImg": "atlas/posters/techfields.jpg"
   }
  ],
- "built": "2026-10-29"
+ "built": "2026-10-30"
 };
