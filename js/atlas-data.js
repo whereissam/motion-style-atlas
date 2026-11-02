@@ -32,6 +32,7 @@
     'techmorph', 'techwipe', 'techsmear', 'techelastic', 'techbounce', 'techanticipation', 'techorbit', 'techparallax', 'techcrashzoom', 'techcloth', 'techrigidbody', 'techdestruction', 'techinstancing', 'techrecursion', 'techfields',
     'techmatchcut', 'techdisplace', 'techovershoot', 'techstagger', 'techdolly', 'techinfinitezoom', 'techfluid', 'techsoftbody', 'technoise', 'techfeedback', 'techmasking', 'techkeying', 'techrotoscope', 'techdoubleexposure', 'techtimeremap',
     'techdissolve', 'techsquash', 'techfollowthrough', 'techshake', 'techrackfocus', 'techparticles', 'techrope', 'techmotionblur', 'techfreeze', 'techecho', 'techframestep', 'techcharstagger', 'techtypemorph', 'techtracking', 'techtextreveal',
+    'techpush', 'techglitch', 'techeasing', 'techarcs', 'techmotionpath', 'techpan', 'techwhippan', 'techflocking', 'techik', 'techpuppetpin', 'techreaction', 'techlsystem', 'techbloom', 'techloop', 'techtrimpaths',
   ];
 
   // Curated best-of reel: a representative spread across every family.

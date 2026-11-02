@@ -1,6 +1,6 @@
 # Motion Style Atlas — TODO
 
-Current build: 202 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 45 Technique Atlas films in waves 10–12). Checked items below are done; Web 1.0 is covered by the Webcore film.
+Current build: 217 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 60 Technique Atlas films in waves 10–13). Checked items below are done; Web 1.0 is covered by the Webcore film.
 Everything below is queued for later waves. Each item = one 10-second procedural film + card + atlas entry.
 
 ## Visual styles still to build
@@ -134,7 +134,7 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Explainer Infographics
 
 ## Other atlas layers
-- [ ] **Technique Atlas (50+)**: one film per technique, same subject, so only the motion changes. Family K; every film uses the shared Token, stage, caption and beat bed in `js/technique-kit.js`. Waves 10–12 built the first 45.
+- [x] **Technique Atlas (50+)** (60 built, 2026-11-02): one film per technique, same subject, so only the motion changes. Family K; every film uses the shared Token, stage, caption and beat bed in `js/technique-kit.js`. Waves 10–13 built 60.
   - Transitions: [x] Morph, [x] Wipe, [x] Match Cut, [x] Smear, [x] Displacement
   - Timing: [x] Elastic, [x] Overshoot, [x] Bounce, [x] Stagger, [x] Anticipation
   - Camera: [x] Dolly, [x] Orbit, [x] Parallax, [x] Crash Zoom, [x] Infinite Zoom
@@ -144,6 +144,17 @@ Everything below is queued for later waves. Each item = one 10-second procedural
   - Temporal: [x] Time Remapping, [x] Freeze Frame, [x] Echo, [x] Frame Stepping
   - Typography: [x] Character Stagger, [x] Type Morph, [x] Tracking, [x] Text Reveal
   - Added in wave 12: [x] Dissolve (Transitions), [x] Squash & Stretch, [x] Follow-through (Timing), [x] Camera Shake, [x] Rack Focus (Camera), [x] Particles, [x] Rope (Simulation), [x] Motion Blur (Compositing)
+  - [x] Wave 13 (2026-11-02, `feat/wave-13`): 15 more took family K from 45 to 60, closing the 50+ goal; films in `js/films-k16.js`–`k20.js`. Why: the core grid is done; these fill obvious gaps (easing basics, camera pans, rigging, classic generative systems, finishing looks).
+    - Transitions: [x] Push, [x] Glitch
+    - Timing: [x] Easing, [x] Arcs, [x] Motion Path
+    - Camera: [x] Pan & Tilt, [x] Whip Pan
+    - Simulation: [x] Flocking
+    - Rigging: [x] Inverse Kinematics, [x] Puppet Pins
+    - Procedural: [x] Reaction-Diffusion, [x] L-System
+    - Compositing: [x] Bloom
+    - Temporal: [x] Seamless Loop
+    - Shape: [x] Trim Paths
+- [ ] Follow-ups from wave 13: the Reaction-Diffusion spots dish loses the Token outline almost at once; the 'stripes' dish reads as labyrinth bands; the Inverse Kinematics poster frame is sparse. Scores of waves 11–13 were checked for timing only, not listened to. Reels not rebuilt since wave 10.
 - [ ] Demo the style-vs-technique idea: Bauhaus Geometry × Elastic vs Bauhaus Geometry × Recursive.
 - [ ] **Narrative Formats (20+)**: title sequence, ad, explainer, music video, lyric video, logo reveal…
 - [ ] **Rendering Looks (20+)**: material, light, grain, compositing looks.
