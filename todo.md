@@ -1,6 +1,6 @@
 # Motion Style Atlas — TODO
 
-Current build: 187 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 30 Technique Atlas films in waves 10 and 11). Checked items below are done; Web 1.0 is covered by the Webcore film.
+Current build: 202 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 45 Technique Atlas films in waves 10–12). Checked items below are done; Web 1.0 is covered by the Webcore film.
 Everything below is queued for later waves. Each item = one 10-second procedural film + card + atlas entry.
 
 ## Visual styles still to build
@@ -134,15 +134,16 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Explainer Infographics
 
 ## Other atlas layers
-- [ ] **Technique Atlas (50+)**: one film per technique, same subject, so only the motion changes. Family K; every film uses the shared Token, stage, caption and beat bed in `js/technique-kit.js`. Waves 10 and 11 built the first 30.
+- [ ] **Technique Atlas (50+)**: one film per technique, same subject, so only the motion changes. Family K; every film uses the shared Token, stage, caption and beat bed in `js/technique-kit.js`. Waves 10–12 built the first 45.
   - Transitions: [x] Morph, [x] Wipe, [x] Match Cut, [x] Smear, [x] Displacement
   - Timing: [x] Elastic, [x] Overshoot, [x] Bounce, [x] Stagger, [x] Anticipation
   - Camera: [x] Dolly, [x] Orbit, [x] Parallax, [x] Crash Zoom, [x] Infinite Zoom
   - Simulation: [x] Cloth, [x] Fluid, [x] Rigid Body, [x] Soft Body, [x] Destruction
   - Procedural: [x] Noise, [x] Fields, [x] Instancing, [x] Recursion, [x] Feedback
   - Compositing: [x] Masking, [x] Keying, [x] Rotoscope, [x] Double Exposure
-  - Temporal: [x] Time Remapping, [ ] Freeze Frame, [ ] Echo, [ ] Frame Stepping
-  - Typography: Character Stagger, Type Morph, Tracking, Text Reveal
+  - Temporal: [x] Time Remapping, [x] Freeze Frame, [x] Echo, [x] Frame Stepping
+  - Typography: [x] Character Stagger, [x] Type Morph, [x] Tracking, [x] Text Reveal
+  - Added in wave 12: [x] Dissolve (Transitions), [x] Squash & Stretch, [x] Follow-through (Timing), [x] Camera Shake, [x] Rack Focus (Camera), [x] Particles, [x] Rope (Simulation), [x] Motion Blur (Compositing)
 - [ ] Demo the style-vs-technique idea: Bauhaus Geometry × Elastic vs Bauhaus Geometry × Recursive.
 - [ ] **Narrative Formats (20+)**: title sequence, ad, explainer, music video, lyric video, logo reveal…
 - [ ] **Rendering Looks (20+)**: material, light, grain, compositing looks.

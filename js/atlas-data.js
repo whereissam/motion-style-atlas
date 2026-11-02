@@ -31,6 +31,7 @@
     'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast', 'vj', 'saas', 'broadcast', 'launch', 'reels', 'explainer', 'corpmemphis',
     'techmorph', 'techwipe', 'techsmear', 'techelastic', 'techbounce', 'techanticipation', 'techorbit', 'techparallax', 'techcrashzoom', 'techcloth', 'techrigidbody', 'techdestruction', 'techinstancing', 'techrecursion', 'techfields',
     'techmatchcut', 'techdisplace', 'techovershoot', 'techstagger', 'techdolly', 'techinfinitezoom', 'techfluid', 'techsoftbody', 'technoise', 'techfeedback', 'techmasking', 'techkeying', 'techrotoscope', 'techdoubleexposure', 'techtimeremap',
+    'techdissolve', 'techsquash', 'techfollowthrough', 'techshake', 'techrackfocus', 'techparticles', 'techrope', 'techmotionblur', 'techfreeze', 'techecho', 'techframestep', 'techcharstagger', 'techtypemorph', 'techtracking', 'techtextreveal',
   ];
 
   // Curated best-of reel: a representative spread across every family.
