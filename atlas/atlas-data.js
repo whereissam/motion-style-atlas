@@ -5574,6 +5574,441 @@ window.ATLAS = {
    "poster": 6.1,
    "video": "media/techtimeremap.mp4",
    "posterImg": "atlas/posters/techtimeremap.jpg"
+  },
+  {
+   "id": "techdissolve",
+   "family": "K",
+   "name": "Dissolve",
+   "sub": "One picture fades out as the next fades in",
+   "era": "1890s —",
+   "origin": "The dissolve began in the camera: the operator faded a shot out with the shutter or iris, wound the film back and faded the next shot in over the same frames. Georges Méliès used dissolves to join the tableaux of Cinderella (Cendrillon, 1899); from the 1930s they were made on the optical printer, and Hollywood grammar settled on the dissolve for passing time and the fade to black for ending a scene. Editing software kept the vocabulary: Cross Dissolve, Dip to Black, Dip to White and an Additive Dissolve that sums the two pictures are standard transitions in Premiere Pro, and Avid and Final Cut have their own equivalents.",
+   "works": "Cinderella / Cendrillon (Georges Méliès, 1899) · Psycho (Alfred Hitchcock, 1960; the dissolve from the shower drain to Marion’s eye) · Apocalypse Now (Francis Ford Coppola, 1979; the opening dissolves between Willard and the burning jungle)",
+   "tech": [
+    "Linear opacity mix",
+    "Dip to black / white",
+    "Additive vs. normal dissolve"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing moves: only opacity changes, on a linear ramp. Two seconds of cross-dissolve with a long, muddy middle where both shots are half there; a quicker dip through black that empties the frame for an instant before the next shot rises; a one-second dip through white; then a held comparison where a normal and an additive dissolve play the same cut side by side.",
+   "visualDNA": "The Technique Atlas stage around a framed program monitor showing five Token shots (orange, blue, ink with the word, outline, orange with the word); layer-opacity bars and a probe crosshair with swatches for A, B and the mixed pixel on a side panel; then two monitors with formulas and paper-luma meters, the additive one flaring to white at the midpoint.",
+   "transitions": "Cross-dissolve, dip to black, dip to white, normal and additive dissolve on the same cut",
+   "implementation": [
+    "Premiere Pro Cross Dissolve / Dip to Black / Dip to White / Additive Dissolve",
+    "After Effects layer opacity keyframes · Avid and Final Cut dissolves",
+    "Canvas 2D: globalAlpha over the outgoing shot; globalCompositeOperation lighter on offscreen shots for the additive mix"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2,
+   "video": "media/techdissolve.mp4",
+   "posterImg": "atlas/posters/techdissolve.jpg"
+  },
+  {
+   "id": "techsquash",
+   "family": "K",
+   "name": "Squash & Stretch",
+   "sub": "Deform with the motion, keep the volume",
+   "era": "1930s —",
+   "origin": "Disney’s animators of the early 1930s found that drawings read as alive when a body stretched in fast motion and squashed on impact, provided it never seemed to gain or lose bulk. Frank Thomas and Ollie Johnston put it first of the twelve principles in The Illusion of Life (1981), illustrated by the half-filled flour sack that slumps, stretches and folds without changing its volume. John Lasseter carried it into computer animation in his SIGGRAPH paper Principles of Traditional Animation Applied to 3D Computer Animation (1987), and in software it is a scale with x and y set to reciprocals.",
+   "works": "The Illusion of Life: Disney Animation (Frank Thomas and Ollie Johnston, 1981; the flour-sack drawings) · Principles of Traditional Animation Applied to 3D Computer Animation (John Lasseter, SIGGRAPH 1987) · Snow White and the Seven Dwarfs (Walt Disney Productions, 1937)",
+   "tech": [
+    "Stretch along the velocity vector",
+    "Squash on contact",
+    "Area-preserving scale, sx·sy = 1"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Hops on the beat with gravity arcs. In flight the Token stretches in proportion to its speed along the direction of travel, so the axis tilts over the arc and the shape is rounder at the apex; on the contact frames it is planted and squashes flat and wide, then springs out stretched the other way. A rigid twin keeps the same timing and reads as stone. Then three drops compare restraint, excess and a squash that loses volume.",
+   "visualDNA": "The Technique Atlas stage with its floor band split down the middle; the orange Token with a dashed undeformed outline and a velocity arrow on the left, a darker rigid Token on the right; readout boxes with a deformed unit square, long and short axis scales and the area; three columns for the extremes; scale-x and scale-y curves in the caption.",
+   "transitions": "Side-by-side comparison into three columns dropped on the same beat",
+   "implementation": [
+    "After Effects scale with linked reciprocal X/Y (expressions) or a squash-and-stretch rig",
+    "Spine, Rive and Maya squash deformers that preserve volume",
+    "Canvas 2D: R(θ)·diag(s, 1/s)·R(−θ) applied with transform(), θ from the velocity"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.8,
+   "video": "media/techsquash.mp4",
+   "posterImg": "atlas/posters/techsquash.jpg"
+  },
+  {
+   "id": "techfollowthrough",
+   "family": "K",
+   "name": "Follow-through",
+   "sub": "The body stops, the loose parts keep going",
+   "era": "1930s —",
+   "origin": "Disney’s animators described how the loose parts of a character — ears, tail, clothing, hair — trail behind the main mass, keep moving after it stops and settle one after another. Frank Thomas and Ollie Johnston named the pair Follow Through and Overlapping Action, the fifth of the twelve principles in The Illusion of Life (1981); John Lasseter restated it for computer animation at SIGGRAPH in 1987, and Richard Williams drilled it as drag and overlap with tails and flags in The Animator’s Survival Kit (2001). Riggers now get it from delayed or spring-driven secondary chains.",
+   "works": "The Illusion of Life: Disney Animation (Frank Thomas and Ollie Johnston, 1981) · Principles of Traditional Animation Applied to 3D Computer Animation (John Lasseter, SIGGRAPH 1987) · The Animator’s Survival Kit (Richard Williams, 2001; drag, overlap and the flag)",
+   "tech": [
+    "Chain of lagging damped springs",
+    "Drag: each segment a few frames behind",
+    "Overshoot and settle after the stop"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The body moves on plain ease-in-out slides and stops dead; everything else is secondary. On the start the antenna bends back from the base up, segment by segment; on the stop it whips forward, the tip last and farthest, swings back and settles over a couple of seconds, each segment peaking a few frames after the one below it. Three moves: a long slide, a quicker return, a short jolt.",
+   "visualDNA": "The Technique Atlas stage with its floor; the orange Token with a four-segment ink antenna, ring joints and an orange ball tip; faint onion skins of the last frames of the antenna; a dashed rigid antenna for comparison; BODY STOPS and TAIL KEEPS GOING callouts; a framed chart of the four segment angles over the whole film with stop markers and each segment’s lag in frames.",
+   "transitions": "Three moves on one stage; the rigid ghost and chart annotations fade in as the comparison starts",
+   "implementation": [
+    "After Effects Duik / Limber dynamics, or delayed valueAtTime() expressions down a parented chain",
+    "Spring bones / jiggle chains in Maya, Blender and game engines",
+    "Canvas 2D: a chain of damped angular springs integrated in setup() at 1200 Hz, sampled and lerped per frame"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.95,
+   "video": "media/techfollowthrough.mp4",
+   "posterImg": "atlas/posters/techfollowthrough.jpg"
+  },
+  {
+   "id": "techshake",
+   "family": "K",
+   "name": "Camera Shake",
+   "sub": "Trauma in, noise out: the camera moves, the world does not",
+   "era": "1970s —",
+   "origin": "Film crews shook the camera itself to sell explosions and earthquakes, and Clairmont Camera’s Image Shaker gave the move a dial for Saving Private Ryan (1998). Motion graphics made it a transform: After Effects users drive position and rotation with the wiggle() expression. Game developers formalised the feel — Jan Willem Nijman’s talk The Art of Screenshake (2013) and Squirrel Eiserloh’s GDC 2016 talk on juicing cameras, which set out trauma that decays, shake as trauma squared, and smooth noise instead of random jitter.",
+   "works": "Saving Private Ryan (Steven Spielberg, 1998) · Nuclear Throne (Vlambeer, 2015) · Math for Game Programmers: Juicing Your Cameras With Math (Squirrel Eiserloh, GDC talk, 2016)",
+   "tech": [
+    "Trauma: add on impact, drain over time",
+    "Shake = trauma² × max",
+    "Smooth noise per channel, not random jitter"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing in the scene moves; only the camera does. Impacts land on the beat and fill the trauma meter, which drains in a straight line; the shake follows its square, so a light knock is a shiver and a heavy one a jolt that dies away smoothly. X, Y and roll each read their own noise at 9 Hz. For two and a half seconds the noise is swapped for a new random value every frame, and the same trauma turns into a nervous, frame-rate buzz.",
+   "visualDNA": "The Technique Atlas stage as a fixed world with registration crosses; a 16:9 camera frame with orange corner brackets and a dashed action-safe area rides over it, its rest position dashed behind. A right-hand instrument column: the camera output inset, scrolling X/Y and roll graphs inside a dashed ±shake envelope, and trauma and trauma² meters.",
+   "transitions": "Hits on the beat, smooth decay to stillness; a switch from smooth noise to per-frame jitter and back",
+   "implementation": [
+    "Hand-held or shaker rigs on set; Image Shaker style mounts",
+    "After Effects wiggle() on position and rotation; game camera trauma systems",
+    "Canvas 2D: closed-form trauma decay, value noise per channel, inverse camera transform for the output"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.12,
+   "video": "media/techshake.mp4",
+   "posterImg": "atlas/posters/techshake.jpg"
+  },
+  {
+   "id": "techrackfocus",
+   "family": "K",
+   "name": "Rack Focus",
+   "sub": "Pull the focus plane from one depth to another",
+   "era": "1910s —",
+   "origin": "Shifting focus within a shot to move the audience’s attention became part of film grammar as lenses and focus rings improved; the focus puller (first assistant camera) marks distances on the lens and turns the ring on cue. Gregg Toland’s deep-focus work on Citizen Kane (1941) showed the opposite strategy — stopping down to keep every plane sharp. Mike Nichols’ The Graduate (1967) famously racks between Benjamin and Elaine, and modern cameras made the pull a menu option with follow-focus motors and autofocus tracking.",
+   "works": "Citizen Kane (Orson Welles, cinematographer Gregg Toland, 1941; deep focus) · The Graduate (Mike Nichols, 1967) · Barry Lyndon (Stanley Kubrick, 1975; Zeiss f/0.7 lenses, razor-thin focus)",
+   "tech": [
+    "Circle of confusion per depth layer",
+    "Focus moved in dioptres (1/distance)",
+    "Aperture sets the depth of field"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing in the frame moves; attention does. Each pull starts on a beat and eases into place over one or two beats as the focus plane sweeps through depth — one layer sharpens while the others bloom out. After five pulls the iris closes six stops, the depth of field swells to cover the room, and a pull to the near Token hardly changes the picture; then the iris opens and the mid Token is isolated again.",
+   "visualDNA": "The Technique Atlas stage seen through a 50 mm lens: a big dark-orange Token close to camera, the orange Token in the middle, MOTION and a gridded wall far back, each with a sharp mono readout of distance and blur. A top view on the right with a log depth axis, view cone, orange focus plane and shaded depth-of-field band; an iris icon and the f-number below.",
+   "transitions": "Eased focus pulls on the beat between three depths; a slow stop-down and open-up of the aperture",
+   "implementation": [
+    "Follow-focus gear and distance marks on the lens; a focus puller on set",
+    "After Effects Camera Lens Blur / 3D camera depth of field; Cinema 4D and Blender DOF",
+    "Canvas 2D: per-layer filter blur from thin-lens circle of confusion"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 4.6,
+   "video": "media/techrackfocus.mp4",
+   "posterImg": "atlas/posters/techrackfocus.jpg"
+  },
+  {
+   "id": "techparticles",
+   "family": "K",
+   "name": "Particles",
+   "sub": "Emit, age, die",
+   "era": "1982 —",
+   "origin": "William T. Reeves at Lucasfilm defined the particle system for the Genesis Effect in Star Trek II: The Wrath of Khan (1982) and described it in Particle Systems — A Technique for Modeling a Class of Fuzzy Objects (SIGGRAPH 1983): emitters generate particles with a birth rate, each gets an initial position, velocity, colour, size and lifetime, moves under simple forces and is killed when its age runs out. The same emit-update-kill loop drives Maya and Houdini particles, Trapcode Particular in After Effects and every game engine’s effects system.",
+   "works": "Star Trek II: The Wrath of Khan (Nicholas Meyer, 1982; Genesis sequence, Lucasfilm) · Trapcode Particular (Peder Norrby, After Effects plug-in, mid-2000s) · Journey (thatgamecompany, 2012; sand and cloth particles)",
+   "tech": [
+    "Birth rate integrated to birth times",
+    "Per-particle sampling at birth (cone, speed, life)",
+    "Age → colour and size; kill at lifespan"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A trickle that becomes a stream on the beat, fans out as the cone widens, arcs into a fountain when gravity switches on, thickens and hangs as drag bites, drifts to a standstill when gravity goes off, shrinks to a short-lived spray when the lifespan drops, stops, and ends on one 360° burst that rains onto the floor and ages out.",
+   "visualDNA": "The Technique Atlas stage with its floor line: the orange Token standing at left with particles pouring from its hole, each a dot that is born hot white, turns orange and dies small and ink-dark. A dashed spread cone and a gravity arrow at the emitter, one tracked particle ringed with its whole path dotted and its age shown, a parameter panel at right with live count, and the live-particle count as the caption graph.",
+   "transitions": "Parameter changes on the beat; the particles already alive keep the values they were born with, while gravity and drag act on all of them at once",
+   "implementation": [
+    "Emitter + per-particle state (Reeves 1983 / Houdini POPs / Trapcode Particular)",
+    "Births from the integrated rate, positions integrated at 240 Hz in setup()",
+    "Canvas 2D: age-indexed colour LUT and size, sampled paths interpolated by age"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.7,
+   "video": "media/techparticles.mp4",
+   "posterImg": "atlas/posters/techparticles.jpg"
+  },
+  {
+   "id": "techrope",
+   "family": "K",
+   "name": "Rope",
+   "sub": "Verlet nodes, distance constraints",
+   "era": "1967 —",
+   "origin": "Verlet integration was introduced to molecular dynamics by Loup Verlet in 1967: positions advance from the current and previous position, so velocity is implicit. Thomas Jakobsen’s Advanced Character Physics (GDC 2001), written from IO Interactive’s Hitman, paired it with relaxation — repeatedly projecting each distance constraint back to its rest length — and the more passes per step, the stiffer the result. Müller, Heidelberger, Hennix and Ratcliff generalised the idea as Position Based Dynamics (2006); ropes, chains, hair and cables in games and rigging tools are built on it.",
+   "works": "Hitman: Codename 47 (IO Interactive, 2000; Verlet ragdolls) · Cut the Rope (ZeptoLab, 2010) · Half-Life 2 (Valve, 2004; physics ropes and cables)",
+   "tech": [
+    "Verlet integration (position + previous position)",
+    "Distance-constraint relaxation, N passes per step",
+    "Kinematic anchor, heavy end mass, floor friction"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Held out to the side and let go on the beat, the Token swings as a heavy pendulum on a chain that bows behind it. The anchor jerks right then left, and whip-waves run down the links. At 4 s the solver drops to one pass and the rope stretches like a bungee, bouncing the Token low; at 6 s it returns to twenty and the rope snaps taut, kicking the Token up. Then the anchor descends, the Token lands and stands, and the rope folds down onto the floor and settles.",
+   "visualDNA": "The Technique Atlas stage with its floor line: an ink anchor ring, a thick rope of 24 links coloured by strain (ink at rest length, orange when stretched) with every node drawn as a point, the orange Token hanging from the last node. A large iteration counter with twenty pips, a one-link projection diagram and rope length readout at right; rope stretch as the caption graph.",
+   "transitions": "A release, kinematic yanks, and a solver setting switched on the beat",
+   "implementation": [
+    "Verlet + constraint relaxation (Jakobsen 2001 / Position Based Dynamics)",
+    "Simulated once in setup() at 240 Hz, iteration count keyed over time",
+    "Canvas 2D: per-link strain colour, interpolated node positions"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.6,
+   "video": "media/techrope.mp4",
+   "posterImg": "atlas/posters/techrope.jpg"
+  },
+  {
+   "id": "techmotionblur",
+   "family": "K",
+   "name": "Motion Blur",
+   "sub": "Many instants averaged across the open shutter",
+   "era": "1984 —",
+   "origin": "A film camera’s rotary shutter is open for part of each frame — 180° is the classic setting, half the frame time — so anything that moves smears across the exposure. Computer graphics had to fake it: Korein and Badler and Potmesil and Chakravarty published temporal antialiasing methods in 1983, and Cook, Porter and Carpenter’s Distributed Ray Tracing (SIGGRAPH 1984) sampled time across the shutter, shown in the still 1984 by Thomas Porter at Lucasfilm’s Computer Graphics division (later Pixar). Ray Harryhausen’s stop-motion lacked blur and strobed; Industrial Light & Magic’s go-motion for Dragonslayer (1981) moved the puppets during exposure to put it back.",
+   "works": "1984 (Thomas Porter, Lucasfilm Computer Graphics, 1984; distributed ray tracing still) · Dragonslayer (Matthew Robbins, 1981; ILM go-motion) · Saving Private Ryan (Steven Spielberg, 1998; narrow 45° and 90° shutter)",
+   "tech": [
+    "Shutter angle sets the exposure window",
+    "N sub-frame samples, averaged",
+    "Strobing at 0°, streaks at 180°–360°"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The motion itself never changes — one swing every two beats, a steady 2.2 turns a second — only the exposure does. At 0° the Token is a crisp cut-out that jumps from frame to frame; at 90° and 180° it grows soft trailing edges, and the hole twists into an arc; at 360° the smear is a full frame long and four samples break it into visible copies until twenty-four melt them into a streak. When it slows to a stop the blur shrinks with its speed and leaves a sharp Token.",
+   "visualDNA": "The Technique Atlas stage with the Token swinging along a ticked track; a rotary-shutter disc whose open sector widens and narrows, an exposure timeline with sample dots per frame, speed and blur-length readouts; two thin lanes underneath with ghosted previous frames — separate strobing copies at 0°, continuous streaks at 180°.",
+   "transitions": "Shutter angle cut on the bar: 0°, 90°, 180°, 360° undersampled, 360°, 180°; a deceleration to stillness",
+   "implementation": [
+    "Rotary shutter angle on film and digital cinema cameras",
+    "After Effects / Nuke motion blur (shutter angle, phase, samples per frame); renderer time sampling",
+    "Canvas 2D: N sub-frame Token renders averaged with lighter at 1/N alpha"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6,
+   "video": "media/techmotionblur.mp4",
+   "posterImg": "atlas/posters/techmotionblur.jpg"
+  },
+  {
+   "id": "techfreeze",
+   "family": "K",
+   "name": "Freeze Frame",
+   "sub": "One frame held while time runs on",
+   "era": "1920s —",
+   "origin": "A freeze frame is made by printing the same frame again and again: on the optical printer it was step-printing one negative frame for as many output frames as the hold needed, in editing software it is a hold or a still. Silent and early sound films used it for comic and dramatic stops; François Truffaut’s closing freeze on Jean-Pierre Léaud in The 400 Blows (1959) made it a signature ending, and Butch Cassidy and the Sundance Kid (1969) froze its heroes mid-charge, the frame going sepia. Television, sport replays and character-intro title cards added the flash, the push-in and the callout.",
+   "works": "The 400 Blows / Les Quatre Cents Coups (François Truffaut, 1959; final freeze) · Butch Cassidy and the Sundance Kid (George Roy Hill, 1969; final freeze to sepia) · Lock, Stock and Two Smoking Barrels (Guy Ritchie, 1998; freeze-frame character intros)",
+   "tech": [
+    "Source frame held, output clock running",
+    "Flash, desaturate, push-in, callout on the hold",
+    "Release back into motion; final freeze to end"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A lively run of hops, each a quarter-turn flip with squash on landing, on the beat. At 1.5 s it stops dead at the peak of a hop, tilted 45° in the air, for a second and a half while the beat plays on: a flash, the colour drains, the camera eases in, a callout draws itself; then it snaps back into colour and motion. A half-second punch hold on the beat at 5 s, and a final freeze at the peak of the last hop that drains to grey and pushes in slowly to the end.",
+   "visualDNA": "The Technique Atlas stage with its floor line: the orange Token hopping left to right with ghost outlines and dust puffs. A filmstrip of the last ten output frames along the top, each with its source frame number, a HOLD bracket over repeats; a running timecode beside a held frame counter; a checklist of treatments that ticks off during the first hold; a leader-line callout; and the source-time curve as the caption graph.",
+   "transitions": "Hard stops into holds with a white flash, a snap release back into colour, and a closing freeze",
+   "implementation": [
+    "Optical-printer step printing / editorial hold frames",
+    "After Effects Freeze Frame or Time Remap hold, Premiere and Resolve frame holds",
+    "Canvas 2D: picture drawn from held source time s, overlays from output time t, saturation composite for desaturation"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.45,
+   "video": "media/techfreeze.mp4",
+   "posterImg": "atlas/posters/techfreeze.jpg"
+  },
+  {
+   "id": "techecho",
+   "family": "K",
+   "name": "Echo",
+   "sub": "The layer, composited with itself from earlier frames",
+   "era": "1880s —",
+   "origin": "Showing several moments of one movement in a single picture goes back to Étienne-Jules Marey’s chronophotographs of the 1880s, and Marcel Duchamp painted it in Nude Descending a Staircase, No. 2 (1912). Norman McLaren put it in motion in Pas de deux (1968), optically printing each dancer over delayed copies of themselves. Compositing software turned it into an effect: After Effects’ Echo samples the layer at fixed time offsets, with an echo time, a number of echoes, a starting intensity, a decay and an operator that decides how the copies combine.",
+   "works": "Étienne-Jules Marey, chronophotographs (1880s) · Nude Descending a Staircase, No. 2 (Marcel Duchamp, 1912) · Pas de deux (Norman McLaren, National Film Board of Canada, 1968)",
+   "tech": [
+    "Echo k = layer at t + k × echo time",
+    "Opacity = intensity × decay^k",
+    "Echo operator: back · add · maximum"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The source never changes — one even figure-eight — and the effect only resamples it. Echoes switch on one at a time over a bar and a half, the echo time eases from −2 to −8 frames so a tight smear opens into a spaced chain, the decay drops so the tail dies within a few copies, the operator flips from compositing to adding to maximum on the beat, and when the source eases to a stop the copies arrive one after another and stack on it.",
+   "visualDNA": "The Technique Atlas stage: the orange Token on a figure-eight with up to eight fading copies, burning to pale yellow where added copies overlap; small index labels on each echo while it is spread; an effect-controls panel top right with the active parameter marked; a layer-time strip of frame ticks and echo sample bars, bar height = opacity.",
+   "transitions": "Parameter changes on the beat; operator switches as hard cuts; the trail collapses onto the stopped source",
+   "implementation": [
+    "Optical printing of delayed multiple exposures",
+    "After Effects Echo effect / Nuke TimeEcho / frame-blend trails",
+    "Canvas 2D: each echo redrawn from the closed-form path at t + k × echo time into its own layer, composited with lighter / lighten / source-over"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.7,
+   "video": "media/techecho.mp4",
+   "posterImg": "atlas/posters/techecho.jpg"
+  },
+  {
+   "id": "techframestep",
+   "family": "K",
+   "name": "Frame Stepping",
+   "sub": "Ones, twos, fours: sampling motion and holding it",
+   "era": "1910s —",
+   "origin": "Drawn animation has been shot on twos — each drawing held for two frames — since the silent era, halving the drawings for movement that still reads; fast action goes to ones, and the limited animation of 1950s and 60s television leaned on threes, fours and long holds. Stop motion such as Willis O’Brien’s work on King Kong (1933) carries the same stepped look, with every pose placed by hand. Digital tools made it a setting: After Effects’ Posterize Time effect and posterizeTime() expression resample any smooth animation to a lower rate, and Spider-Man: Into the Spider-Verse (2018) mixed ones and twos on purpose.",
+   "works": "King Kong (Merian C. Cooper and Ernest B. Schoedsack, 1933; stop motion by Willis O’Brien) · The Lego Movie (Phil Lord and Christopher Miller, 2014) · Spider-Man: Into the Spider-Verse (Sony Pictures Animation, 2018)",
+   "tech": [
+    "Sample and hold: t → floor(t · fps) / fps",
+    "Ones · twos · fours · posterised 6 fps",
+    "Pose jitter for a hand-placed feel"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "One curve, four clocks: a bar-long ease across and back with a full turn, identical in every lane but redrawn every frame, every second, every fourth and every fifth frame — so the same ease reads as fluid, crisp, choppy and stuttering. The holds lag the smooth ghost and jump to catch up, biggest jumps in the middle of the ease. Then a 6 fps stop-motion run of rolls and hops that never sits quite still between poses, and a word set letter by letter on the same clock.",
+   "visualDNA": "The Technique Atlas stage split into four labelled lanes, small orange Tokens on thin tracks, dashed outline ghosts at the ones position; hold strips of twelve frame cells, repeated drawings merged into blocks numbered by drawing, the current one orange; then a floor, a large Token, dashed onion skins and a drawing counter; the held-time staircase as the caption graph.",
+   "transitions": "Lanes enter on the beat and clear together; a cut to the single stop-motion Token; letters appear on the held clock",
+   "implementation": [
+    "Exposure sheets: ones, twos, threes, holds",
+    "After Effects Posterize Time / posterizeTime(fps); Blender Stepped Interpolation modifier",
+    "Canvas 2D: the time fed to the pose is floor(t · fps) / fps; jitter seeded by drawing number"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.64,
+   "video": "media/techframestep.mp4",
+   "posterImg": "atlas/posters/techframestep.jpg"
+  },
+  {
+   "id": "techcharstagger",
+   "family": "K",
+   "name": "Character Stagger",
+   "sub": "One text animator, a delay per letter",
+   "era": "2003 —",
+   "origin": "Title designers long animated lettering one character at a time by hand or on the rostrum camera; software made it a property of the text itself. Adobe After Effects 6.0 (2003) introduced text animators: property offsets (position, rotation, scale, opacity) applied through range selectors that hand each character, word or line a share of the animator, with start, end and offset, shape, ease and randomise-order controls. Cinema 4D’s MoText (MoGraph, 2006) and web libraries that split text into characters, such as GSAP’s SplitText, carried the same idea into 3D and the browser.",
+   "works": "Adobe After Effects text animators and range selectors (2003) · Cinema 4D MoGraph MoText (Maxon, 2006) · GSAP SplitText (GreenSock)",
+   "tech": [
+    "Animator: property offsets per character",
+    "Range selector: amount by index",
+    "Orders: left · right · centre · random"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Six letters, one move each, starting a fixed delay apart so the word reads as a single wave: a rise and fade sweeping left to right, letters spinning up from −90° right to left, a pop of overshooting scale opening from the centre out, and a random order that sparkles; each pattern clears in one beat. The last bar runs the same rise on a 39-character line at 22 ms a letter, fast enough to look like a ripple rather than a sequence.",
+   "visualDNA": "The Technique Atlas stage with MOTION set large in Archivo Black; numbered index chips with delays above each letter; under the word, the range selector shown as an amount bar per letter joined into a ramp; a timing chart of six offset bars with a playhead; a text-animator panel top right; the delay-by-index profile as the caption graph.",
+   "transitions": "Each order clears with a single simultaneous fade; the long line ripples in under the word",
+   "implementation": [
+    "After Effects text animators with range selectors (based on characters)",
+    "Cinema 4D MoText effectors / GSAP SplitText stagger",
+    "Canvas 2D: the word split into measured glyphs, each drawn with offsets × selector amount(i, t)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 0.85,
+   "video": "media/techcharstagger.mp4",
+   "posterImg": "atlas/posters/techcharstagger.jpg"
+  },
+  {
+   "id": "techtypemorph",
+   "family": "K",
+   "name": "Type Morph",
+   "sub": "Glyphs interpolated along weight, width and shape",
+   "era": "1977 —",
+   "origin": "Donald Knuth’s METAFONT (first version 1977–79) described letters as pen strokes along skeleton paths, so weight and width became parameters instead of separate drawings. Adobe’s Multiple Master fonts (1991) interpolated between drawn master outlines along design axes, Apple’s TrueType GX variations followed in the mid-1990s, and OpenType Font Variations — variable fonts, announced jointly by Adobe, Apple, Google and Microsoft in 2016 — made registered axes such as weight (wght) and width (wdth) standard, and animatable on screen.",
+   "works": "METAFONT and Computer Modern (Donald Knuth, 1977–86) · Myriad MM (Robert Slimbach and Carol Twombly, Adobe, 1992; weight and width Multiple Master axes) · OpenType Font Variations (Adobe, Apple, Google and Microsoft, 2016)",
+   "tech": [
+    "Skeleton + pen width",
+    "Design-space axes",
+    "Glyph-to-glyph point correspondence"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Three axes moved one at a time, then two at once. The weight axis eases from 100 to 900 over a bar and the letters swell around fixed skeletons while the word grows with its advances; the width axis squeezes to 60 and stretches to 150 with a small overshoot home; M and O morph into A and C and back while the shared TION never moves; finally weight and width travel together on a curved path back to the start.",
+   "visualDNA": "The Technique Atlas stage with MOTION drawn as ink pen strokes over thin orange skeletons with sample dots, dashed advance boxes, cap-height and baseline guides; three sliders below (wght, wdth, glyph) with the Token as their knobs; a design-space inset top-right plotting wght × wdth with the film’s path traced in orange.",
+   "transitions": "Continuous axis interpolation; glyph-to-glyph point morph with an overshooting return",
+   "implementation": [
+    "Variable fonts: CSS font-variation-settings / animated wght and wdth axes",
+    "Font editors (Glyphs, FontLab): masters, compatible outlines and interpolation",
+    "Canvas 2D: stroked skeletons resampled to 64 points, lerped per point"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 6,
+   "video": "media/techtypemorph.mp4",
+   "posterImg": "atlas/posters/techtypemorph.jpg"
+  },
+  {
+   "id": "techtracking",
+   "family": "K",
+   "name": "Tracking",
+   "sub": "Uniform letter-spacing, in thousandths of an em",
+   "era": "1960s —",
+   "origin": "In metal type, spacing a word out meant inserting thin spaces between the sorts by hand. Phototypesetting in the 1960s and 70s turned spacing into a dial, and tight, near-touching settings became a period look; desktop publishing then made tracking a number, which Adobe applications measure in thousandths of an em, and CSS1 (1996) added letter-spacing to the web. On screen, the slow tracking-out became a stock film-title and trailer move: the word keeps its centre while its letters drift apart.",
+   "works": "Alien (Ridley Scott, 1979; title by R/Greenberg Associates, widely spaced letters assembling) · Adobe InDesign (1999; tracking and kerning in 1/1000 em) · CSS1 letter-spacing (W3C Recommendation, 1996)",
+   "tech": [
+    "Tracking in 1/1000 em",
+    "Advance widths + i·T",
+    "Centre without the trailing space"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A single scalar drives everything. MOTION pinches from 0 to −50 in a bar, holds, then tracks out to +800 over five and a half seconds on a smoothstep so slow it reads as a drift, holds for a beat and snaps back to 0 with a small overshoot. Every gap grows by the same amount, so the outer letters travel five times as far as the inner gap opens.",
+   "visualDNA": "The Technique Atlas stage with MOTION in Archivo 900 at 150 px, each glyph in a dashed advance box with its width in 1/1000 em, the tracking gaps tinted orange (and hatched where negative tracking makes boxes overlap), a fixed orange centre line; a big mono readout of T and pixels, a tracking slider with the Token as knob, and a naive centred line that drifts off the centre line.",
+   "transitions": "One continuous value change; a snap back with overshoot",
+   "implementation": [
+    "After Effects: Text Animator → Tracking Amount",
+    "CSS letter-spacing in em, or Figma / InDesign tracking",
+    "Canvas 2D: per-glyph advances + i·T, centred on the width without the trailing gap"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 5.6,
+   "video": "media/techtracking.mp4",
+   "posterImg": "atlas/posters/techtracking.jpg"
+  },
+  {
+   "id": "techtextreveal",
+   "family": "K",
+   "name": "Text Reveal",
+   "sub": "Four ways to bring a line on screen",
+   "era": "1950s —",
+   "origin": "Title designers of the 1950s and 60s, Saul Bass first among them, made the way words arrive part of the film, revealing type with travelling mattes, sliding bars and wipes on the animation stand and optical printer. The typewriter reveal borrows from teleprinters and computer terminals; blur- and tracking-in became trailer staples once desktop compositors such as After Effects (1993) brought per-character text animation; and the scramble or decode reveal — random characters cycling until each locks — became screen shorthand for computers cracking a code.",
+   "works": "Psycho (Alfred Hitchcock, 1960; titles by Saul Bass, type sliced and slid by bars) · All the President’s Men (Alan J. Pakula, 1976; typewriter keys strike the opening) · WarGames (John Badham, 1983; launch-code characters cycle and lock one by one)",
+   "tech": [
+    "Clip-rect line masks",
+    "Stepped glyph count + cursor",
+    "Seeded scramble with staggered lock"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Four reveals in sequence, about two seconds each, and every revealed panel holds. The slide-up rises on a hard ease-out, the second line a beat-fraction behind; the typewriter steps at twelve glyphs a second and the cursor blinks on the half-beat once it stops; the blur-in closes tracking, blur and opacity together on one ease-out; the scramble flickers at twenty steps a second and locks left to right with a little seeded jitter.",
+   "visualDNA": "The Technique Atlas stage split into four panels with numbered mono headers and progress bars, MOTION in Archivo 900 over a second line in Archivo 800, the Token beside each; dashed orange mask rectangles with the clipped-off part ghosted, a stepping clip edge and block cursor, live blur and tracking readouts, and orange unlocked glyphs turning ink as they lock.",
+   "transitions": "Masked slide, stepped typewriter, blur-and-track focus-in, decode scramble",
+   "implementation": [
+    "After Effects text animators: Range Selector with Position, Blur, Tracking and Character Offset",
+    "CSS/JS: overflow-hidden line wrappers, steps() timing, seeded scramble scripts",
+    "Canvas 2D: clip rects, ctx.filter blur, per-slot hashed glyphs keyed to a step count"
+   ],
+   "reproducibility": "Fully procedural (scramble seeded)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.35,
+   "video": "media/techtextreveal.mp4",
+   "posterImg": "atlas/posters/techtextreveal.jpg"
   }
  ],
  "built": "2026-11-02"
