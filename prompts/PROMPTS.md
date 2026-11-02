@@ -1,6 +1,6 @@
 # Motion Style Atlas: Regeneration Prompts
 
-Each of the 172 styles below has two prompts:
+Each of the 187 styles below has two prompts:
 
 - **Build prompt**: a full director's brief. Give it to Claude or another coding model to make a procedural 10-second film (Canvas/WebGL + Web Audio), or hand it to a motion designer as a creative brief.
 - **Video-model prompt**: a short descriptive prompt for text-to-video tools.
@@ -6713,5 +6713,590 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 ### Video-model prompt (Sora / Runway / Kling / Veo)
 ```text
 10-second Fields motion-graphics film (Falloffs that drive attributes by distance). Visual style: a dense grid of Tokens running from small upright grey to large, half-turned orange; underneath, a faint orange heat map of the field, dashed radius rings and crosshair for the sphere, a ramp band and arrow for the plane; a small falloff-profile graph and mono labels in the HUD. Motion: nothing moves on its own: the Tokens are fixed in a grid and only react. A gizmo glides over them and they swell, turn and warm up as it passes, then settle behind it; a plane sweeps across and tips every row in turn; noise makes them breathe in drifting patches. Every change in the field crossfades on the bar. Signature moves: spherical / linear / noise falloff, field → scale, rotation, colour, heat-map visualisation; transitions: crossfades between field types on the bar line, resolving to a static centred spherical falloff. In the tradition of MoGraph effectors with falloff (Cinema 4D, Maxon, 2006) · Fields (Cinema 4D Release 20, 2018) · Geometry Nodes fields (Blender, 2021). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FIELDS". Punchy sound design synced to every cut.
+```
+
+## 173 · Match Cut
+*A hard cut that carries a shape or an action across · 1920s — · Technique Atlas*
+
+Reference film: `videos/techmatchcut.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Match Cut** (A hard cut that carries a shape or an action across, 1920s —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Soviet montage and the silent avant-garde treated the splice itself as a tool, and editors soon learned that a cut disappears, or rhymes, when something carries across it: a shape, a position, a direction, a movement. The graphic match is the showpiece — Stanley Kubrick’s bone tossed into the air that becomes an orbiting satellite in 2001: A Space Odyssey (1968) — while the humbler cut on action, which finishes a movement in the next shot, is the everyday glue of continuity editing.
+- Study these reference works: 2001: A Space Odyssey (Stanley Kubrick, 1968; bone-to-satellite cut) · Lawrence of Arabia (David Lean, 1962; match-to-sunrise cut) · Psycho (Alfred Hitchcock, 1960; plughole-to-eye match dissolve)
+- Motion DNA: Five hard cuts, all on the beat at 1.5, 3.5, 5, 6.5 and 8.5 s. Motion continues through each splice: the spin keeps its angle and speed and only slows in the second shot, a push-in delivers the porthole at the sun’s exact size, the horizon becomes the floor at the same height, and a toss launched in the wide shot is cut a third of the way up and lands in the close shot.
+- Visual DNA: The Technique Atlas stage, the orange Token, an ink dial with a blue porthole, an orange striped sun on a horizon; dashed orange guide outlines laid over the outgoing shot and carried into the incoming one; a dotted toss path split at the cut point; a numbered shot strip with beat ticks and accent cut markers.
+- Signature transitions: Graphic match cut, position match cut, horizon-to-floor match, cut on action
+- Key techniques: Graphic match on silhouette and spin, Position and size match, Cut on action
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Graphic match on silhouette and spin, Position and size match, Cut on action).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Graphic match on silhouette and spin and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "MATCH CUT", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Picture editing (Avid, Premiere, Resolve) with onion-skin overlays to line up the match, After Effects: guide layers and parented nulls across comps, Canvas 2D: one draw function per shot, switched on beat-aligned cut times. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Match Cut motion-graphics film (A hard cut that carries a shape or an action across). Visual style: the Technique Atlas stage, the orange Token, an ink dial with a blue porthole, an orange striped sun on a horizon; dashed orange guide outlines laid over the outgoing shot and carried into the incoming one; a dotted toss path split at the cut point; a numbered shot strip with beat ticks and accent cut markers. Motion: five hard cuts, all on the beat at 1.5, 3.5, 5, 6.5 and 8.5 s. Motion continues through each splice: the spin keeps its angle and speed and only slows in the second shot, a push-in delivers the porthole at the sun’s exact size, the horizon becomes the floor at the same height, and a toss launched in the wide shot is cut a third of the way up and lands in the close shot. Signature moves: graphic match on silhouette and spin, position and size match, cut on action; transitions: graphic match cut, position match cut, horizon-to-floor match, cut on action. In the tradition of 2001: A Space Odyssey (Stanley Kubrick, 1968; bone-to-satellite cut) · Lawrence of Arabia (David Lean, 1962; match-to-sunrise cut) · Psycho (Alfred Hitchcock, 1960; plughole-to-eye match dissolve). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "MATCH CUT". Punchy sound design synced to every cut.
+```
+
+## 174 · Displacement
+*A greyscale map pushes pixels from one picture into the next · 1990s — · Technique Atlas*
+
+Reference film: `videos/techdisplace.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Displacement** (A greyscale map pushes pixels from one picture into the next, 1990s —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: A displacement map offsets each pixel of an image by the brightness of a second, greyscale image. Digital compositors used it for heat haze, refraction and ripples; After Effects shipped a Displacement Map effect, and motion designers turned it into a transition by animating the amount up and back down across a cut. Real-time versions became shader transitions, collected in the open-source GL Transitions library and the WebGL image sliders popular on agency sites.
+- Study these reference works: After Effects Displacement Map effect (Adobe) · GL Transitions, open-source shader transition collection (Gaëtan Renaudeau and contributors) · WebGL hover and slider distortion effects on agency portfolio sites (2010s)
+- Motion DNA: Three transitions, each 1.5 s, with a beat of hold between. The displacement amount rises from zero, peaks mid-transition at 120 px and falls back to zero, so both ends are clean; meanwhile the picture flips from A to B in the order the map dictates — noise in blotches, the gradient as a sweep from left to right, the ripple ring by ring.
+- Visual DNA: The Technique Atlas stage with the Token in four states (orange, ink turned 90°, blue upside-down above MOTION, orange again); grid lines bend with the image; a greyscale inset of the current map with sampled offset arrows, a row of all three maps, a state label beneath the Token.
+- Signature transitions: Noise-map displacement, gradient-map displacement, ripple-map displacement
+- Key techniques: Luminance map → pixel offset, Amount swells and dies on a sine, Map-ordered switch from A to B
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Luminance map → pixel offset, Amount swells and dies on a sine, Map-ordered switch from A to B).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Luminance map → pixel offset and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "DISPLACEMENT", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: After Effects Displacement Map / Turbulent Displace across a cut, GLSL transition shader: texture2D(from, uv + m·k·p), texture2D(to, uv − m·k·(1−p)), Canvas 2D: per-pixel offsets on a 480×320 offscreen buffer scaled into the frame. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- Loopable: make the last frame cut cleanly back to the first.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Displacement motion-graphics film (A greyscale map pushes pixels from one picture into the next). Visual style: the Technique Atlas stage with the Token in four states (orange, ink turned 90°, blue upside-down above MOTION, orange again); grid lines bend with the image; a greyscale inset of the current map with sampled offset arrows, a row of all three maps, a state label beneath the Token. Motion: three transitions, each 1.5 s, with a beat of hold between. The displacement amount rises from zero, peaks mid-transition at 120 px and falls back to zero, so both ends are clean; meanwhile the picture flips from A to B in the order the map dictates — noise in blotches, the gradient as a sweep from left to right, the ripple ring by ring. Signature moves: luminance map → pixel offset, amount swells and dies on a sine, map-ordered switch from a to b; transitions: noise-map displacement, gradient-map displacement, ripple-map displacement. In the tradition of After Effects Displacement Map effect (Adobe) · GL Transitions, open-source shader transition collection (Gaëtan Renaudeau and contributors) · WebGL hover and slider distortion effects on agency portfolio sites (2010s). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DISPLACEMENT". Punchy sound design synced to every cut.
+```
+
+## 175 · Overshoot
+*One pass past the target, then settle · 1930s — · Technique Atlas*
+
+Reference film: `videos/techovershoot.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Overshoot** (One pass past the target, then settle, 1930s —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Disney animators taught overshoot as part of follow-through: a move carries past its final pose and eases back into it, so it reads as having weight and energy. In software it became the “back” easing curve — Robert Penner’s easing equations (2001) defined easeOutBack with its overshoot constant 1.70158, about a 10% overshoot — and that curve now ships in CSS cubic-bezier presets, GSAP’s back.out and nearly every animation library.
+- Study these reference works: The Illusion of Life: Disney Animation (Frank Thomas and Ollie Johnston, 1981; follow-through and overlapping action) · Robert Penner’s Easing Equations (Flash ActionScript, 2001) · GSAP back.out ease (GreenSock)
+- Motion DNA: Every move takes one second: a fast start, a single excursion past the target, a turn and a soft settle — no second swing. Five lanes compare strengths from none (plain cubic ease-out) to s = 4 (about 38% past); they return on the next bar, overshooting the start mark; then the same curve drives a pop-in scale, a quarter-turn and a slide, with MOTION sliding in a beat behind.
+- Visual DNA: The Technique Atlas stage; five lanes of small orange Tokens on thin tracks between dashed START and TARGET lines; dashed ghosts at each peak with a bracket and the measured overshoot; then one large Token with a dashed target outline, an angle arc with target and peak ticks, and target lines for the slide; all five curves faint in the caption graph with the active one in ink.
+- Signature transitions: Lane race into a hero Token; overshoot on scale, rotation and position
+- Key techniques: Ease-out-back curve, Overshoot strength s, Single pass, no oscillation
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Ease-out-back curve, Overshoot strength s, Single pass, no oscillation).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Ease-out-back curve and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "OVERSHOOT", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: After Effects graph editor / Flow presets with back easing, CSS cubic-bezier(0.34, 1.56, 0.64, 1) · GSAP back.out(s), Canvas 2D: f(u) = 1 + (s+1)(u−1)³ + s(u−1)², peak at u = 1 − 2s / 3(s+1). If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Overshoot motion-graphics film (One pass past the target, then settle). Visual style: the Technique Atlas stage; five lanes of small orange Tokens on thin tracks between dashed START and TARGET lines; dashed ghosts at each peak with a bracket and the measured overshoot; then one large Token with a dashed target outline, an angle arc with target and peak ticks, and target lines for the slide; all five curves faint in the caption graph with the active one in ink. Motion: every move takes one second: a fast start, a single excursion past the target, a turn and a soft settle — no second swing. Five lanes compare strengths from none (plain cubic ease-out) to s = 4 (about 38% past); they return on the next bar, overshooting the start mark; then the same curve drives a pop-in scale, a quarter-turn and a slide, with MOTION sliding in a beat behind. Signature moves: ease-out-back curve, overshoot strength s, single pass, no oscillation; transitions: lane race into a hero Token; overshoot on scale, rotation and position. In the tradition of The Illusion of Life: Disney Animation (Frank Thomas and Ollie Johnston, 1981; follow-through and overlapping action) · Robert Penner’s Easing Equations (Flash ActionScript, 2001) · GSAP back.out ease (GreenSock). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "OVERSHOOT". Punchy sound design synced to every cut.
+```
+
+## 176 · Stagger
+*One animation, offset start times · 1930s — · Technique Atlas*
+
+Reference film: `videos/techstagger.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Stagger** (One animation, offset start times, 1930s —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Staggering — running the same move on many elements with each start delayed a little more than the last — is how a crowd of parts reads as one gesture. Cel animators and title designers did it by hand with offset exposure-sheet timings; in motion graphics it became a standard control through After Effects text animators and expression offsets, and web motion libraries such as GSAP made a stagger value, with orders from the start, centre, edges or random, a single parameter.
+- Study these reference works: Saul Bass, The Man with the Golden Arm titles (1955) · After Effects text animator range selectors (Adobe) · GSAP stagger option (GreenSock)
+- Motion DNA: Every item runs the identical 500 ms pop-in on an overshooting ease; only the start time changes. Four orders, one per bar, each finishing within 1.4 s — a reading-order sweep, a ripple out from the centre, a diagonal wave from the top-left, a sparkling shuffle — each cleared at once before the next, then the six letters of MOTION drop in 100 ms apart.
+- Visual DNA: The Technique Atlas stage with a 9 × 5 grid of small orange Tokens over delay heat tiles (pale to orange, labelled in ms); a timing chart of 45 offset bars, dotted lead-ins for each delay and a black playhead; mono tags naming the order and its formula.
+- Signature transitions: Staggered pop-ins; each pattern cleared with a single simultaneous scale-down
+- Key techniques: Delay = f(index), Linear · centre · diagonal · random orders, Same duration and ease for every item
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Delay = f(index), Linear · centre · diagonal · random orders, Same duration and ease for every item).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Delay = f(index) and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "STAGGER", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: After Effects text animators / layer offset sequencing, GSAP stagger, Framer Motion staggerChildren, CSS animation-delay, Canvas 2D: per-item delay = f(index, position), one shared easing. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Stagger motion-graphics film (One animation, offset start times). Visual style: the Technique Atlas stage with a 9 × 5 grid of small orange Tokens over delay heat tiles (pale to orange, labelled in ms); a timing chart of 45 offset bars, dotted lead-ins for each delay and a black playhead; mono tags naming the order and its formula. Motion: every item runs the identical 500 ms pop-in on an overshooting ease; only the start time changes. Four orders, one per bar, each finishing within 1.4 s — a reading-order sweep, a ripple out from the centre, a diagonal wave from the top-left, a sparkling shuffle — each cleared at once before the next, then the six letters of MOTION drop in 100 ms apart. Signature moves: delay = f(index), linear · centre · diagonal · random orders, same duration and ease for every item; transitions: staggered pop-ins; each pattern cleared with a single simultaneous scale-down. In the tradition of Saul Bass, The Man with the Golden Arm titles (1955) · After Effects text animator range selectors (Adobe) · GSAP stagger option (GreenSock). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "STAGGER". Punchy sound design synced to every cut.
+```
+
+## 177 · Dolly
+*The camera moves, so perspective changes · 1910s — · Technique Atlas*
+
+Reference film: `videos/techdolly.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Dolly** (The camera moves, so perspective changes, 1910s —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: A dolly shot moves the whole camera toward or away from the subject on a wheeled platform, often on track. Because the viewpoint itself travels, near objects grow faster than far ones and the parallax between them changes — which a zoom, magnifying from a fixed point, cannot do. Giovanni Pastrone’s Cabiria (1914) made long tracking moves famous enough that they were called "Cabiria movements"; the zoom lens only became common decades later, and Hitchcock’s Vertigo (1958) combined the two against each other in the dolly zoom.
+- Study these reference works: Cabiria (Giovanni Pastrone, 1914) · Vertigo (Alfred Hitchcock, 1958; dolly zoom) · Jaws (Steven Spielberg, 1975; dolly zoom on the beach)
+- Motion DNA: A slow, eased push in from 9 m to 3.6 m, a hold, a pull back out; then the same push beside a zoom that keeps the camera parked and racks 24 → 60 mm so the Token grows identically. In the dolly the foreground markers swing outward and swell ×4 while the billboard behind barely grows; in the zoom everything scales together about the centre.
+- Visual DNA: The Technique Atlas Token on a gridded floor plane in true perspective, ink marker Tokens in front, ink posts with distance labels and MOTION on a far billboard; paper HUD plates with a top-view map (orange frustum widening or narrowing), camera distance, focal length and magnification bars for near, Token and far.
+- Signature transitions: Full-frame dolly shrinks into the left half of a split screen as the zoom panel slides in
+- Key techniques: Camera translation, fixed focal length, Magnification ∝ 1 / distance per depth, Matched zoom for comparison
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Camera translation, fixed focal length, Magnification ∝ 1 / distance per depth, Matched zoom for comparison).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Camera translation, fixed focal length and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "DOLLY", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Dolly and track, slider, crane or Steadicam on set, Camera translation in Cinema 4D / Blender / After Effects 3D camera, Canvas 2D: pinhole projection x·f/z of a small 3D set, painter-sorted. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Dolly motion-graphics film (The camera moves, so perspective changes). Visual style: the Technique Atlas Token on a gridded floor plane in true perspective, ink marker Tokens in front, ink posts with distance labels and MOTION on a far billboard; paper HUD plates with a top-view map (orange frustum widening or narrowing), camera distance, focal length and magnification bars for near, Token and far. Motion: a slow, eased push in from 9 m to 3.6 m, a hold, a pull back out; then the same push beside a zoom that keeps the camera parked and racks 24 → 60 mm so the Token grows identically. In the dolly the foreground markers swing outward and swell ×4 while the billboard behind barely grows; in the zoom everything scales together about the centre. Signature moves: camera translation, fixed focal length, magnification ∝ 1 / distance per depth, matched zoom for comparison; transitions: full-frame dolly shrinks into the left half of a split screen as the zoom panel slides in. In the tradition of Cabiria (Giovanni Pastrone, 1914) · Vertigo (Alfred Hitchcock, 1958; dolly zoom) · Jaws (Steven Spielberg, 1975; dolly zoom on the beach). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DOLLY". Punchy sound design synced to every cut.
+```
+
+## 178 · Infinite Zoom
+*Self-similar picture, log-space camera · 1904 — · Technique Atlas*
+
+Reference film: `videos/techinfinitezoom.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Infinite Zoom** (Self-similar picture, log-space camera, 1904 —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: An infinite zoom needs a picture that contains a scaled copy of itself — a Droste image, so named after the Dutch cocoa tin whose 1904 nurse holds a tin bearing her own picture — and a camera that scales by a constant factor per unit of time, so it moves evenly through log space. Fractal zoom films of the 1980s made it a computer-graphics spectacle; Eames Office’s Powers of Ten (1977) had already paced its journey as a factor of ten every ten seconds, and the rising Shepard–Risset tone is its sonic twin.
+- Study these reference works: Powers of Ten (Charles and Ray Eames, 1977) · Droste cocoa tin artwork (1904) · Zoom (Istvan Banyai, picture book, 1995)
+- Motion DNA: A held frame, an ease into a constant climb of one level per second — the hole swelling until it becomes the frame and the next Token arrives at the size the last one had — then an ease out that lands exactly on level 8, a frame identical to the first. No acceleration is felt in between, because every second is the same ×4.
+- Visual DNA: The Technique Atlas stage seen through a rounded viewport: orange Tokens nested hole within hole, each on its own patch of gridded paper and lettered with its level and ×4^n; a crosshair on the fixed point; a HUD with the zoom factor, depth level, an exponential on a linear axis and a straight climb on a log ruler.
+- Signature transitions: Continuous self-similar zoom; the end frame matches the start frame for a seamless loop
+- Key techniques: Self-similar nesting, ratio K = 4, Exponential zoom Z = K^L, L linear in time, Aim at the fixed point; wrap L mod 1
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Self-similar nesting, ratio K = 4, Exponential zoom Z = K^L, L linear in time, Aim at the fixed point; wrap L mod 1).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Self-similar nesting, ratio K = 4 and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "INFINITE ZOOM", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Droste / recursive comps zoomed with an exponential scale expression, Fractal explorers and shader zooms in log space, Canvas 2D: draw levels n−2 … n+8 from frac(L), nested hole clips. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- Loopable: make the last frame cut cleanly back to the first.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Infinite Zoom motion-graphics film (Self-similar picture, log-space camera). Visual style: the Technique Atlas stage seen through a rounded viewport: orange Tokens nested hole within hole, each on its own patch of gridded paper and lettered with its level and ×4^n; a crosshair on the fixed point; a HUD with the zoom factor, depth level, an exponential on a linear axis and a straight climb on a log ruler. Motion: a held frame, an ease into a constant climb of one level per second — the hole swelling until it becomes the frame and the next Token arrives at the size the last one had — then an ease out that lands exactly on level 8, a frame identical to the first. No acceleration is felt in between, because every second is the same ×4. Signature moves: self-similar nesting, ratio k = 4, exponential zoom z = k^l, l linear in time, aim at the fixed point; wrap l mod 1; transitions: continuous self-similar zoom; the end frame matches the start frame for a seamless loop. In the tradition of Powers of Ten (Charles and Ray Eames, 1977) · Droste cocoa tin artwork (1904) · Zoom (Istvan Banyai, picture book, 1995). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "INFINITE ZOOM". Punchy sound design synced to every cut.
+```
+
+## 179 · Fluid
+*Particles that push their neighbours apart · 1977 — · Technique Atlas*
+
+Reference film: `videos/techfluid.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Fluid** (Particles that push their neighbours apart, 1977 —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Smoothed-particle hydrodynamics was devised in 1977 by Robert Gingold and Joe Monaghan, and independently by Leon Lucy, to simulate stars. Matthias Müller, David Charypar and Markus Gross brought it to interactive graphics in Particle-Based Fluid Simulation for Interactive Applications (2003), and Simon Clavet, Philippe Beaudoin and Pierre Poulin’s double-density relaxation (2005) made splashy, stable particle liquids cheap; grid solvers in the line of Jos Stam’s Stable Fluids (1999) and FLIP hybrids carry the film work.
+- Study these reference works: Antz (DreamWorks / PDI, 1998; water simulation) · Ratatouille (Pixar, 2007) · Moana (Walt Disney Animation Studios, 2016)
+- Motion DNA: Still water first, shown as bare particles; the Token drops on the beat and the surface tears into a crown splash that rains back, the body sinks, slows, rises on its own buoyancy and bobs to a float. A spring then drags it through the water and back, piling a bow wave against the glass, and the sloshing decays to a level surface.
+- Visual DNA: The Technique Atlas stage with a glass tank on the floor; the liquid drawn as blue metaballs over the half-submerged orange Token, droplets as dots; mono labels for the method, parameters and phase; a neighbourhood diagram with the smoothing radius h; velocity arrows in the action; a debug inset with every particle coloured by speed.
+- Signature transitions: Particles → liquid surface; still, splash, float, push, settle; the energy curve rises and decays
+- Key techniques: SPH density from neighbours within h, Double-density relaxation (pressure + near-pressure), Two-way rigid-body coupling
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (SPH density from neighbours within h, Double-density relaxation (pressure + near-pressure), Two-way rigid-body coupling).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on SPH density from neighbours within h and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "FLUID", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: SPH with double-density relaxation precomputed in setup (4 substeps), Uniform-grid neighbour search, XSPH-style viscosity, Canvas 2D: half-res metaball threshold of additive particle sprites. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Fluid motion-graphics film (Particles that push their neighbours apart). Visual style: the Technique Atlas stage with a glass tank on the floor; the liquid drawn as blue metaballs over the half-submerged orange Token, droplets as dots; mono labels for the method, parameters and phase; a neighbourhood diagram with the smoothing radius h; velocity arrows in the action; a debug inset with every particle coloured by speed. Motion: still water first, shown as bare particles; the Token drops on the beat and the surface tears into a crown splash that rains back, the body sinks, slows, rises on its own buoyancy and bobs to a float. A spring then drags it through the water and back, piling a bow wave against the glass, and the sloshing decays to a level surface. Signature moves: sph density from neighbours within h, double-density relaxation (pressure + near-pressure), two-way rigid-body coupling; transitions: particles → liquid surface; still, splash, float, push, settle; the energy curve rises and decays. In the tradition of Antz (DreamWorks / PDI, 1998; water simulation) · Ratatouille (Pixar, 2007) · Moana (Walt Disney Animation Studios, 2016). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FLUID". Punchy sound design synced to every cut.
+```
+
+## 180 · Soft Body
+*A lattice of masses and springs · 1987 — · Technique Atlas*
+
+Reference film: `videos/techsoftbody.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Soft Body** (A lattice of masses and springs, 1987 —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Soft bodies are simulated as point masses joined by damped springs (or by constraints and pressure) and the picture is carried along by the deforming lattice. Demetri Terzopoulos, John Platt, Alan Barr and Kurt Fleischer’s Elastically Deformable Models (SIGGRAPH 1987) introduced physically based deformation to graphics, Gavin Miller animated snakes and worms with mass-spring segments the following year, and Matthias Müller and colleagues’ shape matching (2005) and position-based dynamics (2006) made stable, art-directable jelly routine in games and tools.
+- Study these reference works: The Motion of Snakes and Worms (Gavin Miller, SIGGRAPH 1988) · LocoRoco (Sony, 2006) · World of Goo (2D Boy, 2008)
+- Motion DNA: Two identical Tokens differ only in spring stiffness. Dropped on the beat, the soft one splats and wobbles for a second while the firm one gives a short shiver; plates press both with the same force — the soft one squashes to under two-thirds of its height and bulges, the firm one gives a few per cent — then lift away so the stored energy throws them up, and both ring down to their rest shape.
+- Visual DNA: The Technique Atlas stage and floor; two orange Tokens carried on lattices of ink dots, springs tinted blue where compressed and orange where stretched; dashed rest-shape ghosts, height callouts h / h₀, two ink press plates on rods with force arrows, mono stiffness labels under each body.
+- Signature transitions: Held, dropped, pressed, released, recovered — the soft body’s height graph traces the story
+- Key techniques: Mass-spring lattice: structural, shear, bend, Per-triangle area springs against collapse, Texture embedded in the lattice cells
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Mass-spring lattice: structural, shear, bend, Per-triangle area springs against collapse, Texture embedded in the lattice cells).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Mass-spring lattice: structural, shear, bend and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "SOFT BODY", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Mass-spring lattice with area springs precomputed in setup (24 substeps, semi-implicit Euler), Penalty contact for the force-driven plates, projected floor with friction, Canvas 2D: affine texture-mapped lattice triangles, strain-coloured spring overlay. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Soft Body motion-graphics film (A lattice of masses and springs). Visual style: the Technique Atlas stage and floor; two orange Tokens carried on lattices of ink dots, springs tinted blue where compressed and orange where stretched; dashed rest-shape ghosts, height callouts h / h₀, two ink press plates on rods with force arrows, mono stiffness labels under each body. Motion: two identical Tokens differ only in spring stiffness. Dropped on the beat, the soft one splats and wobbles for a second while the firm one gives a short shiver; plates press both with the same force — the soft one squashes to under two-thirds of its height and bulges, the firm one gives a few per cent — then lift away so the stored energy throws them up, and both ring down to their rest shape. Signature moves: mass-spring lattice: structural, shear, bend, per-triangle area springs against collapse, texture embedded in the lattice cells; transitions: held, dropped, pressed, released, recovered — the soft body’s height graph traces the story. In the tradition of The Motion of Snakes and Worms (Gavin Miller, SIGGRAPH 1988) · LocoRoco (Sony, 2006) · World of Goo (2D Boy, 2008). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SOFT BODY". Punchy sound design synced to every cut.
+```
+
+## 181 · Noise
+*Smooth random, octave by octave · 1983 — · Technique Atlas*
+
+Reference film: `videos/technoise.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Noise** (Smooth random, octave by octave, 1983 —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Ken Perlin invented gradient noise while working on the computer imagery for Tron (1982) and published it as An Image Synthesizer (SIGGRAPH 1985); it earned him a Technical Achievement Academy Award in 1997, and he refined it as Improved Noise (2002). Summing octaves of noise at doubling frequency and halving amplitude — fractal Brownian motion, after Mandelbrot and Van Ness — became the standard way to drive organic motion, from camera shake to the Wiggle expression in After Effects.
+- Study these reference works: Tron (Disney, 1982) · An Image Synthesizer (Ken Perlin, SIGGRAPH 1985) · After Effects wiggle() expression (Adobe)
+- Motion DNA: Two seconds of white random jitter — a new value every frame, so the Token strobes and its trail scribbles. Then it glides on one slow octave of noise; on each bar a further octave arrives at twice the frequency and half the amplitude, adding tremble on top of drift. Finally a grid of Tokens turns, swells and lifts together as one noise field scrolls through them, neighbours in step, distant ones out of phase.
+- Visual DNA: The Technique Atlas stage; the orange Token with a fading trail of ghosts and its centre path; a scrolling signal graph along the top; on the left a stack of four octave plots, each lighting up as it enters; for the field, a faint warm-and-blue noise map behind an 11 × 5 grid of Tokens, three of them ringed in ink, blue and dark orange to match their curves.
+- Signature transitions: Cut from random to coherent on the beat; octaves fade in on each bar; the hero Token shrinks into the centre of the field
+- Key techniques: 1D Perlin gradient noise, fBm: octaves at 2× frequency, ½ amplitude, Per-instance offsets into a 2D noise field
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (1D Perlin gradient noise, fBm: octaves at 2× frequency, ½ amplitude, Per-instance offsets into a 2D noise field).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on 1D Perlin gradient noise and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "NOISE", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Seeded permutation and gradient tables, fBm sum with per-octave weights faded in, Canvas 2D: per-frame low-res noise map scaled up, trails resampled from t. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Noise motion-graphics film (Smooth random, octave by octave). Visual style: the Technique Atlas stage; the orange Token with a fading trail of ghosts and its centre path; a scrolling signal graph along the top; on the left a stack of four octave plots, each lighting up as it enters; for the field, a faint warm-and-blue noise map behind an 11 × 5 grid of Tokens, three of them ringed in ink, blue and dark orange to match their curves. Motion: two seconds of white random jitter — a new value every frame, so the Token strobes and its trail scribbles. Then it glides on one slow octave of noise; on each bar a further octave arrives at twice the frequency and half the amplitude, adding tremble on top of drift. Finally a grid of Tokens turns, swells and lifts together as one noise field scrolls through them, neighbours in step, distant ones out of phase. Signature moves: 1d perlin gradient noise, fbm: octaves at 2× frequency, ½ amplitude, per-instance offsets into a 2d noise field; transitions: cut from random to coherent on the beat; octaves fade in on each bar; the hero Token shrinks into the centre of the field. In the tradition of Tron (Disney, 1982) · An Image Synthesizer (Ken Perlin, SIGGRAPH 1985) · After Effects wiggle() expression (Adobe). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "NOISE". Punchy sound design synced to every cut.
+```
+
+## 182 · Feedback
+*Each frame is the last frame, transformed, under the new one · 1960s — · Technique Atlas*
+
+Reference film: `videos/techfeedback.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Feedback** (Each frame is the last frame, transformed, under the new one, 1960s —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Pointing a video camera at the monitor it feeds makes a loop in which every frame contains the last one, scaled, rotated and dimmed by the camera’s framing — the tunnel explored by video artists such as Steina and Woody Vasulka in the late 1960s and early 1970s. The BBC’s Doctor Who titles (from 1963) were built on howl-round feedback, and digital tools turned the loop into a parameter set: a feedback buffer redrawn every frame with a scale, rotation, offset and decay, as in MilkDrop music visualisers and VJ software.
+- Study these reference works: Doctor Who opening titles (Bernard Lodge, BBC, 1963; howl-round feedback) · Steina and Woody Vasulka, video feedback works (The Kitchen, New York, early 1970s) · MilkDrop (Ryan Geiss, Winamp visualiser, 2001)
+- Motion DNA: The Token flies a Lissajous loop at constant pace; everything else is the loop’s echo. Four regimes on the bar lines, each eased in over a quarter-second: no transform leaves plain fading trails, ×1.024 per frame blows them into a tunnel, ×0.975 with −6° a frame (against the Token’s orbit) winds them into an inward spiral, and ×1.03 with −2.2° and an offset sends a drifting vortex out from a shifted vanishing point.
+- Visual DNA: The Technique Atlas stage with a framed monitor on the right; dozens of Token generations fading from orange to blue and back by birth frame, each inked at its edge; dashed rectangles tracing the monitor frame nested inside itself; a left column with the live parameters (scale, rotate, offset, decay, generations) and a loop diagram with a pulse running round it.
+- Signature transitions: Parameter crossfades between feedback regimes; no cuts
+- Key techniques: Frame-to-frame transform, Decay per generation, Closed-form reconstruction
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Frame-to-frame transform, Decay per generation, Closed-form reconstruction).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Frame-to-frame transform and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "FEEDBACK", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Camera pointed at its own monitor (analog howl-round), Feedback buffer in TouchDesigner / MilkDrop / After Effects echo, Canvas 2D: last N generations redrawn under accumulated affine transforms and decays. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Feedback motion-graphics film (Each frame is the last frame, transformed, under the new one). Visual style: the Technique Atlas stage with a framed monitor on the right; dozens of Token generations fading from orange to blue and back by birth frame, each inked at its edge; dashed rectangles tracing the monitor frame nested inside itself; a left column with the live parameters (scale, rotate, offset, decay, generations) and a loop diagram with a pulse running round it. Motion: the Token flies a Lissajous loop at constant pace; everything else is the loop’s echo. Four regimes on the bar lines, each eased in over a quarter-second: no transform leaves plain fading trails, ×1.024 per frame blows them into a tunnel, ×0.975 with −6° a frame (against the Token’s orbit) winds them into an inward spiral, and ×1.03 with −2.2° and an offset sends a drifting vortex out from a shifted vanishing point. Signature moves: frame-to-frame transform, decay per generation, closed-form reconstruction; transitions: parameter crossfades between feedback regimes; no cuts. In the tradition of Doctor Who opening titles (Bernard Lodge, BBC, 1963; howl-round feedback) · Steina and Woody Vasulka, video feedback works (The Kitchen, New York, early 1970s) · MilkDrop (Ryan Geiss, Winamp visualiser, 2001). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FEEDBACK". Punchy sound design synced to every cut.
+```
+
+## 183 · Masking
+*Show a layer only where another shape says so · 1900s — · Technique Atlas*
+
+Reference film: `videos/techmasking.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Masking** (Show a layer only where another shape says so, 1900s —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: In-camera masks — a card in front of the lens, then a matte box exposing one part of the frame at a time — let early filmmakers such as Edwin S. Porter in The Great Train Robbery (1903) combine images; optical printers with travelling mattes made the matte a moving, frame-by-frame element. Digital compositing turned masks into editable bezier shapes with modes, feather and inversion, and desktop compositors such as After Effects made the other trick a one-click layer setting: the track matte, where one layer’s alpha or luminance sets another layer’s opacity.
+- Study these reference works: Un homme de têtes (Georges Méliès, 1898; masked multiple exposures) · The Great Train Robbery (Edwin S. Porter, 1903; matted-in backgrounds) · Catch Me If You Can title sequence (Kuntzel + Deygas, 2002)
+- Motion DNA: The plate never moves except the Token turning slowly; only the masks do. Each mode gets about a bar: two masks slide toward each other and merge, a round hole travels a sine path through a big mask, the edge softens from 0 to 90 px, the mask snaps inside-out and drifts, the word MOTION scales up as an alpha matte, and a bright band sweeps along a luma matte.
+- Visual DNA: The Technique Atlas stage with a hidden ink plate (dashed ghost of its Token and card); mask outlines in orange with square vertices and dashed feather bounds; a mask-stack readout under the tag (mask, mode, feather, inverted); a black-and-white matte inset top right.
+- Signature transitions: Hard cuts between mask modes on the beat; matte changes in place
+- Key techniques: Mask modes: add · subtract, Feather and invert, Alpha and luma track mattes
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Mask modes: add · subtract, Feather and invert, Alpha and luma track mattes).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Mask modes: add · subtract and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "MASKING", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: After Effects masks (Add / Subtract / Feather / Inverted) and track mattes, Nuke Roto + Merge (mask), Shuffle for luma, Canvas 2D: mask canvas applied with destination-in; luma → alpha on a half-res canvas. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Masking motion-graphics film (Show a layer only where another shape says so). Visual style: the Technique Atlas stage with a hidden ink plate (dashed ghost of its Token and card); mask outlines in orange with square vertices and dashed feather bounds; a mask-stack readout under the tag (mask, mode, feather, inverted); a black-and-white matte inset top right. Motion: the plate never moves except the Token turning slowly; only the masks do. Each mode gets about a bar: two masks slide toward each other and merge, a round hole travels a sine path through a big mask, the edge softens from 0 to 90 px, the mask snaps inside-out and drifts, the word MOTION scales up as an alpha matte, and a bright band sweeps along a luma matte. Signature moves: mask modes: add · subtract, feather and invert, alpha and luma track mattes; transitions: hard cuts between mask modes on the beat; matte changes in place. In the tradition of Un homme de têtes (Georges Méliès, 1898; masked multiple exposures) · The Great Train Robbery (Edwin S. Porter, 1903; matted-in backgrounds) · Catch Me If You Can title sequence (Kuntzel + Deygas, 2002). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "MASKING". Punchy sound design synced to every cut.
+```
+
+## 184 · Keying
+*Pull a matte from a colour, then replace it · 1940 — · Technique Atlas*
+
+Reference film: `videos/techkeying.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Keying** (Pull a matte from a colour, then replace it, 1940 —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Blue-screen travelling mattes were pioneered by Larry Butler for The Thief of Bagdad (1940), and Petro Vlahos refined the colour-difference process (and later the Ultimatte electronic keyer) whose idea — the matte is how much the backing colour exceeds the other channels — every digital keyer still uses. Green became the usual backing with digital video sensors, and keying grew its standard controls: clip black and white to clean the matte, and spill suppression to remove backing colour reflected onto the subject.
+- Study these reference works: The Thief of Bagdad (1940; Larry Butler’s blue-screen mattes) · Ben-Hur (1959; Petro Vlahos’s colour-difference blue screen) · Mary Poppins (1964; the sodium-vapour matte process)
+- Motion DNA: The Token drifts slowly left and right on the green screen while the keyer, not the subject, does the moving: one-bar wipes swap RAW for MATTE and MATTE for COMP, the clip values ease over one bar so the grey matte snaps clean, a slow wipe turns despill on across the frame, and two dividers slide in to hold a three-way split the Token crosses.
+- Visual DNA: A 16:9 viewer on the Technique Atlas stage showing a drawn green-screen plate (hot spot, dark corners, a fold, dark tracking crosses, sensor noise, green rim on the orange Token), its black-and-white matte and the composite on the paper-and-grid stage; orange wipe dividers with view chips; a keyer panel on the right with clip values, despill state, formulas and a live transfer curve; a loupe on the Token edge showing the green fringe.
+- Signature transitions: Hard-edged wipes between RAW, MATTE and COMP; a three-way split
+- Key techniques: Colour-difference matte, Clip black / clip white, Spill suppression
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Colour-difference matte, Clip black / clip white, Spill suppression).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Colour-difference matte and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "KEYING", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Ultimatte / Primatte / Keylight colour-difference keyers, Nuke Keylight + IBK, After Effects Keylight with spill suppression, Canvas 2D: per-pixel key on a 640 × 360 canvas (getImageData), scaled 2× into the viewer. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Keying motion-graphics film (Pull a matte from a colour, then replace it). Visual style: a 16:9 viewer on the Technique Atlas stage showing a drawn green-screen plate (hot spot, dark corners, a fold, dark tracking crosses, sensor noise, green rim on the orange Token), its black-and-white matte and the composite on the paper-and-grid stage; orange wipe dividers with view chips; a keyer panel on the right with clip values, despill state, formulas and a live transfer curve; a loupe on the Token edge showing the green fringe. Motion: the Token drifts slowly left and right on the green screen while the keyer, not the subject, does the moving: one-bar wipes swap RAW for MATTE and MATTE for COMP, the clip values ease over one bar so the grey matte snaps clean, a slow wipe turns despill on across the frame, and two dividers slide in to hold a three-way split the Token crosses. Signature moves: colour-difference matte, clip black / clip white, spill suppression; transitions: hard-edged wipes between RAW, MATTE and COMP; a three-way split. In the tradition of The Thief of Bagdad (1940; Larry Butler’s blue-screen mattes) · Ben-Hur (1959; Petro Vlahos’s colour-difference blue screen) · Mary Poppins (1964; the sodium-vapour matte process). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "KEYING". Punchy sound design synced to every cut.
+```
+
+## 185 · Rotoscope
+*Tracing over footage, frame by frame · 1915 — · Technique Atlas*
+
+Reference film: `videos/techrotoscope.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Rotoscope** (Tracing over footage, frame by frame, 1915 —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Max Fleischer patented the rotoscope (filed 1915, granted 1917): a projector threw live-action film one frame at a time onto a glass drawing surface so an animator could trace it, and his brother Dave, filmed in a clown suit, became Koko in the Out of the Inkwell series. Disney traced live reference for Snow White (1937), Ralph Bakshi built whole features on it in the 1970s, and digital roto — Bezier splines keyed frame by frame — became the everyday way to cut mattes in compositing.
+- Study these reference works: Out of the Inkwell (Max and Dave Fleischer, 1918–1929) · The Lord of the Rings (Ralph Bakshi, 1978) · A Scanner Darkly (Richard Linklater, 2006)
+- Motion DNA: All motion comes from the plate: a tumbling hop that lands once a second, sampled at 24 fps. The roto spline snaps to it on every plate frame; the ink drawings snap on every second frame, so the traced animation steps at 12 drawings a second, with the outline trembling as each drawing is redrawn. The motion stays the same while its source fades away.
+- Visual DNA: The Technique Atlas stage with a sheet of animation paper and a peg bar; under it a dim, grainy, vignetted plate with a shaded, motion-blurred Token and a burned-in frame counter. Orange spline with white Bezier handles; ink outlines with a lighter pencil pass, orange and blue onion skins, a drawing number in the corner; a 24-cell frame strip marking the plate frames and the drawings on twos.
+- Signature transitions: Plate to light table (a paper veil), plate fade-out, ink-and-paint fill
+- Key techniques: Reference plate under the paper, Traced on twos with line boil, Roto spline keyed per frame
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Reference plate under the paper, Traced on twos with line boil, Roto spline keyed per frame).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Reference plate under the paper and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "ROTOSCOPE", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Fleischer rotoscope: projector under a glass drawing table, Digital roto: Bezier spline mattes (Silhouette, Nuke, After Effects Roto), Canvas 2D: a 24 fps plate under 12 fps traced outlines with per-drawing boil. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Rotoscope motion-graphics film (Tracing over footage, frame by frame). Visual style: the Technique Atlas stage with a sheet of animation paper and a peg bar; under it a dim, grainy, vignetted plate with a shaded, motion-blurred Token and a burned-in frame counter. Orange spline with white Bezier handles; ink outlines with a lighter pencil pass, orange and blue onion skins, a drawing number in the corner; a 24-cell frame strip marking the plate frames and the drawings on twos. Motion: all motion comes from the plate: a tumbling hop that lands once a second, sampled at 24 fps. The roto spline snaps to it on every plate frame; the ink drawings snap on every second frame, so the traced animation steps at 12 drawings a second, with the outline trembling as each drawing is redrawn. The motion stays the same while its source fades away. Signature moves: reference plate under the paper, traced on twos with line boil, roto spline keyed per frame; transitions: plate to light table (a paper veil), plate fade-out, ink-and-paint fill. In the tradition of Out of the Inkwell (Max and Dave Fleischer, 1918–1929) · The Lord of the Rings (Ralph Bakshi, 1978) · A Scanner Darkly (Richard Linklater, 2006). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "ROTOSCOPE". Punchy sound design synced to every cut.
+```
+
+## 186 · Double Exposure
+*Two exposures, one frame · 1850s — · Technique Atlas*
+
+Reference film: `videos/techdoubleexposure.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Double Exposure** (Two exposures, one frame, 1850s —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Exposing the same plate or frame twice adds the light of both images: whatever was dark in one shows the other. Victorian photographers used it for “spirit” photographs, and Georges Méliès, rewinding his camera and masking parts of the frame, built trick films on it from 1898. In film it became the superimposition and the dissolve; digital compositing turned it into blend modes, where add (linear dodge) and screen reproduce the light-adding of a double exposure and multiply the sandwiching of two transparencies.
+- Study these reference works: The Man with the Rubber Head / L’Homme à la tête en caoutchouc (Georges Méliès, 1901) · The Phantom Carriage / Körkarlen (Victor Sjöström, 1921) · True Detective (HBO, 2014; title sequence by Elastic)
+- Motion DNA: The exposures barely move — a slow drift and sway in each — because the technique is in the combine, not the motion. Every two seconds a new pair is shot on the beat: exposure 1 flashes, exposure 2 half a beat later, and the result develops a beat after that under a new blend mode; the silhouette pass holds for the last three seconds with its texture scrolling inside the Token.
+- Visual DNA: The Technique Atlas stage with three framed panels: exposure 1 and exposure 2 stacked on the left, joined by + and = to a large result. Near-black exposures for add and screen, paper for multiply, a black Token on white for the silhouette; blue light bars and the word MOTION as the second exposure; a mode strip, a crosshair probe with live RGB readouts and the blend formula under the result.
+- Signature transitions: Shutter flash per exposure; the result re-develops under each new blend mode
+- Key techniques: Add · screen · multiply, Dark areas take the other exposure, Silhouette as matte
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Add · screen · multiply, Dark areas take the other exposure, Silhouette as matte).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Add · screen · multiply and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "DOUBLE EXPOSURE", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: In-camera: rewind and re-expose the same frame, Optical printer superimposition / After Effects blend modes (Add, Screen, Multiply), Canvas 2D: globalCompositeOperation lighter, screen and multiply on offscreen exposures. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Double Exposure motion-graphics film (Two exposures, one frame). Visual style: the Technique Atlas stage with three framed panels: exposure 1 and exposure 2 stacked on the left, joined by + and = to a large result. Near-black exposures for add and screen, paper for multiply, a black Token on white for the silhouette; blue light bars and the word MOTION as the second exposure; a mode strip, a crosshair probe with live RGB readouts and the blend formula under the result. Motion: the exposures barely move — a slow drift and sway in each — because the technique is in the combine, not the motion. Every two seconds a new pair is shot on the beat: exposure 1 flashes, exposure 2 half a beat later, and the result develops a beat after that under a new blend mode; the silhouette pass holds for the last three seconds with its texture scrolling inside the Token. Signature moves: add · screen · multiply, dark areas take the other exposure, silhouette as matte; transitions: shutter flash per exposure; the result re-develops under each new blend mode. In the tradition of The Man with the Rubber Head / L’Homme à la tête en caoutchouc (Georges Méliès, 1901) · The Phantom Carriage / Körkarlen (Victor Sjöström, 1921) · True Detective (HBO, 2014; title sequence by Elastic). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DOUBLE EXPOSURE". Punchy sound design synced to every cut.
+```
+
+## 187 · Time Remapping
+*One clip, a new clock · 1890s — · Technique Atlas*
+
+Reference film: `videos/techtimeremap.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Time Remapping** (One clip, a new clock, 1890s —; family: Technique Atlas).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Changing the speed of time on screen is as old as the hand-cranked camera: overcranking gave slow motion, undercranking fast motion, and early filmmakers ran film backwards for reverse. Optical printers could hold frames for a freeze or skip them, and the closing freeze of Truffaut’s The 400 Blows (1959) made the held frame famous. Digital editing turned it into a curve: Adobe After Effects’ Time Remapping maps output time to source time per frame, and speed ramps became a staple of music videos and action films after The Matrix (1999).
+- Study these reference works: The 400 Blows / Les Quatre Cents Coups (François Truffaut, 1959; final freeze frame) · The Matrix (The Wachowskis, 1999) · 300 (Zack Snyder, 2007; speed ramps)
+- Motion DNA: The source clip is an even, regular hop; all the expression comes from the clock. Two seconds at 100%, a one-second ease into 20%, a hard hold at 4.5 s, a cut into −100% reverse at 5.5 s, a ramp through zero up to 250% and a final ease back to 100% — so the same hop reads as floaty, frozen, rewound and frantic.
+- Visual DNA: The Technique Atlas stage with its floor line: the orange Token hopping across a dotted path, six outlined ghosts at fixed output intervals, an ink arrow showing source velocity; a source ruler under the floor with a playhead and source-frame counter; a speed graph and a large speed percentage top right; the remap curve (source time over output time) as the caption graph.
+- Signature transitions: Speed ramps, a hold (freeze frame), a hard cut into reverse
+- Key techniques: Keyed speed integrated to a remap curve, Freeze as a hold, Reverse as negative speed
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Keyed speed integrated to a remap curve, Freeze as a hold, Reverse as negative speed).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Keyed speed integrated to a remap curve and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "TIME REMAPPING", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Over- and undercranked cameras, optical-printer step printing, After Effects Time Remapping / Premiere and Resolve speed ramps, Canvas 2D: keyed speed integrated in setup() into a source-time table. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Time Remapping motion-graphics film (One clip, a new clock). Visual style: the Technique Atlas stage with its floor line: the orange Token hopping across a dotted path, six outlined ghosts at fixed output intervals, an ink arrow showing source velocity; a source ruler under the floor with a playhead and source-frame counter; a speed graph and a large speed percentage top right; the remap curve (source time over output time) as the caption graph. Motion: the source clip is an even, regular hop; all the expression comes from the clock. Two seconds at 100%, a one-second ease into 20%, a hard hold at 4.5 s, a cut into −100% reverse at 5.5 s, a ramp through zero up to 250% and a final ease back to 100% — so the same hop reads as floaty, frozen, rewound and frantic. Signature moves: keyed speed integrated to a remap curve, freeze as a hold, reverse as negative speed; transitions: speed ramps, a hold (freeze frame), a hard cut into reverse. In the tradition of The 400 Blows / Les Quatre Cents Coups (François Truffaut, 1959; final freeze frame) · The Matrix (The Wachowskis, 1999) · 300 (Zack Snyder, 2007; speed ramps). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "TIME REMAPPING". Punchy sound design synced to every cut.
 ```
 
