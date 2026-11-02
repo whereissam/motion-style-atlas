@@ -6009,6 +6009,441 @@ window.ATLAS = {
    "poster": 7.35,
    "video": "media/techtextreveal.mp4",
    "posterImg": "atlas/posters/techtextreveal.jpg"
+  },
+  {
+   "id": "techpush",
+   "family": "K",
+   "name": "Push",
+   "sub": "The new shot shoves the old one out of frame",
+   "era": "1930s —",
+   "origin": "A push (or push-off) moves both pictures at once: the incoming shot enters butted against the outgoing one and drives it out of frame, so one edge separates them for the whole move. Optical printers could produce pushes alongside wipes and flips, and they became a stock pattern of television switchers and digital video effects units in the 1970s and 80s; today Push and Slide sit side by side in every editor’s transition bin, and the same motion is the standard screen-to-screen navigation of mobile interfaces.",
+   "works": "Final Cut Pro Push and Slide transitions (Apple) · Adobe Premiere Pro Push and Split transitions · iOS navigation push between screens (Apple, 2007 —)",
+   "tech": [
+    "Both shots move, edge to edge",
+    "Offsets always sum to one frame",
+    "Slide and split-push variants"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Two pictures locked together at one edge travel as a single strip, so nothing in either shot moves except the strip. Four pushes on four eases — a smooth in-out cubic to the left, a fast-start out-quart upward, a mechanical linear push to the right and a snapping in-out expo downward — then a slide where the old shot holds still under the new one, and a split push whose two bands run in opposite directions.",
+   "visualDNA": "The Technique Atlas stage with a 16:9 viewer framed in ink; seven shots of the Token in orange, ink, blue, accent and paper colourways; the off-frame part of each shot kept as a faded ghost outside the viewer with dashed frame lines; an orange bar on the shared edge; ink and orange offset chips per shot and a sum readout under the viewer; a row of transition chips along the top.",
+   "transitions": "Push left, up, right and down; slide (cover); split push in two opposed bands",
+   "implementation": [
+    "Optical printer / video switcher push patterns",
+    "Premiere Pro Push · Final Cut Slide · After Effects position keys on two layers",
+    "Canvas 2D: both shots translated by u·W and u·W − W, clipped to the viewer"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.4,
+   "video": "media/techpush.mp4",
+   "posterImg": "atlas/posters/techpush.jpg"
+  },
+  {
+   "id": "techglitch",
+   "family": "K",
+   "name": "Glitch",
+   "sub": "Broken signal as a transition: split, shift, tear, quantise",
+   "era": "1990s —",
+   "origin": "Glitch borrows the faults of electronic images — analogue sync tearing, misaligned colour channels, digital compression blocks — and stages them on purpose. Glitch music and art of the 1990s and 2000s made the error an aesthetic, Takeshi Murata’s Monster Movie (2005) pushed datamoshing (deleting the key frames of a compressed video so motion smears one picture into the next) into galleries, and Kanye West’s Welcome to Heartbreak video (2009) took it into the mainstream; editors now hide cuts inside RGB splits and block shifts from preset packs.",
+   "works": "Monster Movie (Takeshi Murata, 2005; datamosh) · Welcome to Heartbreak, Kanye West (dir. Nabil Elderkin, 2009) · Chairlift, Evident Utensil (dir. Ray Tintori, 2009; datamosh)",
+   "tech": [
+    "RGB channel offset",
+    "Seeded slice displacement",
+    "Quantised datamosh hold"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Clean holds, then one bar of breakage per transition: the glitch amount swells and decays across eight sixteenths, jumping to a new seeded value on each one, with the hard cut landing on the beat in the middle where the damage is worst. Four operations arrive one transition at a time — channels split, slices shift, rows tear, blocks freeze and drag — and the last transition stacks all four before the final state settles clean.",
+   "visualDNA": "The Technique Atlas stage with the picture framed in ink at the centre; Token states in orange, ink, blue and paper colourways; red and blue fringes, sideways-shifted bands, torn scanlines and a coarse block mosaic; a left-hand operation stack with live parameters and amount bars; slice and row offset charts on the right aligned to the picture; a sixteenth-note amount strip with the cut under the picture.",
+   "transitions": "Glitch cuts: RGB split, block displacement, scanline tear, quantise hold, then all four stacked",
+   "implementation": [
+    "After Effects / Premiere glitch presets (channel offset, displacement, mosaic)",
+    "Datamosh: dropped I-frames in compressed video (Avidemux)",
+    "Canvas 2D: slice drawImage, multiply + lighter channel split, 48×27 mosaic upscaled"
+   ],
+   "reproducibility": "Procedural with seeded hash noise",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.7,
+   "video": "media/techglitch.mp4",
+   "posterImg": "atlas/posters/techglitch.jpg"
+  },
+  {
+   "id": "techeasing",
+   "family": "K",
+   "name": "Easing",
+   "sub": "Slow out, slow in: the same move, four timings",
+   "era": "1930s —",
+   "origin": "“Slow in and slow out” is one of the twelve principles Disney animators set down and Frank Thomas and Ollie Johnston published in The Illusion of Life (1981): drawings bunch near the keys so a move starts and stops gently, planned on the timing charts animators draw in the margin of each key. Computer animation turned the spacing into curves — Pierre Bézier’s curves (Renault, 1960s) became the handles of every graph editor, Robert Penner’s easing equations (2001) named ease-in, ease-out and ease-in-out in code, and CSS transitions ship the same curves as cubic-bezier() keywords.",
+   "works": "The Illusion of Life: Disney Animation (Frank Thomas and Ollie Johnston, 1981) · The Animator’s Survival Kit (Richard Williams, 2001; timing and spacing charts) · Robert Penner’s Easing Equations (Flash ActionScript, 2001)",
+   "tech": [
+    "Spacing vs timing",
+    "Cubic bezier handles",
+    "Animator’s spacing chart"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Four Tokens leave key A and reach key B at exactly the same moments, so only the spacing differs: the linear one crosses at an even pace, ease-in creeps out and arrives at full speed, ease-out leaves at full speed and creeps in, ease-in-out does both. Three moves, back and forth; between the second and third the handles stretch from quad to cubic so the slow ends get slower and the middle faster; then one large Token steps across a spacing chart, one drawing per sixteenth.",
+   "visualDNA": "The Technique Atlas stage with four lanes between dashed KEY A and KEY B lines; small orange Tokens on thin tracks with rows of frame dots that bunch at the ends; a value/time box per lane with the bezier handles drawn as ink lines and orange knobs and their coordinates; then a classic spacing chart with numbered ticks, a breakdown mark and SLOW OUT / SLOW IN brackets, an even time row fanned onto it, and onion-skin outlines across the track.",
+   "transitions": "Lanes run three moves, handles morph quad to cubic, lanes give way to the spacing chart",
+   "implementation": [
+    "After Effects graph editor / Easy Ease (F9) · keyframe velocity",
+    "CSS transition-timing-function: ease-in, ease-out, ease-in-out, cubic-bezier()",
+    "Canvas 2D: cubic bezier with x solved by bisection, sampled at 8 fps for the spacing dots"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.85,
+   "video": "media/techeasing.mp4",
+   "posterImg": "atlas/posters/techeasing.jpg"
+  },
+  {
+   "id": "techarcs",
+   "family": "K",
+   "name": "Arcs",
+   "sub": "Natural motion travels on curves, not straight lines",
+   "era": "1930s —",
+   "origin": "Arcs are one of the twelve principles of animation that Disney animators Ollie Johnston and Frank Thomas set down in The Illusion of Life (1981), codifying practice from the Disney studio of the 1930s: limbs pivot at joints, so almost every natural movement traces a curve, and in-betweens drawn on a straight line look mechanical. The animator fixes the curve with a breakdown drawing between the keys; Richard Williams’ Animator’s Survival Kit (2001) drills the same habit of plotting the arc and spacing every in-between along it.",
+   "works": "Snow White and the Seven Dwarfs (Disney, 1937) · The Illusion of Life: Disney Animation (Frank Thomas & Ollie Johnston, 1981) · The Animator’s Survival Kit (Richard Williams, 2001)",
+   "tech": [
+    "Breakdown pose off the straight line",
+    "Arc-plotted in-betweens",
+    "Pivot + fixed radius swing"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Two keys and one eased timing, played twice: an ink Token slides the straight chord, then the orange Token, with the same spacing and rotation, rises through a breakdown and lands on the same key along a curve. After a crossfade the Token hangs from a pivot and swings, slow at the extremes and fast through the bottom, its amplitude decaying on every beat-aligned pass.",
+   "visualDNA": "The Technique Atlas stage with dashed key ghosts, a dashed chord and ink spacing dots against an orange arc and dark-orange dots; a breakdown ghost with an accent arrow from the straight middle drawing; then a pivot, an ink rod, a dashed arc guide, a dotted chord, a row of spacing dots and fading onion skins.",
+   "transitions": "Straight pass, breakdown, arc pass, then a crossfade to the swing",
+   "implementation": [
+    "Hand-drawn keys, breakdowns and in-betweens plotted on arc charts",
+    "After Effects motion-path bezier or a parented null as pivot",
+    "Canvas 2D: quadratic through key, breakdown and key; closed-form damped pendulum with onion skins"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5,
+   "video": "media/techarcs.mp4",
+   "posterImg": "atlas/posters/techarcs.jpg"
+  },
+  {
+   "id": "techmotionpath",
+   "family": "K",
+   "name": "Motion Path",
+   "sub": "Where on a bezier, when on a speed graph",
+   "era": "1970s —",
+   "origin": "Keyframe interpolation along curved paths was worked out in early computer animation research; Kochanek and Bartels’ tension-continuity-bias splines (SIGGRAPH 1984) gave animators control over the shape of the path through each key. After Effects (1993) made the split explicit for motion designers: a layer’s position keys carry spatial bezier handles that shape the motion path in the comp, and separate temporal ease, edited in the speed graph, that decides how fast the layer travels along it; Auto-Orient turns the layer to the path tangent.",
+   "works": "Kochanek & Bartels, “Interpolating Splines with Local Tension, Continuity, and Bias Control” (SIGGRAPH, 1984) · Adobe After Effects motion paths, speed graph and Auto-Orient (1993 —) · Adobe Flash motion guides (1997 —)",
+   "tech": [
+    "Spatial bezier handles",
+    "Arc-length parameterisation",
+    "Auto-orient to tangent"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Keys pop on one per beat, the polyline relaxes into a curve as the handles pull out, then the Token runs the path three times: upright at constant speed, turned to the tangent at constant speed, and finally eased, starting slow, rushing through the middle and settling, beside a linear ghost on the same path.",
+   "visualDNA": "The Technique Atlas stage with an ink bezier path, orange key points, handle bars with round ends, spacing dots that reveal speed, a tangent arrow; a boxed speed graph top right with keyframe diamonds and easy-ease hourglasses on a mini timeline.",
+   "transitions": "Build the path, then three passes separated by a fade back to the first key",
+   "implementation": [
+    "After Effects position keyframes with spatial bezier handles, Auto-Orient and the speed graph",
+    "Arc-length lookup table so equal time steps give equal distance",
+    "Canvas 2D: cubic bezier segments, binary-searched distance table, tangent from neighbouring samples"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.75,
+   "video": "media/techmotionpath.mp4",
+   "posterImg": "atlas/posters/techmotionpath.jpg"
+  },
+  {
+   "id": "techpan",
+   "family": "K",
+   "name": "Pan & Tilt",
+   "sub": "The camera turns on a fixed point",
+   "era": "1890s —",
+   "origin": "Panning, short for panorama, arrived when cameras were first mounted on heads that could turn: early actuality films around 1896–1900 swept across crowds and landscapes, and geared and later fluid heads made smooth pans and tilts routine. Because the camera only rotates (ideally about the lens’s nodal point) nothing shows parallax; every object shifts by the same angle, which is why panoramas can be stitched and why a fast pan at 24 frames a second strobes. Cinematographers’ handbooks such as the American Cinematographer Manual give pan-speed tables; the common rule of thumb is that an object should take about seven seconds to cross the frame.",
+   "works": "The Great Train Robbery (Edwin S. Porter, 1903) · Lawrence of Arabia (David Lean, 1962) · American Cinematographer Manual (ASC, pan-speed tables)",
+   "tech": [
+    "Rotation about the nodal point",
+    "Screen shift = focal × angle, depth-free",
+    "Pan speed vs frame rate"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A held frame, a slow eased pan right in which every object slides together and a near Token stays locked over a far one, a beat of rest, then a whip back that steps in held 24 fps frames with a ghost of the last, and after a pause a long eased tilt that drops the Tokens out of frame and lifts MOTION into the centre.",
+   "visualDNA": "The Technique Atlas stage as a wide set: pale Token copies along a far wall with faint posts, the ink far Token behind the orange near Token, MOTION high on the wall; a boxed plan view with a rotating orange view cone and fixed rays, swapped for a side view during the tilt, and a camera readout box with speed, pixels per frame and a seven-second meter.",
+   "transitions": "Pan, whip pan with strobing, plan view crossfades to side view, tilt up and hold",
+   "implementation": [
+    "Fluid or geared head; After Effects one-node camera rotation or 2D position on a panorama",
+    "Every object offset by focal length × camera angle, independent of distance",
+    "Canvas 2D: cylindrical projection; whip pan sampled at 24 fps with the previous frame ghosted"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.4,
+   "video": "media/techpan.mp4",
+   "posterImg": "atlas/posters/techpan.jpg"
+  },
+  {
+   "id": "techwhippan",
+   "family": "K",
+   "name": "Whip Pan",
+   "sub": "A pan so fast it streaks, with the cut hidden inside the blur",
+   "era": "1930s —",
+   "origin": "A whip pan (also swish or flash pan) swings the camera so quickly that the frame dissolves into horizontal streaks. Because a streaked frame shows nothing recognisable, editors learned to join two whip pans at their fastest point so the cut vanishes into the blur, turning a change of place or time into one apparent move. Orson Welles used flash pans in Citizen Kane (1941); Sergio Leone and the New Hollywood leaned on them, and Damien Chazelle built the rhythm of Whiplash (2014) and the climax of La La Land (2016) around whips between players.",
+   "works": "Citizen Kane (Orson Welles, 1941) · Whiplash (Damien Chazelle, 2014) · La La Land (Damien Chazelle, 2016)",
+   "tech": [
+    "sech² angular-velocity pulse, tanh heading",
+    "Shutter-averaged sub-frame samples",
+    "Cut placed at peak ω"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Hold, lunge, hold. A calm shot of the Token, then a 162° swing that peaks at 900°/s for barely a quarter second, landing on the beat on a different set-up with a short operator wobble as the pan is caught. A slowed, frame-by-frame replay steps through the 30 frames of the move, then the whip runs back the other way to the opening shot.",
+   "visualDNA": "The Technique Atlas stage in two set-ups — the Token alone; the Token on a floor with MOTION — and grey light stands in the wings that smear into bands; a heading tape across the top with shot A, shot B and the cut marked; an ω graph with the cut line; a dimension line measuring the streak; a replay strip of blur bars.",
+   "transitions": "Whip out of shot A, hard cut at the fastest frame, whip into shot B; then the reverse whip back to A",
+   "implementation": [
+    "Fluid-head pan by hand, cut on the blur in the edit",
+    "Directional / motion blur over a position keyframe in After Effects",
+    "Canvas 2D: up to 48 shutter samples averaged per frame"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 5.53,
+   "video": "media/techwhippan.mp4",
+   "posterImg": "atlas/posters/techwhippan.jpg"
+  },
+  {
+   "id": "techflocking",
+   "family": "K",
+   "name": "Flocking",
+   "sub": "Three local steering rules, no leader",
+   "era": "1987 —",
+   "origin": "Craig Reynolds introduced boids in “Flocks, Herds, and Schools: A Distributed Behavioral Model” at SIGGRAPH 1987: each agent sees only nearby flockmates and steers by separation, alignment and cohesion, and flocking emerges with nobody choreographing it. The method went straight into film crowds — the bat swarms and penguins of Batman Returns (1992) — and later into dedicated crowd and swarm tools such as Massive and Houdini’s crowd and POP solvers.",
+   "works": "Stanley and Stella in: Breaking the Ice (Symbolics with Whitney / Demos, 1987; Reynolds’ boids) · Batman Returns (Tim Burton, 1992; bat swarms and penguin army) · The Lion King (Disney, 1994; wildebeest stampede)",
+   "tech": [
+    "Neighbour radius 120 px, separation 44 px",
+    "Steering = Σ weighted rule forces, clamped speed",
+    "Predator: flee force inside 320 px"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Disorder becoming order one rule at a time, on the beat: with no rules the Tokens wander and cross; separation spaces them out; alignment turns them into parallel streams; cohesion pulls the streams into flocks that bank together at the walls. A big Token then dives through the flock, which bursts open around it and closes behind; once it leaves, the flock re-forms.",
+   "visualDNA": "The Technique Atlas stage with 120 small orange Tokens, each rotated to its heading and trailing a faint line of its last frames; one inked boid with its dashed neighbour and separation radii, thin links to its neighbours and colour-coded steering arrows; a rule panel with switches; the big predator Token with its flee radius.",
+   "transitions": "Rules switch on at 1.5, 3.0 and 4.5 s; predator in at 6.5 s, breaks off at 8.6 s and leaves frame",
+   "implementation": [
+    "Reynolds steering behaviours (1987)",
+    "Houdini POP / crowd solvers, Massive, Unity and Unreal boids",
+    "Canvas 2D: O(N²) boids precomputed at 60 Hz in setup(), 301 frames interpolated"
+   ],
+   "reproducibility": "Seeded simulation",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.45,
+   "video": "media/techflocking.mp4",
+   "posterImg": "atlas/posters/techflocking.jpg"
+  },
+  {
+   "id": "techik",
+   "family": "K",
+   "name": "Inverse Kinematics",
+   "sub": "Place the tip; the joints are solved",
+   "era": "1980s —",
+   "origin": "Forward kinematics poses a chain joint by joint; inverse kinematics runs the other way, solving the joint angles that put the end of the chain on a goal. The maths came from robotics in the 1970s and 80s, and IK handles reached 3D animation packages by the early 1990s (Softimage was an early champion), along with the two-bone analytic solver still used for arms and legs. Iterative solvers handle longer chains: Cyclic Coordinate Descent (Wang and Chen, 1991) and FABRIK, Forward And Backward Reaching IK, published by Andreas Aristidou and Joan Lasenby in 2011.",
+   "works": "Jurassic Park (Steven Spielberg, 1993; Softimage-animated dinosaurs) · Toy Story (Pixar, 1995) · Duik (Nicolas Dufresne; free IK rigging tools for After Effects character animation)",
+   "tech": [
+    "Two-bone law-of-cosines solve",
+    "Reach limit and bend (pole) flip",
+    "FABRIK forward / backward passes"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "First the slow, fussy way: the shoulder is turned, then the elbow, overshooting and correcting until the tip finds the Token. Then the Token leads and the arm follows instantly — down, out past its reach until it locks straight and points, back in, and a swivel that flips the elbow to the other side without moving the tip. Finally a three-bone arm solves on the beat, one iteration per beat, snapping closer each time, then tracks the Token smoothly.",
+   "visualDNA": "The Technique Atlas stage with a rigging-viewport arm: octahedral bones in paper and ink, ink joint discs, a crosshair end effector and a hatched mount; the orange Token as the goal; orange angle arcs, blue hand-rotation gizmos, a dashed reach circle; dashed ghost chains and an error list for each FABRIK iteration.",
+   "transitions": "FK → two-bone IK at 2.8 s; elbow swivel at 5.25 s; re-rig to three bones and FABRIK at 6.3 s",
+   "implementation": [
+    "Maya IK handles: rotate-plane solver (two-bone) with a pole vector",
+    "FABRIK / CCD chain solvers in Unity, Unreal, Blender",
+    "Canvas 2D: analytic solve per frame; FABRIK iterations precomputed in setup()"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.5,
+   "video": "media/techik.mp4",
+   "posterImg": "atlas/posters/techik.jpg"
+  },
+  {
+   "id": "techpuppetpin",
+   "family": "K",
+   "name": "Puppet Pins",
+   "sub": "Pins on a triangle mesh; the shape bends as rigidly as it can",
+   "era": "2005 —",
+   "origin": "Takeo Igarashi, Tomer Moscovich and John F. Hughes introduced As-Rigid-As-Possible Shape Manipulation at SIGGRAPH 2005: a 2D shape is triangulated, the user drags a few handles, and a least-squares solve keeps every triangle as close as possible to a rotated copy of itself, so the figure bends instead of shearing. Adobe brought the idea to motion designers as the Puppet tools of After Effects CS3 (2007) — Puppet Pin, Starch and Overlap — and to still images as Photoshop CS5’s Puppet Warp (2010). Olga Sorkine and Marc Alexa’s local/global ARAP solver (2007), used here, is the iteration most later tools follow.",
+   "works": "As-Rigid-As-Possible Shape Manipulation (Igarashi, Moscovich & Hughes, SIGGRAPH 2005) · After Effects CS3 Puppet tool (Adobe, 2007) · Photoshop CS5 Puppet Warp (Adobe, 2010)",
+   "tech": [
+    "Triangle mesh over the layer, expanded past its outline",
+    "Local/global ARAP: best rotation per vertex, then one linear solve",
+    "Starch: heavier edge weights in a painted region"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A mesh is laid over the Token in a second, three pins drop on the beat, and one pin is dragged left, right and up on the following beats: the Token leans and arches like a body while its corners and hole keep their shape. A rigid copy beside it cannot reach the pins; a linear blend reaches them but squeezes the hole. With the area around the hole starched, the same drag bends only the lower half. Finally the word MOTION, rigged as one strip, is arched and waved by three pins.",
+   "visualDNA": "The Technique Atlas stage; the orange Token carried on a fine ink wireframe, black pins with yellow centres (the dragged one ringed in orange), dashed drag lines from rest to target, a translucent blue starch patch; two small comparison thumbnails at the right with red pin-error lines; mono phase labels top left.",
+   "transitions": "Triangulate, pin, drag, starch, then a cross-fade from the Token mesh to the word mesh",
+   "implementation": [
+    "After Effects Puppet Pin / Starch tools (mesh expansion, triangle count)",
+    "Sorkine–Alexa local/global ARAP precomputed in setup: dense Cholesky of the pinned Laplacian, 12 warm-started iterations per frame",
+    "Canvas 2D: affine texture-mapped triangles, wireframe and pin overlay"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.7,
+   "video": "media/techpuppetpin.mp4",
+   "posterImg": "atlas/posters/techpuppetpin.jpg"
+  },
+  {
+   "id": "techreaction",
+   "family": "K",
+   "name": "Reaction-Diffusion",
+   "sub": "Two chemicals, feed and kill: Gray–Scott patterns",
+   "era": "1952 —",
+   "origin": "Alan Turing’s The Chemical Basis of Morphogenesis (1952) showed that two diffusing, reacting chemicals can break a uniform field into spots and stripes. Peter Gray and Stephen K. Scott’s autocatalytic reaction model (1983–84) became the favourite system for it after John E. Pearson’s Complex Patterns in a Simple System (Science, 1993) mapped its feed and kill parameters into a zoo of regimes. Greg Turk and, separately, Andrew Witkin and Michael Kass brought reaction-diffusion textures to computer graphics at SIGGRAPH 1991; GPU shaders later made it a live, seedable motion-graphics effect.",
+   "works": "Generating Textures on Arbitrary Surfaces Using Reaction-Diffusion (Greg Turk, SIGGRAPH 1991) · Reaction-Diffusion Textures (Andrew Witkin & Michael Kass, SIGGRAPH 1991) · Complex Patterns in a Simple System (John E. Pearson, Science, 1993)",
+   "tech": [
+    "Gray–Scott: u·v² reaction, feed F, kill k",
+    "Diffusion by a 3 × 3 Laplacian, V at half the rate of U",
+    "Same seed, three (F, k) pairs, three regimes"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing is animated by hand: a dashed outline of the Token is poured into three dishes on the first downbeat and the equations take over. Slowly at first, then faster as more steps run per frame, the outline swells and breaks — into dots that split and pack the dish, into parallel bands that echo the Token’s corners outward, into a branching coral maze. One dish is spotlit every two bars while its point lights up on the F–k map.",
+   "visualDNA": "The Technique Atlas stage; three square dishes of paper-white U and orange V, framed in thin ink; the two equations and a 3 × 3 Laplacian stencil in mono type; a small F–k chart with the saddle-node curve, the three parameter dots and region labels; step counter and mono labels with F and k under each dish.",
+   "transitions": "Continuous growth from one seed; a spotlight moves dish to dish on the bar",
+   "implementation": [
+    "Gray–Scott on three 160 × 160 grids precomputed in setup (5,200 steps, Δt 1, wrap-around)",
+    "Byte frames stored at 15 fps and blended per pixel through a paper → orange colour ramp",
+    "Canvas 2D: per-dish ImageData on small offscreens, scaled up with smoothing"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.2,
+   "video": "media/techreaction.mp4",
+   "posterImg": "atlas/posters/techreaction.jpg"
+  },
+  {
+   "id": "techlsystem",
+   "family": "K",
+   "name": "L-System",
+   "sub": "Rewrite a string, then let a turtle draw it",
+   "era": "1968 —",
+   "origin": "The biologist Aristid Lindenmayer introduced L-systems in 1968 to describe how cells of simple organisms divide: every symbol of a string is rewritten at once by its rule. Alvy Ray Smith drew plants from them in Plants, Fractals, and Formal Languages (SIGGRAPH 1984), and Przemysław Prusinkiewicz gave them the turtle interpretation — F forward, + and − turn, brackets push and pop a branch — used ever since, collected with Lindenmayer in The Algorithmic Beauty of Plants (1990). Procedural tools such as Houdini’s L-system node grow trees, ivy and growth animations the same way.",
+   "works": "Plants, Fractals, and Formal Languages (Alvy Ray Smith, SIGGRAPH 1984) · The Algorithmic Beauty of Plants (Przemysław Prusinkiewicz & Aristid Lindenmayer, Springer, 1990) · L-System node in Houdini (SideFX)",
+   "tech": [
+    "Parallel rewriting: X → F+[[X]-X]-F[-FX]+X, F → FF",
+    "Turtle: F draw, ± turn δ, [ ] push / pop",
+    "Step halves each generation so the skeleton is kept"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Growth by generations on the downbeat: each new string is read left to right by a turtle whose path appears as it goes, so the stem climbs first and every branch flicks out in reading order; the previous generation stays underneath as a ghost the new one traces over. After the fifth generation the branching angle snaps on three beats — narrower, wider, back — and the whole plant re-folds at once, buds and all.",
+   "visualDNA": "The Technique Atlas stage; ink stems thinning with branch depth, small orange Tokens as buds at every X and a few larger accent Tokens as flowers; left, the axiom, the two rules and the angle in mono type, a table of generations with string lengths, and a read-head window that highlights the symbol the turtle is on.",
+   "transitions": "Each generation grows over the ghost of the last; the angle re-sets with a springy overshoot",
+   "implementation": [
+    "String rewriting in setup (generations 0–5, up to several thousand symbols)",
+    "Turtle interpretation every frame with a stack for [ and ], fitted to the stage",
+    "Canvas 2D: stems as strokes by depth, buds as rotated Tokens, mono string read-out"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.6,
+   "video": "media/techlsystem.mp4",
+   "posterImg": "atlas/posters/techlsystem.jpg"
+  },
+  {
+   "id": "techbloom",
+   "family": "K",
+   "name": "Bloom",
+   "sub": "Threshold, blur, add back",
+   "era": "1982 —",
+   "origin": "Bright light spreads in a lens and in film emulsion (halation), so overexposed highlights photograph with a soft halo. Tron (1982) got its glowing circuitry from backlit animation photographed through coloured filters. Real-time graphics rebuilt the look as a post-process — threshold the frame, blur the bright pass, add it back: Masaki Kawase’s GDC 2003 talk on Wreckless described stacking blurs of downsampled buffers, GPU Gems (2004) described the glow of Tron 2.0, and HDR bloom became standard in games from Half-Life 2: Lost Coast (2005) on. After Effects’ Glow effect exposes the same three controls: threshold, radius and intensity.",
+   "works": "Tron (Steven Lisberger, Disney, 1982) · Ico (Team Ico, Sony, 2001) · Tron 2.0 (Monolith Productions, 2003)",
+   "tech": [
+    "Soft-knee threshold",
+    "Blur pyramid · 4 radii",
+    "Additive composite"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing in the picture moves; the pipeline does. An iris opens from the Token into a dark stage, then each pass takes about a bar and a half: the threshold sweeps up until only the hottest rim survives and down until even the word glows, the four blur levels fade in one per half-beat from tight to wide, the sum is added back. Then one parameter at a time — an intensity pulse, a radius squeeze and stretch, a threshold dip — before the iris closes onto paper.",
+   "visualDNA": "The Technique Atlas stage turned into a dark rounded panel (#111216) with a faint grid; the Token in a hotter orange with a white-hot rim around its hole, MOTION in mid grey, a row of five grey lamps from luma 0.2 to 1.0 over a luma axis with an orange threshold marker. Right-hand pipeline thumbnails (source, bright pass on black, a 2×2 pyramid of blurs labelled by radius), three sliders in the top band, white callouts that light up when an element passes the threshold.",
+   "transitions": "Iris from paper into the dark stage and back; cross-fades from pass to pass in the main view",
+   "implementation": [
+    "After Effects Glow (threshold · radius · intensity), Nuke Glow / Bloom",
+    "Game engines: HDR bright pass + downsampled Gaussian or Kawase blur chain, added before tone mapping",
+    "Canvas 2D: bright pass and four filter-blur levels on 320×180 offscreen canvases, drawn back with lighter compositing"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.7,
+   "video": "media/techbloom.mp4",
+   "posterImg": "atlas/posters/techbloom.jpg"
+  },
+  {
+   "id": "techloop",
+   "family": "K",
+   "name": "Seamless Loop",
+   "sub": "The last frame leads back into the first",
+   "era": "1830s —",
+   "origin": "Optical toys of the 1830s — Joseph Plateau’s phenakistiscope (1833) and the zoetrope — could only show cycles: a ring of drawings whose last leads straight back into the first. Hand-drawn animation kept walk and run cycles as a basic economy. Netscape Navigator 2.0 (1995) added a looping extension to the GIF format, making the endless loop a native form of the web; After Effects expressions (version 5.0, 2001) brought loopOut(\"cycle\") and loopOut(\"pingpong\") for repeating keyframes, and cinemagraphs (2011) and looping GIF art made the invisible seam the whole point.",
+   "works": "Phenakistiscope discs (Joseph Plateau, 1833) · The Dancing Baby (1996) · Cinemagraphs (Jamie Beck and Kevin Burg, 2011)",
+   "tech": [
+    "Frame N ≡ frame 0",
+    "Periodic functions sin(2π·t/T)",
+    "Phase offsets · loopOut(\"cycle\")"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Everything runs on one 2-second clock — a bar of the 120 BPM bed — and the film is exactly five of them. The hero bobs on a sine for all ten seconds; a lane eased from left to right snaps back at the seam with a click, then slides on a sine and never snaps again; seven Tokens ripple a seventh of a cycle apart; a hop keyed as one big and one small jump repeats by loopOut. The last frame leads into the first.",
+   "visualDNA": "The Technique Atlas stage: the hero Token bobbing over a soft contact shadow on the left, a cycle ring top-right with an orange progress arc, a frame counter and an ink seam bar at twelve; an inset comparing frame 0 (filled) with frame 60 (dashed) and a Δ readout; a five-cell filmstrip, a lane with key diamonds, mono formulas, a sine row of seven Tokens, and a keyframe graph whose authored cycle is solid and its repeats dashed.",
+   "transitions": "Section cross-fades on the cycle clock; the last section fades back into the first so the film loops",
+   "implementation": [
+    "After Effects loopOut(\"cycle\") / loopOut(\"pingpong\") and time-based sin(2π·time/T) expressions",
+    "Animated GIF / video loops exported with the duplicate end frame dropped",
+    "Canvas 2D: every motion a function of t mod T"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 4.15,
+   "video": "media/techloop.mp4",
+   "posterImg": "atlas/posters/techloop.jpg"
+  },
+  {
+   "id": "techtrimpaths",
+   "family": "K",
+   "name": "Trim Paths",
+   "sub": "Draw a stroke by trimming its start and end",
+   "era": "2007 —",
+   "origin": "Draw-on lines came first as effects that revealed a stroke along a path, such as After Effects’ Stroke and Write-on. Trim Paths arrived with After Effects shape layers in CS3 (2007): an operator that keeps only the part of a path between a start and an end percentage, with an offset that slides the window round and a choice of trimming several paths simultaneously or one after another. On the web the same idea runs on an SVG stroke’s dash array and dash offset, popularised for line-drawing animation around 2013, and Airbnb’s Lottie (2017) carried After Effects trim paths into apps.",
+   "works": "Animated line drawing in SVG (Jake Archibald, 2013) · Lottie (Airbnb, 2017; After Effects trim paths played back in apps) · Lottie (Airbnb, 2017)",
+   "tech": [
+    "Start · end · offset",
+    "Simultaneous vs individual",
+    "Arc-length sampled paths"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The outline draws on over a bar on an in-out ease and the fill drops in on the downbeat; a quarter-length segment then laps the Token twice at constant speed and grows back to a closed line. MOTION draws all nine strokes at once in one row and stroke after stroke in the next, so the same END curve reads as one gesture or as handwriting; six bursts fire on and off with START a fifth of a second behind END, the rows erase by START, and the word draws back on.",
+   "visualDNA": "The Technique Atlas stage: the Token outlined in a thick round-capped ink stroke over its orange fill, faint dotted guides showing each untrimmed path, orange S and E markers at the trimmed ends; MOTION as monoline ink strokes in two rows labelled by mode; orange burst strokes round the Token; a right-hand panel with START, END and OFFSET sliders, the target, its length and visible length in pixels.",
+   "transitions": "Draw-on and draw-off by trim; the offset chase wraps across the path’s start point",
+   "implementation": [
+    "After Effects shape layers: Trim Paths (start, end, offset; simultaneously / individually)",
+    "SVG stroke-dasharray / stroke-dashoffset with getTotalLength(); Lottie trim paths",
+    "Canvas 2D: polylines sampled by arc length, sub-path stroked between start and end"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.2,
+   "video": "media/techtrimpaths.mp4",
+   "posterImg": "atlas/posters/techtrimpaths.jpg"
   }
  ],
  "built": "2026-11-02"
