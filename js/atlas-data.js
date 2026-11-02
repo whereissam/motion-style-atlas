@@ -30,6 +30,7 @@
     'ukiyoe', 'inkwash', 'shadowpuppet', 'dunhuang', 'islamic', 'papelpicado', 'guochao', 'minhwa', 'wycinanki', 'miniature', 'africanpattern', 'mosaic',
     'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast', 'vj', 'saas', 'broadcast', 'launch', 'reels', 'explainer', 'corpmemphis',
     'techmorph', 'techwipe', 'techsmear', 'techelastic', 'techbounce', 'techanticipation', 'techorbit', 'techparallax', 'techcrashzoom', 'techcloth', 'techrigidbody', 'techdestruction', 'techinstancing', 'techrecursion', 'techfields',
+    'techmatchcut', 'techdisplace', 'techovershoot', 'techstagger', 'techdolly', 'techinfinitezoom', 'techfluid', 'techsoftbody', 'technoise', 'techfeedback', 'techmasking', 'techkeying', 'techrotoscope', 'techdoubleexposure', 'techtimeremap',
   ];
 
   // Curated best-of reel: a representative spread across every family.
