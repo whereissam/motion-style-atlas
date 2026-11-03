@@ -1,6 +1,6 @@
 # Motion Style Atlas: Regeneration Prompts
 
-Each of the 262 styles below has two prompts:
+Each of the 277 styles below has two prompts:
 
 - **Build prompt**: a full director's brief. Give it to Claude or another coding model to make a procedural 10-second film (Canvas/WebGL + Web Audio), or hand it to a motion designer as a creative brief.
 - **Video-model prompt**: a short descriptive prompt for text-to-video tools.
@@ -10223,5 +10223,590 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 ### Video-model prompt (Sora / Runway / Kling / Veo)
 ```text
 10-second Manifesto motion-graphics film (What the brand believes, one line at a time). Visual style: near-black ground, warm off-white Archivo Black type, the brand orange for the key words, the emblem and the brand line; one line of outline type for the held idea; full-frame orange and paper flashes during the build. A small VO track bottom-right shows the script with each word dotted on the 10 s beat grid. Motion: the voice sets the clock: a word on every beat at 120 BPM, each line one idea. WE BELIEVE rises quietly; IN THINGS THAT MOVE slams in word by word and MOVE. kicks sideways; STILL IS SAFE. is set in outline and held dead still on purpose; MOTION sweeps in at full width; then the build doubles the rate to the half-beat, flashing the ground with each word, and FIRST. zooms through the lens. A cut to black and silence, then the sign-off: the Token draws on and fills on the beat, the wordmark tracks in, the brand line follows the voice. Signature moves: one idea per line, vo-led rhythm: a word per beat, build, silence, sign-off; transitions: hard cuts line to line on the beat; slam-ins, a sideways kick, a sweep-on; full-frame colour flashes; a zoom-through into a cut to black. In the tradition of Apple, “Think Different” — Here’s to the Crazy Ones (TBWA\Chiat\Day, 1997) · Nike, “Just Do It” campaign films (Wieden+Kennedy, 1988 —) · Levi’s, “Go Forth” (Wieden+Kennedy, 2009). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "MANIFESTO". Punchy sound design synced to every cut.
+```
+
+## 263 · Post-credits Sting
+*Wait, then tease the sequel · 1979 — · Narrative Formats*
+
+Reference film: `videos/formatsting.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Post-credits Sting** (Wait, then tease the sequel, 1979 —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: A scene after the end credits began as a joke for whoever stayed: The Muppet Movie (1979) ends with Animal shouting “Go home!”, Airplane! (1980) returns to the passenger abandoned in the taxi, and Ferris Bueller’s Day Off (1986) sends its audience home in person. Iron Man (2008) turned it into marketing: Nick Fury after the crawl, announcing a shared universe, and Marvel Studios made the mid-credits scene (cut into the crawl) and the post-credits scene (after its last line) routine — The Avengers (2012) has both. The promise card is older: the early Bond films closed on “James Bond will return”.
+- Study these reference works: The Muppet Movie (1979) · Iron Man (2008; Nick Fury) · The Avengers (2012; mid- and post-credits)
+- Motion DNA: The crawl at a constant 260 px/s until the legal line stops and holds; a hard cut to black at 2.2 s; 2.8 s of silence in which the house empties seat by seat; at 5.0 s a low rumble and three cracks of light on accelerating hits, a slow push-in while something rises; the reveal hit at 7.4 s, a single held silhouette, a hard cut at 8.2 s; the promise card fades up in two lines.
+- Visual DNA: Black throughout. Cream credits in Archivo with a mono legal line; a diagram of the house as rows of seats, the stayers lit orange; a dark floor with a glowing orange crack, dust in the beam, a second Token mirrored in ink-black with a glowing hole and an orange rim; THE TOKEN / WILL RETURN in wide-tracked cream and orange. A mid- vs post-credits map top right.
+- Signature transitions: Hard cut from the held legal line to black; hard cut out of the reveal; the promise card fades up
+- Key techniques: Post-credits: only after the last line of the crawl, A held beat of black and silence first, The tease withholds: one image, no answer, a promise card
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Post-credits: only after the last line of the crawl, A held beat of black and silence first, The tease withholds: one image, no answer, a promise card).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Post-credits: only after the last line of the crawl and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "POST-CREDITS STING", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Editorial: the scene appended after the crawl, after a black hold, Sound: true silence for the wait, a hard sound cut with the picture, Canvas 2D: crawl table, seat diagram with seeded leave times, clipped silhouette over a procedural light crack. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Post-credits Sting motion-graphics film (Wait, then tease the sequel). Visual style: black throughout. Cream credits in Archivo with a mono legal line; a diagram of the house as rows of seats, the stayers lit orange; a dark floor with a glowing orange crack, dust in the beam, a second Token mirrored in ink-black with a glowing hole and an orange rim; THE TOKEN / WILL RETURN in wide-tracked cream and orange. A mid- vs post-credits map top right. Motion: the crawl at a constant 260 px/s until the legal line stops and holds; a hard cut to black at 2.2 s; 2.8 s of silence in which the house empties seat by seat; at 5.0 s a low rumble and three cracks of light on accelerating hits, a slow push-in while something rises; the reveal hit at 7.4 s, a single held silhouette, a hard cut at 8.2 s; the promise card fades up in two lines. Signature moves: post-credits: only after the last line of the crawl, a held beat of black and silence first, the tease withholds: one image, no answer, a promise card; transitions: hard cut from the held legal line to black; hard cut out of the reveal; the promise card fades up. In the tradition of The Muppet Movie (1979) · Iron Man (2008; Nick Fury) · The Avengers (2012; mid- and post-credits). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "POST-CREDITS STING". Punchy sound design synced to every cut.
+```
+
+## 264 · "Next Week On" Promo
+*Fragments, questions, no answers · 1960s — · Narrative Formats*
+
+Reference film: `videos/formatnextweek.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **"Next Week On" Promo** (Fragments, questions, no answers, 1960s —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Episodic television has always sold the next episode at the end of this one. US network series closed on scenes from next week’s episode for decades, and serialised drama sharpened the form into a montage of very short fragments cut out of order, questions supered or voiced over them, a cut to black before anything lands, and the airdate and time slot — “9/8c”, nine Eastern, eight Central. Anime made it a ritual: the narrated next-episode previews of Dragon Ball Z (1989–96) and Neon Genesis Evangelion (1995–96), whose previews often misled on purpose; Lost (ABC, 2004–10) leaned on its promos to keep its mysteries open.
+- Study these reference works: Dragon Ball Z (1989–96; “Next time on…”) · Neon Genesis Evangelion (1995–96; next-episode previews) · Lost (ABC, 2004–10)
+- Motion DNA: A 0.9 s orange slate; ten fragments from 0.3 to 0.85 s, every cut on a hit with a white frame; four questions supered over them; the last shot runs longest — a run-up and a leap — and cuts to black at the top of the arc at 7.3 s with the sound; half a second of black; the airdate card lands at 7.8 s with a three-note network sting.
+- Visual DNA: Next week in full colour, unlike the recap’s drained past: the paper stage lit blue, red, amber; a second Token in ink-blue; a box with a question mark whose contents we never see. Bold cream questions on black bands. HUD panels: each fragment’s length against a one-second bar, a questions-raised / answered tally, a scene map plotting the fragments out of order. Airdate card in ink and orange on paper.
+- Signature transitions: Hard cuts with one white frame; a cut to black mid-action; a chevron wipe onto the airdate card
+- Key techniques: Fragments under a second, cut out of story order, Questions raised, never answered, Cut to black mid-action, then airdate + time slot
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Fragments under a second, cut out of story order, Questions raised, never answered, Cut to black mid-action, then airdate + time slot).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Fragments under a second, cut out of story order and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title ""NEXT WEEK ON" PROMO", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Editorial: a promo cut from next week’s dailies or locked cut, Questions as supers or VO; the airdate from the network’s promo package, Canvas 2D: a fragment list with scene numbers; HUD computed from the list. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second "Next Week On" Promo motion-graphics film (Fragments, questions, no answers). Visual style: next week in full colour, unlike the recap’s drained past: the paper stage lit blue, red, amber; a second Token in ink-blue; a box with a question mark whose contents we never see. Bold cream questions on black bands. HUD panels: each fragment’s length against a one-second bar, a questions-raised / answered tally, a scene map plotting the fragments out of order. Airdate card in ink and orange on paper. Motion: a 0.9 s orange slate; ten fragments from 0.3 to 0.85 s, every cut on a hit with a white frame; four questions supered over them; the last shot runs longest — a run-up and a leap — and cuts to black at the top of the arc at 7.3 s with the sound; half a second of black; the airdate card lands at 7.8 s with a three-note network sting. Signature moves: fragments under a second, cut out of story order, questions raised, never answered, cut to black mid-action, then airdate + time slot; transitions: hard cuts with one white frame; a cut to black mid-action; a chevron wipe onto the airdate card. In the tradition of Dragon Ball Z (1989–96; “Next time on…”) · Neon Genesis Evangelion (1995–96; next-episode previews) · Lost (ABC, 2004–10). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading ""NEXT WEEK ON" PROMO". Punchy sound design synced to every cut.
+```
+
+## 265 · Ad-break Bumper
+*We’ll be right back · now back to · 1950s — · Narrative Formats*
+
+Reference film: `videos/formatbumper.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Ad-break Bumper** (We’ll be right back · now back to, 1950s —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Commercial television split its programmes into acts around advertising from the start, and short station or programme idents either side of the break — bumpers — marked where the show stopped and resumed. In the US the FCC’s 1974 policy on children’s television required a separation device around the ads in children’s programmes, which made bumpers a fixture of Saturday-morning cartoons; Japanese anime has its own version in the mid-episode eyecatch. Cartoon Network’s and Adult Swim’s bumps from the late 1990s and 2000s turned the form into a showcase. Writers end each act on a hook — the act out — and the act in often repeats its last beat.
+- Study these reference works: Saturday-morning cartoon bumpers (US, 1970s–90s) · Cowboy Bebop (1998; eyecatches) · Adult Swim bumps (2001 —)
+- Motion DNA: The act runs to a freeze at 1.25 s and dips to black; the out-bumper wipes in at 1.6 s, its logo loop on half-second beats, ending on an unresolved chord; the break runs compressed ×35, five spots in 3.4 s, each with its own jingle and a black frame between; the in-bumper at 6.4 s plays the same loop and resolves; the act in at 7.8 s replays the teeter and goes on — the catch lands at about 9.15 s.
+- Visual DNA: The show on the paper stage: an ink table, a blue cube tipping off its edge, the orange Token. Bumpers as full-bleed orange (out) and blue (in) cards with MOTION and the hopping Token. The break in master-control grey: a monitor with generic spots, the pod as a slot timeline with :15 / :30 labels, a big mono break clock. A rundown of the half hour top right, a translucent logo bug bottom right.
+- Signature transitions: Freeze and dip to black out of the act; hard wipes in and out of the bumpers; a black frame between spots; a straight cut back into the act
+- Key techniques: Act out on a hook, dip to black, Out- and in-bumper: logo, one line, a short loop, Act in repeats the last beat; logo bug on
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Act out on a hook, dip to black, Out- and in-bumper: logo, one line, a short loop, Act in repeats the last beat; logo bug on).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Act out on a hook, dip to black and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "AD-BREAK BUMPER", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Network presentation package: bumpers, logo bug, break format, Playout automation inserts the pod between the bumpers, Canvas 2D: one show rig driven by story time, a pod table driving monitor, timeline and clock. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Ad-break Bumper motion-graphics film (We’ll be right back · now back to). Visual style: the show on the paper stage: an ink table, a blue cube tipping off its edge, the orange Token. Bumpers as full-bleed orange (out) and blue (in) cards with MOTION and the hopping Token. The break in master-control grey: a monitor with generic spots, the pod as a slot timeline with :15 / :30 labels, a big mono break clock. A rundown of the half hour top right, a translucent logo bug bottom right. Motion: the act runs to a freeze at 1.25 s and dips to black; the out-bumper wipes in at 1.6 s, its logo loop on half-second beats, ending on an unresolved chord; the break runs compressed ×35, five spots in 3.4 s, each with its own jingle and a black frame between; the in-bumper at 6.4 s plays the same loop and resolves; the act in at 7.8 s replays the teeter and goes on — the catch lands at about 9.15 s. Signature moves: act out on a hook, dip to black, out- and in-bumper: logo, one line, a short loop, act in repeats the last beat; logo bug on; transitions: freeze and dip to black out of the act; hard wipes in and out of the bumpers; a black frame between spots; a straight cut back into the act. In the tradition of Saturday-morning cartoon bumpers (US, 1970s–90s) · Cowboy Bebop (1998; eyecatches) · Adult Swim bumps (2001 —). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "AD-BREAK BUMPER". Punchy sound design synced to every cut.
+```
+
+## 266 · Talking-head Interview
+*Thirds, eyeline, two cameras, super, B-roll · 1960s — · Narrative Formats*
+
+Reference film: `videos/formatinterview.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Talking-head Interview** (Thirds, eyeline, two cameras, super, B-roll, 1960s —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Documentary interviews on camera became common once sync-sound 16 mm rigs arrived around 1960, and their grammar settled over the next decades: the subject off-centre on the thirds with lead room, looking at an interviewer sitting just beside the lens rather than into it, a name super on first appearance, and B-roll laid over the edits in the answer. Errol Morris inverted the eyeline with the Interrotron for The Thin Blue Line (1988) and Fast, Cheap & Out of Control (1997), so his subjects look straight down the lens; a second camera for a wide and a close on the same answer became routine in the 2000s, and Ken Burns’ The Civil War (1990) made the slow push into archive stills a byword.
+- Study these reference works: The Civil War (Ken Burns, PBS, 1990) · The Thin Blue Line (Errol Morris, 1988) · The Last Dance (ESPN / Netflix, 2020)
+- Motion DNA: Locked-off shots that cut only on pauses in the voice: A-cam wide for 1.8 s, B-cam close with the lower third wiping on at 2.1 s and holding 1.9 s, a B-roll cutaway at 4.2 s with a slow Ken Burns push while the answer continues — a jump cut at 5.0 s hidden underneath — back to the wide at 5.8 s, then a pull quote whose words light up as they are spoken from 7.8 s. The Token barely moves: small pulses on the syllables.
+- Visual DNA: A dim, warm interview set — bookshelf, practical lamp, string lights as bokeh, a stool — with the orange Token on the left third. Dashed thirds, an orange eyeline running out of frame right, a lead-room bracket; a dark plan view of subject, interviewer and the two camera cones with a red tally; an NLE-style edit with V2, V1 and an unbroken A1 waveform. Sepia archive photo for the B-roll; cream Archivo pull quote with an orange opening quote mark.
+- Signature transitions: Straight cuts on pauses between camera angles; cut to B-roll and back; cut to the pull-quote card
+- Key techniques: Subject on the third, lead room, eyeline just off-lens, Two cameras: wide ↔ close on the same answer, Lower-third super; B-roll laid over the edits
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Subject on the third, lead room, eyeline just off-lens, Two cameras: wide ↔ close on the same answer, Lower-third super; B-roll laid over the edits).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Subject on the third, lead room, eyeline just off-lens and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "TALKING-HEAD INTERVIEW", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Two cameras rolling on the same take, synced by timecode, Edit in an NLE: B-roll on V2 over cuts in the A1 dialogue, Canvas 2D: one set drawn through two virtual cameras with parallax. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Talking-head Interview motion-graphics film (Thirds, eyeline, two cameras, super, B-roll). Visual style: a dim, warm interview set — bookshelf, practical lamp, string lights as bokeh, a stool — with the orange Token on the left third. Dashed thirds, an orange eyeline running out of frame right, a lead-room bracket; a dark plan view of subject, interviewer and the two camera cones with a red tally; an NLE-style edit with V2, V1 and an unbroken A1 waveform. Sepia archive photo for the B-roll; cream Archivo pull quote with an orange opening quote mark. Motion: locked-off shots that cut only on pauses in the voice: A-cam wide for 1.8 s, B-cam close with the lower third wiping on at 2.1 s and holding 1.9 s, a B-roll cutaway at 4.2 s with a slow Ken Burns push while the answer continues — a jump cut at 5.0 s hidden underneath — back to the wide at 5.8 s, then a pull quote whose words light up as they are spoken from 7.8 s. The Token barely moves: small pulses on the syllables. Signature moves: subject on the third, lead room, eyeline just off-lens, two cameras: wide ↔ close on the same answer, lower-third super; b-roll laid over the edits; transitions: straight cuts on pauses between camera angles; cut to B-roll and back; cut to the pull-quote card. In the tradition of The Civil War (Ken Burns, PBS, 1990) · The Thin Blue Line (Errol Morris, 1988) · The Last Dance (ESPN / Netflix, 2020). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "TALKING-HEAD INTERVIEW". Punchy sound design synced to every cut.
+```
+
+## 267 · Testimonial Ad
+*A real customer’s story, then the proof · 1890s — · on TV 1950s — · Narrative Formats*
+
+Reference film: `videos/formattestimonial.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Testimonial Ad** (A real customer’s story, then the proof, 1890s — · on TV 1950s —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Testimonials are as old as advertising — Victorian patent-medicine ads ran letters from grateful users, and in the 1920s J. Walter Thompson’s Pond’s campaign paid society women to endorse cold cream. Television made the ‘real people, not actors’ spot a genre: hidden-camera taste tests such as Folgers’ ‘we secretly replaced…’ (from the late 1970s) let ordinary customers tell it in their own words. The rules came with it: the US FTC’s Endorsement Guides (1980; revised 2009, 2023) require that a customer’s results be typical or that what is typical be disclosed, and that paid endorsements be labelled — hence the small print.
+- Study these reference works: Pond’s cold cream endorsements (J. Walter Thompson, 1920s) · Folgers ‘secretly replaced’ campaign (from 1970s) · Dove ‘Real Beauty’ (Ogilvy & Mather, 2004 —)
+- Motion DNA: Opens cold on the strongest line held 1.2 s; then three captioned answers of about two seconds each — problem, the moment, the result with a count-up to 3× — while the customer sits still and only pulses as they speak; at 7.2 s a hard cut to a review wall where six cards pop in 0.12 s apart and five stars fill; at 8.6 s the voice switches to the brand: lockup, a pulsing CTA pill and the fine print.
+- Visual DNA: The paper stage dressed as a living room — window light, a sofa, a blue cushion — with the orange Token as the customer on the right; ink-plated, centred burned-in captions; an ink REAL CUSTOMER pill; left-hand cards for the before work (a grey, stepped square), a phone with the app and a friend’s blue message, and a huge orange 3.0×. White review cards with coloured Tokens and orange stars; a VOICE switch, mono annotations and grey small print.
+- Signature transitions: Hard cuts between the hook card, the interview, the review wall and the end card; cross-fades between the left-hand cards
+- Key techniques: The customer’s voice: problem → moment → result, REAL CUSTOMER super, burned-in captions, Social proof, then CTA and the disclaimer
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (The customer’s voice: problem → moment → result, REAL CUSTOMER super, burned-in captions, Social proof, then CTA and the disclaimer).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on The customer’s voice: problem → moment → result and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "TESTIMONIAL AD", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Customer interview filmed unscripted, cut down to problem / moment / result, Burned-in captions for sound-off feeds; claims checked against the FTC guides, Canvas 2D: one room set, caption plates measured per line, staggered card pops. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Testimonial Ad motion-graphics film (A real customer’s story, then the proof). Visual style: the paper stage dressed as a living room — window light, a sofa, a blue cushion — with the orange Token as the customer on the right; ink-plated, centred burned-in captions; an ink REAL CUSTOMER pill; left-hand cards for the before work (a grey, stepped square), a phone with the app and a friend’s blue message, and a huge orange 3.0×. White review cards with coloured Tokens and orange stars; a VOICE switch, mono annotations and grey small print. Motion: opens cold on the strongest line held 1.2 s; then three captioned answers of about two seconds each — problem, the moment, the result with a count-up to 3× — while the customer sits still and only pulses as they speak; at 7.2 s a hard cut to a review wall where six cards pop in 0.12 s apart and five stars fill; at 8.6 s the voice switches to the brand: lockup, a pulsing CTA pill and the fine print. Signature moves: the customer’s voice: problem → moment → result, real customer super, burned-in captions, social proof, then cta and the disclaimer; transitions: hard cuts between the hook card, the interview, the review wall and the end card; cross-fades between the left-hand cards. In the tradition of Pond’s cold cream endorsements (J. Walter Thompson, 1920s) · Folgers ‘secretly replaced’ campaign (from 1970s) · Dove ‘Real Beauty’ (Ogilvy & Mather, 2004 —). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "TESTIMONIAL AD". Punchy sound design synced to every cut.
+```
+
+## 268 · Unboxing
+*Overhead, slow before the reveal, knolled contents · 2006 — · Narrative Formats*
+
+Reference film: `videos/formatunboxing.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Unboxing** (Overhead, slow before the reveal, knolled contents, 2006 —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Unboxing videos grew up on YouTube in the mid-2000s with gadget launches — fans filmed themselves opening the first iPhone in June 2007 — and by 2010 ‘unboxing’ was a search category of its own. The grammar is consistent: an overhead or over-the-shoulder camera, the sealed box shown first, the tape cut and the layers removed one by one, a deliberately slow last layer before the product, then the contents laid out and a first-impression verdict. Brands answered with packaging designed to be filmed — Apple’s nested boxes and pull tabs — and the laid-out contents borrow knolling, Andrew Kromelow’s 1987 habit at Frank Gehry’s furniture shop of arranging tools at right angles, popularised by Tom Sachs.
+- Study these reference works: iPhone launch unboxings (YouTube, June 2007) · Unbox Therapy (Lewis Hilsenteger, 2010 —) · Tom Sachs, ‘Ten Bullets’ (2010; ‘Always be knolling’)
+- Motion DNA: Action gets shorter then stops: the box drops with a thud, the tape cut runs 0.8 s, the flaps 0.75 s, the lid lifts off in 0.5 s — then the sticker and two tissue sheets take 1.55 s on a slow ease with the music pulled out. The reveal at 5.45 s is a hit, a shine sweep and a 10 % push-in; the box slides aside and five items fly to their knolled spots, alternate hands, one every 0.38 s; the verdict card stamps down at 8.9 s and the Token hops.
+- Visual DNA: Top-down light-oak desk; a kraft shipping box with a white label, barcode, red FRAGILE and this-side-up arrows; an off-white inner box with MOTION on the lid, white tissue sealed with an orange sticker, black foam cradling the orange Token. Simple-shape hands with navy sleeves and soft drop shadows. Knolled contents — wordmark card, orange quick-start booklet, sticker sheet, easing card — with dashed alignment guides and gap dimensions.
+- Signature transitions: One continuous overhead take; a push-in on the reveal and back out for the layout
+- Key techniques: Overhead locked-off camera, hands in frame, Each layer slower; the last layer before the reveal slowest, Knolled contents and a first-impression verdict
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Overhead locked-off camera, hands in frame, Each layer slower; the last layer before the reveal slowest, Knolled contents and a first-impression verdict).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Overhead locked-off camera, hands in frame and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "UNBOXING", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Overhead rig (camera on a C-stand arm or copy stand) and diffused top light, Real-time capture with a slowed reveal; knolling laid out by hand on a grid, Canvas 2D: fold transforms for flaps and tissue, keyed hand tracks, a pace curve in the caption. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Unboxing motion-graphics film (Overhead, slow before the reveal, knolled contents). Visual style: top-down light-oak desk; a kraft shipping box with a white label, barcode, red FRAGILE and this-side-up arrows; an off-white inner box with MOTION on the lid, white tissue sealed with an orange sticker, black foam cradling the orange Token. Simple-shape hands with navy sleeves and soft drop shadows. Knolled contents — wordmark card, orange quick-start booklet, sticker sheet, easing card — with dashed alignment guides and gap dimensions. Motion: action gets shorter then stops: the box drops with a thud, the tape cut runs 0.8 s, the flaps 0.75 s, the lid lifts off in 0.5 s — then the sticker and two tissue sheets take 1.55 s on a slow ease with the music pulled out. The reveal at 5.45 s is a hit, a shine sweep and a 10 % push-in; the box slides aside and five items fly to their knolled spots, alternate hands, one every 0.38 s; the verdict card stamps down at 8.9 s and the Token hops. Signature moves: overhead locked-off camera, hands in frame, each layer slower; the last layer before the reveal slowest, knolled contents and a first-impression verdict; transitions: one continuous overhead take; a push-in on the reveal and back out for the layout. In the tradition of iPhone launch unboxings (YouTube, June 2007) · Unbox Therapy (Lewis Hilsenteger, 2010 —) · Tom Sachs, ‘Ten Bullets’ (2010; ‘Always be knolling’). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "UNBOXING". Punchy sound design synced to every cut.
+```
+
+## 269 · Skippable Pre-roll
+*Brand before the skip, a payoff for stayers · 2010 — · Narrative Formats*
+
+Reference film: `videos/formatpreroll.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Skippable Pre-roll** (Brand before the skip, a payoff for stayers, 2010 —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Pre-roll — the video ad that plays before the clip a viewer chose — spread with online video in the late 2000s. In 2010 YouTube introduced TrueView in-stream ads, which can be skipped after five seconds and which the advertiser pays for only when the viewer watches 30 seconds (or the whole of a shorter ad) or clicks. The skip line rewrote the structure of the spot: brand and hook front-loaded into the five unskippable seconds, the rest written as a reward for the people who stay. GEICO’s “Unskippable” (The Martin Agency, 2015) made the whole ad fit before the button and won the Film Grand Prix at Cannes Lions.
+- Study these reference works: GEICO “Unskippable” (The Martin Agency, 2015) · YouTube TrueView in-stream ads (2010 —) · Google’s ABCD guidelines for YouTube ads (Attract, Brand, Connect, Direct)
+- Motion DNA: No fade in: frame one already holds the MOTION wordmark as the Token slams down beside it; the lockup shrinks to a brand bug at 1.5 s and the Token hops the one-line pitch on the beat while the skip box counts 5-4-3-2-1; at 5 s it pops into SKIP AD, the audience grid empties, a cursor hovers… and leaves; ‘Still here?’, then a ring of Tokens orbits and collapses into one big Token for the stayers; the end card lands at 8.5 s with the offer and LEARN MORE.
+- Visual DNA: A dark video-player frame on the paper stage: the ad inside on the Technique Atlas ground, with a bottom scrim, white transport icons, a yellow ad progress bar, a black ‘Ad · 0:07’ pill and the classic skip box with a thumbnail. An orange dashed skip line on the progress bar. To the right a 10 × 10 grid of viewer icons that greys out at the skip line and turns orange for the stayers.
+- Signature transitions: Lockup shrinks into a brand bug; hard cuts inside the ad on the skip line and into the payoff; skip box pops from countdown to button; the end card scales in
+- Key techniques: Brand and the whole pitch inside the unskippable 5 s, The player is the frame: Ad badge, yellow bar, skip box, Second half written as a payoff for stayers
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Brand and the whole pitch inside the unskippable 5 s, The player is the frame: Ad badge, yellow bar, skip box, Second half written as a payoff for stayers).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Brand and the whole pitch inside the unskippable 5 s and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "SKIPPABLE PRE-ROLL", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Edit to the platform’s skip point: brand in shot 1, message complete by 0:05, Second half cut as a reward cut-down; CTA overlay and end screen in the ad platform, Canvas 2D: the ad drawn on a virtual 1920 × 1080 frame scaled into a player mock. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Skippable Pre-roll motion-graphics film (Brand before the skip, a payoff for stayers). Visual style: a dark video-player frame on the paper stage: the ad inside on the Technique Atlas ground, with a bottom scrim, white transport icons, a yellow ad progress bar, a black ‘Ad · 0:07’ pill and the classic skip box with a thumbnail. An orange dashed skip line on the progress bar. To the right a 10 × 10 grid of viewer icons that greys out at the skip line and turns orange for the stayers. Motion: no fade in: frame one already holds the MOTION wordmark as the Token slams down beside it; the lockup shrinks to a brand bug at 1.5 s and the Token hops the one-line pitch on the beat while the skip box counts 5-4-3-2-1; at 5 s it pops into SKIP AD, the audience grid empties, a cursor hovers… and leaves; ‘Still here?’, then a ring of Tokens orbits and collapses into one big Token for the stayers; the end card lands at 8.5 s with the offer and LEARN MORE. Signature moves: brand and the whole pitch inside the unskippable 5 s, the player is the frame: ad badge, yellow bar, skip box, second half written as a payoff for stayers; transitions: lockup shrinks into a brand bug; hard cuts inside the ad on the skip line and into the payoff; skip box pops from countdown to button; the end card scales in. In the tradition of GEICO “Unskippable” (The Martin Agency, 2015) · YouTube TrueView in-stream ads (2010 —) · Google’s ABCD guidelines for YouTube ads (Attract, Brand, Connect, Direct). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SKIPPABLE PRE-ROLL". Punchy sound design synced to every cut.
+```
+
+## 270 · Sale Countdown
+*Offer, anchor price, scarcity, deadline, CTA · 1900s — · online 2000s — · Narrative Formats*
+
+Reference film: `videos/formatsale.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Sale Countdown** (Offer, anchor price, scarcity, deadline, CTA, 1900s — · online 2000s —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Sale advertising is as old as the department store, and its devices have names. The struck-through original price is an anchor — Tversky and Kahneman described anchoring in 1974 — and limited stock and a closing deadline are the scarcity principle Robert Cialdini set out in Influence (1984). E-commerce made both live: deal-a-day sites such as Woot (2004) and Amazon’s Lightning Deals put a ticking clock and a claimed-stock bar beside the price, and shopping events such as Black Friday and Amazon Prime Day (first held on 15 July 2015) turned the countdown into the whole ad, with the conditions in the small print at the end.
+- Study these reference works: Amazon Prime Day Lightning Deals (2015 —) · Woot deal-a-day (2004 —) · Black Friday doorbuster ads (US retail)
+- Motion DNA: Every element lands on a bar line and stays: 40 % OFF slams in at frame one and shrinks to a spinning starburst at 2 s; the anchor price strikes through and the sale price pops at 2.8 s; three offers stack on the half beats; the stock count drops in jolts from 12 to 2 with the bar draining; from 6 s the clock’s seconds box flashes on every tick; SHOP NOW pulses and is clicked at 9 s.
+- Visual DNA: Paper stage with a black scrolling FLASH SALE ticker; a big orange panel with diagonal stripes holding the Token as the product and an ink starburst badge; the right column stacks heavy Archivo prices, pill-shaped offer tags, a stock bar that turns orange when low, ink digit boxes and an orange CTA pill. Small grey T&Cs at the bottom; urgency plotted on the caption graph.
+- Signature transitions: Slam-in, shrink-to-badge, strike-through draw, pop-ins on the beat; nothing ever leaves
+- Key techniques: Anchor price struck through, the saving spelled out, Scarcity: a live stock count and a draining bar, Deadline clock, one-verb CTA, T&Cs in the small print
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Anchor price struck through, the saving spelled out, Scarcity: a live stock count and a draining bar, Deadline clock, one-verb CTA, T&Cs in the small print).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Anchor price struck through, the saving spelled out and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "SALE COUNTDOWN", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Retail promo template in After Effects or a DCO ad tool, price and stock fields fed from a product feed, Countdown timer bound to the sale end time, Canvas 2D: one accumulating layout, keyframed reveals, stock and clock as functions of time. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Sale Countdown motion-graphics film (Offer, anchor price, scarcity, deadline, CTA). Visual style: paper stage with a black scrolling FLASH SALE ticker; a big orange panel with diagonal stripes holding the Token as the product and an ink starburst badge; the right column stacks heavy Archivo prices, pill-shaped offer tags, a stock bar that turns orange when low, ink digit boxes and an orange CTA pill. Small grey T&Cs at the bottom; urgency plotted on the caption graph. Motion: every element lands on a bar line and stays: 40 % OFF slams in at frame one and shrinks to a spinning starburst at 2 s; the anchor price strikes through and the sale price pops at 2.8 s; three offers stack on the half beats; the stock count drops in jolts from 12 to 2 with the bar draining; from 6 s the clock’s seconds box flashes on every tick; SHOP NOW pulses and is clicked at 9 s. Signature moves: anchor price struck through, the saving spelled out, scarcity: a live stock count and a draining bar, deadline clock, one-verb cta, t&cs in the small print; transitions: slam-in, shrink-to-badge, strike-through draw, pop-ins on the beat; nothing ever leaves. In the tradition of Amazon Prime Day Lightning Deals (2015 —) · Woot deal-a-day (2004 —) · Black Friday doorbuster ads (US retail). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SALE COUNTDOWN". Punchy sound design synced to every cut.
+```
+
+## 271 · Top-5 Listicle
+*Countdown from five, tease the top, hold #1 · 1970 — · Narrative Formats*
+
+Reference film: `videos/formatlisticle.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Top-5 Listicle** (Countdown from five, tease the top, hold #1, 1970 —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: The countdown is a radio format first: Casey Kasem’s American Top 40 (from July 1970) played the week’s chart from the bottom up so that number one closed the show, with a tease before every break. Late Night with David Letterman’s Top Ten List (from 1985) turned it into a comedy bit, Channel 4’s 100 Greatest… specials (from 1999) into a television genre, and the web listicle — BuzzFeed in the late 2000s, WatchMojo’s top-ten videos on YouTube — set the conventions as video: tease number one at the start, count in reverse so the order itself builds, give each entry a little more time as it climbs, and hold the last.
+- Study these reference works: American Top 40 (Casey Kasem, 1970 —) · Late Night with David Letterman, Top Ten List (1985 —) · WatchMojo top-ten videos (YouTube)
+- Motion DNA: A one-second tease with the title already up and the hook typed in; then whip-ins on the eighth notes: #5 for 1.0 s, #4 for 1.25, #3 for 1.5, #2 for 1.75 — the rank numeral rolls up and each card slides in and out; a covered card shakes under a half-second drumroll; at 7 s the cover flies off, confetti bursts and #1 spins in and is held for three seconds.
+- Visual DNA: The Technique Atlas paper stage: a huge ink rank numeral with an orange hash on the left, a cream card with a Token variant (outline, blue, squashing, a stack, the original) and its title, line and an on-screen-time bar measured against 3 s; progress dots top right, a reminder chip below; for #1 an orange border, turning rays and confetti.
+- Signature transitions: Card whip-ins and whip-outs on the beat, a rolling numeral, the drumroll cover pulled off to reveal #1
+- Key techniques: Reverse order: count down from #5 to #1, Tease the top at the start, keep the loop open, Entries lengthen as they climb; #1 held longest
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Reverse order: count down from #5 to #1, Tease the top at the start, keep the loop open, Entries lengthen as they climb; #1 held longest).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Reverse order: count down from #5 to #1 and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "TOP-5 LISTICLE", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Template edit: one card layout re-used per entry, durations set per rank, Teaser and reminder chip carry the open loop to #1, Canvas 2D: entry table drives card, numeral, dots and the duration bars. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Top-5 Listicle motion-graphics film (Countdown from five, tease the top, hold #1). Visual style: the Technique Atlas paper stage: a huge ink rank numeral with an orange hash on the left, a cream card with a Token variant (outline, blue, squashing, a stack, the original) and its title, line and an on-screen-time bar measured against 3 s; progress dots top right, a reminder chip below; for #1 an orange border, turning rays and confetti. Motion: a one-second tease with the title already up and the hook typed in; then whip-ins on the eighth notes: #5 for 1.0 s, #4 for 1.25, #3 for 1.5, #2 for 1.75 — the rank numeral rolls up and each card slides in and out; a covered card shakes under a half-second drumroll; at 7 s the cover flies off, confetti bursts and #1 spins in and is held for three seconds. Signature moves: reverse order: count down from #5 to #1, tease the top at the start, keep the loop open, entries lengthen as they climb; #1 held longest; transitions: card whip-ins and whip-outs on the beat, a rolling numeral, the drumroll cover pulled off to reveal #1. In the tradition of American Top 40 (Casey Kasem, 1970 —) · Late Night with David Letterman, Top Ten List (1985 —) · WatchMojo top-ten videos (YouTube). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "TOP-5 LISTICLE". Punchy sound design synced to every cut.
+```
+
+## 272 · How It Works
+*System explainer: whole, part, whole · 1930s — · web explainers 2000s — · Narrative Formats*
+
+Reference film: `videos/formathowitworks.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **How It Works** (System explainer: whole, part, whole, 1930s — · web explainers 2000s —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: The explanatory cutaway is older than film: technical illustrators drew engines with their casings removed, and from the 1930s motoring magazines such as The Autocar made the cutaway drawing a speciality. Sponsored and classroom films animated the same idea — the Jam Handy Organization’s Around the Corner (1937) explained Chevrolet’s differential gear by building it up from a single axle, part by part — and the web explainer revived it, from HowStuffWorks (1998) to animated channels such as Kurzgesagt (2013) and Animagraffs, in the same order: the whole system, a zoom into the mechanism one step at a time, and back to the whole.
+- Study these reference works: Around the Corner (Jam Handy for Chevrolet, 1937; the differential explained) · David Macaulay, The Way Things Work (book, 1988) · Animagraffs, How a Car Engine Works (web animation, 2010s)
+- Motion DNA: A held wide shot of the whole machine for 2.6 s with the belt running at a steady pace and the brackets drawing on the beat; an accelerating zoom into the box (2.6–3.2 s); three steps of 1.4 s each, a numbered badge popping on each and a packet hopping along the flow arrow at every hand-off; a decelerating pull back (7.4–8.0 s) to the same wide, and a two-second hold on the takeaway.
+- Visual DNA: The Technique Atlas paper stage: an ink conveyor and an ink box with MOTION reversed out of it, grey still Tokens in, orange hopping Tokens out. Inside, the casing is cut away to a hatched charcoal border with an orange dashed cut line; three white chambers with ink keylines, the current one outlined in orange, the others dimmed; a keyframe timeline, an easing graph with its spacing ticks, onion-skinned in-betweens and a film strip; a small map of the whole in the corner.
+- Signature transitions: Push-in zoom through the box into the cutaway; pull back out to the same wide; steps lit in sequence rather than cut
+- Key techniques: Whole → part → whole, with a you-are-here map, Input → mechanism → output, then a cutaway, One idea per numbered step, joined by flow arrows
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Whole → part → whole, with a you-are-here map, Input → mechanism → output, then a cutaway, One idea per numbered step, joined by flow arrows).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Whole → part → whole, with a you-are-here map and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "HOW IT WORKS", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: After Effects: one master comp of the machine, a camera zoom into a precomp of the cutaway, Script per step: one noun, one verb, one visual, Canvas 2D: the wide drawn under a zoom transform, the cutaway cross-faded in screen space at full zoom. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second How It Works motion-graphics film (System explainer: whole, part, whole). Visual style: the Technique Atlas paper stage: an ink conveyor and an ink box with MOTION reversed out of it, grey still Tokens in, orange hopping Tokens out. Inside, the casing is cut away to a hatched charcoal border with an orange dashed cut line; three white chambers with ink keylines, the current one outlined in orange, the others dimmed; a keyframe timeline, an easing graph with its spacing ticks, onion-skinned in-betweens and a film strip; a small map of the whole in the corner. Motion: a held wide shot of the whole machine for 2.6 s with the belt running at a steady pace and the brackets drawing on the beat; an accelerating zoom into the box (2.6–3.2 s); three steps of 1.4 s each, a numbered badge popping on each and a packet hopping along the flow arrow at every hand-off; a decelerating pull back (7.4–8.0 s) to the same wide, and a two-second hold on the takeaway. Signature moves: whole → part → whole, with a you-are-here map, input → mechanism → output, then a cutaway, one idea per numbered step, joined by flow arrows; transitions: push-in zoom through the box into the cutaway; pull back out to the same wide; steps lit in sequence rather than cut. In the tradition of Around the Corner (Jam Handy for Chevrolet, 1937; the differential explained) · David Macaulay, The Way Things Work (book, 1988) · Animagraffs, How a Car Engine Works (web animation, 2010s). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "HOW IT WORKS". Punchy sound design synced to every cut.
+```
+
+## 273 · Versus
+*Split-screen comparison, round by round · 1930s print — · video 2000s — · Narrative Formats*
+
+Reference film: `videos/formatversus.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Versus** (Split-screen comparison, round by round, 1930s print — · video 2000s —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Side-by-side product comparison began in print: Consumers Union’s Consumer Reports (from 1936) rated rival products against the same criteria in the same table, and comparative advertising grew on American television after the FTC encouraged it in 1972 — the Pepsi Challenge (1975) turned it into a blind taste test with a score. Car television made the round-by-round head-to-head a format — Top Gear’s challenges, and the drag races and spec sheets of the web reviews that followed — and YouTube tech channels such as MKBHD and Linus Tech Tips settled its modern grammar: split screen, the same tests in the same order, a running score, and a verdict that usually says what it depends on.
+- Study these reference works: Consumer Reports ratings tables (Consumers Union, 1936 —) · The Pepsi Challenge (BBDO for Pepsi, 1975) · Marques Brownlee (MKBHD), smartphone versus videos (2010s —)
+- Motion DNA: A 1.4 s face-off: both contenders slide in from their edges, the VS badge slams at 0.8 s and the four criteria drop into the table. Four rounds of 1.6 s, each opening on a bell: the criterion pill pops, the same live test plays on both halves at once, and 1.25 s in the row fills, the winner is ticked and its score ticks up with a sound panned to its side. At 2–2 the verdict lands at 7.8 s and holds.
+- Visual DNA: A hard vertical split: warm paper with the orange square Token on the left, cool blue-grey paper with a blue disc (the same off-centre hole) on the right. A scoreboard across the top with a black VS roundel; a spec table across the bottom with the criteria in black pills down the centre line, results in heavy Archivo either side, the loser greyed, the winner ticked in its own colour. Gauges, distance bars, red gaps and a width trace in each test.
+- Signature transitions: Hard split held throughout; each round cross-fades its tests in place; the verdict replaces the tests while the table stays
+- Key techniques: Same criteria in the same order for both sides, One round at a time, tallied on a running score, A verdict that names the condition
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Same criteria in the same order for both sides, One round at a time, tallied on a running score, A verdict that names the condition).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Same criteria in the same order for both sides and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "VERSUS", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Two cameras or two renders locked to the same framing, comped side by side, A test script fixed before shooting: criteria, order, scoring rule, Canvas 2D: one test function per round drawn twice with a side flag; score derived from the round table. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Versus motion-graphics film (Split-screen comparison, round by round). Visual style: a hard vertical split: warm paper with the orange square Token on the left, cool blue-grey paper with a blue disc (the same off-centre hole) on the right. A scoreboard across the top with a black VS roundel; a spec table across the bottom with the criteria in black pills down the centre line, results in heavy Archivo either side, the loser greyed, the winner ticked in its own colour. Gauges, distance bars, red gaps and a width trace in each test. Motion: a 1.4 s face-off: both contenders slide in from their edges, the VS badge slams at 0.8 s and the four criteria drop into the table. Four rounds of 1.6 s, each opening on a bell: the criterion pill pops, the same live test plays on both halves at once, and 1.25 s in the row fills, the winner is ticked and its score ticks up with a sound panned to its side. At 2–2 the verdict lands at 7.8 s and holds. Signature moves: same criteria in the same order for both sides, one round at a time, tallied on a running score, a verdict that names the condition; transitions: hard split held throughout; each round cross-fades its tests in place; the verdict replaces the tests while the table stays. In the tradition of Consumer Reports ratings tables (Consumers Union, 1936 —) · The Pepsi Challenge (BBDO for Pepsi, 1975) · Marques Brownlee (MKBHD), smartphone versus videos (2010s —). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "VERSUS". Punchy sound design synced to every cut.
+```
+
+## 274 · Myth vs Fact
+*Debunking: myth, evidence, the fact · 1990s — · video 2003 — · Narrative Formats*
+
+Reference film: `videos/formatmyth.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Myth vs Fact** (Debunking: myth, evidence, the fact, 1990s — · video 2003 —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Debunking as a format took shape in the 1990s and 2000s: the urban-legend site Snopes (from 1994), Discovery’s MythBusters (2003–2018), which tested one myth per segment and stamped it BUSTED, CONFIRMED or PLAUSIBLE, and the “myth vs fact” sheets of public-health agencies, from vaccine leaflets to the WHO’s COVID-19 Mythbusters pages (2020). Research on correcting misinformation shaped its order: Cook and Lewandowsky’s The Debunking Handbook (2011; updated 2020) advises stating the myth only once, explaining why it is wrong, and leading and ending with the fact — the “truth sandwich” — so the myth is not what sticks.
+- Study these reference works: MythBusters (Beyond Productions for Discovery, 2003–2018) · The Debunking Handbook (John Cook & Stephan Lewandowsky, 2011 / 2020) · WHO, Coronavirus disease (COVID-19) advice for the public: Mythbusters (2020)
+- Motion DNA: A 0.8 s hook, then three blocks of 2.4 s in identical order: the myth eases up (0.2 s), the red stamp slams down at 0.35 s, the evidence panel fades in at 0.6 s and plays its test, at 1.5 s a red strike draws through the myth, which drops away while the fact rises in green in the same place and the green stamp lands. The recap at 8 s ticks the three facts on, a quarter-second apart, and holds.
+- Visual DNA: The Technique Atlas paper stage; heavy Archivo statements set flush left; double-ruled rubber stamps, MYTH in red tilted left, FACT in green tilted right; a white evidence panel with mono labels and a cited source line; two frame-rate lanes with frame ticks, a strobed drop with gap counts, a squash with its width × height read out against a dashed rest pose; a three-dot debunked tally top-right.
+- Signature transitions: Strike-through and in-place replacement of the myth by the fact; stamps scale down onto the page; blocks fade through the paper
+- Key techniques: State the myth once, plainly, and flag it, Correct it with evidence, not assertion, End on the fact; the recap never repeats the myth
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (State the myth once, plainly, and flag it, Correct it with evidence, not assertion, End on the fact; the recap never repeats the myth).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on State the myth once, plainly, and flag it and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "MYTH VS FACT", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Script per myth: claim (once), evidence, fact; recap of facts only, After Effects: stamp precomps with scale-down and a camera nudge on impact, Canvas 2D: a myth table driving one block layout; evidence as one small simulation per myth. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Myth vs Fact motion-graphics film (Debunking: myth, evidence, the fact). Visual style: the Technique Atlas paper stage; heavy Archivo statements set flush left; double-ruled rubber stamps, MYTH in red tilted left, FACT in green tilted right; a white evidence panel with mono labels and a cited source line; two frame-rate lanes with frame ticks, a strobed drop with gap counts, a squash with its width × height read out against a dashed rest pose; a three-dot debunked tally top-right. Motion: a 0.8 s hook, then three blocks of 2.4 s in identical order: the myth eases up (0.2 s), the red stamp slams down at 0.35 s, the evidence panel fades in at 0.6 s and plays its test, at 1.5 s a red strike draws through the myth, which drops away while the fact rises in green in the same place and the green stamp lands. The recap at 8 s ticks the three facts on, a quarter-second apart, and holds. Signature moves: state the myth once, plainly, and flag it, correct it with evidence, not assertion, end on the fact; the recap never repeats the myth; transitions: strike-through and in-place replacement of the myth by the fact; stamps scale down onto the page; blocks fade through the paper. In the tradition of MythBusters (Beyond Productions for Discovery, 2003–2018) · The Debunking Handbook (John Cook & Stephan Lewandowsky, 2011 / 2020) · WHO, Coronavirus disease (COVID-19) advice for the public: Mythbusters (2020). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "MYTH VS FACT". Punchy sound design synced to every cut.
+```
+
+## 275 · Creator Intro
+*Hook, chapters, sting, subscribe — then the video · 2012 — · Narrative Formats*
+
+Reference film: `videos/formatyoutube.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Creator Intro** (Hook, chapters, sting, subscribe — then the video, 2012 —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Early online videos, after YouTube opened in 2005, often began like television: a long animated channel intro. When YouTube began ranking videos by watch time in 2012 and creators started reading the audience-retention graph in their analytics, the long intro gave way to the hook: open on the most striking moment — often a flash-forward to the payoff — say what the video will deliver, keep any branded sting to a second or two, ask for the subscribe and the notification bell early, and get into it. In 2020 YouTube added chapters: timestamps in the description split the progress bar into named segments, and the spoken “in this video…” list became a visible one. YouTube Studio reports how many viewers are still watching at 0:30, which is where the hook earns its place.
+- Study these reference works: MrBeast videos (2018 —), which open on the payoff · Marques Brownlee (MKBHD), a cold open then a short channel sting · Veritasium (Derek Muller, 2011 —), question-first hooks
+- Motion DNA: Frame one is already mid-jump: a clip from 9:12, the payoff, lands at 1.0 s and rewinds to 0:00. The host Token talks while three chapters spring in on the beat, each dropping its marker on the progress bar. A 1.5 s sting — Token spin-in, ring burst, wordmark wipe, white-out. A subscribe lower third slides in, a cursor clicks it, then the bell, which swings and rings. The host hops and the film hard-cuts to the chapter-one card on the downbeat at 9 s.
+- Visual DNA: A generic 16:9 player on the Technique Atlas paper: a creator set (warm wall, orange key-light glow, shelf props), a cobalt flash-forward stunt, an ink-black sting, an orange chapter card; generic player chrome with chapter gaps in the progress bar and tooltips. Beside it, an illustrative retention graph (hook-first vs. slow intro) and the five intro conventions with their timings.
+- Signature transitions: Rewind scrub from the flash-forward; hard cuts; white-out from the sting; a lower third that slides in and drops away
+- Key techniques: Flash-forward hook to the payoff, “In this video…” list = chapter markers, Sting under 2 s, subscribe + bell early
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Flash-forward hook to the payoff, “In this video…” list = chapter markers, Sting under 2 s, subscribe + bell early).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Flash-forward hook to the payoff and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "CREATOR INTRO", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Premiere / Final Cut edit; sting and lower third from After Effects or a template pack, Chapters from description timestamps (first at 0:00), Canvas 2D: the video drawn in a clipped player rect under generic chrome; retention curves are analytic functions. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural (generic player UI, fictional channel, illustrative retention data).
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Creator Intro motion-graphics film (Hook, chapters, sting, subscribe — then the video). Visual style: a generic 16:9 player on the Technique Atlas paper: a creator set (warm wall, orange key-light glow, shelf props), a cobalt flash-forward stunt, an ink-black sting, an orange chapter card; generic player chrome with chapter gaps in the progress bar and tooltips. Beside it, an illustrative retention graph (hook-first vs. slow intro) and the five intro conventions with their timings. Motion: frame one is already mid-jump: a clip from 9:12, the payoff, lands at 1.0 s and rewinds to 0:00. The host Token talks while three chapters spring in on the beat, each dropping its marker on the progress bar. A 1.5 s sting — Token spin-in, ring burst, wordmark wipe, white-out. A subscribe lower third slides in, a cursor clicks it, then the bell, which swings and rings. The host hops and the film hard-cuts to the chapter-one card on the downbeat at 9 s. Signature moves: flash-forward hook to the payoff, “in this video…” list = chapter markers, sting under 2 s, subscribe + bell early; transitions: rewind scrub from the flash-forward; hard cuts; white-out from the sting; a lower third that slides in and drops away. In the tradition of MrBeast videos (2018 —), which open on the payoff · Marques Brownlee (MKBHD), a cold open then a short channel sting · Veritasium (Derek Muller, 2011 —), question-first hooks. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CREATOR INTRO". Punchy sound design synced to every cut.
+```
+
+## 276 · Duet / Reaction
+*Call and response, a few frames late · 2010 — · Narrative Formats*
+
+Reference film: `videos/formatduet.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Duet / Reaction** (Call and response, a few frames late, 2010 —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: The reaction shot is as old as film editing, and Japanese variety television made a fixed convention of the wipe: a corner inset of the studio guests reacting to a taped segment. Online, reaction videos became their own genre on YouTube around 2010 with the Fine Brothers’ Kids React. Musical.ly’s duet put the original clip and the response side by side in one vertical frame; TikTok carried it over when it absorbed Musical.ly in 2018, added Stitch (clip the original, then answer it) in 2020, and let creators answer a comment with a video that carries the comment as a sticker. The craft is timing — each reaction lands just after the beat it answers, about a human reaction time — and the reactor keeps the last word.
+- Study these reference works: Kids React (the Fine Brothers, YouTube, 2010 —) · TikTok Duet (2018 —, from Musical.ly) and Stitch (2020 —) · the wipe inset in Japanese variety television
+- Motion DNA: The original keeps the clock: a letter block drops onto the tower on every bar line at 0.5, 1.5 … 5.5 s, the tower wobbling more after each, then a gust and the fall at 7.0 s. The reactor answers every beat 0.2 s (six frames) late — a nod, a nod, a lean in, a gasp, a flinch, a spinning cheer, a cringe — then a deadpan beat, and finally moves on its own: a jump that taps the reply sticker at its apex, CALLED IT., a squash landing and a rimshot.
+- Visual DNA: One 9:8 frame made of two 9:16 halves with a white seam: the paper-and-grid Technique Atlas stage with cream letter blocks (the N in orange) on the left; a dark navy reaction set with a ring light and the orange Token on the right; a white reply sticker with a blue avatar dot; bold orange reaction marks. Beside it, ORIGINAL and REACTION lanes with lag connectors, a ten-frame lag ruler and a floor indicator.
+- Signature transitions: None inside the split — the two halves run continuously; reactions spring on; the tower collapse and the punchline jump are the only big moves
+- Key techniques: Split frame: original | reactor, Each reaction lags its beat by ~6 frames, Reply sticker and the punchline with no call
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Split frame: original | reactor, Each reaction lags its beat by ~6 frames, Reply sticker and the punchline with no call).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Split frame: original | reactor and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "DUET / REACTION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: In-app duet / stitch: record against the playing original, Reaction timing set by nudging the reactor clip a few frames late, Canvas 2D: two clipped half-frames from one timeline; reactions are the call times plus a fixed lag. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural (generic app UI, fictional handles).
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Duet / Reaction motion-graphics film (Call and response, a few frames late). Visual style: one 9:8 frame made of two 9:16 halves with a white seam: the paper-and-grid Technique Atlas stage with cream letter blocks (the N in orange) on the left; a dark navy reaction set with a ring light and the orange Token on the right; a white reply sticker with a blue avatar dot; bold orange reaction marks. Beside it, ORIGINAL and REACTION lanes with lag connectors, a ten-frame lag ruler and a floor indicator. Motion: the original keeps the clock: a letter block drops onto the tower on every bar line at 0.5, 1.5 … 5.5 s, the tower wobbling more after each, then a gust and the fall at 7.0 s. The reactor answers every beat 0.2 s (six frames) late — a nod, a nod, a lean in, a gasp, a flinch, a spinning cheer, a cringe — then a deadpan beat, and finally moves on its own: a jump that taps the reply sticker at its apex, CALLED IT., a squash landing and a rimshot. Signature moves: split frame: original | reactor, each reaction lags its beat by ~6 frames, reply sticker and the punchline with no call; transitions: none inside the split — the two halves run continuously; reactions spring on; the tower collapse and the punchline jump are the only big moves. In the tradition of Kids React (the Fine Brothers, YouTube, 2010 —) · TikTok Duet (2018 —, from Musical.ly) and Stitch (2020 —) · the wipe inset in Japanese variety television. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DUET / REACTION". Punchy sound design synced to every cut.
+```
+
+## 277 · Day in the Life
+*The clock as the spine, jump cuts to compress it · 2007 — · Narrative Formats*
+
+Reference film: `videos/formatvlog.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Day in the Life** (The clock as the spine, jump cuts to compress it, 2007 —; family: Narrative Formats).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Video blogs followed soon after YouTube opened in 2005. The Vlogbrothers, John and Hank Green, made the jump-cut talking head — every pause cut out — a house style from Brotherhood 2.0 in 2007, and Casey Neistat’s daily vlog (March 2015 – November 2016) set the template for the day-in-the-life film: handheld, time-stamped, B-roll montages of small routines cut to music, one sit-down chat to camera and a sign-off. In the early 2020s “day in my life” videos became a staple of TikTok and YouTube Shorts, organised entirely by the clock — 7:00 AM, 9:00 AM, and on to bed.
+- Study these reference works: Vlogbrothers — Brotherhood 2.0 (John and Hank Green, 2007) · Casey Neistat’s daily vlog (2015–16) · “day in my life” videos on TikTok and YouTube Shorts (2020 —)
+- Motion DNA: Sixteen hours in ten seconds on a 120 BPM lo-fi bed. An alarm, the Token pops up in bed; six quarter-second B-roll shots of the routine on the eighth notes; a walk with a jump cut forty minutes ahead; a sit-down chat to camera chopped into four jump cuts with the framing punched in and out; golden hour jump-cutting into dusk; a timelapse of editing at night with the clock racing; a wave goodnight and the lamp clicking off. Everything drifts slightly — a handheld camera made of two layers of noise.
+- Visual DNA: Flat illustrated rooms and streets with the orange Token as the vlogger; a sky gradient driven by the hour — peach dawn, clear blue noon, orange golden hour, violet dusk, navy night — seen through every window. Bold white time supers with a dark offset, burned-in lowercase subtitles in the chat, an analog clock top right and a 7 AM → 11 PM day bar bottom right where each shot is a thin sliver and every jump cut is labelled with the time it skipped.
+- Signature transitions: Hard jump cuts throughout (time skips, not scene transitions); a punch-in / punch-out between talking-head takes; the lamp switching off
+- Key techniques: Time supers: the clock is the spine, Jump cuts compress hours into seconds, B-roll routine montage + one sit-down
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Time supers: the clock is the spine, Jump cuts compress hours into seconds, B-roll routine montage + one sit-down).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Time supers: the clock is the spine and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "DAY IN THE LIFE", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Phone or compact camera, handheld; edited in Premiere / CapCut on a music bed, Time-stamp supers as a template; B-roll cut on the beat, Canvas 2D: a shot list keyed to clock time drives the scenes, the sky gradient and the overlays; vnoise handheld camera. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Day in the Life motion-graphics film (The clock as the spine, jump cuts to compress it). Visual style: flat illustrated rooms and streets with the orange Token as the vlogger; a sky gradient driven by the hour — peach dawn, clear blue noon, orange golden hour, violet dusk, navy night — seen through every window. Bold white time supers with a dark offset, burned-in lowercase subtitles in the chat, an analog clock top right and a 7 AM → 11 PM day bar bottom right where each shot is a thin sliver and every jump cut is labelled with the time it skipped. Motion: sixteen hours in ten seconds on a 120 BPM lo-fi bed. An alarm, the Token pops up in bed; six quarter-second B-roll shots of the routine on the eighth notes; a walk with a jump cut forty minutes ahead; a sit-down chat to camera chopped into four jump cuts with the framing punched in and out; golden hour jump-cutting into dusk; a timelapse of editing at night with the clock racing; a wave goodnight and the lamp clicking off. Everything drifts slightly — a handheld camera made of two layers of noise. Signature moves: time supers: the clock is the spine, jump cuts compress hours into seconds, b-roll routine montage + one sit-down; transitions: hard jump cuts throughout (time skips, not scene transitions); a punch-in / punch-out between talking-head takes; the lamp switching off. In the tradition of Vlogbrothers — Brotherhood 2.0 (John and Hank Green, 2007) · Casey Neistat’s daily vlog (2015–16) · “day in my life” videos on TikTok and YouTube Shorts (2020 —). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DAY IN THE LIFE". Punchy sound design synced to every cut.
 ```
 

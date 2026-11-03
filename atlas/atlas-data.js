@@ -7757,6 +7757,441 @@ window.ATLAS = {
    "poster": 6.3,
    "video": "media/formatmanifesto.mp4",
    "posterImg": "atlas/posters/formatmanifesto.jpg"
+  },
+  {
+   "id": "formatsting",
+   "family": "M",
+   "name": "Post-credits Sting",
+   "sub": "Wait, then tease the sequel",
+   "era": "1979 —",
+   "origin": "A scene after the end credits began as a joke for whoever stayed: The Muppet Movie (1979) ends with Animal shouting “Go home!”, Airplane! (1980) returns to the passenger abandoned in the taxi, and Ferris Bueller’s Day Off (1986) sends its audience home in person. Iron Man (2008) turned it into marketing: Nick Fury after the crawl, announcing a shared universe, and Marvel Studios made the mid-credits scene (cut into the crawl) and the post-credits scene (after its last line) routine — The Avengers (2012) has both. The promise card is older: the early Bond films closed on “James Bond will return”.",
+   "works": "The Muppet Movie (1979) · Iron Man (2008; Nick Fury) · The Avengers (2012; mid- and post-credits)",
+   "tech": [
+    "Post-credits: only after the last line of the crawl",
+    "A held beat of black and silence first",
+    "The tease withholds: one image, no answer, a promise card"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The crawl at a constant 260 px/s until the legal line stops and holds; a hard cut to black at 2.2 s; 2.8 s of silence in which the house empties seat by seat; at 5.0 s a low rumble and three cracks of light on accelerating hits, a slow push-in while something rises; the reveal hit at 7.4 s, a single held silhouette, a hard cut at 8.2 s; the promise card fades up in two lines.",
+   "visualDNA": "Black throughout. Cream credits in Archivo with a mono legal line; a diagram of the house as rows of seats, the stayers lit orange; a dark floor with a glowing orange crack, dust in the beam, a second Token mirrored in ink-black with a glowing hole and an orange rim; THE TOKEN / WILL RETURN in wide-tracked cream and orange. A mid- vs post-credits map top right.",
+   "transitions": "Hard cut from the held legal line to black; hard cut out of the reveal; the promise card fades up",
+   "implementation": [
+    "Editorial: the scene appended after the crawl, after a black hold",
+    "Sound: true silence for the wait, a hard sound cut with the picture",
+    "Canvas 2D: crawl table, seat diagram with seeded leave times, clipped silhouette over a procedural light crack"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.75,
+   "video": "media/formatsting.mp4",
+   "posterImg": "atlas/posters/formatsting.jpg"
+  },
+  {
+   "id": "formatnextweek",
+   "family": "M",
+   "name": "\"Next Week On\" Promo",
+   "sub": "Fragments, questions, no answers",
+   "era": "1960s —",
+   "origin": "Episodic television has always sold the next episode at the end of this one. US network series closed on scenes from next week’s episode for decades, and serialised drama sharpened the form into a montage of very short fragments cut out of order, questions supered or voiced over them, a cut to black before anything lands, and the airdate and time slot — “9/8c”, nine Eastern, eight Central. Anime made it a ritual: the narrated next-episode previews of Dragon Ball Z (1989–96) and Neon Genesis Evangelion (1995–96), whose previews often misled on purpose; Lost (ABC, 2004–10) leaned on its promos to keep its mysteries open.",
+   "works": "Dragon Ball Z (1989–96; “Next time on…”) · Neon Genesis Evangelion (1995–96; next-episode previews) · Lost (ABC, 2004–10)",
+   "tech": [
+    "Fragments under a second, cut out of story order",
+    "Questions raised, never answered",
+    "Cut to black mid-action, then airdate + time slot"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A 0.9 s orange slate; ten fragments from 0.3 to 0.85 s, every cut on a hit with a white frame; four questions supered over them; the last shot runs longest — a run-up and a leap — and cuts to black at the top of the arc at 7.3 s with the sound; half a second of black; the airdate card lands at 7.8 s with a three-note network sting.",
+   "visualDNA": "Next week in full colour, unlike the recap’s drained past: the paper stage lit blue, red, amber; a second Token in ink-blue; a box with a question mark whose contents we never see. Bold cream questions on black bands. HUD panels: each fragment’s length against a one-second bar, a questions-raised / answered tally, a scene map plotting the fragments out of order. Airdate card in ink and orange on paper.",
+   "transitions": "Hard cuts with one white frame; a cut to black mid-action; a chevron wipe onto the airdate card",
+   "implementation": [
+    "Editorial: a promo cut from next week’s dailies or locked cut",
+    "Questions as supers or VO; the airdate from the network’s promo package",
+    "Canvas 2D: a fragment list with scene numbers; HUD computed from the list"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.3,
+   "video": "media/formatnextweek.mp4",
+   "posterImg": "atlas/posters/formatnextweek.jpg"
+  },
+  {
+   "id": "formatbumper",
+   "family": "M",
+   "name": "Ad-break Bumper",
+   "sub": "We’ll be right back · now back to",
+   "era": "1950s —",
+   "origin": "Commercial television split its programmes into acts around advertising from the start, and short station or programme idents either side of the break — bumpers — marked where the show stopped and resumed. In the US the FCC’s 1974 policy on children’s television required a separation device around the ads in children’s programmes, which made bumpers a fixture of Saturday-morning cartoons; Japanese anime has its own version in the mid-episode eyecatch. Cartoon Network’s and Adult Swim’s bumps from the late 1990s and 2000s turned the form into a showcase. Writers end each act on a hook — the act out — and the act in often repeats its last beat.",
+   "works": "Saturday-morning cartoon bumpers (US, 1970s–90s) · Cowboy Bebop (1998; eyecatches) · Adult Swim bumps (2001 —)",
+   "tech": [
+    "Act out on a hook, dip to black",
+    "Out- and in-bumper: logo, one line, a short loop",
+    "Act in repeats the last beat; logo bug on"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The act runs to a freeze at 1.25 s and dips to black; the out-bumper wipes in at 1.6 s, its logo loop on half-second beats, ending on an unresolved chord; the break runs compressed ×35, five spots in 3.4 s, each with its own jingle and a black frame between; the in-bumper at 6.4 s plays the same loop and resolves; the act in at 7.8 s replays the teeter and goes on — the catch lands at about 9.15 s.",
+   "visualDNA": "The show on the paper stage: an ink table, a blue cube tipping off its edge, the orange Token. Bumpers as full-bleed orange (out) and blue (in) cards with MOTION and the hopping Token. The break in master-control grey: a monitor with generic spots, the pod as a slot timeline with :15 / :30 labels, a big mono break clock. A rundown of the half hour top right, a translucent logo bug bottom right.",
+   "transitions": "Freeze and dip to black out of the act; hard wipes in and out of the bumpers; a black frame between spots; a straight cut back into the act",
+   "implementation": [
+    "Network presentation package: bumpers, logo bug, break format",
+    "Playout automation inserts the pod between the bumpers",
+    "Canvas 2D: one show rig driven by story time, a pod table driving monitor, timeline and clock"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.3,
+   "video": "media/formatbumper.mp4",
+   "posterImg": "atlas/posters/formatbumper.jpg"
+  },
+  {
+   "id": "formatinterview",
+   "family": "M",
+   "name": "Talking-head Interview",
+   "sub": "Thirds, eyeline, two cameras, super, B-roll",
+   "era": "1960s —",
+   "origin": "Documentary interviews on camera became common once sync-sound 16 mm rigs arrived around 1960, and their grammar settled over the next decades: the subject off-centre on the thirds with lead room, looking at an interviewer sitting just beside the lens rather than into it, a name super on first appearance, and B-roll laid over the edits in the answer. Errol Morris inverted the eyeline with the Interrotron for The Thin Blue Line (1988) and Fast, Cheap & Out of Control (1997), so his subjects look straight down the lens; a second camera for a wide and a close on the same answer became routine in the 2000s, and Ken Burns’ The Civil War (1990) made the slow push into archive stills a byword.",
+   "works": "The Civil War (Ken Burns, PBS, 1990) · The Thin Blue Line (Errol Morris, 1988) · The Last Dance (ESPN / Netflix, 2020)",
+   "tech": [
+    "Subject on the third, lead room, eyeline just off-lens",
+    "Two cameras: wide ↔ close on the same answer",
+    "Lower-third super; B-roll laid over the edits"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Locked-off shots that cut only on pauses in the voice: A-cam wide for 1.8 s, B-cam close with the lower third wiping on at 2.1 s and holding 1.9 s, a B-roll cutaway at 4.2 s with a slow Ken Burns push while the answer continues — a jump cut at 5.0 s hidden underneath — back to the wide at 5.8 s, then a pull quote whose words light up as they are spoken from 7.8 s. The Token barely moves: small pulses on the syllables.",
+   "visualDNA": "A dim, warm interview set — bookshelf, practical lamp, string lights as bokeh, a stool — with the orange Token on the left third. Dashed thirds, an orange eyeline running out of frame right, a lead-room bracket; a dark plan view of subject, interviewer and the two camera cones with a red tally; an NLE-style edit with V2, V1 and an unbroken A1 waveform. Sepia archive photo for the B-roll; cream Archivo pull quote with an orange opening quote mark.",
+   "transitions": "Straight cuts on pauses between camera angles; cut to B-roll and back; cut to the pull-quote card",
+   "implementation": [
+    "Two cameras rolling on the same take, synced by timecode",
+    "Edit in an NLE: B-roll on V2 over cuts in the A1 dialogue",
+    "Canvas 2D: one set drawn through two virtual cameras with parallax"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.1,
+   "video": "media/formatinterview.mp4",
+   "posterImg": "atlas/posters/formatinterview.jpg"
+  },
+  {
+   "id": "formattestimonial",
+   "family": "M",
+   "name": "Testimonial Ad",
+   "sub": "A real customer’s story, then the proof",
+   "era": "1890s — · on TV 1950s —",
+   "origin": "Testimonials are as old as advertising — Victorian patent-medicine ads ran letters from grateful users, and in the 1920s J. Walter Thompson’s Pond’s campaign paid society women to endorse cold cream. Television made the ‘real people, not actors’ spot a genre: hidden-camera taste tests such as Folgers’ ‘we secretly replaced…’ (from the late 1970s) let ordinary customers tell it in their own words. The rules came with it: the US FTC’s Endorsement Guides (1980; revised 2009, 2023) require that a customer’s results be typical or that what is typical be disclosed, and that paid endorsements be labelled — hence the small print.",
+   "works": "Pond’s cold cream endorsements (J. Walter Thompson, 1920s) · Folgers ‘secretly replaced’ campaign (from 1970s) · Dove ‘Real Beauty’ (Ogilvy & Mather, 2004 —)",
+   "tech": [
+    "The customer’s voice: problem → moment → result",
+    "REAL CUSTOMER super, burned-in captions",
+    "Social proof, then CTA and the disclaimer"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Opens cold on the strongest line held 1.2 s; then three captioned answers of about two seconds each — problem, the moment, the result with a count-up to 3× — while the customer sits still and only pulses as they speak; at 7.2 s a hard cut to a review wall where six cards pop in 0.12 s apart and five stars fill; at 8.6 s the voice switches to the brand: lockup, a pulsing CTA pill and the fine print.",
+   "visualDNA": "The paper stage dressed as a living room — window light, a sofa, a blue cushion — with the orange Token as the customer on the right; ink-plated, centred burned-in captions; an ink REAL CUSTOMER pill; left-hand cards for the before work (a grey, stepped square), a phone with the app and a friend’s blue message, and a huge orange 3.0×. White review cards with coloured Tokens and orange stars; a VOICE switch, mono annotations and grey small print.",
+   "transitions": "Hard cuts between the hook card, the interview, the review wall and the end card; cross-fades between the left-hand cards",
+   "implementation": [
+    "Customer interview filmed unscripted, cut down to problem / moment / result",
+    "Burned-in captions for sound-off feeds; claims checked against the FTC guides",
+    "Canvas 2D: one room set, caption plates measured per line, staggered card pops"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.4,
+   "video": "media/formattestimonial.mp4",
+   "posterImg": "atlas/posters/formattestimonial.jpg"
+  },
+  {
+   "id": "formatunboxing",
+   "family": "M",
+   "name": "Unboxing",
+   "sub": "Overhead, slow before the reveal, knolled contents",
+   "era": "2006 —",
+   "origin": "Unboxing videos grew up on YouTube in the mid-2000s with gadget launches — fans filmed themselves opening the first iPhone in June 2007 — and by 2010 ‘unboxing’ was a search category of its own. The grammar is consistent: an overhead or over-the-shoulder camera, the sealed box shown first, the tape cut and the layers removed one by one, a deliberately slow last layer before the product, then the contents laid out and a first-impression verdict. Brands answered with packaging designed to be filmed — Apple’s nested boxes and pull tabs — and the laid-out contents borrow knolling, Andrew Kromelow’s 1987 habit at Frank Gehry’s furniture shop of arranging tools at right angles, popularised by Tom Sachs.",
+   "works": "iPhone launch unboxings (YouTube, June 2007) · Unbox Therapy (Lewis Hilsenteger, 2010 —) · Tom Sachs, ‘Ten Bullets’ (2010; ‘Always be knolling’)",
+   "tech": [
+    "Overhead locked-off camera, hands in frame",
+    "Each layer slower; the last layer before the reveal slowest",
+    "Knolled contents and a first-impression verdict"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Action gets shorter then stops: the box drops with a thud, the tape cut runs 0.8 s, the flaps 0.75 s, the lid lifts off in 0.5 s — then the sticker and two tissue sheets take 1.55 s on a slow ease with the music pulled out. The reveal at 5.45 s is a hit, a shine sweep and a 10 % push-in; the box slides aside and five items fly to their knolled spots, alternate hands, one every 0.38 s; the verdict card stamps down at 8.9 s and the Token hops.",
+   "visualDNA": "Top-down light-oak desk; a kraft shipping box with a white label, barcode, red FRAGILE and this-side-up arrows; an off-white inner box with MOTION on the lid, white tissue sealed with an orange sticker, black foam cradling the orange Token. Simple-shape hands with navy sleeves and soft drop shadows. Knolled contents — wordmark card, orange quick-start booklet, sticker sheet, easing card — with dashed alignment guides and gap dimensions.",
+   "transitions": "One continuous overhead take; a push-in on the reveal and back out for the layout",
+   "implementation": [
+    "Overhead rig (camera on a C-stand arm or copy stand) and diffused top light",
+    "Real-time capture with a slowed reveal; knolling laid out by hand on a grid",
+    "Canvas 2D: fold transforms for flaps and tissue, keyed hand tracks, a pace curve in the caption"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.75,
+   "video": "media/formatunboxing.mp4",
+   "posterImg": "atlas/posters/formatunboxing.jpg"
+  },
+  {
+   "id": "formatpreroll",
+   "family": "M",
+   "name": "Skippable Pre-roll",
+   "sub": "Brand before the skip, a payoff for stayers",
+   "era": "2010 —",
+   "origin": "Pre-roll — the video ad that plays before the clip a viewer chose — spread with online video in the late 2000s. In 2010 YouTube introduced TrueView in-stream ads, which can be skipped after five seconds and which the advertiser pays for only when the viewer watches 30 seconds (or the whole of a shorter ad) or clicks. The skip line rewrote the structure of the spot: brand and hook front-loaded into the five unskippable seconds, the rest written as a reward for the people who stay. GEICO’s “Unskippable” (The Martin Agency, 2015) made the whole ad fit before the button and won the Film Grand Prix at Cannes Lions.",
+   "works": "GEICO “Unskippable” (The Martin Agency, 2015) · YouTube TrueView in-stream ads (2010 —) · Google’s ABCD guidelines for YouTube ads (Attract, Brand, Connect, Direct)",
+   "tech": [
+    "Brand and the whole pitch inside the unskippable 5 s",
+    "The player is the frame: Ad badge, yellow bar, skip box",
+    "Second half written as a payoff for stayers"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "No fade in: frame one already holds the MOTION wordmark as the Token slams down beside it; the lockup shrinks to a brand bug at 1.5 s and the Token hops the one-line pitch on the beat while the skip box counts 5-4-3-2-1; at 5 s it pops into SKIP AD, the audience grid empties, a cursor hovers… and leaves; ‘Still here?’, then a ring of Tokens orbits and collapses into one big Token for the stayers; the end card lands at 8.5 s with the offer and LEARN MORE.",
+   "visualDNA": "A dark video-player frame on the paper stage: the ad inside on the Technique Atlas ground, with a bottom scrim, white transport icons, a yellow ad progress bar, a black ‘Ad · 0:07’ pill and the classic skip box with a thumbnail. An orange dashed skip line on the progress bar. To the right a 10 × 10 grid of viewer icons that greys out at the skip line and turns orange for the stayers.",
+   "transitions": "Lockup shrinks into a brand bug; hard cuts inside the ad on the skip line and into the payoff; skip box pops from countdown to button; the end card scales in",
+   "implementation": [
+    "Edit to the platform’s skip point: brand in shot 1, message complete by 0:05",
+    "Second half cut as a reward cut-down; CTA overlay and end screen in the ad platform",
+    "Canvas 2D: the ad drawn on a virtual 1920 × 1080 frame scaled into a player mock"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.5,
+   "video": "media/formatpreroll.mp4",
+   "posterImg": "atlas/posters/formatpreroll.jpg"
+  },
+  {
+   "id": "formatsale",
+   "family": "M",
+   "name": "Sale Countdown",
+   "sub": "Offer, anchor price, scarcity, deadline, CTA",
+   "era": "1900s — · online 2000s —",
+   "origin": "Sale advertising is as old as the department store, and its devices have names. The struck-through original price is an anchor — Tversky and Kahneman described anchoring in 1974 — and limited stock and a closing deadline are the scarcity principle Robert Cialdini set out in Influence (1984). E-commerce made both live: deal-a-day sites such as Woot (2004) and Amazon’s Lightning Deals put a ticking clock and a claimed-stock bar beside the price, and shopping events such as Black Friday and Amazon Prime Day (first held on 15 July 2015) turned the countdown into the whole ad, with the conditions in the small print at the end.",
+   "works": "Amazon Prime Day Lightning Deals (2015 —) · Woot deal-a-day (2004 —) · Black Friday doorbuster ads (US retail)",
+   "tech": [
+    "Anchor price struck through, the saving spelled out",
+    "Scarcity: a live stock count and a draining bar",
+    "Deadline clock, one-verb CTA, T&Cs in the small print"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Every element lands on a bar line and stays: 40 % OFF slams in at frame one and shrinks to a spinning starburst at 2 s; the anchor price strikes through and the sale price pops at 2.8 s; three offers stack on the half beats; the stock count drops in jolts from 12 to 2 with the bar draining; from 6 s the clock’s seconds box flashes on every tick; SHOP NOW pulses and is clicked at 9 s.",
+   "visualDNA": "Paper stage with a black scrolling FLASH SALE ticker; a big orange panel with diagonal stripes holding the Token as the product and an ink starburst badge; the right column stacks heavy Archivo prices, pill-shaped offer tags, a stock bar that turns orange when low, ink digit boxes and an orange CTA pill. Small grey T&Cs at the bottom; urgency plotted on the caption graph.",
+   "transitions": "Slam-in, shrink-to-badge, strike-through draw, pop-ins on the beat; nothing ever leaves",
+   "implementation": [
+    "Retail promo template in After Effects or a DCO ad tool, price and stock fields fed from a product feed",
+    "Countdown timer bound to the sale end time",
+    "Canvas 2D: one accumulating layout, keyframed reveals, stock and clock as functions of time"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.7,
+   "video": "media/formatsale.mp4",
+   "posterImg": "atlas/posters/formatsale.jpg"
+  },
+  {
+   "id": "formatlisticle",
+   "family": "M",
+   "name": "Top-5 Listicle",
+   "sub": "Countdown from five, tease the top, hold #1",
+   "era": "1970 —",
+   "origin": "The countdown is a radio format first: Casey Kasem’s American Top 40 (from July 1970) played the week’s chart from the bottom up so that number one closed the show, with a tease before every break. Late Night with David Letterman’s Top Ten List (from 1985) turned it into a comedy bit, Channel 4’s 100 Greatest… specials (from 1999) into a television genre, and the web listicle — BuzzFeed in the late 2000s, WatchMojo’s top-ten videos on YouTube — set the conventions as video: tease number one at the start, count in reverse so the order itself builds, give each entry a little more time as it climbs, and hold the last.",
+   "works": "American Top 40 (Casey Kasem, 1970 —) · Late Night with David Letterman, Top Ten List (1985 —) · WatchMojo top-ten videos (YouTube)",
+   "tech": [
+    "Reverse order: count down from #5 to #1",
+    "Tease the top at the start, keep the loop open",
+    "Entries lengthen as they climb; #1 held longest"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A one-second tease with the title already up and the hook typed in; then whip-ins on the eighth notes: #5 for 1.0 s, #4 for 1.25, #3 for 1.5, #2 for 1.75 — the rank numeral rolls up and each card slides in and out; a covered card shakes under a half-second drumroll; at 7 s the cover flies off, confetti bursts and #1 spins in and is held for three seconds.",
+   "visualDNA": "The Technique Atlas paper stage: a huge ink rank numeral with an orange hash on the left, a cream card with a Token variant (outline, blue, squashing, a stack, the original) and its title, line and an on-screen-time bar measured against 3 s; progress dots top right, a reminder chip below; for #1 an orange border, turning rays and confetti.",
+   "transitions": "Card whip-ins and whip-outs on the beat, a rolling numeral, the drumroll cover pulled off to reveal #1",
+   "implementation": [
+    "Template edit: one card layout re-used per entry, durations set per rank",
+    "Teaser and reminder chip carry the open loop to #1",
+    "Canvas 2D: entry table drives card, numeral, dots and the duration bars"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.3,
+   "video": "media/formatlisticle.mp4",
+   "posterImg": "atlas/posters/formatlisticle.jpg"
+  },
+  {
+   "id": "formathowitworks",
+   "family": "M",
+   "name": "How It Works",
+   "sub": "System explainer: whole, part, whole",
+   "era": "1930s — · web explainers 2000s —",
+   "origin": "The explanatory cutaway is older than film: technical illustrators drew engines with their casings removed, and from the 1930s motoring magazines such as The Autocar made the cutaway drawing a speciality. Sponsored and classroom films animated the same idea — the Jam Handy Organization’s Around the Corner (1937) explained Chevrolet’s differential gear by building it up from a single axle, part by part — and the web explainer revived it, from HowStuffWorks (1998) to animated channels such as Kurzgesagt (2013) and Animagraffs, in the same order: the whole system, a zoom into the mechanism one step at a time, and back to the whole.",
+   "works": "Around the Corner (Jam Handy for Chevrolet, 1937; the differential explained) · David Macaulay, The Way Things Work (book, 1988) · Animagraffs, How a Car Engine Works (web animation, 2010s)",
+   "tech": [
+    "Whole → part → whole, with a you-are-here map",
+    "Input → mechanism → output, then a cutaway",
+    "One idea per numbered step, joined by flow arrows"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A held wide shot of the whole machine for 2.6 s with the belt running at a steady pace and the brackets drawing on the beat; an accelerating zoom into the box (2.6–3.2 s); three steps of 1.4 s each, a numbered badge popping on each and a packet hopping along the flow arrow at every hand-off; a decelerating pull back (7.4–8.0 s) to the same wide, and a two-second hold on the takeaway.",
+   "visualDNA": "The Technique Atlas paper stage: an ink conveyor and an ink box with MOTION reversed out of it, grey still Tokens in, orange hopping Tokens out. Inside, the casing is cut away to a hatched charcoal border with an orange dashed cut line; three white chambers with ink keylines, the current one outlined in orange, the others dimmed; a keyframe timeline, an easing graph with its spacing ticks, onion-skinned in-betweens and a film strip; a small map of the whole in the corner.",
+   "transitions": "Push-in zoom through the box into the cutaway; pull back out to the same wide; steps lit in sequence rather than cut",
+   "implementation": [
+    "After Effects: one master comp of the machine, a camera zoom into a precomp of the cutaway",
+    "Script per step: one noun, one verb, one visual",
+    "Canvas 2D: the wide drawn under a zoom transform, the cutaway cross-faded in screen space at full zoom"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.6,
+   "video": "media/formathowitworks.mp4",
+   "posterImg": "atlas/posters/formathowitworks.jpg"
+  },
+  {
+   "id": "formatversus",
+   "family": "M",
+   "name": "Versus",
+   "sub": "Split-screen comparison, round by round",
+   "era": "1930s print — · video 2000s —",
+   "origin": "Side-by-side product comparison began in print: Consumers Union’s Consumer Reports (from 1936) rated rival products against the same criteria in the same table, and comparative advertising grew on American television after the FTC encouraged it in 1972 — the Pepsi Challenge (1975) turned it into a blind taste test with a score. Car television made the round-by-round head-to-head a format — Top Gear’s challenges, and the drag races and spec sheets of the web reviews that followed — and YouTube tech channels such as MKBHD and Linus Tech Tips settled its modern grammar: split screen, the same tests in the same order, a running score, and a verdict that usually says what it depends on.",
+   "works": "Consumer Reports ratings tables (Consumers Union, 1936 —) · The Pepsi Challenge (BBDO for Pepsi, 1975) · Marques Brownlee (MKBHD), smartphone versus videos (2010s —)",
+   "tech": [
+    "Same criteria in the same order for both sides",
+    "One round at a time, tallied on a running score",
+    "A verdict that names the condition"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A 1.4 s face-off: both contenders slide in from their edges, the VS badge slams at 0.8 s and the four criteria drop into the table. Four rounds of 1.6 s, each opening on a bell: the criterion pill pops, the same live test plays on both halves at once, and 1.25 s in the row fills, the winner is ticked and its score ticks up with a sound panned to its side. At 2–2 the verdict lands at 7.8 s and holds.",
+   "visualDNA": "A hard vertical split: warm paper with the orange square Token on the left, cool blue-grey paper with a blue disc (the same off-centre hole) on the right. A scoreboard across the top with a black VS roundel; a spec table across the bottom with the criteria in black pills down the centre line, results in heavy Archivo either side, the loser greyed, the winner ticked in its own colour. Gauges, distance bars, red gaps and a width trace in each test.",
+   "transitions": "Hard split held throughout; each round cross-fades its tests in place; the verdict replaces the tests while the table stays",
+   "implementation": [
+    "Two cameras or two renders locked to the same framing, comped side by side",
+    "A test script fixed before shooting: criteria, order, scoring rule",
+    "Canvas 2D: one test function per round drawn twice with a side flag; score derived from the round table"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.6,
+   "video": "media/formatversus.mp4",
+   "posterImg": "atlas/posters/formatversus.jpg"
+  },
+  {
+   "id": "formatmyth",
+   "family": "M",
+   "name": "Myth vs Fact",
+   "sub": "Debunking: myth, evidence, the fact",
+   "era": "1990s — · video 2003 —",
+   "origin": "Debunking as a format took shape in the 1990s and 2000s: the urban-legend site Snopes (from 1994), Discovery’s MythBusters (2003–2018), which tested one myth per segment and stamped it BUSTED, CONFIRMED or PLAUSIBLE, and the “myth vs fact” sheets of public-health agencies, from vaccine leaflets to the WHO’s COVID-19 Mythbusters pages (2020). Research on correcting misinformation shaped its order: Cook and Lewandowsky’s The Debunking Handbook (2011; updated 2020) advises stating the myth only once, explaining why it is wrong, and leading and ending with the fact — the “truth sandwich” — so the myth is not what sticks.",
+   "works": "MythBusters (Beyond Productions for Discovery, 2003–2018) · The Debunking Handbook (John Cook & Stephan Lewandowsky, 2011 / 2020) · WHO, Coronavirus disease (COVID-19) advice for the public: Mythbusters (2020)",
+   "tech": [
+    "State the myth once, plainly, and flag it",
+    "Correct it with evidence, not assertion",
+    "End on the fact; the recap never repeats the myth"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A 0.8 s hook, then three blocks of 2.4 s in identical order: the myth eases up (0.2 s), the red stamp slams down at 0.35 s, the evidence panel fades in at 0.6 s and plays its test, at 1.5 s a red strike draws through the myth, which drops away while the fact rises in green in the same place and the green stamp lands. The recap at 8 s ticks the three facts on, a quarter-second apart, and holds.",
+   "visualDNA": "The Technique Atlas paper stage; heavy Archivo statements set flush left; double-ruled rubber stamps, MYTH in red tilted left, FACT in green tilted right; a white evidence panel with mono labels and a cited source line; two frame-rate lanes with frame ticks, a strobed drop with gap counts, a squash with its width × height read out against a dashed rest pose; a three-dot debunked tally top-right.",
+   "transitions": "Strike-through and in-place replacement of the myth by the fact; stamps scale down onto the page; blocks fade through the paper",
+   "implementation": [
+    "Script per myth: claim (once), evidence, fact; recap of facts only",
+    "After Effects: stamp precomps with scale-down and a camera nudge on impact",
+    "Canvas 2D: a myth table driving one block layout; evidence as one small simulation per myth"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.25,
+   "video": "media/formatmyth.mp4",
+   "posterImg": "atlas/posters/formatmyth.jpg"
+  },
+  {
+   "id": "formatyoutube",
+   "family": "M",
+   "name": "Creator Intro",
+   "sub": "Hook, chapters, sting, subscribe — then the video",
+   "era": "2012 —",
+   "origin": "Early online videos, after YouTube opened in 2005, often began like television: a long animated channel intro. When YouTube began ranking videos by watch time in 2012 and creators started reading the audience-retention graph in their analytics, the long intro gave way to the hook: open on the most striking moment — often a flash-forward to the payoff — say what the video will deliver, keep any branded sting to a second or two, ask for the subscribe and the notification bell early, and get into it. In 2020 YouTube added chapters: timestamps in the description split the progress bar into named segments, and the spoken “in this video…” list became a visible one. YouTube Studio reports how many viewers are still watching at 0:30, which is where the hook earns its place.",
+   "works": "MrBeast videos (2018 —), which open on the payoff · Marques Brownlee (MKBHD), a cold open then a short channel sting · Veritasium (Derek Muller, 2011 —), question-first hooks",
+   "tech": [
+    "Flash-forward hook to the payoff",
+    "“In this video…” list = chapter markers",
+    "Sting under 2 s, subscribe + bell early"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Frame one is already mid-jump: a clip from 9:12, the payoff, lands at 1.0 s and rewinds to 0:00. The host Token talks while three chapters spring in on the beat, each dropping its marker on the progress bar. A 1.5 s sting — Token spin-in, ring burst, wordmark wipe, white-out. A subscribe lower third slides in, a cursor clicks it, then the bell, which swings and rings. The host hops and the film hard-cuts to the chapter-one card on the downbeat at 9 s.",
+   "visualDNA": "A generic 16:9 player on the Technique Atlas paper: a creator set (warm wall, orange key-light glow, shelf props), a cobalt flash-forward stunt, an ink-black sting, an orange chapter card; generic player chrome with chapter gaps in the progress bar and tooltips. Beside it, an illustrative retention graph (hook-first vs. slow intro) and the five intro conventions with their timings.",
+   "transitions": "Rewind scrub from the flash-forward; hard cuts; white-out from the sting; a lower third that slides in and drops away",
+   "implementation": [
+    "Premiere / Final Cut edit; sting and lower third from After Effects or a template pack",
+    "Chapters from description timestamps (first at 0:00)",
+    "Canvas 2D: the video drawn in a clipped player rect under generic chrome; retention curves are analytic functions"
+   ],
+   "reproducibility": "Fully procedural (generic player UI, fictional channel, illustrative retention data)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.6,
+   "video": "media/formatyoutube.mp4",
+   "posterImg": "atlas/posters/formatyoutube.jpg"
+  },
+  {
+   "id": "formatduet",
+   "family": "M",
+   "name": "Duet / Reaction",
+   "sub": "Call and response, a few frames late",
+   "era": "2010 —",
+   "origin": "The reaction shot is as old as film editing, and Japanese variety television made a fixed convention of the wipe: a corner inset of the studio guests reacting to a taped segment. Online, reaction videos became their own genre on YouTube around 2010 with the Fine Brothers’ Kids React. Musical.ly’s duet put the original clip and the response side by side in one vertical frame; TikTok carried it over when it absorbed Musical.ly in 2018, added Stitch (clip the original, then answer it) in 2020, and let creators answer a comment with a video that carries the comment as a sticker. The craft is timing — each reaction lands just after the beat it answers, about a human reaction time — and the reactor keeps the last word.",
+   "works": "Kids React (the Fine Brothers, YouTube, 2010 —) · TikTok Duet (2018 —, from Musical.ly) and Stitch (2020 —) · the wipe inset in Japanese variety television",
+   "tech": [
+    "Split frame: original | reactor",
+    "Each reaction lags its beat by ~6 frames",
+    "Reply sticker and the punchline with no call"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The original keeps the clock: a letter block drops onto the tower on every bar line at 0.5, 1.5 … 5.5 s, the tower wobbling more after each, then a gust and the fall at 7.0 s. The reactor answers every beat 0.2 s (six frames) late — a nod, a nod, a lean in, a gasp, a flinch, a spinning cheer, a cringe — then a deadpan beat, and finally moves on its own: a jump that taps the reply sticker at its apex, CALLED IT., a squash landing and a rimshot.",
+   "visualDNA": "One 9:8 frame made of two 9:16 halves with a white seam: the paper-and-grid Technique Atlas stage with cream letter blocks (the N in orange) on the left; a dark navy reaction set with a ring light and the orange Token on the right; a white reply sticker with a blue avatar dot; bold orange reaction marks. Beside it, ORIGINAL and REACTION lanes with lag connectors, a ten-frame lag ruler and a floor indicator.",
+   "transitions": "None inside the split — the two halves run continuously; reactions spring on; the tower collapse and the punchline jump are the only big moves",
+   "implementation": [
+    "In-app duet / stitch: record against the playing original",
+    "Reaction timing set by nudging the reactor clip a few frames late",
+    "Canvas 2D: two clipped half-frames from one timeline; reactions are the call times plus a fixed lag"
+   ],
+   "reproducibility": "Fully procedural (generic app UI, fictional handles)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.05,
+   "video": "media/formatduet.mp4",
+   "posterImg": "atlas/posters/formatduet.jpg"
+  },
+  {
+   "id": "formatvlog",
+   "family": "M",
+   "name": "Day in the Life",
+   "sub": "The clock as the spine, jump cuts to compress it",
+   "era": "2007 —",
+   "origin": "Video blogs followed soon after YouTube opened in 2005. The Vlogbrothers, John and Hank Green, made the jump-cut talking head — every pause cut out — a house style from Brotherhood 2.0 in 2007, and Casey Neistat’s daily vlog (March 2015 – November 2016) set the template for the day-in-the-life film: handheld, time-stamped, B-roll montages of small routines cut to music, one sit-down chat to camera and a sign-off. In the early 2020s “day in my life” videos became a staple of TikTok and YouTube Shorts, organised entirely by the clock — 7:00 AM, 9:00 AM, and on to bed.",
+   "works": "Vlogbrothers — Brotherhood 2.0 (John and Hank Green, 2007) · Casey Neistat’s daily vlog (2015–16) · “day in my life” videos on TikTok and YouTube Shorts (2020 —)",
+   "tech": [
+    "Time supers: the clock is the spine",
+    "Jump cuts compress hours into seconds",
+    "B-roll routine montage + one sit-down"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Sixteen hours in ten seconds on a 120 BPM lo-fi bed. An alarm, the Token pops up in bed; six quarter-second B-roll shots of the routine on the eighth notes; a walk with a jump cut forty minutes ahead; a sit-down chat to camera chopped into four jump cuts with the framing punched in and out; golden hour jump-cutting into dusk; a timelapse of editing at night with the clock racing; a wave goodnight and the lamp clicking off. Everything drifts slightly — a handheld camera made of two layers of noise.",
+   "visualDNA": "Flat illustrated rooms and streets with the orange Token as the vlogger; a sky gradient driven by the hour — peach dawn, clear blue noon, orange golden hour, violet dusk, navy night — seen through every window. Bold white time supers with a dark offset, burned-in lowercase subtitles in the chat, an analog clock top right and a 7 AM → 11 PM day bar bottom right where each shot is a thin sliver and every jump cut is labelled with the time it skipped.",
+   "transitions": "Hard jump cuts throughout (time skips, not scene transitions); a punch-in / punch-out between talking-head takes; the lamp switching off",
+   "implementation": [
+    "Phone or compact camera, handheld; edited in Premiere / CapCut on a music bed",
+    "Time-stamp supers as a template; B-roll cut on the beat",
+    "Canvas 2D: a shot list keyed to clock time drives the scenes, the sky gradient and the overlays; vnoise handheld camera"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.9,
+   "video": "media/formatvlog.mp4",
+   "posterImg": "atlas/posters/formatvlog.jpg"
   }
  ],
  "built": "2026-11-03"
