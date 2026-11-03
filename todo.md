@@ -1,6 +1,6 @@
 # Motion Style Atlas — TODO
 
-Current build: 232 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 60 Technique Atlas films in waves 10–13 and 15 Rendering Looks in wave 14). Checked items below are done; Web 1.0 is covered by the Webcore film.
+Current build: 247 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 60 Technique Atlas films in waves 10–13 and 30 Rendering Looks in waves 14–15). Checked items below are done; Web 1.0 is covered by the Webcore film.
 Everything below is queued for later waves. Each item = one 10-second procedural film + card + atlas entry.
 
 ## Visual styles still to build
@@ -154,14 +154,20 @@ Everything below is queued for later waves. Each item = one 10-second procedural
     - Compositing: [x] Bloom
     - Temporal: [x] Seamless Loop
     - Shape: [x] Trim Paths
+- [ ] Follow-ups from wave 15: faint straight seams on the Token face in Subsurface (fanned thickness rays switching exit surface); the soap bubble's upper half in Iridescence reads dark; Cross-Hatching runs ~550 ms/frame, the slowest look.
 - [ ] Follow-ups from wave 13: the Reaction-Diffusion spots dish loses the Token outline almost at once; the 'stripes' dish reads as labyrinth bands; the Inverse Kinematics poster frame is sparse. Scores of waves 11–13 were checked for timing only, not listened to. Reels not rebuilt since wave 10.
 - [ ] Demo the style-vs-technique idea: Bauhaus Geometry × Elastic vs Bauhaus Geometry × Recursive.
 - [ ] **Narrative Formats (20+)**: title sequence, ad, explainer, music video, lyric video, logo reveal…
-- [ ] **Rendering Looks (20+)**: material, light, grain, compositing looks. Family L. [x] Wave 14 (2026-11-03, `feat/wave-14`) built the first 15 in `js/films-l1.js`–`l5.js` on the new `js/look-kit.js`; 5+ more to reach 20. Why: the next layer after the Technique Atlas; chosen over Narrative Formats, which mostly overlap existing style films. Rule, like family K: one shared 3D scene and camera move (`js/look-kit.js`, a small SDF ray tracer at reduced resolution), so only the look changes.
+- [x] **Rendering Looks (20+)** (30 built, 2026-11-03): material, light, grain, compositing looks. Family L. Wave 14 built the first 15 in `js/films-l1.js`–`l5.js` on the new `js/look-kit.js`. Why: the next layer after the Technique Atlas; chosen over Narrative Formats, which mostly overlap existing style films. Rule, like family K: one shared 3D scene and camera move (`js/look-kit.js`, a small SDF ray tracer at reduced resolution), so only the look changes.
   - Material: [x] Clay, [x] Chrome, [x] Glass, [x] Matcap
   - Light: [x] Three-point Studio, [x] Rim Light, [x] Golden Hour, [x] Volumetric Light
   - Shading: [x] Toon Ramp, [x] Ambient Occlusion, [x] Fresnel X-ray, [x] Wireframe
   - Image: [x] Depth Fog, [x] Teal & Orange Grade, [x] Film Grain & Halation
+  - [x] Wave 15 (2026-11-03, `feat/wave-15`): 15 more on the same kit in `js/films-l6.js`–`l10.js`, taking family L to 30 and past the 20+ goal. Why: fills the obvious gaps in each group (layered materials, night and natural light, non-photoreal shading, lens artefacts).
+    - Material: [x] Subsurface, [x] Iridescence, [x] Clear Coat, [x] Brushed Metal
+    - Light: [x] Neon Night, [x] Overcast, [x] Chiaroscuro, [x] Caustics
+    - Shading: [x] Cross-Hatching, [x] Normals, [x] Pixel Art
+    - Image: [x] Chromatic Aberration, [x] Anamorphic Flare, [x] Halftone, [x] Infrared
 
 ## Atlas features
 - [x] Curated "best of" reel (a representative style per family), not one 20-minute video.

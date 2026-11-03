@@ -35,6 +35,7 @@
     'techdissolve', 'techsquash', 'techfollowthrough', 'techshake', 'techrackfocus', 'techparticles', 'techrope', 'techmotionblur', 'techfreeze', 'techecho', 'techframestep', 'techcharstagger', 'techtypemorph', 'techtracking', 'techtextreveal',
     'techpush', 'techglitch', 'techeasing', 'techarcs', 'techmotionpath', 'techpan', 'techwhippan', 'techflocking', 'techik', 'techpuppetpin', 'techreaction', 'techlsystem', 'techbloom', 'techloop', 'techtrimpaths',
     'lookclay', 'lookchrome', 'lookglass', 'lookmatcap', 'lookstudio', 'lookrim', 'lookgolden', 'lookvolumetric', 'looktoon', 'lookao', 'lookxray', 'lookwire', 'lookfog', 'lookgrade', 'lookgrain',
+    'looksss', 'lookiridescent', 'lookclearcoat', 'lookbrushed', 'lookneon', 'lookovercast', 'lookchiaroscuro', 'lookcaustics', 'lookhatching', 'looknormals', 'lookpixel', 'lookchromatic', 'lookanamorphic', 'lookhalftone', 'lookinfrared',
   ];
 
   // Curated best-of reel: a representative spread across every family.
