@@ -78,28 +78,28 @@
      o.name ('Elastic'), o.cat ('Timing'); optional o.curve (u → value, about 0..1) with o.span
      [t0, t1] draws the curve as a small graph bottom-right with a dot at the current progress. */
   function caption(c, t, W, H, o) {
-    const x = 72, y = H - 92;
-    text(c, `TECHNIQUE ATLAS  ·  ${(o.cat || '').toUpperCase()}`, x, y - 62, { font: MONO, size: 18, ls: 3, color: P.mute });
-    text(c, o.name, x - 3, y, { font: FONT, weight: 800, size: 54, color: P.ink });
+    const x = 72, y = H - 92, INK = o.dark ? P.ground : P.ink, MUTE = o.dark ? 'rgba(236,232,223,0.62)' : P.mute;
+    text(c, `${o.series || 'TECHNIQUE ATLAS'}  ·  ${(o.cat || '').toUpperCase()}`, x, y - 62, { font: MONO, size: 18, ls: 3, color: MUTE });
+    text(c, o.name, x - 3, y, { font: FONT, weight: 800, size: 54, color: INK });
     // 10 s timeline, beat ticks, playhead
     const tx = x, tw = 560, ty = H - 52;
-    c.fillStyle = 'rgba(23,24,28,0.14)'; c.fillRect(tx, ty, tw, 2);
-    c.fillStyle = 'rgba(23,24,28,0.3)';
+    c.fillStyle = o.dark ? 'rgba(236,232,223,0.22)' : 'rgba(23,24,28,0.14)'; c.fillRect(tx, ty, tw, 2);
+    c.fillStyle = o.dark ? 'rgba(236,232,223,0.4)' : 'rgba(23,24,28,0.3)';
     for (let b = 0; b <= 20; b++) c.fillRect(tx + tw * b / 20 - 0.5, ty - (b % 4 ? 3 : 7), 1, b % 4 ? 3 : 7);
     c.fillStyle = P.accent; c.fillRect(tx, ty, tw * clamp(t / 10), 2);
     c.beginPath(); c.arc(tx + tw * clamp(t / 10), ty + 1, 5, 0, TAU); c.fill();
     if (o.curve) {
       const gw = 240, gh = 120, gx = W - 72 - gw, gy = H - 52 - gh;
-      c.strokeStyle = 'rgba(23,24,28,0.2)'; c.lineWidth = 1;
+      c.strokeStyle = o.dark ? 'rgba(236,232,223,0.3)' : 'rgba(23,24,28,0.2)'; c.lineWidth = 1;
       c.strokeRect(gx + 0.5, gy + 0.5, gw, gh);
       const lo = o.lo ?? -0.2, hi = o.hi ?? 1.3, Y = v => gy + gh - (v - lo) / (hi - lo) * gh;
       c.setLineDash([3, 4]); c.beginPath(); c.moveTo(gx, Y(0)); c.lineTo(gx + gw, Y(0)); c.moveTo(gx, Y(1)); c.lineTo(gx + gw, Y(1)); c.stroke(); c.setLineDash([]);
-      c.strokeStyle = P.ink; c.lineWidth = 2; c.beginPath();
+      c.strokeStyle = INK; c.lineWidth = 2; c.beginPath();
       for (let i = 0; i <= 96; i++) { const u = i / 96, px = gx + u * gw, py = Y(o.curve(u)); i ? c.lineTo(px, py) : c.moveTo(px, py); }
       c.stroke();
       const [t0, t1] = o.span || [0, 10], u = clamp((t - t0) / (t1 - t0));
       c.fillStyle = P.accent; c.beginPath(); c.arc(gx + u * gw, Y(o.curve(u)), 6, 0, TAU); c.fill();
-      text(c, o.curveLabel || 'VALUE / TIME', gx, gy - 12, { font: MONO, size: 14, ls: 2, color: P.mute });
+      text(c, o.curveLabel || 'VALUE / TIME', gx, gy - 12, { font: MONO, size: 14, ls: 2, color: MUTE });
     }
   }
 

@@ -10,10 +10,11 @@
     return m && m.name ? { ...m, cn: m.name, en: m.sub || '' } : null;
   };
   const present = () => MG.ORDER.filter(id => MG.films[id] && metaOf(id));
-  // "157 styles" or "157 styles  ·  15 techniques": family K films are techniques, not styles.
+  // "157 styles  ·  60 techniques  ·  15 looks": family K films are techniques and family L
+  // films are rendering looks, counted apart from the styles.
   const counts = (sep, up) => {
-    const ids = present(), k = ids.filter(id => metaOf(id).family === 'K').length, f = s => (up ? s.toUpperCase() : s);
-    return `${ids.length - k} ${f('styles')}` + (k ? `${sep}${k} ${f('techniques')}` : '');
+    const ids = present(), fam = x => ids.filter(id => metaOf(id).family === x).length, k = fam('K'), l = fam('L'), f = s => (up ? s.toUpperCase() : s);
+    return `${ids.length - k - l} ${f('styles')}` + (k ? `${sep}${k} ${f('techniques')}` : '') + (l ? `${sep}${l} ${f('looks')}` : '');
   };
 
   const BG = '#0d0c0b', INK = '#ece6dc', MUTE = '#8f877d';

@@ -15,6 +15,7 @@
     I: { name: 'Cultural & Regional', short: 'Cultural' },
     J: { name: 'Social & Commercial', short: 'Social & Commercial' },
     K: { name: 'Technique Atlas', short: 'Techniques' },
+    L: { name: 'Rendering Looks', short: 'Looks' },
   };
 
   // Running order: grouped by family. Ids without a film yet are skipped everywhere.
@@ -33,6 +34,7 @@
     'techmatchcut', 'techdisplace', 'techovershoot', 'techstagger', 'techdolly', 'techinfinitezoom', 'techfluid', 'techsoftbody', 'technoise', 'techfeedback', 'techmasking', 'techkeying', 'techrotoscope', 'techdoubleexposure', 'techtimeremap',
     'techdissolve', 'techsquash', 'techfollowthrough', 'techshake', 'techrackfocus', 'techparticles', 'techrope', 'techmotionblur', 'techfreeze', 'techecho', 'techframestep', 'techcharstagger', 'techtypemorph', 'techtracking', 'techtextreveal',
     'techpush', 'techglitch', 'techeasing', 'techarcs', 'techmotionpath', 'techpan', 'techwhippan', 'techflocking', 'techik', 'techpuppetpin', 'techreaction', 'techlsystem', 'techbloom', 'techloop', 'techtrimpaths',
+    'lookclay', 'lookchrome', 'lookglass', 'lookmatcap', 'lookstudio', 'lookrim', 'lookgolden', 'lookvolumetric', 'looktoon', 'lookao', 'lookxray', 'lookwire', 'lookfog', 'lookgrade', 'lookgrain',
   ];
 
   // Curated best-of reel: a representative spread across every family.
