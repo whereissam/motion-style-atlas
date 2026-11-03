@@ -6883,6 +6883,441 @@ window.ATLAS = {
    "poster": 9,
    "video": "media/lookgrain.mp4",
    "posterImg": "atlas/posters/lookgrain.jpg"
+  },
+  {
+   "id": "looksss",
+   "family": "L",
+   "name": "Subsurface",
+   "sub": "Light that goes in, scatters and comes out somewhere else",
+   "era": "2001 —",
+   "origin": "Henrik Wann Jensen, Steve Marschner, Marc Levoy and Pat Hanrahan’s “A Practical Model for Subsurface Light Transport” (SIGGRAPH 2001) made translucent materials — marble, milk, skin — practical to render with a dipole diffusion approximation, work later recognised with a Scientific and Technical Academy Award; translucent skin of this kind went into Gollum in The Lord of the Rings. Real-time engines then approximated it cheaply: texture-space diffusion for skin (NVIDIA’s Human Head demo, 2007), screen-space subsurface scattering (Jorge Jimenez and colleagues, 2009), and the thickness-based translucency Colin Barré-Brisebois and Marc Bouchard presented at GDC 2011 for back-lit thin parts. This look uses wrap lighting plus a traced thickness in that real-time spirit.",
+   "works": "The Lord of the Rings: The Two Towers (Weta Digital, 2002; Gollum’s translucent skin) · NVIDIA Human Head demo (2007; texture-space diffusion) · “Approximating Translucency for a Fast, Cheap and Convincing Subsurface Scattering Look” (Barré-Brisebois & Bouchard, GDC 2011)",
+   "tech": [
+    "Per-channel wrap lighting",
+    "Traced thickness toward the light",
+    "exp(−d / mfp) transmission, red-shifted"
+   ],
+   "accent": "#ff8a3d",
+   "motionDNA": "The shared 10 s camera orbit with the Token bobbing and turning, which keeps changing how much wax lies between the light and each edge. A wipe turns plain Lambert diffuse into wax and jade under the front key; the light then swings round behind the still life over about two seconds while the studio dims, and the thin parts begin to glow. The scatter radius steps on the beat (0.34 → 0.16 → 0.62 → 0.40), the glow tightening and flooding with it, and a last split brings the plain diffuse back over the right half under the same back light.",
+   "visualDNA": "Honey-orange wax and pale jade on the paper studio: soft terminators that bleed red, warm-edged shadows on the forms, a waxy highlight; then a dim, back-lit studio where the Token’s rim and the ring round its hole burn orange and the jade sphere glows green at its edge, while the opaque blue cube stays dark. A scatter-radius ruler, RGB diffusion profiles, a top-down light plot and thickness and transmission passes.",
+   "transitions": "Wipe from diffuse to subsurface; the light swings behind; stepped scatter radius; split back to diffuse",
+   "implementation": [
+    "Dipole diffusion BSSRDF (Jensen et al., 2001) and its descendants in offline renderers (random-walk SSS in Arnold, RenderMan, Cycles)",
+    "Real-time approximations: wrap lighting, screen-space diffusion, thickness-map translucency",
+    "Canvas 2D + SDF tracer (js/look-kit.js): per-channel wrap and shadow exponents, LK.traceInside toward the light for thickness, exp(−d / mfp) per channel with a forward-scatter lobe"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7,
+   "video": "media/looksss.mp4",
+   "posterImg": "atlas/posters/looksss.jpg"
+  },
+  {
+   "id": "lookiridescent",
+   "family": "L",
+   "name": "Iridescence",
+   "sub": "Thin-film interference: colour from thickness and angle",
+   "era": "1704 / 1990s —",
+   "origin": "Robert Hooke described the colours of thin plates in Micrographia (1665), and Isaac Newton measured them in Opticks (1704) — Newton’s rings, where colour follows the thickness of a film of air. Thomas Young explained them by interference around 1801: light reflected from the top and the bottom of a film recombines in or out of phase depending on the extra path 2·n·d·cos θ and the wavelength. Spectral and wave-optics renderers simulate it directly; production shaders approximate it, and Laurent Belcour and Pascal Barla’s “A Practical Extension to Microfacet Theory for the Modeling of Varying Iridescence” (SIGGRAPH 2017) made thin-film colour a standard layer of physically based materials.",
+   "works": "Newton’s rings (Isaac Newton, Opticks, 1704) · Favrile glass (Louis Comfort Tiffany, 1890s; iridescent art glass) · Belcour & Barla, “A Practical Extension to Microfacet Theory for the Modeling of Varying Iridescence” (SIGGRAPH 2017)",
+   "tech": [
+    "Two-beam Airy reflectance per λ",
+    "Spectral → RGB via CIE fits, LUT d × θ",
+    "Thickness noise, draining, swirl"
+   ],
+   "accent": "#7a5cff",
+   "motionDNA": "The shared camera orbit sweeps the view angle across every surface, so bands of colour slide over the bevels of the Token and round the bubble as the camera moves. A wipe turns the plain paper studio into a dark set with a soap-bubble sphere and a beetle-shell Token; the film thickness then steps on the beat (420 → 250 → 560 → 780 → 430 nm), recolouring both at once, and the thickness noise grows from ±70 to ±170 nm while the bubble’s film drains and swirls faster.",
+   "visualDNA": "A near-black studio with softbox reflections: a nearly invisible bubble drawn only by its reflections — magenta, gold, green and blue bands, darker at the thin top, the softboxes doubled on the front and back walls — and a dark Token whose lacquer glows through gold, violet and teal with angle. An interference-colour chart as the thickness ruler, a hue-vs-angle strip, thickness and view-angle passes.",
+   "transitions": "Wipe from the plain studio to the dark set; beat-stepped film thickness; thickness noise ramp",
+   "implementation": [
+    "Thin-film interference layers in production shaders (e.g. Arnold and RenderMan thin-film parameters, Belcour & Barla 2017)",
+    "Spectral rendering and CIE colour-matching functions (analytic fits by Wyman, Sloan and Shirley, 2013)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): Airy two-beam reflectance over 35 wavelengths into a thickness × cos θ LUT, traced reflection, straight-through bubble with front- and back-wall films"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7,
+   "video": "media/lookiridescent.mp4",
+   "posterImg": "atlas/posters/lookiridescent.jpg"
+  },
+  {
+   "id": "lookclearcoat",
+   "family": "L",
+   "name": "Clear Coat",
+   "sub": "A glossy clear layer over a coloured base: two lobes",
+   "era": "2000s —",
+   "origin": "Automotive paint is built in layers — primer, a coloured basecoat often loaded with aluminium or mica flakes, and a transparent clearcoat — and car-paint shaders in visualisation tools copied that stack. Physically based layered materials made it general: Disney’s principled BRDF (Brent Burley, 2012) included a separate clearcoat lobe with its own gloss over the base, and the coat layer became a standard parameter in production and real-time materials, from Autodesk Standard Surface’s coat to the KHR_materials_clearcoat glTF extension and the clear-coat shading models of Unreal Engine and Filament.",
+   "works": "Cars (Pixar, 2006; ray-traced reflections on lacquered car paint) · Disney principled BRDF, “Physically Based Shading at Disney” (Brent Burley, SIGGRAPH 2012 course; clearcoat lobe) · Autodesk Standard Surface coat layer / glTF KHR_materials_clearcoat",
+   "tech": [
+    "Base lobe: diffuse + metallic flakes",
+    "Coat lobe: traced reflection, Schlick F0 0.04",
+    "Coat on / off, strength, roughness"
+   ],
+   "accent": "#d2361b",
+   "motionDNA": "The shared camera orbit drags the coat’s reflections across the forms: softbox strips and the floor’s horizon slide over the Token’s face and wrap the sphere, while the flakes glint and go out as their angles pass the key. A wipe lacquers the plain materials; on beat 6 the coat switches off and only the base lobe is left, flat and satin; from beat 7.5 its strength fades back in; roughness then steps on the beat (0 → 0.10 → 0.22 → 0.38) and snaps back to glass-smooth, and a last split shows coat on beside coat off.",
+   "visualDNA": "Product-shot paper studio: a candy-orange metallic flake Token, a deep teal and a cobalt lacquered-ceramic sphere and cube, each with a crisp white studio reflection floating on top of its colour, brightest at the silhouettes. Strength and roughness rulers, the base and coat lobes as separate insets, leader-line labels, an orange split line.",
+   "transitions": "Wipe from plain to clear coat; coat off (cut) and back on (fade); stepped coat roughness; split coat on / off",
+   "implementation": [
+    "Layered BRDFs: clearcoat lobe over base (Disney principled BRDF 2012, Autodesk Standard Surface, glTF KHR_materials_clearcoat)",
+    "Car-paint shaders: metallic flake normals in a cell grid under a dielectric coat",
+    "Canvas 2D + SDF tracer (js/look-kit.js): base lobe with hashed flake normals, one LK.trace coat bounce with Schlick F0 0.04 kept in its own buffer, edge-aware blur for coat roughness"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.7,
+   "video": "media/lookclearcoat.mp4",
+   "posterImg": "atlas/posters/lookclearcoat.jpg"
+  },
+  {
+   "id": "lookbrushed",
+   "family": "L",
+   "name": "Brushed Metal",
+   "sub": "Anisotropic highlights, stretched across the grain",
+   "era": "1992 —",
+   "origin": "Brushed, spun and turned metal reflects light anisotropically: the fine grooves scatter it across their direction and hardly at all along it, so highlights become streaks at right angles to the grain. James Kajiya treated anisotropic surfaces in 1985, and Gregory Ward’s 1992 SIGGRAPH paper “Measuring and Modeling Anisotropic Reflection” gave rendering the compact elliptical-Gaussian lobe with two roughnesses that is still the textbook model; Michael Ashikhmin and Peter Shirley’s anisotropic Phong model (2000) followed. Modern physically based shaders (Disney’s principled BRDF, 2012, and its descendants) expose the same idea as an “anisotropic” slider and a tangent direction.",
+   "works": "Measuring and Modeling Anisotropic Reflection (Gregory Ward, SIGGRAPH 1992) · An Anisotropic Phong BRDF Model (Michael Ashikhmin & Peter Shirley, 2000) · Physically Based Shading at Disney (Brent Burley, SIGGRAPH 2012; the anisotropic parameter of the principled BRDF)",
+   "tech": [
+    "Ward anisotropic lobe, αT ≠ αB",
+    "Per-object tangent field",
+    "Reflection blurred along the bitangent"
+   ],
+   "accent": "#9fb0c2",
+   "motionDNA": "The shared 10 s orbit drags the streaks across the metal: on the Token they swing round its centre like a spun disc, on the sphere they run pole to pole, on the cube across the grain. A wipe turns the plain materials to brushed metal; callouts and the tangent-field inset explain the grooves; the anisotropy ratio αB:αT then steps 2 → 5 → 12 → 28 on the beat at constant mean roughness, and a split slides in from the right to compare against isotropic metal of the same mean roughness.",
+   "visualDNA": "Brushed aluminium in three anodised tints — orange Token, bare steel sphere, blue cube — in the paper studio with a dark ceiling: long soft streaks of softbox light, fine concentric rings and straight grain in the metal, blurred reflections of the floor. An orange split line, leader-line labels, a ratio readout with a log ruler, and a hue-coded tangent-field inset with white groove strokes.",
+   "transitions": "Wipe from plain to brushed metal; stepped anisotropy ratio; split to isotropic metal",
+   "implementation": [
+    "Ward (1992) anisotropic BRDF with per-surface tangent frames",
+    "Tangent / anisotropy maps as in Disney principled and Arnold standard surface",
+    "Canvas 2D + SDF tracer (js/look-kit.js): analytic Ward lobes for four softboxes, one LK.trace reflection, an edge-aware blur along the projected bitangent, groove noise in the across-grain coordinate"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.6,
+   "video": "media/lookbrushed.mp4",
+   "posterImg": "atlas/posters/lookbrushed.jpg"
+  },
+  {
+   "id": "lookneon",
+   "family": "L",
+   "name": "Neon Night",
+   "sub": "Coloured practical lights, a wet floor, inverse-square spill",
+   "era": "1910s — (on screen from the 1980s)",
+   "origin": "Georges Claude showed the first neon tube lights in Paris in 1910, and neon signs spread through American cities in the 1920s and 1930s. The night street lit only by coloured practicals, with the light pooling and smearing on wet tarmac, became a cinematic look through films such as Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982), and later the neon-noir of Wong Kar-wai with Christopher Doyle and Nicolas Winding Refn’s Drive (2011). In rendering, a neon tube is a line or tube area light: shading from linear light sources was treated by Tomoyuki Nishita, Isao Okamura and Eihachiro Nakamae in 1985, and real-time engines adopted the “representative point” trick for their specular, described by Brian Karis for Unreal Engine 4 in 2013.",
+   "works": "Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982) · Fallen Angels (Wong Kar-wai, cinematography Christopher Doyle, 1995) · Drive (Nicolas Winding Refn, cinematography Newton Thomas Sigel, 2011)",
+   "tech": [
+    "Analytic line lights, 1/d² per element",
+    "Wet floor: traced, stretched reflection",
+    "Coloured spill, per-tube soft shadows"
+   ],
+   "accent": "#ff2a80",
+   "motionDNA": "The shared camera orbit carries the tubes’ reflections across the wet floor and the highlights round the sphere. A wipe opens the night against the plain day reference while the tubes stutter on one by one; callouts name the spill, the line light and the wet reflection; from beat 7 each tube plays solo for a beat (pink, cyan, amber), so its own colour spill and falloff read alone, then all three return.",
+   "visualDNA": "Near-black night, three glowing tubes — hot pink, cyan, amber — with soft halos; the white sphere goes magenta with a cyan rim, the orange Token turns hot red under the pink underlight, the blue cube’s front glows gold from the amber tube; dark asphalt with mirror puddles and long vertical streaks of reflected neon. Paper-coloured mono labels on dark halos, a light-only pass inset, a falloff plot with each object’s distance to its tube, and a three-channel tube mixer.",
+   "transitions": "Wipe from plain day to the neon night; tubes stutter on; tube solos on the beat",
+   "implementation": [
+    "Line / tube area lights with representative-point specular (Karis, 2013)",
+    "Screen-space or traced wet-surface reflections stretched along the view-vertical",
+    "Canvas 2D + SDF tracer (js/look-kit.js): closed-form line-light irradiance clipped to the hemisphere, one LK.shadow per tube, one LK.trace floor reflection, analytic ray–capsule tubes with halo"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.8,
+   "video": "media/lookneon.mp4",
+   "posterImg": "atlas/posters/lookneon.jpg"
+  },
+  {
+   "id": "lookovercast",
+   "family": "L",
+   "name": "Overcast",
+   "sub": "The whole cloudy sky as one soft light",
+   "era": "1942 — (sky model)",
+   "origin": "Under a full cloud deck the sun disappears and the whole sky becomes one huge, dim, even source: there is no key, shadows shrink to soft darkening where surfaces meet, and contrast drops. Parry Moon and Domina Spencer measured overcast skies in 1942 and found them about three times brighter at the zenith than at the horizon, L(θ) = Lz(1 + 2 cos θ)/3, which the CIE adopted as its standard overcast sky (1955). Photographers prize the light for portraits and product work, and its film equivalent is the large overhead diffusion frame. In rendering it is sky-dome lighting: integrate the sky over the visible hemisphere, by cosine-weighted visibility rays or by ambient occlusion as the cheap stand-in (Zhukov, Iones and Kronin, 1998; Landis at ILM, 2002).",
+   "works": "CIE standard overcast sky (after Moon & Spencer, 1942) · Bernd and Hilla Becher’s typologies of industrial structures (from 1959; photographed under overcast skies for shadowless, even light) · Fargo (Joel and Ethan Coen, cinematography Roger Deakins, 1996; flat white winter overcast)",
+   "tech": [
+    "CIE overcast sky dome",
+    "Cosine-weighted soft shadow rays",
+    "Measured contrast ratio"
+   ],
+   "accent": "#a9b6c4",
+   "motionDNA": "The shared camera orbit. The film opens on the scene in hard clear-sky sun; a wipe from left to right covers it with the overcast dome, the cast shadows dissolving into soft contact darkening. Callouts and a fisheye probe step across four points on the beat while a visibility pass sits beside it; the sky-ray count then builds 1 → 3 → 6 → 12 on the beat, single soft shadows multiplying into one soft occlusion; finally a split slides in to compare overcast and sun side by side with their measured contrast ratios.",
+   "visualDNA": "Pale cool grey-white sky with no visible sun; the paper floor and the orange, white and blue objects in soft, even, slightly blue light, tops brighter than sides, dark only where they meet the floor. Against it the hard-sun half: blue sky, crisp black shadows, bright highlights. Ink mono labels, a circular sky fisheye with ray dots, a visibility pass, a ray-count readout and two contrast-ratio readouts.",
+   "transitions": "Wipe from hard sun to overcast; stepped ray count; split to the sunny version",
+   "implementation": [
+    "Sky-dome / environment lighting with the CIE overcast luminance distribution",
+    "Cosine-weighted hemisphere visibility (the full-strength version of ambient occlusion)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): 12 fixed spiral directions per pixel, each a soft LK.shadow, times LK.ao for small-scale contact; contrast measured from a luminance histogram of the frame"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.8,
+   "video": "media/lookovercast.mp4",
+   "posterImg": "atlas/posters/lookovercast.jpg"
+  },
+  {
+   "id": "lookchiaroscuro",
+   "family": "L",
+   "name": "Chiaroscuro",
+   "sub": "One hard light, and darkness for the rest",
+   "era": "1600 —",
+   "origin": "Chiaroscuro (Italian, “light-dark”) names the modelling of form by strong contrast of light and shade, developed in Renaissance drawing and painting. Caravaggio pushed it to tenebrism around 1600: a single high, raking light, figures emerging from near-black, as in The Calling of Saint Matthew (1599–1600). Rembrandt made a gentler, warmer low key his own in the following decades, and portrait photographers still call a key set high and to the side “Rembrandt lighting”. Film noir cinematographers carried the idea into black-and-white cinema in the 1940s; in rendering it is a single shadowed spot light, a high key-to-fill ratio and nothing else.",
+   "works": "The Calling of Saint Matthew (Caravaggio, 1599–1600) · The Night Watch (Rembrandt, 1642) · The Third Man (Carol Reed, cinematography Robert Krasker, 1949)",
+   "tech": [
+    "Single hard spot, inverse-square falloff",
+    "High key-to-fill ratio",
+    "Notan: two-value design"
+   ],
+   "accent": "#e0a458",
+   "motionDNA": "The shared 50° orbit with the Token turning and bobbing, under a lamp that drifts a few degrees and rises and falls a little, so the terminators and the shadow edges creep across the forms. A wipe opens the dark set from the plain reference; then the fill steps down on the beat, 6:1 → 21:1 → 80:1, and the shadows sink from deep brown to black while the lit planes stay put.",
+   "visualDNA": "Near-black umber ground with a faint warm spill on the unseen wall; a warm hard key raking the orange Token, an ivory sphere and a deep blue cube on a dark wooden table, crisp cast shadows, a narrow pool of light that dies within a metre or two, a vignette and fine grain. A notan inset in ink and bone, a key-to-fill readout, and the light zones of the ball labelled on the sphere, then the lamp–form–shadow triangle drawn in dashes.",
+   "transitions": "Wipe from the plain reference to the dark set; the fill steps down on the beat",
+   "implementation": [
+    "Cinematography: one hard key, flags and no fill (negative fill); key-to-fill ratio metered in stops",
+    "Spot light with cone falloff and inverse-square decay, ambient near zero (Blender, Arnold, Unreal)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): point light in a smoothstep cone, inverse-square falloff, hard LK.shadow (k 48), AO-weighted fill stepped down on the beat, floor bounce term, vignette + frame-seeded grain, notan threshold in post"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.2,
+   "video": "media/lookchiaroscuro.mp4",
+   "posterImg": "atlas/posters/lookchiaroscuro.jpg"
+  },
+  {
+   "id": "lookcaustics",
+   "family": "L",
+   "name": "Caustics",
+   "sub": "Light gathered into lines by a curved surface",
+   "era": "1990s —",
+   "origin": "A caustic is the envelope of light rays focused by a curved reflecting or refracting surface; the term was introduced by Ehrenfried Walther von Tschirnhaus in the 1680s, and the bright net on a pool floor is the everyday example. Ordinary ray tracing cannot find caustics, because a diffuse surface does not know which direction a focused light reaches it from. James Arvo’s backward ray tracing (1986) first traced light from the source and stored it on surfaces, and Henrik Wann Jensen’s photon mapping (1996) made it practical. Real-time water renders approximate the same idea with a caustic texture computed from the water’s height field and projected along the light.",
+   "works": "Finding Nemo (Pixar, 2003; animated caustics on the reef and the fish) · Henrik Wann Jensen, photon-mapped caustic renders (1996 onwards) · Crysis (Crytek, 2007; projected water caustics in real time)",
+   "tech": [
+    "Height field → photon density map",
+    "Projection along the light, masked by shadow",
+    "Photons through a glass ball lens"
+   ],
+   "accent": "#7fe3e0",
+   "motionDNA": "The shared 50° camera orbit, under a living net of light: the height field evolves with deep-water dispersion, so the caustic cells form, stretch, merge and split without sliding. A wipe opens the pool from the plain studio; then the ripple amplitude steps up on the beat, 0.40 → 0.75 → 1.05 → 1.40, and the soft dappling sharpens into thin bright lines as the focus of the curved surface comes up to the floor.",
+   "visualDNA": "An aqua pool: a pale sand-blue floor fading into blue-green water, red light absorbed first with distance, the orange Token and blue cube netted with bright white-cyan caustic lines on every face that sees the sun, hard-edged dark shadows where the lines stop, a clear glass sphere with a focused, rippling spot in its shadow. Insets: the height field, the caustic photon map, and a cross-section of parallel rays bending at the surface and gathering into peaks.",
+   "transitions": "Wipe from the plain reference into the pool; ripple amplitude steps up on the beat",
+   "implementation": [
+    "Photon mapping (Jensen) for caustics in offline renderers: V-Ray, RenderMan, Arnold",
+    "Real-time water: caustic texture from the water height field, projected along the light and masked by the shadow map (Unity, Unreal)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): 14-wave seeded spectral height field, 288² photons per depth splatted into 144² periodic maps, light-direction projection × N·L × soft shadow, 53k analytic photons through the IOR 1.5 sphere, one refraction pass for the glass"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8,
+   "video": "media/lookcaustics.mp4",
+   "posterImg": "atlas/posters/lookcaustics.jpg"
+  },
+  {
+   "id": "lookhatching",
+   "family": "L",
+   "name": "Cross-Hatching",
+   "sub": "Tone built from layers of pen strokes",
+   "era": "1500s —",
+   "origin": "Hatching and cross-hatching — building tone from layers of parallel lines — come from engraving and pen drawing: Albrecht Dürer’s woodcuts and engravings of the 1490s–1510s set the standard, and the same vocabulary runs through etching and nineteenth-century wood engraving. In computer graphics, Winkenbach and Salesin’s “Computer-Generated Pen-and-Ink Illustration” (SIGGRAPH 1994) rendered tone with stroke textures, and Praun, Hoppe, Webb and Finkelstein’s “Real-Time Hatching” (SIGGRAPH 2001) introduced tonal art maps, layered hatch textures that blend by tone on the surface.",
+   "works": "Melencolia I (Albrecht Dürer, engraving, 1514) · Winkenbach & Salesin, “Computer-Generated Pen-and-Ink Illustration” (SIGGRAPH 1994) · Melencolia I (Albrecht Dürer, 1514; engraved cross-hatching)",
+   "tech": [
+    "Tone → hatch layers (1, 2, 3 directions)",
+    "Screen-space vs object-space strokes",
+    "G-buffer ink outlines on paper"
+   ],
+   "accent": "#3a3550",
+   "motionDNA": "The shared 50° orbit with the Token turning through the light, so strokes appear and disappear as its faces darken past each threshold. A wipe turns the plain render into ink; the hatch first holds still on the screen while the objects slide under it, then a second wipe pins the strokes to each object so they ride along with the turn; a last wipe lays a pale watercolour wash under the ink.",
+   "visualDNA": "Warm cream paper with faint fibres; near-black violet ink in wobbly, broken strokes at three angles, sparse single hatching on the half-tones, cross-hatching in the core shadows, triple hatching in the cast shadows; firm outlines around every silhouette and crease; at the end a light orange, grey and blue wash. Insets: the tone pass and the tone → layers ramp with its three thresholds.",
+   "transitions": "Wipe from the plain render to ink; wipe from screen-space to object-space strokes; wipe to ink + wash",
+   "implementation": [
+    "Tonal art maps (Praun et al. 2001): hatch textures layered by tone",
+    "Blender: Freestyle / Line Art outlines + hatch textures in a ramp; pen-and-ink shaders in Unity / Unreal",
+    "Canvas 2D + SDF tracer (js/look-kit.js): tone from N·L × shadow + AO sky, three thresholded line layers with width ∝ darkness, wobble and breaks from seeded noise, dominant-axis planar projection for object space, id / depth-plane / normal edges, seeded paper"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.9,
+   "video": "media/lookhatching.mp4",
+   "posterImg": "atlas/posters/lookhatching.jpg"
+  },
+  {
+   "id": "looknormals",
+   "family": "L",
+   "name": "Normals",
+   "sub": "Surface direction stored as colour, then relit",
+   "era": "1978 —",
+   "origin": "Storing a surface direction per pixel goes back to James Blinn’s bump mapping (“Simulation of Wrinkled Surfaces”, SIGGRAPH 1978), which perturbs the normal used for lighting without changing the geometry. Normal maps — the perturbed normal itself, written as rgb = n·0.5 + 0.5 — followed in the late 1990s, baked from detailed models onto simple ones, and tangent space made them reusable on any surface; Doom 3 (2004) put them in front of millions of players. Deferred shading (Deering et al., 1988; the “G-buffer” of Saito and Takahashi, 1990) writes normals, position and albedo to buffers first and lights them afterwards, which is also how compositors relight a render from its normal pass.",
+   "works": "Doom 3 (id Software, 2004; normal-mapped characters and walls) · Half-Life 2 (Valve, 2004; radiosity normal mapping) · Killzone 2 (Guerrilla Games, 2009; deferred shading from a G-buffer)",
+   "tech": [
+    "rgb = n·0.5 + 0.5, world vs view space",
+    "Tangent-space normal map",
+    "Deferred relight from N, P and albedo"
+   ],
+   "accent": "#8f86ff",
+   "motionDNA": "The shared 10 s camera move: a 50° orbit with a slight drift down while the Token bobs and turns. A wipe replaces the plain render with world-space normals, whose colours stay fixed to the scene as the camera moves; a second wipe switches to view-space normals, which follow the camera; normal-map detail fades in on the floor and cube; a last wipe relights the frame from the passes while a point light circles the still life.",
+   "visualDNA": "Pastel red-green-blue surfaces on black: a green floor, a sphere carrying every direction, the lavender of camera-facing faces; bevelled tiles and dimples appear in the colours only. Then a dark studio lit by one warm moving light and a cool rim, the tile bevels and dimples catching it. Legend sphere with axis arrows, a live probe on the Token, ink leader labels, small G-buffer insets.",
+   "transitions": "Wipe from plain to world normals, to view normals, to the deferred relight; normal-map detail cross-fades in",
+   "implementation": [
+    "Normal AOVs (world or camera space) in Arnold, V-Ray, Blender; the Relight node in Nuke",
+    "Tangent-space normal maps baked from high-poly sculpts",
+    "Canvas 2D + SDF tracer (js/look-kit.js): G-buffer normals encoded per pixel, procedural height-field slopes as the normal map, N·L + Blinn relight from the stored position and albedo"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.7,
+   "video": "media/looknormals.mp4",
+   "posterImg": "atlas/posters/looknormals.jpg"
+  },
+  {
+   "id": "lookpixel",
+   "family": "L",
+   "name": "Pixel Art",
+   "sub": "Low resolution, a fixed palette, ordered dither",
+   "era": "1970s —",
+   "origin": "Pixel art grew out of the hard limits of early computer and console graphics: low resolutions shown on large screens and a handful of colours fixed by the hardware, which artists placed pixel by pixel. The term is usually traced to Adele Goldberg and Robert Flegal at Xerox PARC (1982). Ordered dithering, which fakes extra tones by comparing each pixel against a tiled threshold matrix, was formalised by Bryce Bayer at Kodak in 1973; Nintendo’s Game Boy (1989) showed four shades of green. Rendering 3D scenes small and snapping them to a palette, as here, is a later way of getting the look; Lucas Pope’s Return of the Obra Dinn renders its 3D world into dithered 1-bit.",
+   "works": "The Secret of Monkey Island (Lucasfilm Games, 1990) · The Legend of Zelda: Link’s Awakening (Nintendo, 1993; Game Boy, four shades) · Return of the Obra Dinn (Lucas Pope, 2018; dithered 3D)",
+   "tech": [
+    "Low internal res, integer nearest-neighbour upscale",
+    "16-colour palette, Bayer 4 × 4 ordered dither",
+    "One-pixel outline from the object-id buffer"
+   ],
+   "accent": "#29adff",
+   "motionDNA": "The shared 10 s camera move: a 50° orbit with a slight drift down while the Token bobs and turns. On each beat the render resolution halves its way down from 800 × 450 to 160 × 90; the palette wipes in without dither, a second wipe adds Bayer dithering, the outline pass snaps on with the beat, and a last wipe swaps to the four Game Boy greens. Because the scene is re-rendered small every frame, the pixels crawl along edges as the camera moves.",
+   "visualDNA": "Hard square pixels twelve screen pixels wide; PICO-8 colours — orange and brown on the Token, sky blue and navy on the cube, warm white and grey on the floor — with checkered Bayer patterns in every gradient and dark one-pixel outlines; at the end olive-to-pale-green Game Boy tones. Palette swatches marking the colours in use, the 4 × 4 threshold matrix, a resolution readout.",
+   "transitions": "Hard resolution steps on the beat; wipes to the palette, to dithering and to the Game Boy palette; the outline snaps on",
+   "implementation": [
+    "Low-res render target with point (nearest) sampling on upscale",
+    "Ordered dithering against a Bayer index matrix into a fixed palette (shader or post)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): LK.gbuffer at the small size, LK.plain shaded, palette snap + Bayer + id-buffer outline in post, drawn with imageSmoothingEnabled = false"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.1,
+   "video": "media/lookpixel.mp4",
+   "posterImg": "atlas/posters/lookpixel.jpg"
+  },
+  {
+   "id": "lookchromatic",
+   "family": "L",
+   "name": "Chromatic Aberration",
+   "sub": "Colours that refuse to meet: lens fringing in post",
+   "era": "1700s optics · 2000s — as a look",
+   "origin": "Glass bends short wavelengths more than long ones (dispersion), so a simple lens brings blue to a focus closer than red. Isaac Newton concluded in Opticks (1704) that this colour error could not be removed from lenses, one reason he built a reflecting telescope. It was corrected in the 18th century by the achromatic doublet, a converging crown-glass lens paired with a diverging flint-glass one: Chester Moor Hall made the first ones in the 1730s and John Dollond patented and sold them from 1758. Real-time renderers later added the fringe back on purpose as a post effect that imitates imperfect camera lenses, often next to grain and vignetting.",
+   "works": "Isaac Newton, Opticks (1704) · John Dollond’s achromatic doublet (patented 1758) · Alien: Isolation (Creative Assembly, 2014; lens fringing with grain for a 1970s-film look)",
+   "tech": [
+    "Lateral CA: per-channel radial scale",
+    "Longitudinal CA: R and B defocused",
+    "Achromatic doublet as the correction"
+   ],
+   "accent": "#e0362c",
+   "motionDNA": "The shared 10 s camera move: a 50° orbit with a slight drift down while the Token bobs and turns. A wipe brings in the uncorrected lens; on each beat the lateral scale steps up (R ×1.006 → ×1.0185 with B scaled down the same) so the fringes widen toward the frame edges; then longitudinal blur grows on R and B; finally a wipe from the right corrects the lens with a doublet and holds as a split, uncorrected on the left.",
+   "visualDNA": "The plain still life with red and cyan-blue fringes along every silhouette, near zero at the centre and widest at the cube and sphere, then soft purple-green halos on all edges; on the corrected side, clean edges. A loupe with the edge’s pixels and its R, G, B profile, concentric rings giving the fringe width at each radius, and a ray diagram of three wavelengths focusing apart.",
+   "transitions": "Wipe from the ideal lens to the aberrated one; stepped strength on the beat; a wipe to the corrected lens holding as a split",
+   "implementation": [
+    "Lens-distortion / chromatic-aberration post nodes (Nuke, After Effects, game post stacks)",
+    "Per-channel radial scale about the optical centre plus per-channel defocus",
+    "Canvas 2D + SDF tracer (js/look-kit.js): LK.plain shaded, then opts-style post on the float buffer: R and B resampled bilinearly at 1 ± k scale, mixed with box-blurred copies for axial CA"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.3,
+   "video": "media/lookchromatic.mp4",
+   "posterImg": "atlas/posters/lookchromatic.jpg"
+  },
+  {
+   "id": "lookanamorphic",
+   "family": "L",
+   "name": "Anamorphic Flare",
+   "sub": "Horizontal streaks, oval bokeh, 2.39:1",
+   "era": "1953 —",
+   "origin": "Anamorphic lenses squeeze a wide image horizontally onto ordinary film and stretch it back in projection. Henri Chrétien’s Hypergonar of the 1920s was the basis of 20th Century Fox’s CinemaScope, launched with The Robe in 1953; Panavision’s anamorphic lenses later became the standard, and the projected 2.39:1 frame the shape of the widescreen epic. The cylindrical optics leave a signature that spherical lenses do not: bright sources flare into long horizontal streaks, often blue, and out-of-focus highlights turn into vertical ovals. Filmmakers came to court those artefacts, and renderers imitate them in post with thresholded, one-directional blurs.",
+   "works": "The Robe (Henry Koster, 1953; the first CinemaScope feature) · Close Encounters of the Third Kind (Steven Spielberg, 1977; anamorphic flares from the ship’s lights) · Star Trek (J. J. Abrams, 2009; deliberate blue streak flares)",
+   "tech": [
+    "Threshold → horizontal exponential blur",
+    "Vertical oval bokeh (1 : 1.8)",
+    "2× squeeze, 2.39:1 letterbox"
+   ],
+   "accent": "#3d7bff",
+   "motionDNA": "The camera makes the shared 50° orbit around a night-lit still life with a practical bulb hanging behind it. The frame closes to a 2.39:1 letterbox, then a wipe swaps the spherical lens for the anamorphic one: round bokeh stretch into tall ovals and the bulb and speculars flare sideways. The streak length steps up on the beat, the threshold and streak passes appear as insets, the squeezed negative and its desqueeze are shown, and the streak runs across the whole frame for the finish.",
+   "visualDNA": "Near-black studio, the orange Token and the glossy sphere and cube picked out by a hard key and a warm bulb, a row of amber and blue background lights blown into soft tall ovals; thin electric-blue streaks crossing the frame through every hot point, faint oval ghosts mirrored through the centre; black letterbox bars carrying mono readouts.",
+   "transitions": "Letterbox close, then a wipe from spherical to anamorphic lens",
+   "implementation": [
+    "Lens-flare and anamorphic-streak plug-ins (Optical Flares, Sapphire)",
+    "Engine post: bright-pass, one-axis blur, additive composite",
+    "Canvas 2D + SDF tracer (js/look-kit.js): HDR night shading with an analytic bulb, opts.post oval bokeh with depth-tested occlusion and a two-sided exponential streak filter per row"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.2,
+   "video": "media/lookanamorphic.mp4",
+   "posterImg": "atlas/posters/lookanamorphic.jpg"
+  },
+  {
+   "id": "lookhalftone",
+   "family": "L",
+   "name": "Halftone",
+   "sub": "CMYK dot screens at four angles; AM against FM",
+   "era": "1880s —",
+   "origin": "Printing presses cannot print grey: a spot either takes ink or it does not, so continuous tone is broken into dots whose size follows the tone. Photographic halftone screens appeared in the 1880s — Frederic Ives in Philadelphia and Georg Meisenbach in Munich were among their inventors — and newspapers adopted them for photographs around 1900. Colour printing separates the image into cyan, magenta, yellow and black and gives each its own screen angle, conventionally 15°, 75°, 0° and 45°, so the grids form a small rosette instead of a visible moiré. Stochastic or FM screening, which keeps one tiny dot size and varies how many there are, came with digital imagesetters in the 1990s.",
+   "works": "Roy Lichtenstein, Drowning Girl (1963; Ben-Day dots enlarged into the image) · Sigmar Polke, raster paintings (1960s; enlarged halftone dots) · Into the Spider-Verse (Sony Pictures Animation, 2018; halftone shading in an animated feature)",
+   "tech": [
+    "CMYK separation, 70 % black replacement",
+    "Screens at C 15° · M 75° · Y 0° · K 45°",
+    "AM dots vs FM error diffusion"
+   ],
+   "accent": "#e4007d",
+   "motionDNA": "The camera makes the shared 50° orbit. A wipe prints the plain render into four dot screens; the separations and the screen-angle diagram come up, and the screen ruling steps finer on each beat — 20, 14, 10, 7.5 px cells — before settling at 12 for a loupe on the rosette. Then the press runs one ink only: AM dots fill the frame, and a wipe brings in FM stochastic dots for the right half, with a loupe straddling the line.",
+   "visualDNA": "Warm newsprint paper; the orange Token as overlapping magenta and yellow dots, the blue cube as cyan and magenta, shadows built from black dots at 45°, every dot a vector circle that sharpens under the loupe. Paper panels hold the readouts, the four separation plates in their inks, the source render and a protractor of the four screen angles; the coda is black ink alone, ordered dots on the left, grainy stochastic dots on the right.",
+   "transitions": "Wipe from the plain render to print; hard cut on the beat to one ink; split AM | FM",
+   "implementation": [
+    "Photoshop / RIP halftone screening (Bitmap, Color Halftone filters)",
+    "Print workflow: CMYK separation with GCR/UCR, screen angles, stochastic (FM) screening",
+    "Canvas 2D + SDF tracer (js/look-kit.js): plain render sampled bilinearly per lattice point, one arc path per ink composited with multiply; FM by serpentine Floyd–Steinberg on a 3 px grid"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.8,
+   "video": "media/lookhalftone.mp4",
+   "posterImg": "atlas/posters/lookhalftone.jpg"
+  },
+  {
+   "id": "lookinfrared",
+   "family": "L",
+   "name": "Infrared",
+   "sub": "False colour: a thermal map and IR colour film",
+   "era": "1940s —",
+   "origin": "False-colour imaging shows data the eye cannot see by assigning it colours. Thermal cameras record long-wave infrared, roughly 8–14 µm, which every surface emits according to its temperature and emissivity; early military and medical thermographs of the mid-20th century gave way to uncooled microbolometer cameras from the 1990s, whose palettes — ironbow, rainbow, white-hot — are now a familiar look. Infrared colour film works differently: Kodak’s Ektachrome Infrared, later sold as Aerochrome, was developed during the Second World War to detect camouflage, recording near-infrared reflectance as red, red as green and green as blue behind a yellow filter, so living foliage turned red and pink. Both are mappings, which is what this film does with render data.",
+   "works": "Predator (John McTiernan, 1987; the creature’s thermal vision) · Richard Mosse, The Enclave (2013; Aerochrome infrared film in the eastern Congo) · Richard Mosse, Incoming (2017; military thermal camera footage)",
+   "tech": [
+    "Temperature assigned from render data",
+    "Ironbow / rainbow / white-hot palettes, isotherm",
+    "IR → R, R → G, G → B channel shift"
+   ],
+   "accent": "#ff7a1a",
+   "motionDNA": "The camera makes the shared 50° orbit. A wipe turns the visible render into a thermal image; the scale bar and four spot meters come up one per half beat while the Token warms from 30 to nearly 40 °C; the palette steps from ironbow to rainbow to white-hot and back on the beat, an isotherm above 35 °C lights up, then a second wipe switches to infrared colour film and the film ends on three bands: visible, thermal, infrared.",
+   "visualDNA": "A thermal still life in ironbow: the Token glowing yellow-white with cooler purple edges, warm lit faces against cold shadowed floor, hot contact rings under the sphere and cube, a black cold backdrop; camera-style brackets, crosshair spot meters with °C readouts, a vertical scale bar and input-pass insets. Then a pink-white world with a crimson cube and a green Token, labelled channel by channel.",
+   "transitions": "Wipe from visible to thermal, hard palette swaps on the beat, wipe to IR film, three comparison bands",
+   "implementation": [
+    "Thermal camera palettes and isotherms (FLIR-style ironbow LUTs)",
+    "False-colour channel remapping (Aerochrome emulation in Photoshop or Resolve)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): per-pixel temperature from id, N·L × shadow, contact and heat-source falloffs, 256-entry palette LUT, seeded sensor noise; IR film as a channel swap of the plain lighting"
+   ],
+   "reproducibility": "Fully procedural (sensor noise seeded by pixel and frame)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.4,
+   "video": "media/lookinfrared.mp4",
+   "posterImg": "atlas/posters/lookinfrared.jpg"
   }
  ],
  "built": "2026-11-03"
