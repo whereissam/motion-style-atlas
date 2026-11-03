@@ -2,7 +2,7 @@
 
 **[Browse the atlas →](https://whereissam.github.io/motion-style-atlas/)** · [Download the full reels](https://github.com/whereissam/motion-style-atlas/releases/tag/v1)
 
-A catalogue of 157 motion-design styles plus a Technique Atlas and a growing set of Rendering Looks, from Bauhaus Geometry and Saul Bass cut-paper to Slit-scan, VHS and Korean Minhwa. Each style is a 10-second film in which every frame and every sound is generated in code: Canvas 2D for the picture, Web Audio for the score. There is no footage and there are no samples.
+A catalogue of 157 motion-design styles plus a Technique Atlas, a set of Rendering Looks and a growing set of Narrative Formats, from Bauhaus Geometry and Saul Bass cut-paper to Slit-scan, VHS and Korean Minhwa. Each style is a 10-second film in which every frame and every sound is generated in code: Canvas 2D for the picture, Web Audio for the score. There is no footage and there are no samples.
 
 Every style has:
 
@@ -22,8 +22,9 @@ Every style has:
 | E | Experimental & Generative | J | Social & Commercial |
 | | | K | Technique Atlas |
 | | | L | Rendering Looks |
+| | | M | Narrative Formats |
 
-Family K is different: each film applies one motion technique (Elastic, Orbit, Cloth…) to the same subject, the Token from `js/technique-kit.js`, on the same stage and beat bed, so only the motion changes. Family L does the same for rendering: every look film renders the same 3D still life (the Token, a sphere and a cube, traced by `js/look-kit.js`) on the same camera move, so only the look changes.
+Family K is different: each film applies one motion technique (Elastic, Orbit, Cloth…) to the same subject, the Token from `js/technique-kit.js`, on the same stage and beat bed, so only the motion changes. Family L does the same for rendering: every look film renders the same 3D still life (the Token, a sphere and a cube, traced by `js/look-kit.js`) on the same camera move, so only the look changes. Family M stars the same Token in a different narrative format each time (title sequence, trailer, ten-second ad, tutorial…), with a structure strip from `js/format-kit.js` showing the format's beats.
 
 `todo.md` lists what's built and what's queued.
 
@@ -38,6 +39,7 @@ js/engine.js          shared timing, easing, drawing helpers, Web Audio instrume
 js/films-*.js         the films, three or so per file, grouped by batch
 js/technique-kit.js   shared Token, stage, caption and beat bed for the Technique Atlas (family K)
 js/look-kit.js        shared 3D scene, camera, SDF tracer and bed for the Rendering Looks (family L)
+js/format-kit.js      shared structure strip, caption and framing helpers for the Narrative Formats (family M)
 js/cards.js           chapter cards plus the reel's opening (atlas-open) and closing (atlas-end)
 js/atlas-data.js      families, running order (MG.ORDER), best-of list (MG.REEL), metadata for the original 22
 atlas/atlas-data.js   generated: everything atlas.html reads

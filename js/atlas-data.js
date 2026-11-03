@@ -16,6 +16,7 @@
     J: { name: 'Social & Commercial', short: 'Social & Commercial' },
     K: { name: 'Technique Atlas', short: 'Techniques' },
     L: { name: 'Rendering Looks', short: 'Looks' },
+    M: { name: 'Narrative Formats', short: 'Formats' },
   };
 
   // Running order: grouped by family. Ids without a film yet are skipped everywhere.
@@ -36,6 +37,7 @@
     'techpush', 'techglitch', 'techeasing', 'techarcs', 'techmotionpath', 'techpan', 'techwhippan', 'techflocking', 'techik', 'techpuppetpin', 'techreaction', 'techlsystem', 'techbloom', 'techloop', 'techtrimpaths',
     'lookclay', 'lookchrome', 'lookglass', 'lookmatcap', 'lookstudio', 'lookrim', 'lookgolden', 'lookvolumetric', 'looktoon', 'lookao', 'lookxray', 'lookwire', 'lookfog', 'lookgrade', 'lookgrain',
     'looksss', 'lookiridescent', 'lookclearcoat', 'lookbrushed', 'lookneon', 'lookovercast', 'lookchiaroscuro', 'lookcaustics', 'lookhatching', 'looknormals', 'lookpixel', 'lookchromatic', 'lookanamorphic', 'lookhalftone', 'lookinfrared',
+    'formattitles', 'formattrailer', 'formatcoldopen', 'formatrecap', 'formatcredits', 'formatad', 'formatdemo', 'formatident', 'formatteaser', 'formattutorial', 'formatproblem', 'formatbeforeafter', 'formattimeline', 'formatstory', 'formatmanifesto',
   ];
 
   // Curated best-of reel: a representative spread across every family.
