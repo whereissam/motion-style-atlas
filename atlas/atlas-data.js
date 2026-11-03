@@ -40,6 +40,14 @@ window.ATLAS = {
   "J": {
    "name": "Social & Commercial",
    "short": "Social & Commercial"
+  },
+  "K": {
+   "name": "Technique Atlas",
+   "short": "Techniques"
+  },
+  "L": {
+   "name": "Rendering Looks",
+   "short": "Looks"
   }
  },
  "items": [
@@ -491,6 +499,122 @@ window.ATLAS = {
    "posterImg": "atlas/posters/grunge.jpg"
   },
   {
+   "id": "artnouveau",
+   "family": "A",
+   "name": "Art Nouveau",
+   "sub": "The Whiplash Line",
+   "era": "1890 — 1910",
+   "origin": "Art Nouveau took its name from Siegfried Bing’s Paris shop, the Maison de l’Art Nouveau (1895), and spread across Europe as Jugendstil, Secession and Modernisme: a total style that let one living line run through posters, ironwork, glass, furniture and buildings. Alphonse Mucha’s posters framed women in halos and flowing hair, Victor Horta and Hector Guimard bent iron into plant stems, and Tiffany Studios set opalescent glass in lead.",
+   "works": "Gismonda poster (Alphonse Mucha, 1894) · Job cigarette-paper poster (Mucha, 1896) · Hôtel Tassel, Brussels (Victor Horta, 1893) · Paris Métro entrances (Hector Guimard, 1900)",
+   "tech": [
+    "Grown whiplash ribbons",
+    "Pane-by-pane leaded glass",
+    "Ink-line draw-on"
+   ],
+   "accent": "#c79738",
+   "motionDNA": "Nothing is placed, everything grows: stalks rise and bow over, shoots uncurl, leaves unfold along vines, hair pours out in waves that travel down each strand and wind into spirals, while the whole poster breathes with a slow sway and the light moves through the glass.",
+   "visualDNA": "Muted olive, sage, ochre, dusty rose and gold on cream, with brown ink outlines of varying weight; a woman in profile against a circular halo, macaroni curls, lilies and poppies, verdigris cast iron with orange glass lamps, a gilt mosaic band and a rounded title cartouche.",
+   "transitions": "Border rule draw-on, organic growth from the frame edges, top-down glass lighting, ink-outline reveal, letter-by-letter rise",
+   "implementation": [
+    "Lithographic poster artwork, hand-inked",
+    "Illustrator + After Effects shape growth",
+    "Canvas 2D (procedural whiplash ribbons)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/artnouveau.mp4",
+   "posterImg": "atlas/posters/artnouveau.jpg"
+  },
+  {
+   "id": "futurism",
+   "family": "A",
+   "name": "Futurism",
+   "sub": "Speed, Noise and the Machine",
+   "era": "1909 — 1944",
+   "origin": "Italian Futurism began with F. T. Marinetti’s founding manifesto on the front page of Le Figaro on 20 February 1909, which declared a roaring motor car more beautiful than the Victory of Samothrace. Painters and sculptors such as Giacomo Balla, Umberto Boccioni, Gino Severini and Carlo Carrà borrowed the multiple exposures of Marey’s and Muybridge’s chronophotography to paint motion itself, Luigi Russolo built noise machines, and Marinetti blew the printed page apart into words-in-freedom.",
+   "works": "Manifesto of Futurism (F. T. Marinetti, Le Figaro, 1909) · Dynamism of a Dog on a Leash (Giacomo Balla, 1912) · Unique Forms of Continuity in Space (Umberto Boccioni, 1913) · The Art of Noises (Luigi Russolo, 1913) · Zang Tumb Tuuum (Marinetti, 1914)",
+   "tech": [
+    "Chronophotographic echoes",
+    "Force-line rays and planes",
+    "Words-in-freedom slams"
+   ],
+   "accent": "#d22a1c",
+   "motionDNA": "Motion is shown as many instants at once: limbs fan into a dozen positions, a train drags a wake of its own earlier bodies, a striding figure leaves ghost copies, rays and arcs speed up with the subject, and words fly in on diagonals and land with a jolt.",
+   "visualDNA": "Cream paper splintered by translucent orange, ochre and steel-blue planes and black-and-red force lines; dark machine silhouettes, burnished bronze, and a typographic free-for-all of condensed grotesques, Bodoni italics and typewriter capitals at every size and angle.",
+   "transitions": "Needle-bundle wipe, train rush-through, figure stride-in, word slams from every side, black diagonal title band",
+   "implementation": [
+    "Oil on canvas, bronze and letterpress",
+    "After Effects echo and directional blur",
+    "Canvas 2D (time-offset re-draws)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "media/futurism.mp4",
+   "posterImg": "atlas/posters/futurism.jpg"
+  },
+  {
+   "id": "popart",
+   "family": "A",
+   "name": "Pop Art",
+   "sub": "Ben-Day Dots and Silkscreen",
+   "era": "1956 — 1970",
+   "origin": "Pop Art took mass culture as its subject and mechanical printing as its look: the term came from London’s Independent Group, where Richard Hamilton made his 1956 collage of the consumer home, and in New York Roy Lichtenstein painted enlarged comic panels dot by Ben-Day dot while Andy Warhol silkscreened photographs in repeating grids with flat, off-register colour.",
+   "works": "Just what is it that makes today’s homes so different, so appealing? (Richard Hamilton, 1956) · Look Mickey (Roy Lichtenstein, 1961) · Campbell’s Soup Cans (Andy Warhol, 1962) · Marilyn Diptych (Warhol, 1962) · Drowning Girl (Lichtenstein, 1963) · Whaam! (Lichtenstein, 1963)",
+   "tech": [
+    "Enlarged Ben-Day dots",
+    "Off-register silkscreen key",
+    "Serial grid repetition"
+   ],
+   "accent": "#ff4fa3",
+   "motionDNA": "Mechanical and serial: a single dot pulls back into a whole painting, a squeegee drags the next image over the last, prints are pulled one after another outward from the first, each with its own slip of registration and ink, and the camera keeps backing away until the image is an object on a gallery wall.",
+   "visualDNA": "Primary red, yellow and blue with heavy black outlines and enlarged dot screens for Lichtenstein; fluorescent pink, orange, turquoise, lime and silver flats under a slipped black photo screen for Warhol; repetition in a tight grid, all on raw linen in a white-cube gallery.",
+   "transitions": "Pull-back from a single dot, squeegee wipe, print-by-print grid growth, dolly-out to the gallery wall",
+   "implementation": [
+    "Silkscreen and oil on canvas, stencilled dot screens",
+    "Illustrator + After Effects halftone and offsets",
+    "Canvas 2D (pre-printed flats and key, time-staggered pulls)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/popart.mp4",
+   "posterImg": "atlas/posters/popart.jpg"
+  },
+  {
+   "id": "neon",
+   "family": "A",
+   "name": "Neon Signage",
+   "sub": "Bent Glass, Noble Gas, Night",
+   "era": "1923 — 1965",
+   "origin": "Neon signs are hand-bent glass tubes filled with low-pressure gas and lit by a high-voltage transformer: neon glows red-orange, argon with a drop of mercury glows blue, and phosphor coatings give every other colour. Georges Claude showed the first neon tubes in Paris in 1910 and the signs reached America in 1923; by the 1950s the Young Electric Sign Company had turned Las Vegas into a street of animated cabinets, chaser bulbs and sequenced arrows, and Hong Kong’s Nathan Road hung its signs in canyons over the traffic. The Neon Museum in Las Vegas now keeps the retired ones.",
+   "works": "Neon tube lighting (Georges Claude, Paris Motor Show, 1910) · Vegas Vic (Young Electric Sign Company, 1951) · Welcome to Fabulous Las Vegas sign (Betty Willis, 1959) · The Neon Museum, Las Vegas (opened 2012)",
+   "tech": [
+    "Pre-blurred tube halos",
+    "Seeded ignition flicker",
+    "Sliced puddle reflection"
+   ],
+   "accent": "#ff3f9e",
+   "motionDNA": "Nothing slides: light is the only thing that moves. Tubes strike with a stutter and argon warms up slowly, chaser bulbs step round the cabinet, the arrow builds segment by segment and blanks, a three-state figure jumps between fixed poses, a faulty tube sputters and dies, while rain falls and the reflections ripple in the puddles.",
+   "visualDNA": "Saturated pink, argon blue, red, yellow and turquoise light with white-hot tube cores and wide soft halos, against wet red brick and dark pavement; script and block lettering in a single continuous tube, electrodes and glass standoffs, a painted Googie sheet-metal cabinet ringed with incandescent bulbs.",
+   "transitions": "Element-by-element ignition, sequenced arrow chase, three-state flasher animation, failing-tube sputter",
+   "implementation": [
+    "Hand-bent glass tube, GTO wire and flasher drums",
+    "After Effects glow + Saber on traced lettering",
+    "Canvas 2D (offscreen halo sprites, light spill multiplied into an albedo map)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.2,
+   "video": "media/neon.mp4",
+   "posterImg": "atlas/posters/neon.jpg"
+  },
+  {
    "id": "swiss",
    "family": "B",
    "name": "Swiss Kinetic Type",
@@ -844,6 +968,93 @@ window.ATLAS = {
    "poster": 9.4,
    "video": "media/typocollage.mp4",
    "posterImg": "atlas/posters/typocollage.jpg"
+  },
+  {
+   "id": "lyric",
+   "family": "B",
+   "name": "Lyric Video",
+   "sub": "Every Word on the Beat",
+   "era": "1987 —",
+   "origin": "A music video whose picture is the song’s own words, each one landing on the syllable it is sung on. Prince’s \"Sign o’ the Times\" (1987) — animated words and pulsing shapes in place of the singer — set the template; YouTube turned it into a release ritual in the 2010s, with lyric videos posted before the official clip, and Katy Perry’s \"Roar\" (2013) swapped the words for emoji on a phone screen. It descends from the bouncing-ball sing-along cartoon and karaoke’s colour wipe.",
+   "works": "Song Car-Tunes, the bouncing-ball sing-alongs (Fleischer Studios, 1924 —) · \"Subterranean Homesick Blues\" cue cards (Bob Dylan, in D. A. Pennebaker’s Dont Look Back, 1967) · \"Sign o’ the Times\" (Prince, dir. Bill Konersman, 1987) · \"Roar\" lyric video (Katy Perry, 2013)",
+   "tech": [
+    "Syllable-timed karaoke wipe",
+    "Pitch-tracking baselines",
+    "Formant-synth vocal"
+   ],
+   "accent": "#ffc53d",
+   "motionDNA": "Time is the lyric sheet: nothing moves until it is sung, then each syllable wipes across its letters over the length of its note; words sit higher or lower with their pitch, held notes stretch and tremble with the vibrato, short notes pop with a spring, and every line changes treatment so the next verse reads as new.",
+   "visualDNA": "Big display type in neon outline, wet marker and heavy grotesk over soft streetlight bokeh, a new ground colour per verse, rebus glyphs (an eye for \"I\", \"2\", \"U\") and drawn emoji-style icons on the chorus, with a pitch trace of the voice running underneath.",
+   "transitions": "Line changes on the downbeat: letters float off, fall away or scatter; one hard cut to yellow for the chorus; the chorus squashes flat into the sung title",
+   "implementation": [
+    "After Effects text animators keyed to a lyric timing sheet",
+    "Timestamped lyric files (LRC) or forced alignment against the vocal stem",
+    "Canvas 2D: one syllable table drives the per-letter wipes, the pitch trace and a formant-synth voice"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.62,
+   "video": "media/lyric.mp4",
+   "posterImg": "atlas/posters/lyric.jpg"
+  },
+  {
+   "id": "splitflap",
+   "family": "B",
+   "name": "Split-flap",
+   "sub": "The Departure Board Clatter",
+   "era": "1956 — 1990",
+   "origin": "A split-flap display shows each character on a drum of hinged half-cards: a motor turns the drum, and each upper flap falls over the hinge to reveal the next letter, so a whole board cascades through the alphabet with a clatter. Solari di Udine made the form famous, from the Cifra 3 flap clock designed by Gino Valle (1956) to the Dators departure boards that hung in railway stations and airports around the world until LCD screens replaced most of them.",
+   "works": "Cifra 3 clock (Gino Valle for Solari di Udine, 1956) · Solari Dators railway and airport boards",
+   "tech": [
+    "Hinged half-tile flaps",
+    "Sliced perspective foreshortening",
+    "Per-unit drum scheduling"
+   ],
+   "accent": "#f0b429",
+   "motionDNA": "Everything changes by falling: each unit steps forward through a fixed drum, the top half dropping over the hinge with gravity and a small slap, so new text never appears directly but arrives through every letter in between, rows cascading in staggered waves at different speeds.",
+   "visualDNA": "White condensed capitals on matte black flaps split by a dark hinge line, grouped in columns for time, destination, platform and remarks inside a dark grey housing, with an amber header and a small flap clock; dim station light and a soft sheen across the board.",
+   "transitions": "Macro pull-back, per-row flap cascades, a row roll-up, a full-board resolve into words",
+   "implementation": [
+    "Electromechanical flap units on a stepper-driven drum",
+    "After Effects card-flip rigs per character",
+    "Canvas 2D (glyph atlas, strip-sliced flaps, deterministic drum state)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "media/splitflap.mp4",
+   "posterImg": "atlas/posters/splitflap.jpg"
+  },
+  {
+   "id": "concrete",
+   "family": "B",
+   "name": "Concrete Poetry",
+   "sub": "Words Arranged as Image",
+   "era": "1953 — 1970",
+   "origin": "Concrete poetry treats the word as a material object, arranging letters and words on the page so that their placement, repetition and white space make the meaning instead of syntax. Eugen Gomringer’s constellations in Switzerland and the Brazilian Noigandres group of Augusto and Haroldo de Campos and Décio Pignatari named it in the 1950s, drawing on Apollinaire’s picture-poems; Ian Hamilton Finlay later carried it into prints, stone and a whole garden.",
+   "works": "Calligrammes (Guillaume Apollinaire, 1918) · Noigandres magazine (Augusto de Campos, Haroldo de Campos, Décio Pignatari, from 1952) · silencio (Eugen Gomringer, 1954) · Little Sparta garden (Ian Hamilton Finlay, from 1966)",
+   "tech": [
+    "Letter-level choreography",
+    "Words as picture elements",
+    "Gravity-timed rain of type"
+   ],
+   "accent": "#d33b25",
+   "motionDNA": "Sparse, exact and quiet: words are placed one at a time and then left alone, a held beat of nothing separates each poem, letters fall with gravity and stretch into streaks, words ride waves and rise as a sun, and every picture ebbs back into the white page before the next begins.",
+   "visualDNA": "Black lowercase geometric sans and typewriter type on warm white paper with a single red accent; grids, slants, rings and rows of one repeated word, generous margins, and an empty centre that carries as much meaning as the letters around it.",
+   "transitions": "Word-by-word setting, letters dripping off the page, typed horizon wipe, ebb to white",
+   "implementation": [
+    "Typewriter and letterpress on paper",
+    "After Effects per-character text animators",
+    "Canvas 2D (per-glyph layout, gravity-timed falls)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.7,
+   "video": "media/concrete.mp4",
+   "posterImg": "atlas/posters/concrete.jpg"
   },
   {
    "id": "rubberhose",
@@ -1349,6 +1560,95 @@ window.ATLAS = {
    "posterImg": "atlas/posters/animemg.jpg"
   },
   {
+   "id": "linocut",
+   "family": "C",
+   "name": "Linocut",
+   "sub": "Carved, Inked and Pulled",
+   "era": "1918 —",
+   "origin": "Relief printmaking set in motion: every white line is a groove gouged out of a wood or linoleum block, ink is rolled over what is left, and each frame is a fresh pull of paper. Frans Masereel’s wordless woodcut novels (from 1918) and Lynd Ward’s Gods’ Man (1929) told whole stories in successive prints, and Berthold Bartosch animated Masereel’s The Idea as L’Idée (1932) in cut-outs on layered glass; today linocut is cut frame by frame, or faked with carved textures, for music videos and title sequences.",
+   "works": "25 Images of a Man’s Passion (Frans Masereel, 1918) · The Sun (Frans Masereel, 1919) · The Idea (Frans Masereel, 1920) · Gods’ Man (Lynd Ward, 1929) · L’Idée (Berthold Bartosch, 1932; score by Arthur Honegger)",
+   "tech": [
+    "Tapered gouge-mark carving",
+    "Two-block colour registration",
+    "One print per frame, on 8 fps"
+   ],
+   "accent": "#c2361f",
+   "motionDNA": "Motion as a stack of prints: the picture steps at 8 drawings a second, and every pull boils slightly — the ink takes differently, the paper sits a hair off; light is not painted but cut, so dawn arrives as gouges widening into rays, and a second colour registers in from slightly off its pins before it locks.",
+   "visualDNA": "Dense black ink on cream laid paper with carved white tapered gouges — hatched skies, ray bursts, cobbled perspective, a figure isolated by a cut halo — a single red second block for the sun, rolled-ink mottling, registration crosses and pencil numbering in the margin.",
+   "transitions": "A press roller passes to reveal the first pull; prints step on 8 fps; the sheet is pulled away and the title block is carved pull by pull",
+   "implementation": [
+    "Hand-cut lino or woodblocks, one pulled print per frame (rostrum-shot)",
+    "Cut-paper or glass-plane multiplane imitating woodcut (Bartosch)",
+    "After Effects / Procreate with carved-texture brushes and stepped time",
+    "Canvas 2D: ink block filled then carved with destination-out tapered gouges, mottle punched per pull, red block multiplied under black with animated misregistration"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.4,
+   "video": "media/linocut.mp4",
+   "posterImg": "atlas/posters/linocut.jpg"
+  },
+  {
+   "id": "cutout",
+   "family": "C",
+   "name": "Cut-out",
+   "sub": "Jointed Paper Under the Camera",
+   "era": "1917 —",
+   "origin": "Cut-out animation moves flat pieces of paper or card, pinned or hinged at the joints, a frame at a time beneath a downward-looking rostrum camera. Quirino Cristiani made the first animated feature, El Apóstol (1917), this way; Terry Gilliam glued Victorian engravings into hinged absurdities for Monty Python; Yuri Norstein spread his cut-outs over tiers of glass with tracing-paper fog between them; and South Park’s first episode (1997) was shot in real construction paper before the look moved into software.",
+   "works": "Monty Python’s Flying Circus animations (Terry Gilliam, BBC, 1969–74) · Fantastic Planet (René Laloux & Roland Topor, 1973) · Hedgehog in the Fog (Yuri Norstein, Soyuzmultfilm, 1975) · Tale of Tales (Yuri Norstein, 1979) · South Park, first episode (Trey Parker & Matt Stone, Comedy Central, 1997)",
+   "tech": [
+    "Brass-pinned paper joints",
+    "Multiplane glass, tracing-paper fog",
+    "Stepped on twos (12 fps)"
+   ],
+   "accent": "#c2452d",
+   "motionDNA": "Every move is a piece pushed a few millimetres and shot again: limbs swing on their pins instead of bending, the walk is a crude pendulum cycle on twos, the head tilts as a rigid disc and expressions change by swapping in a replacement face; the planes slide past at their own speeds, and each piece settles a hair off where it lay the frame before.",
+   "visualDNA": "Matte construction paper with fibre and slightly ragged scissor-cut edges, soft shadows between pieces and between glass plates, brass split pins at the joints, a dusk palette of slate blue, pine green and earth with a red coat, mustard cap and teal scarf, and tracing-paper fog drifting between the layers.",
+   "transitions": "Empty sky → plates slid in one by one → puppet assembled and pinned → walk on twos with a multiplane truck → owl flaps in → replacement face → title tiles set down letter by letter",
+   "implementation": [
+    "Rostrum camera & multiplane glass",
+    "Toon Boom Harmony / Moho cut-out rigs",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (paper texture, puppets and plates are all generated in code)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/cutout.mp4",
+   "posterImg": "atlas/posters/cutout.jpg"
+  },
+  {
+   "id": "lofi",
+   "family": "C",
+   "name": "Lo-fi Loop",
+   "sub": "Beats to Study To",
+   "era": "2017 —",
+   "origin": "The “lofi hip hop radio – beats to relax/study to” livestreams turned a few seconds of anime-style animation into a round-the-clock seamless loop: a student writing by a window at night while dusty, swung hip-hop plays. ChilledCow (later Lofi Girl) first looped Shizuku from Studio Ghibli’s Whisper of the Heart (1995), then commissioned an original studying girl drawn by Juan Pablo Machado; the sound descends from J Dilla’s Donuts and Nujabes’s work on Samurai Champloo.",
+   "works": "lofi hip hop radio – beats to relax/study to (ChilledCow / Lofi Girl, YouTube, 2017–) · Samurai Champloo soundtrack (Nujabes, Fat Jon, Force of Nature, Tsutchie, 2004) · Donuts (J Dilla, 2006) · Whisper of the Heart (Yoshifumi Kondō, Studio Ghibli, 1995)",
+   "tech": [
+    "Seamless loop, whole-number cycles",
+    "Lamp & window rim lights on cels",
+    "VHS-soft blur, lifted blacks, grain"
+   ],
+   "accent": "#ee6a7d",
+   "motionDNA": "Almost nothing moves and everything breathes: a nod on every beat, a pencil hand scribbling, steam curling off the mug, rain sliding down the glass, a sleeping cat flicking its tail, city windows blinking — each a whole number of cycles in the loop, so the last frame runs straight into the first.",
+   "visualDNA": "An indigo night room split between a warm desk lamp and a cold rainy window, flat anime cel colour with soft gradients, warm and blue rim lights on hair, hoodie and fur, fairy lights and blurred city bokeh, all under a soft VHS grade with purple-lifted blacks, scanlines and grain.",
+   "transitions": "None: one endless shot; the last frame cuts back to the first",
+   "implementation": [
+    "Hand-drawn loop (Photoshop, Clip Studio, TVPaint)",
+    "After Effects loopOut() expressions",
+    "24/7 YouTube livestream",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (an original character; scene, loop and grade generated in code)",
+   "loopable": true,
+   "dur": 10,
+   "poster": 4.7,
+   "video": "media/lofi.mp4",
+   "posterImg": "atlas/posters/lofi.jpg"
+  },
+  {
    "id": "mograph",
    "family": "D",
    "name": "MoGraph",
@@ -1708,6 +2008,95 @@ window.ATLAS = {
    "poster": 9.4,
    "video": "media/character3d.mp4",
    "posterImg": "atlas/posters/character3d.jpg"
+  },
+  {
+   "id": "photoreal",
+   "family": "D",
+   "name": "Photoreal CGI",
+   "sub": "Light, Simulated",
+   "era": "1993 —",
+   "origin": "Computer imagery made to be mistaken for photography: physically based materials lit by simulated light, with global illumination, soft shadows, depth of field and motion blur from a virtual camera. ILM’s T. rex in Jurassic Park (1993) made it a blockbuster tool, Pixar’s RenderMan rendered a generation of effects films, and path tracers (Arnold, RenderMan RIS, Cycles) made physically correct light the default in the 2010s; Alex Roman’s The Third & The Seventh (2009) showed one artist could make architecture indistinguishable from film.",
+   "works": "The Road to Point Reyes (Lucasfilm Computer Division, 1983) · Jurassic Park (Steven Spielberg; ILM, 1993) · RenderMan (Pixar, 1988 —) · The Third & The Seventh (Alex Roman, 2009) · Gravity (Alfonso Cuarón; Framestore, 2013)",
+   "tech": [
+    "Ray-traced soft shadows + one-bounce GI",
+    "Bucket and progressive render passes",
+    "Depth of field + motion blur"
+   ],
+   "accent": "#f2b56b",
+   "motionDNA": "The camera behaves like a real one: a slow dolly and a measured focus pull, a 180°-ish shutter that smears only what moves, nothing faster than physics allows; the reveal is the render itself — buckets spiralling out, then noise resolving into light as samples double.",
+   "visualDNA": "A quiet still life under a window: a hard window-shaped sun patch with muntin shadows on oak, soft skylight, warm bounce light bleeding up the wall, a chrome sphere mirroring the room, glazed and terracotta ceramics with Fresnel sheen, filmic tonemapping, shallow depth of field, bloom, vignette and grain, scope letterbox.",
+   "transitions": "Render-view to film: the HUD and bucket brackets fade as the image converges, scope bars slide in and the shot starts to move",
+   "implementation": [
+    "Pixar RenderMan / Arnold / V-Ray / Cycles path tracing with PBR shaders",
+    "Compositing in Nuke: lens distortion, DOF, motion blur, grain matching",
+    "Canvas 2D: a 640×360 ray tracer (analytic sphere and cylinder hits, window-masked sun, soft occlusion, chrome and clear-coat reflection rays, ACES tonemap) upscaled, with depth-blended blur for DOF and stochastic shutter samples for motion blur"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/photoreal.mp4",
+   "posterImg": "atlas/posters/photoreal.jpg"
+  },
+  {
+   "id": "holographic",
+   "family": "D",
+   "name": "Holographic",
+   "sub": "Thin-film Foil and Liquid Chrome",
+   "era": "2016 — 2020",
+   "origin": "A late-2010s look in which every surface seems coated in oil-slick foil: thin-film interference colour that shifts with the viewing angle, liquid chrome blobs, prismatic light and inflated blobby 3D type, rendered in Cinema 4D with Octane or Redshift and spread across album art, fashion, packaging and brand identities. It borrowed holographic stickers, trading-card foil and mirror-polished sculpture and fed straight into the Y2K-revival and \"acid graphics\" moods of the early 2020s.",
+   "works": "Newton’s rings (Isaac Newton, Opticks, 1704) · Balloon Dog (Jeff Koons, 1994–2000) · Cloud Gate (Anish Kapoor, Chicago, 2004–06) · Pokémon Trading Card Game holo cards (Wizards of the Coast, 1999)",
+   "tech": [
+    "Thin-film colour from normal · view",
+    "Metaball liquid morphing to type",
+    "Inflated text height field"
+   ],
+   "accent": "#c58cff",
+   "motionDNA": "Slow, sensual and liquid: the foil tilts and the colours slide across it before anything moves, chrome swells, stretches, pinches into beads and re-merges with springy overshoot, the blobs pour into type, and light sweeps travel across every surface on long eases while stickers slap down with a snap.",
+   "visualDNA": "Pastel thin-film rainbows (pink, mint, lilac, butter yellow) on crumpled foil and soft gradients; mirror chrome with hard studio horizons and white softbox highlights tinted by iridescence; fat rounded type inflated like a balloon; die-cut holographic stickers with white borders; spectral prism fans.",
+   "transitions": "Foil hero tilt → creases relax into gradient → drop rises and splits → beads morph into type → prism sweep + sticker slaps → title",
+   "implementation": [
+    "Cinema 4D + Octane / Redshift thin-film shaders",
+    "Blender Cycles thin-film / iridescence nodes",
+    "Photoshop gradient maps and foil textures",
+    "Canvas 2D: per-pixel metaball + inflated-text height field (768×432, upscaled), thin-film interference per channel from the normal and view vector"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/holographic.mp4",
+   "posterImg": "atlas/posters/holographic.jpg"
+  },
+  {
+   "id": "pointcloud",
+   "family": "D",
+   "name": "Point Cloud",
+   "sub": "LiDAR Scans, Millions of Points",
+   "era": "2008 —",
+   "origin": "The world shown as it is measured: millions of laser returns from LiDAR scanners or photogrammetry drawn as bare points, with no surfaces between them, coloured by intensity, height or range. Radiohead’s “House of Cards” video (James Frost, 2008), shot with a Velodyne scanner and structured light instead of cameras, made the look famous; survey-grade scans of cities and ruins by studios such as ScanLAB Projects, the self-driving-car sensor view and, since 2023, Gaussian-splat captures have kept it the visual shorthand for machine vision.",
+   "works": "House of Cards (Radiohead, dir. James Frost, 2008) · Rome’s Invisible City (ScanLAB Projects for BBC One, 2015) · 3D Gaussian Splatting for Real-Time Radiance Field Rendering (Kerbl, Kopanas, Leimkühler & Drettakis, SIGGRAPH 2023)",
+   "tech": [
+    "Ray-cast spinning 22-beam LiDAR",
+    "Arrival-time reveal of 200k points",
+    "z-buffered point splats, range colour"
+   ],
+   "accent": "#3fe0ff",
+   "motionDNA": "The image accumulates rather than moves: rings of returns sweep out ten times a second from a travelling sensor, each point flashing white as it lands and cooling into its colour, while a slow camera crane and orbit lets the parallax prove the space is real; a scan plane re-colours the city as it rises, and the whole cloud can drift apart like sand and snap back.",
+   "visualDNA": "Black void, no surfaces, only points: concentric laser rings on the road, striped facades with holes where glass ate the beam, fuzzy trees and shadowed voids behind every object; cold intensity greys and cyans switch to a rainbow range ramp; thin monospaced HUD readouts, point counts and a laser fan from the sensor.",
+   "transitions": "Black → sensor sweep reveal → crane up into orbit → rising scan plane recolours by range → House-of-Cards dissolve → cloud reassembles under the title",
+   "implementation": [
+    "Velodyne / Ouster LiDAR + CloudCompare / Potree",
+    "Houdini or TouchDesigner point instancing",
+    "Gaussian-splat viewers (3DGS, Luma, Polycam)",
+    "Canvas 2D: ray-cast scan in setup, per-frame z-buffered point splats into ImageData"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/pointcloud.mp4",
+   "posterImg": "atlas/posters/pointcloud.jpg"
   },
   {
    "id": "particles",
@@ -2101,6 +2490,126 @@ window.ATLAS = {
    "posterImg": "atlas/posters/shaderart.jpg"
   },
   {
+   "id": "datagen",
+   "family": "E",
+   "name": "Data Art",
+   "sub": "A dataset as raw material for form",
+   "era": "2005 —",
+   "origin": "Data art treats a dataset as material rather than evidence: the same numbers are re-mapped until their structure becomes something to look at, not a point to be argued. Aaron Koblin's Flight Patterns (2005) drew a day of FAA flight tracks as glowing arcs; Ryoji Ikeda's datamatics (from 2006) pushed raw data into stark black-and-white matrices and barcodes at the edge of perception; Nicholas Felton's annual reports set a year of one life as typographic charts; and Refik Anadol's Machine Hallucinations (from 2019) turn huge image archives into fluid, pigment-like data sculptures.",
+   "works": "Aaron Koblin — Flight Patterns (2005) · Ryoji Ikeda — datamatics (2006–) and test pattern (2008–) · Nicholas Felton — The Feltron Annual Reports (2005–2014) · Refik Anadol — Machine Hallucinations (2019–)",
+   "tech": [
+    "Synthetic hourly dataset",
+    "Per-point form morphing",
+    "Point-cloud data sculpture"
+   ],
+   "accent": "#ff3d7f",
+   "motionDNA": "Nothing is keyframed by hand: every one of 8,760 readings is a point that travels its own arc between layouts the data defines — a scrolling matrix, a calendar, a ring, a rotating sculpture — so the structure of the year (seasons, weekends, rush hours) appears, dissolves and reappears in each form.",
+   "visualDNA": "Absolute black, white hairlines and tiny monospaced readouts in Ikeda's manner; a diverging blue-to-red temperature calendar; a mint demand ring; and an additive magenta, violet and gold point cloud that glows where the data is dense.",
+   "transitions": "Matrix stops scrolling, readings fly to the calendar, fold into the ring, then rise into the sculpture as the title lands",
+   "implementation": [
+    "Processing / openFrameworks",
+    "TouchDesigner / Houdini point clouds",
+    "D3 + WebGL",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/datagen.mp4",
+   "posterImg": "atlas/posters/datagen.jpg"
+  },
+  {
+   "id": "infinitezoom",
+   "family": "E",
+   "name": "Infinite Zoom",
+   "sub": "Every picture holds the next",
+   "era": "1968 —",
+   "origin": "The infinite zoom is a single unbroken push into an image in which every scene turns out to contain the next, so the camera can travel forever at a constant exponential rate. Charles and Ray Eames fixed its grammar in Powers of Ten (1977, after a 1968 sketch), pulling away from a Chicago picnic by a factor of ten every ten seconds; the Droste effect and Escher's Print Gallery (1956) supplied the recursion, fractal explorers the endless dive, and the online Zoom Quilt (2004) made it a collaborative loop of hand-painted scenes.",
+   "works": "Charles and Ray Eames — Powers of Ten (1977) · M. C. Escher — Print Gallery (1956) · Istvan Banyai — Zoom (picture book, 1995) · Nikolaus Hafermaas et al. — The Zoom Quilt (2004)",
+   "tech": [
+    "Nested scene recursion",
+    "Exponential camera scale",
+    "Fixed-point portal maps"
+   ],
+   "accent": "#ffcf3a",
+   "motionDNA": "One continuous push at constant log speed: the field shrinks by a factor of five every two seconds about each portal's fixed point, with a slight roll as each tilted portal straightens, and after five scenes the picture is back where it began — the film loops without a cut.",
+   "visualDNA": "Warm, legible illustration in five idioms — aerial park map, glossy magazine photo, lamplit cabin interior, painterly night city, retro desktop UI — linked by the Powers-of-Ten target square and a white HUD of level and magnification.",
+   "transitions": "None: each portal grows to fill the frame and becomes the next scene; the last scene's photo is the first scene",
+   "implementation": [
+    "After Effects nested comps / Photoshop zoom layers",
+    "Stable Diffusion outpainting zooms",
+    "Shaders (log-polar Droste)",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/infinitezoom.mp4",
+   "posterImg": "atlas/posters/infinitezoom.jpg"
+  },
+  {
+   "id": "physarum",
+   "family": "E",
+   "name": "Physarum",
+   "sub": "Slime-mould transport networks",
+   "era": "2010 —",
+   "origin": "In 2010 Atsushi Tero and colleagues placed oat flakes on agar at the positions of the cities around Tokyo, inoculated Physarum polycephalum at Tokyo, and watched the mould grow a network of tubes as efficient and fault-tolerant as the real rail system. The same year Jeff Jones published a minimal agent model of it: thousands of particles that sense a chemical trail ahead of them, turn toward it, step and deposit, while the trail map diffuses and decays. Generative artists such as Sage Jenson took that model up as a drawing machine, and its veined, self-pruning networks became a recognisable generative look.",
+   "works": "Toshiyuki Nakagaki, Hiroyasu Yamada & Ágota Tóth — \"Maze-solving by an amoeboid organism\", Nature 2000 · Jeff Jones — \"Characteristics of Pattern Formation and Evolution in Approximations of Physarum Transport Networks\", Artificial Life 2010 · Atsushi Tero et al. — \"Rules for Biologically Inspired Adaptive Network Design\", Science 2010 · Sage Jenson — 36 Points (2019)",
+   "tech": [
+    "Sense–turn–deposit agents",
+    "Diffuse & decay trail map",
+    "Precomputed keyframes"
+   ],
+   "accent": "#f4c431",
+   "motionDNA": "Growth, not animation: a dense fan-shaped front spreads from the inoculum, finds the food, then the foam of paths coarsens and starves until only a few thick tubes remain, pulsing with slow waves of shuttle streaming.",
+   "visualDNA": "Chrome-yellow plasmodium glowing on dark agar, soft diffused veins with brighter cores, pale oat flakes as nodes, a schematic coastline, lab-notebook mono labels and a thin cyan comparison graph.",
+   "transitions": "Flakes laid, inoculation, foraging front, network pruning, streaming pulse, comparison overlay and title",
+   "implementation": [
+    "Compute shaders (GLSL / WebGPU)",
+    "Processing / openFrameworks",
+    "TouchDesigner",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.9,
+   "video": "media/physarum.mp4",
+   "posterImg": "atlas/posters/physarum.jpg"
+  },
+  {
+   "id": "harmonograph",
+   "family": "E",
+   "name": "Harmonograph",
+   "sub": "Damped pendulum drawings",
+   "era": "1844 —",
+   "origin": "The harmonograph is a Victorian drawing machine: two or three pendulums, coupled to a pen and a drawing table, trace damped Lissajous figures that spiral slowly to the centre as the swings die away. Hugh Blackburn's pendulum of 1844 and Jules Lissajous's optical figures of 1857 led to parlour and lecture-hall instruments, and in 1909 Joseph Goold and his co-authors published Harmonic Vibrations and Vibration Figures, an album of rosettes drawn by twin-elliptic pendulums tuned to musical intervals. It is an ancestor of plotter and generative art: a simple physical rule, run for long enough, makes intricate drawings.",
+   "works": "Hugh Blackburn — Blackburn pendulum (1844) · Jules Antoine Lissajous — vibration figures (1857) · Joseph Goold, Charles E. Benham, Richard Kerr & L. R. Wilberforce — Harmonic Vibrations and Vibration Figures (1909)",
+   "tech": [
+    "Damped sinusoids",
+    "Analytic time-lapse",
+    "Ink on card"
+   ],
+   "accent": "#8e2a20",
+   "motionDNA": "Two pendulums released from rest swing in slow ellipses; the pen loops in real time, then time-lapses into a blur while a rosette builds layer on layer, rotates by its slight mistuning and shrinks inward as damping takes the energy out.",
+   "visualDNA": "Walnut and brass machinery in warm lamplight, a cream card with fine indigo ink lines that darken where they overlap, and a Victorian plate caption in Fell type.",
+   "transitions": "Draw back and release, pen drop, real time to time-lapse, pen lift, machine slides out, card becomes the plate",
+   "implementation": [
+    "Physical harmonograph",
+    "Processing / p5.js",
+    "Pen plotter (AxiDraw)",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/harmonograph.mp4",
+   "posterImg": "atlas/posters/harmonograph.jpg"
+  },
+  {
    "id": "claymation",
    "family": "F",
    "name": "Clay Stop Motion",
@@ -2424,6 +2933,66 @@ window.ATLAS = {
    "posterImg": "atlas/posters/pixilation.jpg"
   },
   {
+   "id": "papercraft",
+   "family": "F",
+   "name": "Paper Craft",
+   "sub": "Pop-up books and layered cut paper",
+   "era": "1760s —",
+   "origin": "Paper craft turns flat card into depth: layers cut with a blade are stacked a few millimetres apart so each casts a soft shadow on the next, and scored creases let a spread fold flat and spring up again. Movable books go back to Lothar Meggendorfer's pull-tab books of the 1880s and earlier flap books; paper engineers such as Robert Sabuda and Matthew Reinhart made the pop-up a showpiece, and the layered-diorama look became a staple of 2010s advertising and motion design, often shot frame by frame.",
+   "works": "Lothar Meggendorfer — movable books (1880s–1900s) · Robert Sabuda — The Wonderful Wizard of Oz: A Commemorative Pop-up (2000) · Robert Sabuda & Matthew Reinhart — Encyclopedia Prehistorica: Dinosaurs (2005) · Masahiro Chatani — origamic architecture (1980s)",
+   "tech": [
+    "Parallel-fold pop-up",
+    "Layered drop shadows",
+    "Stop-motion 12 fps step"
+   ],
+   "accent": "#e8665a",
+   "motionDNA": "Mechanical, not animated: every movement is something paper can do — a cover lifts, layers rise together on parallel folds, a pull tab drives the sun along a slot, a strip slides a balloon up, an accordion unfolds — all stepped at twelve exposures a second with a little hand-placed jitter and a springy settle.",
+   "visualDNA": "Matte pastel card on a warm tabletop: mint hills, sugared-almond houses, deep green trees, a coral banner; crisp cut edges, dashed score lines, soft shadows between layers and visible paper fibre.",
+   "transitions": "Closed cover → book opens and the scene pops up → mechanisms play in turn → banner unfolds with the title",
+   "implementation": [
+    "Hand-cut card, glue and a stop-motion camera",
+    "Cinema 4D / Blender paper rigs",
+    "After Effects 3D layers",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/papercraft.mp4",
+   "posterImg": "atlas/posters/papercraft.jpg"
+  },
+  {
+   "id": "lightpainting",
+   "family": "F",
+   "name": "Light Painting",
+   "sub": "Drawing with light on a long exposure",
+   "era": "1914 —",
+   "origin": "Light painting is drawing in the air with a moving light while the camera's shutter stays open, so every path the light takes is written into a single photograph and the dimly lit performer barely registers. Frank and Lillian Gilbreth traced workers' motions with small lights in the 1910s, Man Ray signed his name in light in Space Writings (1935), and Gjon Mili's 1949 photographs for LIFE of Pablo Picasso drawing centaurs and bulls with a penlight made it famous. Today it is a performance genre of LED wands, pixel sticks and spinning steel wool.",
+   "works": "Frank & Lillian Gilbreth — light motion studies (1910s) · Man Ray — Space Writings (1935) · Gjon Mili & Pablo Picasso — light drawings for LIFE (1949)",
+   "tech": [
+    "Additive exposure buffer",
+    "Parabolic spark streaks",
+    "Dwell-weighted ribbons"
+   ],
+   "accent": "#ff9a3c",
+   "motionDNA": "Nothing on screen moves except the light and the person carrying it; every path persists, so the image only ever accumulates: a coil grows across the frame, a ring spins up and sprays sparks, and a word is written stroke by stroke until the shutter closes.",
+   "visualDNA": "Near-black blue-hour scene with a wet ground that mirrors the light, saturated RGB ribbon bands, orange spark parabolas with white-hot cores, a warm-white handwritten word, translucent ghosts of the performer, and minimal camera HUD type.",
+   "transitions": "Shutter opens, wand coil, walk, steel-wool spin, walk, written word, shutter closes on the finished frame",
+   "implementation": [
+    "Camera on tripod, bulb mode",
+    "LED wand / pixel stick",
+    "Steel wool on a cable",
+    "Canvas 2D (additive buffer)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/lightpainting.mp4",
+   "posterImg": "atlas/posters/lightpainting.jpg"
+  },
+  {
    "id": "retro",
    "family": "G",
    "name": "Retrowave Chrome",
@@ -2745,6 +3314,35 @@ window.ATLAS = {
    "poster": 9.7,
    "video": "media/oswindow.mp4",
    "posterImg": "atlas/posters/oswindow.jpg"
+  },
+  {
+   "id": "liminal",
+   "family": "G",
+   "name": "Liminal Spaces",
+   "sub": "The Backrooms on VHS",
+   "era": "2019 —",
+   "origin": "Liminal-space imagery finds unease in transitional places emptied of people — corridors, waiting rooms, closed malls, drained pools — lit as if everyone has just left. In 2019 an anonymous 4chan post paired a photo of a yellow, carpeted, fluorescent-lit room with a story about “noclipping” out of reality into the Backrooms; dreamcore image boards and Kane Pixels’ found-footage series made the slow VHS walk through it a genre, and Marc Augé’s “non-places” (1992) supplies the theory.",
+   "works": "The Backrooms (anonymous 4chan /x/ post, 2019) · The Backrooms (Found Footage) (Kane Pixels, YouTube, 2022) · Non-Places (Marc Augé, 1992)",
+   "tech": [
+    "Pseudo-3D grid map, painter-sorted",
+    "Fluorescent falloff into yellow haze",
+    "Camcorder drift, VHS OSD & grade"
+   ],
+   "accent": "#d8c46a",
+   "motionDNA": "A slow, aimless handheld walk: low-frequency drift in yaw, pitch and roll over a faint step bob, then a lazy turn toward an opening; nothing approaches and nothing moves except one tube that dims twice, and the camera simply keeps going.",
+   "visualDNA": "Mono-yellow wallpaper with thin stripes and water stains, damp beige carpet, a drop ceiling of buzzing fluorescent panels, flat over-bright light falling off into murky yellow haze, endless pillars — under VHS softness, ghosting, scanlines and a date-stamped OSD.",
+   "transitions": "One continuous take: corridor drift → a dark side passage → a slow turn → the pillar hall opens up → camcorder titler",
+   "implementation": [
+    "Blender / Unity found-footage scenes",
+    "Camcorder VHS capture & emulation",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (grid map, lighting, camera and VHS grade generated in code)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/liminal.mp4",
+   "posterImg": "atlas/posters/liminal.jpg"
   },
   {
    "id": "filmnoir",
@@ -3168,6 +3766,122 @@ window.ATLAS = {
    "posterImg": "atlas/posters/foundfootage.jpg"
   },
   {
+   "id": "documentary",
+   "family": "H",
+   "name": "Documentary Montage",
+   "sub": "Photographs, maps and letters in motion",
+   "era": "1957 —",
+   "origin": "Documentary montage tells history with still images: a rostrum camera pans and zooms across archival photographs, maps and letters while narration and readings carry the story. The National Film Board of Canada’s City of Gold (Colin Low and Wolf Koenig, 1957) pioneered the moving camera over stills; Ken Burns made it a national idiom with The Civil War (1990), and Apple later named the slow pan-and-zoom the “Ken Burns effect”. Errol Morris supplied the opposite pole: witnesses who look straight down the lens through his Interrotron, a teleprompter rig that puts the interviewer’s face over the camera.",
+   "works": "City of Gold (Colin Low & Wolf Koenig, NFB, 1957) · Brooklyn Bridge (Ken Burns, 1981) · The Thin Blue Line (Errol Morris, 1988) · The Civil War (Ken Burns, PBS, 1990) · Baseball (Ken Burns, PBS, 1994) · The Fog of War (Errol Morris, 2003)",
+   "tech": [
+    "Slow pan-and-zoom over stills",
+    "Name supers and a dated route map",
+    "Letter revealed in handwriting"
+   ],
+   "accent": "#b08850",
+   "motionDNA": "The camera, not the subject, moves: unhurried push-ins on a face until the eyes hold the frame, pans across group photographs that discover people one by one, a route that draws itself across a map, a tilt down a handwritten page; long cross-dissolves between stills and the one hard, modern cut into an interview with a single jump cut.",
+   "visualDNA": "Sepia tintypes in brass mats, albumen prints on card with pencil captions, parchment maps with hachured hills and a red dashed march, ruled letter paper in iron-gall ink; supers in plain white serif lower left; the interview lit low and warm, subject dead centre, eyes on the lens.",
+   "transitions": "Fade up from black, slow cross-dissolves between stills, hard cut to and from the interview, jump cut, pull back to reveal the print under the title",
+   "implementation": [
+    "Rostrum / animation-stand camera",
+    "Avid or Final Cut pan-and-zoom on scans",
+    "Canvas 2D (every photograph procedurally drawn)"
+   ],
+   "reproducibility": "Fully procedural (no archival material used; people and places are fictional)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "media/documentary.mp4",
+   "posterImg": "atlas/posters/documentary.jpg"
+  },
+  {
+   "id": "musicvideo",
+   "family": "H",
+   "name": "Music Video",
+   "sub": "Concept videos cut on the beat",
+   "era": "1981 —",
+   "origin": "The music video turned a single into a three-minute short film: after MTV launched in 1981, directors treated each song as a concept, building performance, choreography and in-camera tricks around its tempo. Michel Gondry made the arrangement the choreography in Daft Punk’s “Around the World” (each costumed group dances one instrument), Spike Jonze had Christopher Walken dance and fly through an empty hotel lobby in Fatboy Slim’s “Weapon of Choice”, and OK Go danced across eight treadmills in a single take for “Here It Goes Again”.",
+   "works": "Thriller (Michael Jackson, dir. John Landis, 1983) · Take On Me (a-ha, dir. Steve Barron, 1985) · Sledgehammer (Peter Gabriel, dir. Stephen R. Johnson, 1986) · Around the World (Daft Punk, dir. Michel Gondry, 1997) · Praise You (Fatboy Slim, dir. Spike Jonze, 1999) · Weapon of Choice (Fatboy Slim, dir. Spike Jonze, 2001) · Star Guitar (The Chemical Brothers, dir. Michel Gondry, 2002) · Here It Goes Again (OK Go, 2006)",
+   "tech": [
+    "Cuts locked to 120 BPM",
+    "One-take choreography sets",
+    "Mirror and kaleidoscope"
+   ],
+   "accent": "#c46bff",
+   "motionDNA": "The track is the edit: every cut lands on a beat and every shot changes on the bar, bodies hit their poses a frame after the downbeat, crowds move in lockstep loops, one-take routines run without a cut, a man rises off the floor on a held chord, and mirrored dancers fold into a kaleidoscope that turns at the tempo.",
+   "visualDNA": "A concept per shot, each with its own colour-graded set: a violet disco stage with gold-helmeted robots and skeletons on a staircase, a warm empty hotel lobby, a yellow warehouse of treadmills and bright shirts, magenta-to-cyan mirror worlds, then a teal-and-amber stage of rim-lit silhouettes under moving-head beams; the MTV credit block in plain white type.",
+   "transitions": "Hard cuts on the beat (never faster than one per half second), a cut to a closer angle on the downbeat, mirror split to four-way to kaleidoscope, title words set on the last two beats",
+   "implementation": [
+    "35 mm / 16 mm music-video shoots",
+    "Motion-control and in-camera tricks",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (artist, song and label are fictional)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.6,
+   "video": "media/musicvideo.mp4",
+   "posterImg": "atlas/posters/musicvideo.jpg"
+  },
+  {
+   "id": "bullettime",
+   "family": "H",
+   "name": "Bullet Time",
+   "sub": "Frozen time, moving camera",
+   "era": "1995 —",
+   "origin": "Bullet time stops or nearly stops a moment of action while the camera keeps moving through it, so the audience can circle a bullet in flight. Michel Gondry staged camera-array shots in the Rolling Stones’ “Like a Rolling Stone” video (1995) and a Smirnoff commercial (1996), after Tim Macmillan’s time-slice experiments; The Matrix (1999), with John Gaeta as visual effects supervisor, fired an arc of still cameras in sequence, filled the gaps with interpolated frames and virtual backgrounds, and made the term famous.",
+   "works": "Like a Rolling Stone, The Rolling Stones (music video, Michel Gondry, 1995) · Smirnoff commercial (Michel Gondry, 1996) · The Matrix (Lana & Lilly Wachowski, 1999; visual effects supervisor John Gaeta) · Max Payne (Remedy Entertainment, 2001, game) · The Matrix Reloaded (Wachowskis, 2003)",
+   "tech": [
+    "Camera orbit, clock stopped",
+    "Ripple-ring bullet wakes",
+    "Speed ramp and snap-back"
+   ],
+   "accent": "#6fe39a",
+   "motionDNA": "Real-time action ramps down to a crawl in a second; then nothing moves but the camera, which sweeps more than half a circle around the frozen subject on one smooth eased arc. Bullets creep forward a few centimetres, rain hangs as beads. Time snaps back to full speed with a jolt and everything that was suspended completes its motion at once.",
+   "visualDNA": "A green-tinted overcast rooftop, a figure in a long black coat and dark glasses bent backward almost flat, brass slugs dragging rings of rippled air, suspended raindrops, a splash crown and concrete chips, a skyline that wheels past behind; a 2.39:1 letterbox carrying a camera-array counter and a speed readout.",
+   "transitions": "Speed ramp into a freeze, a continuous virtual-camera orbit, snap back to real time with a single light flash",
+   "implementation": [
+    "An arc of still cameras triggered in sequence, plus interpolated frames and virtual backgrounds",
+    "Pseudo-3D projection in Canvas 2D with a depth-sorted scene",
+    "Action clock integrated from a speed curve"
+   ],
+   "reproducibility": "Fully procedural homage",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/bullettime.mp4",
+   "posterImg": "atlas/posters/bullettime.jpg"
+  },
+  {
+   "id": "dollyzoom",
+   "family": "H",
+   "name": "Dolly Zoom",
+   "sub": "The Vertigo effect",
+   "era": "1958 —",
+   "origin": "A dolly zoom moves the camera toward or away from the subject while the zoom lens changes focal length the opposite way, so the subject holds its size while everything behind it stretches away or flattens and looms. Camera operator Irmin Roberts devised it for Alfred Hitchcock’s Vertigo (1958) to put the hero’s fear of heights on screen; Steven Spielberg turned it on Chief Brody at the beach in Jaws (1975), and Martin Scorsese used it slowly through the diner scene of Goodfellas (1990).",
+   "works": "Vertigo (Alfred Hitchcock, 1958; effect devised by Irmin Roberts) · Jaws (Steven Spielberg, 1975) · Goodfellas (Martin Scorsese, 1990) · La Haine (Mathieu Kassovitz, 1995) · The Lord of the Rings: The Fellowship of the Ring (Peter Jackson, 2001)",
+   "tech": [
+    "Focal length ∝ distance, locked",
+    "True-perspective corridor",
+    "Lens HUD with plan view"
+   ],
+   "accent": "#5fe08f",
+   "motionDNA": "Two motions that cancel on the subject and nowhere else: the camera tracks while the zoom runs the other way at a rate tied to distance, so he never changes size while the background breathes. First a slow track-out and zoom-in that compresses the corridor, a held beat, then a fast reverse that stretches it into a tunnel.",
+   "visualDNA": "A symmetrical hotel corridor in deep green with cream mouldings, a red runner with gold diamonds, rows of doors and sconces, pools of lamplight and a window of green neon at the far end; a man in a grey suit dead centre; viewfinder corner marks, mono lens readouts and a plan view of track and lens wedge.",
+   "transitions": "Hold, compress, hold, stretch; the title settles on the stretched frame",
+   "implementation": [
+    "Camera dolly on track plus a zoom lens pulled in sync",
+    "Pinhole projection in Canvas 2D: focal length and distance driven together (f / d constant)",
+    "Screen-space lighting gradients sampled from depth"
+   ],
+   "reproducibility": "Fully procedural homage",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.4,
+   "video": "media/dollyzoom.mp4",
+   "posterImg": "atlas/posters/dollyzoom.jpg"
+  },
+  {
    "id": "ukiyoe",
    "family": "I",
    "name": "Ukiyo-e Motion",
@@ -3488,6 +4202,35 @@ window.ATLAS = {
    "poster": 9.5,
    "video": "media/africanpattern.mp4",
    "posterImg": "atlas/posters/africanpattern.jpg"
+  },
+  {
+   "id": "mosaic",
+   "family": "I",
+   "name": "Byzantine Mosaic",
+   "sub": "Gold glass and tesserae",
+   "era": "5th–15th c.",
+   "origin": "Byzantine mosaic builds images from tesserae, small cubes of stone and coloured glass, set in rows that follow the forms they describe (andamento) over grounds of gold-leaf glass that glint as the light or the viewer moves. In Ravenna the Mausoleum of Galla Placidia (c. 425–450) has a deep blue vault strewn with gold stars and San Vitale (c. 547) shows the court of Justinian and Theodora; the Deësis panel in Hagia Sophia (c. 1261) reached a painterly softness with very small tesserae.",
+   "works": "Mausoleum of Galla Placidia, Ravenna (c. 425–450) · San Vitale, Justinian and Theodora panels, Ravenna (c. 547) · Hagia Sophia, Deësis panel, Constantinople (c. 1261) · Chora Church (Kariye), Constantinople (c. 1315–1321)",
+   "tech": [
+    "Rows follow the forms (andamento)",
+    "Tilted gold smalti glint",
+    "Tesserae set one by one"
+   ],
+   "accent": "#d9aa3c",
+   "motionDNA": "Accumulation, then light. Tiles are pressed in singly at first and then faster and faster in waves that run along their rows, outward from the figure; when the surface is whole nothing moves but a lamp, and the gold answers it tile by tile with glints that flicker on and off as the angle passes.",
+   "visualDNA": "Small irregular squares with dark grout between; gold-glass ground laid in rows that halo the figure; a blue and green peacock with a dark outline row and eyed tail, vine scrolls with leaves and grapes, a deep lapis vault with eight-pointed gold stars under a red and white arch, a border of red with white diamonds and pearl beading; red-ochre sinopia on plaster where nothing is set yet.",
+   "transitions": "Close-up pulls back as the surface fills; a lamp sweep; the title set in gold on the vault",
+   "implementation": [
+    "Stone and gold- or colour-backed glass tesserae pressed into lime mortar over a painted sinopia",
+    "Canvas 2D: label masks, a distance field per region, greedy tile packing along its iso-lines",
+    "Per-tile tilt vectors for specular glints"
+   ],
+   "reproducibility": "Fully procedural homage",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/mosaic.mp4",
+   "posterImg": "atlas/posters/mosaic.jpg"
   },
   {
    "id": "huazi",
@@ -3819,7 +4562,2763 @@ window.ATLAS = {
    "poster": 9.3,
    "video": "media/saas.mp4",
    "posterImg": "atlas/posters/saas.jpg"
+  },
+  {
+   "id": "broadcast",
+   "family": "J",
+   "name": "Broadcast Graphics",
+   "sub": "News opens, straps and crawls",
+   "era": "1970s —",
+   "origin": "Broadcast graphics are the house style of television news: a branded open, then lower thirds, bugs, crawls and full-screen maps laid over live pictures, each built to be read in a second. Electronic character generators such as the Chyron and Quantel’s Paintbox (1981) put them on air, 24-hour news made them permanent, the continuous crawl became standard on US cable news after 11 September 2001, and election nights turned virtual studios and touchscreen maps into spectacle.",
+   "works": "Chyron character generator (Chyron Corp., 1970s) · Quantel Paintbox (1981) · CNN Headline News (launched as CNN2, 1982) · Cable-news crawls after 11 September 2001 · CNN “Magic Wall” election map (2008)",
+   "tech": [
+    "Dot-matrix spinning globe open",
+    "Name strap, BREAKING banner, crawl",
+    "Live election map and tally"
+   ],
+   "accent": "#e8112d",
+   "motionDNA": "Urgent but orderly: a globe rushes in and decelerates under orbiting rings, a wordmark slams with overshoot and a glint, branded diagonal wipes carry us between open and studio, straps wipe out of a coloured tab in quick ease-outs and stack in a fixed order, the crawl never stops, and the camera pushes into the video wall until the graphic is the picture; numbers count, bars race, a verdict box pops and locks.",
+   "visualDNA": "Deep navy and royal blue with cyan highlights, a single alarm red for LIVE and BREAKING, white bars with heavy condensed caps, glossy desk and floor reflections, LED columns, a dot-matrix globe with graticule, and an election map in two party colours with seat counts, a majority line and a decision-desk box.",
+   "transitions": "Diagonal branded wipes, logo slam with glint, strap wipe-ons from a tab, banner expanding from centre, push into the video wall, wipe to the end board",
+   "implementation": [
+    "Chyron / Vizrt / ChyronHego real-time engines",
+    "After Effects + Cinema 4D packages",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (channel, people, places and results are fictional)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.6,
+   "video": "media/broadcast.mp4",
+   "posterImg": "atlas/posters/broadcast.jpg"
+  },
+  {
+   "id": "launch",
+   "family": "J",
+   "name": "Product Launch",
+   "sub": "The keynote reveal film",
+   "era": "2007 —",
+   "origin": "The launch film is the short that plays when a company unveils new hardware on stage: darkness, a teaser line, slow macro shots over materials, then the product and its one-word name, a few specs and \"available now\". Apple’s Macworld and WWDC keynotes set the grammar in the late 2000s and every phone, laptop and headphone maker followed.",
+   "works": "Apple Macworld keynotes: iPhone introduction (2007) and MacBook Air out of an envelope (2008) · Apple product films narrated by Jony Ive (2000s–2010s) · Apple “Think different” (TBWA\\Chiat\\Day, 1997) as the tone of the sign-off",
+   "tech": [
+    "Teaser → macro → reveal",
+    "Edge-on to 3/4 hero swing",
+    "Spec slams on hard cuts"
+   ],
+   "accent": "#5b8cff",
+   "motionDNA": "Editorial pacing is the motion: slow fades on the teaser, macro glides that never stop moving and cut through black, a single long swing from edge-on to three-quarter view as the lid opens, then a sudden switch to hard cuts where each spec slams in from scale with a small camera shake, before a calm sign-off.",
+   "visualDNA": "A black stage and one cool blue–violet light; brushed aluminium, diamond-cut chamfers, speaker perforations and backlit keys shot macro with shallow focus; a waking screen as the only colour; huge tight-tracked grotesque numbers with small mono kickers.",
+   "transitions": "Line of light into the teaser, dip-to-black between macro shots, sliver to hero swing, name rising from blur, hard cuts between spec beats, cut to the sign-off",
+   "implementation": [
+    "Cinema 4D / Redshift product renders",
+    "After Effects editorial and type",
+    "Canvas 2D (projected box model)"
+   ],
+   "reproducibility": "Fully procedural (fictional product, no real logos)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/launch.mp4",
+   "posterImg": "atlas/posters/launch.jpg"
+  },
+  {
+   "id": "reels",
+   "family": "J",
+   "name": "Social Reels",
+   "sub": "Vertical short-form video",
+   "era": "2013 —",
+   "origin": "Short-form vertical video — Vine’s six-second loops, then Musical.ly, TikTok, Instagram Reels and YouTube Shorts — built a new editing grammar for the phone held upright: jump cuts every second, captions that pop word by word, stickers and text boxes, and a swipe to the next clip. Reposted onto 16:9 screens, the tall frame sits in the middle over a blurred, enlarged copy of itself.",
+   "works": "Vine (2013–2017) · Musical.ly (2014) · Douyin (2016) and TikTok (2017 —) · Instagram Reels (2020) · YouTube Shorts (2020 —) · CapCut auto-captions (2020s)",
+   "tech": [
+    "Jump cuts and punch-ins",
+    "Word-by-word auto-captions",
+    "Pillarbox blur fill"
+   ],
+   "accent": "#ff3b5c",
+   "motionDNA": "Nothing holds longer than a second: jump cuts snap between framings of the same talking head, each caption word pops with overshoot as it is spoken, stickers bounce on, a double-tap throws a heart that springs, wobbles and floats away, and the whole clip is thrown upward by a thumb swipe so the next one can drop on the beat.",
+   "visualDNA": "A 9:16 phone screen centred in the 16:9 frame over its own blurred enlargement; handheld, warmly lit selfie footage; heavy white caption type with black outlines and one yellow word; white text plates, a yellow starburst, red hearts, a translucent action rail, a thin progress bar and a generic app chrome.",
+   "transitions": "Jump cuts and punch-ins on the talking head, hard cuts to B-roll, double-tap heart burst, swipe-up to the next clip, beat-drop zoom punch",
+   "implementation": [
+    "CapCut / TikTok in-app editor",
+    "Premiere Pro or Final Cut (vertical timeline)",
+    "Canvas 2D (low-res blur fill)"
+   ],
+   "reproducibility": "Fully procedural (generic app UI, fictional creators, no real logos)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.5,
+   "video": "media/reels.mp4",
+   "posterImg": "atlas/posters/reels.jpg"
+  },
+  {
+   "id": "explainer",
+   "family": "J",
+   "name": "Explainer",
+   "sub": "Flat animated infographics",
+   "era": "2008 —",
+   "origin": "The animated explainer sells or teaches one idea in about ninety seconds: a simple character with a problem, a few flat icons and charts that draw on, a three-step solution and a call to action. Start-ups adopted it as the homepage video of the late 2000s and 2010s, while Kurzgesagt (2013 —) and TED-Ed (2012 —) pushed the same flat, colour-blocked vector style into science education.",
+   "works": "Common Craft “In Plain English” videos (Lee and Sachi LeFever, 2007 —) · TED-Ed animated lessons (2012 —) · Kurzgesagt – In a Nutshell (Philipp Dettmer, 2013 —)",
+   "tech": [
+    "Circle-wipe scene changes",
+    "Pop-on with overshoot",
+    "Charts and arrows that draw on"
+   ],
+   "accent": "#ff6b57",
+   "motionDNA": "Everything pops: shapes scale in on a back-ease overshoot with a little squash, lines and dashed arrows draw on along their path, the donut sweeps clockwise and labels pop as it passes, one slice pulls out for emphasis, steps arrive one per beat and tick off, and each new idea opens with a circle wipe from the element that leads to it.",
+   "visualDNA": "Flat vector shapes without outlines, a few saturated colour fields (cream, midnight blue, teal, coral) with sunny yellow accents, 2013-style long shadows inside round badges, a simple round-headed character, rounded geometric sans type, big percentages and plenty of empty space.",
+   "transitions": "Pop-in character, fly-in bill with drawing line, circle wipes between scenes, donut sweep and slice pull-out, step-by-step pops joined by draw-on arrows, bar drop, final circle wipe to the CTA",
+   "implementation": [
+    "Illustrator → After Effects (shape layers, Trim Paths)",
+    "Vyond / Animaker template tools",
+    "Canvas 2D (paths, clip wipes)"
+   ],
+   "reproducibility": "Fully procedural (fictional brand and illustrative numbers)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.9,
+   "video": "media/explainer.mp4",
+   "posterImg": "atlas/posters/explainer.jpg"
+  },
+  {
+   "id": "corpmemphis",
+   "family": "J",
+   "name": "Corporate Memphis",
+   "sub": "Big Limbs, Tiny Heads, Flat Optimism",
+   "era": "2017 —",
+   "origin": "The flat vector illustration style that took over tech websites, onboarding screens and explainer ads from about 2017: faceless figures with long, bendy limbs, tiny heads and purple or blue skin, collaborating among blobs, squiggles and oversized UI. Buck’s Alegria system for Facebook (2017) set the template; the mocking nickname “Corporate Memphis” came later, nodding to the squiggles of the 1980s Memphis Group, as free kits spread it everywhere and it became shorthand for friendly, interchangeable brand optimism.",
+   "works": "Alegria illustration system (Buck for Facebook, 2017) · Memphis Group (founded by Ettore Sottsass, Milan, 1981) — the namesake",
+   "tech": [
+    "Two-bone IK noodle limbs",
+    "Walk cycles from hip tracks",
+    "Spring-eased UI pops"
+   ],
+   "accent": "#5b45ff",
+   "motionDNA": "Bouncy and buoyant: every element pops on an overshoot spring, characters walk with a big hip bob and rubber-hose arms that never show an elbow, legs dangle and swing, props grow in eased steps, toggles snap and buttons squish, and the piece ends on a hop of joy and a pull-back to the logo.",
+   "visualDNA": "Flat fills, no outlines, no gradients: cream page, lavender, peach and mint blobs, yellow and pink squiggles, dot grids, a potted monstera; faceless characters with oversized legs and hands, minuscule heads and non-naturalistic skin (violet, blue, terracotta); giant white app cards with rounded corners, toggles, progress bars and a primary-violet call to action.",
+   "transitions": "Pop-on blobs → window springs up → characters walk / drop in → card slot snap → toggle flip → button press burst → pull-back to brand lockup",
+   "implementation": [
+    "Illustrator + After Effects (Duik / RubberHose rigs)",
+    "Lottie / Rive exports for product UI",
+    "Figma illustration kits",
+    "Canvas 2D: bezier noodle limbs with two-bone IK, keyframed hip / hand tracks, spring easing"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/corpmemphis.mp4",
+   "posterImg": "atlas/posters/corpmemphis.jpg"
+  },
+  {
+   "id": "techmorph",
+   "family": "K",
+   "name": "Morph",
+   "sub": "Point-wise shape interpolation",
+   "era": "1974 —",
+   "origin": "Computer shape interpolation grew out of the key-frame animation system Nestor Burtnyk and Marceli Wein built at Canada’s National Research Council, which Peter Foldès used to let drawings melt into one another in Hunger (La Faim, 1974). Vector shape tweening became an everyday motion-graphics tool with Flash shape tweens and After Effects path animation; image morphing, which also warps pixels, followed in film effects from the late 1980s.",
+   "works": "Hunger / La Faim (Peter Foldès, National Film Board of Canada, 1974) · Willow (Ron Howard, 1988; ILM morph sequence) · Black or White, Michael Jackson (music video, 1991; PDI face morphs)",
+   "tech": [
+    "Arc-length resampling",
+    "Matched point order",
+    "Interpolated hole"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Every point of one outline travels in a straight line to its partner on the next, all on the same eased clock, so the silhouette flows rather than cuts. Four morphs on the bar: Token to circle, circle to bar, bar to the letter M, then back to the Token on an overshooting ease that lets the points spring past their targets and settle.",
+   "visualDNA": "The Technique Atlas stage: warm paper, a faint grid, the orange Token. Ink dots mark every eighth sample point, point 0 ringed; dashed ghosts of source and target outlines with thin travel lines between partner points; a strip of the five shapes along the top.",
+   "transitions": "Point-wise morph between closed outlines; the hole drifts, shrinks to a point and grows back",
+   "implementation": [
+    "After Effects path keyframes / shape layers",
+    "Flash shape tweens",
+    "Canvas 2D: arc-length resampling and per-point lerp"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 4.55,
+   "video": "media/techmorph.mp4",
+   "posterImg": "atlas/posters/techmorph.jpg"
+  },
+  {
+   "id": "techwipe",
+   "family": "K",
+   "name": "Wipe",
+   "sub": "A hard edge travels, a new picture follows",
+   "era": "1910s —",
+   "origin": "A wipe replaces one image with another behind a moving edge. Early cinema already used iris and shaped mask transitions, and optical printers with travelling mattes made line, clock and pattern wipes routine by the 1930s. Akira Kurosawa cut Seven Samurai (1954) with crisp wipes, and George Lucas borrowed them, clock wipes included, for Star Wars (1977); video switchers later put a menu of wipe patterns on a single lever.",
+   "works": "Seven Samurai (Akira Kurosawa, 1954) · Star Wars (George Lucas, 1977) · Looney Tunes iris-out endings (Warner Bros.)",
+   "tech": [
+    "Moving matte as clip path",
+    "Hard edge, no blend",
+    "Shape wipe from the subject"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing in either picture moves; only the boundary does. Each wipe runs exactly one bar of half-beats on its own ease — a tilted line crosses left to right, a hand sweeps a full clock turn from twelve, an iris opens from the Token’s centre, and the Token’s own silhouette grows exponentially until it fills the frame — with a held beat of the new state between.",
+   "visualDNA": "The Technique Atlas stage repeated in five states: the Token turned a quarter further each time and recoloured orange, ink, blue, outline, orange again; the grid shifts and zooms between states; an orange accent line rides each matte edge; a mono state label in the top-right corner gets wiped with its picture.",
+   "transitions": "Linear wipe, clock wipe, iris wipe, shaped (Token-silhouette) wipe",
+   "implementation": [
+    "Optical printer with travelling mattes",
+    "Video switcher wipe patterns / After Effects track mattes",
+    "Canvas 2D: clip path per matte over the previous state"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.62,
+   "video": "media/techwipe.mp4",
+   "posterImg": "atlas/posters/techwipe.jpg"
+  },
+  {
+   "id": "techsmear",
+   "family": "K",
+   "name": "Smear",
+   "sub": "Two drawings that fill the gap",
+   "era": "1930s —",
+   "origin": "Hand-drawn animation samples motion at 12 or 24 drawings a second, so a fast move can jump too far between frames and strobe. Animators bridge the gap with one or two smear drawings — the character stretched, multiplied or streaked along its path — that the eye reads as speed; Chuck Jones’s The Dover Boys (1942) made them famous, and Spider-Man: Into the Spider-Verse (2018) brought drawn smears and multiples into CG.",
+   "works": "The Dover Boys at Pimento University (Chuck Jones, Warner Bros., 1942) · Looney Tunes and Merrie Melodies shorts (Warner Bros., 1940s–50s) · Spider-Man: Into the Spider-Verse (Sony Pictures Animation, 2018)",
+   "tech": [
+    "Smears on twos",
+    "Stretch · multiples · dry brush",
+    "Frame-by-frame replay"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Long clean holds broken by moves that take four drawings on twos: two smears that span the gap, a squashed landing, the clean pose. Three moves on the downbeats, each with a different smear; then a replay at one drawing per beat (1/7.5 speed) steps through all nine smear and landing drawings over onion-skin ghosts, and time snaps back for the word to smear in.",
+   "visualDNA": "The Technique Atlas stage with its floor line; the orange Token sliding along it, a stretched contact shadow under each smear; a tapering orange wedge with ink speed lines, overlapping copies fading from light to full orange, and dry-brush streaks; dashed ghost outlines, a dotted path and a drawing strip with frame numbers during the replay.",
+   "transitions": "Smear drawings across fast moves; a rewind cut into a stepped replay and back",
+   "implementation": [
+    "Hand-drawn smear frames (2D animation)",
+    "Blender / Maya smear rigs and Grease Pencil",
+    "Canvas 2D: motion quantised to 15 drawings per second"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.25,
+   "video": "media/techsmear.mp4",
+   "posterImg": "atlas/posters/techsmear.jpg"
+  },
+  {
+   "id": "techelastic",
+   "family": "K",
+   "name": "Elastic",
+   "sub": "Damped springs: overshoot and settle",
+   "era": "1930s —",
+   "origin": "Elastic timing comes from cel animation’s squash, stretch and follow-through — the principles Disney animators refined in the 1930s and Frank Thomas and Ollie Johnston set down in The Illusion of Life (1981). In code it became Robert Penner’s elastic and back easing equations (2001), and later physically based damped-spring animation, defined by stiffness and damping rather than duration, in libraries such as React Motion and Facebook’s Rebound and in Apple’s UIKit spring animations.",
+   "works": "Robert Penner’s easing equations (Flash ActionScript, 2001) · iOS spring animations (UIKit, 2014) · React Motion and react-spring (JavaScript spring-physics libraries)",
+   "tech": [
+    "Damped spring: frequency × damping ratio",
+    "Move, scale and rotate on springs",
+    "Linear ghost for contrast"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Every change of position, size and angle is driven by a damped harmonic oscillator released on the beat: the Token shoots past its target, swings back, and rings down to rest. Low damping rings long and wide, high damping lands almost dead; a linear-timed ghost arrives on time and stops cold beside it.",
+   "visualDNA": "The Technique Atlas stage: warm paper ground with a faint 80 px grid, the orange rounded-square Token with an off-centre hole so its rotation reads, mono labels giving each spring’s frequency and damping ratio, dashed target lines, and the caption graph plotting the live spring curve.",
+   "transitions": "Lane comparison fades to three springs on three beats; the three gather into one large Token with a sprung title",
+   "implementation": [
+    "Closed-form damped spring 1 − e^(−ζωt)(cos ω_d t + …) evaluated per frame",
+    "Canvas 2D",
+    "Shared Technique Atlas kit and 120 BPM bed"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.2,
+   "video": "media/techelastic.mp4",
+   "posterImg": "atlas/posters/techelastic.jpg"
+  },
+  {
+   "id": "techbounce",
+   "family": "K",
+   "name": "Bounce",
+   "sub": "Gravity, restitution, squash on contact",
+   "era": "1930s —",
+   "origin": "The bouncing ball is the first exercise in classical animation training: it teaches timing (hops shorten as they lose height), spacing (frames bunch at the top of the arc and spread near the floor) and squash and stretch, which Disney’s animators formalised in the 1930s and Thomas and Johnston listed among the twelve principles in The Illusion of Life (1981). Motion designers later reproduced it with bounce easing curves such as Robert Penner’s easeOutBounce (2001) or with physics: gravity plus a coefficient of restitution.",
+   "works": "The bouncing-ball exercise in Richard Williams’s The Animator’s Survival Kit (2001) · Fleischer Studios’ Screen Songs “follow the bouncing ball” sing-alongs (1920s–30s) · Pixar’s Luxo Jr. (1986)",
+   "tech": [
+    "Analytic gravity and restitution",
+    "Squash on contact, stretch in flight",
+    "Contact shadow and arc trail"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Constant gravity: the Token accelerates into the floor and decelerates to each apex, so spacing is tight at the top and wide at the bottom. Every contact keeps a fixed fraction of the speed, giving a geometric decay of hop height and duration that ends in a quick patter and rest. Squash grows with impact speed; the body stretches along the fall.",
+   "visualDNA": "The Technique Atlas stage with its floor band, the orange Token and a darker heavy twin, soft contact shadows that tighten as they land, a dotted trail tracing the last second of arcs, dust puffs on hard contacts, mono restitution labels and a height/time plot in the caption.",
+   "transitions": "The rubber Token settles, is lifted back to its drop height beside a heavy twin, and both fall on the same beat",
+   "implementation": [
+    "Closed-form projectile segments with a restitution coefficient per contact",
+    "Canvas 2D squash and stretch anchored to the floor",
+    "Shared Technique Atlas kit and 120 BPM bed"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.82,
+   "video": "media/techbounce.mp4",
+   "posterImg": "atlas/posters/techbounce.jpg"
+  },
+  {
+   "id": "techanticipation",
+   "family": "K",
+   "name": "Anticipation",
+   "sub": "The wind-up before the action",
+   "era": "1930s —",
+   "origin": "Anticipation is one of the twelve basic principles of animation that Disney’s animators developed in the 1930s and Frank Thomas and Ollie Johnston described in The Illusion of Life (1981): a preparatory move in the opposite direction — a crouch before a jump, a pull-back before a dash — that tells the audience an action is coming. John Lasseter’s SIGGRAPH paper “Principles of Traditional Animation Applied to 3D Computer Animation” (1987) carried it into CG, and UI motion uses it as the overshooting “back” ease-in.",
+   "works": "The Illusion of Life: Disney Animation (Frank Thomas & Ollie Johnston, 1981) · Luxo Jr. (Pixar, John Lasseter, 1986) · The Road Runner cartoons’ wind-up-and-zip exits (Chuck Jones, Warner Bros.)",
+   "tech": [
+    "Crouch, lean-back and pull-back before take-off",
+    "Same jump with and without",
+    "Position curve dips before it rises"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A beat of preparation in the opposite direction: the Token squashes down, leans back and slides away from where it is going, holds the coil for an instant, then releases into a stretched leap and lands with a small squash. Without it, the same leap starts from nothing and feels abrupt; with it, the take-off reads before it happens.",
+   "visualDNA": "The Technique Atlas stage with its floor band, the orange Token, a dashed arc showing the path, outlined WITH / WITHOUT tags, dust puffs at take-off and landing, a tape-rewind marker, and a position/time curve whose dip below zero is the anticipation.",
+   "transitions": "A rewind replays the first jump backwards; a pop-swap splits one Token into a side-by-side pair",
+   "implementation": [
+    "Keyframed crouch with eased hold, parabolic flight, landing squash",
+    "Canvas 2D",
+    "Shared Technique Atlas kit and 120 BPM bed"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.9,
+   "video": "media/techanticipation.mp4",
+   "posterImg": "atlas/posters/techanticipation.jpg"
+  },
+  {
+   "id": "techorbit",
+   "family": "K",
+   "name": "Orbit",
+   "sub": "The camera circles the subject",
+   "era": "1950s —",
+   "origin": "An orbit moves the camera around a subject on a circular dolly track, a crane or, later, a virtual path, keeping it centred while the background wheels past behind it. Hitchcock’s 360° kiss in Vertigo (1958) and Brian De Palma’s circling shots made it a signature move, Michael Bay turned the low-angle spin into a blockbuster cliché, and in 3D software the turntable orbit is the default way to show an object.",
+   "works": "Vertigo (Alfred Hitchcock, 1958) · Obsession (Brian De Palma, 1976) · Bad Boys II (Michael Bay, 2003) · The Avengers (Joss Whedon, 2012)",
+   "tech": [
+    "Look-at camera on a circular path",
+    "Radius and height varied per orbit",
+    "Top-view map of the camera path"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The subject never leaves frame centre; everything else turns. A held front view, one smooth eased 360° at eye height, a crane down to the floor, a quicker low orbit looking up so the Token looms, then a rise into a still three-quarter view. The floor grid and lettering wheel past and the parallax of near and far floor gives the rotation its weight.",
+   "visualDNA": "The kit stage as a perspective floor: warm paper with the faint grid fading into the horizon, an extruded orange Token with darker side walls and a punched hole, MOTION lettered on the floor in ink, a dashed orange orbit path, soft contact shadows, and a top-view map with the camera, its view cone and trail.",
+   "transitions": "One continuous camera move: hold, orbit, crane down, low orbit, rise to a held three-quarter view",
+   "implementation": [
+    "Circular dolly track, crane or motion-control rig; a turntable path in 3D software",
+    "Look-at pinhole projection in Canvas 2D with back-face culling and flat shading",
+    "Camera angle, radius and height keyframed on the beat grid"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6,
+   "video": "media/techorbit.mp4",
+   "posterImg": "atlas/posters/techorbit.jpg"
+  },
+  {
+   "id": "techparallax",
+   "family": "K",
+   "name": "Parallax",
+   "sub": "Depth from differential speed",
+   "era": "1930s —",
+   "origin": "When the camera moves sideways, near things cross the frame faster than far ones, and that difference in speed alone reads as depth. Disney’s multiplane camera, first used on The Old Mill (1937) and then Snow White, shot painted layers on glass at different distances; side-scrolling games such as Moon Patrol (1982) scrolled background layers at fractions of the foreground speed, and the same idea drives 2.5D photo animation and parallax web pages.",
+   "works": "The Old Mill (Disney, 1937) · Snow White and the Seven Dwarfs (Disney, 1937) · Moon Patrol (Irem, 1982) · The Kid Stays in the Picture (Brett Morgen & Nanette Burstein, 2002)",
+   "tech": [
+    "Layer offset = camera offset / depth",
+    "Sideways truck, eased on the beat",
+    "Flattened vs parallax split"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A held frame, then a long eased truck to one side: the near Token copies race across the top, the Token keeps pace with the camera, the back row lags and the giant far MOTION barely drifts. The frame splits so a single-speed flattened version runs next to the parallax one through two more trucks, then the camera returns home and holds.",
+   "visualDNA": "The kit stage seen as four flat cut-out planes: the faint grid and an enormous pale MOTION far back, a row of pale Token copies, the orange Token with its shadow, and big light-orange copies cropping the top edge; mono layer tags, a plan-view inset of track, view cone, layers and speed arrows, and two labelled panels for the comparison.",
+   "transitions": "Truck, split into flattened vs parallax panels, truck back to the full frame and hold",
+   "implementation": [
+    "Multiplane camera stand; layered compositing in After Effects with a 2-node camera",
+    "Canvas 2D layers offset by camera position / depth",
+    "Split-screen comparison drawing the same scene twice"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.6,
+   "video": "media/techparallax.mp4",
+   "posterImg": "atlas/posters/techparallax.jpg"
+  },
+  {
+   "id": "techcrashzoom",
+   "family": "K",
+   "name": "Crash Zoom",
+   "sub": "A sudden snap of the zoom lens",
+   "era": "1960s —",
+   "origin": "A crash zoom (or snap zoom) racks a zoom lens from wide to tight, or back, in a fraction of a second, so the frame lunges at a detail for shock or comedy. Once zoom lenses became practical it became a staple of 1960s–70s Italian westerns and Hong Kong kung-fu cinema, was revived in homage by Quentin Tarantino, and Edgar Wright made the whip-fast, sound-effected crash zoom a comic signature.",
+   "works": "Shaw Brothers kung-fu films (1970s) · Kill Bill: Volume 1 (Quentin Tarantino, 2003) · Shaun of the Dead (Edgar Wright, 2004) · Hot Fuzz (Edgar Wright, 2007)",
+   "tech": [
+    "Log-space zoom snapped in ~0.14 s",
+    "Zoom blur along the zoom path",
+    "Hit, hold and shake on the beat"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Stillness, then violence, then stillness: a calm wide, a snap in that lands exactly on the beat with a jolt of shake, a held close-up, a snap back out. A target bracket blinks a beat before the next crash, telegraphing the joke; the hole fills the frame; a double-take crashes onto a letter twice; the last crash out settles on a held wide.",
+   "visualDNA": "The kit stage — warm paper, faint grid, orange Token, ink MOTION — seen through viewfinder corners with a mono zoom readout; zoom-blurred smears and radial manga speed lines during each snap, an orange anticipation bracket on the next target.",
+   "transitions": "Hard snap zooms in and out on the beat, each landing with a short shake and settling into a hold",
+   "implementation": [
+    "Zoom lens racked by hand or motor; a scale keyframe with motion blur in After Effects",
+    "Canvas transform about the focus point; zoom interpolated in log space",
+    "Offscreen frame re-composited along the zoom path for blur"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.55,
+   "video": "media/techcrashzoom.mp4",
+   "posterImg": "atlas/posters/techcrashzoom.jpg"
+  },
+  {
+   "id": "techcloth",
+   "family": "K",
+   "name": "Cloth",
+   "sub": "Mass-spring sheet in the wind",
+   "era": "1986 —",
+   "origin": "Cloth simulation treats fabric as a grid of point masses joined by springs or distance constraints for stretch, shear and bending. Jerry Weil hung cloth from fixed points in 1986, Terzopoulos, Platt, Barr and Fleischer’s Elastically Deformable Models (1987) put physically based deformation into graphics, Baraff and Witkin’s Large Steps in Cloth Simulation (1998) made stiff cloth stable with implicit integration, and Thomas Jakobsen’s Verlet-and-constraints scheme (GDC 2001, from IO Interactive’s Hitman) made it cheap enough for real time.",
+   "works": "Geri’s Game (Pixar, 1997) · Monsters, Inc. (Pixar, 2001) · Hitman: Codename 47 (IO Interactive, 2000)",
+   "tech": [
+    "Verlet particles + distance constraints",
+    "Wind force along each quad normal",
+    "Pin release, floor and body collision"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A sheet hangs slack from two pins and breathes; wind gusts land on the beat and roll through it as travelling billows, the print stretching and folding with the fabric. The right pin lets go and the cloth swings down hanging from one corner, flapping; the left pin lets go and it slumps to the floor in folds, settling with friction.",
+   "visualDNA": "Warm paper studio with a grid and floor line; an off-white sheet with a stitched hem printed with the orange Token and MOTION, shaded per quad from a single soft key light, its darker reverse side showing where it folds; two thin cords to the ceiling; the solid orange Token standing behind it.",
+   "transitions": "Hidden behind the sheet, glimpsed through gusts, revealed when the pins release; the word rises over the uncovered Token",
+   "implementation": [
+    "Position-based Verlet cloth precomputed in setup (6 substeps, 3 constraint passes)",
+    "Affine texture-mapped triangles in Canvas 2D, depth-sorted",
+    "Wind as normal-projected drag with value-noise turbulence"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.3,
+   "video": "media/techcloth.mp4",
+   "posterImg": "atlas/posters/techcloth.jpg"
+  },
+  {
+   "id": "techrigidbody",
+   "family": "K",
+   "name": "Rigid Body",
+   "sub": "Impulses, friction, stacking",
+   "era": "1988 —",
+   "origin": "Rigid-body dynamics moves solid objects by integrating linear and angular momentum and resolving every contact so nothing interpenetrates. James Hahn’s Realistic Animation of Rigid Bodies and Moore and Wilhelms’ collision response (both SIGGRAPH 1988) brought it to animation, David Baraff’s analytical contact methods (1989 onward) made resting contact solvable, Mirtich and Canny popularised impulse-based simulation (1995), and Erin Catto’s sequential impulses in Box2D (2006–07) became the standard game solver.",
+   "works": "Half-Life 2 (Valve, 2004; Havok physics) · Garry’s Mod (Facepunch, 2006) · Angry Birds (Rovio, 2009; Box2D)",
+   "tech": [
+    "SAT + clipping contacts on rounded boxes",
+    "Warm-started sequential impulses",
+    "Coulomb friction and restitution"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Tokens fall in on the eighth-note grid, hit the floor and each other with a short restitution bounce, then tumble, slide and lock against friction; the pile grows and shuffles under each new arrival until kinetic energy bleeds away. A last Token lands flat on top of the word with a thud, and everything comes to rest for a still hold.",
+   "visualDNA": "Warm paper studio with a grid and floor line; orange, light-orange, dark-orange and ink Tokens in many sizes, the hole in each showing its rotation, soft contact shadows on the floor; MOTION set heavy and black on the floor at right, acting as a solid; a kinetic-energy graph traced in the corner.",
+   "transitions": "Empty stage, cascade, settle, still hold — the energy curve falls to zero",
+   "implementation": [
+    "2D sequential-impulse solver (Box2D-lite style) precomputed in setup",
+    "Rounded-box contacts from SAT, edge clipping and radius",
+    "Audio thuds from the recorded contact events"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9,
+   "video": "media/techrigidbody.mp4",
+   "posterImg": "atlas/posters/techrigidbody.jpg"
+  },
+  {
+   "id": "techdestruction",
+   "family": "K",
+   "name": "Destruction",
+   "sub": "Voronoi fracture and rewind",
+   "era": "1999 —",
+   "origin": "Destruction effects break a solid into pieces and hand them to a rigid-body solver. James O’Brien and Jessica Hodgins simulated brittle fracture from stress in 1999 (ductile fracture followed in 2002); production and games mostly pre-fracture instead, cutting the model into Voronoi cells around scattered points, as in Houdini’s Voronoi Fracture, 3ds Max RayFire and Blender’s Cell Fracture, while Pixelux’s Digital Molecular Matter and Volition’s GeoMod brought dynamic breakage to consoles.",
+   "works": "Star Wars: The Force Unleashed (LucasArts, 2008; Pixelux DMM) · Red Faction: Guerrilla (Volition, 2009; GeoMod 2.0) · Teardown (Tuxedo Labs, 2020)",
+   "tech": [
+    "Seeded Voronoi pre-fracture",
+    "Shard impulses, spin, floor bounce",
+    "Time remap: slow-mo and rewind"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A beat of stillness, a heavy ball arcs in and connects on the downbeat; time drops to a quarter speed as the cracks open, then catches up while shards spray, spin and rain down, bouncing and skidding to rest. After a held beat the clock runs backwards, slow, then fast, then easing, until every shard drops back into its cell and the Token clicks whole.",
+   "visualDNA": "Warm paper studio with a grid and floor line; the orange Token cut into angular Voronoi shards with darker fracture faces, small dust specks, a matte black ball, soft contact shadows; a mono simulation clock top right that reads SLOW and REWIND; a sim-time graph in the corner showing the remap.",
+   "transitions": "Strike, scatter, settle; a rewind reassembles the subject and the word appears over it",
+   "implementation": [
+    "Voronoi cells by half-plane clipping, drawn as clipped windows onto the Token path",
+    "Per-shard rigid integration with vertex–floor impulses, precomputed in setup",
+    "Eased playback remap of the cached simulation"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.75,
+   "video": "media/techdestruction.mp4",
+   "posterImg": "atlas/posters/techdestruction.jpg"
+  },
+  {
+   "id": "techinstancing",
+   "family": "K",
+   "name": "Instancing",
+   "sub": "One definition, drawn hundreds of times",
+   "era": "2006 —",
+   "origin": "Instancing draws a single stored object many times, each copy differing only by a few per-instance attributes such as position, scale, rotation and colour. GPUs gained hardware instancing in the mid-2000s, and motion designers met the idea through MoGraph’s Cloner in Cinema 4D (2006), which places clones on grids, radial and linear layouts and lets effectors drive their attributes by index.",
+   "works": "MoGraph Cloner (Cinema 4D, Maxon, 2006) · Houdini copy-to-points and packed primitives (SideFX) · Geometry Nodes Instance on Points (Blender, 2021)",
+   "tech": [
+    "One sprite, 400 transforms",
+    "Layout parameter morph",
+    "Index-staggered attributes"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A count that explodes: one Token, then instances streaming out of it in index order until the grid is full. After that only one parameter moves, on the beat, and every copy follows it — each starting a little later than the one before, so every change rolls across the set as a wave.",
+   "visualDNA": "Hundreds of identical orange rounded squares with an off-centre hole on a warm paper grid; grids, concentric rings and a golden-angle sunflower spiral; a SOURCE panel holding the single master Token; a mono HUD counting instances and marking the active layout.",
+   "transitions": "Clone burst from the master, then index-staggered layout morphs on the bar lines; resolves to a static offset grid",
+   "implementation": [
+    "Cinema 4D MoGraph Cloner + effectors",
+    "Houdini copy-to-points / GPU instancing",
+    "Canvas 2D: one pre-rendered sprite per colour, stamped with drawImage under per-instance transforms"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.25,
+   "video": "media/techinstancing.mp4",
+   "posterImg": "atlas/posters/techinstancing.jpg"
+  },
+  {
+   "id": "techrecursion",
+   "family": "K",
+   "name": "Recursion",
+   "sub": "A shape that contains itself",
+   "era": "1904 —",
+   "origin": "A recursive picture is defined in terms of itself: draw the shape, then draw the whole picture again, smaller and turned, inside it, until the copies vanish. Koch’s snowflake (1904) and Escher’s and Droste’s self-containing images made the idea visual; Mandelbrot named fractals in 1975, and Barnsley’s iterated function systems (1988) made recursive copying a standard way to generate imagery in computer graphics.",
+   "works": "Koch snowflake (Helge von Koch, 1904) · Print Gallery (M. C. Escher, 1956) · Fractals Everywhere — iterated function systems (Michael Barnsley, 1988)",
+   "tech": [
+    "draw(n) calls draw(n − 1)",
+    "One similarity transform per level",
+    "Infinite zoom to the fixed point"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Growth by levels: copies appear one per eighth note, each inside or on top of the last. The rule’s numbers then slide and the whole stack re-folds at once. Finally a steady exponential dive — four times closer per level — that never reaches the bottom and lands exactly where it started.",
+   "visualDNA": "An orange Token and an ink Token alternating level by level, coiling into a spiral shell, then nested hole-in-hole like Russian dolls on the paper grid; a depth gauge of stacked ticks, the live rule in mono type and a zoom multiplier climbing to ×256.",
+   "transitions": "Level-by-level build, a rule morph that re-folds every level together, then a seamless self-similar zoom that ends on the opening frame",
+   "implementation": [
+    "Recursive draw function with a depth limit",
+    "Iterated similarity transform (scale · rotate · translate) and its fixed point",
+    "Canvas 2D: levels composed as M^k, camera as M^−z for fractional z"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 2.9,
+   "video": "media/techrecursion.mp4",
+   "posterImg": "atlas/posters/techrecursion.jpg"
+  },
+  {
+   "id": "techfields",
+   "family": "K",
+   "name": "Fields",
+   "sub": "Falloffs that drive attributes by distance",
+   "era": "2006 —",
+   "origin": "A field assigns a value to every point in space, and each object samples it to set its own scale, rotation or colour, so one gizmo can art-direct thousands of copies at once. Cinema 4D’s MoGraph effectors (2006) popularised spherical and linear falloffs for motion design; Release 20 (2018) generalised them into layered Fields, and Houdini and Blender offer the same idea as attribute falloffs and field nodes.",
+   "works": "MoGraph effectors with falloff (Cinema 4D, Maxon, 2006) · Fields (Cinema 4D Release 20, 2018) · Geometry Nodes fields (Blender, 2021)",
+   "tech": [
+    "Spherical / linear / noise falloff",
+    "Field → scale, rotation, colour",
+    "Heat-map visualisation"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing moves on its own: the Tokens are fixed in a grid and only react. A gizmo glides over them and they swell, turn and warm up as it passes, then settle behind it; a plane sweeps across and tips every row in turn; noise makes them breathe in drifting patches. Every change in the field crossfades on the bar.",
+   "visualDNA": "A dense grid of Tokens running from small upright grey to large, half-turned orange; underneath, a faint orange heat map of the field, dashed radius rings and crosshair for the sphere, a ramp band and arrow for the plane; a small falloff-profile graph and mono labels in the HUD.",
+   "transitions": "Crossfades between field types on the bar line, resolving to a static centred spherical falloff",
+   "implementation": [
+    "Cinema 4D MoGraph effectors and Fields",
+    "Houdini attribute falloff / Blender Geometry Nodes fields",
+    "Canvas 2D: field sampled per Token plus a low-res heat map upscaled underneath"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.6,
+   "video": "media/techfields.mp4",
+   "posterImg": "atlas/posters/techfields.jpg"
+  },
+  {
+   "id": "techmatchcut",
+   "family": "K",
+   "name": "Match Cut",
+   "sub": "A hard cut that carries a shape or an action across",
+   "era": "1920s —",
+   "origin": "Soviet montage and the silent avant-garde treated the splice itself as a tool, and editors soon learned that a cut disappears, or rhymes, when something carries across it: a shape, a position, a direction, a movement. The graphic match is the showpiece — Stanley Kubrick’s bone tossed into the air that becomes an orbiting satellite in 2001: A Space Odyssey (1968) — while the humbler cut on action, which finishes a movement in the next shot, is the everyday glue of continuity editing.",
+   "works": "2001: A Space Odyssey (Stanley Kubrick, 1968; bone-to-satellite cut) · Lawrence of Arabia (David Lean, 1962; match-to-sunrise cut) · Psycho (Alfred Hitchcock, 1960; plughole-to-eye match dissolve)",
+   "tech": [
+    "Graphic match on silhouette and spin",
+    "Position and size match",
+    "Cut on action"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Five hard cuts, all on the beat at 1.5, 3.5, 5, 6.5 and 8.5 s. Motion continues through each splice: the spin keeps its angle and speed and only slows in the second shot, a push-in delivers the porthole at the sun’s exact size, the horizon becomes the floor at the same height, and a toss launched in the wide shot is cut a third of the way up and lands in the close shot.",
+   "visualDNA": "The Technique Atlas stage, the orange Token, an ink dial with a blue porthole, an orange striped sun on a horizon; dashed orange guide outlines laid over the outgoing shot and carried into the incoming one; a dotted toss path split at the cut point; a numbered shot strip with beat ticks and accent cut markers.",
+   "transitions": "Graphic match cut, position match cut, horizon-to-floor match, cut on action",
+   "implementation": [
+    "Picture editing (Avid, Premiere, Resolve) with onion-skin overlays to line up the match",
+    "After Effects: guide layers and parented nulls across comps",
+    "Canvas 2D: one draw function per shot, switched on beat-aligned cut times"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.62,
+   "video": "media/techmatchcut.mp4",
+   "posterImg": "atlas/posters/techmatchcut.jpg"
+  },
+  {
+   "id": "techdisplace",
+   "family": "K",
+   "name": "Displacement",
+   "sub": "A greyscale map pushes pixels from one picture into the next",
+   "era": "1990s —",
+   "origin": "A displacement map offsets each pixel of an image by the brightness of a second, greyscale image. Digital compositors used it for heat haze, refraction and ripples; After Effects shipped a Displacement Map effect, and motion designers turned it into a transition by animating the amount up and back down across a cut. Real-time versions became shader transitions, collected in the open-source GL Transitions library and the WebGL image sliders popular on agency sites.",
+   "works": "After Effects Displacement Map effect (Adobe) · GL Transitions, open-source shader transition collection (Gaëtan Renaudeau and contributors) · WebGL hover and slider distortion effects on agency portfolio sites (2010s)",
+   "tech": [
+    "Luminance map → pixel offset",
+    "Amount swells and dies on a sine",
+    "Map-ordered switch from A to B"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Three transitions, each 1.5 s, with a beat of hold between. The displacement amount rises from zero, peaks mid-transition at 120 px and falls back to zero, so both ends are clean; meanwhile the picture flips from A to B in the order the map dictates — noise in blotches, the gradient as a sweep from left to right, the ripple ring by ring.",
+   "visualDNA": "The Technique Atlas stage with the Token in four states (orange, ink turned 90°, blue upside-down above MOTION, orange again); grid lines bend with the image; a greyscale inset of the current map with sampled offset arrows, a row of all three maps, a state label beneath the Token.",
+   "transitions": "Noise-map displacement, gradient-map displacement, ripple-map displacement",
+   "implementation": [
+    "After Effects Displacement Map / Turbulent Displace across a cut",
+    "GLSL transition shader: texture2D(from, uv + m·k·p), texture2D(to, uv − m·k·(1−p))",
+    "Canvas 2D: per-pixel offsets on a 480×320 offscreen buffer scaled into the frame"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 6.85,
+   "video": "media/techdisplace.mp4",
+   "posterImg": "atlas/posters/techdisplace.jpg"
+  },
+  {
+   "id": "techovershoot",
+   "family": "K",
+   "name": "Overshoot",
+   "sub": "One pass past the target, then settle",
+   "era": "1930s —",
+   "origin": "Disney animators taught overshoot as part of follow-through: a move carries past its final pose and eases back into it, so it reads as having weight and energy. In software it became the “back” easing curve — Robert Penner’s easing equations (2001) defined easeOutBack with its overshoot constant 1.70158, about a 10% overshoot — and that curve now ships in CSS cubic-bezier presets, GSAP’s back.out and nearly every animation library.",
+   "works": "The Illusion of Life: Disney Animation (Frank Thomas and Ollie Johnston, 1981; follow-through and overlapping action) · Robert Penner’s Easing Equations (Flash ActionScript, 2001) · GSAP back.out ease (GreenSock)",
+   "tech": [
+    "Ease-out-back curve",
+    "Overshoot strength s",
+    "Single pass, no oscillation"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Every move takes one second: a fast start, a single excursion past the target, a turn and a soft settle — no second swing. Five lanes compare strengths from none (plain cubic ease-out) to s = 4 (about 38% past); they return on the next bar, overshooting the start mark; then the same curve drives a pop-in scale, a quarter-turn and a slide, with MOTION sliding in a beat behind.",
+   "visualDNA": "The Technique Atlas stage; five lanes of small orange Tokens on thin tracks between dashed START and TARGET lines; dashed ghosts at each peak with a bracket and the measured overshoot; then one large Token with a dashed target outline, an angle arc with target and peak ticks, and target lines for the slide; all five curves faint in the caption graph with the active one in ink.",
+   "transitions": "Lane race into a hero Token; overshoot on scale, rotation and position",
+   "implementation": [
+    "After Effects graph editor / Flow presets with back easing",
+    "CSS cubic-bezier(0.34, 1.56, 0.64, 1) · GSAP back.out(s)",
+    "Canvas 2D: f(u) = 1 + (s+1)(u−1)³ + s(u−1)², peak at u = 1 − 2s / 3(s+1)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.1,
+   "video": "media/techovershoot.mp4",
+   "posterImg": "atlas/posters/techovershoot.jpg"
+  },
+  {
+   "id": "techstagger",
+   "family": "K",
+   "name": "Stagger",
+   "sub": "One animation, offset start times",
+   "era": "1930s —",
+   "origin": "Staggering — running the same move on many elements with each start delayed a little more than the last — is how a crowd of parts reads as one gesture. Cel animators and title designers did it by hand with offset exposure-sheet timings; in motion graphics it became a standard control through After Effects text animators and expression offsets, and web motion libraries such as GSAP made a stagger value, with orders from the start, centre, edges or random, a single parameter.",
+   "works": "Saul Bass, The Man with the Golden Arm titles (1955) · After Effects text animator range selectors (Adobe) · GSAP stagger option (GreenSock)",
+   "tech": [
+    "Delay = f(index)",
+    "Linear · centre · diagonal · random orders",
+    "Same duration and ease for every item"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Every item runs the identical 500 ms pop-in on an overshooting ease; only the start time changes. Four orders, one per bar, each finishing within 1.4 s — a reading-order sweep, a ripple out from the centre, a diagonal wave from the top-left, a sparkling shuffle — each cleared at once before the next, then the six letters of MOTION drop in 100 ms apart.",
+   "visualDNA": "The Technique Atlas stage with a 9 × 5 grid of small orange Tokens over delay heat tiles (pale to orange, labelled in ms); a timing chart of 45 offset bars, dotted lead-ins for each delay and a black playhead; mono tags naming the order and its formula.",
+   "transitions": "Staggered pop-ins; each pattern cleared with a single simultaneous scale-down",
+   "implementation": [
+    "After Effects text animators / layer offset sequencing",
+    "GSAP stagger, Framer Motion staggerChildren, CSS animation-delay",
+    "Canvas 2D: per-item delay = f(index, position), one shared easing"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.05,
+   "video": "media/techstagger.mp4",
+   "posterImg": "atlas/posters/techstagger.jpg"
+  },
+  {
+   "id": "techdolly",
+   "family": "K",
+   "name": "Dolly",
+   "sub": "The camera moves, so perspective changes",
+   "era": "1910s —",
+   "origin": "A dolly shot moves the whole camera toward or away from the subject on a wheeled platform, often on track. Because the viewpoint itself travels, near objects grow faster than far ones and the parallax between them changes — which a zoom, magnifying from a fixed point, cannot do. Giovanni Pastrone’s Cabiria (1914) made long tracking moves famous enough that they were called \"Cabiria movements\"; the zoom lens only became common decades later, and Hitchcock’s Vertigo (1958) combined the two against each other in the dolly zoom.",
+   "works": "Cabiria (Giovanni Pastrone, 1914) · Vertigo (Alfred Hitchcock, 1958; dolly zoom) · Jaws (Steven Spielberg, 1975; dolly zoom on the beach)",
+   "tech": [
+    "Camera translation, fixed focal length",
+    "Magnification ∝ 1 / distance per depth",
+    "Matched zoom for comparison"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A slow, eased push in from 9 m to 3.6 m, a hold, a pull back out; then the same push beside a zoom that keeps the camera parked and racks 24 → 60 mm so the Token grows identically. In the dolly the foreground markers swing outward and swell ×4 while the billboard behind barely grows; in the zoom everything scales together about the centre.",
+   "visualDNA": "The Technique Atlas Token on a gridded floor plane in true perspective, ink marker Tokens in front, ink posts with distance labels and MOTION on a far billboard; paper HUD plates with a top-view map (orange frustum widening or narrowing), camera distance, focal length and magnification bars for near, Token and far.",
+   "transitions": "Full-frame dolly shrinks into the left half of a split screen as the zoom panel slides in",
+   "implementation": [
+    "Dolly and track, slider, crane or Steadicam on set",
+    "Camera translation in Cinema 4D / Blender / After Effects 3D camera",
+    "Canvas 2D: pinhole projection x·f/z of a small 3D set, painter-sorted"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.6,
+   "video": "media/techdolly.mp4",
+   "posterImg": "atlas/posters/techdolly.jpg"
+  },
+  {
+   "id": "techinfinitezoom",
+   "family": "K",
+   "name": "Infinite Zoom",
+   "sub": "Self-similar picture, log-space camera",
+   "era": "1904 —",
+   "origin": "An infinite zoom needs a picture that contains a scaled copy of itself — a Droste image, so named after the Dutch cocoa tin whose 1904 nurse holds a tin bearing her own picture — and a camera that scales by a constant factor per unit of time, so it moves evenly through log space. Fractal zoom films of the 1980s made it a computer-graphics spectacle; Eames Office’s Powers of Ten (1977) had already paced its journey as a factor of ten every ten seconds, and the rising Shepard–Risset tone is its sonic twin.",
+   "works": "Powers of Ten (Charles and Ray Eames, 1977) · Droste cocoa tin artwork (1904) · Zoom (Istvan Banyai, picture book, 1995)",
+   "tech": [
+    "Self-similar nesting, ratio K = 4",
+    "Exponential zoom Z = K^L, L linear in time",
+    "Aim at the fixed point; wrap L mod 1"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A held frame, an ease into a constant climb of one level per second — the hole swelling until it becomes the frame and the next Token arrives at the size the last one had — then an ease out that lands exactly on level 8, a frame identical to the first. No acceleration is felt in between, because every second is the same ×4.",
+   "visualDNA": "The Technique Atlas stage seen through a rounded viewport: orange Tokens nested hole within hole, each on its own patch of gridded paper and lettered with its level and ×4^n; a crosshair on the fixed point; a HUD with the zoom factor, depth level, an exponential on a linear axis and a straight climb on a log ruler.",
+   "transitions": "Continuous self-similar zoom; the end frame matches the start frame for a seamless loop",
+   "implementation": [
+    "Droste / recursive comps zoomed with an exponential scale expression",
+    "Fractal explorers and shader zooms in log space",
+    "Canvas 2D: draw levels n−2 … n+8 from frac(L), nested hole clips"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 4.62,
+   "video": "media/techinfinitezoom.mp4",
+   "posterImg": "atlas/posters/techinfinitezoom.jpg"
+  },
+  {
+   "id": "techfluid",
+   "family": "K",
+   "name": "Fluid",
+   "sub": "Particles that push their neighbours apart",
+   "era": "1977 —",
+   "origin": "Smoothed-particle hydrodynamics was devised in 1977 by Robert Gingold and Joe Monaghan, and independently by Leon Lucy, to simulate stars. Matthias Müller, David Charypar and Markus Gross brought it to interactive graphics in Particle-Based Fluid Simulation for Interactive Applications (2003), and Simon Clavet, Philippe Beaudoin and Pierre Poulin’s double-density relaxation (2005) made splashy, stable particle liquids cheap; grid solvers in the line of Jos Stam’s Stable Fluids (1999) and FLIP hybrids carry the film work.",
+   "works": "Antz (DreamWorks / PDI, 1998; water simulation) · Ratatouille (Pixar, 2007) · Moana (Walt Disney Animation Studios, 2016)",
+   "tech": [
+    "SPH density from neighbours within h",
+    "Double-density relaxation (pressure + near-pressure)",
+    "Two-way rigid-body coupling"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Still water first, shown as bare particles; the Token drops on the beat and the surface tears into a crown splash that rains back, the body sinks, slows, rises on its own buoyancy and bobs to a float. A spring then drags it through the water and back, piling a bow wave against the glass, and the sloshing decays to a level surface.",
+   "visualDNA": "The Technique Atlas stage with a glass tank on the floor; the liquid drawn as blue metaballs over the half-submerged orange Token, droplets as dots; mono labels for the method, parameters and phase; a neighbourhood diagram with the smoothing radius h; velocity arrows in the action; a debug inset with every particle coloured by speed.",
+   "transitions": "Particles → liquid surface; still, splash, float, push, settle; the energy curve rises and decays",
+   "implementation": [
+    "SPH with double-density relaxation precomputed in setup (4 substeps)",
+    "Uniform-grid neighbour search, XSPH-style viscosity",
+    "Canvas 2D: half-res metaball threshold of additive particle sprites"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.9,
+   "video": "media/techfluid.mp4",
+   "posterImg": "atlas/posters/techfluid.jpg"
+  },
+  {
+   "id": "techsoftbody",
+   "family": "K",
+   "name": "Soft Body",
+   "sub": "A lattice of masses and springs",
+   "era": "1987 —",
+   "origin": "Soft bodies are simulated as point masses joined by damped springs (or by constraints and pressure) and the picture is carried along by the deforming lattice. Demetri Terzopoulos, John Platt, Alan Barr and Kurt Fleischer’s Elastically Deformable Models (SIGGRAPH 1987) introduced physically based deformation to graphics, Gavin Miller animated snakes and worms with mass-spring segments the following year, and Matthias Müller and colleagues’ shape matching (2005) and position-based dynamics (2006) made stable, art-directable jelly routine in games and tools.",
+   "works": "The Motion of Snakes and Worms (Gavin Miller, SIGGRAPH 1988) · LocoRoco (Sony, 2006) · World of Goo (2D Boy, 2008)",
+   "tech": [
+    "Mass-spring lattice: structural, shear, bend",
+    "Per-triangle area springs against collapse",
+    "Texture embedded in the lattice cells"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Two identical Tokens differ only in spring stiffness. Dropped on the beat, the soft one splats and wobbles for a second while the firm one gives a short shiver; plates press both with the same force — the soft one squashes to under two-thirds of its height and bulges, the firm one gives a few per cent — then lift away so the stored energy throws them up, and both ring down to their rest shape.",
+   "visualDNA": "The Technique Atlas stage and floor; two orange Tokens carried on lattices of ink dots, springs tinted blue where compressed and orange where stretched; dashed rest-shape ghosts, height callouts h / h₀, two ink press plates on rods with force arrows, mono stiffness labels under each body.",
+   "transitions": "Held, dropped, pressed, released, recovered — the soft body’s height graph traces the story",
+   "implementation": [
+    "Mass-spring lattice with area springs precomputed in setup (24 substeps, semi-implicit Euler)",
+    "Penalty contact for the force-driven plates, projected floor with friction",
+    "Canvas 2D: affine texture-mapped lattice triangles, strain-coloured spring overlay"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.2,
+   "video": "media/techsoftbody.mp4",
+   "posterImg": "atlas/posters/techsoftbody.jpg"
+  },
+  {
+   "id": "technoise",
+   "family": "K",
+   "name": "Noise",
+   "sub": "Smooth random, octave by octave",
+   "era": "1983 —",
+   "origin": "Ken Perlin invented gradient noise while working on the computer imagery for Tron (1982) and published it as An Image Synthesizer (SIGGRAPH 1985); it earned him a Technical Achievement Academy Award in 1997, and he refined it as Improved Noise (2002). Summing octaves of noise at doubling frequency and halving amplitude — fractal Brownian motion, after Mandelbrot and Van Ness — became the standard way to drive organic motion, from camera shake to the Wiggle expression in After Effects.",
+   "works": "Tron (Disney, 1982) · An Image Synthesizer (Ken Perlin, SIGGRAPH 1985) · After Effects wiggle() expression (Adobe)",
+   "tech": [
+    "1D Perlin gradient noise",
+    "fBm: octaves at 2× frequency, ½ amplitude",
+    "Per-instance offsets into a 2D noise field"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Two seconds of white random jitter — a new value every frame, so the Token strobes and its trail scribbles. Then it glides on one slow octave of noise; on each bar a further octave arrives at twice the frequency and half the amplitude, adding tremble on top of drift. Finally a grid of Tokens turns, swells and lifts together as one noise field scrolls through them, neighbours in step, distant ones out of phase.",
+   "visualDNA": "The Technique Atlas stage; the orange Token with a fading trail of ghosts and its centre path; a scrolling signal graph along the top; on the left a stack of four octave plots, each lighting up as it enters; for the field, a faint warm-and-blue noise map behind an 11 × 5 grid of Tokens, three of them ringed in ink, blue and dark orange to match their curves.",
+   "transitions": "Cut from random to coherent on the beat; octaves fade in on each bar; the hero Token shrinks into the centre of the field",
+   "implementation": [
+    "Seeded permutation and gradient tables",
+    "fBm sum with per-octave weights faded in",
+    "Canvas 2D: per-frame low-res noise map scaled up, trails resampled from t"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.6,
+   "video": "media/technoise.mp4",
+   "posterImg": "atlas/posters/technoise.jpg"
+  },
+  {
+   "id": "techfeedback",
+   "family": "K",
+   "name": "Feedback",
+   "sub": "Each frame is the last frame, transformed, under the new one",
+   "era": "1960s —",
+   "origin": "Pointing a video camera at the monitor it feeds makes a loop in which every frame contains the last one, scaled, rotated and dimmed by the camera’s framing — the tunnel explored by video artists such as Steina and Woody Vasulka in the late 1960s and early 1970s. The BBC’s Doctor Who titles (from 1963) were built on howl-round feedback, and digital tools turned the loop into a parameter set: a feedback buffer redrawn every frame with a scale, rotation, offset and decay, as in MilkDrop music visualisers and VJ software.",
+   "works": "Doctor Who opening titles (Bernard Lodge, BBC, 1963; howl-round feedback) · Steina and Woody Vasulka, video feedback works (The Kitchen, New York, early 1970s) · MilkDrop (Ryan Geiss, Winamp visualiser, 2001)",
+   "tech": [
+    "Frame-to-frame transform",
+    "Decay per generation",
+    "Closed-form reconstruction"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The Token flies a Lissajous loop at constant pace; everything else is the loop’s echo. Four regimes on the bar lines, each eased in over a quarter-second: no transform leaves plain fading trails, ×1.024 per frame blows them into a tunnel, ×0.975 with −6° a frame (against the Token’s orbit) winds them into an inward spiral, and ×1.03 with −2.2° and an offset sends a drifting vortex out from a shifted vanishing point.",
+   "visualDNA": "The Technique Atlas stage with a framed monitor on the right; dozens of Token generations fading from orange to blue and back by birth frame, each inked at its edge; dashed rectangles tracing the monitor frame nested inside itself; a left column with the live parameters (scale, rotate, offset, decay, generations) and a loop diagram with a pulse running round it.",
+   "transitions": "Parameter crossfades between feedback regimes; no cuts",
+   "implementation": [
+    "Camera pointed at its own monitor (analog howl-round)",
+    "Feedback buffer in TouchDesigner / MilkDrop / After Effects echo",
+    "Canvas 2D: last N generations redrawn under accumulated affine transforms and decays"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.9,
+   "video": "media/techfeedback.mp4",
+   "posterImg": "atlas/posters/techfeedback.jpg"
+  },
+  {
+   "id": "techmasking",
+   "family": "K",
+   "name": "Masking",
+   "sub": "Show a layer only where another shape says so",
+   "era": "1900s —",
+   "origin": "In-camera masks — a card in front of the lens, then a matte box exposing one part of the frame at a time — let early filmmakers such as Edwin S. Porter in The Great Train Robbery (1903) combine images; optical printers with travelling mattes made the matte a moving, frame-by-frame element. Digital compositing turned masks into editable bezier shapes with modes, feather and inversion, and desktop compositors such as After Effects made the other trick a one-click layer setting: the track matte, where one layer’s alpha or luminance sets another layer’s opacity.",
+   "works": "Un homme de têtes (Georges Méliès, 1898; masked multiple exposures) · The Great Train Robbery (Edwin S. Porter, 1903; matted-in backgrounds) · Catch Me If You Can title sequence (Kuntzel + Deygas, 2002)",
+   "tech": [
+    "Mask modes: add · subtract",
+    "Feather and invert",
+    "Alpha and luma track mattes"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The plate never moves except the Token turning slowly; only the masks do. Each mode gets about a bar: two masks slide toward each other and merge, a round hole travels a sine path through a big mask, the edge softens from 0 to 90 px, the mask snaps inside-out and drifts, the word MOTION scales up as an alpha matte, and a bright band sweeps along a luma matte.",
+   "visualDNA": "The Technique Atlas stage with a hidden ink plate (dashed ghost of its Token and card); mask outlines in orange with square vertices and dashed feather bounds; a mask-stack readout under the tag (mask, mode, feather, inverted); a black-and-white matte inset top right.",
+   "transitions": "Hard cuts between mask modes on the beat; matte changes in place",
+   "implementation": [
+    "After Effects masks (Add / Subtract / Feather / Inverted) and track mattes",
+    "Nuke Roto + Merge (mask), Shuffle for luma",
+    "Canvas 2D: mask canvas applied with destination-in; luma → alpha on a half-res canvas"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.55,
+   "video": "media/techmasking.mp4",
+   "posterImg": "atlas/posters/techmasking.jpg"
+  },
+  {
+   "id": "techkeying",
+   "family": "K",
+   "name": "Keying",
+   "sub": "Pull a matte from a colour, then replace it",
+   "era": "1940 —",
+   "origin": "Blue-screen travelling mattes were pioneered by Larry Butler for The Thief of Bagdad (1940), and Petro Vlahos refined the colour-difference process (and later the Ultimatte electronic keyer) whose idea — the matte is how much the backing colour exceeds the other channels — every digital keyer still uses. Green became the usual backing with digital video sensors, and keying grew its standard controls: clip black and white to clean the matte, and spill suppression to remove backing colour reflected onto the subject.",
+   "works": "The Thief of Bagdad (1940; Larry Butler’s blue-screen mattes) · Ben-Hur (1959; Petro Vlahos’s colour-difference blue screen) · Mary Poppins (1964; the sodium-vapour matte process)",
+   "tech": [
+    "Colour-difference matte",
+    "Clip black / clip white",
+    "Spill suppression"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The Token drifts slowly left and right on the green screen while the keyer, not the subject, does the moving: one-bar wipes swap RAW for MATTE and MATTE for COMP, the clip values ease over one bar so the grey matte snaps clean, a slow wipe turns despill on across the frame, and two dividers slide in to hold a three-way split the Token crosses.",
+   "visualDNA": "A 16:9 viewer on the Technique Atlas stage showing a drawn green-screen plate (hot spot, dark corners, a fold, dark tracking crosses, sensor noise, green rim on the orange Token), its black-and-white matte and the composite on the paper-and-grid stage; orange wipe dividers with view chips; a keyer panel on the right with clip values, despill state, formulas and a live transfer curve; a loupe on the Token edge showing the green fringe.",
+   "transitions": "Hard-edged wipes between RAW, MATTE and COMP; a three-way split",
+   "implementation": [
+    "Ultimatte / Primatte / Keylight colour-difference keyers",
+    "Nuke Keylight + IBK, After Effects Keylight with spill suppression",
+    "Canvas 2D: per-pixel key on a 640 × 360 canvas (getImageData), scaled 2× into the viewer"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.7,
+   "video": "media/techkeying.mp4",
+   "posterImg": "atlas/posters/techkeying.jpg"
+  },
+  {
+   "id": "techrotoscope",
+   "family": "K",
+   "name": "Rotoscope",
+   "sub": "Tracing over footage, frame by frame",
+   "era": "1915 —",
+   "origin": "Max Fleischer patented the rotoscope (filed 1915, granted 1917): a projector threw live-action film one frame at a time onto a glass drawing surface so an animator could trace it, and his brother Dave, filmed in a clown suit, became Koko in the Out of the Inkwell series. Disney traced live reference for Snow White (1937), Ralph Bakshi built whole features on it in the 1970s, and digital roto — Bezier splines keyed frame by frame — became the everyday way to cut mattes in compositing.",
+   "works": "Out of the Inkwell (Max and Dave Fleischer, 1918–1929) · The Lord of the Rings (Ralph Bakshi, 1978) · A Scanner Darkly (Richard Linklater, 2006)",
+   "tech": [
+    "Reference plate under the paper",
+    "Traced on twos with line boil",
+    "Roto spline keyed per frame"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "All motion comes from the plate: a tumbling hop that lands once a second, sampled at 24 fps. The roto spline snaps to it on every plate frame; the ink drawings snap on every second frame, so the traced animation steps at 12 drawings a second, with the outline trembling as each drawing is redrawn. The motion stays the same while its source fades away.",
+   "visualDNA": "The Technique Atlas stage with a sheet of animation paper and a peg bar; under it a dim, grainy, vignetted plate with a shaded, motion-blurred Token and a burned-in frame counter. Orange spline with white Bezier handles; ink outlines with a lighter pencil pass, orange and blue onion skins, a drawing number in the corner; a 24-cell frame strip marking the plate frames and the drawings on twos.",
+   "transitions": "Plate to light table (a paper veil), plate fade-out, ink-and-paint fill",
+   "implementation": [
+    "Fleischer rotoscope: projector under a glass drawing table",
+    "Digital roto: Bezier spline mattes (Silhouette, Nuke, After Effects Roto)",
+    "Canvas 2D: a 24 fps plate under 12 fps traced outlines with per-drawing boil"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.6,
+   "video": "media/techrotoscope.mp4",
+   "posterImg": "atlas/posters/techrotoscope.jpg"
+  },
+  {
+   "id": "techdoubleexposure",
+   "family": "K",
+   "name": "Double Exposure",
+   "sub": "Two exposures, one frame",
+   "era": "1850s —",
+   "origin": "Exposing the same plate or frame twice adds the light of both images: whatever was dark in one shows the other. Victorian photographers used it for “spirit” photographs, and Georges Méliès, rewinding his camera and masking parts of the frame, built trick films on it from 1898. In film it became the superimposition and the dissolve; digital compositing turned it into blend modes, where add (linear dodge) and screen reproduce the light-adding of a double exposure and multiply the sandwiching of two transparencies.",
+   "works": "The Man with the Rubber Head / L’Homme à la tête en caoutchouc (Georges Méliès, 1901) · The Phantom Carriage / Körkarlen (Victor Sjöström, 1921) · True Detective (HBO, 2014; title sequence by Elastic)",
+   "tech": [
+    "Add · screen · multiply",
+    "Dark areas take the other exposure",
+    "Silhouette as matte"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The exposures barely move — a slow drift and sway in each — because the technique is in the combine, not the motion. Every two seconds a new pair is shot on the beat: exposure 1 flashes, exposure 2 half a beat later, and the result develops a beat after that under a new blend mode; the silhouette pass holds for the last three seconds with its texture scrolling inside the Token.",
+   "visualDNA": "The Technique Atlas stage with three framed panels: exposure 1 and exposure 2 stacked on the left, joined by + and = to a large result. Near-black exposures for add and screen, paper for multiply, a black Token on white for the silhouette; blue light bars and the word MOTION as the second exposure; a mode strip, a crosshair probe with live RGB readouts and the blend formula under the result.",
+   "transitions": "Shutter flash per exposure; the result re-develops under each new blend mode",
+   "implementation": [
+    "In-camera: rewind and re-expose the same frame",
+    "Optical printer superimposition / After Effects blend modes (Add, Screen, Multiply)",
+    "Canvas 2D: globalCompositeOperation lighter, screen and multiply on offscreen exposures"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.6,
+   "video": "media/techdoubleexposure.mp4",
+   "posterImg": "atlas/posters/techdoubleexposure.jpg"
+  },
+  {
+   "id": "techtimeremap",
+   "family": "K",
+   "name": "Time Remapping",
+   "sub": "One clip, a new clock",
+   "era": "1890s —",
+   "origin": "Changing the speed of time on screen is as old as the hand-cranked camera: overcranking gave slow motion, undercranking fast motion, and early filmmakers ran film backwards for reverse. Optical printers could hold frames for a freeze or skip them, and the closing freeze of Truffaut’s The 400 Blows (1959) made the held frame famous. Digital editing turned it into a curve: Adobe After Effects’ Time Remapping maps output time to source time per frame, and speed ramps became a staple of music videos and action films after The Matrix (1999).",
+   "works": "The 400 Blows / Les Quatre Cents Coups (François Truffaut, 1959; final freeze frame) · The Matrix (The Wachowskis, 1999) · 300 (Zack Snyder, 2007; speed ramps)",
+   "tech": [
+    "Keyed speed integrated to a remap curve",
+    "Freeze as a hold",
+    "Reverse as negative speed"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The source clip is an even, regular hop; all the expression comes from the clock. Two seconds at 100%, a one-second ease into 20%, a hard hold at 4.5 s, a cut into −100% reverse at 5.5 s, a ramp through zero up to 250% and a final ease back to 100% — so the same hop reads as floaty, frozen, rewound and frantic.",
+   "visualDNA": "The Technique Atlas stage with its floor line: the orange Token hopping across a dotted path, six outlined ghosts at fixed output intervals, an ink arrow showing source velocity; a source ruler under the floor with a playhead and source-frame counter; a speed graph and a large speed percentage top right; the remap curve (source time over output time) as the caption graph.",
+   "transitions": "Speed ramps, a hold (freeze frame), a hard cut into reverse",
+   "implementation": [
+    "Over- and undercranked cameras, optical-printer step printing",
+    "After Effects Time Remapping / Premiere and Resolve speed ramps",
+    "Canvas 2D: keyed speed integrated in setup() into a source-time table"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.1,
+   "video": "media/techtimeremap.mp4",
+   "posterImg": "atlas/posters/techtimeremap.jpg"
+  },
+  {
+   "id": "techdissolve",
+   "family": "K",
+   "name": "Dissolve",
+   "sub": "One picture fades out as the next fades in",
+   "era": "1890s —",
+   "origin": "The dissolve began in the camera: the operator faded a shot out with the shutter or iris, wound the film back and faded the next shot in over the same frames. Georges Méliès used dissolves to join the tableaux of Cinderella (Cendrillon, 1899); from the 1930s they were made on the optical printer, and Hollywood grammar settled on the dissolve for passing time and the fade to black for ending a scene. Editing software kept the vocabulary: Cross Dissolve, Dip to Black, Dip to White and an Additive Dissolve that sums the two pictures are standard transitions in Premiere Pro, and Avid and Final Cut have their own equivalents.",
+   "works": "Cinderella / Cendrillon (Georges Méliès, 1899) · Psycho (Alfred Hitchcock, 1960; the dissolve from the shower drain to Marion’s eye) · Apocalypse Now (Francis Ford Coppola, 1979; the opening dissolves between Willard and the burning jungle)",
+   "tech": [
+    "Linear opacity mix",
+    "Dip to black / white",
+    "Additive vs. normal dissolve"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing moves: only opacity changes, on a linear ramp. Two seconds of cross-dissolve with a long, muddy middle where both shots are half there; a quicker dip through black that empties the frame for an instant before the next shot rises; a one-second dip through white; then a held comparison where a normal and an additive dissolve play the same cut side by side.",
+   "visualDNA": "The Technique Atlas stage around a framed program monitor showing five Token shots (orange, blue, ink with the word, outline, orange with the word); layer-opacity bars and a probe crosshair with swatches for A, B and the mixed pixel on a side panel; then two monitors with formulas and paper-luma meters, the additive one flaring to white at the midpoint.",
+   "transitions": "Cross-dissolve, dip to black, dip to white, normal and additive dissolve on the same cut",
+   "implementation": [
+    "Premiere Pro Cross Dissolve / Dip to Black / Dip to White / Additive Dissolve",
+    "After Effects layer opacity keyframes · Avid and Final Cut dissolves",
+    "Canvas 2D: globalAlpha over the outgoing shot; globalCompositeOperation lighter on offscreen shots for the additive mix"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2,
+   "video": "media/techdissolve.mp4",
+   "posterImg": "atlas/posters/techdissolve.jpg"
+  },
+  {
+   "id": "techsquash",
+   "family": "K",
+   "name": "Squash & Stretch",
+   "sub": "Deform with the motion, keep the volume",
+   "era": "1930s —",
+   "origin": "Disney’s animators of the early 1930s found that drawings read as alive when a body stretched in fast motion and squashed on impact, provided it never seemed to gain or lose bulk. Frank Thomas and Ollie Johnston put it first of the twelve principles in The Illusion of Life (1981), illustrated by the half-filled flour sack that slumps, stretches and folds without changing its volume. John Lasseter carried it into computer animation in his SIGGRAPH paper Principles of Traditional Animation Applied to 3D Computer Animation (1987), and in software it is a scale with x and y set to reciprocals.",
+   "works": "The Illusion of Life: Disney Animation (Frank Thomas and Ollie Johnston, 1981; the flour-sack drawings) · Principles of Traditional Animation Applied to 3D Computer Animation (John Lasseter, SIGGRAPH 1987) · Snow White and the Seven Dwarfs (Walt Disney Productions, 1937)",
+   "tech": [
+    "Stretch along the velocity vector",
+    "Squash on contact",
+    "Area-preserving scale, sx·sy = 1"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Hops on the beat with gravity arcs. In flight the Token stretches in proportion to its speed along the direction of travel, so the axis tilts over the arc and the shape is rounder at the apex; on the contact frames it is planted and squashes flat and wide, then springs out stretched the other way. A rigid twin keeps the same timing and reads as stone. Then three drops compare restraint, excess and a squash that loses volume.",
+   "visualDNA": "The Technique Atlas stage with its floor band split down the middle; the orange Token with a dashed undeformed outline and a velocity arrow on the left, a darker rigid Token on the right; readout boxes with a deformed unit square, long and short axis scales and the area; three columns for the extremes; scale-x and scale-y curves in the caption.",
+   "transitions": "Side-by-side comparison into three columns dropped on the same beat",
+   "implementation": [
+    "After Effects scale with linked reciprocal X/Y (expressions) or a squash-and-stretch rig",
+    "Spine, Rive and Maya squash deformers that preserve volume",
+    "Canvas 2D: R(θ)·diag(s, 1/s)·R(−θ) applied with transform(), θ from the velocity"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.8,
+   "video": "media/techsquash.mp4",
+   "posterImg": "atlas/posters/techsquash.jpg"
+  },
+  {
+   "id": "techfollowthrough",
+   "family": "K",
+   "name": "Follow-through",
+   "sub": "The body stops, the loose parts keep going",
+   "era": "1930s —",
+   "origin": "Disney’s animators described how the loose parts of a character — ears, tail, clothing, hair — trail behind the main mass, keep moving after it stops and settle one after another. Frank Thomas and Ollie Johnston named the pair Follow Through and Overlapping Action, the fifth of the twelve principles in The Illusion of Life (1981); John Lasseter restated it for computer animation at SIGGRAPH in 1987, and Richard Williams drilled it as drag and overlap with tails and flags in The Animator’s Survival Kit (2001). Riggers now get it from delayed or spring-driven secondary chains.",
+   "works": "The Illusion of Life: Disney Animation (Frank Thomas and Ollie Johnston, 1981) · Principles of Traditional Animation Applied to 3D Computer Animation (John Lasseter, SIGGRAPH 1987) · The Animator’s Survival Kit (Richard Williams, 2001; drag, overlap and the flag)",
+   "tech": [
+    "Chain of lagging damped springs",
+    "Drag: each segment a few frames behind",
+    "Overshoot and settle after the stop"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The body moves on plain ease-in-out slides and stops dead; everything else is secondary. On the start the antenna bends back from the base up, segment by segment; on the stop it whips forward, the tip last and farthest, swings back and settles over a couple of seconds, each segment peaking a few frames after the one below it. Three moves: a long slide, a quicker return, a short jolt.",
+   "visualDNA": "The Technique Atlas stage with its floor; the orange Token with a four-segment ink antenna, ring joints and an orange ball tip; faint onion skins of the last frames of the antenna; a dashed rigid antenna for comparison; BODY STOPS and TAIL KEEPS GOING callouts; a framed chart of the four segment angles over the whole film with stop markers and each segment’s lag in frames.",
+   "transitions": "Three moves on one stage; the rigid ghost and chart annotations fade in as the comparison starts",
+   "implementation": [
+    "After Effects Duik / Limber dynamics, or delayed valueAtTime() expressions down a parented chain",
+    "Spring bones / jiggle chains in Maya, Blender and game engines",
+    "Canvas 2D: a chain of damped angular springs integrated in setup() at 1200 Hz, sampled and lerped per frame"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.95,
+   "video": "media/techfollowthrough.mp4",
+   "posterImg": "atlas/posters/techfollowthrough.jpg"
+  },
+  {
+   "id": "techshake",
+   "family": "K",
+   "name": "Camera Shake",
+   "sub": "Trauma in, noise out: the camera moves, the world does not",
+   "era": "1970s —",
+   "origin": "Film crews shook the camera itself to sell explosions and earthquakes, and Clairmont Camera’s Image Shaker gave the move a dial for Saving Private Ryan (1998). Motion graphics made it a transform: After Effects users drive position and rotation with the wiggle() expression. Game developers formalised the feel — Jan Willem Nijman’s talk The Art of Screenshake (2013) and Squirrel Eiserloh’s GDC 2016 talk on juicing cameras, which set out trauma that decays, shake as trauma squared, and smooth noise instead of random jitter.",
+   "works": "Saving Private Ryan (Steven Spielberg, 1998) · Nuclear Throne (Vlambeer, 2015) · Math for Game Programmers: Juicing Your Cameras With Math (Squirrel Eiserloh, GDC talk, 2016)",
+   "tech": [
+    "Trauma: add on impact, drain over time",
+    "Shake = trauma² × max",
+    "Smooth noise per channel, not random jitter"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing in the scene moves; only the camera does. Impacts land on the beat and fill the trauma meter, which drains in a straight line; the shake follows its square, so a light knock is a shiver and a heavy one a jolt that dies away smoothly. X, Y and roll each read their own noise at 9 Hz. For two and a half seconds the noise is swapped for a new random value every frame, and the same trauma turns into a nervous, frame-rate buzz.",
+   "visualDNA": "The Technique Atlas stage as a fixed world with registration crosses; a 16:9 camera frame with orange corner brackets and a dashed action-safe area rides over it, its rest position dashed behind. A right-hand instrument column: the camera output inset, scrolling X/Y and roll graphs inside a dashed ±shake envelope, and trauma and trauma² meters.",
+   "transitions": "Hits on the beat, smooth decay to stillness; a switch from smooth noise to per-frame jitter and back",
+   "implementation": [
+    "Hand-held or shaker rigs on set; Image Shaker style mounts",
+    "After Effects wiggle() on position and rotation; game camera trauma systems",
+    "Canvas 2D: closed-form trauma decay, value noise per channel, inverse camera transform for the output"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.12,
+   "video": "media/techshake.mp4",
+   "posterImg": "atlas/posters/techshake.jpg"
+  },
+  {
+   "id": "techrackfocus",
+   "family": "K",
+   "name": "Rack Focus",
+   "sub": "Pull the focus plane from one depth to another",
+   "era": "1910s —",
+   "origin": "Shifting focus within a shot to move the audience’s attention became part of film grammar as lenses and focus rings improved; the focus puller (first assistant camera) marks distances on the lens and turns the ring on cue. Gregg Toland’s deep-focus work on Citizen Kane (1941) showed the opposite strategy — stopping down to keep every plane sharp. Mike Nichols’ The Graduate (1967) famously racks between Benjamin and Elaine, and modern cameras made the pull a menu option with follow-focus motors and autofocus tracking.",
+   "works": "Citizen Kane (Orson Welles, cinematographer Gregg Toland, 1941; deep focus) · The Graduate (Mike Nichols, 1967) · Barry Lyndon (Stanley Kubrick, 1975; Zeiss f/0.7 lenses, razor-thin focus)",
+   "tech": [
+    "Circle of confusion per depth layer",
+    "Focus moved in dioptres (1/distance)",
+    "Aperture sets the depth of field"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing in the frame moves; attention does. Each pull starts on a beat and eases into place over one or two beats as the focus plane sweeps through depth — one layer sharpens while the others bloom out. After five pulls the iris closes six stops, the depth of field swells to cover the room, and a pull to the near Token hardly changes the picture; then the iris opens and the mid Token is isolated again.",
+   "visualDNA": "The Technique Atlas stage seen through a 50 mm lens: a big dark-orange Token close to camera, the orange Token in the middle, MOTION and a gridded wall far back, each with a sharp mono readout of distance and blur. A top view on the right with a log depth axis, view cone, orange focus plane and shaded depth-of-field band; an iris icon and the f-number below.",
+   "transitions": "Eased focus pulls on the beat between three depths; a slow stop-down and open-up of the aperture",
+   "implementation": [
+    "Follow-focus gear and distance marks on the lens; a focus puller on set",
+    "After Effects Camera Lens Blur / 3D camera depth of field; Cinema 4D and Blender DOF",
+    "Canvas 2D: per-layer filter blur from thin-lens circle of confusion"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 4.6,
+   "video": "media/techrackfocus.mp4",
+   "posterImg": "atlas/posters/techrackfocus.jpg"
+  },
+  {
+   "id": "techparticles",
+   "family": "K",
+   "name": "Particles",
+   "sub": "Emit, age, die",
+   "era": "1982 —",
+   "origin": "William T. Reeves at Lucasfilm defined the particle system for the Genesis Effect in Star Trek II: The Wrath of Khan (1982) and described it in Particle Systems — A Technique for Modeling a Class of Fuzzy Objects (SIGGRAPH 1983): emitters generate particles with a birth rate, each gets an initial position, velocity, colour, size and lifetime, moves under simple forces and is killed when its age runs out. The same emit-update-kill loop drives Maya and Houdini particles, Trapcode Particular in After Effects and every game engine’s effects system.",
+   "works": "Star Trek II: The Wrath of Khan (Nicholas Meyer, 1982; Genesis sequence, Lucasfilm) · Trapcode Particular (Peder Norrby, After Effects plug-in, mid-2000s) · Journey (thatgamecompany, 2012; sand and cloth particles)",
+   "tech": [
+    "Birth rate integrated to birth times",
+    "Per-particle sampling at birth (cone, speed, life)",
+    "Age → colour and size; kill at lifespan"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A trickle that becomes a stream on the beat, fans out as the cone widens, arcs into a fountain when gravity switches on, thickens and hangs as drag bites, drifts to a standstill when gravity goes off, shrinks to a short-lived spray when the lifespan drops, stops, and ends on one 360° burst that rains onto the floor and ages out.",
+   "visualDNA": "The Technique Atlas stage with its floor line: the orange Token standing at left with particles pouring from its hole, each a dot that is born hot white, turns orange and dies small and ink-dark. A dashed spread cone and a gravity arrow at the emitter, one tracked particle ringed with its whole path dotted and its age shown, a parameter panel at right with live count, and the live-particle count as the caption graph.",
+   "transitions": "Parameter changes on the beat; the particles already alive keep the values they were born with, while gravity and drag act on all of them at once",
+   "implementation": [
+    "Emitter + per-particle state (Reeves 1983 / Houdini POPs / Trapcode Particular)",
+    "Births from the integrated rate, positions integrated at 240 Hz in setup()",
+    "Canvas 2D: age-indexed colour LUT and size, sampled paths interpolated by age"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.7,
+   "video": "media/techparticles.mp4",
+   "posterImg": "atlas/posters/techparticles.jpg"
+  },
+  {
+   "id": "techrope",
+   "family": "K",
+   "name": "Rope",
+   "sub": "Verlet nodes, distance constraints",
+   "era": "1967 —",
+   "origin": "Verlet integration was introduced to molecular dynamics by Loup Verlet in 1967: positions advance from the current and previous position, so velocity is implicit. Thomas Jakobsen’s Advanced Character Physics (GDC 2001), written from IO Interactive’s Hitman, paired it with relaxation — repeatedly projecting each distance constraint back to its rest length — and the more passes per step, the stiffer the result. Müller, Heidelberger, Hennix and Ratcliff generalised the idea as Position Based Dynamics (2006); ropes, chains, hair and cables in games and rigging tools are built on it.",
+   "works": "Hitman: Codename 47 (IO Interactive, 2000; Verlet ragdolls) · Cut the Rope (ZeptoLab, 2010) · Half-Life 2 (Valve, 2004; physics ropes and cables)",
+   "tech": [
+    "Verlet integration (position + previous position)",
+    "Distance-constraint relaxation, N passes per step",
+    "Kinematic anchor, heavy end mass, floor friction"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Held out to the side and let go on the beat, the Token swings as a heavy pendulum on a chain that bows behind it. The anchor jerks right then left, and whip-waves run down the links. At 4 s the solver drops to one pass and the rope stretches like a bungee, bouncing the Token low; at 6 s it returns to twenty and the rope snaps taut, kicking the Token up. Then the anchor descends, the Token lands and stands, and the rope folds down onto the floor and settles.",
+   "visualDNA": "The Technique Atlas stage with its floor line: an ink anchor ring, a thick rope of 24 links coloured by strain (ink at rest length, orange when stretched) with every node drawn as a point, the orange Token hanging from the last node. A large iteration counter with twenty pips, a one-link projection diagram and rope length readout at right; rope stretch as the caption graph.",
+   "transitions": "A release, kinematic yanks, and a solver setting switched on the beat",
+   "implementation": [
+    "Verlet + constraint relaxation (Jakobsen 2001 / Position Based Dynamics)",
+    "Simulated once in setup() at 240 Hz, iteration count keyed over time",
+    "Canvas 2D: per-link strain colour, interpolated node positions"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.6,
+   "video": "media/techrope.mp4",
+   "posterImg": "atlas/posters/techrope.jpg"
+  },
+  {
+   "id": "techmotionblur",
+   "family": "K",
+   "name": "Motion Blur",
+   "sub": "Many instants averaged across the open shutter",
+   "era": "1984 —",
+   "origin": "A film camera’s rotary shutter is open for part of each frame — 180° is the classic setting, half the frame time — so anything that moves smears across the exposure. Computer graphics had to fake it: Korein and Badler and Potmesil and Chakravarty published temporal antialiasing methods in 1983, and Cook, Porter and Carpenter’s Distributed Ray Tracing (SIGGRAPH 1984) sampled time across the shutter, shown in the still 1984 by Thomas Porter at Lucasfilm’s Computer Graphics division (later Pixar). Ray Harryhausen’s stop-motion lacked blur and strobed; Industrial Light & Magic’s go-motion for Dragonslayer (1981) moved the puppets during exposure to put it back.",
+   "works": "1984 (Thomas Porter, Lucasfilm Computer Graphics, 1984; distributed ray tracing still) · Dragonslayer (Matthew Robbins, 1981; ILM go-motion) · Saving Private Ryan (Steven Spielberg, 1998; narrow 45° and 90° shutter)",
+   "tech": [
+    "Shutter angle sets the exposure window",
+    "N sub-frame samples, averaged",
+    "Strobing at 0°, streaks at 180°–360°"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The motion itself never changes — one swing every two beats, a steady 2.2 turns a second — only the exposure does. At 0° the Token is a crisp cut-out that jumps from frame to frame; at 90° and 180° it grows soft trailing edges, and the hole twists into an arc; at 360° the smear is a full frame long and four samples break it into visible copies until twenty-four melt them into a streak. When it slows to a stop the blur shrinks with its speed and leaves a sharp Token.",
+   "visualDNA": "The Technique Atlas stage with the Token swinging along a ticked track; a rotary-shutter disc whose open sector widens and narrows, an exposure timeline with sample dots per frame, speed and blur-length readouts; two thin lanes underneath with ghosted previous frames — separate strobing copies at 0°, continuous streaks at 180°.",
+   "transitions": "Shutter angle cut on the bar: 0°, 90°, 180°, 360° undersampled, 360°, 180°; a deceleration to stillness",
+   "implementation": [
+    "Rotary shutter angle on film and digital cinema cameras",
+    "After Effects / Nuke motion blur (shutter angle, phase, samples per frame); renderer time sampling",
+    "Canvas 2D: N sub-frame Token renders averaged with lighter at 1/N alpha"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6,
+   "video": "media/techmotionblur.mp4",
+   "posterImg": "atlas/posters/techmotionblur.jpg"
+  },
+  {
+   "id": "techfreeze",
+   "family": "K",
+   "name": "Freeze Frame",
+   "sub": "One frame held while time runs on",
+   "era": "1920s —",
+   "origin": "A freeze frame is made by printing the same frame again and again: on the optical printer it was step-printing one negative frame for as many output frames as the hold needed, in editing software it is a hold or a still. Silent and early sound films used it for comic and dramatic stops; François Truffaut’s closing freeze on Jean-Pierre Léaud in The 400 Blows (1959) made it a signature ending, and Butch Cassidy and the Sundance Kid (1969) froze its heroes mid-charge, the frame going sepia. Television, sport replays and character-intro title cards added the flash, the push-in and the callout.",
+   "works": "The 400 Blows / Les Quatre Cents Coups (François Truffaut, 1959; final freeze) · Butch Cassidy and the Sundance Kid (George Roy Hill, 1969; final freeze to sepia) · Lock, Stock and Two Smoking Barrels (Guy Ritchie, 1998; freeze-frame character intros)",
+   "tech": [
+    "Source frame held, output clock running",
+    "Flash, desaturate, push-in, callout on the hold",
+    "Release back into motion; final freeze to end"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A lively run of hops, each a quarter-turn flip with squash on landing, on the beat. At 1.5 s it stops dead at the peak of a hop, tilted 45° in the air, for a second and a half while the beat plays on: a flash, the colour drains, the camera eases in, a callout draws itself; then it snaps back into colour and motion. A half-second punch hold on the beat at 5 s, and a final freeze at the peak of the last hop that drains to grey and pushes in slowly to the end.",
+   "visualDNA": "The Technique Atlas stage with its floor line: the orange Token hopping left to right with ghost outlines and dust puffs. A filmstrip of the last ten output frames along the top, each with its source frame number, a HOLD bracket over repeats; a running timecode beside a held frame counter; a checklist of treatments that ticks off during the first hold; a leader-line callout; and the source-time curve as the caption graph.",
+   "transitions": "Hard stops into holds with a white flash, a snap release back into colour, and a closing freeze",
+   "implementation": [
+    "Optical-printer step printing / editorial hold frames",
+    "After Effects Freeze Frame or Time Remap hold, Premiere and Resolve frame holds",
+    "Canvas 2D: picture drawn from held source time s, overlays from output time t, saturation composite for desaturation"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.45,
+   "video": "media/techfreeze.mp4",
+   "posterImg": "atlas/posters/techfreeze.jpg"
+  },
+  {
+   "id": "techecho",
+   "family": "K",
+   "name": "Echo",
+   "sub": "The layer, composited with itself from earlier frames",
+   "era": "1880s —",
+   "origin": "Showing several moments of one movement in a single picture goes back to Étienne-Jules Marey’s chronophotographs of the 1880s, and Marcel Duchamp painted it in Nude Descending a Staircase, No. 2 (1912). Norman McLaren put it in motion in Pas de deux (1968), optically printing each dancer over delayed copies of themselves. Compositing software turned it into an effect: After Effects’ Echo samples the layer at fixed time offsets, with an echo time, a number of echoes, a starting intensity, a decay and an operator that decides how the copies combine.",
+   "works": "Étienne-Jules Marey, chronophotographs (1880s) · Nude Descending a Staircase, No. 2 (Marcel Duchamp, 1912) · Pas de deux (Norman McLaren, National Film Board of Canada, 1968)",
+   "tech": [
+    "Echo k = layer at t + k × echo time",
+    "Opacity = intensity × decay^k",
+    "Echo operator: back · add · maximum"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The source never changes — one even figure-eight — and the effect only resamples it. Echoes switch on one at a time over a bar and a half, the echo time eases from −2 to −8 frames so a tight smear opens into a spaced chain, the decay drops so the tail dies within a few copies, the operator flips from compositing to adding to maximum on the beat, and when the source eases to a stop the copies arrive one after another and stack on it.",
+   "visualDNA": "The Technique Atlas stage: the orange Token on a figure-eight with up to eight fading copies, burning to pale yellow where added copies overlap; small index labels on each echo while it is spread; an effect-controls panel top right with the active parameter marked; a layer-time strip of frame ticks and echo sample bars, bar height = opacity.",
+   "transitions": "Parameter changes on the beat; operator switches as hard cuts; the trail collapses onto the stopped source",
+   "implementation": [
+    "Optical printing of delayed multiple exposures",
+    "After Effects Echo effect / Nuke TimeEcho / frame-blend trails",
+    "Canvas 2D: each echo redrawn from the closed-form path at t + k × echo time into its own layer, composited with lighter / lighten / source-over"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.7,
+   "video": "media/techecho.mp4",
+   "posterImg": "atlas/posters/techecho.jpg"
+  },
+  {
+   "id": "techframestep",
+   "family": "K",
+   "name": "Frame Stepping",
+   "sub": "Ones, twos, fours: sampling motion and holding it",
+   "era": "1910s —",
+   "origin": "Drawn animation has been shot on twos — each drawing held for two frames — since the silent era, halving the drawings for movement that still reads; fast action goes to ones, and the limited animation of 1950s and 60s television leaned on threes, fours and long holds. Stop motion such as Willis O’Brien’s work on King Kong (1933) carries the same stepped look, with every pose placed by hand. Digital tools made it a setting: After Effects’ Posterize Time effect and posterizeTime() expression resample any smooth animation to a lower rate, and Spider-Man: Into the Spider-Verse (2018) mixed ones and twos on purpose.",
+   "works": "King Kong (Merian C. Cooper and Ernest B. Schoedsack, 1933; stop motion by Willis O’Brien) · The Lego Movie (Phil Lord and Christopher Miller, 2014) · Spider-Man: Into the Spider-Verse (Sony Pictures Animation, 2018)",
+   "tech": [
+    "Sample and hold: t → floor(t · fps) / fps",
+    "Ones · twos · fours · posterised 6 fps",
+    "Pose jitter for a hand-placed feel"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "One curve, four clocks: a bar-long ease across and back with a full turn, identical in every lane but redrawn every frame, every second, every fourth and every fifth frame — so the same ease reads as fluid, crisp, choppy and stuttering. The holds lag the smooth ghost and jump to catch up, biggest jumps in the middle of the ease. Then a 6 fps stop-motion run of rolls and hops that never sits quite still between poses, and a word set letter by letter on the same clock.",
+   "visualDNA": "The Technique Atlas stage split into four labelled lanes, small orange Tokens on thin tracks, dashed outline ghosts at the ones position; hold strips of twelve frame cells, repeated drawings merged into blocks numbered by drawing, the current one orange; then a floor, a large Token, dashed onion skins and a drawing counter; the held-time staircase as the caption graph.",
+   "transitions": "Lanes enter on the beat and clear together; a cut to the single stop-motion Token; letters appear on the held clock",
+   "implementation": [
+    "Exposure sheets: ones, twos, threes, holds",
+    "After Effects Posterize Time / posterizeTime(fps); Blender Stepped Interpolation modifier",
+    "Canvas 2D: the time fed to the pose is floor(t · fps) / fps; jitter seeded by drawing number"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.64,
+   "video": "media/techframestep.mp4",
+   "posterImg": "atlas/posters/techframestep.jpg"
+  },
+  {
+   "id": "techcharstagger",
+   "family": "K",
+   "name": "Character Stagger",
+   "sub": "One text animator, a delay per letter",
+   "era": "2003 —",
+   "origin": "Title designers long animated lettering one character at a time by hand or on the rostrum camera; software made it a property of the text itself. Adobe After Effects 6.0 (2003) introduced text animators: property offsets (position, rotation, scale, opacity) applied through range selectors that hand each character, word or line a share of the animator, with start, end and offset, shape, ease and randomise-order controls. Cinema 4D’s MoText (MoGraph, 2006) and web libraries that split text into characters, such as GSAP’s SplitText, carried the same idea into 3D and the browser.",
+   "works": "Adobe After Effects text animators and range selectors (2003) · Cinema 4D MoGraph MoText (Maxon, 2006) · GSAP SplitText (GreenSock)",
+   "tech": [
+    "Animator: property offsets per character",
+    "Range selector: amount by index",
+    "Orders: left · right · centre · random"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Six letters, one move each, starting a fixed delay apart so the word reads as a single wave: a rise and fade sweeping left to right, letters spinning up from −90° right to left, a pop of overshooting scale opening from the centre out, and a random order that sparkles; each pattern clears in one beat. The last bar runs the same rise on a 39-character line at 22 ms a letter, fast enough to look like a ripple rather than a sequence.",
+   "visualDNA": "The Technique Atlas stage with MOTION set large in Archivo Black; numbered index chips with delays above each letter; under the word, the range selector shown as an amount bar per letter joined into a ramp; a timing chart of six offset bars with a playhead; a text-animator panel top right; the delay-by-index profile as the caption graph.",
+   "transitions": "Each order clears with a single simultaneous fade; the long line ripples in under the word",
+   "implementation": [
+    "After Effects text animators with range selectors (based on characters)",
+    "Cinema 4D MoText effectors / GSAP SplitText stagger",
+    "Canvas 2D: the word split into measured glyphs, each drawn with offsets × selector amount(i, t)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 0.85,
+   "video": "media/techcharstagger.mp4",
+   "posterImg": "atlas/posters/techcharstagger.jpg"
+  },
+  {
+   "id": "techtypemorph",
+   "family": "K",
+   "name": "Type Morph",
+   "sub": "Glyphs interpolated along weight, width and shape",
+   "era": "1977 —",
+   "origin": "Donald Knuth’s METAFONT (first version 1977–79) described letters as pen strokes along skeleton paths, so weight and width became parameters instead of separate drawings. Adobe’s Multiple Master fonts (1991) interpolated between drawn master outlines along design axes, Apple’s TrueType GX variations followed in the mid-1990s, and OpenType Font Variations — variable fonts, announced jointly by Adobe, Apple, Google and Microsoft in 2016 — made registered axes such as weight (wght) and width (wdth) standard, and animatable on screen.",
+   "works": "METAFONT and Computer Modern (Donald Knuth, 1977–86) · Myriad MM (Robert Slimbach and Carol Twombly, Adobe, 1992; weight and width Multiple Master axes) · OpenType Font Variations (Adobe, Apple, Google and Microsoft, 2016)",
+   "tech": [
+    "Skeleton + pen width",
+    "Design-space axes",
+    "Glyph-to-glyph point correspondence"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Three axes moved one at a time, then two at once. The weight axis eases from 100 to 900 over a bar and the letters swell around fixed skeletons while the word grows with its advances; the width axis squeezes to 60 and stretches to 150 with a small overshoot home; M and O morph into A and C and back while the shared TION never moves; finally weight and width travel together on a curved path back to the start.",
+   "visualDNA": "The Technique Atlas stage with MOTION drawn as ink pen strokes over thin orange skeletons with sample dots, dashed advance boxes, cap-height and baseline guides; three sliders below (wght, wdth, glyph) with the Token as their knobs; a design-space inset top-right plotting wght × wdth with the film’s path traced in orange.",
+   "transitions": "Continuous axis interpolation; glyph-to-glyph point morph with an overshooting return",
+   "implementation": [
+    "Variable fonts: CSS font-variation-settings / animated wght and wdth axes",
+    "Font editors (Glyphs, FontLab): masters, compatible outlines and interpolation",
+    "Canvas 2D: stroked skeletons resampled to 64 points, lerped per point"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 6,
+   "video": "media/techtypemorph.mp4",
+   "posterImg": "atlas/posters/techtypemorph.jpg"
+  },
+  {
+   "id": "techtracking",
+   "family": "K",
+   "name": "Tracking",
+   "sub": "Uniform letter-spacing, in thousandths of an em",
+   "era": "1960s —",
+   "origin": "In metal type, spacing a word out meant inserting thin spaces between the sorts by hand. Phototypesetting in the 1960s and 70s turned spacing into a dial, and tight, near-touching settings became a period look; desktop publishing then made tracking a number, which Adobe applications measure in thousandths of an em, and CSS1 (1996) added letter-spacing to the web. On screen, the slow tracking-out became a stock film-title and trailer move: the word keeps its centre while its letters drift apart.",
+   "works": "Alien (Ridley Scott, 1979; title by R/Greenberg Associates, widely spaced letters assembling) · Adobe InDesign (1999; tracking and kerning in 1/1000 em) · CSS1 letter-spacing (W3C Recommendation, 1996)",
+   "tech": [
+    "Tracking in 1/1000 em",
+    "Advance widths + i·T",
+    "Centre without the trailing space"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A single scalar drives everything. MOTION pinches from 0 to −50 in a bar, holds, then tracks out to +800 over five and a half seconds on a smoothstep so slow it reads as a drift, holds for a beat and snaps back to 0 with a small overshoot. Every gap grows by the same amount, so the outer letters travel five times as far as the inner gap opens.",
+   "visualDNA": "The Technique Atlas stage with MOTION in Archivo 900 at 150 px, each glyph in a dashed advance box with its width in 1/1000 em, the tracking gaps tinted orange (and hatched where negative tracking makes boxes overlap), a fixed orange centre line; a big mono readout of T and pixels, a tracking slider with the Token as knob, and a naive centred line that drifts off the centre line.",
+   "transitions": "One continuous value change; a snap back with overshoot",
+   "implementation": [
+    "After Effects: Text Animator → Tracking Amount",
+    "CSS letter-spacing in em, or Figma / InDesign tracking",
+    "Canvas 2D: per-glyph advances + i·T, centred on the width without the trailing gap"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 5.6,
+   "video": "media/techtracking.mp4",
+   "posterImg": "atlas/posters/techtracking.jpg"
+  },
+  {
+   "id": "techtextreveal",
+   "family": "K",
+   "name": "Text Reveal",
+   "sub": "Four ways to bring a line on screen",
+   "era": "1950s —",
+   "origin": "Title designers of the 1950s and 60s, Saul Bass first among them, made the way words arrive part of the film, revealing type with travelling mattes, sliding bars and wipes on the animation stand and optical printer. The typewriter reveal borrows from teleprinters and computer terminals; blur- and tracking-in became trailer staples once desktop compositors such as After Effects (1993) brought per-character text animation; and the scramble or decode reveal — random characters cycling until each locks — became screen shorthand for computers cracking a code.",
+   "works": "Psycho (Alfred Hitchcock, 1960; titles by Saul Bass, type sliced and slid by bars) · All the President’s Men (Alan J. Pakula, 1976; typewriter keys strike the opening) · WarGames (John Badham, 1983; launch-code characters cycle and lock one by one)",
+   "tech": [
+    "Clip-rect line masks",
+    "Stepped glyph count + cursor",
+    "Seeded scramble with staggered lock"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Four reveals in sequence, about two seconds each, and every revealed panel holds. The slide-up rises on a hard ease-out, the second line a beat-fraction behind; the typewriter steps at twelve glyphs a second and the cursor blinks on the half-beat once it stops; the blur-in closes tracking, blur and opacity together on one ease-out; the scramble flickers at twenty steps a second and locks left to right with a little seeded jitter.",
+   "visualDNA": "The Technique Atlas stage split into four panels with numbered mono headers and progress bars, MOTION in Archivo 900 over a second line in Archivo 800, the Token beside each; dashed orange mask rectangles with the clipped-off part ghosted, a stepping clip edge and block cursor, live blur and tracking readouts, and orange unlocked glyphs turning ink as they lock.",
+   "transitions": "Masked slide, stepped typewriter, blur-and-track focus-in, decode scramble",
+   "implementation": [
+    "After Effects text animators: Range Selector with Position, Blur, Tracking and Character Offset",
+    "CSS/JS: overflow-hidden line wrappers, steps() timing, seeded scramble scripts",
+    "Canvas 2D: clip rects, ctx.filter blur, per-slot hashed glyphs keyed to a step count"
+   ],
+   "reproducibility": "Fully procedural (scramble seeded)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.35,
+   "video": "media/techtextreveal.mp4",
+   "posterImg": "atlas/posters/techtextreveal.jpg"
+  },
+  {
+   "id": "techpush",
+   "family": "K",
+   "name": "Push",
+   "sub": "The new shot shoves the old one out of frame",
+   "era": "1930s —",
+   "origin": "A push (or push-off) moves both pictures at once: the incoming shot enters butted against the outgoing one and drives it out of frame, so one edge separates them for the whole move. Optical printers could produce pushes alongside wipes and flips, and they became a stock pattern of television switchers and digital video effects units in the 1970s and 80s; today Push and Slide sit side by side in every editor’s transition bin, and the same motion is the standard screen-to-screen navigation of mobile interfaces.",
+   "works": "Final Cut Pro Push and Slide transitions (Apple) · Adobe Premiere Pro Push and Split transitions · iOS navigation push between screens (Apple, 2007 —)",
+   "tech": [
+    "Both shots move, edge to edge",
+    "Offsets always sum to one frame",
+    "Slide and split-push variants"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Two pictures locked together at one edge travel as a single strip, so nothing in either shot moves except the strip. Four pushes on four eases — a smooth in-out cubic to the left, a fast-start out-quart upward, a mechanical linear push to the right and a snapping in-out expo downward — then a slide where the old shot holds still under the new one, and a split push whose two bands run in opposite directions.",
+   "visualDNA": "The Technique Atlas stage with a 16:9 viewer framed in ink; seven shots of the Token in orange, ink, blue, accent and paper colourways; the off-frame part of each shot kept as a faded ghost outside the viewer with dashed frame lines; an orange bar on the shared edge; ink and orange offset chips per shot and a sum readout under the viewer; a row of transition chips along the top.",
+   "transitions": "Push left, up, right and down; slide (cover); split push in two opposed bands",
+   "implementation": [
+    "Optical printer / video switcher push patterns",
+    "Premiere Pro Push · Final Cut Slide · After Effects position keys on two layers",
+    "Canvas 2D: both shots translated by u·W and u·W − W, clipped to the viewer"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.4,
+   "video": "media/techpush.mp4",
+   "posterImg": "atlas/posters/techpush.jpg"
+  },
+  {
+   "id": "techglitch",
+   "family": "K",
+   "name": "Glitch",
+   "sub": "Broken signal as a transition: split, shift, tear, quantise",
+   "era": "1990s —",
+   "origin": "Glitch borrows the faults of electronic images — analogue sync tearing, misaligned colour channels, digital compression blocks — and stages them on purpose. Glitch music and art of the 1990s and 2000s made the error an aesthetic, Takeshi Murata’s Monster Movie (2005) pushed datamoshing (deleting the key frames of a compressed video so motion smears one picture into the next) into galleries, and Kanye West’s Welcome to Heartbreak video (2009) took it into the mainstream; editors now hide cuts inside RGB splits and block shifts from preset packs.",
+   "works": "Monster Movie (Takeshi Murata, 2005; datamosh) · Welcome to Heartbreak, Kanye West (dir. Nabil Elderkin, 2009) · Chairlift, Evident Utensil (dir. Ray Tintori, 2009; datamosh)",
+   "tech": [
+    "RGB channel offset",
+    "Seeded slice displacement",
+    "Quantised datamosh hold"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Clean holds, then one bar of breakage per transition: the glitch amount swells and decays across eight sixteenths, jumping to a new seeded value on each one, with the hard cut landing on the beat in the middle where the damage is worst. Four operations arrive one transition at a time — channels split, slices shift, rows tear, blocks freeze and drag — and the last transition stacks all four before the final state settles clean.",
+   "visualDNA": "The Technique Atlas stage with the picture framed in ink at the centre; Token states in orange, ink, blue and paper colourways; red and blue fringes, sideways-shifted bands, torn scanlines and a coarse block mosaic; a left-hand operation stack with live parameters and amount bars; slice and row offset charts on the right aligned to the picture; a sixteenth-note amount strip with the cut under the picture.",
+   "transitions": "Glitch cuts: RGB split, block displacement, scanline tear, quantise hold, then all four stacked",
+   "implementation": [
+    "After Effects / Premiere glitch presets (channel offset, displacement, mosaic)",
+    "Datamosh: dropped I-frames in compressed video (Avidemux)",
+    "Canvas 2D: slice drawImage, multiply + lighter channel split, 48×27 mosaic upscaled"
+   ],
+   "reproducibility": "Procedural with seeded hash noise",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.7,
+   "video": "media/techglitch.mp4",
+   "posterImg": "atlas/posters/techglitch.jpg"
+  },
+  {
+   "id": "techeasing",
+   "family": "K",
+   "name": "Easing",
+   "sub": "Slow out, slow in: the same move, four timings",
+   "era": "1930s —",
+   "origin": "“Slow in and slow out” is one of the twelve principles Disney animators set down and Frank Thomas and Ollie Johnston published in The Illusion of Life (1981): drawings bunch near the keys so a move starts and stops gently, planned on the timing charts animators draw in the margin of each key. Computer animation turned the spacing into curves — Pierre Bézier’s curves (Renault, 1960s) became the handles of every graph editor, Robert Penner’s easing equations (2001) named ease-in, ease-out and ease-in-out in code, and CSS transitions ship the same curves as cubic-bezier() keywords.",
+   "works": "The Illusion of Life: Disney Animation (Frank Thomas and Ollie Johnston, 1981) · The Animator’s Survival Kit (Richard Williams, 2001; timing and spacing charts) · Robert Penner’s Easing Equations (Flash ActionScript, 2001)",
+   "tech": [
+    "Spacing vs timing",
+    "Cubic bezier handles",
+    "Animator’s spacing chart"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Four Tokens leave key A and reach key B at exactly the same moments, so only the spacing differs: the linear one crosses at an even pace, ease-in creeps out and arrives at full speed, ease-out leaves at full speed and creeps in, ease-in-out does both. Three moves, back and forth; between the second and third the handles stretch from quad to cubic so the slow ends get slower and the middle faster; then one large Token steps across a spacing chart, one drawing per sixteenth.",
+   "visualDNA": "The Technique Atlas stage with four lanes between dashed KEY A and KEY B lines; small orange Tokens on thin tracks with rows of frame dots that bunch at the ends; a value/time box per lane with the bezier handles drawn as ink lines and orange knobs and their coordinates; then a classic spacing chart with numbered ticks, a breakdown mark and SLOW OUT / SLOW IN brackets, an even time row fanned onto it, and onion-skin outlines across the track.",
+   "transitions": "Lanes run three moves, handles morph quad to cubic, lanes give way to the spacing chart",
+   "implementation": [
+    "After Effects graph editor / Easy Ease (F9) · keyframe velocity",
+    "CSS transition-timing-function: ease-in, ease-out, ease-in-out, cubic-bezier()",
+    "Canvas 2D: cubic bezier with x solved by bisection, sampled at 8 fps for the spacing dots"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 1.85,
+   "video": "media/techeasing.mp4",
+   "posterImg": "atlas/posters/techeasing.jpg"
+  },
+  {
+   "id": "techarcs",
+   "family": "K",
+   "name": "Arcs",
+   "sub": "Natural motion travels on curves, not straight lines",
+   "era": "1930s —",
+   "origin": "Arcs are one of the twelve principles of animation that Disney animators Ollie Johnston and Frank Thomas set down in The Illusion of Life (1981), codifying practice from the Disney studio of the 1930s: limbs pivot at joints, so almost every natural movement traces a curve, and in-betweens drawn on a straight line look mechanical. The animator fixes the curve with a breakdown drawing between the keys; Richard Williams’ Animator’s Survival Kit (2001) drills the same habit of plotting the arc and spacing every in-between along it.",
+   "works": "Snow White and the Seven Dwarfs (Disney, 1937) · The Illusion of Life: Disney Animation (Frank Thomas & Ollie Johnston, 1981) · The Animator’s Survival Kit (Richard Williams, 2001)",
+   "tech": [
+    "Breakdown pose off the straight line",
+    "Arc-plotted in-betweens",
+    "Pivot + fixed radius swing"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Two keys and one eased timing, played twice: an ink Token slides the straight chord, then the orange Token, with the same spacing and rotation, rises through a breakdown and lands on the same key along a curve. After a crossfade the Token hangs from a pivot and swings, slow at the extremes and fast through the bottom, its amplitude decaying on every beat-aligned pass.",
+   "visualDNA": "The Technique Atlas stage with dashed key ghosts, a dashed chord and ink spacing dots against an orange arc and dark-orange dots; a breakdown ghost with an accent arrow from the straight middle drawing; then a pivot, an ink rod, a dashed arc guide, a dotted chord, a row of spacing dots and fading onion skins.",
+   "transitions": "Straight pass, breakdown, arc pass, then a crossfade to the swing",
+   "implementation": [
+    "Hand-drawn keys, breakdowns and in-betweens plotted on arc charts",
+    "After Effects motion-path bezier or a parented null as pivot",
+    "Canvas 2D: quadratic through key, breakdown and key; closed-form damped pendulum with onion skins"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5,
+   "video": "media/techarcs.mp4",
+   "posterImg": "atlas/posters/techarcs.jpg"
+  },
+  {
+   "id": "techmotionpath",
+   "family": "K",
+   "name": "Motion Path",
+   "sub": "Where on a bezier, when on a speed graph",
+   "era": "1970s —",
+   "origin": "Keyframe interpolation along curved paths was worked out in early computer animation research; Kochanek and Bartels’ tension-continuity-bias splines (SIGGRAPH 1984) gave animators control over the shape of the path through each key. After Effects (1993) made the split explicit for motion designers: a layer’s position keys carry spatial bezier handles that shape the motion path in the comp, and separate temporal ease, edited in the speed graph, that decides how fast the layer travels along it; Auto-Orient turns the layer to the path tangent.",
+   "works": "Kochanek & Bartels, “Interpolating Splines with Local Tension, Continuity, and Bias Control” (SIGGRAPH, 1984) · Adobe After Effects motion paths, speed graph and Auto-Orient (1993 —) · Adobe Flash motion guides (1997 —)",
+   "tech": [
+    "Spatial bezier handles",
+    "Arc-length parameterisation",
+    "Auto-orient to tangent"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Keys pop on one per beat, the polyline relaxes into a curve as the handles pull out, then the Token runs the path three times: upright at constant speed, turned to the tangent at constant speed, and finally eased, starting slow, rushing through the middle and settling, beside a linear ghost on the same path.",
+   "visualDNA": "The Technique Atlas stage with an ink bezier path, orange key points, handle bars with round ends, spacing dots that reveal speed, a tangent arrow; a boxed speed graph top right with keyframe diamonds and easy-ease hourglasses on a mini timeline.",
+   "transitions": "Build the path, then three passes separated by a fade back to the first key",
+   "implementation": [
+    "After Effects position keyframes with spatial bezier handles, Auto-Orient and the speed graph",
+    "Arc-length lookup table so equal time steps give equal distance",
+    "Canvas 2D: cubic bezier segments, binary-searched distance table, tangent from neighbouring samples"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.75,
+   "video": "media/techmotionpath.mp4",
+   "posterImg": "atlas/posters/techmotionpath.jpg"
+  },
+  {
+   "id": "techpan",
+   "family": "K",
+   "name": "Pan & Tilt",
+   "sub": "The camera turns on a fixed point",
+   "era": "1890s —",
+   "origin": "Panning, short for panorama, arrived when cameras were first mounted on heads that could turn: early actuality films around 1896–1900 swept across crowds and landscapes, and geared and later fluid heads made smooth pans and tilts routine. Because the camera only rotates (ideally about the lens’s nodal point) nothing shows parallax; every object shifts by the same angle, which is why panoramas can be stitched and why a fast pan at 24 frames a second strobes. Cinematographers’ handbooks such as the American Cinematographer Manual give pan-speed tables; the common rule of thumb is that an object should take about seven seconds to cross the frame.",
+   "works": "The Great Train Robbery (Edwin S. Porter, 1903) · Lawrence of Arabia (David Lean, 1962) · American Cinematographer Manual (ASC, pan-speed tables)",
+   "tech": [
+    "Rotation about the nodal point",
+    "Screen shift = focal × angle, depth-free",
+    "Pan speed vs frame rate"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A held frame, a slow eased pan right in which every object slides together and a near Token stays locked over a far one, a beat of rest, then a whip back that steps in held 24 fps frames with a ghost of the last, and after a pause a long eased tilt that drops the Tokens out of frame and lifts MOTION into the centre.",
+   "visualDNA": "The Technique Atlas stage as a wide set: pale Token copies along a far wall with faint posts, the ink far Token behind the orange near Token, MOTION high on the wall; a boxed plan view with a rotating orange view cone and fixed rays, swapped for a side view during the tilt, and a camera readout box with speed, pixels per frame and a seven-second meter.",
+   "transitions": "Pan, whip pan with strobing, plan view crossfades to side view, tilt up and hold",
+   "implementation": [
+    "Fluid or geared head; After Effects one-node camera rotation or 2D position on a panorama",
+    "Every object offset by focal length × camera angle, independent of distance",
+    "Canvas 2D: cylindrical projection; whip pan sampled at 24 fps with the previous frame ghosted"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 2.4,
+   "video": "media/techpan.mp4",
+   "posterImg": "atlas/posters/techpan.jpg"
+  },
+  {
+   "id": "techwhippan",
+   "family": "K",
+   "name": "Whip Pan",
+   "sub": "A pan so fast it streaks, with the cut hidden inside the blur",
+   "era": "1930s —",
+   "origin": "A whip pan (also swish or flash pan) swings the camera so quickly that the frame dissolves into horizontal streaks. Because a streaked frame shows nothing recognisable, editors learned to join two whip pans at their fastest point so the cut vanishes into the blur, turning a change of place or time into one apparent move. Orson Welles used flash pans in Citizen Kane (1941); Sergio Leone and the New Hollywood leaned on them, and Damien Chazelle built the rhythm of Whiplash (2014) and the climax of La La Land (2016) around whips between players.",
+   "works": "Citizen Kane (Orson Welles, 1941) · Whiplash (Damien Chazelle, 2014) · La La Land (Damien Chazelle, 2016)",
+   "tech": [
+    "sech² angular-velocity pulse, tanh heading",
+    "Shutter-averaged sub-frame samples",
+    "Cut placed at peak ω"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Hold, lunge, hold. A calm shot of the Token, then a 162° swing that peaks at 900°/s for barely a quarter second, landing on the beat on a different set-up with a short operator wobble as the pan is caught. A slowed, frame-by-frame replay steps through the 30 frames of the move, then the whip runs back the other way to the opening shot.",
+   "visualDNA": "The Technique Atlas stage in two set-ups — the Token alone; the Token on a floor with MOTION — and grey light stands in the wings that smear into bands; a heading tape across the top with shot A, shot B and the cut marked; an ω graph with the cut line; a dimension line measuring the streak; a replay strip of blur bars.",
+   "transitions": "Whip out of shot A, hard cut at the fastest frame, whip into shot B; then the reverse whip back to A",
+   "implementation": [
+    "Fluid-head pan by hand, cut on the blur in the edit",
+    "Directional / motion blur over a position keyframe in After Effects",
+    "Canvas 2D: up to 48 shutter samples averaged per frame"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 5.53,
+   "video": "media/techwhippan.mp4",
+   "posterImg": "atlas/posters/techwhippan.jpg"
+  },
+  {
+   "id": "techflocking",
+   "family": "K",
+   "name": "Flocking",
+   "sub": "Three local steering rules, no leader",
+   "era": "1987 —",
+   "origin": "Craig Reynolds introduced boids in “Flocks, Herds, and Schools: A Distributed Behavioral Model” at SIGGRAPH 1987: each agent sees only nearby flockmates and steers by separation, alignment and cohesion, and flocking emerges with nobody choreographing it. The method went straight into film crowds — the bat swarms and penguins of Batman Returns (1992) — and later into dedicated crowd and swarm tools such as Massive and Houdini’s crowd and POP solvers.",
+   "works": "Stanley and Stella in: Breaking the Ice (Symbolics with Whitney / Demos, 1987; Reynolds’ boids) · Batman Returns (Tim Burton, 1992; bat swarms and penguin army) · The Lion King (Disney, 1994; wildebeest stampede)",
+   "tech": [
+    "Neighbour radius 120 px, separation 44 px",
+    "Steering = Σ weighted rule forces, clamped speed",
+    "Predator: flee force inside 320 px"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Disorder becoming order one rule at a time, on the beat: with no rules the Tokens wander and cross; separation spaces them out; alignment turns them into parallel streams; cohesion pulls the streams into flocks that bank together at the walls. A big Token then dives through the flock, which bursts open around it and closes behind; once it leaves, the flock re-forms.",
+   "visualDNA": "The Technique Atlas stage with 120 small orange Tokens, each rotated to its heading and trailing a faint line of its last frames; one inked boid with its dashed neighbour and separation radii, thin links to its neighbours and colour-coded steering arrows; a rule panel with switches; the big predator Token with its flee radius.",
+   "transitions": "Rules switch on at 1.5, 3.0 and 4.5 s; predator in at 6.5 s, breaks off at 8.6 s and leaves frame",
+   "implementation": [
+    "Reynolds steering behaviours (1987)",
+    "Houdini POP / crowd solvers, Massive, Unity and Unreal boids",
+    "Canvas 2D: O(N²) boids precomputed at 60 Hz in setup(), 301 frames interpolated"
+   ],
+   "reproducibility": "Seeded simulation",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.45,
+   "video": "media/techflocking.mp4",
+   "posterImg": "atlas/posters/techflocking.jpg"
+  },
+  {
+   "id": "techik",
+   "family": "K",
+   "name": "Inverse Kinematics",
+   "sub": "Place the tip; the joints are solved",
+   "era": "1980s —",
+   "origin": "Forward kinematics poses a chain joint by joint; inverse kinematics runs the other way, solving the joint angles that put the end of the chain on a goal. The maths came from robotics in the 1970s and 80s, and IK handles reached 3D animation packages by the early 1990s (Softimage was an early champion), along with the two-bone analytic solver still used for arms and legs. Iterative solvers handle longer chains: Cyclic Coordinate Descent (Wang and Chen, 1991) and FABRIK, Forward And Backward Reaching IK, published by Andreas Aristidou and Joan Lasenby in 2011.",
+   "works": "Jurassic Park (Steven Spielberg, 1993; Softimage-animated dinosaurs) · Toy Story (Pixar, 1995) · Duik (Nicolas Dufresne; free IK rigging tools for After Effects character animation)",
+   "tech": [
+    "Two-bone law-of-cosines solve",
+    "Reach limit and bend (pole) flip",
+    "FABRIK forward / backward passes"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "First the slow, fussy way: the shoulder is turned, then the elbow, overshooting and correcting until the tip finds the Token. Then the Token leads and the arm follows instantly — down, out past its reach until it locks straight and points, back in, and a swivel that flips the elbow to the other side without moving the tip. Finally a three-bone arm solves on the beat, one iteration per beat, snapping closer each time, then tracks the Token smoothly.",
+   "visualDNA": "The Technique Atlas stage with a rigging-viewport arm: octahedral bones in paper and ink, ink joint discs, a crosshair end effector and a hatched mount; the orange Token as the goal; orange angle arcs, blue hand-rotation gizmos, a dashed reach circle; dashed ghost chains and an error list for each FABRIK iteration.",
+   "transitions": "FK → two-bone IK at 2.8 s; elbow swivel at 5.25 s; re-rig to three bones and FABRIK at 6.3 s",
+   "implementation": [
+    "Maya IK handles: rotate-plane solver (two-bone) with a pole vector",
+    "FABRIK / CCD chain solvers in Unity, Unreal, Blender",
+    "Canvas 2D: analytic solve per frame; FABRIK iterations precomputed in setup()"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.5,
+   "video": "media/techik.mp4",
+   "posterImg": "atlas/posters/techik.jpg"
+  },
+  {
+   "id": "techpuppetpin",
+   "family": "K",
+   "name": "Puppet Pins",
+   "sub": "Pins on a triangle mesh; the shape bends as rigidly as it can",
+   "era": "2005 —",
+   "origin": "Takeo Igarashi, Tomer Moscovich and John F. Hughes introduced As-Rigid-As-Possible Shape Manipulation at SIGGRAPH 2005: a 2D shape is triangulated, the user drags a few handles, and a least-squares solve keeps every triangle as close as possible to a rotated copy of itself, so the figure bends instead of shearing. Adobe brought the idea to motion designers as the Puppet tools of After Effects CS3 (2007) — Puppet Pin, Starch and Overlap — and to still images as Photoshop CS5’s Puppet Warp (2010). Olga Sorkine and Marc Alexa’s local/global ARAP solver (2007), used here, is the iteration most later tools follow.",
+   "works": "As-Rigid-As-Possible Shape Manipulation (Igarashi, Moscovich & Hughes, SIGGRAPH 2005) · After Effects CS3 Puppet tool (Adobe, 2007) · Photoshop CS5 Puppet Warp (Adobe, 2010)",
+   "tech": [
+    "Triangle mesh over the layer, expanded past its outline",
+    "Local/global ARAP: best rotation per vertex, then one linear solve",
+    "Starch: heavier edge weights in a painted region"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A mesh is laid over the Token in a second, three pins drop on the beat, and one pin is dragged left, right and up on the following beats: the Token leans and arches like a body while its corners and hole keep their shape. A rigid copy beside it cannot reach the pins; a linear blend reaches them but squeezes the hole. With the area around the hole starched, the same drag bends only the lower half. Finally the word MOTION, rigged as one strip, is arched and waved by three pins.",
+   "visualDNA": "The Technique Atlas stage; the orange Token carried on a fine ink wireframe, black pins with yellow centres (the dragged one ringed in orange), dashed drag lines from rest to target, a translucent blue starch patch; two small comparison thumbnails at the right with red pin-error lines; mono phase labels top left.",
+   "transitions": "Triangulate, pin, drag, starch, then a cross-fade from the Token mesh to the word mesh",
+   "implementation": [
+    "After Effects Puppet Pin / Starch tools (mesh expansion, triangle count)",
+    "Sorkine–Alexa local/global ARAP precomputed in setup: dense Cholesky of the pinned Laplacian, 12 warm-started iterations per frame",
+    "Canvas 2D: affine texture-mapped triangles, wireframe and pin overlay"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.7,
+   "video": "media/techpuppetpin.mp4",
+   "posterImg": "atlas/posters/techpuppetpin.jpg"
+  },
+  {
+   "id": "techreaction",
+   "family": "K",
+   "name": "Reaction-Diffusion",
+   "sub": "Two chemicals, feed and kill: Gray–Scott patterns",
+   "era": "1952 —",
+   "origin": "Alan Turing’s The Chemical Basis of Morphogenesis (1952) showed that two diffusing, reacting chemicals can break a uniform field into spots and stripes. Peter Gray and Stephen K. Scott’s autocatalytic reaction model (1983–84) became the favourite system for it after John E. Pearson’s Complex Patterns in a Simple System (Science, 1993) mapped its feed and kill parameters into a zoo of regimes. Greg Turk and, separately, Andrew Witkin and Michael Kass brought reaction-diffusion textures to computer graphics at SIGGRAPH 1991; GPU shaders later made it a live, seedable motion-graphics effect.",
+   "works": "Generating Textures on Arbitrary Surfaces Using Reaction-Diffusion (Greg Turk, SIGGRAPH 1991) · Reaction-Diffusion Textures (Andrew Witkin & Michael Kass, SIGGRAPH 1991) · Complex Patterns in a Simple System (John E. Pearson, Science, 1993)",
+   "tech": [
+    "Gray–Scott: u·v² reaction, feed F, kill k",
+    "Diffusion by a 3 × 3 Laplacian, V at half the rate of U",
+    "Same seed, three (F, k) pairs, three regimes"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing is animated by hand: a dashed outline of the Token is poured into three dishes on the first downbeat and the equations take over. Slowly at first, then faster as more steps run per frame, the outline swells and breaks — into dots that split and pack the dish, into parallel bands that echo the Token’s corners outward, into a branching coral maze. One dish is spotlit every two bars while its point lights up on the F–k map.",
+   "visualDNA": "The Technique Atlas stage; three square dishes of paper-white U and orange V, framed in thin ink; the two equations and a 3 × 3 Laplacian stencil in mono type; a small F–k chart with the saddle-node curve, the three parameter dots and region labels; step counter and mono labels with F and k under each dish.",
+   "transitions": "Continuous growth from one seed; a spotlight moves dish to dish on the bar",
+   "implementation": [
+    "Gray–Scott on three 160 × 160 grids precomputed in setup (5,200 steps, Δt 1, wrap-around)",
+    "Byte frames stored at 15 fps and blended per pixel through a paper → orange colour ramp",
+    "Canvas 2D: per-dish ImageData on small offscreens, scaled up with smoothing"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.2,
+   "video": "media/techreaction.mp4",
+   "posterImg": "atlas/posters/techreaction.jpg"
+  },
+  {
+   "id": "techlsystem",
+   "family": "K",
+   "name": "L-System",
+   "sub": "Rewrite a string, then let a turtle draw it",
+   "era": "1968 —",
+   "origin": "The biologist Aristid Lindenmayer introduced L-systems in 1968 to describe how cells of simple organisms divide: every symbol of a string is rewritten at once by its rule. Alvy Ray Smith drew plants from them in Plants, Fractals, and Formal Languages (SIGGRAPH 1984), and Przemysław Prusinkiewicz gave them the turtle interpretation — F forward, + and − turn, brackets push and pop a branch — used ever since, collected with Lindenmayer in The Algorithmic Beauty of Plants (1990). Procedural tools such as Houdini’s L-system node grow trees, ivy and growth animations the same way.",
+   "works": "Plants, Fractals, and Formal Languages (Alvy Ray Smith, SIGGRAPH 1984) · The Algorithmic Beauty of Plants (Przemysław Prusinkiewicz & Aristid Lindenmayer, Springer, 1990) · L-System node in Houdini (SideFX)",
+   "tech": [
+    "Parallel rewriting: X → F+[[X]-X]-F[-FX]+X, F → FF",
+    "Turtle: F draw, ± turn δ, [ ] push / pop",
+    "Step halves each generation so the skeleton is kept"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Growth by generations on the downbeat: each new string is read left to right by a turtle whose path appears as it goes, so the stem climbs first and every branch flicks out in reading order; the previous generation stays underneath as a ghost the new one traces over. After the fifth generation the branching angle snaps on three beats — narrower, wider, back — and the whole plant re-folds at once, buds and all.",
+   "visualDNA": "The Technique Atlas stage; ink stems thinning with branch depth, small orange Tokens as buds at every X and a few larger accent Tokens as flowers; left, the axiom, the two rules and the angle in mono type, a table of generations with string lengths, and a read-head window that highlights the symbol the turtle is on.",
+   "transitions": "Each generation grows over the ghost of the last; the angle re-sets with a springy overshoot",
+   "implementation": [
+    "String rewriting in setup (generations 0–5, up to several thousand symbols)",
+    "Turtle interpretation every frame with a stack for [ and ], fitted to the stage",
+    "Canvas 2D: stems as strokes by depth, buds as rotated Tokens, mono string read-out"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.6,
+   "video": "media/techlsystem.mp4",
+   "posterImg": "atlas/posters/techlsystem.jpg"
+  },
+  {
+   "id": "techbloom",
+   "family": "K",
+   "name": "Bloom",
+   "sub": "Threshold, blur, add back",
+   "era": "1982 —",
+   "origin": "Bright light spreads in a lens and in film emulsion (halation), so overexposed highlights photograph with a soft halo. Tron (1982) got its glowing circuitry from backlit animation photographed through coloured filters. Real-time graphics rebuilt the look as a post-process — threshold the frame, blur the bright pass, add it back: Masaki Kawase’s GDC 2003 talk on Wreckless described stacking blurs of downsampled buffers, GPU Gems (2004) described the glow of Tron 2.0, and HDR bloom became standard in games from Half-Life 2: Lost Coast (2005) on. After Effects’ Glow effect exposes the same three controls: threshold, radius and intensity.",
+   "works": "Tron (Steven Lisberger, Disney, 1982) · Ico (Team Ico, Sony, 2001) · Tron 2.0 (Monolith Productions, 2003)",
+   "tech": [
+    "Soft-knee threshold",
+    "Blur pyramid · 4 radii",
+    "Additive composite"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing in the picture moves; the pipeline does. An iris opens from the Token into a dark stage, then each pass takes about a bar and a half: the threshold sweeps up until only the hottest rim survives and down until even the word glows, the four blur levels fade in one per half-beat from tight to wide, the sum is added back. Then one parameter at a time — an intensity pulse, a radius squeeze and stretch, a threshold dip — before the iris closes onto paper.",
+   "visualDNA": "The Technique Atlas stage turned into a dark rounded panel (#111216) with a faint grid; the Token in a hotter orange with a white-hot rim around its hole, MOTION in mid grey, a row of five grey lamps from luma 0.2 to 1.0 over a luma axis with an orange threshold marker. Right-hand pipeline thumbnails (source, bright pass on black, a 2×2 pyramid of blurs labelled by radius), three sliders in the top band, white callouts that light up when an element passes the threshold.",
+   "transitions": "Iris from paper into the dark stage and back; cross-fades from pass to pass in the main view",
+   "implementation": [
+    "After Effects Glow (threshold · radius · intensity), Nuke Glow / Bloom",
+    "Game engines: HDR bright pass + downsampled Gaussian or Kawase blur chain, added before tone mapping",
+    "Canvas 2D: bright pass and four filter-blur levels on 320×180 offscreen canvases, drawn back with lighter compositing"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.7,
+   "video": "media/techbloom.mp4",
+   "posterImg": "atlas/posters/techbloom.jpg"
+  },
+  {
+   "id": "techloop",
+   "family": "K",
+   "name": "Seamless Loop",
+   "sub": "The last frame leads back into the first",
+   "era": "1830s —",
+   "origin": "Optical toys of the 1830s — Joseph Plateau’s phenakistiscope (1833) and the zoetrope — could only show cycles: a ring of drawings whose last leads straight back into the first. Hand-drawn animation kept walk and run cycles as a basic economy. Netscape Navigator 2.0 (1995) added a looping extension to the GIF format, making the endless loop a native form of the web; After Effects expressions (version 5.0, 2001) brought loopOut(\"cycle\") and loopOut(\"pingpong\") for repeating keyframes, and cinemagraphs (2011) and looping GIF art made the invisible seam the whole point.",
+   "works": "Phenakistiscope discs (Joseph Plateau, 1833) · The Dancing Baby (1996) · Cinemagraphs (Jamie Beck and Kevin Burg, 2011)",
+   "tech": [
+    "Frame N ≡ frame 0",
+    "Periodic functions sin(2π·t/T)",
+    "Phase offsets · loopOut(\"cycle\")"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Everything runs on one 2-second clock — a bar of the 120 BPM bed — and the film is exactly five of them. The hero bobs on a sine for all ten seconds; a lane eased from left to right snaps back at the seam with a click, then slides on a sine and never snaps again; seven Tokens ripple a seventh of a cycle apart; a hop keyed as one big and one small jump repeats by loopOut. The last frame leads into the first.",
+   "visualDNA": "The Technique Atlas stage: the hero Token bobbing over a soft contact shadow on the left, a cycle ring top-right with an orange progress arc, a frame counter and an ink seam bar at twelve; an inset comparing frame 0 (filled) with frame 60 (dashed) and a Δ readout; a five-cell filmstrip, a lane with key diamonds, mono formulas, a sine row of seven Tokens, and a keyframe graph whose authored cycle is solid and its repeats dashed.",
+   "transitions": "Section cross-fades on the cycle clock; the last section fades back into the first so the film loops",
+   "implementation": [
+    "After Effects loopOut(\"cycle\") / loopOut(\"pingpong\") and time-based sin(2π·time/T) expressions",
+    "Animated GIF / video loops exported with the duplicate end frame dropped",
+    "Canvas 2D: every motion a function of t mod T"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 4.15,
+   "video": "media/techloop.mp4",
+   "posterImg": "atlas/posters/techloop.jpg"
+  },
+  {
+   "id": "techtrimpaths",
+   "family": "K",
+   "name": "Trim Paths",
+   "sub": "Draw a stroke by trimming its start and end",
+   "era": "2007 —",
+   "origin": "Draw-on lines came first as effects that revealed a stroke along a path, such as After Effects’ Stroke and Write-on. Trim Paths arrived with After Effects shape layers in CS3 (2007): an operator that keeps only the part of a path between a start and an end percentage, with an offset that slides the window round and a choice of trimming several paths simultaneously or one after another. On the web the same idea runs on an SVG stroke’s dash array and dash offset, popularised for line-drawing animation around 2013, and Airbnb’s Lottie (2017) carried After Effects trim paths into apps.",
+   "works": "Animated line drawing in SVG (Jake Archibald, 2013) · Lottie (Airbnb, 2017; After Effects trim paths played back in apps) · Lottie (Airbnb, 2017)",
+   "tech": [
+    "Start · end · offset",
+    "Simultaneous vs individual",
+    "Arc-length sampled paths"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The outline draws on over a bar on an in-out ease and the fill drops in on the downbeat; a quarter-length segment then laps the Token twice at constant speed and grows back to a closed line. MOTION draws all nine strokes at once in one row and stroke after stroke in the next, so the same END curve reads as one gesture or as handwriting; six bursts fire on and off with START a fifth of a second behind END, the rows erase by START, and the word draws back on.",
+   "visualDNA": "The Technique Atlas stage: the Token outlined in a thick round-capped ink stroke over its orange fill, faint dotted guides showing each untrimmed path, orange S and E markers at the trimmed ends; MOTION as monoline ink strokes in two rows labelled by mode; orange burst strokes round the Token; a right-hand panel with START, END and OFFSET sliders, the target, its length and visible length in pixels.",
+   "transitions": "Draw-on and draw-off by trim; the offset chase wraps across the path’s start point",
+   "implementation": [
+    "After Effects shape layers: Trim Paths (start, end, offset; simultaneously / individually)",
+    "SVG stroke-dasharray / stroke-dashoffset with getTotalLength(); Lottie trim paths",
+    "Canvas 2D: polylines sampled by arc length, sub-path stroked between start and end"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.2,
+   "video": "media/techtrimpaths.mp4",
+   "posterImg": "atlas/posters/techtrimpaths.jpg"
+  },
+  {
+   "id": "lookclay",
+   "family": "L",
+   "name": "Clay",
+   "sub": "One matte material, so only form and light remain",
+   "era": "1990s —",
+   "origin": "The clay render comes from the CG production pipeline: lighters and modellers override every shader with one neutral, matte material to judge form, silhouette and lighting before textures and colour arrive, and studios show the same untextured passes in breakdown reels. The name borrows from sculptors’ clay maquettes. As global illumination and ambient occlusion became cheap in renderers such as V-Ray and mental ray in the 2000s, the soft-lit white clay render also became a look of its own in architectural visualisation and motion design.",
+   "works": "Pixar and ILM shot breakdowns (untextured layout and lighting passes) · Architectural visualisation clay renders (V-Ray, Corona) · Studio motion-design reels in white and pastel clay (Cinema 4D)",
+   "tech": [
+    "Material override: one matte albedo",
+    "Big soft key + strong AO",
+    "Subsurface warmth at the terminator"
+   ],
+   "accent": "#e9b49a",
+   "motionDNA": "The shared 10 s camera move: a 50° orbit with a slight drift down while the Token bobs and turns. One wipe left to right replaces the plain materials with white clay; callouts name what clay hides and what it reveals while the AO and key-light passes sit as insets; a second wipe tints the clay per object in pastels.",
+   "visualDNA": "Warm off-white clay on a matching floor that fades into the paper backdrop; soft broad shadows, deep contact occlusion under the Token, sphere and cube, a faint warm glow along each terminator; at the end pastel coral, mint and periwinkle. Ink mono labels with leader lines, an orange split line, two framed pass insets.",
+   "transitions": "Wipe from the plain reference to white clay; wipe from white clay to pastel clay",
+   "implementation": [
+    "Material override / clay pass in Maya, Cinema 4D, Blender",
+    "Ambient-occlusion and key-light passes for lookdev",
+    "Canvas 2D + SDF tracer (js/look-kit.js): one matte albedo, low-hardness soft shadow, 6-tap AO raised to 1.6, terminator-band warmth"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.6,
+   "video": "media/lookclay.mp4",
+   "posterImg": "atlas/posters/lookclay.jpg"
+  },
+  {
+   "id": "lookchrome",
+   "family": "L",
+   "name": "Chrome",
+   "sub": "Mirror metal: the scene and the studio, reflected",
+   "era": "1980 —",
+   "origin": "Turner Whitted’s recursive ray tracing (1980) made perfect mirror reflections of the rest of the scene computable, and the reflective spheres of early ray-traced images became the emblem of CGI. Before that, Jim Blinn and Martin Newell’s reflection mapping (1976) faked chrome by looking up a picture of the surroundings, the trick behind the liquid-metal T-1000 of Terminator 2 (1991) and still the basis of image-based lighting. Robert Cook and Kenneth Torrance’s 1982 reflectance model and Christophe Schlick’s 1994 approximation gave metals their tinted, angle-dependent Fresnel reflectance, which rough-metal shading in modern physically based renderers builds on.",
+   "works": "An Improved Illumination Model for Shaded Display (Turner Whitted, 1980; ray-traced reflective spheres) · Terminator 2: Judgment Day (James Cameron, ILM, 1991; the liquid-metal T-1000) · The 1984 ray-traced still life by Thomas Porter, “1984” (Lucasfilm, distributed ray tracing with glossy reflection)",
+   "tech": [
+    "One-bounce traced reflection",
+    "Softbox studio environment",
+    "Schlick Fresnel · jittered roughness"
+   ],
+   "accent": "#a6adb6",
+   "motionDNA": "The shared camera orbit carries the reflections across the mirrors: as the camera swings, the floor, the cube and the softbox strips slide over the Token’s face and wrap around the sphere. A wipe turns the plain materials to mirror chrome; roughness then rises in four steps on the beat (0.06 → 0.36), blurring the reflection; a final wipe turns the chrome to gold at a satin roughness of 0.10.",
+   "visualDNA": "The paper studio from the plain render, but the Token and sphere become polished metal: crisp softbox strips and a big key box in the reflections, the blue cube and the floor’s shadows curving across the sphere, a dark ceiling that gives the metal its contrast; then frosted satin and warm gold. Leader-line labels, a roughness ruler, the environment panorama and the Fresnel pass as insets.",
+   "transitions": "Wipe from plain to chrome; stepped roughness changes; wipe from chrome to gold",
+   "implementation": [
+    "Ray-traced reflections (Whitted, 1980) and reflection mapping (Blinn & Newell, 1976)",
+    "Physically based metal: Schlick Fresnel with a tinted F0, GGX-style roughness",
+    "Canvas 2D + SDF tracer (js/look-kit.js): one LK.trace bounce per pixel, analytic softbox environment, 5 jittered rays plus an edge-aware blur for roughness"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.2,
+   "video": "media/lookchrome.mp4",
+   "posterImg": "atlas/posters/lookchrome.jpg"
+  },
+  {
+   "id": "lookglass",
+   "family": "L",
+   "name": "Glass",
+   "sub": "Light bent by Snell’s law, tinted by thickness",
+   "era": "1980 —",
+   "origin": "Turner Whitted’s 1980 ray tracer was the first to follow rays through transparent objects, bending them at each surface by Snell’s law and splitting off a reflected ray, and his glass spheres over a checkerboard became one of computer graphics’ defining images. The Fresnel equations set how much light reflects at each angle, and Beer–Lambert absorption colours glass by the distance light travels inside it. Caustics — light focused by the glass onto the floor — needed later techniques such as Henrik Wann Jensen’s photon mapping (1990s); here a ball-lens approximation stands in.",
+   "works": "An Improved Illumination Model for Shaded Display (Turner Whitted, 1980; glass spheres over a checkerboard) · Henrik Wann Jensen, photon-mapped caustic renders (1996 onwards) · Glass and crystal product visualisation (KeyShot, V-Ray)",
+   "tech": [
+    "Snell refraction in and out",
+    "Fresnel reflection mix",
+    "Beer–Lambert tint · ball-lens caustic"
+   ],
+   "accent": "#4fb3a6",
+   "motionDNA": "The shared camera orbit slides the world behind the glass: the floor’s edge, the cube and the shadows swim through the Token and the sphere as the camera moves. A wipe turns them to glass at IOR 1.00, where nothing bends and only the tint shows; the index then rises on eased ramps to 1.50 (glass), where the sphere flips the floor upside down and the caustic gathers, and to 2.42 (diamond), where total internal reflection fills the Token with bright facets.",
+   "visualDNA": "The paper studio seen through amber and pale-aqua glass: the dark studio ceiling and softboxes in the Fresnel rims, deeper colour where the glass is thicker, tinted translucent shadows, a bright focused caustic in the sphere’s shadow. An IOR ruler with air, water, glass and diamond marked, leader-line labels, thickness and Fresnel pass insets.",
+   "transitions": "Wipe from plain to glass; the index of refraction ramps between named materials",
+   "implementation": [
+    "Whitted-style recursive ray tracing of dielectrics",
+    "Fresnel (Schlick) reflectance and Beer–Lambert absorption, as in physically based glass shaders",
+    "Canvas 2D + SDF tracer (js/look-kit.js): refract → LK.traceInside → refract (one TIR bounce) → LK.trace, a traced reflection, per-object soft shadows and an analytic ball-lens caustic"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.4,
+   "video": "media/lookglass.mp4",
+   "posterImg": "atlas/posters/lookglass.jpg"
+  },
+  {
+   "id": "lookmatcap",
+   "family": "L",
+   "name": "Matcap",
+   "sub": "Material capture: shading from a painted sphere",
+   "era": "2001 —",
+   "origin": "Peter-Pike Sloan, William Martin, Amy Gooch and Bruce Gooch described \"The Lit Sphere\" in 2001: an artist paints a sphere, and every point of a model takes the colour of the sphere point with the same view-space normal. Pixologic’s ZBrush popularised the idea as MatCap (material capture) materials for digital sculpting, and it is now standard in sculpting and modelling viewports such as Blender’s, where a matcap shows form instantly without any lights in the scene.",
+   "works": "The Lit Sphere: A Model for Capturing NPR Shading from Art (Sloan, Martin, Gooch & Gooch, Graphics Interface 2001) · ZBrush MatCap materials (Pixologic) · Blender viewport MatCap shading (Blender 2.8+)",
+   "tech": [
+    "View-space normal lookup",
+    "Painted lit sphere",
+    "Lights baked, camera-locked"
+   ],
+   "accent": "#d8322a",
+   "motionDNA": "The shared camera orbits 50° while the Token turns and bobs. A split wipes from the plain reference to the matcap look and off again; the matcap switches on the beat from red wax to jade to pearl to chrome, crossfading in a fifth of a second, and on the last bar each object takes its own matcap. A tracked sample on the sphere slides across the matcap inset as the camera moves, its leader line linking the surface to the pixel it reads.",
+   "visualDNA": "A dark sculpt-viewport backdrop with a soft centre glow; objects shaded entirely from the painted sphere, the floor only darkened by contact occlusion, so there are no cast shadows. Top right: the matcap sphere with a crosshair at the lookup point; under it a view-space normal pass. Mono readouts give N·right, N·up and the uv they become.",
+   "transitions": "Split wipe from the plain render; short crossfades between matcaps on the beat",
+   "implementation": [
+    "Lit-sphere / matcap texture lookup by view-space normal",
+    "ZBrush MatCap, Blender viewport MatCap",
+    "Canvas 2D + SDF tracer (js/look-kit.js): normal → (N·camRight, N·camUp) → bilinear sample of four 192² matcaps painted in setup()"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.2,
+   "video": "media/lookmatcap.mp4",
+   "posterImg": "atlas/posters/lookmatcap.jpg"
+  },
+  {
+   "id": "lookstudio",
+   "family": "L",
+   "name": "Three-point Studio",
+   "sub": "Key, fill and back light",
+   "era": "1920s —",
+   "origin": "Three-point lighting comes from the Hollywood studio system of the 1920s and 1930s, where cinematographers lit stars with a hard key light, a softer fill to control contrast and a back light to lift the figure off the set; portrait and product photographers adopted the same plot, and the key:fill ratio became the standard way to describe contrast. In computer graphics the same three lights are the default starting rig for lighting a model or a product render.",
+   "works": "Shanghai Express (Josef von Sternberg, cinematography Lee Garmes, 1932) · Citizen Kane (Orson Welles, cinematography Gregg Toland, 1941) · Casablanca (Michael Curtiz, 1942; Arthur Edeson’s Hollywood portrait lighting)",
+   "tech": [
+    "Key / fill / back spotlights",
+    "Per-light soft shadows",
+    "Key:fill ratio"
+   ],
+   "accent": "#ffcf8a",
+   "motionDNA": "The shared camera orbit with the lights fixed in the world, so the angle each light makes with the lens changes as the camera moves (the plot reads it live). The set starts dark; the key snaps on with a brief strobe flicker on beat 1, the fill fades up over most of a second on beat 5 while the key:fill ratio counts down from infinity to 3:1, the back light snaps on at beat 9, and on beat 12 the backdrop is lit and a soft bounce fills in for the finished product shot.",
+   "visualDNA": "A black studio with three pools of light on a grey floor, warm key, cool fill, white back. Each light casts its own shadow, the fill’s soft and pale. Top right: a top-view light plot with cones, the camera wedge and live angles; under it the key:fill ratio. Bottom right: one thumbnail per light, adding up to the beauty render.",
+   "transitions": "Lights switched on one at a time on the beat; a final lift into the product look",
+   "implementation": [
+    "Three spotlights with smooth cone falloff and inverse-square attenuation",
+    "Lambert + Blinn-Phong with a Fresnel boost, ACES-style tone map",
+    "Canvas 2D + SDF tracer (js/look-kit.js): one soft-shadow ray per light per pixel, skipped outside each cone"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/lookstudio.mp4",
+   "posterImg": "atlas/posters/lookstudio.jpg"
+  },
+  {
+   "id": "lookrim",
+   "family": "L",
+   "name": "Rim Light",
+   "sub": "Silhouettes edged by light from behind",
+   "era": "1920s —",
+   "origin": "The back or rim light is one of the three lights of classic Hollywood studio lighting, placed behind and above the subject so a thin edge of light separates it from a dark background; film noir and high-contrast advertising pushed it to the point where the edge is nearly all that is lit. In real-time graphics the effect is often faked with a Fresnel-style term on 1 − N·V, a staple of game and stylised shaders, while offline renderers get it from lights placed behind the subject.",
+   "works": "The Third Man (Carol Reed, cinematography Robert Krasker, 1949) · Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982) · Apocalypse Now (Francis Ford Coppola, 1979; Vittorio Storaro’s edge-lit Kurtz in darkness)",
+   "tech": [
+    "Edge band from 1 − N·V",
+    "Back-light facing gate",
+    "Warm / cool two-rim"
+   ],
+   "accent": "#ff9a3c",
+   "motionDNA": "The shared camera orbit over a set lit only from behind. A split wipes the plain render away into black; a white back light swells up and draws thin edges; on the beat the rim width widens to a soft glow, then narrows to a hairline with a sharp falloff; on beat 8 the single white light gives way to a warm rim back-left and a cool rim back-right, and the width settles to a medium band for the end.",
+   "visualDNA": "Near-black set, objects in silhouette, lines of light along every edge that faces a light, long shadows running toward the lens across a dark glossy floor, soft haze glowing round the light sources. Top right: three passes — the edge band, the back-light facing term and their product. Top left: live width, falloff and intensity readouts with bars.",
+   "transitions": "Split wipe from the plain render; parameter changes on the beat; white rim crossfades to a warm and cool pair",
+   "implementation": [
+    "Rim term: remap(1 − N·V, width)^falloff × N·L of the back light, shadowed",
+    "Grazing Blinn-Phong with Schlick Fresnel; analytic point-light in-scattering haze",
+    "Canvas 2D + SDF tracer (js/look-kit.js): shadow rays only where a rim or floor pool can appear"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.9,
+   "video": "media/lookrim.mp4",
+   "posterImg": "atlas/posters/lookrim.jpg"
+  },
+  {
+   "id": "lookgolden",
+   "family": "L",
+   "name": "Golden Hour",
+   "sub": "Low warm sun, cool sky in the shadows",
+   "era": "1900s — (painting earlier)",
+   "origin": "The “magic hour” after sunrise and before sunset was prized by painters long before film — Monet’s Haystacks and Rouen Cathedral series (1890s) chase exactly this light. In cinema it became a signature when Terrence Malick and cinematographer Néstor Almendros shot much of Days of Heaven (1978) in the minutes around sunset; Almendros won the Academy Award for it. In CG the look is a sun direction and a colour temperature: a low key light, a black-body warm colour, and a blue sky dome filling the shadows.",
+   "works": "Days of Heaven (Terrence Malick, cinematography Néstor Almendros, 1978) · Haystacks series (Claude Monet, 1890–91) · Barry Lyndon (Stanley Kubrick, cinematography John Alcott, 1975)",
+   "tech": [
+    "Low directional key",
+    "Black-body colour temperature",
+    "Blue sky-dome fill"
+   ],
+   "accent": "#f29a3a",
+   "motionDNA": "The camera makes the same slow 50° orbit as every look film while the sun sinks from 24° to 5° above the horizon on an ease. Shadow length follows h / tan(elevation), so the shadows stretch across the floor as it drops, and the key warms from about 4900 K to 2700 K. A wipe from the plain studio reference opens the film; readouts and the sun diagram track the change.",
+   "visualDNA": "Warm orange key on every sun-facing face, long soft shadows filled with cool sky blue, a pale-blue-to-peach sky gradient glowing on the sun side, the floor fading into the warm horizon. A small sun/sky diagram and a colour-temperature bar sit top right.",
+   "transitions": "One wipe from the plain reference to the look; afterwards a continuous change of sun elevation",
+   "implementation": [
+    "Unreal / Unity: directional light with temperature + sky atmosphere",
+    "Blender: Sun lamp with blackbody colour, Nishita sky",
+    "Canvas 2D + SDF tracer (js/look-kit.js): a low sun with soft ray-marched shadows, Helland black-body colour, blue sky-dome fill with AO and a gradient sky"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.6,
+   "video": "media/lookgolden.mp4",
+   "posterImg": "atlas/posters/lookgolden.jpg"
+  },
+  {
+   "id": "lookvolumetric",
+   "family": "L",
+   "name": "Volumetric Light",
+   "sub": "God rays through haze, single scattering",
+   "era": "1980s —",
+   "origin": "Shafts of light through haze — crepuscular rays — were a painter’s and cinematographer’s device long before rendering, built on set with smoke and a hard source through a window. In computer graphics, Jim Blinn’s 1982 paper on light reflection by clouds and dusty surfaces and Kajiya and Von Herzen’s 1984 “Ray Tracing Volume Densities” laid the ground for rendering participating media. Real-time engines adopted ray-marched single scattering against a shadow map in the 2010s, so god rays became a standard game-engine effect.",
+   "works": "Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982) · Raiders of the Lost Ark (Steven Spielberg, 1981; the Map Room sunbeam) · Inside (Playdead, 2016)",
+   "tech": [
+    "Ray-marched single scattering",
+    "Light-space shadow map",
+    "Henyey–Greenstein phase"
+   ],
+   "accent": "#ffcf7a",
+   "motionDNA": "The camera makes the same slow 50° orbit while the shafts swing across the view, carved by the Token as it turns and bobs. The haze fades in over the first two seconds (density σ 0 → 0.11), the march steps per ray double on the beat (8 → 16 → 32) so the jittered banding settles, and the haze thickens a little near the end. Dust motes drift down through the beams.",
+   "visualDNA": "A near-black room, a 3 × 2 window of warm light falling from above and behind, its bars printed on the floor and repeated as dark planes in the air. The Token’s shadow is a solid dark shaft with a bright beam through its hole; the sphere and cube cut their own. Insets show the in-scatter pass alone and one view ray’s lit and shadowed samples.",
+   "transitions": "Haze fades in from a clear room; step counts change on the beat",
+   "implementation": [
+    "Unreal Engine: exponential height fog with volumetric fog",
+    "Blender: Principled Volume in a world box, spot or area light",
+    "Canvas 2D + SDF tracer (js/look-kit.js): per-frame light-space shadow map, half-res jittered ray march clipped to the window prism, HG phase, Beer–Lambert transmittance, depth-aware upsample"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.2,
+   "video": "media/lookvolumetric.mp4",
+   "posterImg": "atlas/posters/lookvolumetric.jpg"
+  },
+  {
+   "id": "looktoon",
+   "family": "L",
+   "name": "Toon Ramp",
+   "sub": "Quantised N·L, hard specular, G-buffer ink",
+   "era": "2000 —",
+   "origin": "Rendering 3D models to look hand-inked grew out of non-photorealistic rendering research in the 1990s; Lake, Marshall, Harris and Blackstein’s “Stylized Rendering Techniques for Scalable Real-Time 3D Animation” (NPAR 2000) described the now-standard trick of looking N·L up in a small stepped texture. Jet Set Radio (Sega, 2000) brought cel shading with ink outlines to a mass audience, and The Legend of Zelda: The Wind Waker (Nintendo, 2002) made it a house style. Modern anime-style renderers add hand-tuned ramps per material and outlines found from depth, normal and id buffers in post.",
+   "works": "Jet Set Radio (Smilebit / Sega, 2000) · The Legend of Zelda: The Wind Waker (Nintendo, 2002) · Guilty Gear Xrd (Arc System Works, 2014)",
+   "tech": [
+    "N·L ramp lookup",
+    "Thresholded specular",
+    "Edge detection on G-buffers"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The camera makes the same slow 50° orbit. A wipe turns the plain render into flat two-band shading; ink outlines sweep in across the frame; the ramp then steps up to three bands and to four on the beat, each step visible on every surface at once as the Token turns through the light.",
+   "visualDNA": "Flat fills between a cool shade tone and the full albedo, a crisp terminator and hard-edged cast shadows, white specular blobs, a dark ink line around every silhouette, overlap and crease. Insets: the ramp strip (smooth N·L above, the stepped lookup below) and the edge pass coloured by the test that found each line.",
+   "transitions": "One wipe from the plain reference; outlines reveal left to right; band count steps 2 → 3 → 4",
+   "implementation": [
+    "Blender: Shader to RGB + Color Ramp (constant), Line Art / Freestyle",
+    "Unity / Unreal: ramp-texture lookup in a custom lit shader, Sobel outline post-process",
+    "Canvas 2D + SDF tracer (js/look-kit.js): half-Lambert N·L quantised to B bands with shadows forced below the terminator, thresholded Blinn, id / depth-plane / normal edge tests on the G-buffer"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.4,
+   "video": "media/looktoon.mp4",
+   "posterImg": "atlas/posters/looktoon.jpg"
+  },
+  {
+   "id": "lookao",
+   "family": "L",
+   "name": "Ambient Occlusion",
+   "sub": "How much sky each point can see",
+   "era": "2001 —",
+   "origin": "Ambient occlusion approximates the soft darkening of creases and contact points under even sky light by measuring how open each point is, without simulating full global illumination. Zhukov, Iones and Kronin described the related idea of obscurances in 1998; Hayden Landis and colleagues at ILM brought ambient occlusion into feature production around Pearl Harbor (2001) and documented it in the SIGGRAPH 2002 course on production global illumination. Crytek’s screen-space AO in Crysis (2007) made it a real-time staple.",
+   "works": "Pearl Harbor (Michael Bay, 2001; ILM ambient occlusion) · Crysis (Crytek, 2007; screen-space AO) · StarCraft II (Blizzard, 2010; SSAO in its effects pipeline)",
+   "tech": [
+    "Occlusion sampled along the normal",
+    "Radius and sample count",
+    "AO multiplies the ambient term"
+   ],
+   "accent": "#8f8a80",
+   "motionDNA": "The camera makes the shared 50° orbit while the AO radius steps up once per beat, 0.05 to 0.85 world units, with the sample count rising from 3 to 8, then eases back to 0.32. A wipe then carries the pass into the colour render, and a split line slides in from the left to show the same light without AO.",
+   "visualDNA": "A white clay world: white objects and floor with grey contact shadows under the sphere and cube, a soft pool beneath the hovering Token, dark rings in its hole. Sample dots climb the normal by the cube with circles showing the distance field. In the colour half the orange Token, white sphere and blue cube sit firmly on the floor; on the no-AO side they float.",
+   "transitions": "Radius steps on the beat; a vertical wipe from pass to colour; a before / after split",
+   "implementation": [
+    "Ray-traced AO pass (RenderMan, Arnold, V-Ray)",
+    "SSAO / HBAO / GTAO on the depth buffer in game engines",
+    "Canvas 2D + SDF tracer (js/look-kit.js): N distance-field lookups along the normal per pixel, multiplied into the ambient term"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.6,
+   "video": "media/lookao.mp4",
+   "posterImg": "atlas/posters/lookao.jpg"
+  },
+  {
+   "id": "lookxray",
+   "family": "L",
+   "name": "Fresnel X-ray",
+   "sub": "Light only where surfaces turn away",
+   "era": "1990s —",
+   "origin": "Fresnel’s equations (Augustin-Jean Fresnel, 1820s) say surfaces reflect more as they turn edge-on to the eye, and Christophe Schlick’s 1994 approximation reduced that rise to a cheap power of (1 − cos θ). Driven by the facing ratio |n·v| and added onto black with depth testing off, the same edge term draws only an object’s rims, hole walls and far sides: the see-through hologram and x-ray look of film interfaces and game vision modes.",
+   "works": "Iron Man (Jon Favreau, 2008; holographic workshop interfaces) · Batman: Arkham Asylum (Rocksteady, 2009; Detective Mode) · Prometheus (Ridley Scott, 2012; holographic star map)",
+   "tech": [
+    "Facing-ratio edge term (1 − |n·v|)^p",
+    "Additive, through every surface",
+    "Bloom and faint scanlines"
+   ],
+   "accent": "#3fdcff",
+   "motionDNA": "After a wipe from the plain render, the camera makes the shared orbit while the exponent p steps on the beat: 1.5 (a soft ghost), 3.2, 6.5 (thin wire-like rims), 0.75 (a solid glow), settling at 2.4. The hue drifts from cyan to violet, then to amber; a slow scan band rolls down the frame.",
+   "visualDNA": "Near-black blue ground with a faint glowing floor grid that shows through the objects. The Token, sphere and cube are drawn only as glowing rims, with their back faces and the Token’s hole wall visible through the front faces, plus bloom on the brightest edges. Two dark insets show |n·v| and the edge term.",
+   "transitions": "A vertical wipe from plain to x-ray; exponent steps on the beat; hue crossfades",
+   "implementation": [
+    "Fresnel / facing-ratio shader with additive blending (Unity, Unreal)",
+    "Rim or “x-ray” material in a DCC (Maya, Blender facing-ratio node)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): each ray walks every surface via LK.trace and LK.traceInside, summing the edge term, then bloom"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7,
+   "video": "media/lookxray.mp4",
+   "posterImg": "atlas/posters/lookxray.jpg"
+  },
+  {
+   "id": "lookwire",
+   "family": "L",
+   "name": "Wireframe",
+   "sub": "Edges only, hidden lines removed",
+   "era": "1963 —",
+   "origin": "Computer graphics began as lines: Ivan Sutherland’s Sketchpad (1963) drew on a vector display, and Lawrence Roberts’s 1963 MIT thesis gave one of the first methods for removing the lines a solid would hide. Arthur Appel at IBM followed in 1967 with quantitative invisibility. Vector arcade games and early film graphics made the wireframe a look in its own right, and it remains the modelling view of every 3D package.",
+   "works": "Star Wars (George Lucas, 1977; Larry Cuba’s Death Star briefing animation) · Battlezone (Atari, 1980; vector wireframe arcade game) · Elite (David Braben and Ian Bell, Acornsoft, 1984; wireframe ships with hidden-line removal)",
+   "tech": [
+    "Analytic wire geometry, projected",
+    "Hidden-line removal by depth test",
+    "Wire over shaded"
+   ],
+   "accent": "#17181c",
+   "motionDNA": "A wipe turns the plain render into ink wires on paper; the camera makes the shared orbit while the hidden-line test switches every two beats: off (every line, front and back, a tangle), on (hidden lines removed), dashed (hidden lines shown faint). The shaded render then fades in under the wires, and the test flips to dashed and back once more near the end.",
+   "visualDNA": "Warm paper with near-white solids; ink silhouette circle, latitude and longitude rings on the sphere, a 4 × 4 grid on each face of the cube in blue, and orange contour loops, cross profiles and a face grid on the Token; a floor grid fading into the backdrop. Over the shaded render the Token and cube wires turn light.",
+   "transitions": "A vertical wipe from plain to wire; hidden-line toggles on the beat; a crossfade to wire over shaded",
+   "implementation": [
+    "Wireframe / hidden-line render modes in DCC viewports (Maya, Blender, Cinema 4D)",
+    "Barycentric or geometry-shader wireframe over shaded meshes in game engines",
+    "Canvas 2D + SDF tracer (js/look-kit.js): analytic polylines through LK.project, each point kept if its eye distance ≤ G-buffer depth + ε"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.9,
+   "video": "media/lookwire.mp4",
+   "posterImg": "atlas/posters/lookwire.jpg"
+  },
+  {
+   "id": "lookfog",
+   "family": "L",
+   "name": "Depth Fog",
+   "sub": "Distance falloff from the depth pass",
+   "era": "1980s —",
+   "origin": "Fog is the oldest depth cue in real-time graphics: the image is blended toward a fog colour by a function of distance, so far geometry fades into the backdrop instead of popping at the far clip plane. Flight simulators used it from the 1980s, and fixed-function OpenGL (1992) and Direct3D standardised three modes — linear, exponential and exponential-squared — computed per vertex or per pixel from eye depth. Height-dependent fog, which integrates a density that thins with altitude along the view ray, became common in game engines in the 2000s; modern engines extend it to volumetric fog that also scatters light.",
+   "works": "Silent Hill (Konami, 1999; fog as atmosphere and draw-distance cover) · Turok: Dinosaur Hunter (Iguana Entertainment, 1997; distance fog on the Nintendo 64) · Limbo (Playdead, 2010; layered depth haze)",
+   "tech": [
+    "Fog factor from the depth pass",
+    "Exp / exp² / height falloff",
+    "Fog colour = horizon colour"
+   ],
+   "accent": "#a9a294",
+   "motionDNA": "The camera makes the shared 50° orbit while the fog is dialled on the beat: a wipe brings exponential fog in over the plain render, the fog colour is detuned to a cool grey and back to show the horizon seam, the density rises, the falloff switches to exponential-squared, then to a height fog whose mist pools on the floor and slowly thickens as its falloff relaxes.",
+   "visualDNA": "The Token, sphere and cube receding into warm paper haze; the floor dissolves into a backdrop of exactly the fog colour. Mono readouts give the mode, the formula, ρ, z0 and the two colour swatches; a depth-pass inset runs near white to far black; leader lines give each object its depth and fog fraction; the caption draws the live falloff curve.",
+   "transitions": "Linear wipe against the plain render; crossfades between fog models",
+   "implementation": [
+    "OpenGL / Direct3D fixed-function fog (GL_EXP, GL_EXP2)",
+    "Engine height fog / deferred fog pass over the depth buffer",
+    "Canvas 2D + SDF tracer (js/look-kit.js): per-pixel fog factor from hit depth and the analytic height-fog integral along each ray"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.4,
+   "video": "media/lookfog.mp4",
+   "posterImg": "atlas/posters/lookfog.jpg"
+  },
+  {
+   "id": "lookgrade",
+   "family": "L",
+   "name": "Teal & Orange Grade",
+   "sub": "Lift, gamma, gain and a split-tone, in post",
+   "era": "2000 —",
+   "origin": "Colour grading moved from photochemical timing to software when O Brother, Where Art Thou? (2000) was scanned, graded digitally and recorded back to film — the first feature finished entirely through a digital intermediate. Three-way correctors, with lift, gamma and gain wheels for shadows, midtones and highlights, became the grader’s instrument, and the teal-and-orange look that pushes skin and warm subjects one way and shadows and backgrounds the complementary way spread through blockbusters in the 2000s. Bleach bypass imitates skipping the bleach step in film processing, leaving silver in the image: lower saturation, harder contrast.",
+   "works": "O Brother, Where Art Thou? (Joel and Ethan Coen, 2000; digital intermediate) · Transformers (Michael Bay, 2007; teal and orange) · Saving Private Ryan (Steven Spielberg, 1998; bleach-bypass-style desaturation)",
+   "tech": [
+    "Lift / gamma / gain per channel",
+    "Teal shadows, orange highlights",
+    "Bleach bypass as a second preset"
+   ],
+   "accent": "#1f8f8c",
+   "motionDNA": "The camera makes the shared 50° orbit. A split opens on the plain render, then the grade is built one control per beat — lift, gamma, gain, then contrast, saturation and the split-tone — while the wheels’ pucks travel and the vectorscope trace leans; the split clears to the full grade, a wipe swaps in bleach bypass, and the film ends on three bands: plain, teal & orange, bleach.",
+   "visualDNA": "The same still life recoloured: teal-green shadows and floor falloff against a peach backdrop and a hotter orange Token; then silvery, near-monochrome bleach bypass. Three colour wheels and a live vectorscope with its skin-tone line sit on a paper panel; per-channel numbers update as the controls move; the caption draws the luma transfer curve.",
+   "transitions": "Before/after split, a linear wipe between presets, three comparison bands",
+   "implementation": [
+    "DaVinci Resolve / Baselight three-way colour correctors",
+    "ASC CDL (slope, offset, power) and LUTs",
+    "Canvas 2D + SDF tracer (js/look-kit.js): the plain render graded per pixel in opts.post, scope built from a subsampled buffer"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.4,
+   "video": "media/lookgrade.mp4",
+   "posterImg": "atlas/posters/lookgrade.jpg"
+  },
+  {
+   "id": "lookgrain",
+   "family": "L",
+   "name": "Film Grain & Halation",
+   "sub": "Seeded grain, red halation, weave and vignette",
+   "era": "2000s —",
+   "origin": "Film grain is the visible clumping of silver halide crystals and dye clouds in the emulsion; it is strongest in the midtones and changes every frame because every frame is a new piece of film. Halation is the red-orange glow around bright edges where light passes through the emulsion, reflects off the film base and re-exposes the red-sensitive layer from behind; anti-halation backings suppress it, and stocks without one show it strongly. Gate weave is the slight frame-to-frame drift of film in the camera and projector gate. As digital cameras replaced film, finishing tools added these artefacts back on purpose, from scanned grain plates to procedural emulations.",
+   "works": "Dune (Denis Villeneuve, 2021; shot digitally, recorded out to film and scanned back for its texture) · Euphoria season 2 (HBO, 2022; shot on Kodak Ektachrome) · Dehancer (film-emulation plug-in modelling grain, halation and bloom)",
+   "tech": [
+    "Grain seeded by frame, midtone weighted",
+    "Halation from blurred threshold",
+    "Gate weave + vignette"
+   ],
+   "accent": "#e2532a",
+   "motionDNA": "The camera makes the shared 50° orbit while the finish builds on the beat: grain fades in and starts boiling at 30 frames a second, the halation threshold glow rises until the rim-lit edges bleed red, the gate begins to weave and the vignette closes in; a split then shows the clean render against the finish before the whole frame returns to film.",
+   "visualDNA": "A low-key version of the still life: black studio, one hard key and a rim light that rings each object in white, each ring haloed in red-orange; fine monochrome grain alive in the midtones, quiet in the blacks; soft dark corners. Insets show the grain plate and the halation pass; a loupe magnifies a rim edge at 3×; mono readouts give grain σ, frame seed, threshold, halation strength, weave and vignette.",
+   "transitions": "Effects layered on one by one; a split against the clean render",
+   "implementation": [
+    "Scanned grain plates / FilmConvert / Dehancer-style film emulation",
+    "Nuke or Resolve: threshold, blur and red-tinted add for halation",
+    "Canvas 2D + SDF tracer (js/look-kit.js): opts.post halation blur, hash(x, y, frame) grain, vignette; gate weave as a per-frame draw offset"
+   ],
+   "reproducibility": "Fully procedural (grain is a pure function of pixel and frame index)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9,
+   "video": "media/lookgrain.mp4",
+   "posterImg": "atlas/posters/lookgrain.jpg"
+  },
+  {
+   "id": "looksss",
+   "family": "L",
+   "name": "Subsurface",
+   "sub": "Light that goes in, scatters and comes out somewhere else",
+   "era": "2001 —",
+   "origin": "Henrik Wann Jensen, Steve Marschner, Marc Levoy and Pat Hanrahan’s “A Practical Model for Subsurface Light Transport” (SIGGRAPH 2001) made translucent materials — marble, milk, skin — practical to render with a dipole diffusion approximation, work later recognised with a Scientific and Technical Academy Award; translucent skin of this kind went into Gollum in The Lord of the Rings. Real-time engines then approximated it cheaply: texture-space diffusion for skin (NVIDIA’s Human Head demo, 2007), screen-space subsurface scattering (Jorge Jimenez and colleagues, 2009), and the thickness-based translucency Colin Barré-Brisebois and Marc Bouchard presented at GDC 2011 for back-lit thin parts. This look uses wrap lighting plus a traced thickness in that real-time spirit.",
+   "works": "The Lord of the Rings: The Two Towers (Weta Digital, 2002; Gollum’s translucent skin) · NVIDIA Human Head demo (2007; texture-space diffusion) · “Approximating Translucency for a Fast, Cheap and Convincing Subsurface Scattering Look” (Barré-Brisebois & Bouchard, GDC 2011)",
+   "tech": [
+    "Per-channel wrap lighting",
+    "Traced thickness toward the light",
+    "exp(−d / mfp) transmission, red-shifted"
+   ],
+   "accent": "#ff8a3d",
+   "motionDNA": "The shared 10 s camera orbit with the Token bobbing and turning, which keeps changing how much wax lies between the light and each edge. A wipe turns plain Lambert diffuse into wax and jade under the front key; the light then swings round behind the still life over about two seconds while the studio dims, and the thin parts begin to glow. The scatter radius steps on the beat (0.34 → 0.16 → 0.62 → 0.40), the glow tightening and flooding with it, and a last split brings the plain diffuse back over the right half under the same back light.",
+   "visualDNA": "Honey-orange wax and pale jade on the paper studio: soft terminators that bleed red, warm-edged shadows on the forms, a waxy highlight; then a dim, back-lit studio where the Token’s rim and the ring round its hole burn orange and the jade sphere glows green at its edge, while the opaque blue cube stays dark. A scatter-radius ruler, RGB diffusion profiles, a top-down light plot and thickness and transmission passes.",
+   "transitions": "Wipe from diffuse to subsurface; the light swings behind; stepped scatter radius; split back to diffuse",
+   "implementation": [
+    "Dipole diffusion BSSRDF (Jensen et al., 2001) and its descendants in offline renderers (random-walk SSS in Arnold, RenderMan, Cycles)",
+    "Real-time approximations: wrap lighting, screen-space diffusion, thickness-map translucency",
+    "Canvas 2D + SDF tracer (js/look-kit.js): per-channel wrap and shadow exponents, LK.traceInside toward the light for thickness, exp(−d / mfp) per channel with a forward-scatter lobe"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7,
+   "video": "media/looksss.mp4",
+   "posterImg": "atlas/posters/looksss.jpg"
+  },
+  {
+   "id": "lookiridescent",
+   "family": "L",
+   "name": "Iridescence",
+   "sub": "Thin-film interference: colour from thickness and angle",
+   "era": "1704 / 1990s —",
+   "origin": "Robert Hooke described the colours of thin plates in Micrographia (1665), and Isaac Newton measured them in Opticks (1704) — Newton’s rings, where colour follows the thickness of a film of air. Thomas Young explained them by interference around 1801: light reflected from the top and the bottom of a film recombines in or out of phase depending on the extra path 2·n·d·cos θ and the wavelength. Spectral and wave-optics renderers simulate it directly; production shaders approximate it, and Laurent Belcour and Pascal Barla’s “A Practical Extension to Microfacet Theory for the Modeling of Varying Iridescence” (SIGGRAPH 2017) made thin-film colour a standard layer of physically based materials.",
+   "works": "Newton’s rings (Isaac Newton, Opticks, 1704) · Favrile glass (Louis Comfort Tiffany, 1890s; iridescent art glass) · Belcour & Barla, “A Practical Extension to Microfacet Theory for the Modeling of Varying Iridescence” (SIGGRAPH 2017)",
+   "tech": [
+    "Two-beam Airy reflectance per λ",
+    "Spectral → RGB via CIE fits, LUT d × θ",
+    "Thickness noise, draining, swirl"
+   ],
+   "accent": "#7a5cff",
+   "motionDNA": "The shared camera orbit sweeps the view angle across every surface, so bands of colour slide over the bevels of the Token and round the bubble as the camera moves. A wipe turns the plain paper studio into a dark set with a soap-bubble sphere and a beetle-shell Token; the film thickness then steps on the beat (420 → 250 → 560 → 780 → 430 nm), recolouring both at once, and the thickness noise grows from ±70 to ±170 nm while the bubble’s film drains and swirls faster.",
+   "visualDNA": "A near-black studio with softbox reflections: a nearly invisible bubble drawn only by its reflections — magenta, gold, green and blue bands, darker at the thin top, the softboxes doubled on the front and back walls — and a dark Token whose lacquer glows through gold, violet and teal with angle. An interference-colour chart as the thickness ruler, a hue-vs-angle strip, thickness and view-angle passes.",
+   "transitions": "Wipe from the plain studio to the dark set; beat-stepped film thickness; thickness noise ramp",
+   "implementation": [
+    "Thin-film interference layers in production shaders (e.g. Arnold and RenderMan thin-film parameters, Belcour & Barla 2017)",
+    "Spectral rendering and CIE colour-matching functions (analytic fits by Wyman, Sloan and Shirley, 2013)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): Airy two-beam reflectance over 35 wavelengths into a thickness × cos θ LUT, traced reflection, straight-through bubble with front- and back-wall films"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7,
+   "video": "media/lookiridescent.mp4",
+   "posterImg": "atlas/posters/lookiridescent.jpg"
+  },
+  {
+   "id": "lookclearcoat",
+   "family": "L",
+   "name": "Clear Coat",
+   "sub": "A glossy clear layer over a coloured base: two lobes",
+   "era": "2000s —",
+   "origin": "Automotive paint is built in layers — primer, a coloured basecoat often loaded with aluminium or mica flakes, and a transparent clearcoat — and car-paint shaders in visualisation tools copied that stack. Physically based layered materials made it general: Disney’s principled BRDF (Brent Burley, 2012) included a separate clearcoat lobe with its own gloss over the base, and the coat layer became a standard parameter in production and real-time materials, from Autodesk Standard Surface’s coat to the KHR_materials_clearcoat glTF extension and the clear-coat shading models of Unreal Engine and Filament.",
+   "works": "Cars (Pixar, 2006; ray-traced reflections on lacquered car paint) · Disney principled BRDF, “Physically Based Shading at Disney” (Brent Burley, SIGGRAPH 2012 course; clearcoat lobe) · Autodesk Standard Surface coat layer / glTF KHR_materials_clearcoat",
+   "tech": [
+    "Base lobe: diffuse + metallic flakes",
+    "Coat lobe: traced reflection, Schlick F0 0.04",
+    "Coat on / off, strength, roughness"
+   ],
+   "accent": "#d2361b",
+   "motionDNA": "The shared camera orbit drags the coat’s reflections across the forms: softbox strips and the floor’s horizon slide over the Token’s face and wrap the sphere, while the flakes glint and go out as their angles pass the key. A wipe lacquers the plain materials; on beat 6 the coat switches off and only the base lobe is left, flat and satin; from beat 7.5 its strength fades back in; roughness then steps on the beat (0 → 0.10 → 0.22 → 0.38) and snaps back to glass-smooth, and a last split shows coat on beside coat off.",
+   "visualDNA": "Product-shot paper studio: a candy-orange metallic flake Token, a deep teal and a cobalt lacquered-ceramic sphere and cube, each with a crisp white studio reflection floating on top of its colour, brightest at the silhouettes. Strength and roughness rulers, the base and coat lobes as separate insets, leader-line labels, an orange split line.",
+   "transitions": "Wipe from plain to clear coat; coat off (cut) and back on (fade); stepped coat roughness; split coat on / off",
+   "implementation": [
+    "Layered BRDFs: clearcoat lobe over base (Disney principled BRDF 2012, Autodesk Standard Surface, glTF KHR_materials_clearcoat)",
+    "Car-paint shaders: metallic flake normals in a cell grid under a dielectric coat",
+    "Canvas 2D + SDF tracer (js/look-kit.js): base lobe with hashed flake normals, one LK.trace coat bounce with Schlick F0 0.04 kept in its own buffer, edge-aware blur for coat roughness"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.7,
+   "video": "media/lookclearcoat.mp4",
+   "posterImg": "atlas/posters/lookclearcoat.jpg"
+  },
+  {
+   "id": "lookbrushed",
+   "family": "L",
+   "name": "Brushed Metal",
+   "sub": "Anisotropic highlights, stretched across the grain",
+   "era": "1992 —",
+   "origin": "Brushed, spun and turned metal reflects light anisotropically: the fine grooves scatter it across their direction and hardly at all along it, so highlights become streaks at right angles to the grain. James Kajiya treated anisotropic surfaces in 1985, and Gregory Ward’s 1992 SIGGRAPH paper “Measuring and Modeling Anisotropic Reflection” gave rendering the compact elliptical-Gaussian lobe with two roughnesses that is still the textbook model; Michael Ashikhmin and Peter Shirley’s anisotropic Phong model (2000) followed. Modern physically based shaders (Disney’s principled BRDF, 2012, and its descendants) expose the same idea as an “anisotropic” slider and a tangent direction.",
+   "works": "Measuring and Modeling Anisotropic Reflection (Gregory Ward, SIGGRAPH 1992) · An Anisotropic Phong BRDF Model (Michael Ashikhmin & Peter Shirley, 2000) · Physically Based Shading at Disney (Brent Burley, SIGGRAPH 2012; the anisotropic parameter of the principled BRDF)",
+   "tech": [
+    "Ward anisotropic lobe, αT ≠ αB",
+    "Per-object tangent field",
+    "Reflection blurred along the bitangent"
+   ],
+   "accent": "#9fb0c2",
+   "motionDNA": "The shared 10 s orbit drags the streaks across the metal: on the Token they swing round its centre like a spun disc, on the sphere they run pole to pole, on the cube across the grain. A wipe turns the plain materials to brushed metal; callouts and the tangent-field inset explain the grooves; the anisotropy ratio αB:αT then steps 2 → 5 → 12 → 28 on the beat at constant mean roughness, and a split slides in from the right to compare against isotropic metal of the same mean roughness.",
+   "visualDNA": "Brushed aluminium in three anodised tints — orange Token, bare steel sphere, blue cube — in the paper studio with a dark ceiling: long soft streaks of softbox light, fine concentric rings and straight grain in the metal, blurred reflections of the floor. An orange split line, leader-line labels, a ratio readout with a log ruler, and a hue-coded tangent-field inset with white groove strokes.",
+   "transitions": "Wipe from plain to brushed metal; stepped anisotropy ratio; split to isotropic metal",
+   "implementation": [
+    "Ward (1992) anisotropic BRDF with per-surface tangent frames",
+    "Tangent / anisotropy maps as in Disney principled and Arnold standard surface",
+    "Canvas 2D + SDF tracer (js/look-kit.js): analytic Ward lobes for four softboxes, one LK.trace reflection, an edge-aware blur along the projected bitangent, groove noise in the across-grain coordinate"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.6,
+   "video": "media/lookbrushed.mp4",
+   "posterImg": "atlas/posters/lookbrushed.jpg"
+  },
+  {
+   "id": "lookneon",
+   "family": "L",
+   "name": "Neon Night",
+   "sub": "Coloured practical lights, a wet floor, inverse-square spill",
+   "era": "1910s — (on screen from the 1980s)",
+   "origin": "Georges Claude showed the first neon tube lights in Paris in 1910, and neon signs spread through American cities in the 1920s and 1930s. The night street lit only by coloured practicals, with the light pooling and smearing on wet tarmac, became a cinematic look through films such as Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982), and later the neon-noir of Wong Kar-wai with Christopher Doyle and Nicolas Winding Refn’s Drive (2011). In rendering, a neon tube is a line or tube area light: shading from linear light sources was treated by Tomoyuki Nishita, Isao Okamura and Eihachiro Nakamae in 1985, and real-time engines adopted the “representative point” trick for their specular, described by Brian Karis for Unreal Engine 4 in 2013.",
+   "works": "Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982) · Fallen Angels (Wong Kar-wai, cinematography Christopher Doyle, 1995) · Drive (Nicolas Winding Refn, cinematography Newton Thomas Sigel, 2011)",
+   "tech": [
+    "Analytic line lights, 1/d² per element",
+    "Wet floor: traced, stretched reflection",
+    "Coloured spill, per-tube soft shadows"
+   ],
+   "accent": "#ff2a80",
+   "motionDNA": "The shared camera orbit carries the tubes’ reflections across the wet floor and the highlights round the sphere. A wipe opens the night against the plain day reference while the tubes stutter on one by one; callouts name the spill, the line light and the wet reflection; from beat 7 each tube plays solo for a beat (pink, cyan, amber), so its own colour spill and falloff read alone, then all three return.",
+   "visualDNA": "Near-black night, three glowing tubes — hot pink, cyan, amber — with soft halos; the white sphere goes magenta with a cyan rim, the orange Token turns hot red under the pink underlight, the blue cube’s front glows gold from the amber tube; dark asphalt with mirror puddles and long vertical streaks of reflected neon. Paper-coloured mono labels on dark halos, a light-only pass inset, a falloff plot with each object’s distance to its tube, and a three-channel tube mixer.",
+   "transitions": "Wipe from plain day to the neon night; tubes stutter on; tube solos on the beat",
+   "implementation": [
+    "Line / tube area lights with representative-point specular (Karis, 2013)",
+    "Screen-space or traced wet-surface reflections stretched along the view-vertical",
+    "Canvas 2D + SDF tracer (js/look-kit.js): closed-form line-light irradiance clipped to the hemisphere, one LK.shadow per tube, one LK.trace floor reflection, analytic ray–capsule tubes with halo"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.8,
+   "video": "media/lookneon.mp4",
+   "posterImg": "atlas/posters/lookneon.jpg"
+  },
+  {
+   "id": "lookovercast",
+   "family": "L",
+   "name": "Overcast",
+   "sub": "The whole cloudy sky as one soft light",
+   "era": "1942 — (sky model)",
+   "origin": "Under a full cloud deck the sun disappears and the whole sky becomes one huge, dim, even source: there is no key, shadows shrink to soft darkening where surfaces meet, and contrast drops. Parry Moon and Domina Spencer measured overcast skies in 1942 and found them about three times brighter at the zenith than at the horizon, L(θ) = Lz(1 + 2 cos θ)/3, which the CIE adopted as its standard overcast sky (1955). Photographers prize the light for portraits and product work, and its film equivalent is the large overhead diffusion frame. In rendering it is sky-dome lighting: integrate the sky over the visible hemisphere, by cosine-weighted visibility rays or by ambient occlusion as the cheap stand-in (Zhukov, Iones and Kronin, 1998; Landis at ILM, 2002).",
+   "works": "CIE standard overcast sky (after Moon & Spencer, 1942) · Bernd and Hilla Becher’s typologies of industrial structures (from 1959; photographed under overcast skies for shadowless, even light) · Fargo (Joel and Ethan Coen, cinematography Roger Deakins, 1996; flat white winter overcast)",
+   "tech": [
+    "CIE overcast sky dome",
+    "Cosine-weighted soft shadow rays",
+    "Measured contrast ratio"
+   ],
+   "accent": "#a9b6c4",
+   "motionDNA": "The shared camera orbit. The film opens on the scene in hard clear-sky sun; a wipe from left to right covers it with the overcast dome, the cast shadows dissolving into soft contact darkening. Callouts and a fisheye probe step across four points on the beat while a visibility pass sits beside it; the sky-ray count then builds 1 → 3 → 6 → 12 on the beat, single soft shadows multiplying into one soft occlusion; finally a split slides in to compare overcast and sun side by side with their measured contrast ratios.",
+   "visualDNA": "Pale cool grey-white sky with no visible sun; the paper floor and the orange, white and blue objects in soft, even, slightly blue light, tops brighter than sides, dark only where they meet the floor. Against it the hard-sun half: blue sky, crisp black shadows, bright highlights. Ink mono labels, a circular sky fisheye with ray dots, a visibility pass, a ray-count readout and two contrast-ratio readouts.",
+   "transitions": "Wipe from hard sun to overcast; stepped ray count; split to the sunny version",
+   "implementation": [
+    "Sky-dome / environment lighting with the CIE overcast luminance distribution",
+    "Cosine-weighted hemisphere visibility (the full-strength version of ambient occlusion)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): 12 fixed spiral directions per pixel, each a soft LK.shadow, times LK.ao for small-scale contact; contrast measured from a luminance histogram of the frame"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.8,
+   "video": "media/lookovercast.mp4",
+   "posterImg": "atlas/posters/lookovercast.jpg"
+  },
+  {
+   "id": "lookchiaroscuro",
+   "family": "L",
+   "name": "Chiaroscuro",
+   "sub": "One hard light, and darkness for the rest",
+   "era": "1600 —",
+   "origin": "Chiaroscuro (Italian, “light-dark”) names the modelling of form by strong contrast of light and shade, developed in Renaissance drawing and painting. Caravaggio pushed it to tenebrism around 1600: a single high, raking light, figures emerging from near-black, as in The Calling of Saint Matthew (1599–1600). Rembrandt made a gentler, warmer low key his own in the following decades, and portrait photographers still call a key set high and to the side “Rembrandt lighting”. Film noir cinematographers carried the idea into black-and-white cinema in the 1940s; in rendering it is a single shadowed spot light, a high key-to-fill ratio and nothing else.",
+   "works": "The Calling of Saint Matthew (Caravaggio, 1599–1600) · The Night Watch (Rembrandt, 1642) · The Third Man (Carol Reed, cinematography Robert Krasker, 1949)",
+   "tech": [
+    "Single hard spot, inverse-square falloff",
+    "High key-to-fill ratio",
+    "Notan: two-value design"
+   ],
+   "accent": "#e0a458",
+   "motionDNA": "The shared 50° orbit with the Token turning and bobbing, under a lamp that drifts a few degrees and rises and falls a little, so the terminators and the shadow edges creep across the forms. A wipe opens the dark set from the plain reference; then the fill steps down on the beat, 6:1 → 21:1 → 80:1, and the shadows sink from deep brown to black while the lit planes stay put.",
+   "visualDNA": "Near-black umber ground with a faint warm spill on the unseen wall; a warm hard key raking the orange Token, an ivory sphere and a deep blue cube on a dark wooden table, crisp cast shadows, a narrow pool of light that dies within a metre or two, a vignette and fine grain. A notan inset in ink and bone, a key-to-fill readout, and the light zones of the ball labelled on the sphere, then the lamp–form–shadow triangle drawn in dashes.",
+   "transitions": "Wipe from the plain reference to the dark set; the fill steps down on the beat",
+   "implementation": [
+    "Cinematography: one hard key, flags and no fill (negative fill); key-to-fill ratio metered in stops",
+    "Spot light with cone falloff and inverse-square decay, ambient near zero (Blender, Arnold, Unreal)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): point light in a smoothstep cone, inverse-square falloff, hard LK.shadow (k 48), AO-weighted fill stepped down on the beat, floor bounce term, vignette + frame-seeded grain, notan threshold in post"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.2,
+   "video": "media/lookchiaroscuro.mp4",
+   "posterImg": "atlas/posters/lookchiaroscuro.jpg"
+  },
+  {
+   "id": "lookcaustics",
+   "family": "L",
+   "name": "Caustics",
+   "sub": "Light gathered into lines by a curved surface",
+   "era": "1990s —",
+   "origin": "A caustic is the envelope of light rays focused by a curved reflecting or refracting surface; the term was introduced by Ehrenfried Walther von Tschirnhaus in the 1680s, and the bright net on a pool floor is the everyday example. Ordinary ray tracing cannot find caustics, because a diffuse surface does not know which direction a focused light reaches it from. James Arvo’s backward ray tracing (1986) first traced light from the source and stored it on surfaces, and Henrik Wann Jensen’s photon mapping (1996) made it practical. Real-time water renders approximate the same idea with a caustic texture computed from the water’s height field and projected along the light.",
+   "works": "Finding Nemo (Pixar, 2003; animated caustics on the reef and the fish) · Henrik Wann Jensen, photon-mapped caustic renders (1996 onwards) · Crysis (Crytek, 2007; projected water caustics in real time)",
+   "tech": [
+    "Height field → photon density map",
+    "Projection along the light, masked by shadow",
+    "Photons through a glass ball lens"
+   ],
+   "accent": "#7fe3e0",
+   "motionDNA": "The shared 50° camera orbit, under a living net of light: the height field evolves with deep-water dispersion, so the caustic cells form, stretch, merge and split without sliding. A wipe opens the pool from the plain studio; then the ripple amplitude steps up on the beat, 0.40 → 0.75 → 1.05 → 1.40, and the soft dappling sharpens into thin bright lines as the focus of the curved surface comes up to the floor.",
+   "visualDNA": "An aqua pool: a pale sand-blue floor fading into blue-green water, red light absorbed first with distance, the orange Token and blue cube netted with bright white-cyan caustic lines on every face that sees the sun, hard-edged dark shadows where the lines stop, a clear glass sphere with a focused, rippling spot in its shadow. Insets: the height field, the caustic photon map, and a cross-section of parallel rays bending at the surface and gathering into peaks.",
+   "transitions": "Wipe from the plain reference into the pool; ripple amplitude steps up on the beat",
+   "implementation": [
+    "Photon mapping (Jensen) for caustics in offline renderers: V-Ray, RenderMan, Arnold",
+    "Real-time water: caustic texture from the water height field, projected along the light and masked by the shadow map (Unity, Unreal)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): 14-wave seeded spectral height field, 288² photons per depth splatted into 144² periodic maps, light-direction projection × N·L × soft shadow, 53k analytic photons through the IOR 1.5 sphere, one refraction pass for the glass"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8,
+   "video": "media/lookcaustics.mp4",
+   "posterImg": "atlas/posters/lookcaustics.jpg"
+  },
+  {
+   "id": "lookhatching",
+   "family": "L",
+   "name": "Cross-Hatching",
+   "sub": "Tone built from layers of pen strokes",
+   "era": "1500s —",
+   "origin": "Hatching and cross-hatching — building tone from layers of parallel lines — come from engraving and pen drawing: Albrecht Dürer’s woodcuts and engravings of the 1490s–1510s set the standard, and the same vocabulary runs through etching and nineteenth-century wood engraving. In computer graphics, Winkenbach and Salesin’s “Computer-Generated Pen-and-Ink Illustration” (SIGGRAPH 1994) rendered tone with stroke textures, and Praun, Hoppe, Webb and Finkelstein’s “Real-Time Hatching” (SIGGRAPH 2001) introduced tonal art maps, layered hatch textures that blend by tone on the surface.",
+   "works": "Melencolia I (Albrecht Dürer, engraving, 1514) · Winkenbach & Salesin, “Computer-Generated Pen-and-Ink Illustration” (SIGGRAPH 1994) · Melencolia I (Albrecht Dürer, 1514; engraved cross-hatching)",
+   "tech": [
+    "Tone → hatch layers (1, 2, 3 directions)",
+    "Screen-space vs object-space strokes",
+    "G-buffer ink outlines on paper"
+   ],
+   "accent": "#3a3550",
+   "motionDNA": "The shared 50° orbit with the Token turning through the light, so strokes appear and disappear as its faces darken past each threshold. A wipe turns the plain render into ink; the hatch first holds still on the screen while the objects slide under it, then a second wipe pins the strokes to each object so they ride along with the turn; a last wipe lays a pale watercolour wash under the ink.",
+   "visualDNA": "Warm cream paper with faint fibres; near-black violet ink in wobbly, broken strokes at three angles, sparse single hatching on the half-tones, cross-hatching in the core shadows, triple hatching in the cast shadows; firm outlines around every silhouette and crease; at the end a light orange, grey and blue wash. Insets: the tone pass and the tone → layers ramp with its three thresholds.",
+   "transitions": "Wipe from the plain render to ink; wipe from screen-space to object-space strokes; wipe to ink + wash",
+   "implementation": [
+    "Tonal art maps (Praun et al. 2001): hatch textures layered by tone",
+    "Blender: Freestyle / Line Art outlines + hatch textures in a ramp; pen-and-ink shaders in Unity / Unreal",
+    "Canvas 2D + SDF tracer (js/look-kit.js): tone from N·L × shadow + AO sky, three thresholded line layers with width ∝ darkness, wobble and breaks from seeded noise, dominant-axis planar projection for object space, id / depth-plane / normal edges, seeded paper"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.9,
+   "video": "media/lookhatching.mp4",
+   "posterImg": "atlas/posters/lookhatching.jpg"
+  },
+  {
+   "id": "looknormals",
+   "family": "L",
+   "name": "Normals",
+   "sub": "Surface direction stored as colour, then relit",
+   "era": "1978 —",
+   "origin": "Storing a surface direction per pixel goes back to James Blinn’s bump mapping (“Simulation of Wrinkled Surfaces”, SIGGRAPH 1978), which perturbs the normal used for lighting without changing the geometry. Normal maps — the perturbed normal itself, written as rgb = n·0.5 + 0.5 — followed in the late 1990s, baked from detailed models onto simple ones, and tangent space made them reusable on any surface; Doom 3 (2004) put them in front of millions of players. Deferred shading (Deering et al., 1988; the “G-buffer” of Saito and Takahashi, 1990) writes normals, position and albedo to buffers first and lights them afterwards, which is also how compositors relight a render from its normal pass.",
+   "works": "Doom 3 (id Software, 2004; normal-mapped characters and walls) · Half-Life 2 (Valve, 2004; radiosity normal mapping) · Killzone 2 (Guerrilla Games, 2009; deferred shading from a G-buffer)",
+   "tech": [
+    "rgb = n·0.5 + 0.5, world vs view space",
+    "Tangent-space normal map",
+    "Deferred relight from N, P and albedo"
+   ],
+   "accent": "#8f86ff",
+   "motionDNA": "The shared 10 s camera move: a 50° orbit with a slight drift down while the Token bobs and turns. A wipe replaces the plain render with world-space normals, whose colours stay fixed to the scene as the camera moves; a second wipe switches to view-space normals, which follow the camera; normal-map detail fades in on the floor and cube; a last wipe relights the frame from the passes while a point light circles the still life.",
+   "visualDNA": "Pastel red-green-blue surfaces on black: a green floor, a sphere carrying every direction, the lavender of camera-facing faces; bevelled tiles and dimples appear in the colours only. Then a dark studio lit by one warm moving light and a cool rim, the tile bevels and dimples catching it. Legend sphere with axis arrows, a live probe on the Token, ink leader labels, small G-buffer insets.",
+   "transitions": "Wipe from plain to world normals, to view normals, to the deferred relight; normal-map detail cross-fades in",
+   "implementation": [
+    "Normal AOVs (world or camera space) in Arnold, V-Ray, Blender; the Relight node in Nuke",
+    "Tangent-space normal maps baked from high-poly sculpts",
+    "Canvas 2D + SDF tracer (js/look-kit.js): G-buffer normals encoded per pixel, procedural height-field slopes as the normal map, N·L + Blinn relight from the stored position and albedo"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.7,
+   "video": "media/looknormals.mp4",
+   "posterImg": "atlas/posters/looknormals.jpg"
+  },
+  {
+   "id": "lookpixel",
+   "family": "L",
+   "name": "Pixel Art",
+   "sub": "Low resolution, a fixed palette, ordered dither",
+   "era": "1970s —",
+   "origin": "Pixel art grew out of the hard limits of early computer and console graphics: low resolutions shown on large screens and a handful of colours fixed by the hardware, which artists placed pixel by pixel. The term is usually traced to Adele Goldberg and Robert Flegal at Xerox PARC (1982). Ordered dithering, which fakes extra tones by comparing each pixel against a tiled threshold matrix, was formalised by Bryce Bayer at Kodak in 1973; Nintendo’s Game Boy (1989) showed four shades of green. Rendering 3D scenes small and snapping them to a palette, as here, is a later way of getting the look; Lucas Pope’s Return of the Obra Dinn renders its 3D world into dithered 1-bit.",
+   "works": "The Secret of Monkey Island (Lucasfilm Games, 1990) · The Legend of Zelda: Link’s Awakening (Nintendo, 1993; Game Boy, four shades) · Return of the Obra Dinn (Lucas Pope, 2018; dithered 3D)",
+   "tech": [
+    "Low internal res, integer nearest-neighbour upscale",
+    "16-colour palette, Bayer 4 × 4 ordered dither",
+    "One-pixel outline from the object-id buffer"
+   ],
+   "accent": "#29adff",
+   "motionDNA": "The shared 10 s camera move: a 50° orbit with a slight drift down while the Token bobs and turns. On each beat the render resolution halves its way down from 800 × 450 to 160 × 90; the palette wipes in without dither, a second wipe adds Bayer dithering, the outline pass snaps on with the beat, and a last wipe swaps to the four Game Boy greens. Because the scene is re-rendered small every frame, the pixels crawl along edges as the camera moves.",
+   "visualDNA": "Hard square pixels twelve screen pixels wide; PICO-8 colours — orange and brown on the Token, sky blue and navy on the cube, warm white and grey on the floor — with checkered Bayer patterns in every gradient and dark one-pixel outlines; at the end olive-to-pale-green Game Boy tones. Palette swatches marking the colours in use, the 4 × 4 threshold matrix, a resolution readout.",
+   "transitions": "Hard resolution steps on the beat; wipes to the palette, to dithering and to the Game Boy palette; the outline snaps on",
+   "implementation": [
+    "Low-res render target with point (nearest) sampling on upscale",
+    "Ordered dithering against a Bayer index matrix into a fixed palette (shader or post)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): LK.gbuffer at the small size, LK.plain shaded, palette snap + Bayer + id-buffer outline in post, drawn with imageSmoothingEnabled = false"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.1,
+   "video": "media/lookpixel.mp4",
+   "posterImg": "atlas/posters/lookpixel.jpg"
+  },
+  {
+   "id": "lookchromatic",
+   "family": "L",
+   "name": "Chromatic Aberration",
+   "sub": "Colours that refuse to meet: lens fringing in post",
+   "era": "1700s optics · 2000s — as a look",
+   "origin": "Glass bends short wavelengths more than long ones (dispersion), so a simple lens brings blue to a focus closer than red. Isaac Newton concluded in Opticks (1704) that this colour error could not be removed from lenses, one reason he built a reflecting telescope. It was corrected in the 18th century by the achromatic doublet, a converging crown-glass lens paired with a diverging flint-glass one: Chester Moor Hall made the first ones in the 1730s and John Dollond patented and sold them from 1758. Real-time renderers later added the fringe back on purpose as a post effect that imitates imperfect camera lenses, often next to grain and vignetting.",
+   "works": "Isaac Newton, Opticks (1704) · John Dollond’s achromatic doublet (patented 1758) · Alien: Isolation (Creative Assembly, 2014; lens fringing with grain for a 1970s-film look)",
+   "tech": [
+    "Lateral CA: per-channel radial scale",
+    "Longitudinal CA: R and B defocused",
+    "Achromatic doublet as the correction"
+   ],
+   "accent": "#e0362c",
+   "motionDNA": "The shared 10 s camera move: a 50° orbit with a slight drift down while the Token bobs and turns. A wipe brings in the uncorrected lens; on each beat the lateral scale steps up (R ×1.006 → ×1.0185 with B scaled down the same) so the fringes widen toward the frame edges; then longitudinal blur grows on R and B; finally a wipe from the right corrects the lens with a doublet and holds as a split, uncorrected on the left.",
+   "visualDNA": "The plain still life with red and cyan-blue fringes along every silhouette, near zero at the centre and widest at the cube and sphere, then soft purple-green halos on all edges; on the corrected side, clean edges. A loupe with the edge’s pixels and its R, G, B profile, concentric rings giving the fringe width at each radius, and a ray diagram of three wavelengths focusing apart.",
+   "transitions": "Wipe from the ideal lens to the aberrated one; stepped strength on the beat; a wipe to the corrected lens holding as a split",
+   "implementation": [
+    "Lens-distortion / chromatic-aberration post nodes (Nuke, After Effects, game post stacks)",
+    "Per-channel radial scale about the optical centre plus per-channel defocus",
+    "Canvas 2D + SDF tracer (js/look-kit.js): LK.plain shaded, then opts-style post on the float buffer: R and B resampled bilinearly at 1 ± k scale, mixed with box-blurred copies for axial CA"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.3,
+   "video": "media/lookchromatic.mp4",
+   "posterImg": "atlas/posters/lookchromatic.jpg"
+  },
+  {
+   "id": "lookanamorphic",
+   "family": "L",
+   "name": "Anamorphic Flare",
+   "sub": "Horizontal streaks, oval bokeh, 2.39:1",
+   "era": "1953 —",
+   "origin": "Anamorphic lenses squeeze a wide image horizontally onto ordinary film and stretch it back in projection. Henri Chrétien’s Hypergonar of the 1920s was the basis of 20th Century Fox’s CinemaScope, launched with The Robe in 1953; Panavision’s anamorphic lenses later became the standard, and the projected 2.39:1 frame the shape of the widescreen epic. The cylindrical optics leave a signature that spherical lenses do not: bright sources flare into long horizontal streaks, often blue, and out-of-focus highlights turn into vertical ovals. Filmmakers came to court those artefacts, and renderers imitate them in post with thresholded, one-directional blurs.",
+   "works": "The Robe (Henry Koster, 1953; the first CinemaScope feature) · Close Encounters of the Third Kind (Steven Spielberg, 1977; anamorphic flares from the ship’s lights) · Star Trek (J. J. Abrams, 2009; deliberate blue streak flares)",
+   "tech": [
+    "Threshold → horizontal exponential blur",
+    "Vertical oval bokeh (1 : 1.8)",
+    "2× squeeze, 2.39:1 letterbox"
+   ],
+   "accent": "#3d7bff",
+   "motionDNA": "The camera makes the shared 50° orbit around a night-lit still life with a practical bulb hanging behind it. The frame closes to a 2.39:1 letterbox, then a wipe swaps the spherical lens for the anamorphic one: round bokeh stretch into tall ovals and the bulb and speculars flare sideways. The streak length steps up on the beat, the threshold and streak passes appear as insets, the squeezed negative and its desqueeze are shown, and the streak runs across the whole frame for the finish.",
+   "visualDNA": "Near-black studio, the orange Token and the glossy sphere and cube picked out by a hard key and a warm bulb, a row of amber and blue background lights blown into soft tall ovals; thin electric-blue streaks crossing the frame through every hot point, faint oval ghosts mirrored through the centre; black letterbox bars carrying mono readouts.",
+   "transitions": "Letterbox close, then a wipe from spherical to anamorphic lens",
+   "implementation": [
+    "Lens-flare and anamorphic-streak plug-ins (Optical Flares, Sapphire)",
+    "Engine post: bright-pass, one-axis blur, additive composite",
+    "Canvas 2D + SDF tracer (js/look-kit.js): HDR night shading with an analytic bulb, opts.post oval bokeh with depth-tested occlusion and a two-sided exponential streak filter per row"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.2,
+   "video": "media/lookanamorphic.mp4",
+   "posterImg": "atlas/posters/lookanamorphic.jpg"
+  },
+  {
+   "id": "lookhalftone",
+   "family": "L",
+   "name": "Halftone",
+   "sub": "CMYK dot screens at four angles; AM against FM",
+   "era": "1880s —",
+   "origin": "Printing presses cannot print grey: a spot either takes ink or it does not, so continuous tone is broken into dots whose size follows the tone. Photographic halftone screens appeared in the 1880s — Frederic Ives in Philadelphia and Georg Meisenbach in Munich were among their inventors — and newspapers adopted them for photographs around 1900. Colour printing separates the image into cyan, magenta, yellow and black and gives each its own screen angle, conventionally 15°, 75°, 0° and 45°, so the grids form a small rosette instead of a visible moiré. Stochastic or FM screening, which keeps one tiny dot size and varies how many there are, came with digital imagesetters in the 1990s.",
+   "works": "Roy Lichtenstein, Drowning Girl (1963; Ben-Day dots enlarged into the image) · Sigmar Polke, raster paintings (1960s; enlarged halftone dots) · Into the Spider-Verse (Sony Pictures Animation, 2018; halftone shading in an animated feature)",
+   "tech": [
+    "CMYK separation, 70 % black replacement",
+    "Screens at C 15° · M 75° · Y 0° · K 45°",
+    "AM dots vs FM error diffusion"
+   ],
+   "accent": "#e4007d",
+   "motionDNA": "The camera makes the shared 50° orbit. A wipe prints the plain render into four dot screens; the separations and the screen-angle diagram come up, and the screen ruling steps finer on each beat — 20, 14, 10, 7.5 px cells — before settling at 12 for a loupe on the rosette. Then the press runs one ink only: AM dots fill the frame, and a wipe brings in FM stochastic dots for the right half, with a loupe straddling the line.",
+   "visualDNA": "Warm newsprint paper; the orange Token as overlapping magenta and yellow dots, the blue cube as cyan and magenta, shadows built from black dots at 45°, every dot a vector circle that sharpens under the loupe. Paper panels hold the readouts, the four separation plates in their inks, the source render and a protractor of the four screen angles; the coda is black ink alone, ordered dots on the left, grainy stochastic dots on the right.",
+   "transitions": "Wipe from the plain render to print; hard cut on the beat to one ink; split AM | FM",
+   "implementation": [
+    "Photoshop / RIP halftone screening (Bitmap, Color Halftone filters)",
+    "Print workflow: CMYK separation with GCR/UCR, screen angles, stochastic (FM) screening",
+    "Canvas 2D + SDF tracer (js/look-kit.js): plain render sampled bilinearly per lattice point, one arc path per ink composited with multiply; FM by serpentine Floyd–Steinberg on a 3 px grid"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.8,
+   "video": "media/lookhalftone.mp4",
+   "posterImg": "atlas/posters/lookhalftone.jpg"
+  },
+  {
+   "id": "lookinfrared",
+   "family": "L",
+   "name": "Infrared",
+   "sub": "False colour: a thermal map and IR colour film",
+   "era": "1940s —",
+   "origin": "False-colour imaging shows data the eye cannot see by assigning it colours. Thermal cameras record long-wave infrared, roughly 8–14 µm, which every surface emits according to its temperature and emissivity; early military and medical thermographs of the mid-20th century gave way to uncooled microbolometer cameras from the 1990s, whose palettes — ironbow, rainbow, white-hot — are now a familiar look. Infrared colour film works differently: Kodak’s Ektachrome Infrared, later sold as Aerochrome, was developed during the Second World War to detect camouflage, recording near-infrared reflectance as red, red as green and green as blue behind a yellow filter, so living foliage turned red and pink. Both are mappings, which is what this film does with render data.",
+   "works": "Predator (John McTiernan, 1987; the creature’s thermal vision) · Richard Mosse, The Enclave (2013; Aerochrome infrared film in the eastern Congo) · Richard Mosse, Incoming (2017; military thermal camera footage)",
+   "tech": [
+    "Temperature assigned from render data",
+    "Ironbow / rainbow / white-hot palettes, isotherm",
+    "IR → R, R → G, G → B channel shift"
+   ],
+   "accent": "#ff7a1a",
+   "motionDNA": "The camera makes the shared 50° orbit. A wipe turns the visible render into a thermal image; the scale bar and four spot meters come up one per half beat while the Token warms from 30 to nearly 40 °C; the palette steps from ironbow to rainbow to white-hot and back on the beat, an isotherm above 35 °C lights up, then a second wipe switches to infrared colour film and the film ends on three bands: visible, thermal, infrared.",
+   "visualDNA": "A thermal still life in ironbow: the Token glowing yellow-white with cooler purple edges, warm lit faces against cold shadowed floor, hot contact rings under the sphere and cube, a black cold backdrop; camera-style brackets, crosshair spot meters with °C readouts, a vertical scale bar and input-pass insets. Then a pink-white world with a crimson cube and a green Token, labelled channel by channel.",
+   "transitions": "Wipe from visible to thermal, hard palette swaps on the beat, wipe to IR film, three comparison bands",
+   "implementation": [
+    "Thermal camera palettes and isotherms (FLIR-style ironbow LUTs)",
+    "False-colour channel remapping (Aerochrome emulation in Photoshop or Resolve)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): per-pixel temperature from id, N·L × shadow, contact and heat-source falloffs, 256-entry palette LUT, seeded sensor noise; IR film as a channel swap of the plain lighting"
+   ],
+   "reproducibility": "Fully procedural (sensor noise seeded by pixel and frame)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.4,
+   "video": "media/lookinfrared.mp4",
+   "posterImg": "atlas/posters/lookinfrared.jpg"
   }
  ],
- "built": "2026-10-28"
+ "built": "2026-11-03"
 };

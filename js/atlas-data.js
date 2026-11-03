@@ -14,20 +14,28 @@
     H: { name: 'Cinematic & Film Language', short: 'Cinematic' },
     I: { name: 'Cultural & Regional', short: 'Cultural' },
     J: { name: 'Social & Commercial', short: 'Social & Commercial' },
+    K: { name: 'Technique Atlas', short: 'Techniques' },
+    L: { name: 'Rendering Looks', short: 'Looks' },
   };
 
   // Running order: grouped by family. Ids without a film yet are skipped everywhere.
   MG.ORDER = [
-    'whitney', 'bass', 'bauhaus', 'artdeco', 'constructivism', 'psychedelic', 'opart', 'memphis', 'y2k', 'destijl', 'risograph', 'brutalism', 'dadaism', 'midcentury', 'grunge',
-    'swiss', 'flash', 'variablefont', 'ascii', 'type3d', 'kinetic', 'textmorph', 'editorial', 'typewriter', 'textpath', 'calligraphic', 'typocollage',
-    'rubberhose', 'silhouette', 'lineart', 'collage', 'isometric', 'sakuga', 'comic', 'flat', 'whiteboard', 'chalkboard', 'watercolor', 'liquid', 'limited', 'picturebook', 'rotoscope', 'framebyframe', 'animemg',
-    'mograph', 'lowpoly', 'voxel', 'glass3d', 'softbody', 'wireframe', 'exploded', 'claymorphism', 'celshaded', 'productviz', 'architectural', 'character3d',
-    'particles', 'reactiondiffusion', 'attractor', 'lifegame', 'fractal', 'lsystem', 'boids', 'audioreactive', 'slitscan', 'raymarch', 'feedback', 'noisemotion', 'shaderart',
-    'claymation', 'sand', 'xerox', 'paintglass', 'directfilm', 'cyanotype', 'vhs', 'filmburn', 'objectstop', 'puppet', 'pixilation',
-    'retro', 'pixel', 'glitch', 'vaporwave', 'frutiger', 'terminal', 'desktop', 'webcore', 'screensaver', 'databend', 'oswindow',
-    'filmnoir', 'longexposure', 'doubleexposure', 'tiltshift', 'timelapse', 'matchcut', 'splitscreen', 'oneshot', 'hyperlapse', 'highcontrast', 'hud', 'cyberpunk', 'surreal', 'foundfootage',
-    'ukiyoe', 'inkwash', 'shadowpuppet', 'dunhuang', 'islamic', 'papelpicado', 'guochao', 'minhwa', 'wycinanki', 'miniature', 'africanpattern',
-    'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast', 'vj', 'saas',
+    'whitney', 'bass', 'bauhaus', 'artdeco', 'constructivism', 'psychedelic', 'opart', 'memphis', 'y2k', 'destijl', 'risograph', 'brutalism', 'dadaism', 'midcentury', 'grunge', 'artnouveau', 'futurism', 'popart', 'neon',
+    'swiss', 'flash', 'variablefont', 'ascii', 'type3d', 'kinetic', 'textmorph', 'editorial', 'typewriter', 'textpath', 'calligraphic', 'typocollage', 'lyric', 'splitflap', 'concrete',
+    'rubberhose', 'silhouette', 'lineart', 'collage', 'isometric', 'sakuga', 'comic', 'flat', 'whiteboard', 'chalkboard', 'watercolor', 'liquid', 'limited', 'picturebook', 'rotoscope', 'framebyframe', 'animemg', 'linocut', 'cutout', 'lofi',
+    'mograph', 'lowpoly', 'voxel', 'glass3d', 'softbody', 'wireframe', 'exploded', 'claymorphism', 'celshaded', 'productviz', 'architectural', 'character3d', 'photoreal', 'holographic', 'pointcloud',
+    'particles', 'reactiondiffusion', 'attractor', 'lifegame', 'fractal', 'lsystem', 'boids', 'audioreactive', 'slitscan', 'raymarch', 'feedback', 'noisemotion', 'shaderart', 'datagen', 'infinitezoom', 'physarum', 'harmonograph',
+    'claymation', 'sand', 'xerox', 'paintglass', 'directfilm', 'cyanotype', 'vhs', 'filmburn', 'objectstop', 'puppet', 'pixilation', 'papercraft', 'lightpainting',
+    'retro', 'pixel', 'glitch', 'vaporwave', 'frutiger', 'terminal', 'desktop', 'webcore', 'screensaver', 'databend', 'oswindow', 'liminal',
+    'filmnoir', 'longexposure', 'doubleexposure', 'tiltshift', 'timelapse', 'matchcut', 'splitscreen', 'oneshot', 'hyperlapse', 'highcontrast', 'hud', 'cyberpunk', 'surreal', 'foundfootage', 'documentary', 'musicvideo', 'bullettime', 'dollyzoom',
+    'ukiyoe', 'inkwash', 'shadowpuppet', 'dunhuang', 'islamic', 'papelpicado', 'guochao', 'minhwa', 'wycinanki', 'miniature', 'africanpattern', 'mosaic',
+    'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast', 'vj', 'saas', 'broadcast', 'launch', 'reels', 'explainer', 'corpmemphis',
+    'techmorph', 'techwipe', 'techsmear', 'techelastic', 'techbounce', 'techanticipation', 'techorbit', 'techparallax', 'techcrashzoom', 'techcloth', 'techrigidbody', 'techdestruction', 'techinstancing', 'techrecursion', 'techfields',
+    'techmatchcut', 'techdisplace', 'techovershoot', 'techstagger', 'techdolly', 'techinfinitezoom', 'techfluid', 'techsoftbody', 'technoise', 'techfeedback', 'techmasking', 'techkeying', 'techrotoscope', 'techdoubleexposure', 'techtimeremap',
+    'techdissolve', 'techsquash', 'techfollowthrough', 'techshake', 'techrackfocus', 'techparticles', 'techrope', 'techmotionblur', 'techfreeze', 'techecho', 'techframestep', 'techcharstagger', 'techtypemorph', 'techtracking', 'techtextreveal',
+    'techpush', 'techglitch', 'techeasing', 'techarcs', 'techmotionpath', 'techpan', 'techwhippan', 'techflocking', 'techik', 'techpuppetpin', 'techreaction', 'techlsystem', 'techbloom', 'techloop', 'techtrimpaths',
+    'lookclay', 'lookchrome', 'lookglass', 'lookmatcap', 'lookstudio', 'lookrim', 'lookgolden', 'lookvolumetric', 'looktoon', 'lookao', 'lookxray', 'lookwire', 'lookfog', 'lookgrade', 'lookgrain',
+    'looksss', 'lookiridescent', 'lookclearcoat', 'lookbrushed', 'lookneon', 'lookovercast', 'lookchiaroscuro', 'lookcaustics', 'lookhatching', 'looknormals', 'lookpixel', 'lookchromatic', 'lookanamorphic', 'lookhalftone', 'lookinfrared',
   ];
 
   // Curated best-of reel: a representative spread across every family.

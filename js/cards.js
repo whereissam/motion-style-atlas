@@ -10,6 +10,12 @@
     return m && m.name ? { ...m, cn: m.name, en: m.sub || '' } : null;
   };
   const present = () => MG.ORDER.filter(id => MG.films[id] && metaOf(id));
+  // "157 styles  ·  60 techniques  ·  15 looks": family K films are techniques and family L
+  // films are rendering looks, counted apart from the styles.
+  const counts = (sep, up) => {
+    const ids = present(), fam = x => ids.filter(id => metaOf(id).family === x).length, k = fam('K'), l = fam('L'), f = s => (up ? s.toUpperCase() : s);
+    return `${ids.length - k - l} ${f('styles')}` + (k ? `${sep}${k} ${f('techniques')}` : '') + (l ? `${sep}${l} ${f('looks')}` : '');
+  };
 
   const BG = '#0d0c0b', INK = '#ece6dc', MUTE = '#8f877d';
   const NS = '"Noto Sans SC", "PingFang SC", sans-serif';
@@ -152,7 +158,7 @@
       text(c, 'THE CLASSIC STYLES OF MOTION DESIGN', W / 2, 640, { font: ARCH, weight: 800, size: 40, ls: 14, align: 'center', color: `rgba(236,230,220,${seg(t, 1.1, 1.6)})` });
       const line = E.ioX(seg(t, 1.3, 1.9));
       c.fillStyle = '#e8b04a'; c.fillRect(W / 2 - 300 * line, 690, 600 * line, 4);
-      text(c, `${n} styles  ·  10 seconds each  ·  what it is, then the film`, W / 2, 770, { font: ARCH, weight: 400, size: 38, align: 'center', color: `rgba(216,210,201,${seg(t, 1.7, 2.2)})` });
+      text(c, `${counts('  ·  ')}  ·  10 seconds each  ·  what it is, then the film`, W / 2, 770, { font: ARCH, weight: 400, size: 38, align: 'center', color: `rgba(216,210,201,${seg(t, 1.7, 2.2)})` });
       text(c, 'EVERY FRAME AND SOUND GENERATED IN CODE', W / 2, 830, { font: MONO, size: 22, ls: 5, align: 'center', color: `rgba(143,135,125,${seg(t, 2.0, 2.5)})` });
       const ex = E.inX(seg(t, 4.55, 4.96));
       if (ex > 0) { c.fillStyle = BG; c.fillRect(0, 0, W, H * ex); }
@@ -187,7 +193,7 @@
       const ox = 120, oy = 190 + (availH - rows * rowH) / 2;
       const step = Math.min(0.07, 2.6 / n);
       text(c, 'MOTION STYLE ATLAS', 120, 120, { font: ARCH, weight: 900, size: 56, color: INK });
-      text(c, `${n} STYLES  ·  ${n * 10} SECONDS`, W - 120, 118, { font: MONO, weight: 800, size: 24, ls: 4, align: 'right', color: MUTE });
+      text(c, `${counts('  ·  ', true)}  ·  ${n * 10} SECONDS`, W - 120, 118, { font: MONO, weight: 800, size: 24, ls: 4, align: 'right', color: MUTE });
       st.th.forEach(({ id, cv }, i) => {
         const col = i % cols, row = Math.floor(i / cols), m = metaOf(id);
         const s = E.outB(seg(t, 0.2 + i * step, 0.6 + i * step), 1.2);
