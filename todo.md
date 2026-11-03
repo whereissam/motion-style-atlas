@@ -1,6 +1,6 @@
 # Motion Style Atlas — TODO
 
-Current build: 262 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 60 Technique Atlas films in waves 10–13, 30 Rendering Looks in waves 14–15 and 15 Narrative Formats in wave 16). Checked items below are done; Web 1.0 is covered by the Webcore film.
+Current build: 277 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 60 Technique Atlas films in waves 10–13, 30 Rendering Looks in waves 14–15 and 30 Narrative Formats in waves 16–17). Checked items below are done; Web 1.0 is covered by the Webcore film.
 Everything below is queued for later waves. Each item = one 10-second procedural film + card + atlas entry.
 
 ## Visual styles still to build
@@ -154,14 +154,20 @@ Everything below is queued for later waves. Each item = one 10-second procedural
     - Compositing: [x] Bloom
     - Temporal: [x] Seamless Loop
     - Shape: [x] Trim Paths
+- [ ] Follow-ups from wave 17: every `origin` text in `js/films-m6.js`–`m10.js` was written from memory and is unchecked (e.g. TrueView 2010, GEICO "Unskippable" 2015, FTC Endorsement Guides 1980/2009/2023, YouTube chapters 2020, TikTok Stitch 2020); Myth vs Fact holds each fact only ~0.75 s; single empty frames exactly on some cuts (Myth vs Fact 8.0, Creator Intro 2.0, Day in the Life 8.0, Listicle 2.0); in Unboxing the tissue fold shows half the Token before the reveal; strip labels are low-contrast on the orange out-bumper (Ad-break Bumper) and the Next Week slate. Scores checked for peaks and timing only, not listened to.
 - [ ] Follow-ups from wave 15: faint straight seams on the Token face in Subsurface (fanned thickness rays switching exit surface); the soap bubble's upper half in Iridescence reads dark; Cross-Hatching runs ~550 ms/frame, the slowest look.
 - [ ] Follow-ups from wave 13: the Reaction-Diffusion spots dish loses the Token outline almost at once; the 'stripes' dish reads as labyrinth bands; the Inverse Kinematics poster frame is sparse. Scores of waves 11–13 were checked for timing only, not listened to. Reels not rebuilt since wave 10.
 - [ ] Demo the style-vs-technique idea: Bauhaus Geometry × Elastic vs Bauhaus Geometry × Recursive.
-- [ ] **Narrative Formats (20+)**: title sequence, ad, explainer, music video, lyric video, logo reveal… Family M. [x] Wave 16 (2026-11-03, `feat/wave-16`) built the first 15 in `js/films-m1.js`–`m5.js` on the new `js/format-kit.js`; 5+ more to reach 20. Why: the last big atlas layer. Rule, like K and L: the Token is the cast of every film and only the format changes; a shared structure strip (`js/format-kit.js`) shows each format's beats (acts, hook, call to action) so the films explain structure rather than repeat the style films (Logo Reveal, Explainer, Lyric Video, Music Video already exist as styles).
+- [x] **Narrative Formats (20+)** (30 built, 2026-11-03): title sequence, ad, explainer, music video, lyric video, logo reveal… Family M. [x] Wave 16 (2026-11-03, `feat/wave-16`) built the first 15 in `js/films-m1.js`–`m5.js` on the new `js/format-kit.js`; 5+ more to reach 20. Why: the last big atlas layer. Rule, like K and L: the Token is the cast of every film and only the format changes; a shared structure strip (`js/format-kit.js`) shows each format's beats (acts, hook, call to action) so the films explain structure rather than repeat the style films (Logo Reveal, Explainer, Lyric Video, Music Video already exist as styles).
   - Film & TV: [x] Title Sequence, [x] Trailer, [x] Cold Open, [x] "Previously On" Recap, [x] End Credits
   - Advertising: [x] 10-second Ad, [x] Product Demo, [x] Channel Ident, [x] Teaser
   - Explainer: [x] Tutorial, [x] Problem → Solution, [x] Before / After, [x] Timeline
   - Social: [x] Vertical Story, [x] Manifesto
+  - [x] Wave 17 (2026-11-03, `feat/wave-17`): 15 more on the same kit in `js/films-m6.js`–`m10.js`, taking family M to 30. Why: wave 16 left 5+ to reach the 20+ goal; like K and L, a second batch of 15 fills the obvious gaps in each group (TV breaks and promos, direct-response ads, list and comparison explainers, creator formats).
+    - Film & TV: [x] Post-credits Sting, [x] "Next Week On" Promo, [x] Ad-break Bumper, [x] Talking-head Interview
+    - Advertising: [x] Testimonial, [x] Unboxing, [x] Skippable Pre-roll, [x] Sale Countdown
+    - Explainer: [x] Top-5 Listicle, [x] How It Works, [x] Versus, [x] Myth vs Fact
+    - Social: [x] Creator Intro (id `formatyoutube`), [x] Duet / Reaction, [x] Day in the Life
 - [x] **Rendering Looks (20+)** (30 built, 2026-11-03): material, light, grain, compositing looks. Family L. Wave 14 built the first 15 in `js/films-l1.js`–`l5.js` on the new `js/look-kit.js`. Why: the next layer after the Technique Atlas; chosen over Narrative Formats, which mostly overlap existing style films. Rule, like family K: one shared 3D scene and camera move (`js/look-kit.js`, a small SDF ray tracer at reduced resolution), so only the look changes.
   - Material: [x] Clay, [x] Chrome, [x] Glass, [x] Matcap
   - Light: [x] Three-point Studio, [x] Rim Light, [x] Golden Hour, [x] Volumetric Light
