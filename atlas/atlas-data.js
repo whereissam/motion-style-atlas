@@ -48,6 +48,10 @@ window.ATLAS = {
   "L": {
    "name": "Rendering Looks",
    "short": "Looks"
+  },
+  "M": {
+   "name": "Narrative Formats",
+   "short": "Formats"
   }
  },
  "items": [
@@ -7318,6 +7322,441 @@ window.ATLAS = {
    "poster": 3.4,
    "video": "media/lookinfrared.mp4",
    "posterImg": "atlas/posters/lookinfrared.jpg"
+  },
+  {
+   "id": "formattitles",
+   "family": "M",
+   "name": "Title Sequence",
+   "sub": "Opening credits in order, held to be read",
+   "era": "1950s —",
+   "origin": "Early sound films opened on static title cards. In the mid-1950s Saul Bass turned the opening credits into a designed sequence, starting with Carmen Jones (1954) and The Man with the Golden Arm (1955), and the title sequence became its own craft — Maurice Binder’s Bond openings from Dr. No (1962), Pablo Ferro, and later Kyle Cooper’s Se7en (1995). The order of the credits themselves is set largely by guild agreements and contracts: distributor and production company first, the possessory credit, the stars, the main title, the key crew, and the director last.",
+   "works": "The Man with the Golden Arm (Saul Bass, 1955) · Dr. No (Maurice Binder, 1962) · Se7en (Kyle Cooper, 1995)",
+   "tech": [
+    "Credit order: distributor → possessory → cast → crew → title",
+    "Hold each card long enough to read (≈ 2–3 s)",
+    "Credits placed in open space around the action"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Four credit cards on the bar lines at 120 BPM — distributor, possessory credit, lead cast, music — each fading in, holding about two seconds and fading out while the graphic action keeps evolving underneath; a half-second black beat; then the main title lands on the downbeat at 8 s and holds to the end.",
+   "visualDNA": "A 2.39 : 1 scope frame on near-black: one orange line, the Token rolling along it, growing into the star and splitting into a bar graph of Tokens; credits in wide-tracked cream Archivo, a small line over a big name; MOTION as the main title over an orange rule. Mono hold bars and the credit order in the bars.",
+   "transitions": "Credits cross-fade over continuous graphic action; a black beat before the main title",
+   "implementation": [
+    "After Effects / Nuke title design with an edit-locked credit list",
+    "Credits timed to the score’s bar lines",
+    "Canvas 2D: credit table with hold windows over a procedural action layer"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.2,
+   "video": "media/formattitles.mp4",
+   "posterImg": "atlas/posters/formattitles.jpg"
+  },
+  {
+   "id": "formattrailer",
+   "family": "M",
+   "name": "Trailer",
+   "sub": "Three acts, accelerating cuts, title, date",
+   "era": "1910s —",
+   "origin": "The first film trailers were shown after the feature — hence the name — in American cinemas in the 1910s; for decades the National Screen Service produced most of them for the studios. The modern grammar arrived from the 1980s: Don LaFontaine’s ‘In a world…’ voice-over, montage cut to the music, and in the 2010s the Inception-style braam and the drop to silence before the title, followed by the release date and often a last gag shot, the button.",
+   "works": "Alien (teaser, 1979) · Inception (trailer, 2010) · The Social Network (trailer, 2010)",
+   "tech": [
+    "Three-act structure: setup, stakes, montage",
+    "Cutting rate rising to the music",
+    "Braam, drop to silence, title, date button"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A one-second studio ident; Act I in long shots under quiet piano with white-on-black setup cards; the braam on ONE SHAPE at 3.5 s; Act II and III cut shorter and shorter — from one cut a second to about twelve — over a riser and hits on every cut; a 0.4 s drop to silence; the title slam at 7.2 s; COMING SOON with the date at 8.6 s and a final button gag.",
+   "visualDNA": "Scope letterbox, teal-and-orange grade: the orange Token alone under a warm spot on a dark teal floor, rolling, spinning, falling, facing a blue cube; anamorphic streaks and white flashes in the montage; wide-tracked cream cards on black; MOTION as a cream title. Cut ticks above the strip, a cuts-per-second readout.",
+   "transitions": "Hard cuts throughout, white flash frames, cut to black for the drop",
+   "implementation": [
+    "Avid / Premiere edit cut to a trailer cue (risers, braams, hits)",
+    "Cards and title from After Effects",
+    "Canvas 2D: a shot list of procedural shots, cut rate computed from it"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.9,
+   "video": "media/formattrailer.mp4",
+   "posterImg": "atlas/posters/formattrailer.jpg"
+  },
+  {
+   "id": "formatcoldopen",
+   "family": "M",
+   "name": "Cold Open",
+   "sub": "Pre-title teaser, cliffhanger, smash cut",
+   "era": "1950s —",
+   "origin": "Television drama took the teaser from radio and film serials: a scene before the opening titles that drops the viewer into the action and ends on a hook strong enough to hold them through the credits. It was standard on American network series by the 1960s — Star Trek (1966) opened most episodes this way — and from the 1990s the cold open on a cliffhanger, smash-cut to the title card and followed by a time-jump super, became a fixture of prestige drama such as Breaking Bad (2008).",
+   "works": "Star Trek (NBC, 1966–69) · The X-Files (Fox, 1993–2002) · Breaking Bad (AMC, 2008–13; pilot cold open)",
+   "tech": [
+    "In medias res: no titles until the hook lands",
+    "Smash cut on the peak of the action",
+    "Time-jump super back into the story"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "No titles, no fade in: the first frame is already mid-slide. Tension builds for three seconds of handheld push-in with jolts on the off-beats; the cliffhanger at 4.6 s, a snap zoom at 5.05 s, the ledge breaks; a smash cut at 5.6 s on the peak of the fall to a still, bright title card held 1.8 s; a straight cut back at 7.4 s to calm daylight and a typed TWELVE HOURS EARLIER super.",
+   "visualDNA": "Night: a blue-black void with distant lights, rain, a swinging lamp, a slate ledge cracking under the orange Token, heavy vignette. The title card: the paper ground with MOTION in black at full width. Day: the Technique Atlas paper stage, the same ledge whole, the Token at rest. Mono annotations name each convention.",
+   "transitions": "Smash cut (night to bright title, sound cut with it); straight cut back to the story",
+   "implementation": [
+    "Editorial: cut on action at the peak, hard sound cut",
+    "Title card and super from the show’s graphics package",
+    "Canvas 2D: one ledge rig drawn as night and day, with a procedural handheld camera"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.3,
+   "video": "media/formatcoldopen.mp4",
+   "posterImg": "atlas/posters/formatcoldopen.jpg"
+  },
+  {
+   "id": "formatrecap",
+   "family": "M",
+   "name": "\"Previously On\" Recap",
+   "sub": "Only what pays off tonight",
+   "era": "1960s —",
+   "origin": "Serial storytelling has always had to remind its audience: film serials of the 1910s–40s and radio serials opened with a spoken summary of the last chapter. On television, the “previously on” montage of cut-down scenes became a standard cold-open device as serialised drama spread in the 1980s and 1990s, with Hill Street Blues among the early series to lean on it. The craft rule editors repeat is that a recap is chosen backwards from tonight’s episode: each clip sets up something this episode pays off.",
+   "works": "Hill Street Blues (NBC, 1981–87) · 24 (Fox, 2001–10; “Previously on 24…”) · Battlestar Galactica (Sci Fi, 2004–09)",
+   "tech": [
+    "Recap clips chosen by tonight’s payoffs",
+    "Episode tag on every clip",
+    "J-cut sound bridge into the episode"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A 1.2 s black title card; four clips of about one second each, every cut on a hit, the last one ending on a freeze-frame cliffhanger; one second of black while tonight’s sound already plays; then tonight runs at a calmer pace and settles four payoffs one after another (6.5, 6.9, 7.3, 7.9 s) before the main title lands at 8.6 s.",
+   "visualDNA": "Recap clips are the Token stage drained of colour: desaturated, darkened, grained and scan-lined, each tagged S1 · En in the corner. Tonight is the same stage in full colour. Black cards in condensed white type; an episode rail shows which episodes were left out; payoff callouts link each recapped clip to the moment it pays off.",
+   "transitions": "Hard cuts on hits; white flash on the freeze frame; cut to black under a J-cut sound bridge; picture fades up into tonight; darken under the main title",
+   "implementation": [
+    "Avid / Premiere recap assembled from earlier episodes’ masters",
+    "Grade pass to set past clips apart; J-cut in the audio timeline",
+    "Canvas 2D: one stage drawn per clip, saturation/multiply composite, grain and scanlines"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.2,
+   "video": "media/formatrecap.mp4",
+   "posterImg": "atlas/posters/formatrecap.jpg"
+  },
+  {
+   "id": "formatcredits",
+   "family": "M",
+   "name": "End Credits",
+   "sub": "The roll, the stinger, the legal line",
+   "era": "1970s —",
+   "origin": "Classical Hollywood films opened with their credits and closed on a simple “The End”; full end-roll crawls listing the whole crew became the norm through the 1970s, as union agreements and longer crew lists pushed credits to the back of the film. Post-credit scenes go back at least to The Muppet Movie (1979) and Ferris Bueller’s Day Off (1986), and Marvel Studios turned the mid- and post-credit stinger into an expected part of the format from Iron Man (2008). The Bond films’ closing “James Bond will return” line is the best-known sign-off before the legal block.",
+   "works": "Ferris Bueller’s Day Off (John Hughes, 1986; post-credits scene) · Iron Man (Jon Favreau, 2008; post-credits scene) · The Spy Who Loved Me (Lewis Gilbert, 1977; “James Bond will return”)",
+   "tech": [
+    "Constant-speed crawl, role / name columns",
+    "Mid-credit stinger scene",
+    "Legal / copyright line last"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Nothing eases in a crawl: after the end title card holds for 1.2 s, the roll moves at one constant speed so every line spends the same time on screen. At 5.4 s it cuts to black and a two-second stinger plays (a second Token peeks in, a one-beat sting); at 7.4 s the crawl resumes exactly where it stopped and decelerates to nothing only on the legal line, which holds.",
+   "visualDNA": "Black ground; white names in a heavy sans set left of a centre gutter, roles in small spaced caps right-aligned to it; orange section heads; the roll fades in and out at the top and bottom of the window. The stinger is the Token stage under a dark vignette, with the second Token in blue. Mono readouts on the right give the crawl speed and lines on screen.",
+   "transitions": "End card rising into the roll; hard cut to black for the stinger and back; crawl stops on the legal line",
+   "implementation": [
+    "Credit roll from a credits list in a titling system (Avid, After Effects, dedicated roll software)",
+    "Constant pixel-per-frame speed to avoid judder",
+    "Canvas 2D: one scroll offset from accumulated crawl time, edge fades"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.6,
+   "video": "media/formatcredits.mp4",
+   "posterImg": "atlas/posters/formatcredits.jpg"
+  },
+  {
+   "id": "formatad",
+   "family": "M",
+   "name": "Ten-second Ad",
+   "sub": "Hook, hero, brand, one benefit, CTA",
+   "era": "1980s —",
+   "origin": "Short spots have been part of broadcast advertising for decades, sold as cheaper, shorter units next to the standard 30-second commercial. Pre-roll video online and skippable ads after 2010 tightened the rules into the ones creative teams now quote: hook in the first second, the brand on screen within the first few seconds, one message, and an end card with the call to action. Sonic logos — the five-note Intel bong (1994, Walter Werzowa) is the classic — let the brand be recognised by ear alone.",
+   "works": "Intel Inside sonic logo (Walter Werzowa, 1994) · Apple “Get a Mac” (TBWA\\Media Arts Lab, 2006–09) · Old Spice “The Man Your Man Could Smell Like” (Wieden+Kennedy, 2010)",
+   "tech": [
+    "Hook in the first second",
+    "Brand on screen by 3 s",
+    "End card: CTA plus sonic logo"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A stepped, linear 5 fps move as the hook for the first second; an orange whip into a dark product shot where the Token drops, lands with a squash and catches a shine sweep; the MOTION wordmark slides in beside it at 2.4 s; five seconds of one benefit — eased hops beside the stepped grey square, then the Token alone under a single super; the music stops at 8 s and the Token bounces once to each of the five sonic-logo notes on the end card.",
+   "visualDNA": "The warm paper stage and the orange Token, with a dark, spotlit product shot in the middle; heavy Archivo supers; a split screen of grey “others” against the Token; an end card with the lockup, a pill-shaped orange CTA button, small print and faint title-safe guides. Timing rules are marked under the structure strip with a running timecode.",
+   "transitions": "Orange whip wipe into the hero shot; wordmark slide-in; split screen collapsing to full frame; hard cut to the end card on the music stop",
+   "implementation": [
+    "After Effects / Nuke compositing to a broadcast spec (title-safe, :10 exactly)",
+    "Music bed edited to the cut, sonic logo on the end card",
+    "Canvas 2D: stage, clip-path split, gradient product light and shine"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.95,
+   "video": "media/formatad.mp4",
+   "posterImg": "atlas/posters/formatad.jpg"
+  },
+  {
+   "id": "formatdemo",
+   "family": "M",
+   "name": "Product Demo",
+   "sub": "Promise, one feature per beat, hero, CTA",
+   "era": "1949 —",
+   "origin": "The demonstration is the oldest television sales format: in early American TV the product was shown working, often live — Betty Furness opening Westinghouse refrigerators on CBS from 1949 is the classic case — and the pitchman’s fair-ground demo moved to TV with Ron Popeil’s Ronco spots in the 1960s. The modern feature demo keeps the structure and drops the presenter: a promise, features shown one at a time on the product in use with a callout and a close-up, a hero shot and a call to action, the grammar of phone, appliance and app ads since Apple’s iPhone TV spots of 2007.",
+   "works": "Westinghouse demonstrations with Betty Furness (CBS, from 1949) · Ronco Veg-O-Matic TV spots (Ron Popeil, 1960s) · Apple iPhone TV ads, e.g. “Calamari” (TBWA\\Chiat\\Day, 2007)",
+   "tech": [
+    "One feature per beat",
+    "Callout + close-up",
+    "Hero shot, then CTA"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Six beats on a 120 BPM grid: a 1.5 s intro (the product drops in under the promise), three 2 s feature beats built identically — number and benefit line, the product doing the thing, callout, close-up — a 1.25 s hero shot and a 1.25 s CTA. Moves within the features, cuts into the hero and the CTA.",
+   "visualDNA": "The Token on the paper sweep as the product. Big orange feature numbers, Archivo benefit lines, mono spec lines; ink leader-line callouts and a ringed magnifier tethered to the part being shown, with the radius dimensioned. Hero: centred, spot-lit, reflected in the floor, ink spec pills. CTA: Token + MOTION lockup over an ink button.",
+   "transitions": "Text slides in per feature and clears before the next; the close-up springs open from the callout; hard cuts to the hero and to the CTA",
+   "implementation": [
+    "Template the feature beat once and reuse it: same layout, same timing, new content",
+    "Close-ups as a second render of the same scene, scaled about the feature point and clipped to a circle",
+    "Canvas 2D: one scene function drawn twice (wide + magnified), keyframed product state"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.7,
+   "video": "media/formatdemo.mp4",
+   "posterImg": "atlas/posters/formatdemo.jpg"
+  },
+  {
+   "id": "formatident",
+   "family": "M",
+   "name": "Channel Ident",
+   "sub": "Sting, logo, bug: the junction between programmes",
+   "era": "1950s —",
+   "origin": "Broadcasters have identified themselves between programmes since the earliest television — the BBC’s mechanical rotating-globe idents ran for decades from the 1960s. The modern ident, a few seconds of branded film built around a moving logo, was defined by Martin Lambie-Nairn’s Channel 4 launch ident (1982), whose coloured blocks fly together into the 4, and his BBC Two “2s” (1991), a family of short films around one logo. Continuity rules surround it: the on-screen bug, or DOG, sits in a corner inside title safe during programmes and comes off for the junction.",
+   "works": "Channel 4 launch ident (Martin Lambie-Nairn, CGI by Robert Abel and Associates, 1982) · BBC Two “2s” idents (Lambie-Nairn, 1991) · MTV launch ID, the moon-landing flag (1981)",
+   "tech": [
+    "Ident length 3–10 s",
+    "The sting: logo + audio logo",
+    "DOG / bug inside title safe"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A six-second ident inside a ten-second junction: 1 s of programme out to black, 1.4 s setup, 2 s build as the cast converges on the logo, a hard sting at 4.4 s, a 1.6 s logo hold with the wordmark wipe, 1 s handoff into the corner bug, then the next programme fades up under it.",
+   "visualDNA": "A dark junction: orange, ink and paper Tokens drifting on near-black, assembling cell by cell into one large Token; a white flash ring at the sting; the Token + MOTION lockup; the DOG as a white 60 % mark top right. Dashed title-safe and action-safe guides throughout, and a duration ruler bottom right.",
+   "transitions": "Fade to black out of the programme; curved fly-ins to the logo cells; a flash-cut sting; a wordmark wipe; a scale-and-move into the bug while the next programme fades up",
+   "implementation": [
+    "Broadcast design: logo animation in After Effects or Cinema 4D, sting scored to picture",
+    "Continuity: DOG keyed by the playout system inside title safe, off for idents and promos",
+    "Canvas 2D: grid-sampled target cells inside the Token path, eased curved fly-ins, one lockup drawn at any scale"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.5,
+   "video": "media/formatident.mp4",
+   "posterImg": "atlas/posters/formatident.jpg"
+  },
+  {
+   "id": "formatteaser",
+   "family": "M",
+   "name": "Teaser",
+   "sub": "Reveal nothing: glimpses, a date, coming soon",
+   "era": "1970s —",
+   "origin": "The teaser trailer — a short spot released months before a film, built from almost nothing — took its modern form in the 1970s; the teaser for Ridley Scott’s Alien (1979), an egg cracking over “In space no one can hear you scream”, is still the model. Advertising adopted the same withholding for product launches: Apple’s “1984”, aired during Super Bowl XVIII, announced the Macintosh without ever showing it, and car makers tease new models as cropped details and silhouettes under cloth. The rules are constant: glimpses, not views; a date; coming soon.",
+   "works": "Alien teaser trailer (20th Century Fox, 1979) · “1984”, Apple Macintosh (Ridley Scott for Chiat\\Day, 1984) · Cloverfield teaser (Paramount, 2007; released without a title)",
+   "tech": [
+    "Reveal nothing",
+    "Glimpses cut to black",
+    "Date + COMING SOON"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Black and sound for 1.2 s, then three glimpses of about 1.8 s, each faded up out of black and cut hard back to it; a 1.2 s date card that flickers on; a 1.6 s COMING SOON end card. Moves are slow pushes and drifts — the light moves more than the product.",
+   "visualDNA": "Near-black frames; the Token only as a dark mass picked out by orange rim light: a macro corner, a silhouette in backlit haze, light through the hole. Wide-tracked Archivo for the date and the end card. A small area readout of product visible over time against a dashed 100 % launch line.",
+   "transitions": "Fades up from black and hard cuts to black between every glimpse; the date and end card flicker on like a failing lamp",
+   "implementation": [
+    "Shoot or render details, not views: macro crops, backlight, silhouette, negative fill",
+    "Edit to sound: hits on the cuts, a drone and a heartbeat under the black",
+    "Canvas 2D: the Token path filled near-black and stroked with a moving radial-gradient rim light"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.6,
+   "video": "media/formatteaser.mp4",
+   "posterImg": "atlas/posters/formatteaser.jpg"
+  },
+  {
+   "id": "formattutorial",
+   "family": "M",
+   "name": "Tutorial",
+   "sub": "Step-by-step how-to",
+   "era": "1960s TV — · screencast 2004 —",
+   "origin": "The how-to demonstration became a television genre with Julia Child’s The French Chef (WGBH, 1963) and Bob Ross’s The Joy of Painting (PBS, 1983): one task, broken into steps, shown at the speed you can follow. The software tutorial is its screen-recorded descendant — Jon Udell popularised the word “screencast” in 2004, and YouTube (2005) and Khan Academy (2008) made the narrated screen recording, with a visible cursor and highlighted clicks, the everyday way people learn a tool.",
+   "works": "The French Chef (Julia Child, WGBH, 1963–1973) · The Joy of Painting (Bob Ross, PBS, 1983–1994) · Khan Academy video lessons (Sal Khan, 2008 —)",
+   "tech": [
+    "One action per numbered step",
+    "Visible cursor, click ripples and highlights",
+    "Promise up front, recap at the end"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Intro card (1.2 s) promises the result and the step count; three numbered steps of about two seconds each, every one a tool pick plus one drag — cursor eases to the control, a click ripple and tick, the spotlight, the drag, a DONE badge; a 1.4 s recap lays the three steps out as cards; a 0.8 s next-lesson card ends on the finished Token hopping.",
+   "visualDNA": "The Technique Atlas paper stage behind a light mock design app: traffic-light title bar, tool column, dot-grid canvas, a right panel with a step card (STEP n / 3, the instruction, its one action, step time) above real controls. Orange for the subject and highlights, blue selection handles, ink keystroke badges.",
+   "transitions": "Window scales in over the intro card; step card swaps per step; spotlight dims the window around the control in use; recap cards rise over the dimmed app; cut to the next-lesson card",
+   "implementation": [
+    "Screen recording (Camtasia / ScreenFlow / OBS) with cursor and click highlighting",
+    "After Effects callouts, zooms and keystroke overlays",
+    "Canvas 2D: mock UI, keyframed cursor path, evenodd spotlight mask"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.6,
+   "video": "media/formattutorial.mp4",
+   "posterImg": "atlas/posters/formattutorial.jpg"
+  },
+  {
+   "id": "formatproblem",
+   "family": "M",
+   "name": "Problem → Solution",
+   "sub": "The explainer’s narrative arc",
+   "era": "1950s — · web explainers 2007 —",
+   "origin": "Showing the problem before the product is one of television advertising’s oldest moves: Rosser Reeves’ 1950s Anacin commercials for Ted Bates dramatised the headache with hammers before the relief. Copywriters later formalised the arc as problem – agitate – solve, and the web explainer of the late 2000s compressed it into a minute: Common Craft’s “In Plain English” videos (from 2007) and the start-up homepage videos that followed open on a relatable pain, raise the stakes, introduce the product as the turn, explain it in three points and end on a call to action.",
+   "works": "Anacin TV commercials (Rosser Reeves / Ted Bates & Co., 1950s) · Dollar Shave Club launch video (2012; problem, product, punchline) · Dropbox homepage explainer video (c. 2009)",
+   "tech": [
+    "Pain point before product",
+    "Turn at the tension peak",
+    "Three points, then proof and CTA"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Tension rises for 3.5 s and is released in one cut: two failed hops (0–2 s), a slump while the feed accelerates and the frame shakes (2–3.6 s), a beat of silence, then the circle wipe and MOTION slam (3.6 s); three points arrive one every 0.7 s (5–7.6 s); the proof hop uses all three (7.6–8.8 s); the CTA holds 1.2 s.",
+   "visualDNA": "The problem half is graded grey — Token, stage and type desaturated under a cool wash with a growing vignette; the solution half is the full Technique Atlas palette: warm paper, orange Token, ink type. Big left-aligned headline supers, a ledge as the obstacle, numbered ink badges, a pill CTA button.",
+   "transitions": "Hard cut to silence at the tension peak, circle wipe from the Token into colour, horizontal push to the three points and back, wipe up to the end card",
+   "implementation": [
+    "Script on the PAS arc (problem, agitate, solve) with a storyboard per beat",
+    "After Effects character rig, shape layers and type supers",
+    "Canvas 2D: grey / colour scenes composited through a circular clip"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.3,
+   "video": "media/formatproblem.mp4",
+   "posterImg": "atlas/posters/formatproblem.jpg"
+  },
+  {
+   "id": "formatbeforeafter",
+   "family": "M",
+   "name": "Before / After",
+   "sub": "Comparison with slider reveal",
+   "era": "1890s print — · web sliders 2010s —",
+   "origin": "Paired “before” and “after” pictures were a fixture of patent-medicine and beauty advertising by the late nineteenth century; makeover television turned the comparison into a ritual reveal, from This Old House (PBS, 1979) to Extreme Makeover: Home Edition and Queer Eye for the Straight Guy (both 2003). The draggable comparison slider is a web-era form — newsrooms used it for satellite imagery of disasters, as The New York Times did after the 2011 Tōhoku earthquake and tsunami, and open-source plugins such as ZURB’s TwentyTwenty made it a stock component.",
+   "works": "This Old House (PBS, 1979 —) · Extreme Makeover: Home Edition (ABC, 2003–2012) · Satellite Photos of Japan, Before and After the Quake and Tsunami (The New York Times, 2011)",
+   "tech": [
+    "Identical framing on both sides",
+    "Slider reveal with a tease",
+    "Side-by-side hold"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Two seconds of BEFORE to establish the problem; the slider enters and drags to the middle (2–3 s), teases back, pushes further, then snaps off-frame for the reveal at 5 s; one second of full AFTER; a 2.6 s side-by-side hold with framing guides; a 1.4 s brand end.",
+   "visualDNA": "One locked-off frontal frame — wall, desk line, poster, notes, books, three balls and the Token — rendered twice: BEFORE desaturated grey, stained, crooked and scattered; AFTER on the Technique Atlas palette, gridded, aligned, lit warm with soft shadows. White slider bar with a round arrow handle; ink BEFORE and orange AFTER pills; dashed orange alignment guides.",
+   "transitions": "Vertical slider wipe (drag, tease, push, snap), scale-down into two panels, guides drawing across both, brand line fading up",
+   "implementation": [
+    "Two renders or plates locked to the same camera, composited with a moving matte",
+    "Web: two stacked images, clip-path or width driven by a draggable handle (e.g. TwentyTwenty)",
+    "Canvas 2D: one scene function drawn in two states through a rectangular clip"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 3.2,
+   "video": "media/formatbeforeafter.mp4",
+   "posterImg": "atlas/posters/formatbeforeafter.jpg"
+  },
+  {
+   "id": "formattimeline",
+   "family": "M",
+   "name": "Timeline",
+   "sub": "History told as a camera move along one axis",
+   "era": "1765 —",
+   "origin": "The timeline as a picture of history goes back to Joseph Priestley’s A Chart of Biography (1765), which drew lives as bars on a single scaled time axis, and his New Chart of History (1769). Television documentaries and museum films turned it into a camera move: a line travelling across the frame, dates rolling past, an event card at each stop. Web and motion explainers made it a template — the horizontal scroll, the milestone card on a stem, the jump to “today” — and with it a choice every timeline makes: even steps, one per event, or scaled time, where gaps are as long as the years they hold.",
+   "works": "Joseph Priestley, A Chart of Biography (1765) · Charles Joseph Minard and later infographic history charts in print · Knight Lab TimelineJS (Northwestern University, 2012 —) used across web journalism",
+   "tech": [
+    "Milestone cards on stems",
+    "Even steps vs. scaled time",
+    "Zoom to the present"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "A short title, then the camera dollies along the axis in hold-and-move steps, arriving on every second beat so each milestone card can spring out on its stem while the next marker waits off to the right. At the turn the camera pulls back to show the whole line, the gaps between events are labelled in years, and the evenly spaced markers slide to their true positions in scaled time. Then a push in on the present, where the Token and MOTION land.",
+   "visualDNA": "The Technique Atlas paper stage; one ink axis with round markers; cream cards with an ink keyline, an orange edge bar, a heavy year and a mono line, each with a small drawing of the Token at that stage (sharp square, rounded square, punched hole, orange, turning). Decade ticks appear only in scaled time; a small EVEN | SCALED switch and a FICTIONAL CHRONOLOGY note sit under the structure strip.",
+   "transitions": "Camera dolly between stops; pull-back and re-spacing of the axis; push-in to the present",
+   "implementation": [
+    "After Effects null-driven camera on a long precomp",
+    "Web scroll timelines (TimelineJS, scrollytelling)",
+    "Canvas 2D: one world transform per frame (camera x, zoom), markers lerped between even and scaled x"
+   ],
+   "reproducibility": "Fully procedural (the chronology is invented)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.9,
+   "video": "media/formattimeline.mp4",
+   "posterImg": "atlas/posters/formattimeline.jpg"
+  },
+  {
+   "id": "formatstory",
+   "family": "M",
+   "name": "Vertical Story",
+   "sub": "Full-screen segments that vanish in a day",
+   "era": "2013 —",
+   "origin": "Snapchat introduced Stories in October 2013: a chain of full-screen vertical photos and clips, played in order and gone after 24 hours. Instagram Stories copied the format in August 2016, then WhatsApp Status, Facebook and others, which fixed its grammar — segmented progress bars across the top, tap right to skip and left to go back, a reply bar along the bottom, and stickers (text, mentions, polls) placed on top. The swipe-up link was replaced on Instagram by the link sticker in 2021. Ad guidance for Stories asks for the top and bottom of the frame (about 250 px each on a 1080 × 1920 canvas) to be kept free of text and logos, because the app’s own interface covers them.",
+   "works": "Snapchat Stories (2013 —) · Instagram Stories (2016 —) with poll stickers (2017) and link stickers (2021) · WhatsApp Status (2017 —)",
+   "tech": [
+    "Hook inside the first second",
+    "Segments + tap-forward",
+    "Top / bottom UI safe zones"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "Four segments under four progress bars. Segment one hooks inside the first second — the Token slams in with WAIT. — then pays off. A tap on the right of the screen hard-cuts to segment two, where tilted text stickers spring on one after another; segment three asks a question with a poll sticker, takes one tap and fills its result bars while the Token spins; segment four ends on the wordmark and a pulsing link sticker that is tapped. Every cut lands on a bar of the 120 BPM bed.",
+   "visualDNA": "The Technique Atlas paper stage with a 9:16 phone in the middle. Inside: bold colour-blocked segments (ink with an orange glow, paper grid, cobalt, ink), heavy Archivo stickers, a white poll card with orange result bars, a white link pill; generic story chrome (bars, avatar, name, reply field, heart, send). The top and bottom 250 px are hatched orange keep-clear zones; mono annotations, a hook timer and a segment list sit outside the phone.",
+   "transitions": "Hard cuts on tap-forward between segments; stickers spring on with overshoot; the poll fills on the vote",
+   "implementation": [
+    "Instagram / Snapchat in-app story editor",
+    "Figma or After Effects 1080 × 1920 story templates with safe-zone guides",
+    "Canvas 2D: the story drawn at 1080 × 1920 under a scale transform, clipped to the phone screen"
+   ],
+   "reproducibility": "Fully procedural (generic app UI, fictional account, no real logos)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.4,
+   "video": "media/formatstory.mp4",
+   "posterImg": "atlas/posters/formatstory.jpg"
+  },
+  {
+   "id": "formatmanifesto",
+   "family": "M",
+   "name": "Manifesto",
+   "sub": "What the brand believes, one line at a time",
+   "era": "1997 —",
+   "origin": "The brand manifesto film is a statement of belief rather than a product demonstration: a voice reads short declarative lines, each one idea, over images or kinetic type, building to the logo and the brand line. Apple’s “Think Different” (TBWA\\Chiat\\Day, 1997), read over portraits of “the crazy ones”, set the template; Nike’s long-running “Just Do It” campaign films and many later brand launches use the same shape. In kinetic-type versions the edit is cut to the reading — a word or a phrase to a beat — so the rhythm of the voice becomes the rhythm of the picture.",
+   "works": "Apple, “Think Different” — Here’s to the Crazy Ones (TBWA\\Chiat\\Day, 1997) · Nike, “Just Do It” campaign films (Wieden+Kennedy, 1988 —) · Levi’s, “Go Forth” (Wieden+Kennedy, 2009)",
+   "tech": [
+    "One idea per line",
+    "VO-led rhythm: a word per beat",
+    "Build, silence, sign-off"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The voice sets the clock: a word on every beat at 120 BPM, each line one idea. WE BELIEVE rises quietly; IN THINGS THAT MOVE slams in word by word and MOVE. kicks sideways; STILL IS SAFE. is set in outline and held dead still on purpose; MOTION sweeps in at full width; then the build doubles the rate to the half-beat, flashing the ground with each word, and FIRST. zooms through the lens. A cut to black and silence, then the sign-off: the Token draws on and fills on the beat, the wordmark tracks in, the brand line follows the voice.",
+   "visualDNA": "Near-black ground, warm off-white Archivo Black type, the brand orange for the key words, the emblem and the brand line; one line of outline type for the held idea; full-frame orange and paper flashes during the build. A small VO track bottom-right shows the script with each word dotted on the 10 s beat grid.",
+   "transitions": "Hard cuts line to line on the beat; slam-ins, a sideways kick, a sweep-on; full-frame colour flashes; a zoom-through into a cut to black",
+   "implementation": [
+    "After Effects text animators cut to a VO read",
+    "Premiere / Avid edit locked to the voice track",
+    "Canvas 2D: a word list timed to beats drives each line’s layout; the emblem strokes on with a line-dash"
+   ],
+   "reproducibility": "Fully procedural (no recorded voice; the read is implied by the type and the VO track)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 6.3,
+   "video": "media/formatmanifesto.mp4",
+   "posterImg": "atlas/posters/formatmanifesto.jpg"
   }
  ],
  "built": "2026-11-03"
