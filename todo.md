@@ -1,6 +1,6 @@
 # Motion Style Atlas — TODO
 
-Current build: 262 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 60 Technique Atlas films in waves 10–13 30 Rendering Looks in waves 14–15 and 15 Narrative Formats in wave 16). Checked items below are done; Web 1.0 is covered by the Webcore film.
+Current build: 262 films (157 styles: original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15 + wave 8 15 + wave 9 15; plus 60 Technique Atlas films in waves 10–13, 30 Rendering Looks in waves 14–15 and 15 Narrative Formats in wave 16). Checked items below are done; Web 1.0 is covered by the Webcore film.
 Everything below is queued for later waves. Each item = one 10-second procedural film + card + atlas entry.
 
 ## Visual styles still to build
