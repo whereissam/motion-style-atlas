@@ -1,6 +1,6 @@
 # Motion Style Atlas — TODO
 
-Current build: 112 styles (original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15). Checked items below are done; Web 1.0 is covered by the Webcore film.
+Current build: 127 styles (original 22 + priority 30 + wave 3 15 + wave 4 15 + wave 5 15 + wave 6 15 + wave 7 15). Checked items below are done; Web 1.0 is covered by the Webcore film.
 Everything below is queued for later waves. Each item = one 10-second procedural film + card + atlas entry.
 
 ## Visual styles still to build
@@ -28,13 +28,13 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 ### C. 2D Animation & Illustration
 - [x] Rubber Hose
 - [x] Anime Sakuga
-- [ ] Rotoscoping
+- [x] Rotoscoping
 - [x] Silhouette Animation (Lotte Reiniger)
-- [ ] Frame-by-frame
+- [x] Frame-by-frame
 - [x] Comic Book Motion
 - [x] Limited Animation
-- [ ] Anime Motion Graphics
-- [ ] Ink Wash Animation
+- [x] Anime Motion Graphics
+- [x] Ink Wash Animation (covered by the Ink Wash film)
 - [x] Watercolour Animation 水彩动画
 - [x] Chalkboard Animation
 - [x] Children's Book Animation
@@ -43,29 +43,29 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Claymorphism
 - [ ] Photoreal CGI
 - [x] Cel-shaded 3D
-- [ ] Product Visualization
-- [ ] Architectural Motion
-- [ ] 3D Character Animation
+- [x] Product Visualization
+- [x] Architectural Motion
+- [x] 3D Character Animation
 
 ### E. Experimental & Generative Art
-- [ ] Noise-driven Motion
-- [ ] Shader Art
+- [x] Noise-driven Motion
+- [x] Shader Art
 - [x] Raymarching
 - [x] Feedback Loops
 - [x] Slit-scan
 - [ ] Data-driven Generative Art
 
 ### F. Analog, Physical & Stop Motion
-- [ ] Puppet Animation
+- [x] Puppet Animation
 - [x] Object Stop Motion
-- [ ] Pixilation
+- [x] Pixilation
 - [x] Film Burn
 - [x] VHS Analog Video
 
 ### G. Digital, Internet & Screen Aesthetics
-- [ ] Databending
+- [x] Databending
 - [x] Old-school Screensaver
-- [ ] OS Window Animation
+- [x] OS Window Animation
 - [x] Web 1.0 Aesthetic
 
 ### H. Cinematic & Film Language
@@ -73,9 +73,9 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] Long Exposure
 - [x] Tilt-shift Miniature
 - [x] Double Exposure
-- [ ] Surreal Cinema
+- [x] Surreal Cinema
 - [x] High Contrast Cinema
-- [ ] Found Footage
+- [x] Found Footage
 - [ ] Documentary Montage
 - [x] Time-lapse
 - [x] Hyperlapse
@@ -86,7 +86,7 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 ### I. Cultural & Regional Visual Styles
 - [x] Ukiyo-e Motion 浮世绘
 - [x] Ink Wash 水墨
-- [ ] Sumi-e
+- [x] Sumi-e (covered by the Ink Wash film)
 - [x] Indian Miniature
 - [x] Islamic Geometry
 - [x] Papel Picado
@@ -97,7 +97,7 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [x] African Pattern Animation
 
 ### J. Contemporary Social & Commercial Motion
-- [ ] SaaS Product Motion
+- [x] SaaS Product Motion
 - [x] Sports Broadcast
 - [x] Concert VJ Loops
 - [x] Luxury Brand Motion
@@ -126,7 +126,7 @@ Everything below is queued for later waves. Each item = one 10-second procedural
 - [ ] **Rendering Looks (20+)**: material, light, grain, compositing looks.
 
 ## Atlas features
-- [ ] Curated "best of" reel (a representative style per family), not one 20-minute video.
-- [ ] Comparison mode beyond 2-up (a 4-up grid).
+- [x] Curated "best of" reel (a representative style per family), not one 20-minute video.
+- [x] Comparison mode beyond 2-up (a 4-up grid).
 - [ ] In-film text switched to English for the CN-platform styles (optional).
 - [ ] Known flaws: bright streak in the particles mid-section; the MoGraph ring reads as a "V"; the whiteboard hand is cartoonish.

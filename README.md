@@ -2,7 +2,7 @@
 
 **[Browse the atlas →](https://whereissam.github.io/motion-style-atlas/)** · [Download the full reels](https://github.com/whereissam/motion-style-atlas/releases/tag/v1)
 
-A catalogue of 112 motion-design styles, from Bauhaus Geometry and Saul Bass cut-paper to Slit-scan, VHS and Korean Minhwa. Each style is a 10-second film in which every frame and every sound is generated in code: Canvas 2D for the picture, Web Audio for the score. There is no footage and there are no samples.
+A catalogue of 127 motion-design styles, from Bauhaus Geometry and Saul Bass cut-paper to Slit-scan, VHS and Korean Minhwa. Each style is a 10-second film in which every frame and every sound is generated in code: Canvas 2D for the picture, Web Audio for the score. There is no footage and there are no samples.
 
 Every style has:
 

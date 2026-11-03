@@ -20,14 +20,14 @@
   MG.ORDER = [
     'whitney', 'bass', 'bauhaus', 'artdeco', 'constructivism', 'psychedelic', 'opart', 'memphis', 'y2k', 'destijl', 'risograph', 'brutalism', 'dadaism', 'midcentury', 'grunge',
     'swiss', 'flash', 'variablefont', 'ascii', 'type3d', 'kinetic', 'textmorph', 'editorial', 'typewriter', 'textpath', 'calligraphic', 'typocollage',
-    'rubberhose', 'silhouette', 'lineart', 'collage', 'isometric', 'sakuga', 'comic', 'flat', 'whiteboard', 'chalkboard', 'watercolor', 'liquid', 'limited', 'picturebook',
-    'mograph', 'lowpoly', 'voxel', 'glass3d', 'softbody', 'wireframe', 'exploded', 'claymorphism', 'celshaded',
-    'particles', 'reactiondiffusion', 'attractor', 'lifegame', 'fractal', 'lsystem', 'boids', 'audioreactive', 'slitscan', 'raymarch', 'feedback',
-    'claymation', 'sand', 'xerox', 'paintglass', 'directfilm', 'cyanotype', 'vhs', 'filmburn', 'objectstop',
-    'retro', 'pixel', 'glitch', 'vaporwave', 'frutiger', 'terminal', 'desktop', 'webcore', 'screensaver',
-    'filmnoir', 'longexposure', 'doubleexposure', 'tiltshift', 'timelapse', 'matchcut', 'splitscreen', 'oneshot', 'hyperlapse', 'highcontrast', 'hud', 'cyberpunk',
+    'rubberhose', 'silhouette', 'lineart', 'collage', 'isometric', 'sakuga', 'comic', 'flat', 'whiteboard', 'chalkboard', 'watercolor', 'liquid', 'limited', 'picturebook', 'rotoscope', 'framebyframe', 'animemg',
+    'mograph', 'lowpoly', 'voxel', 'glass3d', 'softbody', 'wireframe', 'exploded', 'claymorphism', 'celshaded', 'productviz', 'architectural', 'character3d',
+    'particles', 'reactiondiffusion', 'attractor', 'lifegame', 'fractal', 'lsystem', 'boids', 'audioreactive', 'slitscan', 'raymarch', 'feedback', 'noisemotion', 'shaderart',
+    'claymation', 'sand', 'xerox', 'paintglass', 'directfilm', 'cyanotype', 'vhs', 'filmburn', 'objectstop', 'puppet', 'pixilation',
+    'retro', 'pixel', 'glitch', 'vaporwave', 'frutiger', 'terminal', 'desktop', 'webcore', 'screensaver', 'databend', 'oswindow',
+    'filmnoir', 'longexposure', 'doubleexposure', 'tiltshift', 'timelapse', 'matchcut', 'splitscreen', 'oneshot', 'hyperlapse', 'highcontrast', 'hud', 'cyberpunk', 'surreal', 'foundfootage',
     'ukiyoe', 'inkwash', 'shadowpuppet', 'dunhuang', 'islamic', 'papelpicado', 'guochao', 'minhwa', 'wycinanki', 'miniature', 'africanpattern',
-    'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast', 'vj',
+    'huazi', 'shouzhang', 'kepu', 'sports', 'luxury', 'logoreveal', 'appui', 'datastory', 'podcast', 'vj', 'saas',
   ];
 
   // Curated best-of reel: a representative spread across every family.

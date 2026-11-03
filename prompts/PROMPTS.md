@@ -1,6 +1,6 @@
 # Motion Style Atlas: Regeneration Prompts
 
-Each of the 112 styles below has two prompts:
+Each of the 127 styles below has two prompts:
 
 - **Build prompt**: a full director's brief. Give it to Claude or another coding model to make a procedural 10-second film (Canvas/WebGL + Web Audio), or hand it to a motion designer as a creative brief.
 - **Video-model prompt**: a short descriptive prompt for text-to-video tools.
@@ -1606,7 +1606,124 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Children's Book Animation motion-graphics film (Picture-book Illustration in Motion). Visual style: cream paper with visible tooth, translucent painted tissue shapes overlapping into darker layers, waxy broken crayon lines, coloured-pencil hatching over flat gouache skies, a small character with dot eyes, and serif story text set in the open sky of the spread. Motion: unhurried and quiet: the camera drifts, layers slide past each other in shallow parallax, the character does one small thing per page, and the story moves forward by turning the page. Eyes slide sideways instead of faces emoting. Signature moves: paper-tooth crayon & coloured-pencil fills, painted tissue-paper collage (multiply), page-turn structure, gentle multiplane parallax; transitions: cover open, page turn, parallax drift, vertical pan, word-by-word text. In the tradition of Make Way for Ducklings (Weston Woods, 1955) · The Snowman (Dianne Jackson, 1982) · Lost and Found (Philip Hunt / Studio AKA, 2008, from Oliver Jeffers) · The Gruffalo (Jakob Schuh & Max Lang, 2009) · Room on the Broom (Jan Lachauer & Max Lang, 2012) · Eric Carle, The Very Hungry Caterpillar (book, 1969) · Jon Klassen, I Want My Hat Back (book, 2011). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CHILDREN'S BOOK ANIMATION". Punchy sound design synced to every cut.
 ```
 
-## 42 · MoGraph
+## 42 · Rotoscope
+*Traced Over Live Action · 1915 — · 2D Animation & Illustration*
+
+Reference film: `videos/rotoscope.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Rotoscope** (Traced Over Live Action, 1915 —; family: 2D Animation & Illustration).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Max Fleischer patented the rotoscope in 1915: live-action film projected one frame at a time onto glass so an animator could trace real motion. Disney used traced footage as reference for Snow White, Ralph Bakshi built whole features on it, a-ha’s “Take On Me” turned it into a living pencil sketch, and Bob Sabiston’s Rotoshop gave Richard Linklater’s Waking Life and A Scanner Darkly their interpolated, swimming flats.
+- Study these reference works: Out of the Inkwell (Max & Dave Fleischer, 1918–29) · Minnie the Moocher (Fleischer, with Cab Calloway, 1932) · Snow White and the Seven Dwarfs (Disney, 1937) · The Lord of the Rings (Ralph Bakshi, 1978) · Take On Me (a-ha, dir. Steve Barron, 1985) · Waking Life (Richard Linklater, 2001) · A Scanner Darkly (Linklater, 2006)
+- Motion DNA: Real human timing that no animator would invent — the heel-strike, the decelerating last step, the weight settling, overlapping arm swing — carried straight into drawing; in pencil the line boils on twos, in Rotoshop the same contours swim smoothly between keyed traces.
+- Visual DNA: A sepia live-action plate in a projector gate, translucent animation bond on pegs, blue line-of-action construction under graphite contours and diagonal hatching; then flat posterised colour fields, thin wobbling ink lines and backgrounds that breathe.
+- Signature transitions: Freeze frame, sheet drop onto pegs, light-table switch-off, push-in to the hand, live-action breakthrough, colour flood from the hand, traced title
+- Key techniques: Frozen plate traced on pegs, Pencil boil with offset hatching, Rotoshop-style swimming flats
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Frozen plate traced on pegs, Pencil boil with offset hatching, Rotoshop-style swimming flats).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Frozen plate traced on pegs and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "ROTOSCOPE", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Rotoscope projector and glass easel, Rotoshop vector interpolation, After Effects / TVPaint rotoscoping, Canvas 2D. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural (the live-action plate is synthesised from the same rig).
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Rotoscope motion-graphics film (Traced Over Live Action). Visual style: a sepia live-action plate in a projector gate, translucent animation bond on pegs, blue line-of-action construction under graphite contours and diagonal hatching; then flat posterised colour fields, thin wobbling ink lines and backgrounds that breathe. Motion: real human timing that no animator would invent — the heel-strike, the decelerating last step, the weight settling, overlapping arm swing — carried straight into drawing; in pencil the line boils on twos, in Rotoshop the same contours swim smoothly between keyed traces. Signature moves: frozen plate traced on pegs, pencil boil with offset hatching, rotoshop-style swimming flats; transitions: freeze frame, sheet drop onto pegs, light-table switch-off, push-in to the hand, live-action breakthrough, colour flood from the hand, traced title. In the tradition of Out of the Inkwell (Max & Dave Fleischer, 1918–29) · Minnie the Moocher (Fleischer, with Cab Calloway, 1932) · Snow White and the Seven Dwarfs (Disney, 1937) · The Lord of the Rings (Ralph Bakshi, 1978) · Take On Me (a-ha, dir. Steve Barron, 1985) · Waking Life (Richard Linklater, 2001) · A Scanner Darkly (Linklater, 2006). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "ROTOSCOPE". Punchy sound design synced to every cut.
+```
+
+## 43 · Frame by Frame
+*Straight-ahead on Twos · 1908 — · 2D Animation & Illustration*
+
+Reference film: `videos/framebyframe.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Frame by Frame** (Straight-ahead on Twos, 1908 —; family: 2D Animation & Illustration).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Every frame drawn by hand: since Émile Cohl’s Fantasmagorie and Winsor McCay’s Gertie, animators have drawn on punched paper over a light table and flipped the pages to feel the motion. Pencil tests check timing before anything is cleaned up; Richard Williams codified the craft in The Animator’s Survival Kit, while Bill Plympton’s boiling pencil and Ryan Woodward’s Thought of You leave the rough line on screen.
+- Study these reference works: Fantasmagorie (Émile Cohl, 1908) · Gertie the Dinosaur (Winsor McCay, 1914) · Your Face (Bill Plympton, 1987) · The Man Who Planted Trees (Frédéric Back, 1987) · The Animator’s Survival Kit (Richard Williams, 2001) · Thought of You (Ryan Woodward, 2010)
+- Motion DNA: Twelve drawings a second, each held for two frames: a straight-ahead flow from one drawing to the next, squash on contact and stretch on the fall, spacing that eases out of every arc, and a line that never sits still because no two drawings are traced exactly alike.
+- Visual DNA: Warm animation bond on brass pegs over a light table, blue construction pencil under graphite, red and blue onion skins of the neighbouring drawings, an exposure sheet filling in down the side and hand-lettered notes in the margins.
+- Signature transitions: Sheet drop onto pegs, ball-to-character metamorphosis, 2D squash turn, chronophotographic overlay, letter-by-letter title
+- Key techniques: Bouncing-ball arcs and spacing, Onion skins either side, Boiling line on twos
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Bouncing-ball arcs and spacing, Onion skins either side, Boiling line on twos).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Bouncing-ball arcs and spacing and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "FRAME BY FRAME", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Pencil on punched paper, light table and line tester, TVPaint / Toon Boom Harmony / Procreate Dreams, Canvas 2D. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural (boil and registration jitter are seeded per drawing).
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Frame by Frame motion-graphics film (Straight-ahead on Twos). Visual style: warm animation bond on brass pegs over a light table, blue construction pencil under graphite, red and blue onion skins of the neighbouring drawings, an exposure sheet filling in down the side and hand-lettered notes in the margins. Motion: twelve drawings a second, each held for two frames: a straight-ahead flow from one drawing to the next, squash on contact and stretch on the fall, spacing that eases out of every arc, and a line that never sits still because no two drawings are traced exactly alike. Signature moves: bouncing-ball arcs and spacing, onion skins either side, boiling line on twos; transitions: sheet drop onto pegs, ball-to-character metamorphosis, 2D squash turn, chronophotographic overlay, letter-by-letter title. In the tradition of Fantasmagorie (Émile Cohl, 1908) · Gertie the Dinosaur (Winsor McCay, 1914) · Your Face (Bill Plympton, 1987) · The Man Who Planted Trees (Frédéric Back, 1987) · The Animator’s Survival Kit (Richard Williams, 2001) · Thought of You (Ryan Woodward, 2010). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FRAME BY FRAME". Punchy sound design synced to every cut.
+```
+
+## 44 · Anime MG
+*OP & Title-card Motion Graphics · 1995 — · 2D Animation & Illustration*
+
+Reference film: `videos/animemg.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Anime MG** (OP & Title-card Motion Graphics, 1995 —; family: 2D Animation & Illustration).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Japanese TV anime compresses a whole show into a 90-second opening cut hard to its theme song: speed lines, smear frames, cel-flat colour, lens flares and huge type. Evangelion’s stark kanji title cards, Production I.G’s layered digital compositing, Shaft’s typographic interruptions and TRIGGER’s slammed katakana logos made the title card itself a motion-graphics form.
+- Study these reference works: Neon Genesis Evangelion (Gainax, 1995) · Ghost in the Shell: Stand Alone Complex (Production I.G, 2002) · The Melancholy of Haruhi Suzumiya (Kyoto Animation, 2006) · Bakemonogatari (Shaft, 2009) · Kill la Kill (Trigger, 2013) · Promare (Trigger, 2019)
+- Motion DNA: Cut to the beat: holds and slams on the downbeat, characters on twos against backgrounds panning on ones, smear multiples on fast limbs, slow-motion leaps across the sun, a single impact frame with decaying shake, springy logo slams and a closing shine.
+- Visual DNA: Flat cel colour with one hard shadow tone, ink outlines, saturated red/yellow/cyan cards, heavy condensed English type paired with katakana, cel-shaded cumulus on gradient skies, hexagonal lens ghosts, warm light leaks, sparkles and halftone starbursts.
+- Signature transitions: Anamorphic slit open, smash cut, panel slams and slides, tilt-up reveal, impact inversion, letterbox snap, white slash wipe, logo slam
+- Key techniques: Speed lines and smear multiples, Beat-synced type-card slams, Cel shadow bands, flares, leaks
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Speed lines and smear multiples, Beat-synced type-card slams, Cel shadow bands, flares, leaks).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Speed lines and smear multiples and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "ANIME MG", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Hand-drawn cels and digital ink & paint, After Effects compositing (flares, leaks, type), Canvas 2D. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Anime MG motion-graphics film (OP & Title-card Motion Graphics). Visual style: flat cel colour with one hard shadow tone, ink outlines, saturated red/yellow/cyan cards, heavy condensed English type paired with katakana, cel-shaded cumulus on gradient skies, hexagonal lens ghosts, warm light leaks, sparkles and halftone starbursts. Motion: cut to the beat: holds and slams on the downbeat, characters on twos against backgrounds panning on ones, smear multiples on fast limbs, slow-motion leaps across the sun, a single impact frame with decaying shake, springy logo slams and a closing shine. Signature moves: speed lines and smear multiples, beat-synced type-card slams, cel shadow bands, flares, leaks; transitions: anamorphic slit open, smash cut, panel slams and slides, tilt-up reveal, impact inversion, letterbox snap, white slash wipe, logo slam. In the tradition of Neon Genesis Evangelion (Gainax, 1995) · Ghost in the Shell: Stand Alone Complex (Production I.G, 2002) · The Melancholy of Haruhi Suzumiya (Kyoto Animation, 2006) · Bakemonogatari (Shaft, 2009) · Kill la Kill (Trigger, 2013) · Promare (Trigger, 2019). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "ANIME MG". Punchy sound design synced to every cut.
+```
+
+## 45 · MoGraph
 *Cinema 4D Cloner Look · 2006 — · 3D & CGI Motion*
 
 Reference film: `videos/mograph.mp4`
@@ -1645,7 +1762,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second MoGraph motion-graphics film (Cinema 4D Cloner Look). Visual style: studio grey gradient, soft shadows, white clay plus one bold accent. Motion: hundreds of clones driven by one field at a time: wave, ripple, twist, random, fall. Signature moves: cloner arrays, effector waves, camera orbit; transitions: effector hand-off, scatter and re-form. In the tradition of ManvsMachine · Beeple, Everydays (2007 —). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "MOGRAPH". Punchy sound design synced to every cut.
 ```
 
-## 43 · Low Poly
+## 46 · Low Poly
 *Faceted Geometry · 1990s — · 3D & CGI Motion*
 
 Reference film: `videos/lowpoly.mp4`
@@ -1684,7 +1801,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Low Poly motion-graphics film (Faceted Geometry). Visual style: flat-shaded triangles, warm key light against cool shadow sides, pastel sunset haze and a faceted sun. Motion: a smooth drone flyover that cranes up to reveal the range, then the world shatters into a triangle mosaic and an icon assembles facet by facet. Signature moves: seeded fbm terrain on a jittered grid, per-face lambert shading + atmospheric fog, painter’s depth sort of ~9k triangles; transitions: triangle mosaic wipe, facet-by-facet assembly, crane reveal, sun flare. In the tradition of Virtua Fighter (Sega, 1993) · Monument Valley (ustwo, 2014) · Alto’s Adventure (2015) · Firewatch key art (Olly Moss, 2016). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "LOW POLY". Punchy sound design synced to every cut.
 ```
 
-## 44 · Voxel Motion
+## 47 · Voxel Motion
 *Volumetric Pixels · 2009 — · 3D & CGI Motion*
 
 Reference film: `videos/voxel.mp4`
@@ -1723,7 +1840,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Voxel Motion motion-graphics film (Volumetric Pixels). Visual style: unit cubes with crisp edges, soft AO in creases, toy-like saturated palette, floating island diorama. Motion: block-by-block construction layer after layer, a tiny character hop-walk, then a blast that freezes in bullet-time and rewinds into place. Signature moves: orthographic camera orbit + painter’s sort, face culling on an occupancy grid, edge-based ambient occlusion per face; transitions: layer build-up, block pop-in, explosion scatter, undo rewind. In the tradition of Comanche (NovaLogic, 1992) · Minecraft (Mojang, 2009) · MagicaVoxel (ephtracy, 2013) · Crossy Road (Hipster Whale, 2014) · Teardown (Tuxedo Labs, 2022). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "VOXEL MOTION". Punchy sound design synced to every cut.
 ```
 
-## 45 · Glassmorphism 3D
+## 48 · Glassmorphism 3D
 *Frosted Depth · 2020 — · 3D & CGI Motion*
 
 Reference film: `videos/glass3d.mp4`
@@ -1762,7 +1879,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Glassmorphism 3D motion-graphics film (Frosted Depth). Visual style: translucent frosted glass with bright rims over vivid blurred gradient blobs, deep soft shadows and gentle grain. Motion: weightless shapes drift in parallax on soft springs, converge in a swirl and part to reveal a UI card that assembles element by element. Signature moves: background snapshot blurred by downsampling, clipped refraction: magnified + offset copy, specular rim, chromatic edge, offscreen soft shadows; transitions: parallax drift, spring pop, converge-and-reveal, light sweep. In the tradition of Windows Vista Aero Glass (2007) · iOS 7 Control Center (2013) · macOS Big Sur (2020) · Windows 11 Mica / Acrylic (2021) · Apple Liquid Glass (2025). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "GLASSMORPHISM 3D". Punchy sound design synced to every cut.
 ```
 
-## 46 · Soft Body Motion
+## 49 · Soft Body Motion
 *Jelly Physics · 2010s — · 3D & CGI Motion*
 
 Reference film: `videos/softbody.mp4`
@@ -1801,7 +1918,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Soft Body Motion motion-graphics film (Jelly Physics). Visual style: glossy translucent candy colours, rounded bevels, soft studio key with coloured contact shadows on a seamless pastel set. Motion: objects drop and hop on the beat, squash on contact, overshoot into stretch and wobble out on low-damped springs, so every landing reads as a satisfying rhythmic hit. Signature moves: analytic damped-spring squash, stretch and shear, volume-preserving vertex deformation of rounded-box meshes, wrap lighting + fresnel + transmitted colour shadows; transitions: drop-in, squash-and-stretch hits, sympathetic jiggle, letters landing as jelly. In the tradition of Andreas Wannerstedt — Oddly Satisfying loops (2017–) · SideFX Houdini Vellum launch demos (2018) · Tendril / ManvsMachine C4D soft-body reels · Cinema 4D R21 Soft Body showcases. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SOFT BODY MOTION". Punchy sound design synced to every cut.
 ```
 
-## 47 · Wireframe 3D
+## 50 · Wireframe 3D
 *Vector CRT · 1979 — · 3D & CGI Motion*
 
 Reference film: `videos/wireframe.mp4`
@@ -1840,7 +1957,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Wireframe 3D motion-graphics film (Vector CRT). Visual style: pure glowing lines on black, green phosphor with white-hot cores and bright vertex dots, amber scan accents, CRT scanlines and bloom. Motion: a low flight over a vector landscape, polyhedra drawing themselves edge by edge, a geodesic scanned by a moving plane, then every edge flies into a logo. Signature moves: hidden-line terrain: rows filled black back-to-front, face-visibility edge culling + depth-dimmed back edges, phosphor bloom from downsampled blurred passes; transitions: cRT power-on, edge-by-edge draw-on, scan sweep, edge morph into logo, glint sweep. In the tradition of Battlezone (Atari, 1980) · Tempest (Atari, 1981) · Tron (Disney, 1982) · Star Wars arcade (Atari, 1983) · Elite (Acornsoft, 1984) · Blade Runner 2049 UI wireframes (Territory Studio, 2017). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "WIREFRAME 3D". Punchy sound design synced to every cut.
 ```
 
-## 48 · Exploded-view Animation
+## 51 · Exploded-view Animation
 *Product Visualisation · 1500s / 1990s — · 3D & CGI Motion*
 
 Reference film: `videos/exploded.mp4`
@@ -1879,7 +1996,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Exploded-view Animation motion-graphics film (Product Visualisation). Visual style: seamless light studio, black anodised metal against chrome and copper, coated glass reflections, hairline leader lines and small engineering type. Motion: a product holds, then its parts separate along the optical axis in a precise staggered cascade, labels draw on with leader lines, the assembly orbits, and everything snaps home with one satisfying click. Signature moves: surfaces of revolution from closed (r, z) profiles, global painter’s sort of ~4k shaded quads, studio environment-map shading: chrome, anodised, copper, coated glass; transitions: axial explode, leader-line draw-on, orbit, staggered re-assembly snap, light flash on the click. In the tradition of Leonardo da Vinci, Codex Atlanticus (c. 1478–1519) · Apple “Designed by Apple in California” product films (2013) · Apple Watch launch film (2014) · Leica SL / Sony G Master lens cutaway animations · Teenage Engineering OP-1 exploded renders. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "EXPLODED-VIEW ANIMATION". Punchy sound design synced to every cut.
 ```
 
-## 49 · Claymorphism
+## 52 · Claymorphism
 *Inflated Soft UI · 2021 — · 3D & CGI Motion*
 
 Reference film: `videos/claymorphism.mp4`
@@ -1918,7 +2035,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Claymorphism motion-graphics film (Inflated Soft UI). Visual style: puffy pastel shapes with rounded corners, a bright inner highlight top-left and a tinted inner shadow bottom-right, floating above a pale gradient on large soft coloured drop shadows. Motion: everything is soft and springy: objects drop, squash on contact and overshoot on low-damped springs; buttons physically compress when pressed and icons drift and bob as if filled with air. Signature moves: outer drop shadow + two inset shadows, inflated rounded geometry, pastel matte palette, spring squash & stretch; transitions: drop and bounce, blob-to-card inflate, spring pop-in, press squash, burst into pebbles. In the tradition of Michał Malewicz / Hype4 — "Claymorphism in user interfaces" (2021) · Blender 3D icon & illustration packs on Dribbble and Figma Community (2021—) · Microsoft Fluent 3D emoji (2021) · clay.css (Adrian Bece, 2022) · countless 3D onboarding illustrations in fintech and wellness apps. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CLAYMORPHISM". Punchy sound design synced to every cut.
 ```
 
-## 50 · Cel-shaded 3D
+## 53 · Cel-shaded 3D
 *Toon Shading · 2000 — · 3D & CGI Motion*
 
 Reference film: `videos/celshaded.mp4`
@@ -1957,7 +2074,124 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Cel-shaded 3D motion-graphics film (Toon Shading). Visual style: saturated flat colour in two or three hard tones per surface, cool violet shadows and warm highlights, constant-width ink silhouettes, a banded sea with white foam strokes, and puffy outlined clouds with a curl. Motion: real 3D camera moves — orbits, a wide reveal, a hard anime cut to a low skimming run — but everything reads as drawn: shading jumps between bands instead of gliding, and speed lines, spray dots and swirl clouds are graphic shapes. Signature moves: banded lambert ramp (3 tones), inverted-hull outlines, flat anime palette with tinted shadows, painter-sorted mesh projection; transitions: lambert-to-toon wipe, orbit, hard cut, speed-line burst, spring-pop title. In the tradition of Jet Set Radio (Smilebit / Sega, 2000) · The Legend of Zelda: The Wind Waker (Nintendo, 2002) · Ōkami (Clover Studio, 2006) · Borderlands (Gearbox, 2009) · Guilty Gear Xrd (Arc System Works, 2014) · Spider-Man: Into the Spider-Verse (Sony Pictures Animation, 2018) · Arcane (Fortiche, 2021). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CEL-SHADED 3D". Punchy sound design synced to every cut.
 ```
 
-## 51 · Generative Particles
+## 54 · Product Visualization
+*Hero Renders on a Seamless Sweep · 2000s — · 3D & CGI Motion*
+
+Reference film: `videos/productviz.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Product Visualization** (Hero Renders on a Seamless Sweep, 2000s —; family: 3D & CGI Motion).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: The CG product film: a manufacturer’s CAD model is lit like a studio photograph — softboxes, strip lights and a seamless sweep — and turned slowly in front of the camera, so every edge reads as a line of light. It grew out of industrial-design rendering (Alias, later KeyShot and Octane) and was set as a genre by Apple’s product films from the 2000s on, then by the launch reels every phone, watch, headphone and sneaker brand now commissions.
+- Study these reference works: Mac Pro reveal film (Apple, WWDC 2013) · Introducing Apple Watch (Apple, 2014) · Introducing iPhone X (Apple, 2017) · KeyShot renderer (Luxion, 2010)
+- Motion DNA: Slow, weightless turntable rotation with long eases, light sweeping across edges rather than the object moving fast; a precise exploded-view separation that decelerates into place, holds for callouts, and snaps back together with a tiny settle.
+- Visual DNA: A single hero object floating over a black-to-charcoal seamless sweep with a soft mirror floor; rim strips draw the silhouette in thin lines of light, big softboxes slide across glass as clean gradients, anodised colour, minimal thin sans type and hairline callouts.
+- Signature transitions: Light-sweep reveal, turntable orbit, explode and collapse, screen wake, push to hero 3/4
+- Key techniques: Area-light reflections on metal, Planar softbox mirrors in glass, Turntable orbit + exploded layers
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Area-light reflections on metal, Planar softbox mirrors in glass, Turntable orbit + exploded layers).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Area-light reflections on metal and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "PRODUCT VISUALIZATION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: KeyShot / Octane / Redshift turntables, Cinema 4D or Blender with HDRI softbox rigs, CAD data (STEP) retopologised for render, Canvas 2D: CPU projection, area-light hit tests per band quad, mirrored softbox quads on caps, mirrored-camera floor pass. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Product Visualization motion-graphics film (Hero Renders on a Seamless Sweep). Visual style: a single hero object floating over a black-to-charcoal seamless sweep with a soft mirror floor; rim strips draw the silhouette in thin lines of light, big softboxes slide across glass as clean gradients, anodised colour, minimal thin sans type and hairline callouts. Motion: slow, weightless turntable rotation with long eases, light sweeping across edges rather than the object moving fast; a precise exploded-view separation that decelerates into place, holds for callouts, and snaps back together with a tiny settle. Signature moves: area-light reflections on metal, planar softbox mirrors in glass, turntable orbit + exploded layers; transitions: light-sweep reveal, turntable orbit, explode and collapse, screen wake, push to hero 3/4. In the tradition of Mac Pro reveal film (Apple, WWDC 2013) · Introducing Apple Watch (Apple, 2014) · Introducing iPhone X (Apple, 2017) · KeyShot renderer (Luxion, 2010). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "PRODUCT VISUALIZATION". Punchy sound design synced to every cut.
+```
+
+## 55 · Architectural Motion
+*Plan, Massing and Flythrough · 1990s — · 3D & CGI Motion*
+
+Reference film: `videos/architectural.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Architectural Motion** (Plan, Massing and Flythrough, 1990s —; family: 3D & CGI Motion).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Archviz animation turns an unbuilt design into a camera journey: drawings become volumes, volumes take on materials and daylight, and a dolly or drone path walks the client through spaces that do not exist yet. It grew from 1990s 3ds Max and V-Ray walkthroughs for competitions and real-estate marketing; Alex Roman’s The Third & The Seventh (2009) showed it could be cinema, and real-time engines (Lumion, Twinmotion, Unreal) later made sun studies and flythroughs part of everyday design review.
+- Study these reference works: The Third & The Seventh (Alex Roman, 2009) · Lumion (Act-3D, 2010) · Twinmotion (Abvent, later Epic Games) · Unreal Engine archviz walkthroughs
+- Motion DNA: Slow, steady, physically plausible camera: a top-down plan that tilts into perspective, a measured orbit while the sun arcs overhead, then a gimbal-smooth drop to eye level and a lateral dolly — no shake, no snap, every move eased like a crane or drone.
+- Visual DNA: Blueprint blue with white hairlines, dash-dot grids and poché walls; a white clay massing model with soft contact shadows; then honest materials — travertine, board-formed concrete, timber and glass — under a sky that moves from crisp noon to warm dusk with glowing interiors mirrored in a pool.
+- Signature transitions: Line draw-on, plan-to-perspective tilt, extrusion, wireframe-to-solid crossfade, material wipe, sun sweep, eye-level dolly
+- Key techniques: Blueprint plan extruded to massing, Exact cast shadows on box faces, Sun study sweep + dusk glow
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Blueprint plan extruded to massing, Exact cast shadows on box faces, Sun study sweep + dusk glow).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Blueprint plan extruded to massing and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "ARCHITECTURAL MOTION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: 3ds Max + V-Ray / Corona, Lumion, Twinmotion, Unreal Engine, Revit / Rhino / SketchUp source models, Canvas 2D: AABB painter sort, cast-shadow hulls per face plane, mirrored-camera pool reflection. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Architectural Motion motion-graphics film (Plan, Massing and Flythrough). Visual style: blueprint blue with white hairlines, dash-dot grids and poché walls; a white clay massing model with soft contact shadows; then honest materials — travertine, board-formed concrete, timber and glass — under a sky that moves from crisp noon to warm dusk with glowing interiors mirrored in a pool. Motion: slow, steady, physically plausible camera: a top-down plan that tilts into perspective, a measured orbit while the sun arcs overhead, then a gimbal-smooth drop to eye level and a lateral dolly — no shake, no snap, every move eased like a crane or drone. Signature moves: blueprint plan extruded to massing, exact cast shadows on box faces, sun study sweep + dusk glow; transitions: line draw-on, plan-to-perspective tilt, extrusion, wireframe-to-solid crossfade, material wipe, sun sweep, eye-level dolly. In the tradition of The Third & The Seventh (Alex Roman, 2009) · Lumion (Act-3D, 2010) · Twinmotion (Abvent, later Epic Games) · Unreal Engine archviz walkthroughs. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "ARCHITECTURAL MOTION". Punchy sound design synced to every cut.
+```
+
+## 56 · 3D Character Animation
+*Squash, Stretch and Performance · 1986 — · 3D & CGI Motion*
+
+Reference film: `videos/character3d.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **3D Character Animation** (Squash, Stretch and Performance, 1986 —; family: 3D & CGI Motion).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Keyframed CG characters that act: the hand-drawn principles of the Disney animators — squash and stretch, anticipation, arcs, follow-through, appeal — applied to 3D models, which John Lasseter set out in his 1987 SIGGRAPH paper after Pixar’s Luxo Jr. (1986) proved two desk lamps could carry a story. Pixar’s Toy Story (1995) made it a feature-film medium, and the soft-lit, rounded, expressive house style it set is now the default language of studio animation, game cinematics and mascot spots.
+- Study these reference works: Luxo Jr. (John Lasseter, Pixar, 1986) · Toy Story (John Lasseter, Pixar, 1995) · Geri’s Game (Jan Pinkava, Pixar, 1997) · For the Birds (Ralph Eggleston, Pixar, 2000) · WALL·E (Andrew Stanton, Pixar, 2008) · The Illusion of Life (Frank Thomas & Ollie Johnston, 1981)
+- Motion DNA: Acting in poses and timing: every action is announced by an anticipation in the opposite direction, travels on a clean parabolic arc with stretch along the velocity, lands in a squash that springs back through overshoot, while appendages lag and whip through after the body stops; eyes and brows lead the thought a few frames before the body moves.
+- Visual DNA: A simple, rounded, saturated character with huge eyes and readable brows on a warm seamless cyc; soft key light with wrapped, subsurface-warm terminators, a cool fill, a bright rim, gentle contact shadows and ambient occlusion, glossy catchlights in the eyes.
+- Signature transitions: Held shot with a slow push-in; staging and acting carry the cut points; breakdown captions name each principle
+- Key techniques: Volume-kept squash and stretch, Lagged antenna follow-through, Ray-traced soft shadows + AO
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Volume-kept squash and stretch, Lagged antenna follow-through, Ray-traced soft shadows + AO).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Volume-kept squash and stretch and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "3D CHARACTER ANIMATION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Maya / Presto rigs, keyframed in the graph editor, RenderMan / Arnold / Cycles with area lights + AO, Blender Grease-Pencil blocking, then splined, Canvas 2D: per-pixel ray tracer over ellipsoids (960×540, upscaled), analytic soft shadows and AO. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second 3D Character Animation motion-graphics film (Squash, Stretch and Performance). Visual style: a simple, rounded, saturated character with huge eyes and readable brows on a warm seamless cyc; soft key light with wrapped, subsurface-warm terminators, a cool fill, a bright rim, gentle contact shadows and ambient occlusion, glossy catchlights in the eyes. Motion: acting in poses and timing: every action is announced by an anticipation in the opposite direction, travels on a clean parabolic arc with stretch along the velocity, lands in a squash that springs back through overshoot, while appendages lag and whip through after the body stops; eyes and brows lead the thought a few frames before the body moves. Signature moves: volume-kept squash and stretch, lagged antenna follow-through, ray-traced soft shadows + ao; transitions: held shot with a slow push-in; staging and acting carry the cut points; breakdown captions name each principle. In the tradition of Luxo Jr. (John Lasseter, Pixar, 1986) · Toy Story (John Lasseter, Pixar, 1995) · Geri’s Game (Jan Pinkava, Pixar, 1997) · For the Birds (Ralph Eggleston, Pixar, 2000) · WALL·E (Andrew Stanton, Pixar, 2008) · The Illusion of Life (Frank Thomas & Ollie Johnston, 1981). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "3D CHARACTER ANIMATION". Punchy sound design synced to every cut.
+```
+
+## 57 · Generative Particles
 *Flow Fields · 2001 — · Experimental & Generative*
 
 Reference film: `videos/particles.mp4`
@@ -1996,7 +2230,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Generative Particles motion-graphics film (Flow Fields). Visual style: dark ground, luminous additive strands, cool palette. Motion: thousands of particles advected through a noise field; attraction pulls them into form, release scatters them. Signature moves: noise flow field, additive trails, form & dissolve; transitions: converge into type, shockwave release. In the tradition of Processing (2001) · Refik Anadol, data sculptures. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "GENERATIVE PARTICLES". Punchy sound design synced to every cut.
 ```
 
-## 52 · Reaction–Diffusion
+## 58 · Reaction–Diffusion
 *Gray-Scott Patterns · 1952 — · Experimental & Generative*
 
 Reference film: `videos/reactiondiffusion.mp4`
@@ -2035,7 +2269,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Reaction–Diffusion motion-graphics film (Gray-Scott Patterns). Visual style: organic coral, mitosis spots and labyrinths with crisp iso-contours, rendered as an embossed, specular height field in coral, teal and ivory on near-black. Motion: nothing is animated directly: two chemicals react and diffuse each step, so fronts grow, branch, split and settle as the feed and kill rates drift through regimes. Signature moves: gray-scott pde on a grid, feed/kill parameter fields, height-field lighting; transitions: regime fronts sweeping across the field, pattern dissolve into a mask, mitosis splits, labyrinth infill. In the tradition of A. M. Turing, The Chemical Basis of Morphogenesis (1952) · J. E. Pearson, Complex Patterns in a Simple System (Science, 1993) · Karl Sims, Reaction-Diffusion Tutorial & exhibits · Nervous System, Reaction lamps and jewellery · Greg Turk, Generating Textures on Arbitrary Surfaces Using Reaction-Diffusion (SIGGRAPH 1991). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "REACTION–DIFFUSION". Punchy sound design synced to every cut.
 ```
 
-## 53 · Strange Attractors
+## 59 · Strange Attractors
 *Lorenz · Clifford · De Jong · 1963 — · Experimental & Generative*
 
 Reference film: `videos/attractor.mp4`
@@ -2074,7 +2308,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Strange Attractors motion-graphics film (Lorenz · Clifford · De Jong). Visual style: filaments of light on black built from log-tone-mapped point density, chromatic wings in magenta and cyan, fine mono equations and live parameter readouts. Motion: a single orbit never repeats: one bright point traces the flow, the camera orbits as millions of samples accumulate, and the parameters drift so the whole cloud morphs between attractors. Signature moves: rk4 ode integration, million-point density buffers, index-matched attractor morphs; transitions: lone-trail reveal, 3D-to-2D particle morph, parameter sweep, attractor crossfade, hero settle. In the tradition of E. N. Lorenz, Deterministic Nonperiodic Flow (1963) · Clifford A. Pickover, Chaos in Wonderland (1994) · A. K. Dewdney, Computer Recreations, Scientific American (1987) · Paul Bourke, Strange Attractors gallery · Jos Leys, Étienne Ghys & Aurélien Alvarez, Chaos: A Mathematical Adventure (2013). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "STRANGE ATTRACTORS". Punchy sound design synced to every cut.
 ```
 
-## 54 · Cellular Automata
+## 60 · Cellular Automata
 *Conway's Game of Life · 1970 — · Experimental & Generative*
 
 Reference film: `videos/lifegame.mp4`
@@ -2113,7 +2347,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Cellular Automata motion-graphics film (Conway's Game of Life). Visual style: a dark lab grid of square cells glowing like phosphor, hot amber newborns cooling to mint, with mono annotations naming each pattern. Motion: time is quantised into generations: each tick every cell is born, survives or dies by counting neighbours, and cells ease in and out between ticks while the camera pulls back to show the machines at scale. Signature moves: b3/s23 rule on a bit grid, soft birth/death interpolation, exponential zoom-out; transitions: generation tick, exponential zoom-out, chaos burst, settling sweep, block-letter crystallisation. In the tradition of Martin Gardner, Mathematical Games: The fantastic combinations of John Conway's new solitaire game "life" (Scientific American, Oct 1970) · Bill Gosper, Gosper glider gun (1970) · Golly (open-source Life simulator) · Stephen Wolfram, A New Kind of Science (2002) · Paul Rendell, Turing machine in Life (2000). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CELLULAR AUTOMATA". Punchy sound design synced to every cut.
 ```
 
-## 55 · Fractal Motion
+## 61 · Fractal Motion
 *Infinite Zoom · 1980 — · Experimental & Generative*
 
 Reference film: `videos/fractal.mp4`
@@ -2152,7 +2386,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Fractal Motion motion-graphics film (Infinite Zoom). Visual style: self-similar spirals and seahorse filaments in blue, white and molten gold, embossed by a raking light, with crisp black interior lakes. Motion: an exponential dolly: the camera divides its width by a constant factor every frame toward a fixed boundary point, so detail streams out of the centre forever while the palette flows through the bands. Signature moves: escape-time iteration in float64, smooth iteration count + palette cycling, distance-estimate relief lighting; transitions: iteration-count reveal, infinite zoom, Mandelbrot-to-Julia parameter morph, exponential pull-back. In the tradition of Benoit Mandelbrot, The Fractal Geometry of Nature (1982) · Peitgen & Richter, The Beauty of Fractals (1986) · Loren Carpenter, Vol Libre (1980) · Arthur C. Clarke, Fractals: The Colors of Infinity (1995) · Ultra Fractal (Frederik Slijkerman, 1999 —). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FRACTAL MOTION". Punchy sound design synced to every cut.
 ```
 
-## 56 · L-systems
+## 62 · L-systems
 *Algorithmic Botany · 1968 — · Experimental & Generative*
 
 Reference film: `videos/lsystem.mp4`
@@ -2191,7 +2425,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second L-systems motion-graphics film (Algorithmic Botany). Visual style: a botanical plate on warm laid paper: sepia ink branches with pipe-model taper, watercolour leaves and blossoms, a gilt dragon curve, and red-rubric figure captions with the rewriting rules set in mono. Motion: growth happens in generations: every bud rewrites at once, so new branches sprout simultaneously across the whole plant while older limbs thicken, sway and burst into leaf and blossom. Signature moves: parallel string rewriting (ol-systems), turtle interpretation with a branch stack, generation-tagged growth + wind sway; transitions: generation steps, camera pans across the plate, blossom pops, paper-fold unfolding, pull-back to a full garden. In the tradition of A. Lindenmayer, Mathematical Models for Cellular Interaction in Development (J. Theor. Biology, 1968) · P. Prusinkiewicz & A. Lindenmayer, The Algorithmic Beauty of Plants (1990) · Alvy Ray Smith, Plants, Fractals and Formal Languages (SIGGRAPH 1984) · SpeedTree (IDV) · Houdini L-system SOP. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "L-SYSTEMS". Punchy sound design synced to every cut.
 ```
 
-## 57 · Boids
+## 63 · Boids
 *Flocking Simulation · 1987 — · Experimental & Generative*
 
 Reference film: `videos/boids.mp4`
@@ -2230,7 +2464,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Boids motion-graphics film (Flocking Simulation). Visual style: ink-black starling silhouettes with flickering wings against a dusk gradient of indigo, rose and amber over still water and reeds, with faint motion trails. Motion: no bird is animated: thousands of agents each steer from their neighbours at a fixed time step, so density waves ripple, the mass tears open around a predator, mills into a vortex and condenses into form. Signature moves: separation · alignment · cohesion steering, spatial-hash neighbour search, fixed-step deterministic cache; transitions: pull-back from a single agent, flash expansion around a predator, vortex mill, condensation into a word, release. In the tradition of Craig Reynolds, Stanley and Stella in "Breaking the Ice" (1987) · Batman Returns, bat swarms and penguin army (1992) · The Lion King, wildebeest stampede (1994) · Robert Hodgin, Flocking studies (2007 —) · Cabbibo / three.js GPGPU birds. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "BOIDS". Punchy sound design synced to every cut.
 ```
 
-## 58 · Audio Reactive
+## 64 · Audio Reactive
 *Music Drives the Picture · 1998 — · Experimental & Generative*
 
 Reference film: `videos/audioreactive.mp4`
@@ -2269,7 +2503,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Audio Reactive motion-graphics film (Music Drives the Picture). Visual style: ikeda monochrome — hairlines, barcodes and data readouts on black — exploding at the drop into MilkDrop’s saturated plasma, mirrored spectra and feedback tunnels. Motion: nothing moves on its own: every pulse, zoom, flash and burst is an envelope of a kick, snare, hat or note, so motion lands exactly on the beat. Signature moves: event list shared by score & picture, fft-style radial spectrum & peak caps, feedback tunnel, kick zoom, snare bursts; transitions: barcode strobe, inversion flash, build zoom, blackout breath, drop explosion, collapse to data. In the tradition of Ryan Geiss — MilkDrop (2001) · Nullsoft Winamp AVS (1999) · Ryoji Ikeda — test pattern (2008) & datamatics (2006) · Robert Hodgin — Magnetosphere / iTunes visualiser (2008) · Carsten Nicolai (alva noto) — unitxt (2008). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "AUDIO REACTIVE". Punchy sound design synced to every cut.
 ```
 
-## 59 · Slit-scan
+## 65 · Slit-scan
 *Time Smeared into Space · 1968 — · Experimental & Generative*
 
 Reference film: `videos/slitscan.mp4`
@@ -2308,7 +2542,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Slit-scan motion-graphics film (Time Smeared into Space). Visual style: saturated backlit colour streaks on black, compressed to a thin dark horizon and smeared toward the frame edges, with chromatic washes swapping from amber and magenta to cyan, violet, red and green. Motion: relentless forward rush: streaks of light pour out of a dark horizon toward the camera on two planes, colour shifts in sudden waves, the planes rotate and fold into a spinning tunnel; then time itself is sliced column by column. Signature moves: moving slit + long exposure, per-pixel depth mapping (z = f / d), corridor-to-tunnel morph, column time-slice; transitions: slit opening, plane rotation, corridor-to-tunnel fold, white-out flash, slit wipe (time-slice exposure). In the tradition of 2001: A Space Odyssey — Stargate sequence (Douglas Trumbull, 1968) · Doctor Who title sequence (Bernard Lodge, 1973) · Star Trek: The Next Generation warp effect (1987) · Golan Levin, An Informal Catalogue of Slit-Scan Video Artworks (2005—) · Adam Magyar, Urban Flow (slit-scan photography, 2000s). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SLIT-SCAN". Punchy sound design synced to every cut.
 ```
 
-## 60 · Raymarching
+## 66 · Raymarching
 *Signed Distance Fields · 1989 — / 2008 — · Experimental & Generative*
 
 Reference film: `videos/raymarch.mp4`
@@ -2347,7 +2581,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Raymarching motion-graphics film (Signed Distance Fields). Visual style: perfectly smooth glossy primitives fused by soft fillets, a checkerboard floor with soft penumbrae and ambient occlusion, fog fading copies into a gradient sky — the canonical Shadertoy look, introduced through step-count and normal debug views. Motion: shapes are equations, so they melt into each other instead of colliding: blobs bud off and re-merge, a torus grows through them, space itself is repeated and twisted while the camera glides like a demo fly-through. Signature moves: sphere tracing a signed distance field, polynomial smooth-min blending, soft shadows (k·h/t) + 4-tap ao, domain repetition & twist; transitions: debug-view wipes (iterations → normals → lit), smooth-min budding, repetition reveal, twist, gather-back. In the tradition of Iñigo Quilez / RGBA — Elevated (4k intro, Breakpoint 2009) · Iñigo Quilez, "Rendering Worlds with Two Triangles" (2008) · Shadertoy (2013 —) · Mercury — hg_sdf library & demos (2010s) · Media Molecule, Dreams (SDF sculpting, 2020). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "RAYMARCHING". Punchy sound design synced to every cut.
 ```
 
-## 61 · Feedback Loops
+## 67 · Feedback Loops
 *Video Feedback / Howlaround · 1963 — · Experimental & Generative*
 
 Reference film: `videos/feedback.mp4`
@@ -2386,7 +2620,85 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Feedback Loops motion-graphics film (Video Feedback / Howlaround). Visual style: a dark field with glowing structures: nested screens receding into a spiral tunnel, blooming petals of trailed light, colour cycling through the passes, CRT scanlines and soft bloom. Motion: nothing is animated directly: one small moving thing is re-photographed again and again, so its past spirals inward or blooms outward. Changing the zoom, tilt or delay changes the whole organism at once; the motion is slow, breathing, self-similar. Signature moves: recursive zoom / rotate per pass, one-pass time delay per copy, additive decay + hue shift per pass, monitor-in-monitor tunnel; transitions: infinite zoom through nested screens, crossfade between regimes, rotation reversal (fold), echo tunnel title. In the tradition of Doctor Who title sequence (Bernard Lodge, BBC, 1963) · Nam June Paik & Shuya Abe, Paik–Abe Video Synthesizer (1969–70) · Steina & Woody Vasulka, video feedback works (1970s) · Queen, "Bohemian Rhapsody" video (Bruce Gowers, 1975) · MilkDrop (Ryan Geiss, 2001) · TouchDesigner feedback TOPs (Derivative, 2000s —). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FEEDBACK LOOPS". Punchy sound design synced to every cut.
 ```
 
-## 62 · Clay Stop Motion
+## 68 · Noise Motion
+*Perlin & curl-noise flow fields · 1985 — · Experimental & Generative*
+
+Reference film: `videos/noisemotion.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Noise Motion** (Perlin & curl-noise flow fields, 1985 —; family: Experimental & Generative).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Ken Perlin invented gradient noise for Tron and published it as "An Image Synthesizer" at SIGGRAPH 1985: a smooth, band-limited random function that became the default source of organic motion in computer graphics, earning him a Technical Achievement Academy Award in 1997. Generative artists turned it into motion by steering particles with it — angle-from-noise flow fields, and from 2007 Bridson's divergence-free curl noise — and Tyler Hobbs' Fidenza (2021) made packed, non-colliding flow-field curves a signature of long-form generative art.
+- Study these reference works: Ken Perlin — "An Image Synthesizer", SIGGRAPH 1985 · Robert Bridson, Jim Hourihan & Marcus Nordenstam — "Curl-Noise for Procedural Fluid Flow", SIGGRAPH 2007 · Robert Hodgin — Magnetosphere (iTunes visualizer, 2008) · Tyler Hobbs — Fidenza (Art Blocks, 2021)
+- Motion DNA: Everything moves because a smooth random field says so: ticks swing into alignment, particles are born, stream along the field and die, the whole flow slowly morphs as the noise is sampled through time, then freezes while wide ribbons grow along it from their seed points.
+- Visual DNA: A warm cream print with pen-plotter ink hairlines and topographic contours, then flat Fidenza-like ribbons of varied width in vermilion, ochre, ultramarine, blush and sage that never touch, finished with a mat margin and a gallery label.
+- Signature transitions: Contour map to tick field, ticks release into particles, flow freezes, ribbons grow, pull back to the framed print
+- Key techniques: Perlin gradient noise, Curl-noise advection, Collision-packed ribbons
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Perlin gradient noise, Curl-noise advection, Collision-packed ribbons).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Perlin gradient noise and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "NOISE MOTION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Processing / p5.js, openFrameworks / Cinder, TouchDesigner / Houdini, Canvas 2D. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Noise Motion motion-graphics film (Perlin & curl-noise flow fields). Visual style: a warm cream print with pen-plotter ink hairlines and topographic contours, then flat Fidenza-like ribbons of varied width in vermilion, ochre, ultramarine, blush and sage that never touch, finished with a mat margin and a gallery label. Motion: everything moves because a smooth random field says so: ticks swing into alignment, particles are born, stream along the field and die, the whole flow slowly morphs as the noise is sampled through time, then freezes while wide ribbons grow along it from their seed points. Signature moves: perlin gradient noise, curl-noise advection, collision-packed ribbons; transitions: contour map to tick field, ticks release into particles, flow freezes, ribbons grow, pull back to the framed print. In the tradition of Ken Perlin — "An Image Synthesizer", SIGGRAPH 1985 · Robert Bridson, Jim Hourihan & Marcus Nordenstam — "Curl-Noise for Procedural Fluid Flow", SIGGRAPH 2007 · Robert Hodgin — Magnetosphere (iTunes visualizer, 2008) · Tyler Hobbs — Fidenza (Art Blocks, 2021). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "NOISE MOTION". Punchy sound design synced to every cut.
+```
+
+## 69 · Shader Art
+*Fragment shaders & live coding · 2000s — · Experimental & Generative*
+
+Reference film: `videos/shaderart.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Shader Art** (Fragment shaders & live coding, 2000s —; family: Experimental & Generative).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Shader art paints every pixel with one small GPU program — a fragment shader that maps a pixel coordinate and the time to a colour — so images are built from maths rather than geometry: signed distance fields, noise, domain warping and folded space. It grew from the demoscene's size-limited intros and was codified by Inigo Quilez, whose articles on SDFs, fbm warping and cosine palettes became the standard references, and whose Shadertoy (2013, with Pol Jeremias) made it a browser-based community; live "shader showdown" battles in Bonzomatic put the coding itself on screen.
+- Study these reference works: Inigo Quilez — articles on domain warping, 2D distance functions and cosine palettes (iquilezles.org) · Shadertoy (Inigo Quilez & Pol Jeremias, 2013) · Bonzomatic live-coding tool (Gargaj / Conspiracy) used for Revision's Shader Showdown · The Book of Shaders (Patricio Gonzalez Vivo & Jen Lowe)
+- Motion DNA: The image is a pure function of time, so motion is continuous and endless: gradients cycle, blobs melt into each other through smooth-min, warped noise churns like smoke, the kaleidoscope rotates and its palette scrolls outward; each recompile wipes a new program down the screen on the beat.
+- Visual DNA: Full-bleed per-pixel colour fields — the default cosine rainbow, orange-and-blue distance-field stripes with a white zero line, teal-and-sand marbled fbm, an eight-fold mirrored mandala in a cosine palette — under monospace GLSL with dark backing boxes and a status bar.
+- Signature transitions: Typed code, compile, top-to-bottom scan wipe to the new program; code clears for the title
+- Key techniques: Per-pixel shading, SDF smooth-min metaballs, fbm domain warping
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Per-pixel shading, SDF smooth-min metaballs, fbm domain warping).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Per-pixel shading and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "SHADER ART", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: GLSL fragment shaders (Shadertoy, Bonzomatic, KodeLife), TouchDesigner GLSL TOP, Canvas 2D ImageData emulation. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- Loopable: make the last frame cut cleanly back to the first.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Shader Art motion-graphics film (Fragment shaders & live coding). Visual style: full-bleed per-pixel colour fields — the default cosine rainbow, orange-and-blue distance-field stripes with a white zero line, teal-and-sand marbled fbm, an eight-fold mirrored mandala in a cosine palette — under monospace GLSL with dark backing boxes and a status bar. Motion: the image is a pure function of time, so motion is continuous and endless: gradients cycle, blobs melt into each other through smooth-min, warped noise churns like smoke, the kaleidoscope rotates and its palette scrolls outward; each recompile wipes a new program down the screen on the beat. Signature moves: per-pixel shading, sdf smooth-min metaballs, fbm domain warping; transitions: typed code, compile, top-to-bottom scan wipe to the new program; code clears for the title. In the tradition of Inigo Quilez — articles on domain warping, 2D distance functions and cosine palettes (iquilezles.org) · Shadertoy (Inigo Quilez & Pol Jeremias, 2013) · Bonzomatic live-coding tool (Gargaj / Conspiracy) used for Revision's Shader Showdown · The Book of Shaders (Patricio Gonzalez Vivo & Jen Lowe). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SHADER ART". Punchy sound design synced to every cut.
+```
+
+## 70 · Clay Stop Motion
 *Claymation · 1955 — · Analog, Physical & Stop Motion*
 
 Reference film: `videos/claymation.mp4`
@@ -2425,7 +2737,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Clay Stop Motion motion-graphics film (Claymation). Visual style: soft, matte plasticine with fingerprints and tool marks, lit like a miniature set whose exposure flickers slightly from frame to frame. Motion: stepped 12 fps poses with broad squash and stretch, plus a faint boil as the clay is touched between frames. Signature moves: shot on twos · 12 fps, thumbprints & shape boil, plasticine squash & stretch; transitions: morph, squash, clay smear, pop-in replacement. In the tradition of Gumby (Art Clokey, 1955) · Closed Mondays (Will Vinton & Bob Gardiner, 1974) · A Grand Day Out (Nick Park, 1989) · Creature Comforts (Aardman, 1989) · Chicken Run (2000). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CLAY STOP MOTION". Punchy sound design synced to every cut.
 ```
 
-## 63 · Sand Animation
+## 71 · Sand Animation
 *Sand on a Light Table · 1969 — · Analog, Physical & Stop Motion*
 
 Reference film: `videos/sand.mp4`
@@ -2464,7 +2776,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Sand Animation motion-graphics film (Sand on a Light Table). Visual style: grainy silhouettes on a warm glowing table, dark where sand is thick and luminous where fingers clear it. Motion: continuous metamorphosis: one picture is swept, smeared and redrawn into the next without a single cut. Signature moves: backlit density: thin sand glows, finger and palm sweeps, metamorphosis without cuts; transitions: palm sweep, finger wipe, smear morph, carve-out reveal. In the tradition of Sand, or Peter and the Wolf (Caroline Leaf, 1969) · The Owl Who Married a Goose (Caroline Leaf, 1974) · Sandman (Eliot Noyes Jr., 1973) · Ab Ovo (Ferenc Cakó, 1987). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SAND ANIMATION". Punchy sound design synced to every cut.
 ```
 
-## 64 · Xerox Motion
+## 72 · Xerox Motion
 *Photocopy Zine · 1976 — · Analog, Physical & Stop Motion*
 
 Reference film: `videos/xerox.mp4`
@@ -2503,7 +2815,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Xerox Motion motion-graphics film (Photocopy Zine). Visual style: black toner on coloured paper, misregistered spot colour, speckle, streaks and crooked paste-ups. Motion: choppy 8 fps cuts, copier light-bar sweeps and images that degrade a little more with every copy. Signature moves: 1-bit threshold + toner noise, copy-of-a-copy generation loss, ransom-note cut-and-paste type; transitions: light-bar scan, generation-loss cut, scan smear, negative flip. In the tradition of Sniffin' Glue (Mark Perry, 1976) · Sex Pistols graphics (Jamie Reid, 1977) · Search & Destroy (V. Vale, 1977) · Black Flag flyers (Raymond Pettibon, late 1970s). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "XEROX MOTION". Punchy sound design synced to every cut.
 ```
 
-## 65 · Paint-on-Glass
+## 73 · Paint-on-Glass
 *Living Oil Paint · 1970s — · Analog, Physical & Stop Motion*
 
 Reference film: `videos/paintglass.mp4`
@@ -2542,7 +2854,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Paint-on-Glass motion-graphics film (Living Oil Paint). Visual style: thick directional strokes of luminous colour that follow the form, lit from behind so the thin paint glows like stained glass. Motion: nothing cuts: every image is wiped, smeared and repainted into the next, and the brushwork boils from frame to frame. Signature moves: directional oil strokes, smear-morph transitions, backlit glass glow; transitions: swirl smear, palm wipe, repaint dissolve, stroke boil. In the tradition of The Street (Caroline Leaf, 1976) · The Cow (Aleksandr Petrov, 1989) · The Old Man and the Sea (Aleksandr Petrov, 1999) · My Love (Aleksandr Petrov, 2006) · Two Sisters (Caroline Leaf, 1990). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "PAINT-ON-GLASS". Punchy sound design synced to every cut.
 ```
 
-## 66 · Direct-on-Film
+## 74 · Direct-on-Film
 *Scratched & Painted Celluloid · 1930s — · Analog, Physical & Stop Motion*
 
 Reference film: `videos/directfilm.mp4`
@@ -2581,7 +2893,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Direct-on-Film motion-graphics film (Scratched & Painted Celluloid). Visual style: translucent dye and white needle lines on celluloid, with sprocket holes, dust, hair, gate weave and flicker showing the medium. Motion: visual music: every bass step, cymbal and snare lands on the frame as a new blob, a leaping scratch or a starburst, boiling at 24 fps. Signature moves: dye painted along the strip, needle scratches on black leader, projector weave & flicker; transitions: frame slip, colour/black flicker, burn-out, white flash. In the tradition of A Colour Box (Len Lye, 1935) · Free Radicals (Len Lye, 1958) · Begone Dull Care (Norman McLaren & Evelyn Lambart, 1949) · Blinkity Blank (Norman McLaren, 1955) · Mothlight (Stan Brakhage, 1963). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DIRECT-ON-FILM". Punchy sound design synced to every cut.
 ```
 
-## 67 · Cyanotype Motion
+## 75 · Cyanotype Motion
 *Prussian-Blue Sun Prints · 1842 — · Analog, Physical & Stop Motion*
 
 Reference film: `videos/cyanotype.mp4`
@@ -2620,7 +2932,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Cyanotype Motion motion-graphics film (Prussian-Blue Sun Prints). Visual style: white botanical silhouettes on deep Prussian blue, with brushed edges, uneven emulsion, paper fibre and faint ghosts of earlier positions. Motion: slow stop-motion: specimens are nudged between exposures, the blue builds with the light, and the wash reveals the picture in one sweep. Signature moves: brush-coated emulsion, contact exposure under glass, water-wash development; transitions: brush coat, stepped rearrangement, sun burst, water wash, dry-down. In the tradition of Photographs of British Algae: Cyanotype Impressions (Anna Atkins, 1843–53) · Cyanotypes of British and Foreign Ferns (Anna Atkins & Anne Dixon, 1853) · cyanotype photograms by Bertha Evelyn Jaques (c. 1906). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CYANOTYPE MOTION". Punchy sound design synced to every cut.
 ```
 
-## 68 · VHS Analog Video
+## 76 · VHS Analog Video
 *Home Video on Tape · 1976 — · Analog, Physical & Stop Motion*
 
 Reference film: `videos/vhs.mp4`
@@ -2659,7 +2971,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second VHS Analog Video motion-graphics film (Home Video on Tape). Visual style: soft, haloed luma with colours smeared to the right of their objects, warm tungsten light and an on-camera hotspot, a burned-in camcorder date stamp, torn bottom lines, white dropout streaks, and a razor-sharp VCR OSD floating on top. Motion: handheld drift and a slow camcorder zoom, interrupted by the machine: picture rolls in after PLAY, tracking bands crawl through, the tape searches backwards with noise bars, and PAUSE freezes a jittering frame. Signature moves: yiq chroma bleed & delay, tracking error & head-switching noise, timebase wobble & dropouts, crisp vcr on-screen display; transitions: blue-back to PLAY roll, tracking slip, chroma loss, rewind search, pause freeze. In the tradition of JVC HR-3300 "Vidstar" (first VHS deck, 1976) · Videodrome (David Cronenberg, 1983) · America's Funniest Home Videos (ABC, 1989 —) · V/H/S (2012) · Too Many Cooks (Casper Kelly, Adult Swim, 2014) · Local 58 (Kris Straub, 2015). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "VHS ANALOG VIDEO". Punchy sound design synced to every cut.
 ```
 
-## 69 · Film Burn
+## 77 · Film Burn
 *Light Leaks & Burn-through · 1966 — · Analog, Physical & Stop Motion*
 
 Reference film: `videos/filmburn.mp4`
@@ -2698,7 +3010,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Film Burn motion-graphics film (Light Leaks & Burn-through). Visual style: warm Kodachrome dusk, orange and red fogging blooming from the gate edges, brown scorched emulsion with blisters around a white-hot hole, black frame lines and perforations, dust, hairs and green-white scratches. Motion: a steady 24 fps print breathing with weave and flicker, interrupted by the projector: the framing slips to show the frame line, the strip stops dead, a hole bubbles and melts outward, and the reel flaps through flash frames. Signature moves: light-leak fogging (screen blend), projector burn-through & blistering, gate weave, frame-line slip, flicker, dust, hair, scratches, cue dots; transitions: light-leak flare, frame-line slip, burn-through to white, flash frames, run-out. In the tradition of Persona (Ingmar Bergman, 1966) · Two-Lane Blacktop (Monte Hellman, 1971) · Fight Club (David Fincher, 1999; changeover "cigarette burns") · Decasia (Bill Morrison, 2002) · Grindhouse: Planet Terror (Robert Rodriguez, 2007). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FILM BURN". Punchy sound design synced to every cut.
 ```
 
-## 70 · Object Stop Motion
+## 78 · Object Stop Motion
 *Everyday Things, Frame by Frame · 1907 — · Analog, Physical & Stop Motion*
 
 Reference film: `videos/objectstop.mp4`
@@ -2737,7 +3049,85 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Object Stop Motion motion-graphics film (Everyday Things, Frame by Frame). Visual style: a warm overhead view of a pine tabletop with real drop shadows: a cast-iron pan on a ring of sticky-note flames, a golf-ball egg with a yellow button yolk, cork toast, ribbon bacon, a blue-rimmed plate and wooden letter tiles, under a faintly flickering key light. Motion: everything moves in 12 fps steps, as if nudged by an unseen hand: props shuffle in and hop to their marks, a paper egg spreads in a few exposures, beads re-scatter every frame like sizzling fat, and every resting object shivers by a pixel or two. Signature moves: shot on twos at 12 fps, object substitution (things stand in for food), locked overhead camera on a tabletop, per-frame placement jitter & light flicker; transitions: none — props enter and exit the locked frame by hand; the title is spelled with tiles on the table. In the tradition of The Haunted Hotel (J. Stuart Blackton, 1907) · Neighbours (Norman McLaren, 1952) · Dimensions of Dialogue (Jan Švankmajer, 1982) · Food (Jan Švankmajer, 1992) · Western Spaghetti (PES, 2008) · Fresh Guacamole (PES, 2012). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "OBJECT STOP MOTION". Punchy sound design synced to every cut.
 ```
 
-## 71 · Retrowave Chrome
+## 79 · Puppet Animation
+*Stop-motion puppets on a miniature set · 1910s — · Analog, Physical & Stop Motion*
+
+Reference film: `videos/puppet.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Puppet Animation** (Stop-motion puppets on a miniature set, 1910s —; family: Analog, Physical & Stop Motion).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Puppet animation poses jointed figures on a miniature set and shoots them one frame at a time, so a body built of wood, wire, felt and silicone appears to live. Władysław Starewicz pioneered it in the 1910s, Jiří Trnka made Czech puppet film an art form from the late 1940s with carved wooden figures whose fixed faces act through light and posture, and studios such as Laika and Wes Anderson's crews later combined steel ball-and-socket armatures, furred and knitted costumes and libraries of replacement faces.
+- Study these reference works: Władysław Starewicz — The Cameraman's Revenge (1912) · Jiří Trnka — The Emperor's Nightingale (1949), A Midsummer Night's Dream (1959), The Hand (1965) · Henry Selick / Laika — Coraline (2009) · Wes Anderson — Fantastic Mr. Fox (2009) · Laika — Kubo and the Two Strings (2016)
+- Motion DNA: Everything moves in held steps at 12 frames a second: a walk clicks from pose to pose, the head snaps between angles, mouths and eyelids swap whole pieces from a tray, fur and felt boil slightly where hands touched them, a hop is held up by a rig arm, and the key light flickers by a percent from frame to frame.
+- Visual DNA: A planimetric, symmetrical tabletop set in autumn oranges and mustards — painted dusk backdrop, cardboard hills, pompom felt trees on dowels, a balsa house with a lit window, a sand lane on green flock — and a felt fox puppet in a knitted jumper, scarf and corduroys with glass-bead eyes, then its steel armature in an x-ray pass.
+- Signature transitions: Slate clap, stepped walk-in, head turn, mouth-tray insert, x-ray wipe to the armature, rig-arm hop, pull back to the set edge and studio
+- Key techniques: 12 fps stepped posing, Replacement mouths & eyelids, Ball-and-socket armature
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (12 fps stepped posing, Replacement mouths & eyelids, Ball-and-socket armature).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on 12 fps stepped posing and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "PUPPET ANIMATION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Dragonframe stop-motion capture, Ball-and-socket armatures, 3D-printed replacement faces, Nuke rig removal, Canvas 2D. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Needs a built puppet and set (this film is a procedural homage).
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Puppet Animation motion-graphics film (Stop-motion puppets on a miniature set). Visual style: a planimetric, symmetrical tabletop set in autumn oranges and mustards — painted dusk backdrop, cardboard hills, pompom felt trees on dowels, a balsa house with a lit window, a sand lane on green flock — and a felt fox puppet in a knitted jumper, scarf and corduroys with glass-bead eyes, then its steel armature in an x-ray pass. Motion: everything moves in held steps at 12 frames a second: a walk clicks from pose to pose, the head snaps between angles, mouths and eyelids swap whole pieces from a tray, fur and felt boil slightly where hands touched them, a hop is held up by a rig arm, and the key light flickers by a percent from frame to frame. Signature moves: 12 fps stepped posing, replacement mouths & eyelids, ball-and-socket armature; transitions: slate clap, stepped walk-in, head turn, mouth-tray insert, x-ray wipe to the armature, rig-arm hop, pull back to the set edge and studio. In the tradition of Władysław Starewicz — The Cameraman's Revenge (1912) · Jiří Trnka — The Emperor's Nightingale (1949), A Midsummer Night's Dream (1959), The Hand (1965) · Henry Selick / Laika — Coraline (2009) · Wes Anderson — Fantastic Mr. Fox (2009) · Laika — Kubo and the Two Strings (2016). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "PUPPET ANIMATION". Punchy sound design synced to every cut.
+```
+
+## 80 · Pixilation
+*Live actors, one frame at a time · 1908 — · Analog, Physical & Stop Motion*
+
+Reference film: `videos/pixilation.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Pixilation** (Live actors, one frame at a time, 1908 —; family: Analog, Physical & Stop Motion).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Pixilation animates real people and objects with the stop-motion camera: actors hold a pose for each exposure, move a little, and hold again, so on screen they glide, levitate and change clothes without ever walking. Émile Cohl and Segundo de Chomón used the trick in the 1900s; Norman McLaren made it an art form at the National Film Board of Canada with Neighbours (1952), which won an Academy Award, and the technique returned in music videos with Peter Gabriel’s Sledgehammer and in the short films of PES.
+- Study these reference works: Neighbours (Norman McLaren, NFB, 1952) · A Chairy Tale (Norman McLaren & Claude Jutra, 1957) · Sledgehammer (Peter Gabriel, dir. Stephen R. Johnson, with Aardman and the Brothers Quay, 1986) · Western Spaghetti (PES, 2008) · Fresh Guacamole (PES, 2012)
+- Motion DNA: Time is chopped into exposures: people slide along the ground with their legs locked, hop through the air without ever landing, sit on nothing and drive, and swap clothes, poses and places at every cut, while a little jitter between frames keeps every held pose alive.
+- Visual DNA: Ordinary daylight locations shot on film: a park lawn with mowing stripes, railings, terraced houses and a street; actors in period clothes lit like photographs with a hard key light, contact shadows that stay on the grass, heavy grain, gate weave and slight exposure flicker from frame to frame.
+- Signature transitions: Glide-in, levitating hop, bow, jump cuts on the third of a second, invisible-car ride, letter-per-frame title placement
+- Key techniques: Stepped 12 fps exposures, Airborne-every-frame hops, Jump-cut costume swaps
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Stepped 12 fps exposures, Airborne-every-frame hops, Jump-cut costume swaps).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Stepped 12 fps exposures and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "PIXILATION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Film or DSLR camera with intervalometer, actors posed per frame, Dragonframe / Stop Motion Studio onion skinning, Canvas 2D (time quantised to 12 fps). If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Pixilation motion-graphics film (Live actors, one frame at a time). Visual style: ordinary daylight locations shot on film: a park lawn with mowing stripes, railings, terraced houses and a street; actors in period clothes lit like photographs with a hard key light, contact shadows that stay on the grass, heavy grain, gate weave and slight exposure flicker from frame to frame. Motion: time is chopped into exposures: people slide along the ground with their legs locked, hop through the air without ever landing, sit on nothing and drive, and swap clothes, poses and places at every cut, while a little jitter between frames keeps every held pose alive. Signature moves: stepped 12 fps exposures, airborne-every-frame hops, jump-cut costume swaps; transitions: glide-in, levitating hop, bow, jump cuts on the third of a second, invisible-car ride, letter-per-frame title placement. In the tradition of Neighbours (Norman McLaren, NFB, 1952) · A Chairy Tale (Norman McLaren & Claude Jutra, 1957) · Sledgehammer (Peter Gabriel, dir. Stephen R. Johnson, with Aardman and the Brothers Quay, 1986) · Western Spaghetti (PES, 2008) · Fresh Guacamole (PES, 2012). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "PIXILATION". Punchy sound design synced to every cut.
+```
+
+## 81 · Retrowave Chrome
 *80s Neon & CGI · 1982 — · Digital, Internet & Screen*
 
 Reference film: `videos/retro.mp4`
@@ -2776,7 +3166,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Retrowave Chrome motion-graphics film (80s Neon & CGI). Visual style: magenta and cyan, striped sunset, chrome type, VHS scanlines. Motion: an infinite grid scrolls toward camera while neon letters slide slowly together in extreme close-up. Signature moves: perspective grid, chrome gradients, neon glow; transitions: vHS tracking band, white flash to chrome. In the tradition of Tron (1982) · Drive (2011) · Stranger Things titles (2016). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "RETROWAVE CHROME". Punchy sound design synced to every cut.
 ```
 
-## 72 · Pixel Art
+## 82 · Pixel Art
 *8-bit · 1980 — · Digital, Internet & Screen*
 
 Reference film: `videos/pixel.mp4`
@@ -2815,7 +3205,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Pixel Art motion-graphics film (8-bit). Visual style: low resolution scaled with nearest-neighbour, 16-colour palette, dithering, CRT mask. Motion: sprite cycles in few frames, parallax layers, motion snapped to whole pixels. Signature moves: low-res buffer, limited palette, chiptune sync; transitions: iris out, level-clear fanfare. In the tradition of Super Mario Bros. (1985) · Celeste (2018). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "PIXEL ART". Punchy sound design synced to every cut.
 ```
 
-## 73 · Glitch / Datamosh
+## 83 · Glitch / Datamosh
 *Beautiful Errors · 2005 — · Digital, Internet & Screen*
 
 Reference film: `videos/glitch.mp4`
@@ -2854,7 +3244,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Glitch / Datamosh motion-graphics film (Beautiful Errors). Visual style: channel offsets, macroblocks, static, monospace HUD. Motion: clean signal interrupted by frame-rate bursts of error that build to a full breakdown. Signature moves: rgb split, slice displacement, pixel melt; transitions: datamosh melt, static cut, reconnect. In the tradition of Takeshi Murata, Monster Movie (2005) · Welcome to Heartbreak (2009). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "GLITCH / DATAMOSH". Punchy sound design synced to every cut.
 ```
 
-## 74 · Vaporwave
+## 84 · Vaporwave
 *Mall-soft Nostalgia · 2010 — · Digital, Internet & Screen*
 
 Reference film: `videos/vaporwave.mp4`
@@ -2893,7 +3283,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Vaporwave motion-graphics film (Mall-soft Nostalgia). Visual style: marble statuary, pink/teal sunset gradients, perspective grids, fullwidth type and katakana, early-OS windows, all under VHS artefacts. Motion: slowed, looping, deliberately stalled motion: beats repeat, the tape rewinds and fast-forwards instead of cutting. Signature moves: classical bust + sunset grid, win95 chrome & error cascades, vhs wobble, chopped & screwed time; transitions: vHS tracking roll, rewind stutter, fast-forward, Win95 zoom-open, window drag trail, snow cut. In the tradition of Macintosh Plus — Floral Shoppe (2011) · Chuck Person — Eccojams Vol. 1 (2010) · James Ferraro — Far Side Virtual (2011) · Saint Pepsi — Hit Vibes (2013). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "VAPORWAVE". Punchy sound design synced to every cut.
 ```
 
-## 75 · Frutiger Aero
+## 85 · Frutiger Aero
 *Glossy Clean-tech Optimism · 2004 — 2013 · Digital, Internet & Screen*
 
 Reference film: `videos/frutiger.mp4`
@@ -2932,7 +3322,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Frutiger Aero motion-graphics film (Glossy Clean-tech Optimism). Visual style: sky-blue and lime gradients, wet glass with specular caps, aqua water and fish, rolling green hills, aurora swooshes and lens flares. Motion: buoyant, floating motion: rising bubbles, springy UI pops, gentle drifting light and slow camera lifts. Signature moves: glossy half-pill highlights, glass orbs, bubbles & water, sky, grass hills & lens flares; transitions: underwater rise, water-surface breach, glass slide-in, bubble converge, shrink-fade, shine sweep. In the tradition of Windows Vista Aero (2007) · Windows 7 (2009) · Mac OS X Aqua (2000) · iPhone OS 1–6 (2007–2012) · Nintendo Wii Menu (2006). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FRUTIGER AERO". Punchy sound design synced to every cut.
 ```
 
-## 76 · CRT Terminal / Digital Rain
+## 86 · CRT Terminal / Digital Rain
 *Green Phosphor Code · 1999 — · Digital, Internet & Screen*
 
 Reference film: `videos/terminal.mp4`
@@ -2971,7 +3361,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second CRT Terminal / Digital Rain motion-graphics film (Green Phosphor Code). Visual style: monochrome green phosphor on black with bloom, scanlines, barrel-curved glass and vignette; mirrored half-width katakana columns with white-hot heads. Motion: discrete, character-by-character time: typing, ticking bars, then cascades of falling glyphs that resolve into meaning. Signature moves: typed command lines & block cursor, ascii progress bars, katakana rain, phosphor bloom, curved glass; transitions: cRT power-on, character scramble-and-fall, rain sweep reveal, glyph lock. In the tradition of The Matrix (1999) title & code rain · WarGames (1983) · Alien (1979) MU-TH-UR screens · IBM 5151 monochrome display (1981). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CRT TERMINAL / DIGITAL RAIN". Punchy sound design synced to every cut.
 ```
 
-## 77 · Retro Desktop UI
+## 87 · Retro Desktop UI
 *Windows, Icons, Menus, Pointer · 1984 — 2001 · Digital, Internet & Screen*
 
 Reference film: `videos/desktop.mp4`
@@ -3010,7 +3400,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Retro Desktop UI motion-graphics film (Windows, Icons, Menus, Pointer). Visual style: native-resolution pixels scaled up crisp: 1-bit checker gray and striped title bars, teal desktop with grey 3D bevels and navy captions, then Luna blue glass, green Start and rolling-hill wallpaper. Motion: the cursor is the protagonist: every move is a double-click, drag or menu pull answered by zoom rectangles, inverted highlights and a progress bar. Signature moves: pixel-exact bevels & 1-bit dither, zoom-rect window opening, cursor-driven choreography; transitions: zoom-rect open, dithered dissolve, caption-bar zoom, Solitaire trail cascade, display mode-switch blackout, grayscale shut-down fade, CRT collapse. In the tradition of Xerox Star 8010 (1981) · Apple Macintosh System 1, icons by Susan Kare (1984) · Windows 95 (1995) · Microsoft Solitaire win cascade, Wes Cherry (1990) · Windows XP Luna (2001). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "RETRO DESKTOP UI". Punchy sound design synced to every cut.
 ```
 
-## 78 · Webcore / Web 1.0
+## 88 · Webcore / Web 1.0
 *Early-internet Maximalism · 1994 — 2009 · Digital, Internet & Screen*
 
 Reference film: `videos/webcore.mp4`
@@ -3049,7 +3439,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Webcore / Web 1.0 motion-graphics film (Early-internet Maximalism). Visual style: black starfields and tiled textures, saturated rainbow WordArt with 3D extrusion, Times and Comic Sans, bevelled grey browser chrome and dial-up era status bars. Motion: everything loops at once at GIF frame-rates: blinking, spinning, scrolling, counting, until pop-ups multiply into overload and collapse into one shouting lockup. Signature moves: tiled starfield & swirl backgrounds, animated gifs: new!, @, construction, marquee, hit counter, pop-up cascade; transitions: dial-up connect, interlaced GIF load, stepped wheel scroll, pop-up multiplication, window implosion, white flash, starfield warp. In the tradition of GeoCities neighbourhoods (1994–2009) · Space Jam official site (1996) · Olia Lialina & Dragan Espenschied — One Terabyte of Kilobyte Age (2013–) · Internet Archive GifCities (2016) · Netscape Navigator 3 blink & marquee tags. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "WEBCORE / WEB 1.0". Punchy sound design synced to every cut.
 ```
 
-## 79 · Old-school Screensaver
+## 89 · Old-school Screensaver
 *Moving Pixels vs. Burn-in · 1983 — 2000s · Digital, Internet & Screen*
 
 Reference film: `videos/screensaver.mp4`
@@ -3088,7 +3478,85 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Old-school Screensaver motion-graphics film (Moving Pixels vs. Burn-in). Visual style: saturated primaries on pure black: 1-pixel vector lines, flat-shaded OpenGL tubes and an italic wordmark at VGA resolution, seen through the curved glass, scanlines and bloom of a yellowing beige monitor in a dark office. Motion: endless, unattended motion: constant-velocity bounces, stars streaming from a vanishing point, pipes growing segment by segment until the tube is full — no cuts and no story, only loops waiting for a keypress, until the badge finally kisses the corner. Signature moves: perspective-divide starfield, polygon echo trails, painter-sorted 3d pipe growth, bounce, recolour & corner hit; transitions: saver hand-off with mode-switch blackout, screen-fill reset, corner-hit flash, badge homes to centre. In the tradition of SCRNSAVE (John Socha, 1983) · After Dark & Flying Toasters (Berkeley Systems, 1989) · Windows 3.1 Starfield Simulation & Mystify (1992) · 3D Pipes, Windows NT 3.5 OpenGL savers (1994) · The Office, “Scott’s Tots” corner hit (NBC, 2009). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "OLD-SCHOOL SCREENSAVER". Punchy sound design synced to every cut.
 ```
 
-## 80 · Film Noir
+## 90 · Databending
+*Corrupting the file, not the picture · 2000s — · Digital, Internet & Screen*
+
+Reference film: `videos/databend.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Databending** (Corrupting the file, not the picture, 2000s —; family: Digital, Internet & Screen).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Databending treats an image or video file as raw data and breaks it on purpose: bytes are overwritten in a hex or text editor, the file is opened as audio and run through effects, or a compressed video loses its keyframes so motion from one shot drags the pixels of another (datamoshing). It grew from circuit bending and net art in the early 2000s; Takeshi Murata’s Monster Movie (2005) and Rosa Menkman’s The Collapse of PAL (2010) and Glitch Moment/um (2011) made the compression artefacts themselves the subject, and datamosh reached music videos in the late 2000s.
+- Study these reference works: Monster Movie (Takeshi Murata, 2005) · Untitled (Pink Dot) (Takeshi Murata, 2007) · The Collapse of PAL (Rosa Menkman, 2010) · A Vernacular of File Formats (Rosa Menkman, 2010) · Welcome to Heartbreak (Kanye West, dir. Nabil Elderkin, 2009)
+- Motion DNA: Damage propagates in the order the decoder reads: a single changed byte slides everything after it, a deleted keyframe lets the next shot’s motion vectors push the last picture around so pixels bloom, smear and swirl in blocks, and the decay only ever moves forward until a clean keyframe resets it.
+- Visual DNA: A real, colourful photograph broken along its compression grid: 8×8 blocks out of step with colour casts, stray DCT stripes, decoder grey where data ran out, blocky macroblock trails, banded rows where audio effects shifted bytes, plus the tools themselves — hex dumps, frame-type strips, a waveform.
+- Signature transitions: Block-by-block decode, hex edit with decoder sweep, deleted I-frame into P-frame bleed, raw-audio echo, clean I-frame reset, drip
+- Key techniques: JPEG block slip & DC shift, I-frame removal datamosh, Raw-audio echo on RGB bytes
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (JPEG block slip & DC shift, I-frame removal datamosh, Raw-audio echo on RGB bytes).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on JPEG block slip & DC shift and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "DATABENDING", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Hex editor / text editor on JPEG and BMP, Audacity raw import and export, Avidemux / FFmpeg keyframe removal, Canvas 2D (per-block pixel buffers). If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Databending motion-graphics film (Corrupting the file, not the picture). Visual style: a real, colourful photograph broken along its compression grid: 8×8 blocks out of step with colour casts, stray DCT stripes, decoder grey where data ran out, blocky macroblock trails, banded rows where audio effects shifted bytes, plus the tools themselves — hex dumps, frame-type strips, a waveform. Motion: damage propagates in the order the decoder reads: a single changed byte slides everything after it, a deleted keyframe lets the next shot’s motion vectors push the last picture around so pixels bloom, smear and swirl in blocks, and the decay only ever moves forward until a clean keyframe resets it. Signature moves: jpeg block slip & dc shift, i-frame removal datamosh, raw-audio echo on rgb bytes; transitions: block-by-block decode, hex edit with decoder sweep, deleted I-frame into P-frame bleed, raw-audio echo, clean I-frame reset, drip. In the tradition of Monster Movie (Takeshi Murata, 2005) · Untitled (Pink Dot) (Takeshi Murata, 2007) · The Collapse of PAL (Rosa Menkman, 2010) · A Vernacular of File Formats (Rosa Menkman, 2010) · Welcome to Heartbreak (Kanye West, dir. Nabil Elderkin, 2009). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DATABENDING". Punchy sound design synced to every cut.
+```
+
+## 91 · OS Window Animation
+*Genie, Exposé, Snap & Flip · 2001 — 2012 · Digital, Internet & Screen*
+
+Reference film: `videos/oswindow.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **OS Window Animation** (Genie, Exposé, Snap & Flip, 2001 — 2012; family: Digital, Internet & Screen).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: When GPUs began compositing the desktop, window managers turned every state change into motion: Mac OS X 10.0 (2001) shipped the genie minimise and the magnifying Dock, Exposé tiled every open window in 10.3 Panther (2003) and became Mission Control in 2011, and Windows Vista’s Aero glass (2007) brought Flip 3D, followed by drag-to-edge Aero Snap in Windows 7 (2009). The animations explain where a window went and where it came from, and their curves and timings became the reference vocabulary for UI motion design.
+- Study these reference works: Mac OS X 10.0 Aqua, genie effect and Dock magnification (Apple, 2001) · Exposé in Mac OS X 10.3 Panther (2003) · Windows Vista Aero and Flip 3D (Microsoft, 2007) · Windows 7 Aero Snap (2009) · Compiz wobbly windows and desktop cube (2006)
+- Motion DNA: Every transition is spatial and causal: windows zoom out of the icon that launched them and pour back into the dock that keeps them, tiles fly apart on a shared ease and return to their stacking order, a window dragged to the edge is offered a translucent half-screen and snaps into it, and a perspective stack rotates its cards one at a time.
+- Visual DNA: A polished desktop of the 2000s: gradient wallpaper, translucent menu bar and glass dock with reflective rounded icons, white title bars with three coloured buttons and soft drop shadows, then a blue glass theme with tinted frames, sheen streaks, a glowing taskbar and a red close button.
+- Signature transitions: Icon zoom-open, dock bounce, genie minimise, Exposé tile-out and pick, theme cross-fade, drag-to-edge snap with preview, Flip 3D cycle, settle to the front
+- Key techniques: Strip-sliced genie warp, Fisheye dock magnification, Sliced perspective Flip 3D
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Strip-sliced genie warp, Fisheye dock magnification, Sliced perspective Flip 3D).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Strip-sliced genie warp and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "OS WINDOW ANIMATION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Quartz Compositor / Desktop Window Manager on the GPU, Core Animation, Compiz, KWin effects, After Effects UI mock-ups, Canvas 2D (sliced warps of pre-rendered windows). If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Homage — generic UI, no logos.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second OS Window Animation motion-graphics film (Genie, Exposé, Snap & Flip). Visual style: a polished desktop of the 2000s: gradient wallpaper, translucent menu bar and glass dock with reflective rounded icons, white title bars with three coloured buttons and soft drop shadows, then a blue glass theme with tinted frames, sheen streaks, a glowing taskbar and a red close button. Motion: every transition is spatial and causal: windows zoom out of the icon that launched them and pour back into the dock that keeps them, tiles fly apart on a shared ease and return to their stacking order, a window dragged to the edge is offered a translucent half-screen and snaps into it, and a perspective stack rotates its cards one at a time. Signature moves: strip-sliced genie warp, fisheye dock magnification, sliced perspective flip 3d; transitions: icon zoom-open, dock bounce, genie minimise, Exposé tile-out and pick, theme cross-fade, drag-to-edge snap with preview, Flip 3D cycle, settle to the front. In the tradition of Mac OS X 10.0 Aqua, genie effect and Dock magnification (Apple, 2001) · Exposé in Mac OS X 10.3 Panther (2003) · Windows Vista Aero and Flip 3D (Microsoft, 2007) · Windows 7 Aero Snap (2009) · Compiz wobbly windows and desktop cube (2006). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "OS WINDOW ANIMATION". Punchy sound design synced to every cut.
+```
+
+## 92 · Film Noir
 *Light and Shadow · 1941 — · Cinematic & Film Language*
 
 Reference film: `videos/filmnoir.mp4`
@@ -3127,7 +3595,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Film Noir motion-graphics film (Light and Shadow). Visual style: hard chiaroscuro in black and white: venetian-blind slats, silhouettes in doorways, rain lit only inside a lamp cone, wet cobbles, curling smoke, heavy grain and a deco serif title. Motion: slow push-ins on Dutch angles while the light itself moves: a passing car sweeps blind shadows across the room, a door swings open to throw a wedge of light, and a lamp flickers out. Signature moves: light-map compositing: blind patterns multiplied over albedo, procedural turbulent smoke lit by the slats it crosses, silhouette shadows cast by affine projection, film grain, gate flicker, dust and vignette; transitions: hard cut, silhouette wipe (a figure walks into the lens), lamp-out to black, blind-shadow wipe onto the title. In the tradition of The Maltese Falcon (John Huston, 1941) · Double Indemnity (Billy Wilder, 1944) · Murder, My Sweet (Edward Dmytryk, 1944) · The Big Combo (Joseph H. Lewis, 1955) · The Third Man (Carol Reed, 1949) · Touch of Evil (Orson Welles, 1958) · Sin City (Robert Rodriguez, 2005). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FILM NOIR". Punchy sound design synced to every cut.
 ```
 
-## 81 · Long Exposure
+## 93 · Long Exposure
 *Light Trails · 1949 — · Cinematic & Film Language*
 
 Reference film: `videos/longexposure.mp4`
@@ -3166,7 +3634,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Long Exposure motion-graphics film (Light Trails). Visual style: deep blue night lifted by hours of exposure, red and white highway ribbons, concentric star arcs, sodium lamps with diffraction spikes, a ghostly painter and a cyan light-written signature. Motion: a locked-off tripod frame where nothing moves but light: the shutter clicks open, ribbons of head- and tail-lights pile up, the stars wheel, a figure signs the air, and the click of the shutter closing freezes it all. Signature moves: additive persistence computed from t (trail = road covered since shutter open), perspective road samples with depth-scaled ribbon width, star arcs around the celestial pole, halving blur pyramid bloom + 6-blade diffraction stars; transitions: mirror-slap blackout, shutter open, accumulation build, shutter close freeze, title written in light. In the tradition of Picasso Draws with Light (Gjon Mili, LIFE, 1949) · Man Ray, Space Writing (1935) · Frank and Lillian Gilbreth, light-motion studies (1914) · Michael Wesely, open-shutter architecture (1997 —) · Lucas Zimmermann, Traffic Lights (2013) · Ken Russell / Koyaanisqatsi freeway time-lapses (Godfrey Reggio, 1982). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "LONG EXPOSURE". Punchy sound design synced to every cut.
 ```
 
-## 82 · Double Exposure
+## 94 · Double Exposure
 *Two Frames, One Image · 1860s — · Cinematic & Film Language*
 
 Reference film: `videos/doubleexposure.mp4`
@@ -3205,7 +3673,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Double Exposure motion-graphics film (Two Frames, One Image). Visual style: a pale paper ground, a profile silhouette filled with layered pines, mountains and towers, desaturated slate and fog tones with a single warm sun set behind the eye, film grain and soft vignette. Motion: slow and breathing: a drift through misty pines pulls back to reveal a head, birds burst out past its edge, smoke rolls the forest into a city at dusk, and a heartbeat pulse carries it to a quiet type lockup. Signature moves: screen blend: dark portrait prints the landscape, bright sky stays paper, parallax landscape layers drawn under a shared camera, fbm noise threshold as a smoke dissolve (with glowing rim), multiply-blended type revealed through the same smoke; transitions: pull-back reveal, bird scatter, smoke dissolve between landscapes, smoke-revealed title. In the tradition of True Detective season 1 titles (Elastic, Patrick Clair, 2014) · The Man with the Rubber Head (Georges Méliès, 1901) · Vertigo title sequence (Saul Bass, 1958) · Christoffer Relander, We Are Nature (2012) · Dan Mountford, double-exposure portraits (2011) · Andreas Lie, Wilderness portraits (2013). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DOUBLE EXPOSURE". Punchy sound design synced to every cut.
 ```
 
-## 83 · Tilt-shift Miniature
+## 95 · Tilt-shift Miniature
 *Miniature Faking · 2000s — · Cinematic & Film Language*
 
 Reference film: `videos/tiltshift.mp4`
@@ -3244,7 +3712,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Tilt-shift Miniature motion-graphics film (Miniature Faking). Visual style: model-railway colours, a thin razor-sharp band through the middle of the frame with heavy graduated blur above and below, crisp miniature shadows, tiny dot people and a warm toy grade. Motion: a high locked-off view where everything below hops along in stepped time-lapse: cars, crowds, a turning ferris wheel and a ferry, while the band of focus racks in and slides across the town to pick out details. Signature moves: true perspective town with painter-sorted boxes, gable roofs and cast shadows, halving blur pyramid composited by distance from a focus band, stepped 12 fps motion on a time-lapse clock that races at the climax, saturated toy palette, tiny people, ferris wheel and harbour; transitions: rack focus in, focus-band slides (up, down, centre), time-lapse acceleration, title set into the focus band. In the tradition of Olivo Barbieri, site specific_ (2003 —) · Vincent Laforet, Tilt & Shift series (2006) · Keith Loutit, Bathtub series (2008 —) · Sam O'Hare, The Sandpit (2010) · Little Big Berlin (Christopher Häusler, 2012) · Joel Meyerowitz / Ben Thomas, Tiny Tokyo (2011). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "TILT-SHIFT MINIATURE". Punchy sound design synced to every cut.
 ```
 
-## 84 · Time-lapse
+## 96 · Time-lapse
 *Hours in Seconds · 1982 — · Cinematic & Film Language*
 
 Reference film: `videos/timelapse.mp4`
@@ -3283,7 +3751,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Time-lapse motion-graphics film (Hours in Seconds). Visual style: monument Valley buttes and a desert town under a sky that cycles from hard noon blue through golden hour, magenta afterglow and blue hour to a black field of star trails and a rose dawn. Motion: a locked-off frame on a slow motion-control slide while time itself accelerates: clouds stream and boil, shadows wheel across the desert floor, lights blink on window by window and the sky rotates. Signature moves: monotone-cubic hour curve: real-time open that ramps into 17 hours without stalls, sky gradient model driven by solar elevation, with afterglow, butte shadows projected along the sun vector; racing cloud shadows, star trails as accumulated arcs around the pole; window-by-window town lights, quarter-res blurred cloud layer, long-exposure headlight trails; transitions: none inside the shot: time is the transition; day-to-night "holy grail" exposure ramp, dawn swell into the title. In the tradition of Koyaanisqatsi (Godfrey Reggio, cinematography Ron Fricke, 1982) · Powaqqatsi (Godfrey Reggio, 1988) · Chronos (Ron Fricke, 1985) · Baraka (Ron Fricke, 1992) · Samsara (Ron Fricke, 2011) · Planet Earth (BBC, 2006). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "TIME-LAPSE". Punchy sound design synced to every cut.
 ```
 
-## 85 · Match-cut Montage
+## 97 · Match-cut Montage
 *The Shape Holds, the World Changes · 1968 — · Cinematic & Film Language*
 
 Reference film: `videos/matchcut.mp4`
@@ -3322,7 +3790,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Match-cut Montage motion-graphics film (The Shape Holds, the World Changes). Visual style: every shot a different world and palette (macro skin and iris, deep space, a mint terrazzo café table, walnut hi-fi, a magenta street, a Lean-red desert, a station clock) unified by one locked circle and one locked line inside a 2.39 letterbox. Motion: hard cuts on the beat while one shape stays nailed to the frame: rotation carries through iris, planet, coffee swirl, record and wheel; a station clock snaps to noon and pushes in until its hands become a pen, a tower and a rising rocket. Signature moves: every shot drawn round one shared circle (r) or vertical bar (l), slow push held across cuts so the shape never jumps, clock-hand zoom that converts the circle chain into the line chain, hairline match guide and flash on each cut, letterbox edit readout: shot, timecode, cut ticks; transitions: graphic match cuts, motion match cuts, a stutter flurry of quarter-beat cuts, a push-in that converts circle to line, trail-to-lockup. In the tradition of Lawrence of Arabia (David Lean, 1962) · 2001: A Space Odyssey (Stanley Kubrick, 1968) · Psycho (Alfred Hitchcock, 1960; drain to eye) · Requiem for a Dream (Darren Aronofsky, 2000) · Shaun of the Dead (Edgar Wright, 2004) · Hot Fuzz (Edgar Wright, 2007). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "MATCH-CUT MONTAGE". Punchy sound design synced to every cut.
 ```
 
-## 86 · Split-screen Cinema
+## 98 · Split-screen Cinema
 *Everything at Once · 1968 — · Cinematic & Film Language*
 
 Reference film: `videos/splitscreen.mp4`
@@ -3361,7 +3829,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Split-screen Cinema motion-graphics film (Everything at Once). Visual style: black gutters that flash red, a red telephone, a station clock, rain-wet streets, headlights, a CCTV feed, LED digits, a vault dial and a lit phone booth: noir teal and amber with signal-red accents, panel labels in mono. Motion: the frame divides on the beat — 1, 2, 4, 9, 16 — with panels sliding and resizing like a tightening vice; every panel ticks to the same countdown until all converge on one shot and merge into a single full frame at zero. Signature moves: grid as per-row column boundaries: panels split, slide and resize by interpolating edges, sixteen procedural shots in a cover-fit virtual frame, all shots slaved to one countdown clock, red gutter flash and slam on each split; staggered row slides, squeeze-to-hero merge into one full frame at zero; transitions: split, slide, resize, squeeze-to-hero, merge-to-full-frame white-out, title split by a sliding gutter. In the tradition of The Thomas Crown Affair (Norman Jewison, montage by Pablo Ferro, 1968) · Grand Prix (John Frankenheimer, titles by Saul Bass, 1966) · Carrie (Brian De Palma, 1976) · Timecode (Mike Figgis, 2000) · 24 (Fox, 2001–2010) · (500) Days of Summer (Marc Webb, 2009). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SPLIT-SCREEN CINEMA". Punchy sound design synced to every cut.
 ```
 
-## 87 · One-shot Camera Motion
+## 99 · One-shot Camera Motion
 *The Unbroken Take · 1958 — · Cinematic & Film Language*
 
 Reference film: `videos/oneshot.mp4`
@@ -3400,7 +3868,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second One-shot Camera Motion motion-graphics film (The Unbroken Take). Visual style: anamorphic 2.39:1 frame, deep staging in real perspective, each room with its own light — sodium street, red corridor, green fluorescent kitchen, warm club — and the timecode running without a break. Motion: one spline-smooth camera that never cuts: it cranes down, falls in behind its subjects, turns corners with them, floats through a tight kitchen aisle and finally rises and settles as the action resolves in front of it. Signature moves: crane-to-steadicam move, choreographed blocking ahead of camera, doorway & window passes (hidden stitches), continuous timecode, zero cuts; transitions: none — doorways, a swinging door and the crane move do the work of cuts. In the tradition of Touch of Evil (Orson Welles, 1958) · Goodfellas — Copacabana shot (Martin Scorsese, DP Michael Ballhaus, 1990) · Children of Men (Alfonso Cuarón, DP Emmanuel Lubezki, 2006) · Birdman (Alejandro G. Iñárritu, 2014) · 1917 (Sam Mendes, DP Roger Deakins, 2019). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "ONE-SHOT CAMERA MOTION". Punchy sound design synced to every cut.
 ```
 
-## 88 · Hyperlapse
+## 100 · Hyperlapse
 *Moving Time-lapse · 2011 — · Cinematic & Film Language*
 
 Reference film: `videos/hyperlapse.mp4`
@@ -3439,7 +3907,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Hyperlapse motion-graphics film (Moving Time-lapse). Visual style: strict one-point perspective down an avenue and across a suspension bridge, the sky sliding from afternoon blue through a sunset into blue hour and night, windows switching on, ghosted pedestrians, red and white light ribbons, neon on wet asphalt and a faint frame-to-frame exposure shimmer. Motion: a steady, gliding forward push that never bobs, while everything else is fast-forwarded: clouds race out of the vanishing point, shadows sweep the street, traffic becomes streaks; whip pans snap between locations and the final push eases to a stop as the city keeps rushing. Signature moves: one still every few metres, aligned to a fixed point, warp stabilisation & deflicker, whip-pan transitions between locations, light trails from long-interval traffic; transitions: whip pans (motion-blurred swish) between locations, time jumping with each one. In the tradition of Koyaanisqatsi (Godfrey Reggio, cinematography Ron Fricke, 1982) · Geoff Tompkinson's city hyperlapses (2012 —) · Barcelona GO! (Rob Whitworth, 2013) · Instagram Hyperlapse app (2014) · Microsoft Research Hyperlapse (Kopf, Cohen & Szeliski, SIGGRAPH 2014). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "HYPERLAPSE". Punchy sound design synced to every cut.
 ```
 
-## 89 · High Contrast Cinema
+## 101 · High Contrast Cinema
 *Black, White & One Spot Colour · 1980 — · Cinematic & Film Language*
 
 Reference film: `videos/highcontrast.mp4`
@@ -3478,7 +3946,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second High Contrast Cinema motion-graphics film (Black, White & One Spot Colour). Visual style: pure black and pure white graphic shapes — lamp cones, window grids, a face carved by its shadow side, white-outlined silhouettes, slanting white rain and wet-street reflections — with one saturated red that stays in colour through every shot, plus comic-style narration boxes. Motion: slow, deliberate push-ins and hard cuts like turning a page: a walk into a cone of light, a profile that barely turns, an overhead crowd flowing against one figure, and a single lightning beat that flips the sky before the title holds. Signature moves: crushed blacks & clipped whites (no midtones), selective colour — one hue spared, inked rim outlines & silhouettes, rain as white streaks (difference blend); transitions: hard cuts, a lightning flash, caption boxes. In the tradition of Raging Bull (Martin Scorsese, 1980) · Rumble Fish (Francis Ford Coppola, 1983) · Schindler's List (Steven Spielberg, 1993) · Sin City (Robert Rodriguez & Frank Miller, 2005) · The Spirit (Frank Miller, 2008) · Mad Max: Fury Road — Black & Chrome (George Miller, 2016). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "HIGH CONTRAST CINEMA". Punchy sound design synced to every cut.
 ```
 
-## 90 · FUI
+## 102 · FUI
 *Fantasy User Interface · 2008 — · Cinematic & Film Language*
 
 Reference film: `videos/hud.mp4`
@@ -3517,7 +3985,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second FUI motion-graphics film (Fantasy User Interface). Visual style: cyan and amber hairlines on near-black, glow, monospaced labels. Motion: many small systems tick at different rates; everything converges on a single lock event. Signature moves: segmented rings, text decode, target lock; transitions: boot-up, alert recolour, lock flash. In the tradition of Iron Man (2008) · The Martian (2015) · Blade Runner 2049 (2017). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FUI". Punchy sound design synced to every cut.
 ```
 
-## 91 · Cyberpunk Neon
+## 103 · Cyberpunk Neon
 *Rain, Neon, Kanji · 1982 — · Cinematic & Film Language*
 
 Reference film: `videos/cyberpunk.mp4`
@@ -3556,7 +4024,85 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Cyberpunk Neon motion-graphics film (Rain, Neon, Kanji). Visual style: magenta and cyan neon, Chinese signage, puddle reflections, haze. Motion: slow push through layered parallax while signs stutter on and rain falls. Signature moves: neon flicker, wet reflections, parallax city; transitions: blackout then neon ignition. In the tradition of Blade Runner (1982) · Ghost in the Shell (1995) · Cyberpunk 2077 (2020). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CYBERPUNK NEON". Punchy sound design synced to every cut.
 ```
 
-## 92 · Ukiyo-e Motion
+## 104 · Surreal Cinema
+*Dream logic on film · 1928 — · Cinematic & Film Language*
+
+Reference film: `videos/surreal.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Surreal Cinema** (Dream logic on film, 1928 —; family: Cinematic & Film Language).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Surrealist film cuts the way a dream does: rooms open onto impossible places, objects turn into other objects and the intertitles lie about time. Luis Buñuel and Salvador Dalí’s Un Chien Andalou (1929) set the grammar, Maya Deren’s Meshes of the Afternoon (1943) looped a dreamer through her own house, Jan Švankmajer animated objects into uncanny life, and David Lynch carried the mode into curtained rooms with zigzag floors.
+- Study these reference works: Un Chien Andalou (Luis Buñuel & Salvador Dalí, 1929) · L’Âge d’Or (Buñuel, 1930) · Meshes of the Afternoon (Maya Deren & Alexander Hammid, 1943) · Spellbound, dream sequence designed by Dalí (Alfred Hitchcock, 1945) · Dimensions of Dialogue (Jan Švankmajer, 1982) · Alice (Švankmajer, 1988) · Twin Peaks (David Lynch & Mark Frost, 1990) · Mulholland Drive (Lynch, 2001)
+- Motion DNA: A slow camera that never stops: an even dolly that is suddenly pulled through a door, a tilt from cloud down to sand, a fall into an eye. Things move with dream patience — a key floating, men rising like balloons, a clock sagging — and one object turns into another in stepped stop-motion jumps.
+- Visual DNA: Red pleated curtains over a black-and-white zigzag floor, a hooded figure with a mirror for a face, Magritte’s blue sky and sculpted clouds (an eye whose iris is sky, bowler-hatted men, a bird cut from sky, a night street under a noon sky), Dalí’s ochre plain, cliffs and melting clock, soft grain and lying intertitles.
+- Signature transitions: Door as portal, tilt reveal, match on object (key becomes bird), a blink, zoom into the pupil as it turns into a keyhole
+- Key techniques: Door-as-portal dolly, Stop-motion object morph, Zoom through a pupil
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Door-as-portal dolly, Stop-motion object morph, Zoom through a pupil).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Door-as-portal dolly and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "SURREAL CINEMA", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: 35mm camera, built sets and in-camera tricks, Stop-motion animation, Canvas 2D. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural homage.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Surreal Cinema motion-graphics film (Dream logic on film). Visual style: red pleated curtains over a black-and-white zigzag floor, a hooded figure with a mirror for a face, Magritte’s blue sky and sculpted clouds (an eye whose iris is sky, bowler-hatted men, a bird cut from sky, a night street under a noon sky), Dalí’s ochre plain, cliffs and melting clock, soft grain and lying intertitles. Motion: a slow camera that never stops: an even dolly that is suddenly pulled through a door, a tilt from cloud down to sand, a fall into an eye. Things move with dream patience — a key floating, men rising like balloons, a clock sagging — and one object turns into another in stepped stop-motion jumps. Signature moves: door-as-portal dolly, stop-motion object morph, zoom through a pupil; transitions: door as portal, tilt reveal, match on object (key becomes bird), a blink, zoom into the pupil as it turns into a keyhole. In the tradition of Un Chien Andalou (Luis Buñuel & Salvador Dalí, 1929) · L’Âge d’Or (Buñuel, 1930) · Meshes of the Afternoon (Maya Deren & Alexander Hammid, 1943) · Spellbound, dream sequence designed by Dalí (Alfred Hitchcock, 1945) · Dimensions of Dialogue (Jan Švankmajer, 1982) · Alice (Švankmajer, 1988) · Twin Peaks (David Lynch & Mark Frost, 1990) · Mulholland Drive (Lynch, 2001). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SURREAL CINEMA". Punchy sound design synced to every cut.
+```
+
+## 105 · Found Footage
+*Archival collage cinema · 1958 — · Cinematic & Film Language*
+
+Reference film: `videos/foundfootage.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Found Footage** (Archival collage cinema, 1958 —; family: Cinematic & Film Language).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Found-footage film makes new cinema out of other people’s film: newsreels, home movies, educational reels and leader are cut together until their juxtaposition says something none of them meant. Bruce Conner’s A Movie (1958) set the form with mismatched stock shots and a premature THE END; Craig Baldwin’s Tribulation 99 (1991) built a mock conspiracy history from stock footage, and Christian Marclay’s The Clock (2010) assembled a 24-hour film from clock shots synchronised to real time.
+- Study these reference works: Rose Hobart (Joseph Cornell, 1936) · A Movie (Bruce Conner, 1958) · Report (Bruce Conner, 1967) · Tribulation 99: Alien Anomalies Under America (Craig Baldwin, 1991) · Decasia (Bill Morrison, 2002) · The Clock (Christian Marclay, 2010)
+- Motion DNA: Rhythm comes from the cut, not the camera: shots of 0.2–0.9 s from unrelated sources, eyeline and graphic matches that invent cause and effect, a cutting rate that accelerates toward noon, and the strip itself moving — gate weave, 18 fps home-movie judder against 24 fps newsreel, splice frames rolling the frame line through the gate.
+- Visual DNA: An overscanned 16mm strip with perforations, frame lines, edge print and optical soundtrack in view; every shot a different stock — high-contrast newsreel, amber and blue tints, saturated home-movie colour, a soft dupe, grey academy leader; scratches, dust and hairs; typewritten captions that re-narrate the footage; trims hanging at the sides.
+- Signature transitions: Hard cuts on tape splices with a frame-line roll, leader countdown, a false THE END, eyeline matches, clocks agreeing across cuts, title printed over the last shot
+- Key techniques: Collage cutting across stocks, Overscan: perfs, edges, splices, Clocks synced to film time
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Collage cutting across stocks, Overscan: perfs, edges, splices, Clocks synced to film time).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Collage cutting across stocks and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "FOUND FOOTAGE", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: 16mm flatbed / optical printer, Archive scans with overscan, Canvas 2D (every “archival” shot procedurally drawn). If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural (no archival material used).
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Found Footage motion-graphics film (Archival collage cinema). Visual style: an overscanned 16mm strip with perforations, frame lines, edge print and optical soundtrack in view; every shot a different stock — high-contrast newsreel, amber and blue tints, saturated home-movie colour, a soft dupe, grey academy leader; scratches, dust and hairs; typewritten captions that re-narrate the footage; trims hanging at the sides. Motion: rhythm comes from the cut, not the camera: shots of 0.2–0.9 s from unrelated sources, eyeline and graphic matches that invent cause and effect, a cutting rate that accelerates toward noon, and the strip itself moving — gate weave, 18 fps home-movie judder against 24 fps newsreel, splice frames rolling the frame line through the gate. Signature moves: collage cutting across stocks, overscan: perfs, edges, splices, clocks synced to film time; transitions: hard cuts on tape splices with a frame-line roll, leader countdown, a false THE END, eyeline matches, clocks agreeing across cuts, title printed over the last shot. In the tradition of Rose Hobart (Joseph Cornell, 1936) · A Movie (Bruce Conner, 1958) · Report (Bruce Conner, 1967) · Tribulation 99: Alien Anomalies Under America (Craig Baldwin, 1991) · Decasia (Bill Morrison, 2002) · The Clock (Christian Marclay, 2010). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FOUND FOOTAGE". Punchy sound design synced to every cut.
+```
+
+## 106 · Ukiyo-e Motion
 *Woodblock Prints · 1670s — · Cultural & Regional*
 
 Reference film: `videos/ukiyoe.mp4`
@@ -3595,7 +4141,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Ukiyo-e Motion motion-graphics film (Woodblock Prints). Visual style: flat registered colour inside confident black keyblock lines, Prussian blue graded into bare paper, with woodgrain and fibre showing through the ink. Motion: the image is pulled block by block like a real print, then moves only in held, graphic poses: the wave curls into its claw-foam peak, boats rock, Hiroshige rain slashes across and the seal lands. Signature moves: keyblock + colour-block layers, prussian-blue bokashi, woodgrain & washi texture; transitions: block-by-block print pull, registration settle, rain veil, seal stamp. In the tradition of Under the Wave off Kanagawa (Hokusai, c.1831) · Thirty-six Views of Mount Fuji (Hokusai, 1830–32) · Sudden Shower over Shin-Ōhashi Bridge and Atake (Hiroshige, 1857) · One Hundred Famous Views of Edo (Hiroshige, 1856–58). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "UKIYO-E MOTION". Punchy sound design synced to every cut.
 ```
 
-## 93 · Ink Wash 水墨
+## 107 · Ink Wash 水墨
 *Shan Shui Animation · 1960 — · Cultural & Regional*
 
 Reference film: `videos/inkwash.mp4`
@@ -3634,7 +4180,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Ink Wash 水墨 motion-graphics film (Shan Shui Animation). Visual style: monochrome ink from charcoal to the palest grey, soft bleeding edges on fibrous paper, half the frame left empty, with one red seal. Motion: slow and breathing: ink blooms and settles, tadpoles flick, and the landscape condenses out of mist as the camera drifts back; nothing cuts. Signature moves: wet-paper ink bleed, graded ink & dry-brush cun, negative space as mist; transitions: ink bloom, mist dissolve, pull-back reveal, brush-written inscription. In the tradition of Travellers among Mountains and Streams (Fan Kuan, c.1000) · Where Is Mama (Shanghai Animation Film Studio, 1960) · The Cowherd’s Flute (Te Wei, 1963) · Feelings of Mountains and Waters (Te Wei, 1988). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "INK WASH 水墨". Punchy sound design synced to every cut.
 ```
 
-## 94 · Shadow Puppetry
+## 108 · Shadow Puppetry
 *Piying 皮影戏 · Han dynasty — · Cultural & Regional*
 
 Reference film: `videos/shadowpuppet.mp4`
@@ -3673,7 +4219,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Shadow Puppetry motion-graphics film (Piying 皮影戏). Visual style: profile figures in translucent red, green and yellow hide carved into lace, glowing through a warm lamp-lit cloth with a soft halo where they touch it and blurred rods below. Motion: stiff jointed limbs that swing like pendulums from three rods, a body that glides on the main rod, and sudden flourishes such as the somersault and the frozen pose on a gong crash. Signature moves: translucent dyed hide, hollow-carved patterns, rod-driven joints on a lamp-lit screen; transitions: blur-to-sharp press onto the screen, lift-off into soft shadow, lamp flare, gong-crash freeze. In the tradition of To Live (Zhang Yimou, 1994) · The Pig Eats Watermelon (Wan Guchan, 1958) · Huaxian Shadow Play troupes, Shaanxi · Tangshan shadow play · UNESCO Intangible Cultural Heritage (2011). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SHADOW PUPPETRY". Punchy sound design synced to every cut.
 ```
 
-## 95 · Dunhuang Murals
+## 109 · Dunhuang Murals
 *Mogao 敦煌壁画 · 4th–14th c. · Cultural & Regional*
 
 Reference film: `videos/dunhuang.mp4`
@@ -3712,7 +4258,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Dunhuang Murals motion-graphics film (Mogao 敦煌壁画). Visual style: malachite, lapis, cinnabar and ochre on an earth-red ground, darkened flesh shading and fine iron-wire lines, under a skin of cracks and flaking plaster. Motion: slow weightless glides on long curves, with the silk scarves doing the dancing: they trail the path, twist to show both faces, and keep rippling after the figure comes to rest. Signature moves: mineral pigments on plaster, iron-wire outline & contour shading, trailing-scarf secondary motion; transitions: lamp-light reveal, slow pull-back, ring-by-ring lotus bloom, flower rain, cartouche fade-in. In the tradition of Mogao Cave 257 Deer King Jataka (Northern Wei) · Cave 320 flying apsaras (Tang) · Cave 407 three-hare lotus ceiling (Sui) · Nine-Coloured Deer (Shanghai Animation Film Studio, 1981) · Dream of Dunhuang dance drama (Gansu, 1979). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DUNHUANG MURALS". Punchy sound design synced to every cut.
 ```
 
-## 96 · Islamic Geometry
+## 110 · Islamic Geometry
 *Girih & Zellige · 9th c. — · Cultural & Regional*
 
 Reference film: `videos/islamic.mp4`
@@ -3751,7 +4297,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Islamic Geometry motion-graphics film (Girih & Zellige). Visual style: eight-fold stars and rosettes in lapis, turquoise, green and ochre glaze on cream, bound by dark interlacing straps edged in gold, with no figures at all. Motion: everything is constructed before it is decorated: arcs and ruled lines draw a grid, the star lines trace over it, colour floods out ring by ring, and an endless zoom shows the same rosette nested inside itself. Signature moves: compass-and-straightedge build, polygons-in-contact star pattern, over-under strapwork & droste zoom; transitions: compass sweep, ripple trace, tile flood, Droste zoom, medallion iris. In the tradition of Alhambra zellige, Granada (14th c.) · Darb-i Imam shrine girih, Isfahan (1453) · Topkapı Scroll (15th–16th c.) · Ben Youssef Madrasa, Marrakesh (1560s) · Sheikh Lotfollah Mosque, Isfahan (1619). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "ISLAMIC GEOMETRY". Punchy sound design synced to every cut.
 ```
 
-## 97 · Papel Picado
+## 111 · Papel Picado
 *Mexican Cut-Paper Banners · 19th c. — · Cultural & Regional*
 
 Reference film: `videos/papelpicado.mp4`
@@ -3790,7 +4336,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Papel Picado motion-graphics film (Mexican Cut-Paper Banners). Visual style: hot pink, orange, purple, green and blue tissue cut into skulls, flowers, birds and lattice, glowing against a sunset sky, over candlelit streets and a marigold petal path. Motion: a slow dolly under rows of banners that sway on sagging cords, each flag rippling and lifting in gusts, with marigold petals drifting through the light. Signature moves: chisel-cut tissue lattice, backlit translucency, wind flutter & dolly under the rows; transitions: gust lifts a close-up flag away, dolly-through, petal storm, final banner settles to spell the title. In the tradition of Coco (Pixar, 2017) · The Book of Life (Reel FX, 2014) · San Salvador Huixcolotla papel picado workshops, Puebla · Día de Muertos ofrendas · Fiestas patrias street decorations. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "PAPEL PICADO". Punchy sound design synced to every cut.
 ```
 
-## 98 · Guochao
+## 112 · Guochao
 *China Chic · 2018 — · Cultural & Regional*
 
 Reference film: `videos/guochao.mp4`
@@ -3829,7 +4375,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Guochao motion-graphics film (China Chic). Visual style: vermilion, mineral blue, gold and ink; rice paper; moon-gate framing. Motion: ink spreads, mountains rise in parallax layers, and the seal lands as the final percussive hit. Signature moves: ink bloom, mountain parallax, calligraphy & seal; transitions: ink bloom reveal, scroll unroll. In the tradition of National Treasure (2017) · Yao-Chinese Folktales (2023). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "GUOCHAO". Punchy sound design synced to every cut.
 ```
 
-## 99 · Minhwa 민화
+## 113 · Minhwa 민화
 *Korean Folk Painting · 18th–19th c. — · Cultural & Regional*
 
 Reference film: `videos/minhwa.mp4`
@@ -3868,7 +4414,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Minhwa 민화 motion-graphics film (Korean Folk Painting). Visual style: outlined, flattened forms in vermilion, ochre, malachite and indigo on yellowed hanji: a striped-and-spotted grinning tiger under a pine, a black-and-white magpie, scalloped peonies and stylised rocks. Motion: paper-cut-out stiffness with comic timing: the tiger pops up on a spring and rolls its huge eyes, the magpie hops and caws, peonies burst open, and screen panels unfold in a zigzag. Signature moves: ink outline, flat mineral colour, obangsaek five-colour palette, multi-perspective composition, folding-screen (byeongpung) format; transitions: ink-then-colour reveal, scroll-viewing tilt, pull-back to a folding screen, panels unfolding, red seal stamp. In the tradition of Magpie and Tiger (Kkachi Horangi), 19th c., Leeum Museum of Art · Chaekgeori screens attributed to Yi Eung-rok (19th c.) · Sipjangsaeng ten-longevity screens (Joseon court and folk) · Moran-do peony screens · Soohorang, PyeongChang 2018 mascot. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "MINHWA 민화". Punchy sound design synced to every cut.
 ```
 
-## 100 · Folk Paper-cut
+## 114 · Folk Paper-cut
 *Wycinanki · Vytynanky · 19th c. — · Cultural & Regional*
 
 Reference film: `videos/wycinanki.mp4`
@@ -3907,7 +4453,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Folk Paper-cut motion-graphics film (Wycinanki · Vytynanky). Visual style: matte, flat glazed paper in fuchsia, green, yellow, orange, cobalt and black on a whitewashed wall: mirrored trees of life, birds and roosters, scalloped stars and tiny slit veins, each layer with a crisp edge and soft shadow. Motion: snip-by-snip reveals on the beat: shears trace the fold, scraps drop away, the sheet flips open into symmetry, and coloured layers slap down one on top of another like a mazurka step. Signature moves: freehand scissor cutting on the fold, mirror symmetry by unfolding, layered glazed paper (łowicz), cut-out slits and holes as line; transitions: scissor trace, fold-out flip, layer drop, cut-paper title. In the tradition of Kurpie leluja and gwiazdy (Kurpie Green Forest region) · Łowicz kodry and gwiazdy, Łowicz Regional Museum · Czesława Kwoka, Kurpie paper-cutter (1932–2021) · Polish Ethnographic Museum collections, Warsaw · Ukrainian vytynanky, Kyiv and Lviv. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FOLK PAPER-CUT". Punchy sound design synced to every cut.
 ```
 
-## 101 · Indian Miniature
+## 115 · Indian Miniature
 *Mughal · Rajput · Pahari painting · 16th–19th c. · Cultural & Regional*
 
 Reference film: `videos/miniature.mp4`
@@ -3946,7 +4492,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Indian Miniature motion-graphics film (Mughal · Rajput · Pahari painting). Visual style: a high-horizon garden terrace shown from above with upright profile figures, white marble pavilions with cusped arches and chhatris, rounded trees of countless leaves, jewel-tone lapis, vermilion and malachite on cream, fine dark outlines and glinting gold, inside rules, a lapis vine border and a gold-flowered hashiya. Motion: the painting is built the way a workshop built it — rules drawn, margin burnished, khaka sketched, colour laid layer by layer, gold applied last — then only gentle, devotional motion: a flute raised, a veil lifting, a peacock’s call, ripples in the tank, cranes crossing the sky. Signature moves: burnished wasli paper, red khaka underdrawing, flat mineral pigments (lapis, malachite, vermilion, indian yellow), gold leaf and shell gold, burnished, tilted perspective, profile figures, ornate hashiya margins; transitions: ruling-pen line draw, khaka-to-colour layering, gold-leaf sweep with sheen, slow camera glide across the folio, pull-back to the album page and its inscription. In the tradition of Hamzanama for Akbar (c. 1562–77) · Jahangir album pages with gold-flowered hashiya margins (c. 1610–20) · Nainsukh of Guler, paintings for Balwant Singh of Jasrota (c. 1740s–50s) · Kangra Gita Govinda series (c. 1775–80) · Kishangarh “Bani Thani” type, Nihal Chand (c. 1750). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "INDIAN MINIATURE". Punchy sound design synced to every cut.
 ```
 
-## 102 · African Pattern Animation
+## 116 · African Pattern Animation
 *Kente · Adinkra · Ndebele · 17th c. — today · Cultural & Regional*
 
 Reference film: `videos/africanpattern.mp4`
@@ -3985,7 +4531,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second African Pattern Animation motion-graphics film (Kente · Adinkra · Ndebele). Visual style: gold, green, red and black Kente with blocky weft-faced motifs; black Adinkra symbols in comb-ruled squares on cream cotton; whitewashed Ndebele walls of stepped gables, razor-blade hexagons and ladder stripes in primary colour with thick black and fine white outlines. Motion: motion follows the making: shuttle and beater on the 12/8 bell, strips sliding together into a checkerboard, stamps pressing down on the dotted-quarter beat with each symbol’s name, a brush tip tracing black outlines and colour flooding each field. Signature moves: narrow-strip treadle-loom weaving, strips sewn edge to edge, comb-ruled grid and calabash stamps in badie-bark ink, freehand black outlines filled with flat colour, each motif named; meaning carried by symbol and colour; transitions: loom pull-back to sewn cloth, cloth slide-over, comb rake, stamp press, lime-wash brush wipe, collapse into a labelled triptych. In the tradition of Asante royal Kente (Bonwire, Ashanti Region) and Ewe Kente (Agotime, Volta Region) · Adinkra cloths from Ntonso, Ghana; symbol sets catalogued by W. Bruce Willis, The Adinkra Dictionary (1998) · Esther Mahlangu, BMW 525i Art Car (1991) and Magiciens de la Terre, Paris (1989) · Kente stoles in graduation and diaspora fashion. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "AFRICAN PATTERN ANIMATION". Punchy sound design synced to every cut.
 ```
 
-## 103 · Variety Captions
+## 117 · Variety Captions
 *Huazi · 2013 — · Social & Commercial*
 
 Reference film: `videos/huazi.mp4`
@@ -4024,7 +4570,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Variety Captions motion-graphics film (Huazi). Visual style: chunky rounded type with stacked outlines, gradients, stickers and speed lines. Motion: every caption pops on a spring with an exact sound effect; the camera shakes on the punchline. Signature moves: layered outlines, elastic pop-in, sfx sync; transitions: desaturated "awkward silence", stamp-in. In the tradition of Dad, Where Are We Going? (2013) · Running Man China (2014). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "VARIETY CAPTIONS". Punchy sound design synced to every cut.
 ```
 
-## 104 · Scrapbook Journal
+## 118 · Scrapbook Journal
 *Shouzhang · 2019 — · Social & Commercial*
 
 Reference film: `videos/shouzhang.mp4`
@@ -4063,7 +4609,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Scrapbook Journal motion-graphics film (Shouzhang). Visual style: dot-grid paper, washi tape, polaroids, handwriting, warm desk light. Motion: everything steps at 12 fps with per-frame jitter, as if placed by hand. Signature moves: 12 fps boil, washi tape, handwriting reveal; transitions: tape slap, stamp thump. In the tradition of Hobonichi Techo · Traveler's Notebook · journal vlogs. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SCRAPBOOK JOURNAL". Punchy sound design synced to every cut.
 ```
 
-## 105 · Science Explainer
+## 119 · Science Explainer
 *Kepu · 2019 — · Social & Commercial*
 
 Reference film: `videos/kepu.mp4`
@@ -4102,7 +4648,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Science Explainer motion-graphics film (Kepu). Visual style: dark navy, flat illustration, mono numerals, callout leaders. Motion: ask, zoom through scales, count, then compare on an honest scale. Signature moves: question hook, powers-of-ten zoom, to-scale data; transitions: magnifier zoom, number collapse. In the tradition of Powers of Ten (1977) · PaperClip, "Everything about COVID-19" (2020). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SCIENCE EXPLAINER". Punchy sound design synced to every cut.
 ```
 
-## 106 · Sports Broadcast
+## 120 · Sports Broadcast
 *Glass, Chrome and Score Bugs · 1994 — · Social & Commercial*
 
 Reference film: `videos/sports.mp4`
@@ -4141,7 +4687,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Sports Broadcast motion-graphics film (Glass, Chrome and Score Bugs). Visual style: deep arena navy with volumetric beams, team-colour glass panels with metal edges, chrome condensed italic type, gold accents, crests, a score bug, lower third and ticker. Motion: everything arrives with violence: panels slam in on the beat with overshoot and motion smears, numbers count up and lock, a spinning logo stinger swallows the frame, and a flare sweeps on the final lockup. Signature moves: extruded slab panels: metal side face, glass front, bevel light, chrome type: banded gradient fill, extrusion, gleam sweep, slam-in with overshoot, motion smear and camera shake on every hit, anamorphic lens flare and light streaks in additive blend; transitions: slam-ins, diagonal split, whip-outs, logo stinger with flash, wipe bars, lens-flare reveal. In the tradition of NFL on FOX graphics package (1994 –, FoxBox score bug) · ESPN Monday Night Football open · Sky Sports Premier League graphics · NBC Sunday Night Football · Olympic Broadcasting Services graphics (OBS) · Hockey Night in Canada. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SPORTS BROADCAST". Punchy sound design synced to every cut.
 ```
 
-## 107 · Luxury Brand Motion
+## 121 · Luxury Brand Motion
 *Maison Films · 1970s — · Social & Commercial*
 
 Reference film: `videos/luxury.mp4`
@@ -4180,7 +4726,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Luxury Brand Motion motion-graphics film (Maison Films). Visual style: warm black, champagne gold and ivory; macro surfaces of liquid metal, silk and cut crystal; generous negative space; a thin, wide-tracked Didone wordmark with an italic tagline. Motion: everything is slow and precise: a pour in slow motion, light gliding across facets, a raking light turning over an embossed monogram, letters resolving out of blur while their tracking tightens; every move eases in and out. Signature moves: per-pixel liquid-gold surface: radial ripples reflecting a softbox, procedural silk height field with anisotropic sheen, faceted crystal: per-facet normals lit by a gliding light, blind emboss from offset blurred masks under raking light; transitions: slow dissolves, dip to black, light leaving the frame, letters resolving from blur. In the tradition of Chanel N°5 “Share the Fantasy” (Ridley Scott, 1979) · Chanel N°5 “Le Loup” (Luc Besson, 1998) · Cartier “L’Odyssée de Cartier” (Bruno Aveillan, 2012) · Dior J’adore films · Rolex “Perpetual” brand films · Hermès brand films and idents. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "LUXURY BRAND MOTION". Punchy sound design synced to every cut.
 ```
 
-## 108 · Logo Reveal
+## 122 · Logo Reveal
 *Brand Sting & Studio Ident · 1930s — · Social & Commercial*
 
 Reference film: `videos/logoreveal.mp4`
@@ -4219,7 +4765,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Logo Reveal motion-graphics film (Brand Sting & Studio Ident). Visual style: a geometric monogram on warm paper, ink black with one signal orange, a hairline grid, mono-type spec labels and a tightly kerned geometric sans wordmark. Motion: build-up, then one landing: construction lines and a pen trace lead to the moment the sun-dot springs in on the final note of the sonic logo, after which everything settles and holds still. Signature moves: mark defined by two tangent circles, reused for every take, compass-swept construction circles and dimension guides, outline traced with a line-dash pen, then an ink fill along the path, source-atop light sweep; glyph-by-glyph tracking with font kerning kept; transitions: hard cuts between alternate takes, construction lines dissolving into the fill, light sweep, spring slide to lock-up. In the tradition of 20th Century Fox ident and fanfare (Alfred Newman, 1933/1935) · MGM “Leo the Lion” · Netflix “ta-dum” sonic logo (2015) and ribbon ident (2019) · Pentagram identity motion for MIT Media Lab (2014) · Pixar’s Luxo Jr. lamp ident. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "LOGO REVEAL". Punchy sound design synced to every cut.
 ```
 
-## 109 · App UI Motion
+## 123 · App UI Motion
 *Micro-interactions & Product Shots · 2007 — · Social & Commercial*
 
 Reference film: `videos/appui.mp4`
@@ -4258,7 +4804,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second App UI Motion motion-graphics film (Micro-interactions & Product Shots). Visual style: a clean device on a pastel gradient, soft cards and pill shapes, one brand green with a lime accent, Inter type and a translucent touch indicator. Motion: everything answers the finger: presses dip, releases spring back with a little overshoot, lists cascade in 70 ms steps and elements carry their identity from one screen into the next. Signature moves: damped springs (response, damping fraction) on every property, shared-element morph of rect, radius, image and type size, rubber-band pull with hold-and-release, live spring-curve readout synced to each beat; transitions: iris open, push, shared-element morph, pull and spring back, button-to-loader morph, app closing into its icon. In the tradition of iPhone OS rubber-band scrolling (2007) · Google Material Design motion guidelines (2014) · Apple iOS 7 spring animations (2013) · Apple “Dynamic Island” (iPhone 14 Pro, 2022) · Dribbble UI animation shots · Airbnb Lottie (2017). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "APP UI MOTION". Punchy sound design synced to every cut.
 ```
 
-## 110 · Data Storytelling
+## 124 · Data Storytelling
 *Animated Data Journalism · 2006 — · Social & Commercial*
 
 Reference film: `videos/datastory.mp4`
@@ -4297,7 +4843,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Data Storytelling motion-graphics film (Animated Data Journalism). Visual style: warm newsprint white, black serif headlines, a single editorial red for the story line, muted categorical colours, hairline gridlines, precise labels and an "Illustrative data" source line. Motion: motion serves the reading order: axes first, then data draws through time with a live cursor, notes pop in when the line reaches them, and each chart holds still long enough to be read before the next one. Signature moves: every mark drawn to scale from the data functions: zero baselines, log-x where labelled, annotations triggered as the line cursor passes each event, soft-rank interpolation for a continuous bar-chart race, gapminder bubbles: log income × lifespan, area ∝ population, year watermark; transitions: header swaps with slide-up fades, axes growing from the origin, bars and bubbles popping in, number count-up. In the tradition of Hans Rosling, “The best stats you’ve ever seen” (TED, 2006) · BBC “The Joy of Stats”: 200 Countries, 200 Years, 4 Minutes (2010) · The New York Times “How the Virus Got Out” (2020) · The Pudding “The Largest Vocabulary in Hip Hop” (2017) · John Burn-Murdoch’s FT Covid trajectory charts (2020). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DATA STORYTELLING". Punchy sound design synced to every cut.
 ```
 
-## 111 · Podcast Visualizer
+## 125 · Podcast Visualizer
 *The Audiogram Clip · 2017 — · Social & Commercial*
 
 Reference film: `videos/podcast.mp4`
@@ -4336,7 +4882,7 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 10-second Podcast Visualizer motion-graphics film (The Audiogram Clip). Visual style: a square cover tile, bold sans captions in white with a coloured highlight pill, rounded bars mirrored around a centre line, speaker chips and a thin scrub bar, over a dark gradient tinted by the cover art. Motion: everything is driven by the voice: bars and avatar rings pulse per syllable, captions pop in word by word with the spoken word highlighted, and the layout snaps to whoever is talking. Signature moves: waveform / bar visualiser from audio envelope, word-by-word captions, speaker cards & active-speaker highlight, cover art + progress bar template; transitions: cover spin-in, speaker switch, pull-quote blow-up, end-card fold. In the tradition of WNYC Audiogram generator (open source, 2016) · Headliner audiograms (2017 —) · Wavve (2017 —) · Video-podcast clips on TikTok, Instagram Reels and YouTube Shorts (2020s). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "PODCAST VISUALIZER". Punchy sound design synced to every cut.
 ```
 
-## 112 · Concert VJ Loops
+## 126 · Concert VJ Loops
 *Live visuals for stage & club · 1990s — · Social & Commercial*
 
 Reference film: `videos/vj.mp4`
@@ -4373,5 +4919,44 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 ### Video-model prompt (Sora / Runway / Kling / Veo)
 ```text
 10-second Concert VJ Loops motion-graphics film (Live visuals for stage & club). Visual style: a black stage with a wide LED wall of visible pixels, neon cyan, magenta and amber geometry — tunnels, data columns, nested triangles — bloom and floor reflections, a pyramid outline, a mapped cube booth, laser fans over a silhouetted crowd with raised hands and phone screens. Motion: everything is locked to the beat grid: loops cycle in bar lengths, kicks launch local rings rather than full-frame flashes, a build accelerates scroll speed and roll density, the drop changes clip on the downbeat and lasers fan on the bar. Signature moves: clip launcher with bpm sync / tap tempo, led wall mapping at low pixel pitch, projection-mapped set pieces, lasers and moving heads through haze; transitions: dive through the software output preview onto the wall, clip cuts on the downbeat, scan sweeps, accelerating build, pulse decays, title resolved in LED pixels. In the tradition of UVA (United Visual Artists) — Massive Attack 100th Window tour LED wall (2003) and Heligoland tour (2010) · Daft Punk, Alive 2006/2007 pyramid stage · Amon Tobin, ISAM Live (2011), with Heavy Projects and V Squared Labs · Resolume Arena / TouchDesigner VJ sets in clubs and festivals. Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CONCERT VJ LOOPS". Punchy sound design synced to every cut.
+```
+
+## 127 · SaaS Product Motion
+*B2B launch film · 2010s — · Social & Commercial*
+
+Reference film: `videos/saas.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **SaaS Product Motion** (B2B launch film, 2010s —; family: Social & Commercial).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Software companies now launch features the way carmakers launch cars: with a short film in which the product interface itself is the hero. Through the late 2010s and 2020s teams such as Stripe, Linear and Vercel set the look — a dark stage lit by a drifting gradient mesh, app windows tilted in three-quarter perspective, a cursor demonstrating one feature, numbers counting up, and every move on a spring.
+- Study these reference works: Stripe homepage animated gradient (2020) · Linear product launch and changelog films · Vercel Ship launch keynotes (2023 —) · Figma Config keynote product demos (2020 —)
+- Motion DNA: Every arrival is a damped spring with a touch of overshoot; words rise in a 150 ms stagger and sharpen from blur, the window swings from three-quarter view to flat for the demo and back, satellite cards drift at their own depth for parallax, and numbers count up on an ease-out so they land, not stop.
+- Visual DNA: Near-black stage under a slow violet–blue–pink gradient mesh, a faint grid, glassy dark cards with 1 px borders and a lit top edge, one violet accent, Geist type with tight tracking, crisp product UI (sidebar, issue rows, command menu, toast) and a cursor as the protagonist.
+- Signature transitions: Spring-in headline, window rising in perspective, swing to flat and push in, command-menu scale-in, rows re-sorting on a spring, recede and fly-in of stat cards, fly-out to the logo lock-up
+- Key techniques: 3/4 perspective UI cards, Cursor-driven feature demo, Springs and counters
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (3/4 perspective UI cards, Cursor-driven feature demo, Springs and counters).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on 3/4 perspective UI cards and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "SAAS PRODUCT MOTION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Figma → After Effects or Rive, React + Framer Motion / CSS springs, Canvas 2D (3D planes as affine cells). If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural (fictional product, no real logos).
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second SaaS Product Motion motion-graphics film (B2B launch film). Visual style: near-black stage under a slow violet–blue–pink gradient mesh, a faint grid, glassy dark cards with 1 px borders and a lit top edge, one violet accent, Geist type with tight tracking, crisp product UI (sidebar, issue rows, command menu, toast) and a cursor as the protagonist. Motion: every arrival is a damped spring with a touch of overshoot; words rise in a 150 ms stagger and sharpen from blur, the window swings from three-quarter view to flat for the demo and back, satellite cards drift at their own depth for parallax, and numbers count up on an ease-out so they land, not stop. Signature moves: 3/4 perspective ui cards, cursor-driven feature demo, springs and counters; transitions: spring-in headline, window rising in perspective, swing to flat and push in, command-menu scale-in, rows re-sorting on a spring, recede and fly-in of stat cards, fly-out to the logo lock-up. In the tradition of Stripe homepage animated gradient (2020) · Linear product launch and changelog films · Vercel Ship launch keynotes (2023 —) · Figma Config keynote product demos (2020 —). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "SAAS PRODUCT MOTION". Punchy sound design synced to every cut.
 ```
 

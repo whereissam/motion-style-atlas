@@ -1261,6 +1261,94 @@ window.ATLAS = {
    "posterImg": "atlas/posters/picturebook.jpg"
   },
   {
+   "id": "rotoscope",
+   "family": "C",
+   "name": "Rotoscope",
+   "sub": "Traced Over Live Action",
+   "era": "1915 —",
+   "origin": "Max Fleischer patented the rotoscope in 1915: live-action film projected one frame at a time onto glass so an animator could trace real motion. Disney used traced footage as reference for Snow White, Ralph Bakshi built whole features on it, a-ha’s “Take On Me” turned it into a living pencil sketch, and Bob Sabiston’s Rotoshop gave Richard Linklater’s Waking Life and A Scanner Darkly their interpolated, swimming flats.",
+   "works": "Out of the Inkwell (Max & Dave Fleischer, 1918–29) · Minnie the Moocher (Fleischer, with Cab Calloway, 1932) · Snow White and the Seven Dwarfs (Disney, 1937) · The Lord of the Rings (Ralph Bakshi, 1978) · Take On Me (a-ha, dir. Steve Barron, 1985) · Waking Life (Richard Linklater, 2001) · A Scanner Darkly (Linklater, 2006)",
+   "tech": [
+    "Frozen plate traced on pegs",
+    "Pencil boil with offset hatching",
+    "Rotoshop-style swimming flats"
+   ],
+   "accent": "#e2843f",
+   "motionDNA": "Real human timing that no animator would invent — the heel-strike, the decelerating last step, the weight settling, overlapping arm swing — carried straight into drawing; in pencil the line boils on twos, in Rotoshop the same contours swim smoothly between keyed traces.",
+   "visualDNA": "A sepia live-action plate in a projector gate, translucent animation bond on pegs, blue line-of-action construction under graphite contours and diagonal hatching; then flat posterised colour fields, thin wobbling ink lines and backgrounds that breathe.",
+   "transitions": "Freeze frame, sheet drop onto pegs, light-table switch-off, push-in to the hand, live-action breakthrough, colour flood from the hand, traced title",
+   "implementation": [
+    "Rotoscope projector and glass easel",
+    "Rotoshop vector interpolation",
+    "After Effects / TVPaint rotoscoping",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (the live-action plate is synthesised from the same rig)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "media/rotoscope.mp4",
+   "posterImg": "atlas/posters/rotoscope.jpg"
+  },
+  {
+   "id": "framebyframe",
+   "family": "C",
+   "name": "Frame by Frame",
+   "sub": "Straight-ahead on Twos",
+   "era": "1908 —",
+   "origin": "Every frame drawn by hand: since Émile Cohl’s Fantasmagorie and Winsor McCay’s Gertie, animators have drawn on punched paper over a light table and flipped the pages to feel the motion. Pencil tests check timing before anything is cleaned up; Richard Williams codified the craft in The Animator’s Survival Kit, while Bill Plympton’s boiling pencil and Ryan Woodward’s Thought of You leave the rough line on screen.",
+   "works": "Fantasmagorie (Émile Cohl, 1908) · Gertie the Dinosaur (Winsor McCay, 1914) · Your Face (Bill Plympton, 1987) · The Man Who Planted Trees (Frédéric Back, 1987) · The Animator’s Survival Kit (Richard Williams, 2001) · Thought of You (Ryan Woodward, 2010)",
+   "tech": [
+    "Bouncing-ball arcs and spacing",
+    "Onion skins either side",
+    "Boiling line on twos"
+   ],
+   "accent": "#3e72c6",
+   "motionDNA": "Twelve drawings a second, each held for two frames: a straight-ahead flow from one drawing to the next, squash on contact and stretch on the fall, spacing that eases out of every arc, and a line that never sits still because no two drawings are traced exactly alike.",
+   "visualDNA": "Warm animation bond on brass pegs over a light table, blue construction pencil under graphite, red and blue onion skins of the neighbouring drawings, an exposure sheet filling in down the side and hand-lettered notes in the margins.",
+   "transitions": "Sheet drop onto pegs, ball-to-character metamorphosis, 2D squash turn, chronophotographic overlay, letter-by-letter title",
+   "implementation": [
+    "Pencil on punched paper, light table and line tester",
+    "TVPaint / Toon Boom Harmony / Procreate Dreams",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural (boil and registration jitter are seeded per drawing)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.6,
+   "video": "media/framebyframe.mp4",
+   "posterImg": "atlas/posters/framebyframe.jpg"
+  },
+  {
+   "id": "animemg",
+   "family": "C",
+   "name": "Anime MG",
+   "sub": "OP & Title-card Motion Graphics",
+   "era": "1995 —",
+   "origin": "Japanese TV anime compresses a whole show into a 90-second opening cut hard to its theme song: speed lines, smear frames, cel-flat colour, lens flares and huge type. Evangelion’s stark kanji title cards, Production I.G’s layered digital compositing, Shaft’s typographic interruptions and TRIGGER’s slammed katakana logos made the title card itself a motion-graphics form.",
+   "works": "Neon Genesis Evangelion (Gainax, 1995) · Ghost in the Shell: Stand Alone Complex (Production I.G, 2002) · The Melancholy of Haruhi Suzumiya (Kyoto Animation, 2006) · Bakemonogatari (Shaft, 2009) · Kill la Kill (Trigger, 2013) · Promare (Trigger, 2019)",
+   "tech": [
+    "Speed lines and smear multiples",
+    "Beat-synced type-card slams",
+    "Cel shadow bands, flares, leaks"
+   ],
+   "accent": "#ff2b4e",
+   "motionDNA": "Cut to the beat: holds and slams on the downbeat, characters on twos against backgrounds panning on ones, smear multiples on fast limbs, slow-motion leaps across the sun, a single impact frame with decaying shake, springy logo slams and a closing shine.",
+   "visualDNA": "Flat cel colour with one hard shadow tone, ink outlines, saturated red/yellow/cyan cards, heavy condensed English type paired with katakana, cel-shaded cumulus on gradient skies, hexagonal lens ghosts, warm light leaks, sparkles and halftone starbursts.",
+   "transitions": "Anamorphic slit open, smash cut, panel slams and slides, tilt-up reveal, impact inversion, letterbox snap, white slash wipe, logo slam",
+   "implementation": [
+    "Hand-drawn cels and digital ink & paint",
+    "After Effects compositing (flares, leaks, type)",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/animemg.mp4",
+   "posterImg": "atlas/posters/animemg.jpg"
+  },
+  {
    "id": "mograph",
    "family": "D",
    "name": "MoGraph",
@@ -1530,6 +1618,96 @@ window.ATLAS = {
    "poster": 9.6,
    "video": "media/celshaded.mp4",
    "posterImg": "atlas/posters/celshaded.jpg"
+  },
+  {
+   "id": "productviz",
+   "family": "D",
+   "name": "Product Visualization",
+   "sub": "Hero Renders on a Seamless Sweep",
+   "era": "2000s —",
+   "origin": "The CG product film: a manufacturer’s CAD model is lit like a studio photograph — softboxes, strip lights and a seamless sweep — and turned slowly in front of the camera, so every edge reads as a line of light. It grew out of industrial-design rendering (Alias, later KeyShot and Octane) and was set as a genre by Apple’s product films from the 2000s on, then by the launch reels every phone, watch, headphone and sneaker brand now commissions.",
+   "works": "Mac Pro reveal film (Apple, WWDC 2013) · Introducing Apple Watch (Apple, 2014) · Introducing iPhone X (Apple, 2017) · KeyShot renderer (Luxion, 2010)",
+   "tech": [
+    "Area-light reflections on metal",
+    "Planar softbox mirrors in glass",
+    "Turntable orbit + exploded layers"
+   ],
+   "accent": "#ff7a3d",
+   "motionDNA": "Slow, weightless turntable rotation with long eases, light sweeping across edges rather than the object moving fast; a precise exploded-view separation that decelerates into place, holds for callouts, and snaps back together with a tiny settle.",
+   "visualDNA": "A single hero object floating over a black-to-charcoal seamless sweep with a soft mirror floor; rim strips draw the silhouette in thin lines of light, big softboxes slide across glass as clean gradients, anodised colour, minimal thin sans type and hairline callouts.",
+   "transitions": "Light-sweep reveal, turntable orbit, explode and collapse, screen wake, push to hero 3/4",
+   "implementation": [
+    "KeyShot / Octane / Redshift turntables",
+    "Cinema 4D or Blender with HDRI softbox rigs",
+    "CAD data (STEP) retopologised for render",
+    "Canvas 2D: CPU projection, area-light hit tests per band quad, mirrored softbox quads on caps, mirrored-camera floor pass"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "media/productviz.mp4",
+   "posterImg": "atlas/posters/productviz.jpg"
+  },
+  {
+   "id": "architectural",
+   "family": "D",
+   "name": "Architectural Motion",
+   "sub": "Plan, Massing and Flythrough",
+   "era": "1990s —",
+   "origin": "Archviz animation turns an unbuilt design into a camera journey: drawings become volumes, volumes take on materials and daylight, and a dolly or drone path walks the client through spaces that do not exist yet. It grew from 1990s 3ds Max and V-Ray walkthroughs for competitions and real-estate marketing; Alex Roman’s The Third & The Seventh (2009) showed it could be cinema, and real-time engines (Lumion, Twinmotion, Unreal) later made sun studies and flythroughs part of everyday design review.",
+   "works": "The Third & The Seventh (Alex Roman, 2009) · Lumion (Act-3D, 2010) · Twinmotion (Abvent, later Epic Games) · Unreal Engine archviz walkthroughs",
+   "tech": [
+    "Blueprint plan extruded to massing",
+    "Exact cast shadows on box faces",
+    "Sun study sweep + dusk glow"
+   ],
+   "accent": "#e2b26b",
+   "motionDNA": "Slow, steady, physically plausible camera: a top-down plan that tilts into perspective, a measured orbit while the sun arcs overhead, then a gimbal-smooth drop to eye level and a lateral dolly — no shake, no snap, every move eased like a crane or drone.",
+   "visualDNA": "Blueprint blue with white hairlines, dash-dot grids and poché walls; a white clay massing model with soft contact shadows; then honest materials — travertine, board-formed concrete, timber and glass — under a sky that moves from crisp noon to warm dusk with glowing interiors mirrored in a pool.",
+   "transitions": "Line draw-on, plan-to-perspective tilt, extrusion, wireframe-to-solid crossfade, material wipe, sun sweep, eye-level dolly",
+   "implementation": [
+    "3ds Max + V-Ray / Corona",
+    "Lumion, Twinmotion, Unreal Engine",
+    "Revit / Rhino / SketchUp source models",
+    "Canvas 2D: AABB painter sort, cast-shadow hulls per face plane, mirrored-camera pool reflection"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.5,
+   "video": "media/architectural.mp4",
+   "posterImg": "atlas/posters/architectural.jpg"
+  },
+  {
+   "id": "character3d",
+   "family": "D",
+   "name": "3D Character Animation",
+   "sub": "Squash, Stretch and Performance",
+   "era": "1986 —",
+   "origin": "Keyframed CG characters that act: the hand-drawn principles of the Disney animators — squash and stretch, anticipation, arcs, follow-through, appeal — applied to 3D models, which John Lasseter set out in his 1987 SIGGRAPH paper after Pixar’s Luxo Jr. (1986) proved two desk lamps could carry a story. Pixar’s Toy Story (1995) made it a feature-film medium, and the soft-lit, rounded, expressive house style it set is now the default language of studio animation, game cinematics and mascot spots.",
+   "works": "Luxo Jr. (John Lasseter, Pixar, 1986) · Toy Story (John Lasseter, Pixar, 1995) · Geri’s Game (Jan Pinkava, Pixar, 1997) · For the Birds (Ralph Eggleston, Pixar, 2000) · WALL·E (Andrew Stanton, Pixar, 2008) · The Illusion of Life (Frank Thomas & Ollie Johnston, 1981)",
+   "tech": [
+    "Volume-kept squash and stretch",
+    "Lagged antenna follow-through",
+    "Ray-traced soft shadows + AO"
+   ],
+   "accent": "#ffb53b",
+   "motionDNA": "Acting in poses and timing: every action is announced by an anticipation in the opposite direction, travels on a clean parabolic arc with stretch along the velocity, lands in a squash that springs back through overshoot, while appendages lag and whip through after the body stops; eyes and brows lead the thought a few frames before the body moves.",
+   "visualDNA": "A simple, rounded, saturated character with huge eyes and readable brows on a warm seamless cyc; soft key light with wrapped, subsurface-warm terminators, a cool fill, a bright rim, gentle contact shadows and ambient occlusion, glossy catchlights in the eyes.",
+   "transitions": "Held shot with a slow push-in; staging and acting carry the cut points; breakdown captions name each principle",
+   "implementation": [
+    "Maya / Presto rigs, keyframed in the graph editor",
+    "RenderMan / Arnold / Cycles with area lights + AO",
+    "Blender Grease-Pencil blocking, then splined",
+    "Canvas 2D: per-pixel ray tracer over ellipsoids (960×540, upscaled), analytic soft shadows and AO"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/character3d.mp4",
+   "posterImg": "atlas/posters/character3d.jpg"
   },
   {
    "id": "particles",
@@ -1864,6 +2042,65 @@ window.ATLAS = {
    "posterImg": "atlas/posters/feedback.jpg"
   },
   {
+   "id": "noisemotion",
+   "family": "E",
+   "name": "Noise Motion",
+   "sub": "Perlin & curl-noise flow fields",
+   "era": "1985 —",
+   "origin": "Ken Perlin invented gradient noise for Tron and published it as \"An Image Synthesizer\" at SIGGRAPH 1985: a smooth, band-limited random function that became the default source of organic motion in computer graphics, earning him a Technical Achievement Academy Award in 1997. Generative artists turned it into motion by steering particles with it — angle-from-noise flow fields, and from 2007 Bridson's divergence-free curl noise — and Tyler Hobbs' Fidenza (2021) made packed, non-colliding flow-field curves a signature of long-form generative art.",
+   "works": "Ken Perlin — \"An Image Synthesizer\", SIGGRAPH 1985 · Robert Bridson, Jim Hourihan & Marcus Nordenstam — \"Curl-Noise for Procedural Fluid Flow\", SIGGRAPH 2007 · Robert Hodgin — Magnetosphere (iTunes visualizer, 2008) · Tyler Hobbs — Fidenza (Art Blocks, 2021)",
+   "tech": [
+    "Perlin gradient noise",
+    "Curl-noise advection",
+    "Collision-packed ribbons"
+   ],
+   "accent": "#d2462b",
+   "motionDNA": "Everything moves because a smooth random field says so: ticks swing into alignment, particles are born, stream along the field and die, the whole flow slowly morphs as the noise is sampled through time, then freezes while wide ribbons grow along it from their seed points.",
+   "visualDNA": "A warm cream print with pen-plotter ink hairlines and topographic contours, then flat Fidenza-like ribbons of varied width in vermilion, ochre, ultramarine, blush and sage that never touch, finished with a mat margin and a gallery label.",
+   "transitions": "Contour map to tick field, ticks release into particles, flow freezes, ribbons grow, pull back to the framed print",
+   "implementation": [
+    "Processing / p5.js",
+    "openFrameworks / Cinder",
+    "TouchDesigner / Houdini",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/noisemotion.mp4",
+   "posterImg": "atlas/posters/noisemotion.jpg"
+  },
+  {
+   "id": "shaderart",
+   "family": "E",
+   "name": "Shader Art",
+   "sub": "Fragment shaders & live coding",
+   "era": "2000s —",
+   "origin": "Shader art paints every pixel with one small GPU program — a fragment shader that maps a pixel coordinate and the time to a colour — so images are built from maths rather than geometry: signed distance fields, noise, domain warping and folded space. It grew from the demoscene's size-limited intros and was codified by Inigo Quilez, whose articles on SDFs, fbm warping and cosine palettes became the standard references, and whose Shadertoy (2013, with Pol Jeremias) made it a browser-based community; live \"shader showdown\" battles in Bonzomatic put the coding itself on screen.",
+   "works": "Inigo Quilez — articles on domain warping, 2D distance functions and cosine palettes (iquilezles.org) · Shadertoy (Inigo Quilez & Pol Jeremias, 2013) · Bonzomatic live-coding tool (Gargaj / Conspiracy) used for Revision's Shader Showdown · The Book of Shaders (Patricio Gonzalez Vivo & Jen Lowe)",
+   "tech": [
+    "Per-pixel shading",
+    "SDF smooth-min metaballs",
+    "fbm domain warping"
+   ],
+   "accent": "#50fa7b",
+   "motionDNA": "The image is a pure function of time, so motion is continuous and endless: gradients cycle, blobs melt into each other through smooth-min, warped noise churns like smoke, the kaleidoscope rotates and its palette scrolls outward; each recompile wipes a new program down the screen on the beat.",
+   "visualDNA": "Full-bleed per-pixel colour fields — the default cosine rainbow, orange-and-blue distance-field stripes with a white zero line, teal-and-sand marbled fbm, an eight-fold mirrored mandala in a cosine palette — under monospace GLSL with dark backing boxes and a status bar.",
+   "transitions": "Typed code, compile, top-to-bottom scan wipe to the new program; code clears for the title",
+   "implementation": [
+    "GLSL fragment shaders (Shadertoy, Bonzomatic, KodeLife)",
+    "TouchDesigner GLSL TOP",
+    "Canvas 2D ImageData emulation"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": true,
+   "dur": 10,
+   "poster": 9.2,
+   "video": "media/shaderart.mp4",
+   "posterImg": "atlas/posters/shaderart.jpg"
+  },
+  {
    "id": "claymation",
    "family": "F",
    "name": "Clay Stop Motion",
@@ -2128,6 +2365,65 @@ window.ATLAS = {
    "posterImg": "atlas/posters/objectstop.jpg"
   },
   {
+   "id": "puppet",
+   "family": "F",
+   "name": "Puppet Animation",
+   "sub": "Stop-motion puppets on a miniature set",
+   "era": "1910s —",
+   "origin": "Puppet animation poses jointed figures on a miniature set and shoots them one frame at a time, so a body built of wood, wire, felt and silicone appears to live. Władysław Starewicz pioneered it in the 1910s, Jiří Trnka made Czech puppet film an art form from the late 1940s with carved wooden figures whose fixed faces act through light and posture, and studios such as Laika and Wes Anderson's crews later combined steel ball-and-socket armatures, furred and knitted costumes and libraries of replacement faces.",
+   "works": "Władysław Starewicz — The Cameraman's Revenge (1912) · Jiří Trnka — The Emperor's Nightingale (1949), A Midsummer Night's Dream (1959), The Hand (1965) · Henry Selick / Laika — Coraline (2009) · Wes Anderson — Fantastic Mr. Fox (2009) · Laika — Kubo and the Two Strings (2016)",
+   "tech": [
+    "12 fps stepped posing",
+    "Replacement mouths & eyelids",
+    "Ball-and-socket armature"
+   ],
+   "accent": "#cf6429",
+   "motionDNA": "Everything moves in held steps at 12 frames a second: a walk clicks from pose to pose, the head snaps between angles, mouths and eyelids swap whole pieces from a tray, fur and felt boil slightly where hands touched them, a hop is held up by a rig arm, and the key light flickers by a percent from frame to frame.",
+   "visualDNA": "A planimetric, symmetrical tabletop set in autumn oranges and mustards — painted dusk backdrop, cardboard hills, pompom felt trees on dowels, a balsa house with a lit window, a sand lane on green flock — and a felt fox puppet in a knitted jumper, scarf and corduroys with glass-bead eyes, then its steel armature in an x-ray pass.",
+   "transitions": "Slate clap, stepped walk-in, head turn, mouth-tray insert, x-ray wipe to the armature, rig-arm hop, pull back to the set edge and studio",
+   "implementation": [
+    "Dragonframe stop-motion capture",
+    "Ball-and-socket armatures, 3D-printed replacement faces",
+    "Nuke rig removal",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Needs a built puppet and set (this film is a procedural homage)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.3,
+   "video": "media/puppet.mp4",
+   "posterImg": "atlas/posters/puppet.jpg"
+  },
+  {
+   "id": "pixilation",
+   "family": "F",
+   "name": "Pixilation",
+   "sub": "Live actors, one frame at a time",
+   "era": "1908 —",
+   "origin": "Pixilation animates real people and objects with the stop-motion camera: actors hold a pose for each exposure, move a little, and hold again, so on screen they glide, levitate and change clothes without ever walking. Émile Cohl and Segundo de Chomón used the trick in the 1900s; Norman McLaren made it an art form at the National Film Board of Canada with Neighbours (1952), which won an Academy Award, and the technique returned in music videos with Peter Gabriel’s Sledgehammer and in the short films of PES.",
+   "works": "Neighbours (Norman McLaren, NFB, 1952) · A Chairy Tale (Norman McLaren & Claude Jutra, 1957) · Sledgehammer (Peter Gabriel, dir. Stephen R. Johnson, with Aardman and the Brothers Quay, 1986) · Western Spaghetti (PES, 2008) · Fresh Guacamole (PES, 2012)",
+   "tech": [
+    "Stepped 12 fps exposures",
+    "Airborne-every-frame hops",
+    "Jump-cut costume swaps"
+   ],
+   "accent": "#d23b2f",
+   "motionDNA": "Time is chopped into exposures: people slide along the ground with their legs locked, hop through the air without ever landing, sit on nothing and drive, and swap clothes, poses and places at every cut, while a little jitter between frames keeps every held pose alive.",
+   "visualDNA": "Ordinary daylight locations shot on film: a park lawn with mowing stripes, railings, terraced houses and a street; actors in period clothes lit like photographs with a hard key light, contact shadows that stay on the grass, heavy grain, gate weave and slight exposure flicker from frame to frame.",
+   "transitions": "Glide-in, levitating hop, bow, jump cuts on the third of a second, invisible-car ride, letter-per-frame title placement",
+   "implementation": [
+    "Film or DSLR camera with intervalometer, actors posed per frame",
+    "Dragonframe / Stop Motion Studio onion skinning",
+    "Canvas 2D (time quantised to 12 fps)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.6,
+   "video": "media/pixilation.mp4",
+   "posterImg": "atlas/posters/pixilation.jpg"
+  },
+  {
    "id": "retro",
    "family": "G",
    "name": "Retrowave Chrome",
@@ -2389,6 +2685,66 @@ window.ATLAS = {
    "poster": 9.6,
    "video": "media/screensaver.mp4",
    "posterImg": "atlas/posters/screensaver.jpg"
+  },
+  {
+   "id": "databend",
+   "family": "G",
+   "name": "Databending",
+   "sub": "Corrupting the file, not the picture",
+   "era": "2000s —",
+   "origin": "Databending treats an image or video file as raw data and breaks it on purpose: bytes are overwritten in a hex or text editor, the file is opened as audio and run through effects, or a compressed video loses its keyframes so motion from one shot drags the pixels of another (datamoshing). It grew from circuit bending and net art in the early 2000s; Takeshi Murata’s Monster Movie (2005) and Rosa Menkman’s The Collapse of PAL (2010) and Glitch Moment/um (2011) made the compression artefacts themselves the subject, and datamosh reached music videos in the late 2000s.",
+   "works": "Monster Movie (Takeshi Murata, 2005) · Untitled (Pink Dot) (Takeshi Murata, 2007) · The Collapse of PAL (Rosa Menkman, 2010) · A Vernacular of File Formats (Rosa Menkman, 2010) · Welcome to Heartbreak (Kanye West, dir. Nabil Elderkin, 2009)",
+   "tech": [
+    "JPEG block slip & DC shift",
+    "I-frame removal datamosh",
+    "Raw-audio echo on RGB bytes"
+   ],
+   "accent": "#ff3b5c",
+   "motionDNA": "Damage propagates in the order the decoder reads: a single changed byte slides everything after it, a deleted keyframe lets the next shot’s motion vectors push the last picture around so pixels bloom, smear and swirl in blocks, and the decay only ever moves forward until a clean keyframe resets it.",
+   "visualDNA": "A real, colourful photograph broken along its compression grid: 8×8 blocks out of step with colour casts, stray DCT stripes, decoder grey where data ran out, blocky macroblock trails, banded rows where audio effects shifted bytes, plus the tools themselves — hex dumps, frame-type strips, a waveform.",
+   "transitions": "Block-by-block decode, hex edit with decoder sweep, deleted I-frame into P-frame bleed, raw-audio echo, clean I-frame reset, drip",
+   "implementation": [
+    "Hex editor / text editor on JPEG and BMP",
+    "Audacity raw import and export",
+    "Avidemux / FFmpeg keyframe removal",
+    "Canvas 2D (per-block pixel buffers)"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/databend.mp4",
+   "posterImg": "atlas/posters/databend.jpg"
+  },
+  {
+   "id": "oswindow",
+   "family": "G",
+   "name": "OS Window Animation",
+   "sub": "Genie, Exposé, Snap & Flip",
+   "era": "2001 — 2012",
+   "origin": "When GPUs began compositing the desktop, window managers turned every state change into motion: Mac OS X 10.0 (2001) shipped the genie minimise and the magnifying Dock, Exposé tiled every open window in 10.3 Panther (2003) and became Mission Control in 2011, and Windows Vista’s Aero glass (2007) brought Flip 3D, followed by drag-to-edge Aero Snap in Windows 7 (2009). The animations explain where a window went and where it came from, and their curves and timings became the reference vocabulary for UI motion design.",
+   "works": "Mac OS X 10.0 Aqua, genie effect and Dock magnification (Apple, 2001) · Exposé in Mac OS X 10.3 Panther (2003) · Windows Vista Aero and Flip 3D (Microsoft, 2007) · Windows 7 Aero Snap (2009) · Compiz wobbly windows and desktop cube (2006)",
+   "tech": [
+    "Strip-sliced genie warp",
+    "Fisheye dock magnification",
+    "Sliced perspective Flip 3D"
+   ],
+   "accent": "#3b82f6",
+   "motionDNA": "Every transition is spatial and causal: windows zoom out of the icon that launched them and pour back into the dock that keeps them, tiles fly apart on a shared ease and return to their stacking order, a window dragged to the edge is offered a translucent half-screen and snaps into it, and a perspective stack rotates its cards one at a time.",
+   "visualDNA": "A polished desktop of the 2000s: gradient wallpaper, translucent menu bar and glass dock with reflective rounded icons, white title bars with three coloured buttons and soft drop shadows, then a blue glass theme with tinted frames, sheen streaks, a glowing taskbar and a red close button.",
+   "transitions": "Icon zoom-open, dock bounce, genie minimise, Exposé tile-out and pick, theme cross-fade, drag-to-edge snap with preview, Flip 3D cycle, settle to the front",
+   "implementation": [
+    "Quartz Compositor / Desktop Window Manager on the GPU",
+    "Core Animation, Compiz, KWin effects",
+    "After Effects UI mock-ups",
+    "Canvas 2D (sliced warps of pre-rendered windows)"
+   ],
+   "reproducibility": "Homage — generic UI, no logos",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.7,
+   "video": "media/oswindow.mp4",
+   "posterImg": "atlas/posters/oswindow.jpg"
   },
   {
    "id": "filmnoir",
@@ -2752,6 +3108,64 @@ window.ATLAS = {
    "poster": 9.3,
    "video": "media/cyberpunk.mp4",
    "posterImg": "atlas/posters/cyberpunk.jpg"
+  },
+  {
+   "id": "surreal",
+   "family": "H",
+   "name": "Surreal Cinema",
+   "sub": "Dream logic on film",
+   "era": "1928 —",
+   "origin": "Surrealist film cuts the way a dream does: rooms open onto impossible places, objects turn into other objects and the intertitles lie about time. Luis Buñuel and Salvador Dalí’s Un Chien Andalou (1929) set the grammar, Maya Deren’s Meshes of the Afternoon (1943) looped a dreamer through her own house, Jan Švankmajer animated objects into uncanny life, and David Lynch carried the mode into curtained rooms with zigzag floors.",
+   "works": "Un Chien Andalou (Luis Buñuel & Salvador Dalí, 1929) · L’Âge d’Or (Buñuel, 1930) · Meshes of the Afternoon (Maya Deren & Alexander Hammid, 1943) · Spellbound, dream sequence designed by Dalí (Alfred Hitchcock, 1945) · Dimensions of Dialogue (Jan Švankmajer, 1982) · Alice (Švankmajer, 1988) · Twin Peaks (David Lynch & Mark Frost, 1990) · Mulholland Drive (Lynch, 2001)",
+   "tech": [
+    "Door-as-portal dolly",
+    "Stop-motion object morph",
+    "Zoom through a pupil"
+   ],
+   "accent": "#c8323c",
+   "motionDNA": "A slow camera that never stops: an even dolly that is suddenly pulled through a door, a tilt from cloud down to sand, a fall into an eye. Things move with dream patience — a key floating, men rising like balloons, a clock sagging — and one object turns into another in stepped stop-motion jumps.",
+   "visualDNA": "Red pleated curtains over a black-and-white zigzag floor, a hooded figure with a mirror for a face, Magritte’s blue sky and sculpted clouds (an eye whose iris is sky, bowler-hatted men, a bird cut from sky, a night street under a noon sky), Dalí’s ochre plain, cliffs and melting clock, soft grain and lying intertitles.",
+   "transitions": "Door as portal, tilt reveal, match on object (key becomes bird), a blink, zoom into the pupil as it turns into a keyhole",
+   "implementation": [
+    "35mm camera, built sets and in-camera tricks",
+    "Stop-motion animation",
+    "Canvas 2D"
+   ],
+   "reproducibility": "Fully procedural homage",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/surreal.mp4",
+   "posterImg": "atlas/posters/surreal.jpg"
+  },
+  {
+   "id": "foundfootage",
+   "family": "H",
+   "name": "Found Footage",
+   "sub": "Archival collage cinema",
+   "era": "1958 —",
+   "origin": "Found-footage film makes new cinema out of other people’s film: newsreels, home movies, educational reels and leader are cut together until their juxtaposition says something none of them meant. Bruce Conner’s A Movie (1958) set the form with mismatched stock shots and a premature THE END; Craig Baldwin’s Tribulation 99 (1991) built a mock conspiracy history from stock footage, and Christian Marclay’s The Clock (2010) assembled a 24-hour film from clock shots synchronised to real time.",
+   "works": "Rose Hobart (Joseph Cornell, 1936) · A Movie (Bruce Conner, 1958) · Report (Bruce Conner, 1967) · Tribulation 99: Alien Anomalies Under America (Craig Baldwin, 1991) · Decasia (Bill Morrison, 2002) · The Clock (Christian Marclay, 2010)",
+   "tech": [
+    "Collage cutting across stocks",
+    "Overscan: perfs, edges, splices",
+    "Clocks synced to film time"
+   ],
+   "accent": "#e8b23a",
+   "motionDNA": "Rhythm comes from the cut, not the camera: shots of 0.2–0.9 s from unrelated sources, eyeline and graphic matches that invent cause and effect, a cutting rate that accelerates toward noon, and the strip itself moving — gate weave, 18 fps home-movie judder against 24 fps newsreel, splice frames rolling the frame line through the gate.",
+   "visualDNA": "An overscanned 16mm strip with perforations, frame lines, edge print and optical soundtrack in view; every shot a different stock — high-contrast newsreel, amber and blue tints, saturated home-movie colour, a soft dupe, grey academy leader; scratches, dust and hairs; typewritten captions that re-narrate the footage; trims hanging at the sides.",
+   "transitions": "Hard cuts on tape splices with a frame-line roll, leader countdown, a false THE END, eyeline matches, clocks agreeing across cuts, title printed over the last shot",
+   "implementation": [
+    "16mm flatbed / optical printer",
+    "Archive scans with overscan",
+    "Canvas 2D (every “archival” shot procedurally drawn)"
+   ],
+   "reproducibility": "Fully procedural (no archival material used)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.4,
+   "video": "media/foundfootage.mp4",
+   "posterImg": "atlas/posters/foundfootage.jpg"
   },
   {
    "id": "ukiyoe",
@@ -3376,6 +3790,35 @@ window.ATLAS = {
    "poster": 7.2,
    "video": "media/vj.mp4",
    "posterImg": "atlas/posters/vj.jpg"
+  },
+  {
+   "id": "saas",
+   "family": "J",
+   "name": "SaaS Product Motion",
+   "sub": "B2B launch film",
+   "era": "2010s —",
+   "origin": "Software companies now launch features the way carmakers launch cars: with a short film in which the product interface itself is the hero. Through the late 2010s and 2020s teams such as Stripe, Linear and Vercel set the look — a dark stage lit by a drifting gradient mesh, app windows tilted in three-quarter perspective, a cursor demonstrating one feature, numbers counting up, and every move on a spring.",
+   "works": "Stripe homepage animated gradient (2020) · Linear product launch and changelog films · Vercel Ship launch keynotes (2023 —) · Figma Config keynote product demos (2020 —)",
+   "tech": [
+    "3/4 perspective UI cards",
+    "Cursor-driven feature demo",
+    "Springs and counters"
+   ],
+   "accent": "#8b7bff",
+   "motionDNA": "Every arrival is a damped spring with a touch of overshoot; words rise in a 150 ms stagger and sharpen from blur, the window swings from three-quarter view to flat for the demo and back, satellite cards drift at their own depth for parallax, and numbers count up on an ease-out so they land, not stop.",
+   "visualDNA": "Near-black stage under a slow violet–blue–pink gradient mesh, a faint grid, glassy dark cards with 1 px borders and a lit top edge, one violet accent, Geist type with tight tracking, crisp product UI (sidebar, issue rows, command menu, toast) and a cursor as the protagonist.",
+   "transitions": "Spring-in headline, window rising in perspective, swing to flat and push in, command-menu scale-in, rows re-sorting on a spring, recede and fly-in of stat cards, fly-out to the logo lock-up",
+   "implementation": [
+    "Figma → After Effects or Rive",
+    "React + Framer Motion / CSS springs",
+    "Canvas 2D (3D planes as affine cells)"
+   ],
+   "reproducibility": "Fully procedural (fictional product, no real logos)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/saas.mp4",
+   "posterImg": "atlas/posters/saas.jpg"
   }
  ],
  "built": "2026-10-28"
