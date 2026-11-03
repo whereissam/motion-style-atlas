@@ -1,6 +1,6 @@
 # Motion Style Atlas: Regeneration Prompts
 
-Each of the 217 styles below has two prompts:
+Each of the 232 styles below has two prompts:
 
 - **Build prompt**: a full director's brief. Give it to Claude or another coding model to make a procedural 10-second film (Canvas/WebGL + Web Audio), or hand it to a motion designer as a creative brief.
 - **Video-model prompt**: a short descriptive prompt for text-to-video tools.
@@ -8468,5 +8468,590 @@ DELIVER: the film (or code that renders it), plus a beat sheet listing each even
 ### Video-model prompt (Sora / Runway / Kling / Veo)
 ```text
 10-second Trim Paths motion-graphics film (Draw a stroke by trimming its start and end). Visual style: the Technique Atlas stage: the Token outlined in a thick round-capped ink stroke over its orange fill, faint dotted guides showing each untrimmed path, orange S and E markers at the trimmed ends; MOTION as monoline ink strokes in two rows labelled by mode; orange burst strokes round the Token; a right-hand panel with START, END and OFFSET sliders, the target, its length and visible length in pixels. Motion: the outline draws on over a bar on an in-out ease and the fill drops in on the downbeat; a quarter-length segment then laps the Token twice at constant speed and grows back to a closed line. MOTION draws all nine strokes at once in one row and stroke after stroke in the next, so the same END curve reads as one gesture or as handwriting; six bursts fire on and off with START a fifth of a second behind END, the rows erase by START, and the word draws back on. Signature moves: start · end · offset, simultaneous vs individual, arc-length sampled paths; transitions: draw-on and draw-off by trim; the offset chase wraps across the path’s start point. In the tradition of Animated line drawing in SVG (Jake Archibald, 2013) · Lottie (Airbnb, 2017; After Effects trim paths played back in apps) · Lottie (Airbnb, 2017). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "TRIM PATHS". Punchy sound design synced to every cut.
+```
+
+## 218 · Clay
+*One matte material, so only form and light remain · 1990s — · Rendering Looks*
+
+Reference film: `videos/lookclay.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Clay** (One matte material, so only form and light remain, 1990s —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: The clay render comes from the CG production pipeline: lighters and modellers override every shader with one neutral, matte material to judge form, silhouette and lighting before textures and colour arrive, and studios show the same untextured passes in breakdown reels. The name borrows from sculptors’ clay maquettes. As global illumination and ambient occlusion became cheap in renderers such as V-Ray and mental ray in the 2000s, the soft-lit white clay render also became a look of its own in architectural visualisation and motion design.
+- Study these reference works: Pixar and ILM shot breakdowns (untextured layout and lighting passes) · Architectural visualisation clay renders (V-Ray, Corona) · Studio motion-design reels in white and pastel clay (Cinema 4D)
+- Motion DNA: The shared 10 s camera move: a 50° orbit with a slight drift down while the Token bobs and turns. One wipe left to right replaces the plain materials with white clay; callouts name what clay hides and what it reveals while the AO and key-light passes sit as insets; a second wipe tints the clay per object in pastels.
+- Visual DNA: Warm off-white clay on a matching floor that fades into the paper backdrop; soft broad shadows, deep contact occlusion under the Token, sphere and cube, a faint warm glow along each terminator; at the end pastel coral, mint and periwinkle. Ink mono labels with leader lines, an orange split line, two framed pass insets.
+- Signature transitions: Wipe from the plain reference to white clay; wipe from white clay to pastel clay
+- Key techniques: Material override: one matte albedo, Big soft key + strong AO, Subsurface warmth at the terminator
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Material override: one matte albedo, Big soft key + strong AO, Subsurface warmth at the terminator).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Material override: one matte albedo and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "CLAY", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Material override / clay pass in Maya, Cinema 4D, Blender, Ambient-occlusion and key-light passes for lookdev, Canvas 2D + SDF tracer (js/look-kit.js): one matte albedo, low-hardness soft shadow, 6-tap AO raised to 1.6, terminator-band warmth. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Clay motion-graphics film (One matte material, so only form and light remain). Visual style: warm off-white clay on a matching floor that fades into the paper backdrop; soft broad shadows, deep contact occlusion under the Token, sphere and cube, a faint warm glow along each terminator; at the end pastel coral, mint and periwinkle. Ink mono labels with leader lines, an orange split line, two framed pass insets. Motion: the shared 10 s camera move: a 50° orbit with a slight drift down while the Token bobs and turns. One wipe left to right replaces the plain materials with white clay; callouts name what clay hides and what it reveals while the AO and key-light passes sit as insets; a second wipe tints the clay per object in pastels. Signature moves: material override: one matte albedo, big soft key + strong ao, subsurface warmth at the terminator; transitions: wipe from the plain reference to white clay; wipe from white clay to pastel clay. In the tradition of Pixar and ILM shot breakdowns (untextured layout and lighting passes) · Architectural visualisation clay renders (V-Ray, Corona) · Studio motion-design reels in white and pastel clay (Cinema 4D). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CLAY". Punchy sound design synced to every cut.
+```
+
+## 219 · Chrome
+*Mirror metal: the scene and the studio, reflected · 1980 — · Rendering Looks*
+
+Reference film: `videos/lookchrome.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Chrome** (Mirror metal: the scene and the studio, reflected, 1980 —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Turner Whitted’s recursive ray tracing (1980) made perfect mirror reflections of the rest of the scene computable, and the reflective spheres of early ray-traced images became the emblem of CGI. Before that, Jim Blinn and Martin Newell’s reflection mapping (1976) faked chrome by looking up a picture of the surroundings, the trick behind the liquid-metal T-1000 of Terminator 2 (1991) and still the basis of image-based lighting. Robert Cook and Kenneth Torrance’s 1982 reflectance model and Christophe Schlick’s 1994 approximation gave metals their tinted, angle-dependent Fresnel reflectance, which rough-metal shading in modern physically based renderers builds on.
+- Study these reference works: An Improved Illumination Model for Shaded Display (Turner Whitted, 1980; ray-traced reflective spheres) · Terminator 2: Judgment Day (James Cameron, ILM, 1991; the liquid-metal T-1000) · The 1984 ray-traced still life by Thomas Porter, “1984” (Lucasfilm, distributed ray tracing with glossy reflection)
+- Motion DNA: The shared camera orbit carries the reflections across the mirrors: as the camera swings, the floor, the cube and the softbox strips slide over the Token’s face and wrap around the sphere. A wipe turns the plain materials to mirror chrome; roughness then rises in four steps on the beat (0.06 → 0.36), blurring the reflection; a final wipe turns the chrome to gold at a satin roughness of 0.10.
+- Visual DNA: The paper studio from the plain render, but the Token and sphere become polished metal: crisp softbox strips and a big key box in the reflections, the blue cube and the floor’s shadows curving across the sphere, a dark ceiling that gives the metal its contrast; then frosted satin and warm gold. Leader-line labels, a roughness ruler, the environment panorama and the Fresnel pass as insets.
+- Signature transitions: Wipe from plain to chrome; stepped roughness changes; wipe from chrome to gold
+- Key techniques: One-bounce traced reflection, Softbox studio environment, Schlick Fresnel · jittered roughness
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (One-bounce traced reflection, Softbox studio environment, Schlick Fresnel · jittered roughness).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on One-bounce traced reflection and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "CHROME", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Ray-traced reflections (Whitted, 1980) and reflection mapping (Blinn & Newell, 1976), Physically based metal: Schlick Fresnel with a tinted F0, GGX-style roughness, Canvas 2D + SDF tracer (js/look-kit.js): one LK.trace bounce per pixel, analytic softbox environment, 5 jittered rays plus an edge-aware blur for roughness. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Chrome motion-graphics film (Mirror metal: the scene and the studio, reflected). Visual style: the paper studio from the plain render, but the Token and sphere become polished metal: crisp softbox strips and a big key box in the reflections, the blue cube and the floor’s shadows curving across the sphere, a dark ceiling that gives the metal its contrast; then frosted satin and warm gold. Leader-line labels, a roughness ruler, the environment panorama and the Fresnel pass as insets. Motion: the shared camera orbit carries the reflections across the mirrors: as the camera swings, the floor, the cube and the softbox strips slide over the Token’s face and wrap around the sphere. A wipe turns the plain materials to mirror chrome; roughness then rises in four steps on the beat (0.06 → 0.36), blurring the reflection; a final wipe turns the chrome to gold at a satin roughness of 0.10. Signature moves: one-bounce traced reflection, softbox studio environment, schlick fresnel · jittered roughness; transitions: wipe from plain to chrome; stepped roughness changes; wipe from chrome to gold. In the tradition of An Improved Illumination Model for Shaded Display (Turner Whitted, 1980; ray-traced reflective spheres) · Terminator 2: Judgment Day (James Cameron, ILM, 1991; the liquid-metal T-1000) · The 1984 ray-traced still life by Thomas Porter, “1984” (Lucasfilm, distributed ray tracing with glossy reflection). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "CHROME". Punchy sound design synced to every cut.
+```
+
+## 220 · Glass
+*Light bent by Snell’s law, tinted by thickness · 1980 — · Rendering Looks*
+
+Reference film: `videos/lookglass.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Glass** (Light bent by Snell’s law, tinted by thickness, 1980 —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Turner Whitted’s 1980 ray tracer was the first to follow rays through transparent objects, bending them at each surface by Snell’s law and splitting off a reflected ray, and his glass spheres over a checkerboard became one of computer graphics’ defining images. The Fresnel equations set how much light reflects at each angle, and Beer–Lambert absorption colours glass by the distance light travels inside it. Caustics — light focused by the glass onto the floor — needed later techniques such as Henrik Wann Jensen’s photon mapping (1990s); here a ball-lens approximation stands in.
+- Study these reference works: An Improved Illumination Model for Shaded Display (Turner Whitted, 1980; glass spheres over a checkerboard) · Henrik Wann Jensen, photon-mapped caustic renders (1996 onwards) · Glass and crystal product visualisation (KeyShot, V-Ray)
+- Motion DNA: The shared camera orbit slides the world behind the glass: the floor’s edge, the cube and the shadows swim through the Token and the sphere as the camera moves. A wipe turns them to glass at IOR 1.00, where nothing bends and only the tint shows; the index then rises on eased ramps to 1.50 (glass), where the sphere flips the floor upside down and the caustic gathers, and to 2.42 (diamond), where total internal reflection fills the Token with bright facets.
+- Visual DNA: The paper studio seen through amber and pale-aqua glass: the dark studio ceiling and softboxes in the Fresnel rims, deeper colour where the glass is thicker, tinted translucent shadows, a bright focused caustic in the sphere’s shadow. An IOR ruler with air, water, glass and diamond marked, leader-line labels, thickness and Fresnel pass insets.
+- Signature transitions: Wipe from plain to glass; the index of refraction ramps between named materials
+- Key techniques: Snell refraction in and out, Fresnel reflection mix, Beer–Lambert tint · ball-lens caustic
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Snell refraction in and out, Fresnel reflection mix, Beer–Lambert tint · ball-lens caustic).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Snell refraction in and out and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "GLASS", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Whitted-style recursive ray tracing of dielectrics, Fresnel (Schlick) reflectance and Beer–Lambert absorption, as in physically based glass shaders, Canvas 2D + SDF tracer (js/look-kit.js): refract → LK.traceInside → refract (one TIR bounce) → LK.trace, a traced reflection, per-object soft shadows and an analytic ball-lens caustic. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Glass motion-graphics film (Light bent by Snell’s law, tinted by thickness). Visual style: the paper studio seen through amber and pale-aqua glass: the dark studio ceiling and softboxes in the Fresnel rims, deeper colour where the glass is thicker, tinted translucent shadows, a bright focused caustic in the sphere’s shadow. An IOR ruler with air, water, glass and diamond marked, leader-line labels, thickness and Fresnel pass insets. Motion: the shared camera orbit slides the world behind the glass: the floor’s edge, the cube and the shadows swim through the Token and the sphere as the camera moves. A wipe turns them to glass at IOR 1.00, where nothing bends and only the tint shows; the index then rises on eased ramps to 1.50 (glass), where the sphere flips the floor upside down and the caustic gathers, and to 2.42 (diamond), where total internal reflection fills the Token with bright facets. Signature moves: snell refraction in and out, fresnel reflection mix, beer–lambert tint · ball-lens caustic; transitions: wipe from plain to glass; the index of refraction ramps between named materials. In the tradition of An Improved Illumination Model for Shaded Display (Turner Whitted, 1980; glass spheres over a checkerboard) · Henrik Wann Jensen, photon-mapped caustic renders (1996 onwards) · Glass and crystal product visualisation (KeyShot, V-Ray). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "GLASS". Punchy sound design synced to every cut.
+```
+
+## 221 · Matcap
+*Material capture: shading from a painted sphere · 2001 — · Rendering Looks*
+
+Reference film: `videos/lookmatcap.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Matcap** (Material capture: shading from a painted sphere, 2001 —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Peter-Pike Sloan, William Martin, Amy Gooch and Bruce Gooch described "The Lit Sphere" in 2001: an artist paints a sphere, and every point of a model takes the colour of the sphere point with the same view-space normal. Pixologic’s ZBrush popularised the idea as MatCap (material capture) materials for digital sculpting, and it is now standard in sculpting and modelling viewports such as Blender’s, where a matcap shows form instantly without any lights in the scene.
+- Study these reference works: The Lit Sphere: A Model for Capturing NPR Shading from Art (Sloan, Martin, Gooch & Gooch, Graphics Interface 2001) · ZBrush MatCap materials (Pixologic) · Blender viewport MatCap shading (Blender 2.8+)
+- Motion DNA: The shared camera orbits 50° while the Token turns and bobs. A split wipes from the plain reference to the matcap look and off again; the matcap switches on the beat from red wax to jade to pearl to chrome, crossfading in a fifth of a second, and on the last bar each object takes its own matcap. A tracked sample on the sphere slides across the matcap inset as the camera moves, its leader line linking the surface to the pixel it reads.
+- Visual DNA: A dark sculpt-viewport backdrop with a soft centre glow; objects shaded entirely from the painted sphere, the floor only darkened by contact occlusion, so there are no cast shadows. Top right: the matcap sphere with a crosshair at the lookup point; under it a view-space normal pass. Mono readouts give N·right, N·up and the uv they become.
+- Signature transitions: Split wipe from the plain render; short crossfades between matcaps on the beat
+- Key techniques: View-space normal lookup, Painted lit sphere, Lights baked, camera-locked
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (View-space normal lookup, Painted lit sphere, Lights baked, camera-locked).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on View-space normal lookup and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "MATCAP", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Lit-sphere / matcap texture lookup by view-space normal, ZBrush MatCap, Blender viewport MatCap, Canvas 2D + SDF tracer (js/look-kit.js): normal → (N·camRight, N·camUp) → bilinear sample of four 192² matcaps painted in setup(). If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Matcap motion-graphics film (Material capture: shading from a painted sphere). Visual style: a dark sculpt-viewport backdrop with a soft centre glow; objects shaded entirely from the painted sphere, the floor only darkened by contact occlusion, so there are no cast shadows. Top right: the matcap sphere with a crosshair at the lookup point; under it a view-space normal pass. Mono readouts give N·right, N·up and the uv they become. Motion: the shared camera orbits 50° while the Token turns and bobs. A split wipes from the plain reference to the matcap look and off again; the matcap switches on the beat from red wax to jade to pearl to chrome, crossfading in a fifth of a second, and on the last bar each object takes its own matcap. A tracked sample on the sphere slides across the matcap inset as the camera moves, its leader line linking the surface to the pixel it reads. Signature moves: view-space normal lookup, painted lit sphere, lights baked, camera-locked; transitions: split wipe from the plain render; short crossfades between matcaps on the beat. In the tradition of The Lit Sphere: A Model for Capturing NPR Shading from Art (Sloan, Martin, Gooch & Gooch, Graphics Interface 2001) · ZBrush MatCap materials (Pixologic) · Blender viewport MatCap shading (Blender 2.8+). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "MATCAP". Punchy sound design synced to every cut.
+```
+
+## 222 · Three-point Studio
+*Key, fill and back light · 1920s — · Rendering Looks*
+
+Reference film: `videos/lookstudio.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Three-point Studio** (Key, fill and back light, 1920s —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Three-point lighting comes from the Hollywood studio system of the 1920s and 1930s, where cinematographers lit stars with a hard key light, a softer fill to control contrast and a back light to lift the figure off the set; portrait and product photographers adopted the same plot, and the key:fill ratio became the standard way to describe contrast. In computer graphics the same three lights are the default starting rig for lighting a model or a product render.
+- Study these reference works: Shanghai Express (Josef von Sternberg, cinematography Lee Garmes, 1932) · Citizen Kane (Orson Welles, cinematography Gregg Toland, 1941) · Casablanca (Michael Curtiz, 1942; Arthur Edeson’s Hollywood portrait lighting)
+- Motion DNA: The shared camera orbit with the lights fixed in the world, so the angle each light makes with the lens changes as the camera moves (the plot reads it live). The set starts dark; the key snaps on with a brief strobe flicker on beat 1, the fill fades up over most of a second on beat 5 while the key:fill ratio counts down from infinity to 3:1, the back light snaps on at beat 9, and on beat 12 the backdrop is lit and a soft bounce fills in for the finished product shot.
+- Visual DNA: A black studio with three pools of light on a grey floor, warm key, cool fill, white back. Each light casts its own shadow, the fill’s soft and pale. Top right: a top-view light plot with cones, the camera wedge and live angles; under it the key:fill ratio. Bottom right: one thumbnail per light, adding up to the beauty render.
+- Signature transitions: Lights switched on one at a time on the beat; a final lift into the product look
+- Key techniques: Key / fill / back spotlights, Per-light soft shadows, Key:fill ratio
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Key / fill / back spotlights, Per-light soft shadows, Key:fill ratio).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Key / fill / back spotlights and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "THREE-POINT STUDIO", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Three spotlights with smooth cone falloff and inverse-square attenuation, Lambert + Blinn-Phong with a Fresnel boost, ACES-style tone map, Canvas 2D + SDF tracer (js/look-kit.js): one soft-shadow ray per light per pixel, skipped outside each cone. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Three-point Studio motion-graphics film (Key, fill and back light). Visual style: a black studio with three pools of light on a grey floor, warm key, cool fill, white back. Each light casts its own shadow, the fill’s soft and pale. Top right: a top-view light plot with cones, the camera wedge and live angles; under it the key:fill ratio. Bottom right: one thumbnail per light, adding up to the beauty render. Motion: the shared camera orbit with the lights fixed in the world, so the angle each light makes with the lens changes as the camera moves (the plot reads it live). The set starts dark; the key snaps on with a brief strobe flicker on beat 1, the fill fades up over most of a second on beat 5 while the key:fill ratio counts down from infinity to 3:1, the back light snaps on at beat 9, and on beat 12 the backdrop is lit and a soft bounce fills in for the finished product shot. Signature moves: key / fill / back spotlights, per-light soft shadows, key:fill ratio; transitions: lights switched on one at a time on the beat; a final lift into the product look. In the tradition of Shanghai Express (Josef von Sternberg, cinematography Lee Garmes, 1932) · Citizen Kane (Orson Welles, cinematography Gregg Toland, 1941) · Casablanca (Michael Curtiz, 1942; Arthur Edeson’s Hollywood portrait lighting). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "THREE-POINT STUDIO". Punchy sound design synced to every cut.
+```
+
+## 223 · Rim Light
+*Silhouettes edged by light from behind · 1920s — · Rendering Looks*
+
+Reference film: `videos/lookrim.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Rim Light** (Silhouettes edged by light from behind, 1920s —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: The back or rim light is one of the three lights of classic Hollywood studio lighting, placed behind and above the subject so a thin edge of light separates it from a dark background; film noir and high-contrast advertising pushed it to the point where the edge is nearly all that is lit. In real-time graphics the effect is often faked with a Fresnel-style term on 1 − N·V, a staple of game and stylised shaders, while offline renderers get it from lights placed behind the subject.
+- Study these reference works: The Third Man (Carol Reed, cinematography Robert Krasker, 1949) · Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982) · Apocalypse Now (Francis Ford Coppola, 1979; Vittorio Storaro’s edge-lit Kurtz in darkness)
+- Motion DNA: The shared camera orbit over a set lit only from behind. A split wipes the plain render away into black; a white back light swells up and draws thin edges; on the beat the rim width widens to a soft glow, then narrows to a hairline with a sharp falloff; on beat 8 the single white light gives way to a warm rim back-left and a cool rim back-right, and the width settles to a medium band for the end.
+- Visual DNA: Near-black set, objects in silhouette, lines of light along every edge that faces a light, long shadows running toward the lens across a dark glossy floor, soft haze glowing round the light sources. Top right: three passes — the edge band, the back-light facing term and their product. Top left: live width, falloff and intensity readouts with bars.
+- Signature transitions: Split wipe from the plain render; parameter changes on the beat; white rim crossfades to a warm and cool pair
+- Key techniques: Edge band from 1 − N·V, Back-light facing gate, Warm / cool two-rim
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Edge band from 1 − N·V, Back-light facing gate, Warm / cool two-rim).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Edge band from 1 − N·V and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "RIM LIGHT", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Rim term: remap(1 − N·V, width)^falloff × N·L of the back light, shadowed, Grazing Blinn-Phong with Schlick Fresnel; analytic point-light in-scattering haze, Canvas 2D + SDF tracer (js/look-kit.js): shadow rays only where a rim or floor pool can appear. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Rim Light motion-graphics film (Silhouettes edged by light from behind). Visual style: near-black set, objects in silhouette, lines of light along every edge that faces a light, long shadows running toward the lens across a dark glossy floor, soft haze glowing round the light sources. Top right: three passes — the edge band, the back-light facing term and their product. Top left: live width, falloff and intensity readouts with bars. Motion: the shared camera orbit over a set lit only from behind. A split wipes the plain render away into black; a white back light swells up and draws thin edges; on the beat the rim width widens to a soft glow, then narrows to a hairline with a sharp falloff; on beat 8 the single white light gives way to a warm rim back-left and a cool rim back-right, and the width settles to a medium band for the end. Signature moves: edge band from 1 − n·v, back-light facing gate, warm / cool two-rim; transitions: split wipe from the plain render; parameter changes on the beat; white rim crossfades to a warm and cool pair. In the tradition of The Third Man (Carol Reed, cinematography Robert Krasker, 1949) · Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982) · Apocalypse Now (Francis Ford Coppola, 1979; Vittorio Storaro’s edge-lit Kurtz in darkness). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "RIM LIGHT". Punchy sound design synced to every cut.
+```
+
+## 224 · Golden Hour
+*Low warm sun, cool sky in the shadows · 1900s — (painting earlier) · Rendering Looks*
+
+Reference film: `videos/lookgolden.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Golden Hour** (Low warm sun, cool sky in the shadows, 1900s — (painting earlier); family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: The “magic hour” after sunrise and before sunset was prized by painters long before film — Monet’s Haystacks and Rouen Cathedral series (1890s) chase exactly this light. In cinema it became a signature when Terrence Malick and cinematographer Néstor Almendros shot much of Days of Heaven (1978) in the minutes around sunset; Almendros won the Academy Award for it. In CG the look is a sun direction and a colour temperature: a low key light, a black-body warm colour, and a blue sky dome filling the shadows.
+- Study these reference works: Days of Heaven (Terrence Malick, cinematography Néstor Almendros, 1978) · Haystacks series (Claude Monet, 1890–91) · Barry Lyndon (Stanley Kubrick, cinematography John Alcott, 1975)
+- Motion DNA: The camera makes the same slow 50° orbit as every look film while the sun sinks from 24° to 5° above the horizon on an ease. Shadow length follows h / tan(elevation), so the shadows stretch across the floor as it drops, and the key warms from about 4900 K to 2700 K. A wipe from the plain studio reference opens the film; readouts and the sun diagram track the change.
+- Visual DNA: Warm orange key on every sun-facing face, long soft shadows filled with cool sky blue, a pale-blue-to-peach sky gradient glowing on the sun side, the floor fading into the warm horizon. A small sun/sky diagram and a colour-temperature bar sit top right.
+- Signature transitions: One wipe from the plain reference to the look; afterwards a continuous change of sun elevation
+- Key techniques: Low directional key, Black-body colour temperature, Blue sky-dome fill
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Low directional key, Black-body colour temperature, Blue sky-dome fill).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Low directional key and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "GOLDEN HOUR", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Unreal / Unity: directional light with temperature + sky atmosphere, Blender: Sun lamp with blackbody colour, Nishita sky, Canvas 2D + SDF tracer (js/look-kit.js): a low sun with soft ray-marched shadows, Helland black-body colour, blue sky-dome fill with AO and a gradient sky. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Golden Hour motion-graphics film (Low warm sun, cool sky in the shadows). Visual style: warm orange key on every sun-facing face, long soft shadows filled with cool sky blue, a pale-blue-to-peach sky gradient glowing on the sun side, the floor fading into the warm horizon. A small sun/sky diagram and a colour-temperature bar sit top right. Motion: the camera makes the same slow 50° orbit as every look film while the sun sinks from 24° to 5° above the horizon on an ease. Shadow length follows h / tan(elevation), so the shadows stretch across the floor as it drops, and the key warms from about 4900 K to 2700 K. A wipe from the plain studio reference opens the film; readouts and the sun diagram track the change. Signature moves: low directional key, black-body colour temperature, blue sky-dome fill; transitions: one wipe from the plain reference to the look; afterwards a continuous change of sun elevation. In the tradition of Days of Heaven (Terrence Malick, cinematography Néstor Almendros, 1978) · Haystacks series (Claude Monet, 1890–91) · Barry Lyndon (Stanley Kubrick, cinematography John Alcott, 1975). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "GOLDEN HOUR". Punchy sound design synced to every cut.
+```
+
+## 225 · Volumetric Light
+*God rays through haze, single scattering · 1980s — · Rendering Looks*
+
+Reference film: `videos/lookvolumetric.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Volumetric Light** (God rays through haze, single scattering, 1980s —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Shafts of light through haze — crepuscular rays — were a painter’s and cinematographer’s device long before rendering, built on set with smoke and a hard source through a window. In computer graphics, Jim Blinn’s 1982 paper on light reflection by clouds and dusty surfaces and Kajiya and Von Herzen’s 1984 “Ray Tracing Volume Densities” laid the ground for rendering participating media. Real-time engines adopted ray-marched single scattering against a shadow map in the 2010s, so god rays became a standard game-engine effect.
+- Study these reference works: Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982) · Raiders of the Lost Ark (Steven Spielberg, 1981; the Map Room sunbeam) · Inside (Playdead, 2016)
+- Motion DNA: The camera makes the same slow 50° orbit while the shafts swing across the view, carved by the Token as it turns and bobs. The haze fades in over the first two seconds (density σ 0 → 0.11), the march steps per ray double on the beat (8 → 16 → 32) so the jittered banding settles, and the haze thickens a little near the end. Dust motes drift down through the beams.
+- Visual DNA: A near-black room, a 3 × 2 window of warm light falling from above and behind, its bars printed on the floor and repeated as dark planes in the air. The Token’s shadow is a solid dark shaft with a bright beam through its hole; the sphere and cube cut their own. Insets show the in-scatter pass alone and one view ray’s lit and shadowed samples.
+- Signature transitions: Haze fades in from a clear room; step counts change on the beat
+- Key techniques: Ray-marched single scattering, Light-space shadow map, Henyey–Greenstein phase
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Ray-marched single scattering, Light-space shadow map, Henyey–Greenstein phase).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Ray-marched single scattering and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "VOLUMETRIC LIGHT", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Unreal Engine: exponential height fog with volumetric fog, Blender: Principled Volume in a world box, spot or area light, Canvas 2D + SDF tracer (js/look-kit.js): per-frame light-space shadow map, half-res jittered ray march clipped to the window prism, HG phase, Beer–Lambert transmittance, depth-aware upsample. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Volumetric Light motion-graphics film (God rays through haze, single scattering). Visual style: a near-black room, a 3 × 2 window of warm light falling from above and behind, its bars printed on the floor and repeated as dark planes in the air. The Token’s shadow is a solid dark shaft with a bright beam through its hole; the sphere and cube cut their own. Insets show the in-scatter pass alone and one view ray’s lit and shadowed samples. Motion: the camera makes the same slow 50° orbit while the shafts swing across the view, carved by the Token as it turns and bobs. The haze fades in over the first two seconds (density σ 0 → 0.11), the march steps per ray double on the beat (8 → 16 → 32) so the jittered banding settles, and the haze thickens a little near the end. Dust motes drift down through the beams. Signature moves: ray-marched single scattering, light-space shadow map, henyey–greenstein phase; transitions: haze fades in from a clear room; step counts change on the beat. In the tradition of Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982) · Raiders of the Lost Ark (Steven Spielberg, 1981; the Map Room sunbeam) · Inside (Playdead, 2016). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "VOLUMETRIC LIGHT". Punchy sound design synced to every cut.
+```
+
+## 226 · Toon Ramp
+*Quantised N·L, hard specular, G-buffer ink · 2000 — · Rendering Looks*
+
+Reference film: `videos/looktoon.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Toon Ramp** (Quantised N·L, hard specular, G-buffer ink, 2000 —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Rendering 3D models to look hand-inked grew out of non-photorealistic rendering research in the 1990s; Lake, Marshall, Harris and Blackstein’s “Stylized Rendering Techniques for Scalable Real-Time 3D Animation” (NPAR 2000) described the now-standard trick of looking N·L up in a small stepped texture. Jet Set Radio (Sega, 2000) brought cel shading with ink outlines to a mass audience, and The Legend of Zelda: The Wind Waker (Nintendo, 2002) made it a house style. Modern anime-style renderers add hand-tuned ramps per material and outlines found from depth, normal and id buffers in post.
+- Study these reference works: Jet Set Radio (Smilebit / Sega, 2000) · The Legend of Zelda: The Wind Waker (Nintendo, 2002) · Guilty Gear Xrd (Arc System Works, 2014)
+- Motion DNA: The camera makes the same slow 50° orbit. A wipe turns the plain render into flat two-band shading; ink outlines sweep in across the frame; the ramp then steps up to three bands and to four on the beat, each step visible on every surface at once as the Token turns through the light.
+- Visual DNA: Flat fills between a cool shade tone and the full albedo, a crisp terminator and hard-edged cast shadows, white specular blobs, a dark ink line around every silhouette, overlap and crease. Insets: the ramp strip (smooth N·L above, the stepped lookup below) and the edge pass coloured by the test that found each line.
+- Signature transitions: One wipe from the plain reference; outlines reveal left to right; band count steps 2 → 3 → 4
+- Key techniques: N·L ramp lookup, Thresholded specular, Edge detection on G-buffers
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (N·L ramp lookup, Thresholded specular, Edge detection on G-buffers).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on N·L ramp lookup and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "TOON RAMP", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Blender: Shader to RGB + Color Ramp (constant), Line Art / Freestyle, Unity / Unreal: ramp-texture lookup in a custom lit shader, Sobel outline post-process, Canvas 2D + SDF tracer (js/look-kit.js): half-Lambert N·L quantised to B bands with shadows forced below the terminator, thresholded Blinn, id / depth-plane / normal edge tests on the G-buffer. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Toon Ramp motion-graphics film (Quantised N·L, hard specular, G-buffer ink). Visual style: flat fills between a cool shade tone and the full albedo, a crisp terminator and hard-edged cast shadows, white specular blobs, a dark ink line around every silhouette, overlap and crease. Insets: the ramp strip (smooth N·L above, the stepped lookup below) and the edge pass coloured by the test that found each line. Motion: the camera makes the same slow 50° orbit. A wipe turns the plain render into flat two-band shading; ink outlines sweep in across the frame; the ramp then steps up to three bands and to four on the beat, each step visible on every surface at once as the Token turns through the light. Signature moves: n·l ramp lookup, thresholded specular, edge detection on g-buffers; transitions: one wipe from the plain reference; outlines reveal left to right; band count steps 2 → 3 → 4. In the tradition of Jet Set Radio (Smilebit / Sega, 2000) · The Legend of Zelda: The Wind Waker (Nintendo, 2002) · Guilty Gear Xrd (Arc System Works, 2014). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "TOON RAMP". Punchy sound design synced to every cut.
+```
+
+## 227 · Ambient Occlusion
+*How much sky each point can see · 2001 — · Rendering Looks*
+
+Reference film: `videos/lookao.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Ambient Occlusion** (How much sky each point can see, 2001 —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Ambient occlusion approximates the soft darkening of creases and contact points under even sky light by measuring how open each point is, without simulating full global illumination. Zhukov, Iones and Kronin described the related idea of obscurances in 1998; Hayden Landis and colleagues at ILM brought ambient occlusion into feature production around Pearl Harbor (2001) and documented it in the SIGGRAPH 2002 course on production global illumination. Crytek’s screen-space AO in Crysis (2007) made it a real-time staple.
+- Study these reference works: Pearl Harbor (Michael Bay, 2001; ILM ambient occlusion) · Crysis (Crytek, 2007; screen-space AO) · StarCraft II (Blizzard, 2010; SSAO in its effects pipeline)
+- Motion DNA: The camera makes the shared 50° orbit while the AO radius steps up once per beat, 0.05 to 0.85 world units, with the sample count rising from 3 to 8, then eases back to 0.32. A wipe then carries the pass into the colour render, and a split line slides in from the left to show the same light without AO.
+- Visual DNA: A white clay world: white objects and floor with grey contact shadows under the sphere and cube, a soft pool beneath the hovering Token, dark rings in its hole. Sample dots climb the normal by the cube with circles showing the distance field. In the colour half the orange Token, white sphere and blue cube sit firmly on the floor; on the no-AO side they float.
+- Signature transitions: Radius steps on the beat; a vertical wipe from pass to colour; a before / after split
+- Key techniques: Occlusion sampled along the normal, Radius and sample count, AO multiplies the ambient term
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Occlusion sampled along the normal, Radius and sample count, AO multiplies the ambient term).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Occlusion sampled along the normal and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "AMBIENT OCCLUSION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Ray-traced AO pass (RenderMan, Arnold, V-Ray), SSAO / HBAO / GTAO on the depth buffer in game engines, Canvas 2D + SDF tracer (js/look-kit.js): N distance-field lookups along the normal per pixel, multiplied into the ambient term. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Ambient Occlusion motion-graphics film (How much sky each point can see). Visual style: a white clay world: white objects and floor with grey contact shadows under the sphere and cube, a soft pool beneath the hovering Token, dark rings in its hole. Sample dots climb the normal by the cube with circles showing the distance field. In the colour half the orange Token, white sphere and blue cube sit firmly on the floor; on the no-AO side they float. Motion: the camera makes the shared 50° orbit while the AO radius steps up once per beat, 0.05 to 0.85 world units, with the sample count rising from 3 to 8, then eases back to 0.32. A wipe then carries the pass into the colour render, and a split line slides in from the left to show the same light without AO. Signature moves: occlusion sampled along the normal, radius and sample count, ao multiplies the ambient term; transitions: radius steps on the beat; a vertical wipe from pass to colour; a before / after split. In the tradition of Pearl Harbor (Michael Bay, 2001; ILM ambient occlusion) · Crysis (Crytek, 2007; screen-space AO) · StarCraft II (Blizzard, 2010; SSAO in its effects pipeline). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "AMBIENT OCCLUSION". Punchy sound design synced to every cut.
+```
+
+## 228 · Fresnel X-ray
+*Light only where surfaces turn away · 1990s — · Rendering Looks*
+
+Reference film: `videos/lookxray.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Fresnel X-ray** (Light only where surfaces turn away, 1990s —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Fresnel’s equations (Augustin-Jean Fresnel, 1820s) say surfaces reflect more as they turn edge-on to the eye, and Christophe Schlick’s 1994 approximation reduced that rise to a cheap power of (1 − cos θ). Driven by the facing ratio |n·v| and added onto black with depth testing off, the same edge term draws only an object’s rims, hole walls and far sides: the see-through hologram and x-ray look of film interfaces and game vision modes.
+- Study these reference works: Iron Man (Jon Favreau, 2008; holographic workshop interfaces) · Batman: Arkham Asylum (Rocksteady, 2009; Detective Mode) · Prometheus (Ridley Scott, 2012; holographic star map)
+- Motion DNA: After a wipe from the plain render, the camera makes the shared orbit while the exponent p steps on the beat: 1.5 (a soft ghost), 3.2, 6.5 (thin wire-like rims), 0.75 (a solid glow), settling at 2.4. The hue drifts from cyan to violet, then to amber; a slow scan band rolls down the frame.
+- Visual DNA: Near-black blue ground with a faint glowing floor grid that shows through the objects. The Token, sphere and cube are drawn only as glowing rims, with their back faces and the Token’s hole wall visible through the front faces, plus bloom on the brightest edges. Two dark insets show |n·v| and the edge term.
+- Signature transitions: A vertical wipe from plain to x-ray; exponent steps on the beat; hue crossfades
+- Key techniques: Facing-ratio edge term (1 − |n·v|)^p, Additive, through every surface, Bloom and faint scanlines
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Facing-ratio edge term (1 − |n·v|)^p, Additive, through every surface, Bloom and faint scanlines).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Facing-ratio edge term (1 − |n·v|)^p and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "FRESNEL X-RAY", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Fresnel / facing-ratio shader with additive blending (Unity, Unreal), Rim or “x-ray” material in a DCC (Maya, Blender facing-ratio node), Canvas 2D + SDF tracer (js/look-kit.js): each ray walks every surface via LK.trace and LK.traceInside, summing the edge term, then bloom. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Fresnel X-ray motion-graphics film (Light only where surfaces turn away). Visual style: near-black blue ground with a faint glowing floor grid that shows through the objects. The Token, sphere and cube are drawn only as glowing rims, with their back faces and the Token’s hole wall visible through the front faces, plus bloom on the brightest edges. Two dark insets show |n·v| and the edge term. Motion: after a wipe from the plain render, the camera makes the shared orbit while the exponent p steps on the beat: 1.5 (a soft ghost), 3.2, 6.5 (thin wire-like rims), 0.75 (a solid glow), settling at 2.4. The hue drifts from cyan to violet, then to amber; a slow scan band rolls down the frame. Signature moves: facing-ratio edge term (1 − |n·v|)^p, additive, through every surface, bloom and faint scanlines; transitions: a vertical wipe from plain to x-ray; exponent steps on the beat; hue crossfades. In the tradition of Iron Man (Jon Favreau, 2008; holographic workshop interfaces) · Batman: Arkham Asylum (Rocksteady, 2009; Detective Mode) · Prometheus (Ridley Scott, 2012; holographic star map). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FRESNEL X-RAY". Punchy sound design synced to every cut.
+```
+
+## 229 · Wireframe
+*Edges only, hidden lines removed · 1963 — · Rendering Looks*
+
+Reference film: `videos/lookwire.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Wireframe** (Edges only, hidden lines removed, 1963 —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Computer graphics began as lines: Ivan Sutherland’s Sketchpad (1963) drew on a vector display, and Lawrence Roberts’s 1963 MIT thesis gave one of the first methods for removing the lines a solid would hide. Arthur Appel at IBM followed in 1967 with quantitative invisibility. Vector arcade games and early film graphics made the wireframe a look in its own right, and it remains the modelling view of every 3D package.
+- Study these reference works: Star Wars (George Lucas, 1977; Larry Cuba’s Death Star briefing animation) · Battlezone (Atari, 1980; vector wireframe arcade game) · Elite (David Braben and Ian Bell, Acornsoft, 1984; wireframe ships with hidden-line removal)
+- Motion DNA: A wipe turns the plain render into ink wires on paper; the camera makes the shared orbit while the hidden-line test switches every two beats: off (every line, front and back, a tangle), on (hidden lines removed), dashed (hidden lines shown faint). The shaded render then fades in under the wires, and the test flips to dashed and back once more near the end.
+- Visual DNA: Warm paper with near-white solids; ink silhouette circle, latitude and longitude rings on the sphere, a 4 × 4 grid on each face of the cube in blue, and orange contour loops, cross profiles and a face grid on the Token; a floor grid fading into the backdrop. Over the shaded render the Token and cube wires turn light.
+- Signature transitions: A vertical wipe from plain to wire; hidden-line toggles on the beat; a crossfade to wire over shaded
+- Key techniques: Analytic wire geometry, projected, Hidden-line removal by depth test, Wire over shaded
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Analytic wire geometry, projected, Hidden-line removal by depth test, Wire over shaded).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Analytic wire geometry, projected and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "WIREFRAME", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Wireframe / hidden-line render modes in DCC viewports (Maya, Blender, Cinema 4D), Barycentric or geometry-shader wireframe over shaded meshes in game engines, Canvas 2D + SDF tracer (js/look-kit.js): analytic polylines through LK.project, each point kept if its eye distance ≤ G-buffer depth + ε. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Wireframe motion-graphics film (Edges only, hidden lines removed). Visual style: warm paper with near-white solids; ink silhouette circle, latitude and longitude rings on the sphere, a 4 × 4 grid on each face of the cube in blue, and orange contour loops, cross profiles and a face grid on the Token; a floor grid fading into the backdrop. Over the shaded render the Token and cube wires turn light. Motion: a wipe turns the plain render into ink wires on paper; the camera makes the shared orbit while the hidden-line test switches every two beats: off (every line, front and back, a tangle), on (hidden lines removed), dashed (hidden lines shown faint). The shaded render then fades in under the wires, and the test flips to dashed and back once more near the end. Signature moves: analytic wire geometry, projected, hidden-line removal by depth test, wire over shaded; transitions: a vertical wipe from plain to wire; hidden-line toggles on the beat; a crossfade to wire over shaded. In the tradition of Star Wars (George Lucas, 1977; Larry Cuba’s Death Star briefing animation) · Battlezone (Atari, 1980; vector wireframe arcade game) · Elite (David Braben and Ian Bell, Acornsoft, 1984; wireframe ships with hidden-line removal). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "WIREFRAME". Punchy sound design synced to every cut.
+```
+
+## 230 · Depth Fog
+*Distance falloff from the depth pass · 1980s — · Rendering Looks*
+
+Reference film: `videos/lookfog.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Depth Fog** (Distance falloff from the depth pass, 1980s —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Fog is the oldest depth cue in real-time graphics: the image is blended toward a fog colour by a function of distance, so far geometry fades into the backdrop instead of popping at the far clip plane. Flight simulators used it from the 1980s, and fixed-function OpenGL (1992) and Direct3D standardised three modes — linear, exponential and exponential-squared — computed per vertex or per pixel from eye depth. Height-dependent fog, which integrates a density that thins with altitude along the view ray, became common in game engines in the 2000s; modern engines extend it to volumetric fog that also scatters light.
+- Study these reference works: Silent Hill (Konami, 1999; fog as atmosphere and draw-distance cover) · Turok: Dinosaur Hunter (Iguana Entertainment, 1997; distance fog on the Nintendo 64) · Limbo (Playdead, 2010; layered depth haze)
+- Motion DNA: The camera makes the shared 50° orbit while the fog is dialled on the beat: a wipe brings exponential fog in over the plain render, the fog colour is detuned to a cool grey and back to show the horizon seam, the density rises, the falloff switches to exponential-squared, then to a height fog whose mist pools on the floor and slowly thickens as its falloff relaxes.
+- Visual DNA: The Token, sphere and cube receding into warm paper haze; the floor dissolves into a backdrop of exactly the fog colour. Mono readouts give the mode, the formula, ρ, z0 and the two colour swatches; a depth-pass inset runs near white to far black; leader lines give each object its depth and fog fraction; the caption draws the live falloff curve.
+- Signature transitions: Linear wipe against the plain render; crossfades between fog models
+- Key techniques: Fog factor from the depth pass, Exp / exp² / height falloff, Fog colour = horizon colour
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Fog factor from the depth pass, Exp / exp² / height falloff, Fog colour = horizon colour).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Fog factor from the depth pass and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "DEPTH FOG", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: OpenGL / Direct3D fixed-function fog (GL_EXP, GL_EXP2), Engine height fog / deferred fog pass over the depth buffer, Canvas 2D + SDF tracer (js/look-kit.js): per-pixel fog factor from hit depth and the analytic height-fog integral along each ray. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Depth Fog motion-graphics film (Distance falloff from the depth pass). Visual style: the Token, sphere and cube receding into warm paper haze; the floor dissolves into a backdrop of exactly the fog colour. Mono readouts give the mode, the formula, ρ, z0 and the two colour swatches; a depth-pass inset runs near white to far black; leader lines give each object its depth and fog fraction; the caption draws the live falloff curve. Motion: the camera makes the shared 50° orbit while the fog is dialled on the beat: a wipe brings exponential fog in over the plain render, the fog colour is detuned to a cool grey and back to show the horizon seam, the density rises, the falloff switches to exponential-squared, then to a height fog whose mist pools on the floor and slowly thickens as its falloff relaxes. Signature moves: fog factor from the depth pass, exp / exp² / height falloff, fog colour = horizon colour; transitions: linear wipe against the plain render; crossfades between fog models. In the tradition of Silent Hill (Konami, 1999; fog as atmosphere and draw-distance cover) · Turok: Dinosaur Hunter (Iguana Entertainment, 1997; distance fog on the Nintendo 64) · Limbo (Playdead, 2010; layered depth haze). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "DEPTH FOG". Punchy sound design synced to every cut.
+```
+
+## 231 · Teal & Orange Grade
+*Lift, gamma, gain and a split-tone, in post · 2000 — · Rendering Looks*
+
+Reference film: `videos/lookgrade.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Teal & Orange Grade** (Lift, gamma, gain and a split-tone, in post, 2000 —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Colour grading moved from photochemical timing to software when O Brother, Where Art Thou? (2000) was scanned, graded digitally and recorded back to film — the first feature finished entirely through a digital intermediate. Three-way correctors, with lift, gamma and gain wheels for shadows, midtones and highlights, became the grader’s instrument, and the teal-and-orange look that pushes skin and warm subjects one way and shadows and backgrounds the complementary way spread through blockbusters in the 2000s. Bleach bypass imitates skipping the bleach step in film processing, leaving silver in the image: lower saturation, harder contrast.
+- Study these reference works: O Brother, Where Art Thou? (Joel and Ethan Coen, 2000; digital intermediate) · Transformers (Michael Bay, 2007; teal and orange) · Saving Private Ryan (Steven Spielberg, 1998; bleach-bypass-style desaturation)
+- Motion DNA: The camera makes the shared 50° orbit. A split opens on the plain render, then the grade is built one control per beat — lift, gamma, gain, then contrast, saturation and the split-tone — while the wheels’ pucks travel and the vectorscope trace leans; the split clears to the full grade, a wipe swaps in bleach bypass, and the film ends on three bands: plain, teal & orange, bleach.
+- Visual DNA: The same still life recoloured: teal-green shadows and floor falloff against a peach backdrop and a hotter orange Token; then silvery, near-monochrome bleach bypass. Three colour wheels and a live vectorscope with its skin-tone line sit on a paper panel; per-channel numbers update as the controls move; the caption draws the luma transfer curve.
+- Signature transitions: Before/after split, a linear wipe between presets, three comparison bands
+- Key techniques: Lift / gamma / gain per channel, Teal shadows, orange highlights, Bleach bypass as a second preset
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Lift / gamma / gain per channel, Teal shadows, orange highlights, Bleach bypass as a second preset).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Lift / gamma / gain per channel and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "TEAL & ORANGE GRADE", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: DaVinci Resolve / Baselight three-way colour correctors, ASC CDL (slope, offset, power) and LUTs, Canvas 2D + SDF tracer (js/look-kit.js): the plain render graded per pixel in opts.post, scope built from a subsampled buffer. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural.
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Teal & Orange Grade motion-graphics film (Lift, gamma, gain and a split-tone, in post). Visual style: the same still life recoloured: teal-green shadows and floor falloff against a peach backdrop and a hotter orange Token; then silvery, near-monochrome bleach bypass. Three colour wheels and a live vectorscope with its skin-tone line sit on a paper panel; per-channel numbers update as the controls move; the caption draws the luma transfer curve. Motion: the camera makes the shared 50° orbit. A split opens on the plain render, then the grade is built one control per beat — lift, gamma, gain, then contrast, saturation and the split-tone — while the wheels’ pucks travel and the vectorscope trace leans; the split clears to the full grade, a wipe swaps in bleach bypass, and the film ends on three bands: plain, teal & orange, bleach. Signature moves: lift / gamma / gain per channel, teal shadows, orange highlights, bleach bypass as a second preset; transitions: before/after split, a linear wipe between presets, three comparison bands. In the tradition of O Brother, Where Art Thou? (Joel and Ethan Coen, 2000; digital intermediate) · Transformers (Michael Bay, 2007; teal and orange) · Saving Private Ryan (Steven Spielberg, 1998; bleach-bypass-style desaturation). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "TEAL & ORANGE GRADE". Punchy sound design synced to every cut.
+```
+
+## 232 · Film Grain & Halation
+*Seeded grain, red halation, weave and vignette · 2000s — · Rendering Looks*
+
+Reference film: `videos/lookgrain.mp4`
+
+### Build prompt (Claude / any coding model / a motion designer)
+```text
+You are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film in the style of **Film Grain & Halation** (Seeded grain, red halation, weave and vignette, 2000s —; family: Rendering Looks).
+The goal is the most classic, yet most stunning reading of this style: award-shortlist / high-end commercial quality. A clean, template-looking result is a fail.
+
+STYLE BRIEF
+- Lineage: Film grain is the visible clumping of silver halide crystals and dye clouds in the emulsion; it is strongest in the midtones and changes every frame because every frame is a new piece of film. Halation is the red-orange glow around bright edges where light passes through the emulsion, reflects off the film base and re-exposes the red-sensitive layer from behind; anti-halation backings suppress it, and stocks without one show it strongly. Gate weave is the slight frame-to-frame drift of film in the camera and projector gate. As digital cameras replaced film, finishing tools added these artefacts back on purpose, from scanned grain plates to procedural emulations.
+- Study these reference works: Dune (Denis Villeneuve, 2021; shot digitally, recorded out to film and scanned back for its texture) · Euphoria season 2 (HBO, 2022; shot on Kodak Ektachrome) · Dehancer (film-emulation plug-in modelling grain, halation and bloom)
+- Motion DNA: The camera makes the shared 50° orbit while the finish builds on the beat: grain fades in and starts boiling at 30 frames a second, the halation threshold glow rises until the rim-lit edges bleed red, the gate begins to weave and the vignette closes in; a split then shows the clean render against the finish before the whole frame returns to film.
+- Visual DNA: A low-key version of the still life: black studio, one hard key and a rim light that rings each object in white, each ring haloed in red-orange; fine monochrome grain alive in the midtones, quiet in the blacks; soft dark corners. Insets show the grain plate and the halation pass; a loupe magnifies a rim edge at 3×; mono readouts give grain σ, frame seed, threshold, halation strength, weave and vignette.
+- Signature transitions: Effects layered on one by one; a split against the clean render
+- Key techniques: Grain seeded by frame, midtone weighted, Halation from blurred threshold, Gate weave + vignette
+
+FILM STRUCTURE (10.0 s · 1920×1080 · 30 fps)
+- 0.0–1.5 s  Hook: open on the single most recognisable element of the style.
+- 1.5–5.0 s  Development: bring in the signature techniques one at a time (Grain seeded by frame, midtone weighted, Halation from blurred threshold, Gate weave + vignette).
+- 5.0–8.0 s  Climax: the most spectacular moment, built on Grain seeded by frame, midtone weighted and a signature transition.
+- 8.0–10.0 s Resolve: a composed final frame with a small title "FILM GRAIN & HALATION", held for about 1 s.
+
+BUILD RULES
+- Suggested tools: Scanned grain plates / FilmConvert / Dehancer-style film emulation, Nuke or Resolve: threshold, blur and red-tinted add for halation, Canvas 2D + SDF tracer (js/look-kit.js): opts.post halation blur, hash(x, y, frame) grain, vignette; gate weave as a per-frame draw offset. If you write code, make everything procedural (Canvas 2D or WebGL for picture, Web Audio for sound) with no external assets. Make each frame a pure function of time t, and use seeded randomness so any frame can be re-rendered exactly.
+- Sound is part of the film: write a score and sound effects whose hits land exactly on the visual events. Keep peaks below 0 dBFS.
+- Use the style's real palette, materials and typography, and include at least one detail that only this style would have.
+- One-shot: it does not need to loop.
+- Reproducibility note: Fully procedural (grain is a pure function of pixel and frame index).
+
+DELIVER: the film (or code that renders it), plus a beat sheet listing each event with its timing.
+```
+
+### Video-model prompt (Sora / Runway / Kling / Veo)
+```text
+10-second Film Grain & Halation motion-graphics film (Seeded grain, red halation, weave and vignette). Visual style: a low-key version of the still life: black studio, one hard key and a rim light that rings each object in white, each ring haloed in red-orange; fine monochrome grain alive in the midtones, quiet in the blacks; soft dark corners. Insets show the grain plate and the halation pass; a loupe magnifies a rim edge at 3×; mono readouts give grain σ, frame seed, threshold, halation strength, weave and vignette. Motion: the camera makes the shared 50° orbit while the finish builds on the beat: grain fades in and starts boiling at 30 frames a second, the halation threshold glow rises until the rim-lit edges bleed red, the gate begins to weave and the vignette closes in; a split then shows the clean render against the finish before the whole frame returns to film. Signature moves: grain seeded by frame, midtone weighted, halation from blurred threshold, gate weave + vignette; transitions: effects layered on one by one; a split against the clean render. In the tradition of Dune (Denis Villeneuve, 2021; shot digitally, recorded out to film and scanned back for its texture) · Euphoria season 2 (HBO, 2022; shot on Kodak Ektachrome) · Dehancer (film-emulation plug-in modelling grain, halation and bloom). Award-winning motion design, crisp detail, 16:9, 1920×1080. It ends on a clean title card reading "FILM GRAIN & HALATION". Punchy sound design synced to every cut.
 ```
 

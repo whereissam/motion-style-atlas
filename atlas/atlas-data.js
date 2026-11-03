@@ -44,6 +44,10 @@ window.ATLAS = {
   "K": {
    "name": "Technique Atlas",
    "short": "Techniques"
+  },
+  "L": {
+   "name": "Rendering Looks",
+   "short": "Looks"
   }
  },
  "items": [
@@ -6444,7 +6448,442 @@ window.ATLAS = {
    "poster": 6.2,
    "video": "media/techtrimpaths.mp4",
    "posterImg": "atlas/posters/techtrimpaths.jpg"
+  },
+  {
+   "id": "lookclay",
+   "family": "L",
+   "name": "Clay",
+   "sub": "One matte material, so only form and light remain",
+   "era": "1990s —",
+   "origin": "The clay render comes from the CG production pipeline: lighters and modellers override every shader with one neutral, matte material to judge form, silhouette and lighting before textures and colour arrive, and studios show the same untextured passes in breakdown reels. The name borrows from sculptors’ clay maquettes. As global illumination and ambient occlusion became cheap in renderers such as V-Ray and mental ray in the 2000s, the soft-lit white clay render also became a look of its own in architectural visualisation and motion design.",
+   "works": "Pixar and ILM shot breakdowns (untextured layout and lighting passes) · Architectural visualisation clay renders (V-Ray, Corona) · Studio motion-design reels in white and pastel clay (Cinema 4D)",
+   "tech": [
+    "Material override: one matte albedo",
+    "Big soft key + strong AO",
+    "Subsurface warmth at the terminator"
+   ],
+   "accent": "#e9b49a",
+   "motionDNA": "The shared 10 s camera move: a 50° orbit with a slight drift down while the Token bobs and turns. One wipe left to right replaces the plain materials with white clay; callouts name what clay hides and what it reveals while the AO and key-light passes sit as insets; a second wipe tints the clay per object in pastels.",
+   "visualDNA": "Warm off-white clay on a matching floor that fades into the paper backdrop; soft broad shadows, deep contact occlusion under the Token, sphere and cube, a faint warm glow along each terminator; at the end pastel coral, mint and periwinkle. Ink mono labels with leader lines, an orange split line, two framed pass insets.",
+   "transitions": "Wipe from the plain reference to white clay; wipe from white clay to pastel clay",
+   "implementation": [
+    "Material override / clay pass in Maya, Cinema 4D, Blender",
+    "Ambient-occlusion and key-light passes for lookdev",
+    "Canvas 2D + SDF tracer (js/look-kit.js): one matte albedo, low-hardness soft shadow, 6-tap AO raised to 1.6, terminator-band warmth"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.6,
+   "video": "media/lookclay.mp4",
+   "posterImg": "atlas/posters/lookclay.jpg"
+  },
+  {
+   "id": "lookchrome",
+   "family": "L",
+   "name": "Chrome",
+   "sub": "Mirror metal: the scene and the studio, reflected",
+   "era": "1980 —",
+   "origin": "Turner Whitted’s recursive ray tracing (1980) made perfect mirror reflections of the rest of the scene computable, and the reflective spheres of early ray-traced images became the emblem of CGI. Before that, Jim Blinn and Martin Newell’s reflection mapping (1976) faked chrome by looking up a picture of the surroundings, the trick behind the liquid-metal T-1000 of Terminator 2 (1991) and still the basis of image-based lighting. Robert Cook and Kenneth Torrance’s 1982 reflectance model and Christophe Schlick’s 1994 approximation gave metals their tinted, angle-dependent Fresnel reflectance, which rough-metal shading in modern physically based renderers builds on.",
+   "works": "An Improved Illumination Model for Shaded Display (Turner Whitted, 1980; ray-traced reflective spheres) · Terminator 2: Judgment Day (James Cameron, ILM, 1991; the liquid-metal T-1000) · The 1984 ray-traced still life by Thomas Porter, “1984” (Lucasfilm, distributed ray tracing with glossy reflection)",
+   "tech": [
+    "One-bounce traced reflection",
+    "Softbox studio environment",
+    "Schlick Fresnel · jittered roughness"
+   ],
+   "accent": "#a6adb6",
+   "motionDNA": "The shared camera orbit carries the reflections across the mirrors: as the camera swings, the floor, the cube and the softbox strips slide over the Token’s face and wrap around the sphere. A wipe turns the plain materials to mirror chrome; roughness then rises in four steps on the beat (0.06 → 0.36), blurring the reflection; a final wipe turns the chrome to gold at a satin roughness of 0.10.",
+   "visualDNA": "The paper studio from the plain render, but the Token and sphere become polished metal: crisp softbox strips and a big key box in the reflections, the blue cube and the floor’s shadows curving across the sphere, a dark ceiling that gives the metal its contrast; then frosted satin and warm gold. Leader-line labels, a roughness ruler, the environment panorama and the Fresnel pass as insets.",
+   "transitions": "Wipe from plain to chrome; stepped roughness changes; wipe from chrome to gold",
+   "implementation": [
+    "Ray-traced reflections (Whitted, 1980) and reflection mapping (Blinn & Newell, 1976)",
+    "Physically based metal: Schlick Fresnel with a tinted F0, GGX-style roughness",
+    "Canvas 2D + SDF tracer (js/look-kit.js): one LK.trace bounce per pixel, analytic softbox environment, 5 jittered rays plus an edge-aware blur for roughness"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.2,
+   "video": "media/lookchrome.mp4",
+   "posterImg": "atlas/posters/lookchrome.jpg"
+  },
+  {
+   "id": "lookglass",
+   "family": "L",
+   "name": "Glass",
+   "sub": "Light bent by Snell’s law, tinted by thickness",
+   "era": "1980 —",
+   "origin": "Turner Whitted’s 1980 ray tracer was the first to follow rays through transparent objects, bending them at each surface by Snell’s law and splitting off a reflected ray, and his glass spheres over a checkerboard became one of computer graphics’ defining images. The Fresnel equations set how much light reflects at each angle, and Beer–Lambert absorption colours glass by the distance light travels inside it. Caustics — light focused by the glass onto the floor — needed later techniques such as Henrik Wann Jensen’s photon mapping (1990s); here a ball-lens approximation stands in.",
+   "works": "An Improved Illumination Model for Shaded Display (Turner Whitted, 1980; glass spheres over a checkerboard) · Henrik Wann Jensen, photon-mapped caustic renders (1996 onwards) · Glass and crystal product visualisation (KeyShot, V-Ray)",
+   "tech": [
+    "Snell refraction in and out",
+    "Fresnel reflection mix",
+    "Beer–Lambert tint · ball-lens caustic"
+   ],
+   "accent": "#4fb3a6",
+   "motionDNA": "The shared camera orbit slides the world behind the glass: the floor’s edge, the cube and the shadows swim through the Token and the sphere as the camera moves. A wipe turns them to glass at IOR 1.00, where nothing bends and only the tint shows; the index then rises on eased ramps to 1.50 (glass), where the sphere flips the floor upside down and the caustic gathers, and to 2.42 (diamond), where total internal reflection fills the Token with bright facets.",
+   "visualDNA": "The paper studio seen through amber and pale-aqua glass: the dark studio ceiling and softboxes in the Fresnel rims, deeper colour where the glass is thicker, tinted translucent shadows, a bright focused caustic in the sphere’s shadow. An IOR ruler with air, water, glass and diamond marked, leader-line labels, thickness and Fresnel pass insets.",
+   "transitions": "Wipe from plain to glass; the index of refraction ramps between named materials",
+   "implementation": [
+    "Whitted-style recursive ray tracing of dielectrics",
+    "Fresnel (Schlick) reflectance and Beer–Lambert absorption, as in physically based glass shaders",
+    "Canvas 2D + SDF tracer (js/look-kit.js): refract → LK.traceInside → refract (one TIR bounce) → LK.trace, a traced reflection, per-object soft shadows and an analytic ball-lens caustic"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.4,
+   "video": "media/lookglass.mp4",
+   "posterImg": "atlas/posters/lookglass.jpg"
+  },
+  {
+   "id": "lookmatcap",
+   "family": "L",
+   "name": "Matcap",
+   "sub": "Material capture: shading from a painted sphere",
+   "era": "2001 —",
+   "origin": "Peter-Pike Sloan, William Martin, Amy Gooch and Bruce Gooch described \"The Lit Sphere\" in 2001: an artist paints a sphere, and every point of a model takes the colour of the sphere point with the same view-space normal. Pixologic’s ZBrush popularised the idea as MatCap (material capture) materials for digital sculpting, and it is now standard in sculpting and modelling viewports such as Blender’s, where a matcap shows form instantly without any lights in the scene.",
+   "works": "The Lit Sphere: A Model for Capturing NPR Shading from Art (Sloan, Martin, Gooch & Gooch, Graphics Interface 2001) · ZBrush MatCap materials (Pixologic) · Blender viewport MatCap shading (Blender 2.8+)",
+   "tech": [
+    "View-space normal lookup",
+    "Painted lit sphere",
+    "Lights baked, camera-locked"
+   ],
+   "accent": "#d8322a",
+   "motionDNA": "The shared camera orbits 50° while the Token turns and bobs. A split wipes from the plain reference to the matcap look and off again; the matcap switches on the beat from red wax to jade to pearl to chrome, crossfading in a fifth of a second, and on the last bar each object takes its own matcap. A tracked sample on the sphere slides across the matcap inset as the camera moves, its leader line linking the surface to the pixel it reads.",
+   "visualDNA": "A dark sculpt-viewport backdrop with a soft centre glow; objects shaded entirely from the painted sphere, the floor only darkened by contact occlusion, so there are no cast shadows. Top right: the matcap sphere with a crosshair at the lookup point; under it a view-space normal pass. Mono readouts give N·right, N·up and the uv they become.",
+   "transitions": "Split wipe from the plain render; short crossfades between matcaps on the beat",
+   "implementation": [
+    "Lit-sphere / matcap texture lookup by view-space normal",
+    "ZBrush MatCap, Blender viewport MatCap",
+    "Canvas 2D + SDF tracer (js/look-kit.js): normal → (N·camRight, N·camUp) → bilinear sample of four 192² matcaps painted in setup()"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.2,
+   "video": "media/lookmatcap.mp4",
+   "posterImg": "atlas/posters/lookmatcap.jpg"
+  },
+  {
+   "id": "lookstudio",
+   "family": "L",
+   "name": "Three-point Studio",
+   "sub": "Key, fill and back light",
+   "era": "1920s —",
+   "origin": "Three-point lighting comes from the Hollywood studio system of the 1920s and 1930s, where cinematographers lit stars with a hard key light, a softer fill to control contrast and a back light to lift the figure off the set; portrait and product photographers adopted the same plot, and the key:fill ratio became the standard way to describe contrast. In computer graphics the same three lights are the default starting rig for lighting a model or a product render.",
+   "works": "Shanghai Express (Josef von Sternberg, cinematography Lee Garmes, 1932) · Citizen Kane (Orson Welles, cinematography Gregg Toland, 1941) · Casablanca (Michael Curtiz, 1942; Arthur Edeson’s Hollywood portrait lighting)",
+   "tech": [
+    "Key / fill / back spotlights",
+    "Per-light soft shadows",
+    "Key:fill ratio"
+   ],
+   "accent": "#ffcf8a",
+   "motionDNA": "The shared camera orbit with the lights fixed in the world, so the angle each light makes with the lens changes as the camera moves (the plot reads it live). The set starts dark; the key snaps on with a brief strobe flicker on beat 1, the fill fades up over most of a second on beat 5 while the key:fill ratio counts down from infinity to 3:1, the back light snaps on at beat 9, and on beat 12 the backdrop is lit and a soft bounce fills in for the finished product shot.",
+   "visualDNA": "A black studio with three pools of light on a grey floor, warm key, cool fill, white back. Each light casts its own shadow, the fill’s soft and pale. Top right: a top-view light plot with cones, the camera wedge and live angles; under it the key:fill ratio. Bottom right: one thumbnail per light, adding up to the beauty render.",
+   "transitions": "Lights switched on one at a time on the beat; a final lift into the product look",
+   "implementation": [
+    "Three spotlights with smooth cone falloff and inverse-square attenuation",
+    "Lambert + Blinn-Phong with a Fresnel boost, ACES-style tone map",
+    "Canvas 2D + SDF tracer (js/look-kit.js): one soft-shadow ray per light per pixel, skipped outside each cone"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9.3,
+   "video": "media/lookstudio.mp4",
+   "posterImg": "atlas/posters/lookstudio.jpg"
+  },
+  {
+   "id": "lookrim",
+   "family": "L",
+   "name": "Rim Light",
+   "sub": "Silhouettes edged by light from behind",
+   "era": "1920s —",
+   "origin": "The back or rim light is one of the three lights of classic Hollywood studio lighting, placed behind and above the subject so a thin edge of light separates it from a dark background; film noir and high-contrast advertising pushed it to the point where the edge is nearly all that is lit. In real-time graphics the effect is often faked with a Fresnel-style term on 1 − N·V, a staple of game and stylised shaders, while offline renderers get it from lights placed behind the subject.",
+   "works": "The Third Man (Carol Reed, cinematography Robert Krasker, 1949) · Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982) · Apocalypse Now (Francis Ford Coppola, 1979; Vittorio Storaro’s edge-lit Kurtz in darkness)",
+   "tech": [
+    "Edge band from 1 − N·V",
+    "Back-light facing gate",
+    "Warm / cool two-rim"
+   ],
+   "accent": "#ff9a3c",
+   "motionDNA": "The shared camera orbit over a set lit only from behind. A split wipes the plain render away into black; a white back light swells up and draws thin edges; on the beat the rim width widens to a soft glow, then narrows to a hairline with a sharp falloff; on beat 8 the single white light gives way to a warm rim back-left and a cool rim back-right, and the width settles to a medium band for the end.",
+   "visualDNA": "Near-black set, objects in silhouette, lines of light along every edge that faces a light, long shadows running toward the lens across a dark glossy floor, soft haze glowing round the light sources. Top right: three passes — the edge band, the back-light facing term and their product. Top left: live width, falloff and intensity readouts with bars.",
+   "transitions": "Split wipe from the plain render; parameter changes on the beat; white rim crossfades to a warm and cool pair",
+   "implementation": [
+    "Rim term: remap(1 − N·V, width)^falloff × N·L of the back light, shadowed",
+    "Grazing Blinn-Phong with Schlick Fresnel; analytic point-light in-scattering haze",
+    "Canvas 2D + SDF tracer (js/look-kit.js): shadow rays only where a rim or floor pool can appear"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.9,
+   "video": "media/lookrim.mp4",
+   "posterImg": "atlas/posters/lookrim.jpg"
+  },
+  {
+   "id": "lookgolden",
+   "family": "L",
+   "name": "Golden Hour",
+   "sub": "Low warm sun, cool sky in the shadows",
+   "era": "1900s — (painting earlier)",
+   "origin": "The “magic hour” after sunrise and before sunset was prized by painters long before film — Monet’s Haystacks and Rouen Cathedral series (1890s) chase exactly this light. In cinema it became a signature when Terrence Malick and cinematographer Néstor Almendros shot much of Days of Heaven (1978) in the minutes around sunset; Almendros won the Academy Award for it. In CG the look is a sun direction and a colour temperature: a low key light, a black-body warm colour, and a blue sky dome filling the shadows.",
+   "works": "Days of Heaven (Terrence Malick, cinematography Néstor Almendros, 1978) · Haystacks series (Claude Monet, 1890–91) · Barry Lyndon (Stanley Kubrick, cinematography John Alcott, 1975)",
+   "tech": [
+    "Low directional key",
+    "Black-body colour temperature",
+    "Blue sky-dome fill"
+   ],
+   "accent": "#f29a3a",
+   "motionDNA": "The camera makes the same slow 50° orbit as every look film while the sun sinks from 24° to 5° above the horizon on an ease. Shadow length follows h / tan(elevation), so the shadows stretch across the floor as it drops, and the key warms from about 4900 K to 2700 K. A wipe from the plain studio reference opens the film; readouts and the sun diagram track the change.",
+   "visualDNA": "Warm orange key on every sun-facing face, long soft shadows filled with cool sky blue, a pale-blue-to-peach sky gradient glowing on the sun side, the floor fading into the warm horizon. A small sun/sky diagram and a colour-temperature bar sit top right.",
+   "transitions": "One wipe from the plain reference to the look; afterwards a continuous change of sun elevation",
+   "implementation": [
+    "Unreal / Unity: directional light with temperature + sky atmosphere",
+    "Blender: Sun lamp with blackbody colour, Nishita sky",
+    "Canvas 2D + SDF tracer (js/look-kit.js): a low sun with soft ray-marched shadows, Helland black-body colour, blue sky-dome fill with AO and a gradient sky"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.6,
+   "video": "media/lookgolden.mp4",
+   "posterImg": "atlas/posters/lookgolden.jpg"
+  },
+  {
+   "id": "lookvolumetric",
+   "family": "L",
+   "name": "Volumetric Light",
+   "sub": "God rays through haze, single scattering",
+   "era": "1980s —",
+   "origin": "Shafts of light through haze — crepuscular rays — were a painter’s and cinematographer’s device long before rendering, built on set with smoke and a hard source through a window. In computer graphics, Jim Blinn’s 1982 paper on light reflection by clouds and dusty surfaces and Kajiya and Von Herzen’s 1984 “Ray Tracing Volume Densities” laid the ground for rendering participating media. Real-time engines adopted ray-marched single scattering against a shadow map in the 2010s, so god rays became a standard game-engine effect.",
+   "works": "Blade Runner (Ridley Scott, cinematography Jordan Cronenweth, 1982) · Raiders of the Lost Ark (Steven Spielberg, 1981; the Map Room sunbeam) · Inside (Playdead, 2016)",
+   "tech": [
+    "Ray-marched single scattering",
+    "Light-space shadow map",
+    "Henyey–Greenstein phase"
+   ],
+   "accent": "#ffcf7a",
+   "motionDNA": "The camera makes the same slow 50° orbit while the shafts swing across the view, carved by the Token as it turns and bobs. The haze fades in over the first two seconds (density σ 0 → 0.11), the march steps per ray double on the beat (8 → 16 → 32) so the jittered banding settles, and the haze thickens a little near the end. Dust motes drift down through the beams.",
+   "visualDNA": "A near-black room, a 3 × 2 window of warm light falling from above and behind, its bars printed on the floor and repeated as dark planes in the air. The Token’s shadow is a solid dark shaft with a bright beam through its hole; the sphere and cube cut their own. Insets show the in-scatter pass alone and one view ray’s lit and shadowed samples.",
+   "transitions": "Haze fades in from a clear room; step counts change on the beat",
+   "implementation": [
+    "Unreal Engine: exponential height fog with volumetric fog",
+    "Blender: Principled Volume in a world box, spot or area light",
+    "Canvas 2D + SDF tracer (js/look-kit.js): per-frame light-space shadow map, half-res jittered ray march clipped to the window prism, HG phase, Beer–Lambert transmittance, depth-aware upsample"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.2,
+   "video": "media/lookvolumetric.mp4",
+   "posterImg": "atlas/posters/lookvolumetric.jpg"
+  },
+  {
+   "id": "looktoon",
+   "family": "L",
+   "name": "Toon Ramp",
+   "sub": "Quantised N·L, hard specular, G-buffer ink",
+   "era": "2000 —",
+   "origin": "Rendering 3D models to look hand-inked grew out of non-photorealistic rendering research in the 1990s; Lake, Marshall, Harris and Blackstein’s “Stylized Rendering Techniques for Scalable Real-Time 3D Animation” (NPAR 2000) described the now-standard trick of looking N·L up in a small stepped texture. Jet Set Radio (Sega, 2000) brought cel shading with ink outlines to a mass audience, and The Legend of Zelda: The Wind Waker (Nintendo, 2002) made it a house style. Modern anime-style renderers add hand-tuned ramps per material and outlines found from depth, normal and id buffers in post.",
+   "works": "Jet Set Radio (Smilebit / Sega, 2000) · The Legend of Zelda: The Wind Waker (Nintendo, 2002) · Guilty Gear Xrd (Arc System Works, 2014)",
+   "tech": [
+    "N·L ramp lookup",
+    "Thresholded specular",
+    "Edge detection on G-buffers"
+   ],
+   "accent": "#ff5a1f",
+   "motionDNA": "The camera makes the same slow 50° orbit. A wipe turns the plain render into flat two-band shading; ink outlines sweep in across the frame; the ramp then steps up to three bands and to four on the beat, each step visible on every surface at once as the Token turns through the light.",
+   "visualDNA": "Flat fills between a cool shade tone and the full albedo, a crisp terminator and hard-edged cast shadows, white specular blobs, a dark ink line around every silhouette, overlap and crease. Insets: the ramp strip (smooth N·L above, the stepped lookup below) and the edge pass coloured by the test that found each line.",
+   "transitions": "One wipe from the plain reference; outlines reveal left to right; band count steps 2 → 3 → 4",
+   "implementation": [
+    "Blender: Shader to RGB + Color Ramp (constant), Line Art / Freestyle",
+    "Unity / Unreal: ramp-texture lookup in a custom lit shader, Sobel outline post-process",
+    "Canvas 2D + SDF tracer (js/look-kit.js): half-Lambert N·L quantised to B bands with shadows forced below the terminator, thresholded Blinn, id / depth-plane / normal edge tests on the G-buffer"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7.4,
+   "video": "media/looktoon.mp4",
+   "posterImg": "atlas/posters/looktoon.jpg"
+  },
+  {
+   "id": "lookao",
+   "family": "L",
+   "name": "Ambient Occlusion",
+   "sub": "How much sky each point can see",
+   "era": "2001 —",
+   "origin": "Ambient occlusion approximates the soft darkening of creases and contact points under even sky light by measuring how open each point is, without simulating full global illumination. Zhukov, Iones and Kronin described the related idea of obscurances in 1998; Hayden Landis and colleagues at ILM brought ambient occlusion into feature production around Pearl Harbor (2001) and documented it in the SIGGRAPH 2002 course on production global illumination. Crytek’s screen-space AO in Crysis (2007) made it a real-time staple.",
+   "works": "Pearl Harbor (Michael Bay, 2001; ILM ambient occlusion) · Crysis (Crytek, 2007; screen-space AO) · StarCraft II (Blizzard, 2010; SSAO in its effects pipeline)",
+   "tech": [
+    "Occlusion sampled along the normal",
+    "Radius and sample count",
+    "AO multiplies the ambient term"
+   ],
+   "accent": "#8f8a80",
+   "motionDNA": "The camera makes the shared 50° orbit while the AO radius steps up once per beat, 0.05 to 0.85 world units, with the sample count rising from 3 to 8, then eases back to 0.32. A wipe then carries the pass into the colour render, and a split line slides in from the left to show the same light without AO.",
+   "visualDNA": "A white clay world: white objects and floor with grey contact shadows under the sphere and cube, a soft pool beneath the hovering Token, dark rings in its hole. Sample dots climb the normal by the cube with circles showing the distance field. In the colour half the orange Token, white sphere and blue cube sit firmly on the floor; on the no-AO side they float.",
+   "transitions": "Radius steps on the beat; a vertical wipe from pass to colour; a before / after split",
+   "implementation": [
+    "Ray-traced AO pass (RenderMan, Arnold, V-Ray)",
+    "SSAO / HBAO / GTAO on the depth buffer in game engines",
+    "Canvas 2D + SDF tracer (js/look-kit.js): N distance-field lookups along the normal per pixel, multiplied into the ambient term"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.6,
+   "video": "media/lookao.mp4",
+   "posterImg": "atlas/posters/lookao.jpg"
+  },
+  {
+   "id": "lookxray",
+   "family": "L",
+   "name": "Fresnel X-ray",
+   "sub": "Light only where surfaces turn away",
+   "era": "1990s —",
+   "origin": "Fresnel’s equations (Augustin-Jean Fresnel, 1820s) say surfaces reflect more as they turn edge-on to the eye, and Christophe Schlick’s 1994 approximation reduced that rise to a cheap power of (1 − cos θ). Driven by the facing ratio |n·v| and added onto black with depth testing off, the same edge term draws only an object’s rims, hole walls and far sides: the see-through hologram and x-ray look of film interfaces and game vision modes.",
+   "works": "Iron Man (Jon Favreau, 2008; holographic workshop interfaces) · Batman: Arkham Asylum (Rocksteady, 2009; Detective Mode) · Prometheus (Ridley Scott, 2012; holographic star map)",
+   "tech": [
+    "Facing-ratio edge term (1 − |n·v|)^p",
+    "Additive, through every surface",
+    "Bloom and faint scanlines"
+   ],
+   "accent": "#3fdcff",
+   "motionDNA": "After a wipe from the plain render, the camera makes the shared orbit while the exponent p steps on the beat: 1.5 (a soft ghost), 3.2, 6.5 (thin wire-like rims), 0.75 (a solid glow), settling at 2.4. The hue drifts from cyan to violet, then to amber; a slow scan band rolls down the frame.",
+   "visualDNA": "Near-black blue ground with a faint glowing floor grid that shows through the objects. The Token, sphere and cube are drawn only as glowing rims, with their back faces and the Token’s hole wall visible through the front faces, plus bloom on the brightest edges. Two dark insets show |n·v| and the edge term.",
+   "transitions": "A vertical wipe from plain to x-ray; exponent steps on the beat; hue crossfades",
+   "implementation": [
+    "Fresnel / facing-ratio shader with additive blending (Unity, Unreal)",
+    "Rim or “x-ray” material in a DCC (Maya, Blender facing-ratio node)",
+    "Canvas 2D + SDF tracer (js/look-kit.js): each ray walks every surface via LK.trace and LK.traceInside, summing the edge term, then bloom"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 7,
+   "video": "media/lookxray.mp4",
+   "posterImg": "atlas/posters/lookxray.jpg"
+  },
+  {
+   "id": "lookwire",
+   "family": "L",
+   "name": "Wireframe",
+   "sub": "Edges only, hidden lines removed",
+   "era": "1963 —",
+   "origin": "Computer graphics began as lines: Ivan Sutherland’s Sketchpad (1963) drew on a vector display, and Lawrence Roberts’s 1963 MIT thesis gave one of the first methods for removing the lines a solid would hide. Arthur Appel at IBM followed in 1967 with quantitative invisibility. Vector arcade games and early film graphics made the wireframe a look in its own right, and it remains the modelling view of every 3D package.",
+   "works": "Star Wars (George Lucas, 1977; Larry Cuba’s Death Star briefing animation) · Battlezone (Atari, 1980; vector wireframe arcade game) · Elite (David Braben and Ian Bell, Acornsoft, 1984; wireframe ships with hidden-line removal)",
+   "tech": [
+    "Analytic wire geometry, projected",
+    "Hidden-line removal by depth test",
+    "Wire over shaded"
+   ],
+   "accent": "#17181c",
+   "motionDNA": "A wipe turns the plain render into ink wires on paper; the camera makes the shared orbit while the hidden-line test switches every two beats: off (every line, front and back, a tangle), on (hidden lines removed), dashed (hidden lines shown faint). The shaded render then fades in under the wires, and the test flips to dashed and back once more near the end.",
+   "visualDNA": "Warm paper with near-white solids; ink silhouette circle, latitude and longitude rings on the sphere, a 4 × 4 grid on each face of the cube in blue, and orange contour loops, cross profiles and a face grid on the Token; a floor grid fading into the backdrop. Over the shaded render the Token and cube wires turn light.",
+   "transitions": "A vertical wipe from plain to wire; hidden-line toggles on the beat; a crossfade to wire over shaded",
+   "implementation": [
+    "Wireframe / hidden-line render modes in DCC viewports (Maya, Blender, Cinema 4D)",
+    "Barycentric or geometry-shader wireframe over shaded meshes in game engines",
+    "Canvas 2D + SDF tracer (js/look-kit.js): analytic polylines through LK.project, each point kept if its eye distance ≤ G-buffer depth + ε"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 4.9,
+   "video": "media/lookwire.mp4",
+   "posterImg": "atlas/posters/lookwire.jpg"
+  },
+  {
+   "id": "lookfog",
+   "family": "L",
+   "name": "Depth Fog",
+   "sub": "Distance falloff from the depth pass",
+   "era": "1980s —",
+   "origin": "Fog is the oldest depth cue in real-time graphics: the image is blended toward a fog colour by a function of distance, so far geometry fades into the backdrop instead of popping at the far clip plane. Flight simulators used it from the 1980s, and fixed-function OpenGL (1992) and Direct3D standardised three modes — linear, exponential and exponential-squared — computed per vertex or per pixel from eye depth. Height-dependent fog, which integrates a density that thins with altitude along the view ray, became common in game engines in the 2000s; modern engines extend it to volumetric fog that also scatters light.",
+   "works": "Silent Hill (Konami, 1999; fog as atmosphere and draw-distance cover) · Turok: Dinosaur Hunter (Iguana Entertainment, 1997; distance fog on the Nintendo 64) · Limbo (Playdead, 2010; layered depth haze)",
+   "tech": [
+    "Fog factor from the depth pass",
+    "Exp / exp² / height falloff",
+    "Fog colour = horizon colour"
+   ],
+   "accent": "#a9a294",
+   "motionDNA": "The camera makes the shared 50° orbit while the fog is dialled on the beat: a wipe brings exponential fog in over the plain render, the fog colour is detuned to a cool grey and back to show the horizon seam, the density rises, the falloff switches to exponential-squared, then to a height fog whose mist pools on the floor and slowly thickens as its falloff relaxes.",
+   "visualDNA": "The Token, sphere and cube receding into warm paper haze; the floor dissolves into a backdrop of exactly the fog colour. Mono readouts give the mode, the formula, ρ, z0 and the two colour swatches; a depth-pass inset runs near white to far black; leader lines give each object its depth and fog fraction; the caption draws the live falloff curve.",
+   "transitions": "Linear wipe against the plain render; crossfades between fog models",
+   "implementation": [
+    "OpenGL / Direct3D fixed-function fog (GL_EXP, GL_EXP2)",
+    "Engine height fog / deferred fog pass over the depth buffer",
+    "Canvas 2D + SDF tracer (js/look-kit.js): per-pixel fog factor from hit depth and the analytic height-fog integral along each ray"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 8.4,
+   "video": "media/lookfog.mp4",
+   "posterImg": "atlas/posters/lookfog.jpg"
+  },
+  {
+   "id": "lookgrade",
+   "family": "L",
+   "name": "Teal & Orange Grade",
+   "sub": "Lift, gamma, gain and a split-tone, in post",
+   "era": "2000 —",
+   "origin": "Colour grading moved from photochemical timing to software when O Brother, Where Art Thou? (2000) was scanned, graded digitally and recorded back to film — the first feature finished entirely through a digital intermediate. Three-way correctors, with lift, gamma and gain wheels for shadows, midtones and highlights, became the grader’s instrument, and the teal-and-orange look that pushes skin and warm subjects one way and shadows and backgrounds the complementary way spread through blockbusters in the 2000s. Bleach bypass imitates skipping the bleach step in film processing, leaving silver in the image: lower saturation, harder contrast.",
+   "works": "O Brother, Where Art Thou? (Joel and Ethan Coen, 2000; digital intermediate) · Transformers (Michael Bay, 2007; teal and orange) · Saving Private Ryan (Steven Spielberg, 1998; bleach-bypass-style desaturation)",
+   "tech": [
+    "Lift / gamma / gain per channel",
+    "Teal shadows, orange highlights",
+    "Bleach bypass as a second preset"
+   ],
+   "accent": "#1f8f8c",
+   "motionDNA": "The camera makes the shared 50° orbit. A split opens on the plain render, then the grade is built one control per beat — lift, gamma, gain, then contrast, saturation and the split-tone — while the wheels’ pucks travel and the vectorscope trace leans; the split clears to the full grade, a wipe swaps in bleach bypass, and the film ends on three bands: plain, teal & orange, bleach.",
+   "visualDNA": "The same still life recoloured: teal-green shadows and floor falloff against a peach backdrop and a hotter orange Token; then silvery, near-monochrome bleach bypass. Three colour wheels and a live vectorscope with its skin-tone line sit on a paper panel; per-channel numbers update as the controls move; the caption draws the luma transfer curve.",
+   "transitions": "Before/after split, a linear wipe between presets, three comparison bands",
+   "implementation": [
+    "DaVinci Resolve / Baselight three-way colour correctors",
+    "ASC CDL (slope, offset, power) and LUTs",
+    "Canvas 2D + SDF tracer (js/look-kit.js): the plain render graded per pixel in opts.post, scope built from a subsampled buffer"
+   ],
+   "reproducibility": "Fully procedural",
+   "loopable": false,
+   "dur": 10,
+   "poster": 5.4,
+   "video": "media/lookgrade.mp4",
+   "posterImg": "atlas/posters/lookgrade.jpg"
+  },
+  {
+   "id": "lookgrain",
+   "family": "L",
+   "name": "Film Grain & Halation",
+   "sub": "Seeded grain, red halation, weave and vignette",
+   "era": "2000s —",
+   "origin": "Film grain is the visible clumping of silver halide crystals and dye clouds in the emulsion; it is strongest in the midtones and changes every frame because every frame is a new piece of film. Halation is the red-orange glow around bright edges where light passes through the emulsion, reflects off the film base and re-exposes the red-sensitive layer from behind; anti-halation backings suppress it, and stocks without one show it strongly. Gate weave is the slight frame-to-frame drift of film in the camera and projector gate. As digital cameras replaced film, finishing tools added these artefacts back on purpose, from scanned grain plates to procedural emulations.",
+   "works": "Dune (Denis Villeneuve, 2021; shot digitally, recorded out to film and scanned back for its texture) · Euphoria season 2 (HBO, 2022; shot on Kodak Ektachrome) · Dehancer (film-emulation plug-in modelling grain, halation and bloom)",
+   "tech": [
+    "Grain seeded by frame, midtone weighted",
+    "Halation from blurred threshold",
+    "Gate weave + vignette"
+   ],
+   "accent": "#e2532a",
+   "motionDNA": "The camera makes the shared 50° orbit while the finish builds on the beat: grain fades in and starts boiling at 30 frames a second, the halation threshold glow rises until the rim-lit edges bleed red, the gate begins to weave and the vignette closes in; a split then shows the clean render against the finish before the whole frame returns to film.",
+   "visualDNA": "A low-key version of the still life: black studio, one hard key and a rim light that rings each object in white, each ring haloed in red-orange; fine monochrome grain alive in the midtones, quiet in the blacks; soft dark corners. Insets show the grain plate and the halation pass; a loupe magnifies a rim edge at 3×; mono readouts give grain σ, frame seed, threshold, halation strength, weave and vignette.",
+   "transitions": "Effects layered on one by one; a split against the clean render",
+   "implementation": [
+    "Scanned grain plates / FilmConvert / Dehancer-style film emulation",
+    "Nuke or Resolve: threshold, blur and red-tinted add for halation",
+    "Canvas 2D + SDF tracer (js/look-kit.js): opts.post halation blur, hash(x, y, frame) grain, vignette; gate weave as a per-frame draw offset"
+   ],
+   "reproducibility": "Fully procedural (grain is a pure function of pixel and frame index)",
+   "loopable": false,
+   "dur": 10,
+   "poster": 9,
+   "video": "media/lookgrain.mp4",
+   "posterImg": "atlas/posters/lookgrain.jpg"
   }
  ],
- "built": "2026-11-02"
+ "built": "2026-11-03"
 };
