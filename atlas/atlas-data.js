@@ -7764,7 +7764,7 @@ window.ATLAS = {
    "name": "Post-credits Sting",
    "sub": "Wait, then tease the sequel",
    "era": "1979 —",
-   "origin": "A scene after the end credits began as a joke for whoever stayed: The Muppet Movie (1979) ends with Animal shouting “Go home!”, Airplane! (1980) returns to the passenger abandoned in the taxi, and Ferris Bueller’s Day Off (1986) sends its audience home in person. Iron Man (2008) turned it into marketing: Nick Fury after the crawl, announcing a shared universe, and Marvel Studios made the mid-credits scene (cut into the crawl) and the post-credits scene (after its last line) routine — The Avengers (2012) has both. The promise card is older: the early Bond films closed on “James Bond will return”.",
+   "origin": "A scene after the end credits began as a joke for whoever stayed: The Muppet Movie (1979) ends with Animal shouting “Go home!”, Airplane! (1980) returns to the passenger abandoned in the taxi, and Ferris Bueller’s Day Off (1986) sends its audience home in person. Iron Man (2008) turned it into marketing: Nick Fury after the crawl, announcing a shared universe, and Marvel Studios made the mid-credits scene (cut into the crawl) and the post-credits scene (after its last line) routine — The Avengers (2012) has both. The promise card is older: the Bond films have closed since the 1960s on “James Bond will return”.",
    "works": "The Muppet Movie (1979) · Iron Man (2008; Nick Fury) · The Avengers (2012; mid- and post-credits)",
    "tech": [
     "Post-credits: only after the last line of the crawl",
@@ -7793,7 +7793,7 @@ window.ATLAS = {
    "name": "\"Next Week On\" Promo",
    "sub": "Fragments, questions, no answers",
    "era": "1960s —",
-   "origin": "Episodic television has always sold the next episode at the end of this one. US network series closed on scenes from next week’s episode for decades, and serialised drama sharpened the form into a montage of very short fragments cut out of order, questions supered or voiced over them, a cut to black before anything lands, and the airdate and time slot — “9/8c”, nine Eastern, eight Central. Anime made it a ritual: the narrated next-episode previews of Dragon Ball Z (1989–96) and Neon Genesis Evangelion (1995–96), whose previews often misled on purpose; Lost (ABC, 2004–10) leaned on its promos to keep its mysteries open.",
+   "origin": "Episodic television has always sold the next episode at the end of this one. US network series closed on scenes from next week’s episode for decades, and serialised drama sharpened the form into a montage of very short fragments cut out of order, questions supered or voiced over them, a cut to black before anything lands, and the airdate and time slot — “9/8c”, nine Eastern, eight Central. Anime made it a ritual: the narrated next-episode previews of Dragon Ball Z (1989–96) and Neon Genesis Evangelion (1995–96), whose previews, narrated by Misato, end on “Service, service!”; Lost (ABC, 2004–10) leaned on its promos to keep its mysteries open.",
    "works": "Dragon Ball Z (1989–96; “Next time on…”) · Neon Genesis Evangelion (1995–96; next-episode previews) · Lost (ABC, 2004–10)",
    "tech": [
     "Fragments under a second, cut out of story order",
@@ -7851,8 +7851,8 @@ window.ATLAS = {
    "name": "Talking-head Interview",
    "sub": "Thirds, eyeline, two cameras, super, B-roll",
    "era": "1960s —",
-   "origin": "Documentary interviews on camera became common once sync-sound 16 mm rigs arrived around 1960, and their grammar settled over the next decades: the subject off-centre on the thirds with lead room, looking at an interviewer sitting just beside the lens rather than into it, a name super on first appearance, and B-roll laid over the edits in the answer. Errol Morris inverted the eyeline with the Interrotron for The Thin Blue Line (1988) and Fast, Cheap & Out of Control (1997), so his subjects look straight down the lens; a second camera for a wide and a close on the same answer became routine in the 2000s, and Ken Burns’ The Civil War (1990) made the slow push into archive stills a byword.",
-   "works": "The Civil War (Ken Burns, PBS, 1990) · The Thin Blue Line (Errol Morris, 1988) · The Last Dance (ESPN / Netflix, 2020)",
+   "origin": "Documentary interviews on camera became common once sync-sound 16 mm rigs arrived around 1960, and their grammar settled over the next decades: the subject off-centre on the thirds with lead room, looking at an interviewer sitting just beside the lens rather than into it, a name super on first appearance, and B-roll laid over the edits in the answer. Errol Morris inverted the eyeline in the 1990s with the Interrotron, first seen in Fast, Cheap & Out of Control (1997) and later The Fog of War (2003), so his subjects look straight down the lens; a second camera for a wide and a close on the same answer became common practice, and Ken Burns’ The Civil War (1990) made the slow push into archive stills a byword.",
+   "works": "The Civil War (Ken Burns, PBS, 1990) · Fast, Cheap & Out of Control (Errol Morris, 1997; the Interrotron) · The Last Dance (ESPN / Netflix, 2020)",
    "tech": [
     "Subject on the third, lead room, eyeline just off-lens",
     "Two cameras: wide ↔ close on the same answer",
@@ -7880,7 +7880,7 @@ window.ATLAS = {
    "name": "Testimonial Ad",
    "sub": "A real customer’s story, then the proof",
    "era": "1890s — · on TV 1950s —",
-   "origin": "Testimonials are as old as advertising — Victorian patent-medicine ads ran letters from grateful users, and in the 1920s J. Walter Thompson’s Pond’s campaign paid society women to endorse cold cream. Television made the ‘real people, not actors’ spot a genre: hidden-camera taste tests such as Folgers’ ‘we secretly replaced…’ (from the late 1970s) let ordinary customers tell it in their own words. The rules came with it: the US FTC’s Endorsement Guides (1980; revised 2009, 2023) require that a customer’s results be typical or that what is typical be disclosed, and that paid endorsements be labelled — hence the small print.",
+   "origin": "Testimonials are as old as advertising — Victorian patent-medicine ads ran letters from grateful users, and in the 1920s J. Walter Thompson’s Pond’s campaign paid society women to endorse cold cream. Television made the ‘real people, not actors’ spot a genre: hidden-camera taste tests such as Folgers’ ‘we secretly replaced…’ (from the late 1970s) let ordinary customers tell it in their own words. The rules came with it: the US FTC’s Endorsement Guides (1975; revised 1980, 2009, 2023) require, since 2009, that a customer’s results be typical or that what is typical be disclosed, and that paid endorsements be labelled — hence the small print.",
    "works": "Pond’s cold cream endorsements (J. Walter Thompson, 1920s) · Folgers ‘secretly replaced’ campaign (from 1970s) · Dove ‘Real Beauty’ (Ogilvy & Mather, 2004 —)",
    "tech": [
     "The customer’s voice: problem → moment → result",
@@ -7909,7 +7909,7 @@ window.ATLAS = {
    "name": "Unboxing",
    "sub": "Overhead, slow before the reveal, knolled contents",
    "era": "2006 —",
-   "origin": "Unboxing videos grew up on YouTube in the mid-2000s with gadget launches — fans filmed themselves opening the first iPhone in June 2007 — and by 2010 ‘unboxing’ was a search category of its own. The grammar is consistent: an overhead or over-the-shoulder camera, the sealed box shown first, the tape cut and the layers removed one by one, a deliberately slow last layer before the product, then the contents laid out and a first-impression verdict. Brands answered with packaging designed to be filmed — Apple’s nested boxes and pull tabs — and the laid-out contents borrow knolling, Andrew Kromelow’s 1987 habit at Frank Gehry’s furniture shop of arranging tools at right angles, popularised by Tom Sachs.",
+   "origin": "Unboxing videos grew up on YouTube in the mid-2000s with gadget launches — fans filmed themselves opening the first iPhone in June 2007 — and by 2010 ‘unboxing’ was a genre of its own. The grammar is consistent: an overhead or over-the-shoulder camera, the sealed box shown first, the tape cut and the layers removed one by one, a deliberately slow last layer before the product, then the contents laid out and a first-impression verdict. Brands answered with packaging designed to be filmed — Apple’s nested boxes and pull tabs — and the laid-out contents borrow knolling, Andrew Kromelow’s 1987 habit at Frank Gehry’s furniture shop of arranging tools at right angles, popularised by Tom Sachs.",
    "works": "iPhone launch unboxings (YouTube, June 2007) · Unbox Therapy (Lewis Hilsenteger, 2010 —) · Tom Sachs, ‘Ten Bullets’ (2010; ‘Always be knolling’)",
    "tech": [
     "Overhead locked-off camera, hands in frame",
@@ -7928,7 +7928,7 @@ window.ATLAS = {
    "reproducibility": "Fully procedural",
    "loopable": false,
    "dur": 10,
-   "poster": 4.75,
+   "poster": 5.6,
    "video": "media/formatunboxing.mp4",
    "posterImg": "atlas/posters/formatunboxing.jpg"
   },
@@ -8025,7 +8025,7 @@ window.ATLAS = {
    "name": "How It Works",
    "sub": "System explainer: whole, part, whole",
    "era": "1930s — · web explainers 2000s —",
-   "origin": "The explanatory cutaway is older than film: technical illustrators drew engines with their casings removed, and from the 1930s motoring magazines such as The Autocar made the cutaway drawing a speciality. Sponsored and classroom films animated the same idea — the Jam Handy Organization’s Around the Corner (1937) explained Chevrolet’s differential gear by building it up from a single axle, part by part — and the web explainer revived it, from HowStuffWorks (1998) to animated channels such as Kurzgesagt (2013) and Animagraffs, in the same order: the whole system, a zoom into the mechanism one step at a time, and back to the whole.",
+   "origin": "The explanatory cutaway is older than film: technical illustrators drew engines with their casings removed, and between the wars motoring magazines such as The Autocar made the cutaway drawing a speciality. Sponsored and classroom films animated the same idea — the Jam Handy Organization’s Around the Corner (1937) explained Chevrolet’s differential gear by building it up from a single axle, part by part — and the web explainer revived it, from HowStuffWorks (1998) to animated channels such as Kurzgesagt (2013) and Animagraffs, in the same order: the whole system, a zoom into the mechanism one step at a time, and back to the whole.",
    "works": "Around the Corner (Jam Handy for Chevrolet, 1937; the differential explained) · David Macaulay, The Way Things Work (book, 1988) · Animagraffs, How a Car Engine Works (web animation, 2010s)",
    "tech": [
     "Whole → part → whole, with a you-are-here map",
@@ -8055,7 +8055,7 @@ window.ATLAS = {
    "sub": "Split-screen comparison, round by round",
    "era": "1930s print — · video 2000s —",
    "origin": "Side-by-side product comparison began in print: Consumers Union’s Consumer Reports (from 1936) rated rival products against the same criteria in the same table, and comparative advertising grew on American television after the FTC encouraged it in 1972 — the Pepsi Challenge (1975) turned it into a blind taste test with a score. Car television made the round-by-round head-to-head a format — Top Gear’s challenges, and the drag races and spec sheets of the web reviews that followed — and YouTube tech channels such as MKBHD and Linus Tech Tips settled its modern grammar: split screen, the same tests in the same order, a running score, and a verdict that usually says what it depends on.",
-   "works": "Consumer Reports ratings tables (Consumers Union, 1936 —) · The Pepsi Challenge (BBDO for Pepsi, 1975) · Marques Brownlee (MKBHD), smartphone versus videos (2010s —)",
+   "works": "Consumer Reports ratings tables (Consumers Union, 1936 —) · The Pepsi Challenge (Pepsi-Cola, 1975) · Marques Brownlee (MKBHD), smartphone versus videos (2010s —)",
    "tech": [
     "Same criteria in the same order for both sides",
     "One round at a time, tallied on a running score",
@@ -8083,15 +8083,15 @@ window.ATLAS = {
    "name": "Myth vs Fact",
    "sub": "Debunking: myth, evidence, the fact",
    "era": "1990s — · video 2003 —",
-   "origin": "Debunking as a format took shape in the 1990s and 2000s: the urban-legend site Snopes (from 1994), Discovery’s MythBusters (2003–2018), which tested one myth per segment and stamped it BUSTED, CONFIRMED or PLAUSIBLE, and the “myth vs fact” sheets of public-health agencies, from vaccine leaflets to the WHO’s COVID-19 Mythbusters pages (2020). Research on correcting misinformation shaped its order: Cook and Lewandowsky’s The Debunking Handbook (2011; updated 2020) advises stating the myth only once, explaining why it is wrong, and leading and ending with the fact — the “truth sandwich” — so the myth is not what sticks.",
-   "works": "MythBusters (Beyond Productions for Discovery, 2003–2018) · The Debunking Handbook (John Cook & Stephan Lewandowsky, 2011 / 2020) · WHO, Coronavirus disease (COVID-19) advice for the public: Mythbusters (2020)",
+   "origin": "Debunking as a format took shape in the 1990s and 2000s: the urban-legend site Snopes (from 1994), Discovery’s MythBusters (2003–2016; revived 2017–18), which tested one myth per segment and stamped it BUSTED, CONFIRMED or PLAUSIBLE, and the “myth vs fact” sheets of public-health agencies, from vaccine leaflets to the WHO’s COVID-19 Mythbusters pages (2020). Research on correcting misinformation shaped its order: The Debunking Handbook (Cook & Lewandowsky, 2011; Lewandowsky, Cook, Ecker et al., 2020) advises repeating the myth only once, explaining why it is wrong, and leading and ending with the fact — the order George Lakoff calls a “truth sandwich” — so the myth is not what sticks.",
+   "works": "MythBusters (Beyond Productions for Discovery, 2003–2016; Science Channel, 2017–18) · The Debunking Handbook (John Cook & Stephan Lewandowsky, 2011; Lewandowsky, Cook, Ecker et al., 2020) · WHO, Coronavirus disease (COVID-19) advice for the public: Mythbusters (2020)",
    "tech": [
     "State the myth once, plainly, and flag it",
     "Correct it with evidence, not assertion",
     "End on the fact; the recap never repeats the myth"
    ],
    "accent": "#ff5a1f",
-   "motionDNA": "A 0.8 s hook, then three blocks of 2.4 s in identical order: the myth eases up (0.2 s), the red stamp slams down at 0.35 s, the evidence panel fades in at 0.6 s and plays its test, at 1.5 s a red strike draws through the myth, which drops away while the fact rises in green in the same place and the green stamp lands. The recap at 8 s ticks the three facts on, a quarter-second apart, and holds.",
+   "motionDNA": "A 0.8 s hook, then three blocks of 2.6 s in identical order: the myth eases up (0.2 s), the red stamp slams down at 0.3 s, the evidence panel fades in at 0.4 s and plays its test, at 0.95 s a red strike draws through the myth, which drops away while the fact rises in green in the same place and the green stamp lands; the fact then holds for about 1.4 s. The recap at 8.6 s ticks the three facts on, a fifth of a second apart, and holds.",
    "visualDNA": "The Technique Atlas paper stage; heavy Archivo statements set flush left; double-ruled rubber stamps, MYTH in red tilted left, FACT in green tilted right; a white evidence panel with mono labels and a cited source line; two frame-rate lanes with frame ticks, a strobed drop with gap counts, a squash with its width × height read out against a dashed rest pose; a three-dot debunked tally top-right.",
    "transitions": "Strike-through and in-place replacement of the myth by the fact; stamps scale down onto the page; blocks fade through the paper",
    "implementation": [
@@ -8102,7 +8102,7 @@ window.ATLAS = {
    "reproducibility": "Fully procedural",
    "loopable": false,
    "dur": 10,
-   "poster": 7.25,
+   "poster": 7.45,
    "video": "media/formatmyth.mp4",
    "posterImg": "atlas/posters/formatmyth.jpg"
   },
@@ -8113,7 +8113,7 @@ window.ATLAS = {
    "sub": "Hook, chapters, sting, subscribe — then the video",
    "era": "2012 —",
    "origin": "Early online videos, after YouTube opened in 2005, often began like television: a long animated channel intro. When YouTube began ranking videos by watch time in 2012 and creators started reading the audience-retention graph in their analytics, the long intro gave way to the hook: open on the most striking moment — often a flash-forward to the payoff — say what the video will deliver, keep any branded sting to a second or two, ask for the subscribe and the notification bell early, and get into it. In 2020 YouTube added chapters: timestamps in the description split the progress bar into named segments, and the spoken “in this video…” list became a visible one. YouTube Studio reports how many viewers are still watching at 0:30, which is where the hook earns its place.",
-   "works": "MrBeast videos (2018 —), which open on the payoff · Marques Brownlee (MKBHD), a cold open then a short channel sting · Veritasium (Derek Muller, 2011 —), question-first hooks",
+   "works": "MrBeast (Jimmy Donaldson) videos, which open on the payoff · Marques Brownlee (MKBHD), a cold open then a short channel sting · Veritasium (Derek Muller, 2011 —), question-first hooks",
    "tech": [
     "Flash-forward hook to the payoff",
     "“In this video…” list = chapter markers",
@@ -8194,5 +8194,5 @@ window.ATLAS = {
    "posterImg": "atlas/posters/formatvlog.jpg"
   }
  ],
- "built": "2026-11-03"
+ "built": "2026-11-04"
 };
