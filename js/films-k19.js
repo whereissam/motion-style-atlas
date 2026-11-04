@@ -4,8 +4,9 @@
    plain linear blend shears it; then a starched region stays stiff, and the word MOTION is
    rigged as one mesh and waved by three pins) ·
    techreaction (Gray–Scott reaction-diffusion: three grids seeded with the same dashed Token
-   outline, run with three feed / kill pairs into spots, stripes and a coral maze, each pair
-   plotted on a small F–k map beside the saddle-node line the patterns live along) ·
+   outline, run with three feed / kill pairs into spots held inside the Token by a raised kill
+   rate outside it, stripes laid along the Token's contours by direction-dependent diffusion of V,
+   and a free coral maze, each pair plotted on a small F–k map beside the saddle-node line) ·
    techlsystem (a Lindenmayer system: the axiom X rewritten five times by two rules, each string
    read by a turtle that draws the plant generation by generation, buds drawn as Tokens, then
    the branching angle re-set on the beat).
@@ -363,17 +364,21 @@
      REACTION-DIFFUSION — Gray–Scott: chemical U is fed in at rate F, V
      eats U to make more of itself (u·v²) and is removed at rate F + k,
      and both diffuse, V half as fast. Three 160 × 160 grids get the same
-     seed — a dashed Token outline of V — and differ only in F and k:
-     spots that split and fill, stripes that run parallel, and a coral
-     maze. 5,200 steps each run once in setup (9-point Laplacian, Δt 1,
+     seed — a dashed Token outline of V — and differ in F and k: spots
+     that split and fill the Token (k is raised outside its silhouette, so
+     V cannot live there and the outline holds), stripes that run parallel
+     to the Token's contours (V diffuses 9× faster along the contours of
+     the Token's distance field than across them, which aligns the bands
+     into concentric outlines instead of a maze), and a free coral maze.
+     5,200 steps each run once in setup (9-point Laplacian, Δt 1,
      wrap-around edges), stored at 15 fps as bytes and interpolated; a
      small F–k map shows where each pair sits relative to the saddle-node
      line k = √F / 2 − F that bounds where V can survive.
      ===================================================================== */
   const RD = { N: 160, steps: 5200, t0: 1.0, t1: 8.5, sf: 15, vmax: 0.42, pw: 420, py: 290, xs: [72, 528, 984] };
   const RD_SET = [
-    { name: 'SPOTS', F: 0.0367, k: 0.0649, note: 'EACH SPOT SPLITS IN TWO' },
-    { name: 'STRIPES', F: 0.029, k: 0.057, note: 'FRONTS RUN PARALLEL' },
+    { name: 'SPOTS', F: 0.0367, k: 0.0649, kOut: 0.08, note: 'SPOTS SPLIT · k 0.08 OUTSIDE THE TOKEN' },
+    { name: 'STRIPES', F: 0.029, k: 0.057, aniso: 0.8, anisoU: 0, note: 'V DIFFUSES 9× ALONG THE OUTLINE' },
     { name: 'MAZE', F: 0.055, k: 0.062, note: 'CORAL FINGERS BRANCH' },
   ];
   const RD_NFR = Math.round((RD.t1 - RD.t0) * RD.sf) + 1;
@@ -381,12 +386,31 @@
   const rdFocus = t => (t < 2 ? -1 : t < 4 ? 0 : t < 6 ? 1 : t < 8 ? 2 : -1);
   function rdBuild() {
     const N = RD.N, NN = N * N, S = N * 0.6, seedU = new Float32Array(NN).fill(1), seedV = new Float32Array(NN);
+    const sdf = new Float32Array(NN), tx = new Float32Array(NN), ty = new Float32Array(NN);
     for (let j = 0; j < N; j++) for (let i = 0; i < N; i++) {
-      const x = (i - N / 2 + 0.5) / S, y = (j - N / 2 + 0.5) / S;
-      if (Math.abs(ppSdf(x, y, 1)) < 0.06 && (Math.floor(i / 12) + Math.floor(j / 12)) % 2 === 0) { seedV[j * N + i] = 1; seedU[j * N + i] = 0; }
+      const x = (i - N / 2 + 0.5) / S, y = (j - N / 2 + 0.5) / S, p = j * N + i, e = 0.5 / S;
+      sdf[p] = ppSdf(x, y, 1);
+      const gx = ppSdf(x + e, y, 1) - ppSdf(x - e, y, 1), gy = ppSdf(x, y + e, 1) - ppSdf(x, y - e, 1), gl = Math.hypot(gx, gy) || 1;
+      tx[p] = -gy / gl; ty[p] = gx / gl;   // unit tangent to the Token's distance contours
+      if (Math.abs(sdf[p]) < 0.06 && (Math.floor(i / 12) + Math.floor(j / 12)) % 2 === 0) { seedV[p] = 0.25; seedU[p] = 0.5; }
     }
-    return RD_SET.map(({ F, k }) => {
+    // neighbour offsets and base 9-point Laplacian weights: W, E, N, S, NW, NE, SW, SE
+    const OFF = [[-1, 0], [1, 0], [0, -1], [0, 1], [-1, -1], [1, -1], [-1, 1], [1, 1]], BASE = [0.2, 0.2, 0.2, 0.2, 0.05, 0.05, 0.05, 0.05];
+    return RD_SET.map(({ F, k, kOut, aniso, anisoU }) => {
       let U = Float32Array.from(seedU), V = Float32Array.from(seedV), U2 = new Float32Array(NN), V2 = new Float32Array(NN);
+      // per-cell kill: raised outside the Token when the set is masked, so V only survives inside it
+      const K = new Float32Array(NN);
+      for (let p = 0; p < NN; p++) K[p] = kOut ? lerp(k, kOut, E.ioS(clamp((sdf[p] + 0.005) / 0.03))) : k;
+      // per-cell stencil weights: anisotropic sets diffuse more along the Token's contours than across them
+      const weights = an => {
+        const Wt = new Float32Array(NN * 8);
+        for (let p = 0; p < NN; p++) for (let n = 0; n < 8; n++) {
+          const [ox, oy] = OFF[n], dt = (ox * tx[p] + oy * ty[p]) / Math.hypot(ox, oy);
+          Wt[p * 8 + n] = BASE[n] * (an ? (1 + an) * dt * dt + (1 - an) * (1 - dt * dt) : 1);
+        }
+        return Wt;
+      };
+      const Wu = weights(anisoU ?? aniso), Wv = weights(aniso);
       const fr = new Uint8Array(RD_NFR * NN);
       let s = 0;
       for (let f = 0; f < RD_NFR; f++) {
@@ -395,12 +419,13 @@
           for (let j = 0; j < N; j++) {
             const jm = ((j - 1 + N) % N) * N, j0 = j * N, jp = ((j + 1) % N) * N;
             for (let i = 0; i < N; i++) {
-              const im = (i - 1 + N) % N, ip = (i + 1) % N, p = j0 + i, u = U[p], v = V[p];
-              const lu = 0.2 * (U[j0 + im] + U[j0 + ip] + U[jm + i] + U[jp + i]) + 0.05 * (U[jm + im] + U[jm + ip] + U[jp + im] + U[jp + ip]) - u;
-              const lv = 0.2 * (V[j0 + im] + V[j0 + ip] + V[jm + i] + V[jp + i]) + 0.05 * (V[jm + im] + V[jm + ip] + V[jp + im] + V[jp + ip]) - v;
+              const im = (i - 1 + N) % N, ip = (i + 1) % N, p = j0 + i, u = U[p], v = V[p], w = p * 8;
+              const a0 = j0 + im, a1 = j0 + ip, a2 = jm + i, a3 = jp + i, a4 = jm + im, a5 = jm + ip, a6 = jp + im, a7 = jp + ip;
+              const lu = Wu[w] * (U[a0] - u) + Wu[w + 1] * (U[a1] - u) + Wu[w + 2] * (U[a2] - u) + Wu[w + 3] * (U[a3] - u) + Wu[w + 4] * (U[a4] - u) + Wu[w + 5] * (U[a5] - u) + Wu[w + 6] * (U[a6] - u) + Wu[w + 7] * (U[a7] - u);
+              const lv = Wv[w] * (V[a0] - v) + Wv[w + 1] * (V[a1] - v) + Wv[w + 2] * (V[a2] - v) + Wv[w + 3] * (V[a3] - v) + Wv[w + 4] * (V[a4] - v) + Wv[w + 5] * (V[a5] - v) + Wv[w + 6] * (V[a6] - v) + Wv[w + 7] * (V[a7] - v);
               const r = u * v * v;
               U2[p] = u + lu - r + F * (1 - u);
-              V2[p] = v + 0.5 * lv + r - (F + k) * v;
+              V2[p] = v + 0.5 * lv + r - (F + K[p]) * v;
             }
           }
           let tmp = U; U = U2; U2 = tmp; tmp = V; V = V2; V2 = tmp;
@@ -431,12 +456,12 @@
       family: 'K', name: 'Reaction-Diffusion', sub: 'Two chemicals, feed and kill: Gray–Scott patterns', era: '1952 —',
       origin: 'Alan Turing’s The Chemical Basis of Morphogenesis (1952) showed that two diffusing, reacting chemicals can break a uniform field into spots and stripes. Peter Gray and Stephen K. Scott’s autocatalytic reaction model (1983–84) became the favourite system for it after John E. Pearson’s Complex Patterns in a Simple System (Science, 1993) mapped its feed and kill parameters into a zoo of regimes. Greg Turk and, separately, Andrew Witkin and Michael Kass brought reaction-diffusion textures to computer graphics at SIGGRAPH 1991; GPU shaders later made it a live, seedable motion-graphics effect.',
       works: 'Generating Textures on Arbitrary Surfaces Using Reaction-Diffusion (Greg Turk, SIGGRAPH 1991) · Reaction-Diffusion Textures (Andrew Witkin & Michael Kass, SIGGRAPH 1991) · Complex Patterns in a Simple System (John E. Pearson, Science, 1993)',
-      tech: ['Gray–Scott: u·v² reaction, feed F, kill k', 'Diffusion by a 3 × 3 Laplacian, V at half the rate of U', 'Same seed, three (F, k) pairs, three regimes'],
+      tech: ['Gray–Scott: u·v² reaction, feed F, kill k', 'Diffusion by a 3 × 3 Laplacian, V at half the rate of U', 'Same seed, three (F, k) pairs, three regimes', 'Spots masked by a higher k outside the Token; stripes aligned by anisotropic diffusion of V'],
       accent: '#ff5a1f',
-      motionDNA: 'Nothing is animated by hand: a dashed outline of the Token is poured into three dishes on the first downbeat and the equations take over. Slowly at first, then faster as more steps run per frame, the outline swells and breaks — into dots that split and pack the dish, into parallel bands that echo the Token’s corners outward, into a branching coral maze. One dish is spotlit every two bars while its point lights up on the F–k map.',
+      motionDNA: 'Nothing is animated by hand: a dashed outline of the Token is poured into three dishes on the first downbeat and the equations take over. Slowly at first, then faster as more steps run per frame, the outline swells and breaks — into dots that split and pack the Token’s silhouette, into parallel bands that echo the Token’s outline outward, into a branching coral maze. One dish is spotlit every two bars while its point lights up on the F–k map.',
       visualDNA: 'The Technique Atlas stage; three square dishes of paper-white U and orange V, framed in thin ink; the two equations and a 3 × 3 Laplacian stencil in mono type; a small F–k chart with the saddle-node curve, the three parameter dots and region labels; step counter and mono labels with F and k under each dish.',
       transitions: 'Continuous growth from one seed; a spotlight moves dish to dish on the bar',
-      implementation: ['Gray–Scott on three 160 × 160 grids precomputed in setup (5,200 steps, Δt 1, wrap-around)', 'Byte frames stored at 15 fps and blended per pixel through a paper → orange colour ramp', 'Canvas 2D: per-dish ImageData on small offscreens, scaled up with smoothing'],
+      implementation: ['Gray–Scott on three 160 × 160 grids precomputed in setup (5,200 steps, Δt 1, wrap-around), with per-cell k and per-cell stencil weights from the Token’s distance field', 'Byte frames stored at 15 fps and blended per pixel through a paper → orange colour ramp', 'Canvas 2D: per-dish ImageData on small offscreens, scaled up with smoothing'],
       reproducibility: 'Fully procedural',
       loopable: false,
     },
@@ -465,6 +490,10 @@
         st.cv[i].getContext('2d').putImageData(img, 0, 0);
         c.save(); c.imageSmoothingEnabled = true; c.imageSmoothingQuality = 'high';
         c.drawImage(st.cv[i], x, py, pw, pw); c.restore();
+        if (sp.kOut) {   // the mask: k is raised outside this outline
+          c.save(); c.translate(x + pw / 2, py + pw / 2); c.globalAlpha = 0.45 * seg(t, 1.6, 2.2);
+          TK.tokenPath(c, pw * 0.6); c.setLineDash([4, 6]); c.strokeStyle = P.ink; c.lineWidth = 1.5; c.stroke(); c.restore();
+        }
         const on = foc === i ? 1 : 0, dim = foc >= 0 && !on;
         c.strokeStyle = on ? P.ink : 'rgba(23,24,28,0.35)'; c.lineWidth = on ? 3 : 1.5; c.strokeRect(x, py, pw, pw);
         label(c, `0${i + 1}  ${sp.name}`, x, py - 16, { size: 18, ls: 3, color: dim ? P.mute : P.ink, weight: 700 });
@@ -474,7 +503,7 @@
       });
       // seed callout
       const sa = win(t, 0.3, 1.6, 0.3);
-      if (sa > 0.01) { c.save(); c.globalAlpha = sa; label(c, 'SEED  ·  V = 1 IN BLOCKS ALONG THE TOKEN OUTLINE', 72 + (RD.xs[2] + pw - 72) / 2, py + pw + 120, { size: 18, ls: 2, color: P.ink, weight: 700, align: 'center' }); c.restore(); }
+      if (sa > 0.01) { c.save(); c.globalAlpha = sa; label(c, 'SEED  ·  V = 0.25 IN BLOCKS ALONG THE TOKEN OUTLINE', 72 + (RD.xs[2] + pw - 72) / 2, py + pw + 120, { size: 18, ls: 2, color: P.ink, weight: 700, align: 'center' }); c.restore(); }
       // F–k map
       const mx = RD_MAP.x, my = RD_MAP.y, mw = RD_MAP.w, mh = RD_MAP.h;
       label(c, 'PARAMETER MAP', mx, my - 16, { size: 18, ls: 3, color: P.ink, weight: 700 });
@@ -512,7 +541,7 @@
       label(c, 'EACH CELL MOVES TOWARD', lx + 3 * cs + 18, ly + 40, { size: 13, ls: 2 });
       label(c, 'ITS NEIGHBOURS’ AVERAGE', lx + 3 * cs + 18, ly + 62, { size: 13, ls: 2 });
       const ma = seg(t, 8.4, 8.9);
-      if (ma > 0) { c.save(); c.globalAlpha = ma; label(c, 'SAME SEED  ·  SAME EQUATIONS  ·  ONLY F AND k CHANGE', 72 + (RD.xs[2] + pw - 72) / 2, py + pw + 120, { size: 18, ls: 3, color: P.ink, weight: 700, align: 'center' }); c.restore(); }
+      if (ma > 0) { c.save(); c.globalAlpha = ma; label(c, 'SAME SEED  ·  SAME EQUATIONS  ·  F AND k SET THE PATTERN', 72 + (RD.xs[2] + pw - 72) / 2, py + pw + 120, { size: 18, ls: 3, color: P.ink, weight: 700, align: 'center' }); c.restore(); }
       tag(c, `GRAY–SCOTT  ·  3 × ${N}² CELLS  ·  STEP ${fmtN(rdSteps(t))}`, 72, 96, seg(t, 0.1, 0.4));
       TK.caption(c, t, W, H, { name: 'Reaction-Diffusion', cat: 'Procedural', curve: v => rdSteps(v * 10) / RD.steps, span: [0, 10], lo: -0.1, hi: 1.15, curveLabel: 'SIMULATION STEPS / TIME' });
     },

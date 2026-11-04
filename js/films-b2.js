@@ -811,46 +811,107 @@
     c.stroke();
   }
   function wbHandSprite(tipCol) {
-    const cv = offscreen(1500, 440), g = cv.getContext('2d');
-    g.translate(30, 230);
+    // A right hand seen from the back-right, holding the marker in a pinch: index arched over the barrel,
+    // thumb pad pressing from the near side below, barrel running back through the web and out past it,
+    // the other three fingers tucked away behind the index. Local frame: origin = pen tip, +x runs up the
+    // barrel, -y is the little-finger side, +y the thumb side (about 0.5 mm per px). Drawn at (-30, -640).
+    const cv = offscreen(1500, 780), g = cv.getContext('2d');
+    g.translate(30, 640);
     g.lineJoin = 'round'; g.lineCap = 'round';
-    const skin = '#e6b291', skinD = '#c3835f', skinL = '#f6d4b8', edge = 'rgba(140,70,45,0.7)', crease = 'rgba(140,70,45,0.45)';
-    // marker
-    g.beginPath(); g.moveTo(0, 0); g.lineTo(28, -10); g.lineTo(28, 10); g.closePath(); g.fillStyle = tipCol; g.fill();
-    g.fillStyle = '#3a3a3e'; rrect(g, 26, -13, 24, 26, 4); g.fill();
-    const bg = g.createLinearGradient(0, -18, 0, 18);
+    const skin = '#eebf9d', skinL = '#f9dcc6', skinD = '#c98a67', edge = 'rgba(122,62,42,0.85)', crease = 'rgba(140,72,48,0.45)', nail = 'rgba(255,236,228,0.92)';
+    const blob = P => {
+      g.beginPath();
+      P.forEach(([x, y], i) => {
+        const pv = P[(i + P.length - 1) % P.length], n = P[(i + 1) % P.length];
+        if (!i) g.moveTo((x + pv[0]) / 2, (y + pv[1]) / 2);
+        g.quadraticCurveTo(x, y, (x + n[0]) / 2, (y + n[1]) / 2);
+      });
+      g.closePath();
+    };
+    // outline of a finger from its centre line (base → tip) and widths, with a rounded tip
+    const limb = (C, Wd) => {
+      const L = [], R = [];
+      C.forEach(([x, y], i) => {
+        const a = C[Math.max(0, i - 1)], b = C[Math.min(C.length - 1, i + 1)];
+        let dx = b[0] - a[0], dy = b[1] - a[1]; const m = Math.hypot(dx, dy) || 1; dx /= m; dy /= m;
+        const h = Wd[i] / 2;
+        L.push([x - dy * h, y + dx * h]); R.push([x + dy * h, y - dx * h]);
+      });
+      const [tx, ty] = C[C.length - 1], [px, py] = C[C.length - 2];
+      const m = Math.hypot(tx - px, ty - py), e = Wd[Wd.length - 1] * 0.55;
+      return [...L, [tx + (tx - px) / m * e, ty + (ty - py) / m * e], ...R.reverse()];
+    };
+    const skinFill = () => {
+      const k = g.createLinearGradient(120, -260, 360, 80);
+      k.addColorStop(0, skinL); k.addColorStop(0.5, skin); k.addColorStop(1, skinD);
+      return k;
+    };
+    const solid = (P, lw = 2.6) => { blob(P); g.fillStyle = skinFill(); g.fill(); g.lineWidth = lw; g.strokeStyle = edge; g.stroke(); };
+    const line = (pts, w = 2.4, col = crease) => {
+      g.beginPath(); g.moveTo(pts[0], pts[1]);
+      for (let i = 2; i + 3 < pts.length + 1; i += 4) g.quadraticCurveTo(pts[i], pts[i + 1], pts[i + 2], pts[i + 3]);
+      g.lineWidth = w; g.strokeStyle = col; g.stroke();
+    };
+
+    // forearm (wrist bent: the arm drops away more steeply than the hand), back of the hand, thumb root, tucked fingers
+    const ARM = [[320, -60], [430, -96], [560, -112], [760, -126], [1500, -170], [1500, -420], [760, -326], [560, -314], [430, -222], [320, -200]];
+    const PALM = [[204, -18], [262, -36], [330, -60], [400, -90], [404, -150], [400, -212], [300, -198], [214, -180], [180, -156], [174, -110], [186, -62]];
+    const THUMB_ROOT = limb([[392, -96], [336, -34], [292, 22], [236, 40], [186, 42]], [70, 62, 52, 46, 42]);
+    const TUCK = [[196, -40], [166, -54], [152, -90], [152, -134], [166, -164], [190, -174], [200, -150], [196, -90]];
+    const SIL = [ARM, THUMB_ROOT, PALM, TUCK];
+    g.lineWidth = 5.2; g.strokeStyle = edge;
+    SIL.forEach(P => { blob(P); g.stroke(); });
+    SIL.forEach(P => { blob(P); g.fillStyle = skinFill(); g.fill(); });
+    // tucked fingers: one shaded group, only their first knuckles showing
+    g.save(); blob(TUCK); g.clip();
+    const tg = g.createLinearGradient(196, 0, 130, 0);
+    tg.addColorStop(0, 'rgba(150,80,55,0)'); tg.addColorStop(1, 'rgba(150,80,55,0.38)');
+    g.fillStyle = tg; g.fillRect(120, -200, 90, 180); g.restore();
+    line([180, -98, 168, -100, 156, -102], 2.2, 'rgba(140,72,48,0.35)');
+    line([184, -138, 172, -140, 158, -142], 2.2, 'rgba(140,72,48,0.35)');
+
+    // marker: barrel passes through the pinch and rests in the web, its end sticking out past the hand
+    const bg = g.createLinearGradient(0, -17, 0, 17);
     bg.addColorStop(0, '#ffffff'); bg.addColorStop(0.45, '#ececee'); bg.addColorStop(1, '#a5a5aa');
-    g.fillStyle = bg; rrect(g, 46, -18, 260, 36, 9); g.fill();
-    g.fillStyle = tipCol; g.fillRect(124, -18, 22, 36);
-    // hand + forearm silhouette
-    const S = [[56, -26], [80, -42], [150, -58], [176, -94], [205, -118], [245, -124], [285, -114], [322, -94], [430, -112], [1480, -205], [1480, 135], [430, 74], [330, 56], [250, 50], [190, 42], [150, 30], [62, -4]];
-    const sil = () => { g.beginPath(); S.forEach(([x, y], i) => { if (!i) { g.moveTo((x + S[S.length - 1][0]) / 2, (y + S[S.length - 1][1]) / 2); } const n = S[(i + 1) % S.length]; g.quadraticCurveTo(x, y, (x + n[0]) / 2, (y + n[1]) / 2); }); g.closePath(); };
-    const hg = g.createLinearGradient(0, -130, 0, 70);
-    hg.addColorStop(0, skinL); hg.addColorStop(0.5, skin); hg.addColorStop(1, skinD);
-    sil(); g.fillStyle = hg; g.fill();
-    g.save(); sil(); g.clip();
-    const rg = g.createRadialGradient(240, -70, 10, 240, -70, 160);
-    rg.addColorStop(0, 'rgba(255,235,215,0.55)'); rg.addColorStop(1, 'rgba(255,235,215,0)');
-    g.fillStyle = rg; g.fillRect(60, -200, 400, 300);
-    // sleeve
-    g.fillStyle = '#2d4f7c'; g.beginPath(); g.moveTo(820, -190); g.lineTo(1500, -260); g.lineTo(1500, 200); g.lineTo(800, 110); g.closePath(); g.fill();
-    g.fillStyle = '#3e6aa3'; g.beginPath(); g.moveTo(820, -190); g.lineTo(850, -192); g.lineTo(830, 112); g.lineTo(800, 110); g.closePath(); g.fill();
-    g.restore();
-    sil(); g.lineWidth = 3; g.strokeStyle = edge; g.stroke();
-    // curled fingers and knuckles
-    g.strokeStyle = crease; g.lineWidth = 3;
-    [[198, -108, 168, -44], [236, -116, 214, -38], [274, -108, 258, -32]].forEach(([a, b, c2, d]) => { g.beginPath(); g.moveTo(a, b); g.quadraticCurveTo(a - 4, (b + d) / 2, c2, d); g.stroke(); });
-    g.fillStyle = 'rgba(255,240,226,0.7)';
-    [[188, -100], [226, -110], [265, -104]].forEach(([x, y]) => { ell(g, x, y, 13, 7, -0.3); g.fill(); });
-    g.beginPath(); g.moveTo(108, -46); g.quadraticCurveTo(113, -30, 108, -14); g.stroke();
-    g.beginPath(); g.moveTo(146, -54); g.quadraticCurveTo(152, -36, 146, -18); g.stroke();
-    g.fillStyle = '#f7ddcf'; rrect(g, 60, -32, 24, 17, 7); g.fill();
-    g.strokeStyle = crease; g.beginPath(); g.moveTo(350, -84); g.quadraticCurveTo(360, -10, 346, 50); g.stroke();
-    // thumb over the barrel
-    g.save(); g.translate(96, 20); g.rotate(0.14);
-    g.fillStyle = skin; rrect(g, 0, -14, 120, 30, 15); g.fill(); g.lineWidth = 3; g.strokeStyle = edge; g.stroke();
-    g.fillStyle = '#f7ddcf'; rrect(g, 4, -10, 24, 17, 7); g.fill();
-    g.restore();
+    g.fillStyle = bg; rrect(g, 42, -17, 250, 34, 9); g.fill();
+    g.strokeStyle = 'rgba(90,90,100,0.45)'; g.lineWidth = 1.6; rrect(g, 42, -17, 250, 34, 9); g.stroke();
+    g.beginPath(); g.moveTo(0, 0); g.lineTo(26, -9); g.lineTo(26, 9); g.closePath(); g.fillStyle = tipCol; g.fill();
+    g.fillStyle = '#3a3a3e'; rrect(g, 24, -12, 22, 24, 4); g.fill();
+    // the web of the thumb wraps over the barrel where it rests
+    const WEB = () => { g.beginPath(); g.moveTo(236, -60); g.quadraticCurveTo(222, -4, 250, 40); g.lineTo(420, 40); g.lineTo(420, -60); g.closePath(); };
+    g.save(); WEB(); g.clip(); blob(THUMB_ROOT); g.fillStyle = skinFill(); g.fill(); blob(PALM); g.fill(); g.restore();
+    line([230, -22, 226, 0, 236, 22], 2.4, edge);
+
+    // thumb tip on the near side, pad pressing the barrel from below
+    solid(limb([[200, 44], [158, 40], [118, 26]], [44, 40, 34]));
+    blob([[104, 12], [124, 10], [138, 18], [134, 28], [116, 28], [104, 22]]); g.fillStyle = nail; g.fill(); g.lineWidth = 1.6; g.strokeStyle = crease; g.stroke();
+    line([196, 24, 204, 44, 198, 64], 2.2);
+
+    // index finger arched over the barrel, pad pressing it from above
+    const IDX = limb([[214, -36], [176, -54], [146, -56], [114, -36], [88, -6]], [44, 40, 38, 34, 30]);
+    solid(IDX);
+    g.save(); blob(PALM); g.clip(); blob(PALM); g.fillStyle = skinFill(); g.fill(); g.restore();
+    const rg = g.createRadialGradient(262, -116, 6, 262, -116, 105);
+    rg.addColorStop(0, 'rgba(255,240,226,0.5)'); rg.addColorStop(1, 'rgba(255,240,226,0)');
+    g.save(); blob(PALM); g.clip(); g.fillStyle = rg; g.fillRect(150, -280, 300, 300); g.restore();
+    blob([[86, -22], [96, -32], [112, -32], [108, -16], [94, -10]]); g.fillStyle = nail; g.fill(); g.lineWidth = 1.6; g.strokeStyle = crease; g.stroke();
+    line([126, -58, 136, -44, 128, -26]);
+    line([160, -74, 156, -56, 164, -38]);
+    line([168, -74, 164, -56, 172, -38], 1.8, 'rgba(140,72,48,0.26)');
+
+    // knuckles, tendons, wrist
+    g.fillStyle = 'rgba(255,244,234,0.8)';
+    [[204, -42, 12, 8], [190, -88, 11, 8], [186, -130, 10, 7], [190, -168, 8, 6]].forEach(([x, y, rx, ry]) => { ell(g, x, y, rx, ry, 1.2); g.fill(); });
+    [[222, -46, 360, -110], [208, -90, 360, -140], [204, -130, 350, -168], [206, -166, 330, -192]].forEach(([a, b, c2, d]) => line([a, b, (a + c2) / 2, (b + d) / 2 - 5, c2, d], 2, 'rgba(140,72,48,0.15)'));
+    line([424, -98, 412, -150, 424, -218], 2.2, 'rgba(140,72,48,0.22)');
+
+    // shirt sleeve with a turned-back cuff
+    const SL = [[700, -110], [860, -124], [1500, -160], [1500, -470], [860, -372], [660, -338]];
+    blob(SL); g.fillStyle = '#2d4f7c'; g.fill();
+    g.fillStyle = '#3e6aa3'; g.beginPath(); g.moveTo(700, -112); g.quadraticCurveTo(666, -230, 660, -338); g.lineTo(704, -348); g.quadraticCurveTo(710, -230, 744, -118); g.closePath(); g.fill();
+    g.strokeStyle = 'rgba(20,35,60,0.45)'; g.lineWidth = 3;
+    g.beginPath(); g.moveTo(744, -118); g.quadraticCurveTo(710, -230, 704, -348); g.stroke();
+    [[820, -200, 960, -214], [880, -310, 1040, -330], [960, -150, 1120, -160]].forEach(([a, b, c2, d]) => { g.beginPath(); g.moveTo(a, b); g.quadraticCurveTo((a + c2) / 2, b - 16, c2, d); g.stroke(); });
     return cv;
   }
   function wbBoard() {
@@ -923,7 +984,7 @@
         c.save(); c.globalAlpha = alpha;
         c.translate(sx, sy); c.rotate(0.88 + wob); c.scale(cam.z * 0.78, cam.z * 0.78);
         if (alpha > 0.9) { c.shadowColor = 'rgba(30,30,40,0.22)'; c.shadowBlur = 30; c.shadowOffsetX = 26; c.shadowOffsetY = 34; }
-        c.drawImage(st.hands[col], -30, -230);
+        c.drawImage(st.hands[col], -30, -640);
         c.restore();
         return P;
       };
