@@ -276,8 +276,8 @@
     fonts: FONTS,
     meta: {
       family: 'M', name: 'Talking-head Interview', sub: 'Thirds, eyeline, two cameras, super, B-roll', era: '1960s —',
-      origin: 'Documentary interviews on camera became common once sync-sound 16 mm rigs arrived around 1960, and their grammar settled over the next decades: the subject off-centre on the thirds with lead room, looking at an interviewer sitting just beside the lens rather than into it, a name super on first appearance, and B-roll laid over the edits in the answer. Errol Morris inverted the eyeline with the Interrotron for The Thin Blue Line (1988) and Fast, Cheap & Out of Control (1997), so his subjects look straight down the lens; a second camera for a wide and a close on the same answer became routine in the 2000s, and Ken Burns’ The Civil War (1990) made the slow push into archive stills a byword.',
-      works: 'The Civil War (Ken Burns, PBS, 1990) · The Thin Blue Line (Errol Morris, 1988) · The Last Dance (ESPN / Netflix, 2020)',
+      origin: 'Documentary interviews on camera became common once sync-sound 16 mm rigs arrived around 1960, and their grammar settled over the next decades: the subject off-centre on the thirds with lead room, looking at an interviewer sitting just beside the lens rather than into it, a name super on first appearance, and B-roll laid over the edits in the answer. Errol Morris inverted the eyeline in the 1990s with the Interrotron, first seen in Fast, Cheap & Out of Control (1997) and later The Fog of War (2003), so his subjects look straight down the lens; a second camera for a wide and a close on the same answer became common practice, and Ken Burns’ The Civil War (1990) made the slow push into archive stills a byword.',
+      works: 'The Civil War (Ken Burns, PBS, 1990) · Fast, Cheap & Out of Control (Errol Morris, 1997; the Interrotron) · The Last Dance (ESPN / Netflix, 2020)',
       tech: ['Subject on the third, lead room, eyeline just off-lens', 'Two cameras: wide ↔ close on the same answer', 'Lower-third super; B-roll laid over the edits'],
       accent: '#ff5a1f',
       motionDNA: 'Locked-off shots that cut only on pauses in the voice: A-cam wide for 1.8 s, B-cam close with the lower third wiping on at 2.1 s and holding 1.9 s, a B-roll cutaway at 4.2 s with a slow Ken Burns push while the answer continues — a jump cut at 5.0 s hidden underneath — back to the wide at 5.8 s, then a pull quote whose words light up as they are spoken from 7.8 s. The Token barely moves: small pulses on the syllables.',
@@ -495,14 +495,14 @@
   }
   function tsProof(c, t, W, H) {
     c.fillStyle = P.ground; c.fillRect(0, 0, W, H);
-    const hd = seg(t, 7.2, 7.45);
+    const hd = seg(t, 7.1, 7.3);   // header and first stars already up on the cut frame
     c.save(); c.globalAlpha = hd;
-    for (let k = 0; k < 5; k++) { const on = seg(t, 7.25 + k * 0.08, 7.33 + k * 0.08); star(c, 702 + k * 50, 186, 20 * (0.6 + 0.4 * E.outB(on)), on > 0 ? (k < 4 || on >= 1 ? P.accent : P.accentL) : null, 'rgba(23,24,28,0.3)'); }
+    for (let k = 0; k < 5; k++) { const on = seg(t, 7.15 + k * 0.08, 7.23 + k * 0.08); star(c, 702 + k * 50, 186, 20 * (0.6 + 0.4 * E.outB(on)), on > 0 ? (k < 4 || on >= 1 ? P.accent : P.accentL) : null, 'rgba(23,24,28,0.3)'); }
     text(c, '4.8 / 5', 980, 200, { font: TK.FONT, weight: 900, size: 46, color: P.ink });
     label(c, 'FROM 2,140 REVIEWS', 1136, 198, { size: 15, color: P.mute, weight: 700 });
     c.restore();
     TS_REV.forEach(([q, n, col, st], i) => {
-      const cx = 150 + (i % 3) * 550, cy = 250 + Math.floor(i / 3) * 220, on = E.outB(seg(t, 7.3 + i * 0.12, 7.6 + i * 0.12));
+      const cx = 150 + (i % 3) * 550, cy = 250 + Math.floor(i / 3) * 220, on = E.outB(seg(t, 7.15 + i * 0.12, 7.45 + i * 0.12));
       if (on <= 0.01) return;
       c.save(); c.translate(cx + 260, cy + 95); c.scale(0.85 + 0.15 * on, 0.85 + 0.15 * on); c.translate(-cx - 260, -cy - 95); c.globalAlpha = clamp(on);
       c.fillStyle = '#fff'; rrect(c, cx, cy, 520, 190, 14); c.fill();
@@ -514,16 +514,16 @@
       label(c, n, cx + 30, cy + 162, { size: 12, color: P.mute });
       c.restore();
     });
-    note(c, 'SOCIAL PROOF · ONE VOICE BECOMES MANY · AGGREGATE RATING', 150, 740, seg(t, 7.5, 7.75));
+    note(c, 'SOCIAL PROOF · ONE VOICE BECOMES MANY · AGGREGATE RATING', 150, 740, seg(t, 7.4, 7.65));
   }
   function tsEnd(c, t, W, H) {
     const tt = t - 8.6;
     c.fillStyle = P.ground; c.fillRect(0, 0, W, H);
     const g = c.createRadialGradient(960, 400, 40, 960, 400, 900); g.addColorStop(0, '#fff7ee'); g.addColorStop(1, P.ground);
     c.fillStyle = g; c.fillRect(0, 0, W, H);
-    const inA = E.outB(seg(tt, 0, 0.35));
+    const inA = E.outB(seg(tt, -0.1, 0.25));   // the end card is already landing on the cut frame
     TK.token(c, 540, 330, 150 * inA);
-    TK.word(c, 1060, 330, { size: 140, ls: 8, alpha: seg(tt, 0.05, 0.3) });
+    TK.word(c, 1060, 330, { size: 140, ls: 8, alpha: seg(tt, -0.08, 0.17) });
     text(c, '“Now every project moves.”  — Token, designer', 960, 470, { font: TK.FONT, weight: 500, size: 30, color: P.ink, align: 'center', alpha: 1 });
     for (let k = 0; k < 5; k++) star(c, 850 + k * 34, 524, 13, P.accent);
     label(c, '4.8 · 2,140 REVIEWS', 1030, 530, { size: 14, color: P.mute, weight: 700 });
@@ -540,7 +540,7 @@
     c.save(); c.globalAlpha = seg(tt, 0.55, 0.8);
     c.strokeStyle = P.accent; c.lineWidth = 2; c.beginPath(); c.moveTo(960, 802); c.lineTo(960, 822); c.stroke();
     c.restore();
-    note(c, 'FINE PRINT · RESULTS-NOT-TYPICAL DISCLAIMER', 790, 848, seg(tt, 0.55, 0.8), { size: 13 });
+    note(c, 'FINE PRINT · TYPICAL-RESULTS DISCLOSURE', 790, 848, seg(tt, 0.55, 0.8), { size: 13 });
     note(c, 'NOW THE BRAND SPEAKS · PRODUCT + CTA', 80, 118, seg(tt, 0.1, 0.35));
   }
   MG.film({
@@ -548,7 +548,7 @@
     fonts: FONTS,
     meta: {
       family: 'M', name: 'Testimonial Ad', sub: 'A real customer’s story, then the proof', era: '1890s — · on TV 1950s —',
-      origin: 'Testimonials are as old as advertising — Victorian patent-medicine ads ran letters from grateful users, and in the 1920s J. Walter Thompson’s Pond’s campaign paid society women to endorse cold cream. Television made the ‘real people, not actors’ spot a genre: hidden-camera taste tests such as Folgers’ ‘we secretly replaced…’ (from the late 1970s) let ordinary customers tell it in their own words. The rules came with it: the US FTC’s Endorsement Guides (1980; revised 2009, 2023) require that a customer’s results be typical or that what is typical be disclosed, and that paid endorsements be labelled — hence the small print.',
+      origin: 'Testimonials are as old as advertising — Victorian patent-medicine ads ran letters from grateful users, and in the 1920s J. Walter Thompson’s Pond’s campaign paid society women to endorse cold cream. Television made the ‘real people, not actors’ spot a genre: hidden-camera taste tests such as Folgers’ ‘we secretly replaced…’ (from the late 1970s) let ordinary customers tell it in their own words. The rules came with it: the US FTC’s Endorsement Guides (1975; revised 1980, 2009, 2023) require, since 2009, that a customer’s results be typical or that what is typical be disclosed, and that paid endorsements be labelled — hence the small print.',
       works: 'Pond’s cold cream endorsements (J. Walter Thompson, 1920s) · Folgers ‘secretly replaced’ campaign (from 1970s) · Dove ‘Real Beauty’ (Ogilvy & Mather, 2004 —)',
       tech: ['The customer’s voice: problem → moment → result', 'REAL CUSTOMER super, burned-in captions', 'Social proof, then CTA and the disclaimer'],
       accent: '#ff5a1f',
@@ -617,8 +617,8 @@
       for (let k = 0; k < 4; k++) { A.kick(5.2 + k * 0.5, 0.22, { f: 110, f2: 45 }); A.hat(5.45 + k * 0.5, 0.03); }
       for (let k = 0; k < 9; k++) A.osc(5.3 + k * 0.09, { f: midi(72 + k), dur: 0.05, g: 0.025 });
       // social proof: the cards and the stars
-      for (let k = 0; k < 5; k++) A.bell(7.25 + k * 0.08, midi([76, 79, 81, 84, 88][k]), { g: 0.04, dur: 0.5, rev: 0.4 });
-      TS_REV.forEach((r, i) => A.osc(7.3 + i * 0.12, { f: 600 + i * 60, f2: 900 + i * 60, glide: 0.06, dur: 0.08, g: 0.03 }));
+      for (let k = 0; k < 5; k++) A.bell(7.15 + k * 0.08, midi([76, 79, 81, 84, 88][k]), { g: 0.04, dur: 0.5, rev: 0.4 });
+      TS_REV.forEach((r, i) => A.osc(7.15 + i * 0.12, { f: 600 + i * 60, f2: 900 + i * 60, glide: 0.06, dur: 0.08, g: 0.03 }));
       A.chord(7.2, [53, 57, 60, 65], { type: 'triangle', dur: 1.4, g: 0.025, a: 0.05, lp: 2400, rev: 0.5, width: 0.7 });
       // the brand: resolved chord, a second voice, the CTA click
       A.chord(8.6, [48, 55, 60, 64, 67, 72], { type: 'triangle', dur: 1.4, g: 0.03, a: 0.02, lp: 2600, rev: 0.6, width: 0.8 });
@@ -649,6 +649,9 @@
     { t0: 8.7, t1: 10, name: 'Verdict', kind: 'cta' },
   ];
   const REVEAL = 5.45;
+  // the second tissue sheet (400 wide, hinged at the right): a slow lift that still covers the Token, then a
+  // fast flip in the last 0.15 s, so the Token is first seen on the reveal itself
+  const ubTr = t => PI * 0.8 * (0.1 * E.ioS(seg(t, 4.95, 5.3)) + 0.9 * E.inQ(seg(t, 5.3, REVEAL)));
   const BX = 960, BY = 480, BW = 640, BH = 420;
   const KRAFT = '#c49a64', KRAFT_D = '#a87f4c', KRAFT_I = '#d8b789', SKIN = '#e7b48f', SLEEVE = '#34404f';
   const ubPace = t => kf(t, [[0, 0.45], [0.55, 0.8], [1.4, 0.55], [1.9, 0.85], [2.4, 0.8], [3.0, 0.9], [3.6, 0.8], [3.95, 0.45], [4.6, 0.2], [5.35, 0.1], [5.47, 1.2, E.outQ], [6.3, 0.7], [7.0, 0.75], [8.6, 0.6], [10, 0.35]]);
@@ -750,7 +753,7 @@
     else if (t < 3.2) { const th = PI * E.ioC(seg(t, 2.6, 3.2)); R = ent([BX + 6, 956, up], [lerp(1120, 1560, (1 - Math.cos(th)) / 2), 640, up], E.ioC(seg(t, 2.35, 2.55))); }
     else if (t < 3.95) { const lift = E.inQ(seg(t, 3.35, 3.85)); R = ent([1560, 640, up], [1330, 570, -PI + 0.55], E.ioC(seg(t, 3.2, 3.35))); if (t > 3.35) { R[0] += 900 * lift * 0.5; R[1] -= 700 * lift * 0.5; } if (t > 3.62) R = ent(R, RR, E.ioC(seg(t, 3.62, 3.95))); }
     else if (t < 4.5) { const pk = E.ioC(seg(t, 4.1, 4.35)); R = ent([1260, 1260, up], [BX + 8, BY + 128, up], E.ioC(seg(t, 3.9, 4.1))); if (t > 4.1) R = [BX + 8 + 130 * pk, BY + 128 + 80 * pk, up + 0.3 * pk]; if (t > 4.35) R = ent(R, RR, E.ioC(seg(t, 4.35, 4.6))); }
-    else if (t < 5.6) { const th = PI * 0.92 * E.ioS(seg(t, 4.95, 5.45)), ex = BX + 270 - 280 * Math.cos(th); R = ent(RR, [ex + 10, BY + 175, up], E.ioC(seg(t, 4.7, 4.95))); if (t > 4.95) R = [ex + 10, BY + 175, up]; if (t > 5.42) R = ent(R, RR, E.inQ(seg(t, 5.42, 5.7))); }
+    else if (t < 5.6) { const th = ubTr(t), ex = BX + 270 - 400 * Math.cos(th); R = ent(RR, [ex + 10, BY + 175, up], E.ioC(seg(t, 4.7, 4.95))); if (t > 4.95) R = [ex + 10, BY + 175, up]; if (t > 5.42) R = ent(R, RR, E.inQ(seg(t, 5.42, 5.7))); }
     // contents: alternate hands carry the items
     const carry = (ids, rest) => {
       for (let j = 0; j < ids.length; j++) {
@@ -832,11 +835,13 @@
         }
       }
       // tissue: two sheets folded back slowly, the sticker first
-      const tl = PI * 0.92 * E.ioS(seg(t, 4.35, 4.95)), tr = PI * 0.92 * E.ioS(seg(t, 4.95, 5.45));
+      // the second (right) sheet is wider and lies under the first, covering the whole Token, so the first
+      // fold shows only black foam and nothing of the Token shows before the reveal; it folds back less far
+      const tl = PI * 0.92 * E.ioS(seg(t, 4.35, 4.95)), tr = ubTr(t);
       if (t > 3.3 && t < 6.4) {
         const crinkle = c2 => { c2.strokeStyle = 'rgba(120,110,95,0.18)'; c2.lineWidth = 2; const r = rng(31); c2.beginPath(); for (let i = 0; i < 9; i++) { const x = r() * 280, y = -170 + r() * 340; c2.moveTo(x, y); c2.lineTo(x + 40 - r() * 80, y + 30 + r() * 60); } c2.stroke(); };
+        fold(c, 280, -1, 400, -170, 340, tr, '#f9f6f1', '#ebe6dd', crinkle);
         fold(c, -280, 1, 290, -170, 340, tl, '#f6f3ee', '#ebe6dd', crinkle);
-        fold(c, 280, -1, 290, -170, 340, tr, '#f9f6f1', '#ebe6dd', crinkle);
         // sticker seal
         const pk = E.ioC(seg(t, 4.1, 4.35));
         if (t < 4.5) {
@@ -884,11 +889,11 @@
     c.restore();
   }
   MG.film({
-    id: 'formatunboxing', dur: 10, poster: 4.75,
+    id: 'formatunboxing', dur: 10, poster: 5.6,
     fonts: FONTS,
     meta: {
       family: 'M', name: 'Unboxing', sub: 'Overhead, slow before the reveal, knolled contents', era: '2006 —',
-      origin: 'Unboxing videos grew up on YouTube in the mid-2000s with gadget launches — fans filmed themselves opening the first iPhone in June 2007 — and by 2010 ‘unboxing’ was a search category of its own. The grammar is consistent: an overhead or over-the-shoulder camera, the sealed box shown first, the tape cut and the layers removed one by one, a deliberately slow last layer before the product, then the contents laid out and a first-impression verdict. Brands answered with packaging designed to be filmed — Apple’s nested boxes and pull tabs — and the laid-out contents borrow knolling, Andrew Kromelow’s 1987 habit at Frank Gehry’s furniture shop of arranging tools at right angles, popularised by Tom Sachs.',
+      origin: 'Unboxing videos grew up on YouTube in the mid-2000s with gadget launches — fans filmed themselves opening the first iPhone in June 2007 — and by 2010 ‘unboxing’ was a genre of its own. The grammar is consistent: an overhead or over-the-shoulder camera, the sealed box shown first, the tape cut and the layers removed one by one, a deliberately slow last layer before the product, then the contents laid out and a first-impression verdict. Brands answered with packaging designed to be filmed — Apple’s nested boxes and pull tabs — and the laid-out contents borrow knolling, Andrew Kromelow’s 1987 habit at Frank Gehry’s furniture shop of arranging tools at right angles, popularised by Tom Sachs.',
       works: 'iPhone launch unboxings (YouTube, June 2007) · Unbox Therapy (Lewis Hilsenteger, 2010 —) · Tom Sachs, ‘Ten Bullets’ (2010; ‘Always be knolling’)',
       tech: ['Overhead locked-off camera, hands in frame', 'Each layer slower; the last layer before the reveal slowest', 'Knolled contents and a first-impression verdict'],
       accent: '#ff5a1f',

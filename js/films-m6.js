@@ -31,6 +31,21 @@
   }
   const tw = (c, s, size, weight, font, ls) => { c.font = `${weight} ${size}px ${font}`; c.letterSpacing = ls + 'px'; const w = c.measureText(s).width; c.letterSpacing = '0px'; return w; };
   const FONTS = [...FK.fonts, [`500 22px ${TK.FONT}`, 'WILL RETURN'], [`700 22px ${TK.MONO}`, '9/8c']];
+  /* Scrims for full-bleed orange frames: the kit's mute labels and orange playhead vanish on the
+     accent colour, so darken a band behind the structure strip (top) and the caption (bottom) and
+     draw both with their dark-frame ink. o.box: also a rounded scrim behind [x, y, w, h]. */
+  function orangeScrim(c, W, H, a, o = {}) {
+    if (a <= 0.001) return;
+    c.save(); c.globalAlpha *= a;
+    const g = c.createLinearGradient(0, 0, 0, 84);
+    g.addColorStop(0, 'rgba(14,12,12,0.6)'); g.addColorStop(0.68, 'rgba(14,12,12,0.6)'); g.addColorStop(1, 'rgba(14,12,12,0)');
+    c.fillStyle = g; c.fillRect(0, 0, W, 84);
+    const b = c.createLinearGradient(0, H - 250, 0, H);
+    b.addColorStop(0, 'rgba(14,12,12,0)'); b.addColorStop(0.35, 'rgba(14,12,12,0.45)'); b.addColorStop(1, 'rgba(14,12,12,0.6)');
+    c.fillStyle = b; c.fillRect(0, H - 250, W, 250);
+    if (o.box) { c.fillStyle = 'rgba(14,12,12,0.5)'; rrect(c, o.box[0], o.box[1], o.box[2], o.box[3], 10); c.fill(); }
+    c.restore();
+  }
 
   /* =====================================================================
      POST-CREDITS STING — black throughout. The crawl tails off (special
@@ -133,7 +148,7 @@
     c.restore();
   }
   function stWait(c, t, W, H) {
-    const a = seg(t, 2.6, 2.9);
+    const a = seg(t, 2.5, 2.7);   // already half up on the cut into THE WAIT
     // silence: a flat line and a counter
     c.save(); c.globalAlpha *= a;
     c.fillStyle = 'rgba(236,232,223,0.35)'; c.fillRect(420, 360, 1080, 1.5);
@@ -179,7 +194,7 @@
     c.fillStyle = '#050506'; c.fillRect(0, 0, W, H);
     c.save(); c.translate(960 + sx, FY + sy); c.scale(z, z); c.translate(-960, -FY);
     // the floor: faint perspective lines
-    const fl = 0.1 + 0.25 * seg(t, 5.15, 6.4);
+    const fl = 0.6 + 0.4 * seg(t, 5.15, 6.4);
     c.strokeStyle = `rgba(255,140,80,${0.12 * fl})`; c.lineWidth = 1; c.beginPath();
     for (let i = -14; i <= 14; i++) { c.moveTo(960 + i * 50, FY); c.lineTo(960 + i * 240, 1100); }
     for (let k = 0; k < 6; k++) { const y = FY + Math.pow(k / 6, 1.8) * 400 + 6; c.moveTo(0, y); c.lineTo(W, y); }
@@ -214,6 +229,11 @@
       c.restore();
       c.restore();
     }
+    // before the first hit: a pin-prick of light in the floor, so the cut into the tease is not a bare frame
+    if (t <= 5.2) {
+      c.save(); c.globalAlpha = 1 - seg(t, 5.15, 5.2); c.shadowColor = 'rgba(255,120,50,0.9)'; c.shadowBlur = 24;
+      c.fillStyle = '#ffb27a'; c.beginPath(); c.ellipse(960, FY, 24 + 6 * Math.sin(tt * 9), 3.5, 0, 0, TAU); c.fill(); c.restore();
+    }
     // the crack of light in the floor
     if (t > 5.15) {
       const grow = E.outC(seg(t, 5.15, 5.5)) * 0.4 + 0.35 * E.outC(seg(t, 5.75, 6.0)) + 0.25 * E.outC(seg(t, 6.35, 6.6));
@@ -238,7 +258,7 @@
     label(c, `FOR THE ${SEATS.filter(s => s.leave === null).length} WHO STAYED`, 80, 112, { size: 13, ls: 3, color: 'rgba(236,232,223,0.5)' });
     const qs = [['WHAT IS IT?', 5.3], ['WHERE DID IT COME FROM?', 5.9], ['WHEN DOES IT RETURN?', 6.5]];
     if (t < S_REV + 0.6) {
-      note(c, 'THE TEASE WITHHOLDS', 80, 160, seg(t, 5.1, 5.3), { size: 14 });
+      note(c, 'THE TEASE WITHHOLDS', 80, 160, seg(t, S_TEASE - 0.12, S_TEASE + 0.12), { size: 14 });
       qs.forEach(([q, a], i) => {
         const on = seg(t, a, a + 0.2); if (on <= 0) return;
         label(c, q, 92, 192 + i * 26, { size: 13, ls: 2, color: `rgba(236,232,223,${0.8 * on})` });
@@ -252,7 +272,7 @@
   }
   function stCard(c, t, W) {
     const u = t - S_CARD;
-    const a1 = E.outC(seg(u, 0.1, 0.6)), a2 = E.outC(seg(u, 0.5, 1.0));
+    const a1 = E.outC(seg(u, -0.1, 0.4)), a2 = E.outC(seg(u, 0.5, 1.0));   // line one already up on the cut
     text(c, 'THE END OF MOTION', 960, 380, { font: TK.FONT, weight: 500, size: 22, ls: 12, color: `rgba(236,232,223,${0.6 * a1})`, align: 'center' });
     c.save(); c.globalAlpha = a1;
     text(c, 'THE TOKEN', 960, 500, { font: TK.FONT, weight: 800, size: 104, ls: lerp(40, 18, E.outC(seg(u, 0.1, 1.2))), color: CREAM, align: 'center' });
@@ -271,7 +291,7 @@
     fonts: FONTS,
     meta: {
       family: 'M', name: 'Post-credits Sting', sub: 'Wait, then tease the sequel', era: '1979 —',
-      origin: 'A scene after the end credits began as a joke for whoever stayed: The Muppet Movie (1979) ends with Animal shouting “Go home!”, Airplane! (1980) returns to the passenger abandoned in the taxi, and Ferris Bueller’s Day Off (1986) sends its audience home in person. Iron Man (2008) turned it into marketing: Nick Fury after the crawl, announcing a shared universe, and Marvel Studios made the mid-credits scene (cut into the crawl) and the post-credits scene (after its last line) routine — The Avengers (2012) has both. The promise card is older: the early Bond films closed on “James Bond will return”.',
+      origin: 'A scene after the end credits began as a joke for whoever stayed: The Muppet Movie (1979) ends with Animal shouting “Go home!”, Airplane! (1980) returns to the passenger abandoned in the taxi, and Ferris Bueller’s Day Off (1986) sends its audience home in person. Iron Man (2008) turned it into marketing: Nick Fury after the crawl, announcing a shared universe, and Marvel Studios made the mid-credits scene (cut into the crawl) and the post-credits scene (after its last line) routine — The Avengers (2012) has both. The promise card is older: the Bond films have closed since the 1960s on “James Bond will return”.',
       works: 'The Muppet Movie (1979) · Iron Man (2008; Nick Fury) · The Avengers (2012; mid- and post-credits)',
       tech: ['Post-credits: only after the last line of the crawl', 'A held beat of black and silence first', 'The tease withholds: one image, no answer, a promise card'],
       accent: '#ff5a1f',
@@ -285,7 +305,7 @@
     draw(c, t, W, H) {
       c.fillStyle = BLACK; c.fillRect(0, 0, W, H);
       if (t < S_CUT) stCrawl(c, t, W);
-      else if (t < S_TEASE) { stWait(c, t, W, H); if (t < 2.6) note(c, 'CUT TO BLACK  ·  THE FILM IS OVER — OR IS IT?', 80, 112, seg(t, 2.25, 2.4), { size: 13 }); }
+      else if (t < S_TEASE) { stWait(c, t, W, H); if (t < 2.6) note(c, 'CUT TO BLACK  ·  THE FILM IS OVER — OR IS IT?', 80, 112, seg(t, S_CUT - 0.04, S_CUT + 0.1), { size: 13 }); }
       else if (t < S_OUT) stTease(c, t, W, H);
       else if (t >= S_CARD) stCard(c, t, W);
       stMap(c, t, t < S_TEASE ? 1 : t < S_OUT ? 0.5 : 0);
@@ -515,7 +535,7 @@
     fonts: FONTS,
     meta: {
       family: 'M', name: '"Next Week On" Promo', sub: 'Fragments, questions, no answers', era: '1960s —',
-      origin: 'Episodic television has always sold the next episode at the end of this one. US network series closed on scenes from next week’s episode for decades, and serialised drama sharpened the form into a montage of very short fragments cut out of order, questions supered or voiced over them, a cut to black before anything lands, and the airdate and time slot — “9/8c”, nine Eastern, eight Central. Anime made it a ritual: the narrated next-episode previews of Dragon Ball Z (1989–96) and Neon Genesis Evangelion (1995–96), whose previews often misled on purpose; Lost (ABC, 2004–10) leaned on its promos to keep its mysteries open.',
+      origin: 'Episodic television has always sold the next episode at the end of this one. US network series closed on scenes from next week’s episode for decades, and serialised drama sharpened the form into a montage of very short fragments cut out of order, questions supered or voiced over them, a cut to black before anything lands, and the airdate and time slot — “9/8c”, nine Eastern, eight Central. Anime made it a ritual: the narrated next-episode previews of Dragon Ball Z (1989–96) and Neon Genesis Evangelion (1995–96), whose previews, narrated by Misato, end on “Service, service!”; Lost (ABC, 2004–10) leaned on its promos to keep its mysteries open.',
       works: 'Dragon Ball Z (1989–96; “Next time on…”) · Neon Genesis Evangelion (1995–96; next-episode previews) · Lost (ABC, 2004–10)',
       tech: ['Fragments under a second, cut out of story order', 'Questions raised, never answered', 'Cut to black mid-action, then airdate + time slot'],
       accent: '#ff5a1f',
@@ -546,7 +566,7 @@
         dark = !NLIGHT[f[2]];
       } else if (t < N_DATE) {
         c.fillStyle = BLACK; c.fillRect(0, 0, W, H);
-        note(c, 'CUT TO BLACK  ·  MID-ACTION  ·  NO LANDING', 760, 520, seg(t, N_BLACK + 0.08, N_BLACK + 0.2), { size: 16 });
+        note(c, 'CUT TO BLACK  ·  MID-ACTION  ·  NO LANDING', 760, 520, seg(t, N_BLACK - 0.04, N_BLACK + 0.1), { size: 16 });
         note(c, 'SOUND CUTS WITH THE PICTURE', 760, 552, seg(t, N_BLACK + 0.18, N_BLACK + 0.3), { size: 14, color: CREAM2 });
       } else {
         dark = false;
@@ -555,7 +575,7 @@
         // chevron wipe off
         const wp = E.inC(seg(u, 0, 0.35));
         if (wp < 1) { c.fillStyle = P.accent; c.beginPath(); c.moveTo(W * wp, 0); c.lineTo(W + 400, 0); c.lineTo(W + 400, H); c.lineTo(W * wp, H); c.lineTo(W * wp + 300, H / 2); c.closePath(); c.fill(); }
-        const a = E.outC(seg(u, 0.2, 0.6));
+        const a = E.outC(seg(u, -0.2, 0.25));   // the card is already there under the wipe on the cut frame
         c.save(); c.globalAlpha = a;
         c.fillStyle = P.accent; rrect(c, 960 - 110, 268, 220, 44, 22); c.fill();
         text(c, 'ALL-NEW', 960, 299, { font: TK.MONO, weight: 700, size: 22, ls: 6, color: P.ground, align: 'center' });
@@ -583,8 +603,11 @@
         c.restore();
       });
       nHud(c, t, W, H, i);
-      FK.strip(c, t, W, H, NB, { dark, label: 'Next week on' });
-      FK.caption(c, t, W, H, { name: '"Next Week On" Promo', cat: 'Film & TV', dark: t < N_DATE });
+      // full-bleed orange (the slate, and the chevron as it wipes off the airdate card): scrim the strip and caption
+      const orange = t < 0.9 ? 1 : t >= N_DATE ? 1 - E.inC(seg(t - N_DATE, 0, 0.35)) : 0;
+      orangeScrim(c, W, H, orange);
+      FK.strip(c, t, W, H, NB, { dark: dark || orange > 0.5, label: 'Next week on' });
+      FK.caption(c, t, W, H, { name: '"Next Week On" Promo', cat: 'Film & TV', dark: t < N_DATE || orange > 0.5 });
     },
     score(A) {
       // slate: tape-wind whoosh up into a stab
@@ -689,8 +712,8 @@
     const u = t - a, d = 1.4;
     const bg = inb ? P.blue : P.accent;
     c.fillStyle = bg; c.fillRect(0, 0, W, H);
-    // the wipe in from black
-    const wi = E.outQt(seg(u, 0, 0.25));
+    // the logo loop comes up fast and is already most of the way in on the cut frame
+    const wi = E.outQt(seg(u, -0.08, 0.2));
     // the loop: one beat (0.5 s) — the Token hops over the word and lands
     const beat = 0.5, lu = (u % beat) / beat, n = Math.floor(u / beat);
     c.fillStyle = 'rgba(255,255,255,0.08)';
@@ -748,8 +771,8 @@
     const mx = 600, my = 150, mw = 720, mh = 405;
     const k = clamp((s - POD_T[cur][0]) / POD[cur][0]);
     bSpot(c, mx, my, mw, mh, cur, k, t);
-    // a black frame between spots
-    if (k < 0.05 || (cur === 0 && u < 0.08)) { c.fillStyle = '#000'; c.fillRect(mx, my, mw, mh); }
+    // a black frame between spots (not before the first: the cut in from the bumper lands on spot A)
+    if (cur > 0 && k < 0.05) { c.fillStyle = '#000'; c.fillRect(mx, my, mw, mh); }
     c.strokeStyle = 'rgba(236,232,223,0.35)'; c.lineWidth = 2; c.strokeRect(mx - 1, my - 1, mw + 2, mh + 2);
     label(c, `${POD[cur][1]}  ·  :${POD[cur][0]}  ·  ${POD[cur][2]}`, mx, my - 14, { size: 13, color: CREAM, weight: 700 });
     // the break clock
@@ -841,11 +864,14 @@
         text(c, 'MOTION', 1672, 948, { font: TK.FONT, weight: 900, size: 26, ls: 2, color: P.ink });
         c.restore();
         note(c, 'LOGO BUG  ·  ~45 % OPACITY', 1848, 896, seg(u, 0.6, 0.9), { color: P.ink, size: 12, align: 'right' });
-        if (u < 0.08) { c.fillStyle = `rgba(7,7,8,${1 - u / 0.08})`; c.fillRect(0, 0, W, H); }
+        if (u < 0.08) { c.fillStyle = `rgba(7,7,8,${0.5 * (1 - u / 0.08)})`; c.fillRect(0, 0, W, H); }   // a quick lift from the dip, never a black cut frame
       }
-      bRundown(c, t, W, dark || (t >= B_BRK && t < B_IN));
-      FK.strip(c, t, W, H, BB, { dark: dark || (t >= B_BRK && t < B_IN), label: 'The break' });
-      FK.caption(c, t, W, H, { name: 'Ad-break Bumper', cat: 'Film & TV', dark });
+      // the out-bumper is full-bleed orange: scrim the strip, caption and rundown and use their dark ink
+      const orange = t >= B_OUT && t < B_BRK;
+      orangeScrim(c, W, H, orange ? 1 : 0, { box: [1166, 76, 696, 78] });
+      bRundown(c, t, W, dark || orange || (t >= B_BRK && t < B_IN));
+      FK.strip(c, t, W, H, BB, { dark: dark || orange || (t >= B_BRK && t < B_IN), label: 'The break' });
+      FK.caption(c, t, W, H, { name: 'Ad-break Bumper', cat: 'Film & TV', dark: dark || orange });
     },
     score(A) {
       // the show's cue: bass and plucks, tension climbing on the teeter, a sting on the freeze

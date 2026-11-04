@@ -88,7 +88,7 @@
   const YT_LEN = 768;                 // 12:48
   const YT_CH = [[0, 'Intro'], [9, 'The square'], [245, 'The roll'], [552, 'The jump'], [730, 'Outro']];
   const YT_PAY = 552;                 // the payoff the hook flashes forward to (9:12)
-  const YT_LIST = [[2.0, 9, 'THE SQUARE'], [2.5, 245, 'THE ROLL'], [3.0, 552, 'THE JUMP']];
+  const YT_LIST = [[1.5, 9, 'THE SQUARE'], [2.0, 245, 'THE ROLL'], [2.5, 552, 'THE JUMP']];   // first row lands on the cut
   const YT_BEATS = [
     { t0: 0, t1: 1.5, name: 'Hook · flash-forward', kind: 'hook' },
     { t0: 1.5, t1: 3.5, name: 'In this video', kind: 'act' },
@@ -194,7 +194,7 @@
     c.fillStyle = P.accent; c.fillRect(520, 132, 70 * E.outC(seg(t, 1.55, 1.9)), 4);
     YT_LIST.forEach(([t0, ts, name], i) => {
       if (t < t0 - 0.1) return;
-      const k = spring(t - t0 + 0.1, 2.4, 0.55), y = 160 + i * 102;
+      const k = spring(t - t0 + 0.12, 2.4, 0.55), y = 160 + i * 102;
       c.save(); c.globalAlpha *= clamp(k * 1.5); c.translate((1 - k) * 80, 0);
       ytThumb(c, i, 520, y, 150, 84);
       c.fillStyle = i === 2 ? P.accent : P.ink; rrect(c, 694, y + 4, 84, 32, 6); c.fill();
@@ -202,7 +202,7 @@
       text(c, name, 692, y + 80, { font: TK.FONT, weight: 900, size: 38, color: P.ink });
       c.restore();
     });
-    if (t > 3.1) tag(c, 'THE HOOK', 940, 160 + 2 * 102 + 28, seg(t, 3.1, 3.3), { size: 15 });
+    if (t > 2.8) tag(c, 'THE HOOK', 940, 160 + 2 * 102 + 28, seg(t, 2.8, 3.0), { size: 15 });
   }
   function ytSting(c, t) {
     const u = t - 3.5;
@@ -210,7 +210,7 @@
     c.save(); c.translate(560, 250); c.rotate(u * 0.5); c.fillStyle = 'rgba(255,90,31,0.08)';
     for (let i = 0; i < 12; i++) { c.rotate(TAU / 12); c.beginPath(); c.moveTo(0, 0); c.lineTo(900, -80); c.lineTo(900, 80); c.closePath(); c.fill(); }
     c.restore();
-    const k = spring(u - 0.02, 2.2, 0.5), out = E.inC(seg(u, 1.2, 1.5));
+    const k = spring(u + 0.08, 2.2, 0.5), out = E.inC(seg(u, 1.2, 1.5));   // already spinning in on the cut frame
     TK.token(c, 560, 250, 170 * k * (1 + out * 7), { rot: (1 - k) * -TAU * 0.75 });
     const rb = seg(u, 0.35, 0.9);
     if (rb > 0 && rb < 1) { c.strokeStyle = `rgba(255,90,31,${1 - rb})`; c.lineWidth = 6; c.beginPath(); c.arc(560, 250, 100 + 300 * E.outC(rb), 0, TAU); c.stroke(); }
@@ -297,7 +297,7 @@
     c.fillStyle = P.accent; c.beginPath(); c.arc(ytBX(vt), by, 8, 0, TAU); c.fill();
     // chapter tooltips as each chapter is named
     YT_LIST.forEach(([t0, ts, name]) => {
-      const a = win(t, t0 - 0.06, t0 + 0.9, 0.08); if (a <= 0) return;
+      const a = win(t, t0 - 0.06, t0 + 0.9, 0.08); if (a <= 0 || t < 1.5) return;
       const x = clamp(ytBX(ts), 110, 1010);
       c.save(); c.globalAlpha *= a;
       c.fillStyle = 'rgba(16,16,18,0.9)'; rrect(c, x - 100, by - 66, 200, 44, 8); c.fill();
@@ -325,7 +325,7 @@
     meta: {
       family: 'M', name: 'Creator Intro', sub: 'Hook, chapters, sting, subscribe — then the video', era: '2012 —',
       origin: 'Early online videos, after YouTube opened in 2005, often began like television: a long animated channel intro. When YouTube began ranking videos by watch time in 2012 and creators started reading the audience-retention graph in their analytics, the long intro gave way to the hook: open on the most striking moment — often a flash-forward to the payoff — say what the video will deliver, keep any branded sting to a second or two, ask for the subscribe and the notification bell early, and get into it. In 2020 YouTube added chapters: timestamps in the description split the progress bar into named segments, and the spoken “in this video…” list became a visible one. YouTube Studio reports how many viewers are still watching at 0:30, which is where the hook earns its place.',
-      works: 'MrBeast videos (2018 —), which open on the payoff · Marques Brownlee (MKBHD), a cold open then a short channel sting · Veritasium (Derek Muller, 2011 —), question-first hooks',
+      works: 'MrBeast (Jimmy Donaldson) videos, which open on the payoff · Marques Brownlee (MKBHD), a cold open then a short channel sting · Veritasium (Derek Muller, 2011 —), question-first hooks',
       tech: ['Flash-forward hook to the payoff', '“In this video…” list = chapter markers', 'Sting under 2 s, subscribe + bell early'],
       accent: '#ff5a1f',
       motionDNA: 'Frame one is already mid-jump: a clip from 9:12, the payoff, lands at 1.0 s and rewinds to 0:00. The host Token talks while three chapters spring in on the beat, each dropping its marker on the progress bar. A 1.5 s sting — Token spin-in, ring burst, wordmark wipe, white-out. A subscribe lower third slides in, a cursor clicks it, then the bell, which swings and rings. The host hops and the film hard-cuts to the chapter-one card on the downbeat at 9 s.',
@@ -1039,8 +1039,8 @@
       // top band for the strip + notes
       const tg = c.createLinearGradient(0, 0, 0, 170); tg.addColorStop(0, 'rgba(0,0,0,0.5)'); tg.addColorStop(1, 'rgba(0,0,0,0)');
       c.fillStyle = tg; c.fillRect(0, 0, W, 170);
-      // time super
-      const sup = VSUP.filter(s => t >= s[0]).pop(), su = t - sup[0], sa = clamp(Math.min(seg(su, 0, 0.05), 1 - (sup[0] === 1.5 ? seg(su, 0.18, 0.25) : seg(su, 0.75, 0.9))));
+      // time super: up on the cut frame itself (it pops from 1.15× scale), never a bare frame
+      const sup = VSUP.filter(s => t >= s[0]).pop(), su = t - sup[0], sa = clamp(Math.min(1, 1 - (sup[0] === 1.5 ? seg(su, 0.18, 0.25) : seg(su, 0.75, 0.9))));
       if (sa > 0 && !(sup[0] === 9.0 && t > 9.15)) {
         const k = spring(su, 3, 0.5);
         c.save(); c.globalAlpha *= sa; c.translate(110, 262); c.scale(lerp(1.15, 1, k), lerp(1.15, 1, k));
@@ -1070,7 +1070,7 @@
       }
       // convention note
       const nt = VNOTE.filter(n => t >= n[0]).pop();
-      tag(c, nt[1], 72, 112, seg(t - nt[0], 0.02, 0.2), { dark: true });
+      tag(c, nt[1], 72, 112, seg(t - nt[0], -0.1, 0.1), { dark: true });
       // the clock: analog, top right
       const CX = 1768, CY = 210, CR = 62;
       label(c, 'THE CLOCK IS THE SPINE', 1848, 112, { size: 14, color: CREAM, weight: 700, align: 'right', ls: 2 });

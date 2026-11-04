@@ -303,7 +303,7 @@
     fonts,
     meta: {
       family: 'M', name: 'How It Works', sub: 'System explainer: whole, part, whole', era: '1930s — · web explainers 2000s —',
-      origin: 'The explanatory cutaway is older than film: technical illustrators drew engines with their casings removed, and from the 1930s motoring magazines such as The Autocar made the cutaway drawing a speciality. Sponsored and classroom films animated the same idea — the Jam Handy Organization’s Around the Corner (1937) explained Chevrolet’s differential gear by building it up from a single axle, part by part — and the web explainer revived it, from HowStuffWorks (1998) to animated channels such as Kurzgesagt (2013) and Animagraffs, in the same order: the whole system, a zoom into the mechanism one step at a time, and back to the whole.',
+      origin: 'The explanatory cutaway is older than film: technical illustrators drew engines with their casings removed, and between the wars motoring magazines such as The Autocar made the cutaway drawing a speciality. Sponsored and classroom films animated the same idea — the Jam Handy Organization’s Around the Corner (1937) explained Chevrolet’s differential gear by building it up from a single axle, part by part — and the web explainer revived it, from HowStuffWorks (1998) to animated channels such as Kurzgesagt (2013) and Animagraffs, in the same order: the whole system, a zoom into the mechanism one step at a time, and back to the whole.',
       works: 'Around the Corner (Jam Handy for Chevrolet, 1937; the differential explained) · David Macaulay, The Way Things Work (book, 1988) · Animagraffs, How a Car Engine Works (web animation, 2010s)',
       tech: ['Whole → part → whole, with a you-are-here map', 'Input → mechanism → output, then a cutaway', 'One idea per numbered step, joined by flow arrows'],
       accent: '#ff5a1f',
@@ -555,7 +555,7 @@
     meta: {
       family: 'M', name: 'Versus', sub: 'Split-screen comparison, round by round', era: '1930s print — · video 2000s —',
       origin: 'Side-by-side product comparison began in print: Consumers Union’s Consumer Reports (from 1936) rated rival products against the same criteria in the same table, and comparative advertising grew on American television after the FTC encouraged it in 1972 — the Pepsi Challenge (1975) turned it into a blind taste test with a score. Car television made the round-by-round head-to-head a format — Top Gear’s challenges, and the drag races and spec sheets of the web reviews that followed — and YouTube tech channels such as MKBHD and Linus Tech Tips settled its modern grammar: split screen, the same tests in the same order, a running score, and a verdict that usually says what it depends on.',
-      works: 'Consumer Reports ratings tables (Consumers Union, 1936 —) · The Pepsi Challenge (BBDO for Pepsi, 1975) · Marques Brownlee (MKBHD), smartphone versus videos (2010s —)',
+      works: 'Consumer Reports ratings tables (Consumers Union, 1936 —) · The Pepsi Challenge (Pepsi-Cola, 1975) · Marques Brownlee (MKBHD), smartphone versus videos (2010s —)',
       tech: ['Same criteria in the same order for both sides', 'One round at a time, tallied on a running score', 'A verdict that names the condition'],
       accent: '#ff5a1f',
       motionDNA: 'A 1.4 s face-off: both contenders slide in from their edges, the VS badge slams at 0.8 s and the four criteria drop into the table. Four rounds of 1.6 s, each opening on a bell: the criterion pill pops, the same live test plays on both halves at once, and 1.25 s in the row fills, the winner is ticked and its score ticks up with a sound panned to its side. At 2–2 the verdict lands at 7.8 s and holds.',
@@ -580,7 +580,7 @@
         c.fillStyle = 'rgba(23,24,28,0.2)'; c.fillRect(180, VS_FY, 600, 2); c.fillRect(1140, VS_FY, 600, 2);
         tag(c, 'TWO CONTENDERS · ONE SPLIT FRAME', 112, 250, seg(t, 0.4, 0.6) * (1 - seg(t, 1.25, 1.4)), { size: 14 });
       } else if (ri < 4) {
-        const a = seg(u, 0, 0.12) * (1 - seg(u, 1.45, 1.6));
+        const a = seg(u, -0.08, 0.06) * (1 - seg(u, 1.45, 1.6));   // more than half in on the cut frame
         c.save(); c.globalAlpha = a;
         [[0, 480], [1, 1440]].forEach(([side, cx]) => {
           c.save(); c.beginPath(); side ? c.rect(962, 200, 958, 360) : c.rect(0, 200, 958, 360); c.clip();
@@ -594,7 +594,7 @@
         c.restore();
       } else {
         // verdict
-        const v = seg(t, VS_VERD, VS_VERD + 0.3), bob = Math.sin((t - VS_VERD) * 5) * 6;
+        const v = seg(t, VS_VERD - 0.15, VS_VERD + 0.15), bob = Math.sin((t - VS_VERD) * 5) * 6;
         c.save(); c.globalAlpha = v;
         TK.token(c, 480, 410 + bob, 110); roundTok(c, 1440, 410 - bob, 110, { rot: (t - VS_VERD) * 3 });
         const dy = (1 - E.outC(v)) * 16;
@@ -687,14 +687,16 @@
     { myth: 'Linear motion looks natural.', fact: 'Real things ease in and ease out.', src: 'GALILEO, TWO NEW SCIENCES (1638): DISTANCES IN EQUAL TIMES GROW 1 : 3 : 5 : 7' },
     { myth: 'Squash makes a shape smaller.', fact: 'Squash keeps the volume: flatter, wider.', src: 'THOMAS & JOHNSTON, THE ILLUSION OF LIFE (1981): SQUASH AND STRETCH' },
   ];
-  const MY_T0 = 0.8, MY_LEN = 2.4, myStart = i => MY_T0 + i * MY_LEN;
+  // each block: myth 0–0.4 s (stamp at 0.3), evidence from 0.4, strike at 0.95, fact in at 1.15 and held
+  // to the end of the block (≈1.45 s); blocks cross-fade over the cut so no cut frame is empty
+  const MY_T0 = 0.8, MY_LEN = 2.6, MY_EVI = 0.4, MY_R = MY_T0 + 3 * MY_LEN, myStart = i => MY_T0 + i * MY_LEN;
+  const MY_FACT = 0.95, MY_FIN = MY_FACT + 0.2; // strike, fact in
   const MY_B = [{ t0: 0, t1: MY_T0, name: 'Hook', kind: 'hook' }];
   MY.forEach((m, i) => {
     const a = myStart(i);
-    MY_B.push({ t0: a, t1: a + 0.7, name: `Myth ${i + 1}`, kind: 'title' }, { t0: a + 0.7, t1: a + 1.5, name: 'Evidence', kind: 'act' }, { t0: a + 1.5, t1: a + MY_LEN, name: `Fact ${i + 1}`, kind: 'turn' });
+    MY_B.push({ t0: a, t1: a + MY_EVI, name: `Myth ${i + 1}`, kind: 'title' }, { t0: a + MY_EVI, t1: a + MY_FACT, name: 'Evidence', kind: 'act' }, { t0: a + MY_FACT, t1: a + MY_LEN, name: `Fact ${i + 1}`, kind: 'turn' });
   });
-  MY_B.push({ t0: 8.0, t1: 10, name: 'The facts', kind: 'cta' });
-  const MY_FACT = 1.5;
+  MY_B.push({ t0: MY_R, t1: 10, name: 'The facts', kind: 'cta' });
 
   function myStamp(c, s, x, y, col, on, rot) {
     if (on <= 0.01) return;
@@ -764,25 +766,25 @@
   const MY_EV = [myEv1, myEv2, myEv3];
 
   function myBlock(c, t, i) {
-    const m = MY[i], u = t - myStart(i), out = 1 - seg(u, MY_LEN - 0.15, MY_LEN);
-    if (u < 0 || u > MY_LEN) return;
+    const m = MY[i], u = t - myStart(i), out = 1 - seg(u, MY_LEN - 0.15, MY_LEN - 0.04);
+    if (u < -0.1 || u > MY_LEN - 0.04) return;
     c.save(); c.globalAlpha *= out;
-    const isFact = u >= MY_FACT + 0.3;
+    const isFact = u >= MY_FIN;
     // kicker
     const kick = isFact ? `FACT ${i + 1} OF 3` : `MYTH ${i + 1} OF 3`;
-    label(c, kick, 120, 158, { size: 18, ls: 4, color: isFact ? MY_GREEN : MY_RED, weight: 700, alpha: seg(u, 0, 0.15) });
+    label(c, kick, 120, 158, { size: 18, ls: 4, color: isFact ? MY_GREEN : MY_RED, weight: 700, alpha: seg(u, -0.1, 0.06) });
     // the myth, once
-    const ms = fit(c, m.myth, 66, 1180), mo = 1 - seg(u, MY_FACT + 0.18, MY_FACT + 0.3);
+    const ms = fit(c, m.myth, 66, 1180), mo = 1 - seg(u, MY_FACT + 0.12, MY_FIN);
     if (mo > 0.01) {
-      c.save(); c.globalAlpha *= mo * seg(u, 0, 0.18);
-      const dy = (1 - E.outC(seg(u, 0, 0.25))) * 12 - 18 * seg(u, MY_FACT + 0.18, MY_FACT + 0.3);
+      c.save(); c.globalAlpha *= mo * seg(u, -0.1, 0.08);
+      const dy = (1 - E.outC(seg(u, -0.1, 0.2))) * 12 - 18 * seg(u, MY_FACT + 0.12, MY_FIN);
       text(c, m.myth, 120, 250 + dy, { font: TK.FONT, weight: 800, size: ms, color: P.ink });
-      const st = seg(u, MY_FACT, MY_FACT + 0.15);
+      const st = seg(u, MY_FACT, MY_FACT + 0.12);
       if (st > 0) { c.fillStyle = MY_RED; c.fillRect(114, 250 + dy - ms * 0.33, (measure(c, m.myth, ms) + 12) * st, 7); }
       c.restore();
     }
     // the fact, in place
-    const fo = seg(u, MY_FACT + 0.3, MY_FACT + 0.45);
+    const fo = seg(u, MY_FIN, MY_FIN + 0.12);
     if (fo > 0.01) {
       const fs = fit(c, m.fact, 66, 1180);
       c.save(); c.globalAlpha *= fo;
@@ -790,19 +792,19 @@
       c.restore();
     }
     // stamps
-    myStamp(c, 'MYTH', 1570, 220, MY_RED, seg(u, 0.35, 0.5) * (1 - seg(u, MY_FACT + 0.15, MY_FACT + 0.3)), -0.12);
-    myStamp(c, 'FACT', 1570, 220, MY_GREEN, seg(u, MY_FACT + 0.3, MY_FACT + 0.45), 0.08);
+    myStamp(c, 'MYTH', 1570, 220, MY_RED, seg(u, 0.2, 0.32) * (1 - seg(u, MY_FACT + 0.12, MY_FIN)), -0.12);
+    myStamp(c, 'FACT', 1570, 220, MY_GREEN, seg(u, MY_FIN, MY_FIN + 0.12), 0.08);
     // convention tags
-    tag(c, 'STATE THE MYTH ONCE · PLAINLY', 124, 312, seg(u, 0.15, 0.3) * (1 - seg(u, 0.65, 0.75)), { size: 14, color: P.mute, dot: MY_RED });
-    tag(c, 'CORRECT IT IN PLACE · END ON THE FACT', 124, 312, seg(u, MY_FACT + 0.35, MY_FACT + 0.5), { size: 14, color: P.mute, dot: MY_GREEN });
+    tag(c, 'STATE THE MYTH ONCE · PLAINLY', 124, 312, seg(u, 0.08, 0.2) * (1 - seg(u, MY_EVI + 0.05, MY_EVI + 0.15)), { size: 14, color: P.mute, dot: MY_RED });
+    tag(c, 'CORRECT IT IN PLACE · END ON THE FACT', 124, 312, seg(u, MY_FIN + 0.05, MY_FIN + 0.2), { size: 14, color: P.mute, dot: MY_GREEN });
     // evidence panel
-    const ep = seg(u, 0.6, 0.8);
+    const ep = seg(u, MY_EVI, MY_EVI + 0.15);
     if (ep > 0.01) {
       c.save(); c.globalAlpha *= ep;
       c.fillStyle = 'rgba(255,255,255,0.5)'; rrect(c, 120, 340, 1680, 480, 16); c.fill();
       c.strokeStyle = 'rgba(23,24,28,0.25)'; c.lineWidth = 2; c.stroke();
       tag(c, 'EVIDENCE', 150, 382, 1, { size: 15 });
-      MY_EV[i](c, u - 0.62);
+      MY_EV[i](c, u - MY_EVI - 0.02);
       label(c, `SOURCE · ${m.src}`, 150, 800, { size: 12, ls: 1.5, color: P.mute });
       c.restore();
     }
@@ -810,15 +812,15 @@
   }
 
   MG.film({
-    id: 'formatmyth', dur: 10, poster: 7.25,
+    id: 'formatmyth', dur: 10, poster: 7.45,
     fonts,
     meta: {
       family: 'M', name: 'Myth vs Fact', sub: 'Debunking: myth, evidence, the fact', era: '1990s — · video 2003 —',
-      origin: 'Debunking as a format took shape in the 1990s and 2000s: the urban-legend site Snopes (from 1994), Discovery’s MythBusters (2003–2018), which tested one myth per segment and stamped it BUSTED, CONFIRMED or PLAUSIBLE, and the “myth vs fact” sheets of public-health agencies, from vaccine leaflets to the WHO’s COVID-19 Mythbusters pages (2020). Research on correcting misinformation shaped its order: Cook and Lewandowsky’s The Debunking Handbook (2011; updated 2020) advises stating the myth only once, explaining why it is wrong, and leading and ending with the fact — the “truth sandwich” — so the myth is not what sticks.',
-      works: 'MythBusters (Beyond Productions for Discovery, 2003–2018) · The Debunking Handbook (John Cook & Stephan Lewandowsky, 2011 / 2020) · WHO, Coronavirus disease (COVID-19) advice for the public: Mythbusters (2020)',
+      origin: 'Debunking as a format took shape in the 1990s and 2000s: the urban-legend site Snopes (from 1994), Discovery’s MythBusters (2003–2016; revived 2017–18), which tested one myth per segment and stamped it BUSTED, CONFIRMED or PLAUSIBLE, and the “myth vs fact” sheets of public-health agencies, from vaccine leaflets to the WHO’s COVID-19 Mythbusters pages (2020). Research on correcting misinformation shaped its order: The Debunking Handbook (Cook & Lewandowsky, 2011; Lewandowsky, Cook, Ecker et al., 2020) advises repeating the myth only once, explaining why it is wrong, and leading and ending with the fact — the order George Lakoff calls a “truth sandwich” — so the myth is not what sticks.',
+      works: 'MythBusters (Beyond Productions for Discovery, 2003–2016; Science Channel, 2017–18) · The Debunking Handbook (John Cook & Stephan Lewandowsky, 2011; Lewandowsky, Cook, Ecker et al., 2020) · WHO, Coronavirus disease (COVID-19) advice for the public: Mythbusters (2020)',
       tech: ['State the myth once, plainly, and flag it', 'Correct it with evidence, not assertion', 'End on the fact; the recap never repeats the myth'],
       accent: '#ff5a1f',
-      motionDNA: 'A 0.8 s hook, then three blocks of 2.4 s in identical order: the myth eases up (0.2 s), the red stamp slams down at 0.35 s, the evidence panel fades in at 0.6 s and plays its test, at 1.5 s a red strike draws through the myth, which drops away while the fact rises in green in the same place and the green stamp lands. The recap at 8 s ticks the three facts on, a quarter-second apart, and holds.',
+      motionDNA: 'A 0.8 s hook, then three blocks of 2.6 s in identical order: the myth eases up (0.2 s), the red stamp slams down at 0.3 s, the evidence panel fades in at 0.4 s and plays its test, at 0.95 s a red strike draws through the myth, which drops away while the fact rises in green in the same place and the green stamp lands; the fact then holds for about 1.4 s. The recap at 8.6 s ticks the three facts on, a fifth of a second apart, and holds.',
       visualDNA: 'The Technique Atlas paper stage; heavy Archivo statements set flush left; double-ruled rubber stamps, MYTH in red tilted left, FACT in green tilted right; a white evidence panel with mono labels and a cited source line; two frame-rate lanes with frame ticks, a strobed drop with gap counts, a squash with its width × height read out against a dashed rest pose; a three-dot debunked tally top-right.',
       transitions: 'Strike-through and in-place replacement of the myth by the fact; stamps scale down onto the page; blocks fade through the paper',
       implementation: ['Script per myth: claim (once), evidence, fact; recap of facts only', 'After Effects: stamp precomps with scale-down and a camera nudge on impact', 'Canvas 2D: a myth table driving one block layout; evidence as one small simulation per myth'],
@@ -826,12 +828,12 @@
       loopable: false,
     },
     draw(c, t, W, H) {
-      const nudge = MY.reduce((a, m, i) => a + sinc(seg(t - myStart(i), 0.42, 0.55)) * 5 + sinc(seg(t - myStart(i), MY_FACT + 0.37, MY_FACT + 0.5)) * 3, 0);
+      const nudge = MY.reduce((a, m, i) => a + sinc(seg(t - myStart(i), 0.28, 0.4)) * 5 + sinc(seg(t - myStart(i), MY_FIN + 0.04, MY_FIN + 0.16)) * 3, 0);
       TK.stage(c, W, H);
       c.save(); c.translate(0, nudge);
       // hook
       if (t < MY_T0 + 0.05) {
-        const a = seg(t, 0.05, 0.25) * (1 - seg(t, MY_T0 - 0.15, MY_T0));
+        const a = seg(t, 0.05, 0.25) * (1 - seg(t, MY_T0 - 0.15, MY_T0 - 0.04));
         c.save(); c.globalAlpha = a;
         label(c, 'MYTH  vs  FACT', 960, 360, { align: 'center', size: 20, ls: 6, color: P.mute, weight: 700 });
         text(c, '3 myths about motion.', 960, 470, { font: TK.FONT, weight: 800, size: 84, color: P.ink, align: 'center' });
@@ -843,13 +845,13 @@
       }
       for (let i = 0; i < MY.length; i++) myBlock(c, t, i);
       // recap: the facts only
-      if (t >= 8.0) {
-        const a = seg(t, 8.0, 8.2);
+      if (t >= MY_R - 0.1) {
+        const a = seg(t, MY_R - 0.1, MY_R + 0.06);
         c.save(); c.globalAlpha = a;
         label(c, 'THE FACTS', 120, 158, { size: 18, ls: 4, color: MY_GREEN, weight: 700 });
         c.restore();
         MY.forEach((m, i) => {
-          const k = seg(t, 8.15 + i * 0.25, 8.4 + i * 0.25);
+          const k = seg(t, MY_R - 0.1 + i * 0.2, MY_R + 0.12 + i * 0.2);
           if (k <= 0.01) return;
           const y = 290 + i * 120;
           c.save(); c.globalAlpha = clamp(k * 1.5);
@@ -857,10 +859,10 @@
           text(c, m.fact, 220 + (1 - E.outC(k)) * 20, y, { font: TK.FONT, weight: 800, size: fit(c, m.fact, 58, 1100), color: P.ink });
           c.restore();
         });
-        tag(c, 'RECAP THE FACTS ONLY · THE MYTH IS NOT REPEATED', 124, 700, seg(t, 8.9, 9.2), { size: 15, color: P.mute, dot: MY_GREEN });
+        tag(c, 'RECAP THE FACTS ONLY · THE MYTH IS NOT REPEATED', 124, 700, seg(t, MY_R + 0.55, MY_R + 0.8), { size: 15, color: P.mute, dot: MY_GREEN });
         // sign-off: the Token, squashing with its volume kept
-        const sp = (t - 8.0) % 0.8 / 0.8, sq = sinc(seg(sp, 0.3, 0.7)), sy = 1 - 0.3 * sq, lift = 120 * Math.max(0, Math.cos(PI * sp)) * (1 - sq);
-        c.save(); c.globalAlpha = seg(t, 8.6, 8.9);
+        const sp = Math.max(0, t - MY_R) % 0.7 / 0.7, sq = sinc(seg(sp, 0.3, 0.7)), sy = 1 - 0.3 * sq, lift = 120 * Math.max(0, Math.cos(PI * sp)) * (1 - sq);
+        c.save(); c.globalAlpha = seg(t, MY_R + 0.3, MY_R + 0.55);
         c.fillStyle = 'rgba(23,24,28,0.25)'; c.fillRect(1500, 800, 260, 2);
         c.fillStyle = P.shadow; c.beginPath(); c.ellipse(1630, 804, 60 * (1 - lift / 400), 7, 0, 0, TAU); c.fill();
         TK.token(c, 1630, 800 - 55 * sy - lift * 0.6, 110, { sx: 1 / sy, sy });
@@ -868,14 +870,14 @@
       }
       c.restore();
       // debunked tally
-      const done = MY.filter((m, i) => t >= myStart(i) + MY_FACT + 0.3).length;
-      const ta = seg(t, 0.8, 1.0);
+      const done = MY.filter((m, i) => t >= myStart(i) + MY_FIN).length;
+      const ta = seg(t, MY_T0 - 0.1, MY_T0 + 0.06);
       if (ta > 0.01) {
         c.save(); c.globalAlpha = ta;
         label(c, `DEBUNKED ${done} / 3`, 1708, 112, { align: 'right', size: 14, ls: 2.5, color: P.ink, weight: 700 });
         for (let i = 0; i < 3; i++) {
-          const x = 1734 + i * 34, d = t >= myStart(i) + MY_FACT + 0.3, live = t >= myStart(i);
-          if (d) myCheck(c, x, 106, 12, MY_GREEN, E.outB(seg(t, myStart(i) + MY_FACT + 0.3, myStart(i) + MY_FACT + 0.45)));
+          const x = 1734 + i * 34, d = t >= myStart(i) + MY_FIN, live = t >= myStart(i);
+          if (d) myCheck(c, x, 106, 12, MY_GREEN, E.outB(seg(t, myStart(i) + MY_FIN, myStart(i) + MY_FIN + 0.15)));
           else { c.strokeStyle = live ? MY_RED : 'rgba(23,24,28,0.25)'; c.lineWidth = 2.5; c.beginPath(); c.arc(x, 106, 11, 0, TAU); c.stroke(); }
         }
         c.restore();
@@ -893,25 +895,25 @@
       MY.forEach((m, i) => {
         const a = myStart(i);
         // myth stated, then the stamp: a thud and a sour buzzer
-        A.whoosh(a, 0.25, { f1: 400, f2: 1800, g: 0.04 });
-        A.kick(a + 0.42, 0.34, { f: 90, f2: 40, dur: 0.3 }); A.noise(a + 0.42, { type: 'lowpass', f: 1200, dur: 0.12, g: 0.12 });
-        A.osc(a + 0.45, { type: 'square', f: midi(50), dur: 0.28, g: 0.03, lp: 1200 }); A.osc(a + 0.45, { type: 'square', f: midi(51), dur: 0.28, g: 0.03, lp: 1200 });
+        A.whoosh(a - 0.06, 0.25, { f1: 400, f2: 1800, g: 0.04 });
+        A.kick(a + 0.3, 0.34, { f: 90, f2: 40, dur: 0.3 }); A.noise(a + 0.3, { type: 'lowpass', f: 1200, dur: 0.12, g: 0.12 });
+        A.osc(a + 0.33, { type: 'square', f: midi(50), dur: 0.28, g: 0.03, lp: 1200 }); A.osc(a + 0.33, { type: 'square', f: midi(51), dur: 0.28, g: 0.03, lp: 1200 });
         // evidence sounds
-        const e = a + 0.62;
+        const e = a + MY_EVI + 0.02;
         if (i === 0) { for (let k = 0; k < 12; k++) A.osc(e + k * (1 / 24) * 2, { f: 2600, dur: 0.012, g: 0.03, type: 'square', lp: 5000 }); }
         else if (i === 1) { for (let k = 0; k < 6; k++) A.osc(e + k * 0.8 / 6, { f: midi(84 - k * 2), dur: 0.05, g: 0.04, type: 'triangle' }); A.kick(e + 0.8, 0.16, { f: 200, f2: 80, dur: 0.12 }); }
         else { [0.23, 1.03].forEach(d => { A.osc(e + d - 0.1, { f: 180, f2: 90, dur: 0.15, g: 0.08, type: 'triangle' }); A.osc(e + d + 0.1, { f: 300, f2: 600, glide: 0.2, dur: 0.2, g: 0.04 }); }); }
         // strike, then the fact: a bright major ding and the stamp
         A.noise(a + MY_FACT, { type: 'bandpass', f: 2500, f2: 5000, dur: 0.15, g: 0.05 });
-        A.kick(a + MY_FACT + 0.4, 0.22, { f: 140, f2: 60, dur: 0.2 });
-        A.chord(a + MY_FACT + 0.25, [60, 64, 67, 72], { type: 'triangle', dur: 0.9, g: 0.04, a: 0.01, lp: 3000, rev: 0.5, width: 0.8 });
-        A.bell(a + MY_FACT + 0.4, midi([84, 86, 88][i]), { g: 0.07, dur: 1.0, rev: 0.4 });
+        A.kick(a + MY_FIN + 0.1, 0.22, { f: 140, f2: 60, dur: 0.2 });
+        A.chord(a + MY_FIN - 0.02, [60, 64, 67, 72], { type: 'triangle', dur: 0.9, g: 0.04, a: 0.01, lp: 3000, rev: 0.5, width: 0.8 });
+        A.bell(a + MY_FIN + 0.1, midi([84, 86, 88][i]), { g: 0.07, dur: 1.0, rev: 0.4 });
       });
       // recap: one tick per fact, rising, and a resolving chord
-      for (let i = 0; i < 3; i++) A.pluck(8.15 + i * 0.25, midi([76, 79, 84][i]), { g: 0.15, bright: 0.8, dur: 1.0, rev: 0.4 });
-      A.chord(8.9, [48, 55, 64, 67, 72], { type: 'triangle', dur: 1.1, g: 0.045, a: 0.03, lp: 3000, rev: 0.6, width: 0.8 });
-      A.bell(8.9, midi(84), { g: 0.06, dur: 1.1 });
-      for (let k = 0; k < 2; k++) A.osc(8.0 + 0.8 * k + 0.4, { f: 180, f2: 90, dur: 0.12, g: 0.06, type: 'triangle' });
+      for (let i = 0; i < 3; i++) A.pluck(MY_R + 0.05 + i * 0.2, midi([76, 79, 84][i]), { g: 0.15, bright: 0.8, dur: 1.0, rev: 0.4 });
+      A.chord(MY_R + 0.55, [48, 55, 64, 67, 72], { type: 'triangle', dur: 1.1, g: 0.045, a: 0.03, lp: 3000, rev: 0.6, width: 0.8 });
+      A.bell(MY_R + 0.55, midi(84), { g: 0.06, dur: 1.1 });
+      for (let k = 0; k < 2; k++) A.osc(MY_R + 0.7 * k + 0.35, { f: 180, f2: 90, dur: 0.12, g: 0.06, type: 'triangle' });
     },
   });
 })();

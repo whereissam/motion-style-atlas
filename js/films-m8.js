@@ -127,7 +127,7 @@
     if (t < 5.5) {
       TK.stage(c, W, H);
       prBug(c, 1);
-      const k = E.outB(seg(t, SKIP, SKIP + 0.22));
+      const k = E.outB(seg(t, SKIP - 0.06, SKIP + 0.16));   // already popping on the cut frame
       c.save(); c.translate(960, 520); c.scale(k, k);
       text(c, 'Still here?', 0, 0, { font: TK.FONT, weight: 900, size: 190, color: P.accentD, align: 'center', base: 'middle' });
       c.restore();
@@ -140,11 +140,11 @@
       const g = c.createRadialGradient(960, 640, 60, 960, 640, 900); g.addColorStop(0, 'rgba(255,138,92,0.30)'); g.addColorStop(1, 'rgba(255,138,92,0)');
       c.fillStyle = g; c.fillRect(0, 0, W, H);
       prBug(c, 1);
-      const la = seg(t, 5.55, 5.85);
+      const la = seg(t, 5.42, 5.68);
       c.save(); c.globalAlpha = la;
       text(c, 'Good. This part is just for you.', 960, 230, { font: TK.FONT, weight: 800, size: 66, color: P.ink, align: 'center' });
       c.restore();
-      const open = E.outB(seg(t, 5.6, 6.15)), close = E.inC(seg(t, 7.5, 7.9)), R = 300 * open * (1 - close);
+      const open = E.outB(seg(t, 5.42, 5.97)), close = E.inC(seg(t, 7.5, 7.9)), R = 300 * open * (1 - close);
       if (t < 7.95) {
         for (let i = 0; i < 8; i++) {
           const a = i / 8 * TAU + (t - 5.6) * 1.5, x = 960 + Math.cos(a) * R * 1.25, y = 640 + Math.sin(a) * R * 0.82;
@@ -165,9 +165,9 @@
     c.fillStyle = P.ground; c.fillRect(0, 0, W, H);
     const g = c.createRadialGradient(960, 460, 40, 960, 460, 900); g.addColorStop(0, '#fff7ee'); g.addColorStop(1, P.ground);
     c.fillStyle = g; c.fillRect(0, 0, W, H);
-    const tt = t - 8.5, inA = E.outB(seg(tt, 0, 0.3));
+    const tt = t - 8.5, inA = E.outB(seg(tt, -0.08, 0.22));   // the end card lands on the cut frame
     TK.token(c, 560, 420, 210 * inA, { rot: (1 - inA) * 0.8 });
-    TK.word(c, 1180, 420, { size: 180, ls: 6, alpha: seg(tt, 0.05, 0.25) });
+    TK.word(c, 1180, 420, { size: 180, ls: 6, alpha: seg(tt, -0.06, 0.14) });
     const la = seg(tt, 0.2, 0.45);
     text(c, 'Two months free — for staying.', 960, 620, { font: TK.FONT, weight: 800, size: 60, color: `rgba(23,24,28,${la})`, align: 'center' });
     const ca = seg(tt, 0.35, 0.6), pul = 1 + 0.035 * Math.max(0, Math.sin((tt - 0.6) * TAU * 1.5)) * seg(tt, 0.6, 0.8);
@@ -734,7 +734,7 @@
           const k = Math.floor(t * 22), roll = ((t * 22) % 1) * 590;
           numeral(String(9 - (k % 9)), roll - 590, 'rgba(23,24,28,0.5)'); numeral(String(9 - ((k + 1) % 9)), roll, 'rgba(23,24,28,0.5)');
         } else if (ei >= 0) {
-          const e = LE[ei], dy = (1 - E.outQt(seg(t, e.t0, e.t0 + 0.3))) * 590;
+          const e = LE[ei], dy = (1 - E.outQt(seg(t, e.t0 - 0.07, e.t0 + 0.25))) * 590;
           const prev = e.n === 1 ? '2' : String(e.n + 1);
           if (dy > 0.5 && e.n < 5) numeral(prev, dy - 590);
           numeral(String(e.n), dy, e.n === 1 ? P.accentD : P.ink);
@@ -742,11 +742,12 @@
         c.restore();
         // the card
         if (drum) {
-          const sh = seg(t, DRUM, REVEAL), ox = (1 - E.outQt(seg(t, DRUM, DRUM + 0.18))) * 1300 + Math.sin(t * 70) * 10 * sh;
+          const sh = seg(t, DRUM, REVEAL), ox = (1 - E.outQt(seg(t, DRUM - 0.06, DRUM + 0.14))) * 1300 + Math.sin(t * 70) * 10 * sh;
           lsCard(c, t, LE[4], ox, 1);
         } else if (ei >= 0) {
           const e = LE[ei];
-          const ox = e.n === 1 ? 0 : (1 - E.outQt(seg(t, e.t0, e.t0 + 0.3))) * 1300 - 1500 * E.inQ(seg(t, e.t1 - 0.16, e.t1));
+          // the whip-in starts just before the cut, so the cut frame already shows the card coming in
+          const ox = e.n === 1 ? 0 : (1 - E.outQt(seg(t, e.t0 - 0.07, e.t0 + 0.25))) * 1300 - 1500 * E.inQ(seg(t, e.t1 - 0.16, e.t1));
           lsCard(c, t, e, ox, 0);
           if (e.n === 1) {
             // the cover flies off
