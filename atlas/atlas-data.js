@@ -6265,7 +6265,7 @@ window.ATLAS = {
    ],
    "accent": "#ff5a1f",
    "motionDNA": "First the slow, fussy way: the shoulder is turned, then the elbow, overshooting and correcting until the tip finds the Token. Then the Token leads and the arm follows instantly — down, out past its reach until it locks straight and points, back in, and a swivel that flips the elbow to the other side without moving the tip. Finally a three-bone arm solves on the beat, one iteration per beat, snapping closer each time, then tracks the Token smoothly.",
-   "visualDNA": "The Technique Atlas stage with a rigging-viewport arm: octahedral bones in paper and ink, ink joint discs, a crosshair end effector and a hatched mount; the orange Token as the goal; orange angle arcs, blue hand-rotation gizmos, a dashed reach circle; dashed ghost chains and an error list for each FABRIK iteration.",
+   "visualDNA": "The Technique Atlas stage with a rigging-viewport arm: octahedral bones in paper and ink, ink joint discs, a crosshair end effector and a hatched mount; the orange Token as the goal; orange angle arcs, blue hand-rotation gizmos, a dashed reach circle; in the two-bone section the goal’s dotted path, faint ghosts of the arm at each earlier hold and the law-of-cosines solve with this frame’s numbers; dashed ghost chains and an error list for each FABRIK iteration.",
    "transitions": "FK → two-bone IK at 2.8 s; elbow swivel at 5.25 s; re-rig to three bones and FABRIK at 6.3 s",
    "implementation": [
     "Maya IK handles: rotate-plane solver (two-bone) with a pole vector",
@@ -6275,7 +6275,7 @@ window.ATLAS = {
    "reproducibility": "Fully procedural",
    "loopable": false,
    "dur": 10,
-   "poster": 5.5,
+   "poster": 5.45,
    "video": "media/techik.mp4",
    "posterImg": "atlas/posters/techik.jpg"
   },
@@ -6319,14 +6319,15 @@ window.ATLAS = {
    "tech": [
     "Gray–Scott: u·v² reaction, feed F, kill k",
     "Diffusion by a 3 × 3 Laplacian, V at half the rate of U",
-    "Same seed, three (F, k) pairs, three regimes"
+    "Same seed, three (F, k) pairs, three regimes",
+    "Spots masked by a higher k outside the Token; stripes aligned by anisotropic diffusion of V"
    ],
    "accent": "#ff5a1f",
-   "motionDNA": "Nothing is animated by hand: a dashed outline of the Token is poured into three dishes on the first downbeat and the equations take over. Slowly at first, then faster as more steps run per frame, the outline swells and breaks — into dots that split and pack the dish, into parallel bands that echo the Token’s corners outward, into a branching coral maze. One dish is spotlit every two bars while its point lights up on the F–k map.",
+   "motionDNA": "Nothing is animated by hand: a dashed outline of the Token is poured into three dishes on the first downbeat and the equations take over. Slowly at first, then faster as more steps run per frame, the outline swells and breaks — into dots that split and pack the Token’s silhouette, into parallel bands that echo the Token’s outline outward, into a branching coral maze. One dish is spotlit every two bars while its point lights up on the F–k map.",
    "visualDNA": "The Technique Atlas stage; three square dishes of paper-white U and orange V, framed in thin ink; the two equations and a 3 × 3 Laplacian stencil in mono type; a small F–k chart with the saddle-node curve, the three parameter dots and region labels; step counter and mono labels with F and k under each dish.",
    "transitions": "Continuous growth from one seed; a spotlight moves dish to dish on the bar",
    "implementation": [
-    "Gray–Scott on three 160 × 160 grids precomputed in setup (5,200 steps, Δt 1, wrap-around)",
+    "Gray–Scott on three 160 × 160 grids precomputed in setup (5,200 steps, Δt 1, wrap-around), with per-cell k and per-cell stencil weights from the Token’s distance field",
     "Byte frames stored at 15 fps and blended per pixel through a paper → orange colour ramp",
     "Canvas 2D: per-dish ImageData on small offscreens, scaled up with smoothing"
    ],
@@ -7759,5 +7760,5 @@ window.ATLAS = {
    "posterImg": "atlas/posters/formatmanifesto.jpg"
   }
  ],
- "built": "2026-11-03"
+ "built": "2026-11-04"
 };
