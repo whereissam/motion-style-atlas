@@ -458,6 +458,7 @@
   const IK_TX = [[2.8, 1180], [3.6, 1120], [4.3, 1300], [4.75, 1300], [5.15, 1150], [5.9, 1150], [6.3, 1060], [6.45, 1060], [6.62, IK.T3[0], E.ioC]];
   const IK_TY = [[2.8, 330], [3.6, 700], [4.3, 200], [4.75, 200], [5.15, 540], [5.9, 540], [6.3, 300], [6.45, 300], [6.62, IK.T3[1], E.ioC]];
   const IK_FL = [5.25, 5.85];
+  const IK_GH = [3.6, 4.5, 5.15];   // hold times whose poses stay behind as ghosts in the IK phase
   function ikLiveT(t) { const a = 2.245 - (t - IK.live) * 1.3, r = 320 - 50 * Math.sin((t - IK.live) * 3.2); return [IK.B[0] + Math.cos(a) * r, IK.B[1] + Math.sin(a) * r]; }
   function ikTarget(t) {
     if (t < 2.8) return IK.T0;
@@ -551,7 +552,7 @@
   const ikErrCurve = (st) => u => { const k = clamp(Math.floor(u * IK.it[2] + 1e-6), 0, IK.it[2]); return (k ? st.its[k - 1].err : st.err0) / st.err0; };
 
   MG.film({
-    id: 'techik', dur: 10, poster: 5.5,
+    id: 'techik', dur: 10, poster: 5.45,
     fonts: TK.fonts,
     meta: {
       family: 'K', name: 'Inverse Kinematics', sub: 'Place the tip; the joints are solved', era: '1980s —',
@@ -560,7 +561,7 @@
       tech: ['Two-bone law-of-cosines solve', 'Reach limit and bend (pole) flip', 'FABRIK forward / backward passes'],
       accent: '#ff5a1f',
       motionDNA: 'First the slow, fussy way: the shoulder is turned, then the elbow, overshooting and correcting until the tip finds the Token. Then the Token leads and the arm follows instantly — down, out past its reach until it locks straight and points, back in, and a swivel that flips the elbow to the other side without moving the tip. Finally a three-bone arm solves on the beat, one iteration per beat, snapping closer each time, then tracks the Token smoothly.',
-      visualDNA: 'The Technique Atlas stage with a rigging-viewport arm: octahedral bones in paper and ink, ink joint discs, a crosshair end effector and a hatched mount; the orange Token as the goal; orange angle arcs, blue hand-rotation gizmos, a dashed reach circle; dashed ghost chains and an error list for each FABRIK iteration.',
+      visualDNA: 'The Technique Atlas stage with a rigging-viewport arm: octahedral bones in paper and ink, ink joint discs, a crosshair end effector and a hatched mount; the orange Token as the goal; orange angle arcs, blue hand-rotation gizmos, a dashed reach circle; in the two-bone section the goal’s dotted path, faint ghosts of the arm at each earlier hold and the law-of-cosines solve with this frame’s numbers; dashed ghost chains and an error list for each FABRIK iteration.',
       transitions: 'FK → two-bone IK at 2.8 s; elbow swivel at 5.25 s; re-rig to three bones and FABRIK at 6.3 s',
       implementation: ['Maya IK handles: rotate-plane solver (two-bone) with a pole vector', 'FABRIK / CCD chain solvers in Unity, Unreal, Blender', 'Canvas 2D: analytic solve per frame; FABRIK iterations precomputed in setup()'],
       reproducibility: 'Fully procedural',
@@ -594,18 +595,45 @@
         rows = [['θ1 SHOULDER', `${(-th1 * 180 / PI).toFixed(1)}°`], ['θ2 ELBOW', `${(-th2 * 180 / PI).toFixed(1)}°`], ['TIP → GOAL', `${d.toFixed(0)} px`]];
       } else if (phase === 1) {
         const p = pose, pts = p.pts;
+        // the goal's path so far, and a stroboscopic ghost of the arm at each hold: the tip always lands on the goal
+        c.save(); c.strokeStyle = 'rgba(198,62,12,0.45)'; c.lineWidth = 2; c.setLineDash([2, 6]); c.beginPath();
+        for (let s = 2.8; s <= t + 1e-6; s += 1 / 30) { const q = ikTarget(s); s > 2.8 ? c.lineTo(q[0], q[1]) : c.moveTo(q[0], q[1]); }
+        c.stroke(); c.restore();
+        IK_GH.forEach(g => {
+          const G = ikTarget(g), a = 0.8 * seg(t, g + 0.15, g + 0.45) * clamp((len(G, T) - 20) / 60);
+          if (a <= 0.01) return;
+          const q = ik2Pose(g);
+          c.save(); c.globalAlpha = a; c.translate(G[0], G[1]); c.rotate(0.12); TK.tokenPath(c, IK.ts);
+          c.setLineDash([5, 6]); c.strokeStyle = P.accent; c.lineWidth = 2; c.stroke(); c.restore();
+          drawBones(c, q.pts, { alpha: 0.22 * a, fill: '#ffffff', lw: 2 });
+          c.save(); c.globalAlpha = a; c.fillStyle = P.ink; c.beginPath(); c.arc(q.pts[1][0], q.pts[1][1], 5, 0, TAU); c.fill();
+          label(c, `t ${g.toFixed(2)} s`, G[0] + IK.ts * 0.5 + 12, G[1] + 5, { size: 14, ls: 1, color: P.accentD, weight: 700 }); c.restore();
+        });
         if (p.phi > 0 && p.phi < PI) {   // swivel axis
           c.save(); c.strokeStyle = P.blue; c.lineWidth = 2; c.setLineDash([10, 6]); c.beginPath();
           c.moveTo(pts[0][0], pts[0][1]); c.lineTo(pts[2][0], pts[2][1]); c.stroke(); c.restore();
           const s0 = ik2(T, 1), e0 = fk2(s0.th1, s0.th2), s1 = ik2(T, -1), e1 = fk2(s1.th1, s1.th2);
           drawBones(c, e0, { ghost: true, dash: [5, 6], stroke: 'rgba(23,24,28,0.35)', lw: 2 });
           drawBones(c, e1, { ghost: true, dash: [5, 6], stroke: 'rgba(198,62,12,0.6)', lw: 2 });
-          label(c, 'SWIVEL ABOUT SHOULDER → TIP', (pts[0][0] + pts[2][0]) / 2, (pts[0][1] + pts[2][1]) / 2 + 150, { align: 'center', size: 15, color: P.blue, weight: 700 });
+          label(c, 'SWIVEL ABOUT SHOULDER → TIP', pts[0][0] - 70, pts[0][1] + 110, { align: 'right', size: 15, color: P.blue, weight: 700 });
         }
         if (out) {
           c.save(); c.strokeStyle = P.accentD; c.lineWidth = 2; c.setLineDash([4, 5]); c.beginPath(); c.moveTo(pts[2][0], pts[2][1]); c.lineTo(T[0], T[1]); c.stroke(); c.restore();
           label(c, `OUT OF REACH · GAP ${(p.D - IK_RCH).toFixed(0)} px`, T[0] - 40, T[1] - 96, { align: 'center', size: 16, color: P.accentD, weight: 700 });
           label(c, 'FULLY EXTENDED · POINTING AT GOAL', T[0] - 40, T[1] - 70, { align: 'center', size: 13, ls: 2, color: P.ink });
+        }
+        // the closed-form solve, with this frame's numbers
+        const la = seg(t, 2.9, 3.3) * (1 - seg(t, 6.1, 6.3)), [L1, L2] = IK.L, Dc = p.D, cs = (Dc * Dc - L1 * L1 - L2 * L2) / (2 * L1 * L2);
+        if (la > 0.01) {
+          c.save(); c.globalAlpha = la; const lx = 72, ly = 300;
+          label(c, 'LAW OF COSINES  ·  SOLVED EVERY FRAME', lx, ly, { size: 15, ls: 2, color: P.ink, weight: 700 });
+          label(c, 'cos θ2 = (D² − L1² − L2²) / (2·L1·L2)', lx, ly + 40, { size: 15, ls: 0, color: P.ink });
+          label(c, 'θ1 = atan2(dy,dx) − atan2(L2·sinθ2, L1+L2·cosθ2)', lx, ly + 70, { size: 14, ls: 0, color: P.ink });
+          label(c, `L1 ${L1}  ·  L2 ${L2}  ·  D ${Dc.toFixed(0)} px`, lx, ly + 112, { size: 15, ls: 2, color: P.accentD, weight: 700 });
+          label(c, cs > 1 ? `cos θ2 = ${cs.toFixed(3)} > 1  →  CLAMPED TO 0°` : `cos θ2 = ${cs.toFixed(3)}`, lx, ly + 140, { size: 15, ls: 2, color: P.accentD, weight: 700 });
+          label(c, 'TWO ANSWERS: ±θ2  →  ELBOW UP OR DOWN', lx, ly + 182, { size: 13, ls: 2 });
+          label(c, 'D > L1 + L2  →  NO ANSWER: ARM POINTS', lx, ly + 206, { size: 13, ls: 2 });
+          c.restore();
         }
         drawBones(c, pts, { jk: [1, 1 + 0.35 * (p.depth || 0)] });
         ikAngles(c, pts, p.th1, p.th2, 1);

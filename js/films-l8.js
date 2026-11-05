@@ -613,15 +613,86 @@
   const H_WIPE = [0.3, 1.9], H_OBJ = [4.8, 6.0], H_WASH = [7.2, 8.4];
   const H_FP = 2 * Math.tan(19 * PI / 180) / 1080;   // world size of one full-frame px per unit depth
   const H_ALB = [0.97, 0.84, 0.96, 0.74];
-  // tone: 0 black .. 1 paper
-  function hTone(g, S) {
-    const n = g.n, ndl = dot(n, LK.KEY);
-    const sh = ndl > 0 ? LK.shadow(add(g.p, mul(n, 0.01)), LK.KEY, S, 18) : 0;
-    const occ = LK.ao(g.p, n, S, 3, 0.2);
+  /* LK.ao, bit for bit, but an object is only evaluated when its bounding sphere comes within
+     the current minimum: both SDFs are never less than the distance to their bounding sphere, so
+     a skipped object could not have lowered the min. Most of the frame is open floor, where this
+     leaves just the plane and the sphere. */
+  const TB = LK.TOK.bound, CB = LK.CUBE.bound, CC3 = LK.CUBE.c, SC = LK.SPH.c, SR = LK.SPH.r;
+  function hAO(p, n, S, steps, spread) {
+    const tc = S.tok.c;
+    let occ = 0, sc = 1;
+    for (let i = 1; i <= steps; i++) {
+      const h = 0.02 + spread * i / steps, q = [p[0] + n[0] * h, p[1] + n[1] * h, p[2] + n[2] * h];
+      let d = q[1];
+      const ds = Math.hypot(q[0] - SC[0], q[1] - SC[1], q[2] - SC[2]) - SR;
+      if (Math.hypot(q[0] - tc[0], q[1] - tc[1], q[2] - tc[2]) - TB < d) d = Math.min(d, LK.sdToken(q, S));
+      if (Math.hypot(q[0] - CC3[0], q[1] - CC3[1], q[2] - CC3[2]) - CB < d) d = Math.min(d, LK.sdCube(q, S));
+      d = Math.min(d, ds);
+      occ += (h - d) * sc;
+      sc *= 0.7;
+    }
+    return clamp(1 - 2.2 * occ);
+  }
+  /* Shadow and AO are the cost of a frame here, and both are smooth almost everywhere, so they are
+     first taken on every third pixel of the G-buffer in x and y (hGrid), and a pixel between those
+     samples interpolates them when its (up to) four surrounding samples are on the same object
+     and agree to within 0.05 in both. Anywhere else — shadow edges, creases, silhouettes, edge-AA
+     sub-samples — it is computed exactly. The frame differs from computing every pixel exactly
+     by a few 8-bit levels at most, except where a stroke's dash flips on a threshold. Two sets of
+     parameters: the ink tone, and the plain reference (LK.plain's) right of the first wipe. */
+  const HS = 3;   // grid stride in pixels
+  const HM = { ink: { k: 18, steps: 3, spread: 0.2, fade: true }, plain: { k: 12, steps: 5, spread: 0.22, fade: false } };
+  const hSh = (p, n, S, m) => LK.shadow(add(p, mul(n, 0.01)), LK.KEY, S, m.k);
+  let HG = null;   // { ink, plain } grids for the frame being rendered
+  function hGrid(G, x0, x1, m) {
+    const { w, h, S } = G, gw = Math.ceil(w / HS), gh = Math.ceil(h / HS), sh = new Float32Array(gw * gh).fill(-1), ao = new Float32Array(gw * gh).fill(-1), gid = new Uint8Array(gw * gh);
+    for (let gy = 0; gy < gh; gy++) for (let gx = 0; gx < gw; gx++) {
+      const x = gx * HS, y = gy * HS, i = y * w + x, id = G.id[i], k = gy * gw + gx;
+      gid[k] = id;
+      if (x < x0 - HS || x > x1 + HS || id === 255 || (m.fade && id === 0 && G.depth[i] >= 18)) continue;
+      const p = [G.P3[i * 3], G.P3[i * 3 + 1], G.P3[i * 3 + 2]], n = [G.N3[i * 3], G.N3[i * 3 + 1], G.N3[i * 3 + 2]];
+      if (dot(n, LK.KEY) > 0) sh[k] = hSh(p, n, S, m);
+      ao[k] = hAO(p, n, S, m.steps, m.spread);
+    }
+    return { G, gw, gh, sh, ao, gid };
+  }
+  /* Shadow and AO for a primary pixel from grid H, or null where they must be computed exactly.
+     lit: the pixel faces the key (otherwise its shadow is 0 and only AO is looked up). */
+  function hFromGrid(H, g, lit) {
+    if (!H || g.i < 0) return null;
+    const G = H.G, i = g.i, w = G.w;
+    if (G.P3[i * 3] !== g.p[0] || G.P3[i * 3 + 1] !== g.p[1] || G.P3[i * 3 + 2] !== g.p[2]) return null;   // an AA sub-sample
+    const x = i % w, y = (i / w) | 0, gx0 = (x / HS) | 0, gy0 = (y / HS) | 0, rx = x - gx0 * HS, ry = y - gy0 * HS;
+    const gx1 = rx ? Math.min(gx0 + 1, H.gw - 1) : gx0, gy1 = ry ? Math.min(gy0 + 1, H.gh - 1) : gy0;
+    const k0 = gy0 * H.gw + gx0, k1 = gy0 * H.gw + gx1, k2 = gy1 * H.gw + gx0, k3 = gy1 * H.gw + gx1, Sh = H.sh, A = H.ao, I = H.gid, id = g.id;
+    if (I[k0] !== id || I[k1] !== id || I[k2] !== id || I[k3] !== id) return null;
+    const s0 = Sh[k0], s1 = Sh[k1], s2 = Sh[k2], s3 = Sh[k3];
+    if (lit && (Math.min(s0, s1, s2, s3) < 0 || Math.max(s0, s1, s2, s3) - Math.min(s0, s1, s2, s3) > 0.05)) return null;
+    const a0 = A[k0], a1 = A[k1], a2 = A[k2], a3 = A[k3];
+    if (Math.min(a0, a1, a2, a3) < 0 || Math.max(a0, a1, a2, a3) - Math.min(a0, a1, a2, a3) > 0.05) return null;
+    const fx = gx1 !== gx0 ? rx / HS : 0, fy = gy1 !== gy0 ? ry / HS : 0;
+    return [lit ? lerp(lerp(s0, s1, fx), lerp(s2, s3, fx), fy) : 0, lerp(lerp(a0, a1, fx), lerp(a2, a3, fx), fy)];
+  }
+  // tone: 0 black .. 1 paper. grid: allow the frame's shadow / AO samples (primary pixels of the main render)
+  function hTone(g, S, grid = false) {
+    if (g.id === 0 && g.depth >= 18) return 1;   // the floor has faded out to bare paper (exactly 1 below)
+    const n = g.n, ndl = dot(n, LK.KEY), m = HM.ink, q = grid ? hFromGrid(HG && HG.ink, g, ndl > 0) : null;
+    const sh = ndl > 0 ? (q ? q[0] : hSh(g.p, n, S, m)) : 0;
+    const occ = q ? q[1] : hAO(g.p, n, S, m.steps, m.spread);
     const lv = 0.85 * Math.max(0, ndl) * sh + 0.38 * (0.45 + 0.55 * n[1]) * occ;
     let v = clamp(lv * H_ALB[g.id] * 1.12);
     if (g.id === 0) v = lerp(v, 1, sstep(7, 18, g.depth));   // the floor fades out to bare paper
     return v;
+  }
+  // LK.plain, with its shadow and AO taken from the frame's plain grid where they agree
+  function hPlain(g, S) {
+    if (!g.hit) return LK.BG;
+    const a = LK.albedo(g.id), n = g.n, ndl = dot(n, LK.KEY), m = HM.plain, q = hFromGrid(HG && HG.plain, g, ndl > 0);
+    const dif = ndl > 0 ? ndl * (q ? q[0] : hSh(g.p, n, S, m)) : 0;
+    const occ = q ? q[1] : hAO(g.p, n, S, m.steps, m.spread), sky = 0.55 + 0.45 * n[1], fill = Math.max(0, dot(n, LK.FILL)) * 0.35;
+    const k = 1.05 * dif + (0.42 * sky + fill) * occ;
+    const c = LK.tone([a[0] * k, a[1] * k, a[2] * k], 1.3);
+    return g.id === 0 ? LK.floorFade(c, g) : c;
   }
   // one hatch layer's ink coverage; s = across-line coordinate in spacings, w = along-line, px = full px per spacing unit
   function hLine(s, w, spPx, dk, th, pxW, li) {
@@ -685,7 +756,7 @@
     const pw = 1920 / H_RES[0], X = g.u * 1920, Y = g.v * 1080;
     const pap = paperAt(Math.min(g.i, H_RES[0] * H_RES[1] - 1));
     if (!g.hit) return [H_PAPER[0] * pap, H_PAPER[1] * pap, H_PAPER[2] * pap];
-    const tone = hTone(g, S), dk = 1 - tone;
+    const tone = hTone(g, S, true), dk = 1 - tone;
     const ink = g.u < st.so ? hObjInk(dk, g, S, pw) : hInk(dk, X, Y, pw);
     let base = H_PAPER;
     if (g.u < st.sw) {
@@ -701,21 +772,21 @@
   // ink outlines from the G-buffer: id change, depth off the tangent plane, normal crease
   function hPost(sx) {
     return (rgb, G) => {
-      const { w, h } = G, ids = G.id, P3 = G.P3, N3 = G.N3, n = w * h, e = new Float32Array(n);
+      const { w, h } = G, ids = G.id, P3 = G.P3, N3 = G.N3, D = G.depth, n = w * h, e = new Float32Array(n), O4 = [1, -1, w, -w], O2 = [1, w];
       for (let y = 1; y < h - 1; y++) for (let x = 1; x < w - 1; x++) {
-        if ((x + 0.5) / w >= sx) continue;
+        if ((x + 0.5) / w >= sx) break;
         const i = y * w + x, a = ids[i];
         if (a === 255) continue;
         let v = 0;
-        for (const o of [1, -1, w, -w]) {
+        for (const o of O4) {
           const j = i + o, b = ids[j];
-          if (b !== a) { if (!(a === 0 && b === 255) && G.depth[j] > G.depth[i]) { v = 1; break; } continue; }
-          if (G.depth[j] <= G.depth[i]) continue;
-          const tol = 0.01 * G.depth[i];
+          if (b !== a) { if (!(a === 0 && b === 255) && D[j] > D[i]) { v = 1; break; } continue; }
+          if (D[j] <= D[i]) continue;
+          const tol = 0.01 * D[i];
           if (Math.abs((P3[j * 3] - P3[i * 3]) * N3[i * 3] + (P3[j * 3 + 1] - P3[i * 3 + 1]) * N3[i * 3 + 1] + (P3[j * 3 + 2] - P3[i * 3 + 2]) * N3[i * 3 + 2]) > tol) { v = 1; break; }
         }
         if (!v && a !== 0) {
-          for (const o of [1, w]) {
+          for (const o of O2) {
             const j = i + o; if (ids[j] !== a) continue;
             const d = N3[i * 3] * N3[j * 3] + N3[i * 3 + 1] * N3[j * 3 + 1] + N3[i * 3 + 2] * N3[j * 3 + 2];
             if (d < 0.9) { v = 0.8; break; }
@@ -763,7 +834,12 @@
     draw(c, t, W, H) {
       const sx = E.ioC(seg(t, H_WIPE[0], H_WIPE[1])) * 1.04 - 0.02;
       const st = { so: E.ioC(seg(t, H_OBJ[0], H_OBJ[1])) * 1.04 - 0.02, sw: E.ioC(seg(t, H_WASH[0], H_WASH[1])) * 1.04 - 0.02 };
-      const { S } = LK.render(c, t, W, H, (g, S) => (g.u < sx ? hShade(g, S, st) : LK.plain(g, S)), { post: hPost(sx), res: H_RES });
+      // shadow / AO samples for the ink left of the wipe and the plain reference right of it (the render reuses this G-buffer)
+      const G0 = LK.gbuffer(t, H_RES[0], H_RES[1]), xw = sx * H_RES[0];
+      HG = { ink: sx > 0 ? hGrid(G0, 0, xw, HM.ink) : null, plain: sx < 1 ? hGrid(G0, xw, H_RES[0], HM.plain) : null };
+      // once it is all ink, the outlines cover the silhouettes: no edge AA needed
+      const { S } = LK.render(c, t, W, H, (g, S) => (g.u < sx ? hShade(g, S, st) : hPlain(g, S)), { post: hPost(sx), res: H_RES, aa: sx < 1 ? undefined : false });
+      HG = null;
       if (t < H_WIPE[1] + 0.1) splitBar(c, sx * W, H, 'PEN AND INK', 'PLAIN REFERENCE');
       if (t > H_OBJ[0] - 0.1 && t < H_OBJ[1] + 0.1) splitBar(c, st.so * W, H, 'OBJECT-SPACE STROKES', 'SCREEN-SPACE STROKES', { y: 420 });
       if (t > H_WASH[0] - 0.1 && t < H_WASH[1] + 0.1) splitBar(c, st.sw * W, H, 'INK + WASH', 'INK', { y: 420 });

@@ -177,8 +177,8 @@
       // camera
       let kick = 0;
       MO_BEATS.forEach((b, k) => { if (t >= b) kick += Math.exp(-(t - b) * 8) * (k === 4 ? 1.6 : 1); });
-      const yaw = kf(t, [[0, -0.95], [3, -0.4, E.ioS], [6.6, 0.22, E.ioS], [8.7, 0.6, E.outC], [10, 0.68, E.lin]]);
-      const pitch = kf(t, [[0, 1.33], [1.9, 0.88, E.ioC], [4.8, 0.8, E.ioS], [6.6, 0.66, E.ioS], [7.4, 0.52, E.ioC], [8.7, 0.7, E.outC], [10, 0.7]]);
+      const yaw = kf(t, [[0, -0.95], [3, -0.4, E.ioS], [6.6, 0.22, E.ioS], [8.7, 0.36, E.outC], [10, 0.42, E.lin]]);
+      const pitch = kf(t, [[0, 1.33], [1.9, 0.88, E.ioC], [4.8, 0.8, E.ioS], [6.6, 0.66, E.ioS], [7.4, 0.52, E.ioC], [8.7, 1.12, E.outC], [10, 1.16, E.lin]]);
       const dist = kf(t, [[0, 3100], [1.9, 2550, E.outC], [4.8, 2280, E.ioS], [6.6, 2080, E.ioS], [7.4, 2750, E.outC], [8.7, 2120, E.ioC], [10, 2040, E.lin]]) - kick * 70;
       const ty = kf(t, [[0, 0], [6.55, 120], [7.3, 430, E.outC], [8.5, 210, E.ioC], [10, 200]]);
       const cam = moCam(yaw, pitch, dist, ty, W, H);
@@ -325,7 +325,7 @@
   });
 
   /* ============ 12 Generative particles — curl-noise flow field ============ */
-  const PN = 6000, PFPS = 50, PSTEPS = 500, PBURST = 0.42, PEXP = 7.4;
+  const PN = 6000, PFPS = 50, PSTEPS = 500, PBURST = 0.42, PEXP = 7.4, PSLOW = 0.06;
   const P_PAL = [[86, 124, 255], [64, 214, 255], [150, 112, 255], [255, 86, 168], [255, 204, 126], [236, 244, 255]];
   const P_W = [0.24, 0.26, 0.16, 0.14, 0.12, 0.08];
   function h2(x, y, s) {
@@ -366,7 +366,11 @@
       O[i] = (r() + r() + r() - 1.5) / 1.5;
       let u = r(), b = 0; while (b < P_W.length - 1 && u > P_W[b]) { u -= P_W[b]; b++; }
       BK[i] = b;
-      ANG[i] = r() * TAU; SPD[i] = 8 + 1750 * Math.pow(r(), 1.15); EXS[i] = 420 + 1400 * Math.pow(r(), 1.6);
+      ANG[i] = r() * TAU; SPD[i] = 220 + 1540 * Math.pow(r(), 1.15); EXS[i] = 420 + 1400 * Math.pow(r(), 1.6);
+      // The seed sits inside a closed cell of the flow, so whatever stops in it stays there.
+      // A slow core clumped from the 14 px seed got sheared into a bright streak (t≈3–5 s);
+      // with no slow core the cell read as a hole. Spread a few slow particles evenly by area instead.
+      if (hash(i * 3.17) < PSLOW) SPD[i] = 25 + 175 * Math.sqrt(hash(i * 5.31 + 0.7));
       X[i] = cx + Math.cos(ANG[i]) * r() * 14; Y[i] = cy + Math.sin(ANG[i]) * r() * 14;
     }
     const hist = new Float32Array(PN * (PSTEPS + 1) * 2);

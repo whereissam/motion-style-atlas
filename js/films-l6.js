@@ -219,17 +219,44 @@
     const c = LK.tone([0, 1, 2].map(i => a[i] * (SS.LI[i] * 1.05 * Math.max(0, ndl) * sh + sky)), 1.3);
     return g.id === 0 ? LK.floorFade(c, g, bg) : c;
   }
-  /* Thickness toward the light from a point on a translucent object (Infinity where the surface
-     faces the light: that light is direct, not transmitted). */
-  /* March from a point inside the Token or cube to where the ray leaves it. Like LK.traceInside
-     but with a larger minimum step, so rays that skim just under a rounded edge don't stall. */
-  function inside(id, ro, rd, S) {
-    if (id === 2) return LK.traceInside(2, ro, rd, S);
-    const sd = id === 1 ? LK.sdToken : LK.sdCube;
-    let t = 0.01;
-    for (let i = 0; i < 56; i++) { const d = -sd(add(ro, mul(rd, t)), S); if (d < 0.002) break; t += Math.max(d, 0.012); }
-    const p = add(ro, mul(rd, t));
-    return { t, p, n: LK.normal(p, id, S) };
+  /* Light carried along one ray from a point just inside a translucent object toward the light:
+     [r, g, b] transmission and the (expected) distance to where the ray leaves the solid.
+     The Token is marched in small steps with a soft inside / outside test, and the ray leaves
+     gradually: each step's share of air removes part of what is still inside, carrying
+     exp(−material so far / mfp) out with it, times how squarely that spot faces the light
+     (N·L from the SDF's slope along L, taken wide, so it is blurred). Every term is continuous in the start point,
+     so a ray that just grazes the hole or a rounded edge and one that just misses it give nearly
+     the same answer. (A hard exit test switches surface there — exit distance and exit normal
+     jump — and with seven fanned rays that drew faint straight seams across the face.) The
+     sphere is convex and analytic: its exact exit is already smooth. */
+  const TR_DT = 0.03, TR_RAMP = 0.03, TR_AIR = 0.03, TR_MAX = 2.2;
+  function carry(id, ro, rd, S, L, mfp) {
+    const entryAt = ndl => clamp(ndl * 1.4 + 0.15);
+    if (id === 2) {
+      const ins = LK.traceInside(2, ro, rd, S), e = entryAt(dot(ins.n, L));
+      return { t: ins.t, tr: mfp.map(m => Math.exp(-ins.t / m) * e) };
+    }
+    const sd = LK.sdToken, tr = [0, 0, 0];
+    const mEnd = 4.6 * Math.max(mfp[0], mfp[1], mfp[2]);   // past this much material < 1% of any channel gets through
+    let m = 0, surv = 1, tex = 0, s = 0.02;
+    for (let step; s < TR_MAX && surv > 0.01 && m < mEnd; s += step) {
+      /* Deep inside, the SDF bounds how far the ray can go and still be fully inside, so it
+         strides; the stride grows continuously out of the fixed step, which keeps it seamless. */
+      const q = add(ro, mul(rd, s)), d = sd(q, S), occ = clamp(0.5 - d / TR_RAMP);
+      step = Math.max(TR_DT, -d - TR_RAMP / 2);
+      m += occ * step;
+      if (occ < 1) {
+        const w = surv * (1 - Math.exp(-(1 - occ) * step / TR_AIR));
+        if (w > 0.004) {
+          // light enters with N·L at the exit: the SDF's slope along L there, taken wide (blurred)
+          const e = 0.02, ndl = (sd([q[0] + L[0] * e, q[1] + L[1] * e, q[2] + L[2] * e], S) - sd([q[0] - L[0] * e, q[1] - L[1] * e, q[2] - L[2] * e], S)) / (2 * e);
+          const k = w * entryAt(ndl);
+          for (let i = 0; i < 3; i++) tr[i] += k * Math.exp(-m / mfp[i]);
+        }
+        tex += w * s; surv -= w;
+      }
+    }
+    return { t: tex + surv * s, tr };
   }
   function translucent(g, S, L, R, amb, pass = 0) {
     const id = g.id, n = g.n, p = g.p, a = SS.alb[id], ndl = dot(n, L);
@@ -246,10 +273,9 @@
       const lobe = 0.25 + 2.2 * Math.pow(clamp(dot(g.d, H)), 4);
       for (let k = 0; k < 7; k++) {
         const dir = k === 0 ? L : norm(add(mul(L, 0.574), mul(add(mul(T1, Math.cos(k * 1.0472)), mul(T2, Math.sin(k * 1.0472))), 0.819)));
-        const ins = inside(id, ro, dir, S), wk = k === 0 ? 0.4 : 0.1;
-        const entry = clamp(dot(ins.n, L) * 1.4 + 0.15);
-        if (ins.t < thick) thick = ins.t;
-        for (let i = 0; i < 3; i++) tr[i] += wk * Math.exp(-ins.t / mfp[i]) * entry;
+        const ray = carry(id, ro, dir, S, L, mfp), wk = k === 0 ? 0.4 : 0.1;
+        if (ray.t < thick) thick = ray.t;
+        for (let i = 0; i < 3; i++) tr[i] += wk * ray.tr[i];
       }
       tr = tr.map((v, i) => v * lobe * gate * Math.sqrt(a[i]) * 2.0);
     }
@@ -453,6 +479,14 @@
     const k = 0.3 * smooth(0.2, 0.9, d[1]) + 2.4 * box(az, 0.75, 0.35) * box(el - 0.3, 0.38, 0.2);
     return [e[0] + k, e[1] + k, e[2] + k * 1.05];
   };
+  /* What the bubble reflects: the dark set plus the big overhead softbox a bubble photographer
+     hangs above it. Without it the upper half of the bubble mirrors the black ceiling and its film
+     has nothing to colour; with it the drained, thinner top shows its first-order golds and
+     magentas instead of going dark. Only the bubble sees it, so the shell's lacquer is unchanged. */
+  const benv = (d, r = 0) => {
+    const e = denv(d, r), k = 1.7 * smooth(0.15, 0.75, d[1]) * (0.8 + 0.2 * smooth(-0.6, 0.6, d[2]));
+    return [e[0] + k, e[1] + k, e[2] + k * 1.04];
+  };
   function darkBg(g) {   // dark set: a soft pool of light behind the still life
     const x = g.u - 0.5, y = g.v - 0.42, k = Math.exp(-(x * x * 2.2 + y * y * 5));
     return [DBG[0] + 0.07 * k, DBG[1] + 0.072 * k, DBG[2] + 0.085 * k];
@@ -506,12 +540,12 @@
     }
     // soap bubble: front wall reflects, back wall reflects, the rest goes straight through
     const hr = LK.trace(add(g.p, mul(n, 0.004)), Rd, S, { skip: id });
-    const refl = hr.hit ? sec(hr, Rd, g.depth) : denv(Rd);
+    const refl = hr.hit ? sec(hr, Rd, g.depth) : benv(Rd);
     const fr = satur(film(FILM.bub, th, cosI), 1.3).map(v => clamp(v * (1 + 22 * graze) * 3, 0, 0.95));
     const C = LK.SPH.c, oc = sub(g.p, C), b = dot(oc, d), tt = -2 * b, ex = add(g.p, mul(d, Math.max(0, tt)));
     const n2 = norm(sub(ex, C)), c2 = clamp(dot(d, n2)), th2 = thickAt(2, ex, S, t, d0, amp);
     const fb = satur(film(FILM.bub, th2, c2), 1.3).map(v => clamp(v * (1 + 22 * Math.pow(1 - c2, 5)) * 1.6, 0, 0.9));
-    const backR = denv(reflect(d, mul(n2, -1)), 0.05);
+    const backR = benv(reflect(d, mul(n2, -1)), 0.05);
     const ht = LK.trace(add(ex, mul(d, 0.01)), d, S, { skip: 2 });
     const through = ht.hit ? sec(ht, d, g.depth + tt) : darkBg(g);
     return softClip([0, 1, 2].map(i => (1 - fr[i]) * ((1 - fb[i]) * through[i] + fb[i] * backR[i]) + fr[i] * refl[i]));
