@@ -47,6 +47,7 @@
     'lineart', 'sakuga', 'comic', 'watercolor', 'flat', 'mograph', 'lowpoly', 'exploded',
     'reactiondiffusion', 'fractal', 'boids', 'claymation', 'sand', 'paintglass',
     'glitch', 'vaporwave', 'terminal', 'filmnoir', 'timelapse', 'matchcut', 'hud', 'cyberpunk', 'ukiyoe', 'shadowpuppet', 'guochao', 'huazi', 'luxury',
+    'techsquash', 'techfluid', 'lookchrome', 'lookcaustics', 'formattrailer', 'formatversus',
   ];
 
   const P = 'Fully procedural';
