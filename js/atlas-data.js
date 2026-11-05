@@ -38,6 +38,7 @@
     'lookclay', 'lookchrome', 'lookglass', 'lookmatcap', 'lookstudio', 'lookrim', 'lookgolden', 'lookvolumetric', 'looktoon', 'lookao', 'lookxray', 'lookwire', 'lookfog', 'lookgrade', 'lookgrain',
     'looksss', 'lookiridescent', 'lookclearcoat', 'lookbrushed', 'lookneon', 'lookovercast', 'lookchiaroscuro', 'lookcaustics', 'lookhatching', 'looknormals', 'lookpixel', 'lookchromatic', 'lookanamorphic', 'lookhalftone', 'lookinfrared',
     'formattitles', 'formattrailer', 'formatcoldopen', 'formatrecap', 'formatcredits', 'formatad', 'formatdemo', 'formatident', 'formatteaser', 'formattutorial', 'formatproblem', 'formatbeforeafter', 'formattimeline', 'formatstory', 'formatmanifesto',
+    'formatsting', 'formatnextweek', 'formatbumper', 'formatinterview', 'formattestimonial', 'formatunboxing', 'formatpreroll', 'formatsale', 'formatlisticle', 'formathowitworks', 'formatversus', 'formatmyth', 'formatyoutube', 'formatduet', 'formatvlog',
   ];
 
   // Curated best-of reel: a representative spread across every family.
