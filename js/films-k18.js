@@ -664,6 +664,25 @@
         drawBones(c, pts, { alpha: t < i0 ? E.outC(seg(t, 6.3, 6.5)) : 1 });
         if (t < 6.5) { const q = ik2Pose(6.299).pts; drawBones(c, q, { alpha: 1 - seg(t, 6.3, 6.45), ghost: true, lw: 2 }); }
         label(c, note, 960, 980 - 0, { align: 'center', size: 15, color: P.ink, weight: 700 });
+        // the iterative solve, step by step, filling the right of the frame like the law-of-cosines block
+        const fa = seg(t, 6.45, 6.8);
+        if (fa > 0.01) {
+          const pass = t < i0 ? '' : k <= n ? (u < 0.5 ? 'F' : 'B') : 'L', lx = 1390, ly = 420;
+          const step = (on, y, a, b) => {
+            if (on) { c.fillStyle = 'rgba(255,90,31,0.12)'; c.fillRect(lx - 14, y - 26, 488, 62); c.fillStyle = P.accent; c.fillRect(lx - 14, y - 26, 4, 62); }
+            label(c, a, lx, y, { size: 15, ls: 2, color: on ? P.accentD : P.ink, weight: 700 });
+            label(c, b, lx, y + 24, { size: 13, ls: 1, color: on ? P.ink : P.mute });
+          };
+          c.save(); c.globalAlpha = fa;
+          label(c, 'FABRIK  ·  FORWARD AND BACKWARD REACHING', lx, ly, { size: 15, ls: 2, color: P.ink, weight: 700 });
+          step(pass === 'F', ly + 56, '1  FORWARD', 'tip → goal, each joint pulled back along its bone');
+          step(pass === 'B', ly + 128, '2  BACKWARD', 'root → mount, each joint pushed out along its bone');
+          step(pass === 'L', ly + 200, '3  REPEAT', 'until the tip is close enough, or the goal moves');
+          const Ls = [0, 1, 2].map(j => len(pts[j], pts[j + 1]).toFixed(0)).join(' · ');
+          label(c, `BONE LENGTHS ${Ls} px  ·  NEVER STRETCHED`, lx, ly + 272, { size: 13, ls: 2, color: P.accentD, weight: 700 });
+          label(c, 'NO ANGLES SOLVED: ONLY POINTS MOVED', lx, ly + 298, { size: 13, ls: 2 });
+          c.restore();
+        }
         mode = 'INVERSE KINEMATICS'; sub = 'TIP GOAL IN  →  ANGLES OUT';
         rows = [['SOLVER', 'FABRIK · 3 BONES']];
         const ke = t < i0 ? 0 : Math.min(n, k - (u < 0.5 ? 1 : 0));
