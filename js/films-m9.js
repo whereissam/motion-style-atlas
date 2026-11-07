@@ -427,9 +427,9 @@
   function vsStack(c, side, cx, u) {
     const s = 96, fy = VS_FY;
     for (let k = 0; k < 3; k++) {
-      const ta = 0.15 + 0.25 * k; if (u < ta) continue;
+      const ta = k ? 0.15 + 0.25 * k : 0; if (u < ta) continue; // the first drop starts on the cut frame
       const p = E.inQ(seg(u, ta, ta + 0.2));
-      if (side === 0 || k === 0) { vsTok(side, c, cx, lerp(150, fy - s / 2 - k * s * (side ? 0 : 1), p), s); continue; }
+      if (side === 0 || k === 0) { vsTok(side, c, cx, lerp(k ? 150 : 300, fy - s / 2 - k * s * (side ? 0 : 1), p), s); continue; }
       const dir = k === 1 ? 1 : -1, top = fy - s / 2 - s;
       let x = cx + dir * 4, y = lerp(150, top, p);
       if (u > ta + 0.2) {

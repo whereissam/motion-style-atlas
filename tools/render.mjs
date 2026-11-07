@@ -36,15 +36,25 @@ function run(cmd, a, input) {
   });
 }
 
+// render.html pulls its fonts from Google Fonts, which sometimes takes longer than Playwright's
+// default 30 s page-load timeout. Allow 90 s per attempt and retry the page up to 3 times.
 async function openPage(browser) {
-  const page = await browser.newPage({ viewport: { width: 1000, height: 600 } });
-  const errors = [];
-  page.on('pageerror', e => errors.push(String(e)));
-  page.on('console', m => m.type() === 'error' && errors.push(m.text()));
-  await page.goto('file://' + path.join(ROOT, 'render.html'));
-  await page.evaluate(() => window.fontsLoaded);
-  page.errors = errors;
-  return page;
+  for (let attempt = 1; ; attempt++) {
+    const page = await browser.newPage({ viewport: { width: 1000, height: 600 } });
+    const errors = [];
+    page.on('pageerror', e => errors.push(String(e)));
+    page.on('console', m => m.type() === 'error' && errors.push(m.text()));
+    try {
+      await page.goto('file://' + path.join(ROOT, 'render.html'), { timeout: 90000 });
+      await page.evaluate(() => window.fontsLoaded);
+      page.errors = errors;
+      return page;
+    } catch (e) {
+      await page.close().catch(() => {});
+      if (attempt >= 3) throw e;
+      console.error(`page load failed (attempt ${attempt} of 3), retrying: ${String(e).split('\n')[0]}`);
+    }
+  }
 }
 
 async function filmInfo(page) {

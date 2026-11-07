@@ -405,7 +405,7 @@
       if (dw > 40) { c.save(); c.beginPath(); c.rect(dx, 220, dw, 560); c.clip(); TK.token(c, dx + 150, 640, 220, { color: BLUE_INK }); c.restore(); }
     } else if (type === 'roll') {
       nStage(c, W, H);
-      const x = lerp(-200, 2100, k);
+      const x = lerp(300, 1750, k); // already on screen at the cut, still rolling through
       for (let j = 6; j >= 0; j--) TK.token(c, x - j * 70, 680, 160, { rot: (x - j * 70) / 102, alpha: j ? 0.08 : 1 });
     } else if (type === 'box') {
       nStage(c, W, H, 'rgba(23,24,28,0.25)');
